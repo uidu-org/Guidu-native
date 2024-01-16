@@ -1,0 +1,27 @@
+{
+  "name": "@guidu-native/ui",
+  "version": "0.0.1",
+  "sideEffects": [
+    "*.css"
+  ],
+  "private": true,
+  "types": "./src",
+  "main": "src/index.tsx",
+  "module:jsx": "src",
+  "files": [
+    "types",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tamagui-build --skip-types",
+    "watch": "tamagui-build --skip-types --watch"
+  },
+  "dependencies": {
+    "@guidu-native/config": "0.0.1",
+    "@tamagui/toast": "^1.85.12",
+    "tamagui": "^1.85.12"
+  },
+  "devDependencies": {
+    "@tamagui/build": "^1.85.12"
+  }
+}

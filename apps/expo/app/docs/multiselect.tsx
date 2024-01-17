@@ -1,4 +1,4 @@
-import { GuiButton, GuiMultiselect, GuiText, GuiView } from '@my/ui'
+import { GuiButton, GuiMultiselect, GuiText, GuiView } from '@gui-native/ui'
 import { useForm } from 'react-hook-form'
 
 export default function MultiselectDocsPage() {

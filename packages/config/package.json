@@ -1,5 +1,5 @@
 {
-  "name": "@my/config",
+  "name": "@gui-native/config",
   "version": "0.0.1",
   "sideEffects": [
     "*.css"

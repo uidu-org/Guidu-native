@@ -1,4 +1,4 @@
-import { GuiText, GuiTextArea, GuiView } from '@my/ui'
+import { GuiText, GuiTextArea, GuiView } from '@gui-native/ui'
 
 export default function TextareaDocsPage() {
   return (

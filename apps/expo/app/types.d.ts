@@ -1,7 +1,7 @@
-import { config } from '@my/config'
+import { config } from '@gui-native/config'
 
 export type Conf = typeof config
 
-declare module '@my/ui' {
+declare module '@gui-native/ui' {
   interface TamaguiCustomConfig extends Conf {}
 }

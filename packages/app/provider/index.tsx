@@ -1,4 +1,10 @@
-import { CustomToast, TamaguiProvider, TamaguiProviderProps, ToastProvider, config } from '@my/ui'
+import {
+  CustomToast,
+  TamaguiProvider,
+  TamaguiProviderProps,
+  ToastProvider,
+  config,
+} from '@gui-native/ui'
 import { useColorScheme } from 'react-native'
 
 import { ToastViewport } from './ToastViewport'

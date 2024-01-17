@@ -1,4 +1,4 @@
-import { Fieldset, GuiInput, GuiLabel, GuiText, GuiView } from '@my/ui'
+import { Fieldset, GuiInput, GuiLabel, GuiText, GuiView } from '@gui-native/ui'
 
 export default function LabelDocumentsPage() {
   return (

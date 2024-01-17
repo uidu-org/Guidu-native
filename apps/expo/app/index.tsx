@@ -1,4 +1,4 @@
-import { GuiButton, GuiInput, GuiText, GuiView } from '@my/ui'
+import { GuiButton, GuiInput, GuiText, GuiView } from '@gui-native/ui'
 import { Link, Stack } from 'expo-router'
 
 export default function Screen() {

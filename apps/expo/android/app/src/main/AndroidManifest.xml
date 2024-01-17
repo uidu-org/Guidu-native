@@ -25,9 +25,9 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="yourprojectsname"/>
-        <data android:scheme="com.yourprojectsname.app"/>
-        <data android:scheme="exp+yourprojectsname"/>
+        <data android:scheme="guidu-native"/>
+        <data android:scheme="com.guidu.app"/>
+        <data android:scheme="exp+guidu-native"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>

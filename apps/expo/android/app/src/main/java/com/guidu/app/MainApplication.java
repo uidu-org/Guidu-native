@@ -1,4 +1,4 @@
-package com.yourprojectsname.app;
+package com.guidu.app;
 
 import android.app.Application;
 import android.content.res.Configuration;

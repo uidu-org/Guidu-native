@@ -1,4 +1,4 @@
-package com.yourprojectsname.app;
+package com.guidu.app;
 
 import android.os.Build;
 import android.os.Bundle;

@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.yourprojectsname.app'
+    namespace 'com.guidu.app'
     defaultConfig {
-        applicationId 'com.yourprojectsname.app'
+        applicationId 'com.guidu.app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

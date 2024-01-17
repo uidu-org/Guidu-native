@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.guidu-native.app"
+      "package": "com.guidu.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"

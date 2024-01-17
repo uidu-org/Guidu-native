@@ -1,5 +1,5 @@
-import { HomeScreen } from 'app/features/home/screen'
-import { Stack } from 'expo-router'
+import { GuiButton, GuiInput, GuiText, GuiView } from '@my/ui'
+import { Link, Stack } from 'expo-router'
 
 export default function Screen() {
   return (
@@ -9,7 +9,12 @@ export default function Screen() {
           title: 'Home',
         }}
       />
-      <HomeScreen />
+      <GuiButton>GuiButton User Page</GuiButton>
+      <GuiInput></GuiInput>
+      <GuiView flex={1}>
+        <GuiText>Ciao</GuiText>
+        <Link href={'/docs'}>Go to docs</Link>
+      </GuiView>
     </>
   )
 }

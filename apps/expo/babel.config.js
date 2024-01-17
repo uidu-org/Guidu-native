@@ -1,9 +1,10 @@
 module.exports = function (api) {
-  api.cache(true);
+  api.cache(true)
   return {
     presets: [['babel-preset-expo', { jsxRuntime: 'automatic' }]],
     plugins: [
       require.resolve('expo-router/babel'),
+      'react-native-reanimated/plugin',
       [
         require.resolve('babel-plugin-module-resolver'),
         {
@@ -31,5 +32,5 @@ module.exports = function (api) {
           ]),
       'transform-inline-environment-variables',
     ],
-  };
-};
+  }
+}

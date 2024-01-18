@@ -1,4 +1,4 @@
-import { GuiAvatar, GuiText, GuiView } from '@my/ui'
+import { GuiAvatar, GuiText, GuiView } from '@gui/ui'
 
 export default function AvatarDocsPage() {
   return (

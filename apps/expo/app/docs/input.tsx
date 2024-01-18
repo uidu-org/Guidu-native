@@ -1,4 +1,4 @@
-import { GuiInput, GuiText, GuiView } from '@my/ui'
+import { GuiInput, GuiText, GuiView } from '@gui/ui'
 
 export default function InputDocsPage() {
   return (

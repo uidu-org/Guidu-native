@@ -1,4 +1,4 @@
-import { GuiSlider, GuiText, GuiView } from '@my/ui'
+import { GuiSlider, GuiText, GuiView } from '@gui/ui'
 
 export default function SliderDocsPage() {
   return (

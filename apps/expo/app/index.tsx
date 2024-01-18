@@ -1,4 +1,4 @@
-import { GuiButton, GuiView, H3 } from '@my/ui'
+import { GuiButton, GuiView, H3 } from '@gui/ui'
 import { Link } from 'expo-router'
 
 export default function Screen() {

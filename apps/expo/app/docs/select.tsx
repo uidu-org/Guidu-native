@@ -1,4 +1,4 @@
-import { GuiButton, GuiControlSelect, GuiText, GuiView, Select } from '@my/ui'
+import { GuiButton, GuiControlSelect, GuiText, GuiView, Select } from '@gui/ui'
 import { Check } from '@tamagui/lucide-icons'
 import { useForm } from 'react-hook-form'
 import { FlatList } from 'react-native'

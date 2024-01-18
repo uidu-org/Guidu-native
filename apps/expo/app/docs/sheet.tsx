@@ -1,4 +1,4 @@
-import { GuiButton, GuiSheet, GuiText, GuiView } from '@my/ui'
+import { GuiButton, GuiSheet, GuiText, GuiView } from '@gui/ui'
 import { useState } from 'react'
 
 export default function SheetDocsPage() {

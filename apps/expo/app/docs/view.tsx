@@ -1,4 +1,4 @@
-import { GuiText, GuiView } from '@my/ui'
+import { GuiText, GuiView } from '@gui/ui'
 
 export default function ViewDocsPage() {
   return (

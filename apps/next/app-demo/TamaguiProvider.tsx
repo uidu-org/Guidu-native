@@ -3,11 +3,11 @@
 import '@tamagui/core/reset.css'
 import '@tamagui/polyfill-dev'
 
+import { TamaguiProvider as TamaguiProviderOG, config } from '@gui/ui'
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme'
 import { useServerInsertedHTML } from 'next/navigation'
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { config, TamaguiProvider as TamaguiProviderOG } from '@my/ui'
 
 export const TamaguiProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useRootTheme()

@@ -1,4 +1,4 @@
-export { config } from '@my/config'
+export { config } from '@gui/config'
 export * from '@tamagui/toast'
 export * from 'tamagui'
 export * from './Circle'

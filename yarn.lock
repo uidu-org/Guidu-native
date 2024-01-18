@@ -3368,6 +3368,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gui/config@npm:0.0.1, @gui/config@workspace:packages/config":
+  version: 0.0.0-use.local
+  resolution: "@gui/config@workspace:packages/config"
+  dependencies:
+    "@tamagui/animations-react-native": "npm:^1.85.12"
+    "@tamagui/build": "npm:^1.85.12"
+    "@tamagui/font-inter": "npm:^1.85.12"
+    "@tamagui/react-native-media-driver": "npm:^1.85.12"
+    "@tamagui/shorthands": "npm:^1.85.12"
+    "@tamagui/themes": "npm:^1.85.12"
+    tamagui: "npm:^1.85.12"
+  languageName: unknown
+  linkType: soft
+
+"@gui/ui@npm:0.0.1, @gui/ui@workspace:packages/ui":
+  version: 0.0.0-use.local
+  resolution: "@gui/ui@workspace:packages/ui"
+  dependencies:
+    "@gui/config": "npm:0.0.1"
+    "@tamagui/build": "npm:^1.85.12"
+    "@tamagui/toast": "npm:^1.85.12"
+    tamagui: "npm:^1.85.12"
+  languageName: unknown
+  linkType: soft
+
 "@hapi/hoek@npm:^9.0.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -3725,31 +3750,6 @@ __metadata:
   checksum: 95d91927e801d10dd00b0f866a0bf79a2014439a7de30c81031e667960c82a50426be5b358b033e09ea2f861e59102933dff796d742c83ee0345f26c23f64ced
   languageName: node
   linkType: hard
-
-"@my/config@npm:0.0.1, @my/config@workspace:packages/config":
-  version: 0.0.0-use.local
-  resolution: "@my/config@workspace:packages/config"
-  dependencies:
-    "@tamagui/animations-react-native": "npm:^1.85.12"
-    "@tamagui/build": "npm:^1.85.12"
-    "@tamagui/font-inter": "npm:^1.85.12"
-    "@tamagui/react-native-media-driver": "npm:^1.85.12"
-    "@tamagui/shorthands": "npm:^1.85.12"
-    "@tamagui/themes": "npm:^1.85.12"
-    tamagui: "npm:^1.85.12"
-  languageName: unknown
-  linkType: soft
-
-"@my/ui@npm:0.0.1, @my/ui@workspace:packages/ui":
-  version: 0.0.0-use.local
-  resolution: "@my/ui@workspace:packages/ui"
-  dependencies:
-    "@my/config": "npm:0.0.1"
-    "@tamagui/build": "npm:^1.85.12"
-    "@tamagui/toast": "npm:^1.85.12"
-    tamagui: "npm:^1.85.12"
-  languageName: unknown
-  linkType: soft
 
 "@next/env@npm:13.5.2":
   version: 13.5.2
@@ -6923,7 +6923,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:packages/app"
   dependencies:
-    "@my/ui": "npm:0.0.1"
+    "@gui/ui": "npm:0.0.1"
     "@tamagui/animations-react-native": "npm:^1.85.12"
     "@tamagui/colors": "npm:^1.85.12"
     "@tamagui/font-inter": "npm:^1.85.12"
@@ -11845,7 +11845,7 @@ __metadata:
     "@babel/runtime": "npm:^7.18.9"
     "@expo/config-plugins": "npm:~7.2.2"
     "@expo/metro-config": "npm:~0.10.0"
-    "@my/ui": "npm:0.0.1"
+    "@gui/ui": "npm:0.0.1"
     "@react-navigation/drawer": "npm:^6.6.6"
     "@react-navigation/native": "npm:^6.1.6"
     "@tamagui/babel-plugin": "npm:^1.85.12"

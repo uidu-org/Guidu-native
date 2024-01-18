@@ -1,4 +1,4 @@
-import { GuiLabel } from '@my/ui'
+import { GuiLabel } from '@gui/ui'
 import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form'
 import { YStack } from 'tamagui'
 import { GuiTextArea } from '../base/Textarea'

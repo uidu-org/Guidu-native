@@ -1,4 +1,4 @@
-import { GuiButton, GuiMultiselect, GuiText, GuiView } from '@my/ui'
+import { GuiButton, GuiControlMultiselect, GuiText, GuiView } from '@my/ui'
 import { useForm } from 'react-hook-form'
 
 export default function MultiselectDocsPage() {
@@ -7,7 +7,7 @@ export default function MultiselectDocsPage() {
     <GuiView gap="$5" centered>
       <GuiText>This is a Basic Textarea Field</GuiText>
 
-      <GuiMultiselect
+      <GuiControlMultiselect
         control={control}
         items={items}
         name="test"

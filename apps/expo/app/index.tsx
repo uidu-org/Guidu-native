@@ -1,20 +1,15 @@
-import { GuiButton, GuiInput, GuiText, GuiView } from '@my/ui'
-import { Link, Stack } from 'expo-router'
+import { GuiButton, GuiView, H3 } from '@my/ui'
+import { Link } from 'expo-router'
 
 export default function Screen() {
   return (
-    <>
-      <Stack.Screen
-        options={{
-          title: 'Home',
-        }}
-      />
-      <GuiButton>GuiButton User Page</GuiButton>
-      <GuiInput></GuiInput>
-      <GuiView flex={1}>
-        <GuiText>Ciao</GuiText>
-        <Link href={'/docs'}>Go to docs</Link>
+    <GuiView centered gap="$5">
+      <H3>Uidu UI docs for Native</H3>
+      <GuiView>
+        <Link asChild href={'/docs'}>
+          <GuiButton>Go to docs</GuiButton>
+        </Link>
       </GuiView>
-    </>
+    </GuiView>
   )
 }

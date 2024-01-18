@@ -3,7 +3,7 @@ import { Button, GetProps, styled } from 'tamagui'
 export const GuiButton = styled(Button, {
   name: 'GuiButton',
   alignSelf: 'flex-start',
-  bg: '#79737387',
+  bg: '#d9e9cc85',
   variants: {
     variant: {
       solid: { bg: '#14B6A4' },
@@ -15,4 +15,4 @@ export const GuiButton = styled(Button, {
     },
   } as const,
 })
-export type GuiButtonrops = GetProps<typeof GuiButton>
+export type GuiButtonProps = GetProps<typeof GuiButton>

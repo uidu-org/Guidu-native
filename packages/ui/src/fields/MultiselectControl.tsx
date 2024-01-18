@@ -4,19 +4,11 @@ import { useMemo, useState } from 'react'
 import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form'
 import { FlatList } from 'react-native'
 import { Checkbox, Separator, Sheet, XStack } from 'tamagui'
-import { GuiButton } from './Button'
-import { GuiText } from './Text'
-import { GuiView } from './View'
+import { GuiButton } from '../base/Button'
+import { GuiText } from '../base/Text'
+import { GuiView } from '../base/View'
 
-export function GuiMultiselect({
-  items: itemsFromProps,
-  onClick: onItemClick,
-  label,
-  initialItems = [],
-  control,
-  name,
-  rules,
-}: {
+type GuiMultiselectProps = {
   label: string
   items: object[]
   control: Control
@@ -28,7 +20,17 @@ export function GuiMultiselect({
     RegisterOptions<FieldValues, string>,
     'valueAsNumber' | 'valueAsDate' | 'setValueAs' | 'disabled'
   >
-}) {
+}
+
+export function GuiControlMultiselect({
+  items: itemsFromProps,
+  onClick: onItemClick,
+  label,
+  initialItems = [],
+  control,
+  name,
+  rules,
+}: GuiMultiselectProps) {
   const [open, setOpen] = useState(false)
   const memoSnapPoints = useMemo(() => [85], [])
 

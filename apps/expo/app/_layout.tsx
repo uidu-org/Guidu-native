@@ -17,7 +17,9 @@ export default function HomeLayout() {
   return (
     <Provider>
       <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+        {/* <TamaguiProvider config={config}> */}
         <Slot />
+        {/* </TamaguiProvider> */}
       </ThemeProvider>
     </Provider>
   )

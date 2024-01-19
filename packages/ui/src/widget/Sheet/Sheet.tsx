@@ -10,7 +10,7 @@ type GuiSheetProps = SheetProps & {
   modal?: boolean
 }
 
-export function CustomSheet({
+export function GuiSheet({
   status,
   setStatus,
   children,

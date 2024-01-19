@@ -1,4 +1,4 @@
-import { GuiButton, GuiCard, GuiText, GuiView, H2, Image, Paragraph, XStack } from '@gui/ui'
+import { GuiButton, GuiCard, GuiText, GuiView, H2, Image, Paragraph, XStack } from '@uidu/native'
 
 export default function CardDocsPage() {
   return (

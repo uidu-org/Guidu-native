@@ -1,4 +1,4 @@
-import { GuiSlider, GuiText, GuiView } from '@gui/ui'
+import { GuiSlider, GuiText, GuiView } from '@uidu/native'
 
 export default function SliderDocsPage() {
   return (

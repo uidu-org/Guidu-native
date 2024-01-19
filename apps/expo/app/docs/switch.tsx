@@ -1,4 +1,4 @@
-import { GuiLabel, GuiSwitch, GuiText, GuiView, Separator, XStack } from '@gui/ui'
+import { GuiLabel, GuiSwitch, GuiText, GuiView, Separator, XStack } from '@uidu/native'
 
 export default function SwitchDocsPage() {
   return (

@@ -1,14 +1,11 @@
 {
-  "name": "@gui/config",
-  "version": "0.0.1",
+  "name": "@uidu/native-config",
+  "version": "0.0.5",
   "sideEffects": [
     "*.css"
   ],
-  "private": true,
-  "types": "./src",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "files": [
-    "types",
     "dist"
   ],
   "scripts": {
@@ -25,5 +22,9 @@
   },
   "devDependencies": {
     "@tamagui/build": "^1.85.12"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }

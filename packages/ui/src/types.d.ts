@@ -1,4 +1,4 @@
-import { config } from '@gui/config'
+import { config } from '@uidu/native-config'
 
 export type Conf = typeof config
 

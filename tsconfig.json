@@ -4,7 +4,7 @@
     "noUncheckedIndexedAccess": true,
     "paths": {
       "app/*": ["./packages/app/*"],
-      "@gui/ui/*": ["./packages/ui/*"]
+      "@uidu/native/*": ["./packages/ui/*"]
     }
   },
   "extends": "tsconfig.base",

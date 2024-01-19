@@ -3,8 +3,8 @@
 import '@tamagui/core/reset.css'
 import '@tamagui/polyfill-dev'
 
-import { TamaguiProvider as TamaguiProviderOG, config } from '@gui/ui'
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme'
+import { TamaguiProvider as TamaguiProviderOG, config } from '@uidu/native'
 import { useServerInsertedHTML } from 'next/navigation'
 import React from 'react'
 import { StyleSheet } from 'react-native'

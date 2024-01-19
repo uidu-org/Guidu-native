@@ -16,7 +16,7 @@ type GuiDialogueProps = DialogProps & {
   minHeight?: number
 }
 
-export const CustomDialog = ({
+export const GuiDialog = ({
   children,
   setStatus,
   status,
@@ -75,7 +75,7 @@ type GuiDialogueTitleProps = DialogTitleProps & {
   children: ReactNode
 }
 
-export const CustomDialogTitle = ({ children }: GuiDialogueTitleProps) => (
+export const GuiDialogTitle = ({ children }: GuiDialogueTitleProps) => (
   <Dialog.Title>{children}</Dialog.Title>
 )
 
@@ -83,6 +83,6 @@ type GuiDialogueDescriptionProps = DialogDescriptionProps & {
   children: ReactNode
 }
 
-export const DialogueDescription = ({ children }: GuiDialogueDescriptionProps) => (
+export const GuiDialogueDescription = ({ children }: GuiDialogueDescriptionProps) => (
   <Dialog.Description>{children}</Dialog.Description>
 )

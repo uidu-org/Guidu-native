@@ -1,8 +1,9 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
-import { Provider } from 'app/provider'
+import { config } from '@uidu/native-config'
 import { useFonts } from 'expo-font'
 import { Slot } from 'expo-router'
 import { useColorScheme } from 'react-native'
+import { TamaguiProvider } from 'tamagui'
 
 export default function HomeLayout() {
   const [loaded] = useFonts({
@@ -15,10 +16,10 @@ export default function HomeLayout() {
     return null
   }
   return (
-    <Provider>
-      <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <TamaguiProvider config={config}>
         <Slot />
-      </ThemeProvider>
-    </Provider>
+      </TamaguiProvider>
+    </ThemeProvider>
   )
 }

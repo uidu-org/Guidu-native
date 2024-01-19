@@ -1,4 +1,4 @@
-import { GuiButton, GuiDialog, GuiDialogTitle, GuiDialogueDescription, GuiView } from '@gui/ui'
+import { GuiButton, GuiDialog, GuiDialogTitle, GuiDialogueDescription, GuiView } from '@uidu/native'
 import { useState } from 'react'
 
 export default function DialogDocsPage() {

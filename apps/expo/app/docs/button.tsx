@@ -1,4 +1,4 @@
-import { GuiButton, GuiText, GuiView } from '@gui/ui'
+import { GuiButton, GuiText, GuiView } from '@uidu/native'
 import { useState } from 'react'
 
 export default function ButtonDocsPage() {

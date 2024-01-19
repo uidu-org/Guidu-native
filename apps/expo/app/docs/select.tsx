@@ -1,5 +1,5 @@
-import { GuiButton, GuiControlSelect, GuiText, GuiView, Select } from '@gui/ui'
 import { Check } from '@tamagui/lucide-icons'
+import { GuiButton, GuiControlSelect, GuiText, GuiView, Select } from '@uidu/native'
 import { useForm } from 'react-hook-form'
 import { FlatList } from 'react-native'
 

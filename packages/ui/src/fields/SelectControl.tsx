@@ -1,5 +1,5 @@
-import { Adapt, Select, Sheet, XStack, YStack } from '@gui/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
+import { Adapt, Select, Sheet, XStack, YStack } from '@uidu/native'
 import { ReactNode } from 'react'
 import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form'
 

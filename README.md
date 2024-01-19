@@ -49,7 +49,7 @@ To see debug output to verify the compiler, add `// debug` as a comment to the t
 
 Note we're following the [design systems guide](https://tamagui.dev/docs/guides/design-systems) and creating our own package for components.
 
-See `packages/ui` named `@gui/ui` for how this works.
+See `packages/ui` named `@uidu/native` for how this works.
 
 ## 🆕 Add new dependencies
 

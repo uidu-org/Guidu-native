@@ -5,7 +5,7 @@ import { tokens } from '@tamagui/themes/v2'
 import { themes } from '@tamagui/themes/v2-themes'
 import { createTamagui } from 'tamagui'
 
-import { animations } from '@gui/ui/src/animations'
+import { animations } from './animations'
 
 const headingFont = createInterFont({
   size: {

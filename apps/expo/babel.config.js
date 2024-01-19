@@ -12,7 +12,7 @@ module.exports = function (api) {
           alias: {
             // define aliases to shorten the import paths
             app: '../../packages/app',
-            '@gui/ui': '../../packages/ui',
+            '@uidu/native': '../../packages/ui',
           },
           extensions: ['.js', '.jsx', '.tsx', '.ios.js', '.android.js'],
         },
@@ -25,7 +25,7 @@ module.exports = function (api) {
             [
               '@tamagui/babel-plugin',
               {
-                components: ['@gui/ui', 'tamagui'],
+                components: ['@uidu/native', 'tamagui'],
                 config: '../../packages/config/src/tamagui.config.ts',
               },
             ],

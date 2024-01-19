@@ -1,5 +1,5 @@
 {
-  "name": "tamagui-starter-test",
+  "name": "uidu-ui-monorepo",
   "private": true,
   "workspaces": [
     "./apps/*",
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
+    "@uidu/native-config" : "0.0.5",
     "@manypkg/cli": "^0.19.1",
     "check-dependency-version-consistency": "^3.0.3",
     "downshift": "^8.3.1",
@@ -37,7 +38,8 @@
     "prettier": "^2.7.1",
     "react-hook-form": "^7.49.3",
     "turbo": "^1.10.3",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "tamagui": "^1.86.6"
   },
   "packageManager": "yarn@4.0.2"
 }

@@ -1,4 +1,4 @@
-import { GuiText, GuiView } from '@gui/ui'
+import { GuiText, GuiView } from '@uidu/native'
 
 export default function ViewDocsPage() {
   return (

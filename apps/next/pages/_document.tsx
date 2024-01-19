@@ -1,4 +1,4 @@
-import { config } from '@gui/ui'
+import { config } from '@uidu/native'
 import NextDocument, {
   DocumentContext,
   DocumentInitialProps,

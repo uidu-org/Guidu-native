@@ -1,15 +1,18 @@
 {
   "name": "@uidu/native-config",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "sideEffects": [
     "*.css"
   ],
+  "typings": "types",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
-    "build": "tamagui-build --skip-types",
+    "build": "tamagui-build --skipLibCheck",
     "watch": "tamagui-build --skip-types --watch"
   },
   "dependencies": {

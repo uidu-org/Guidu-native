@@ -5,30 +5,34 @@
     "*.css"
   ],
   "types": "./src",
-  "main": "src/index.tsx",
+  "main": "dist/uidu-web.cjs.js",
+  "module": "dist/uidu-web.esm.js",
   "module:jsx": "src",
   "files": [
     "types",
     "dist"
   ],
   "scripts": {
-    "build": "tamagui-build --skip-types",
-    "watch": "tamagui-build --skip-types --watch"
+    "build": "yarn preconstruct build ",
+    "watch": "yarn preconstruct build --watch"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toggle": "^1.0.3",
     "@tamagui/toast": "^1.85.12",
     "@uidu/native-config": "0.0.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "lucide-react": "^0.312.0",
+    "lucide-react": "^0.314.0",
     "tailwind-merge": "^2.2.0",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "tamagui": "^1.85.12"
   },
   "devDependencies": {
+    "@preconstruct/cli": "^2.8.3",
     "@tamagui/build": "^1.85.12"
   }
 }

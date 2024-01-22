@@ -5,7 +5,8 @@
     "paths": {
       "app/*": ["./packages/app/*"],
       "@uidu/native/*": ["./packages/ui/*"]
-    }
+    },
+    "jsx": "react-jsx"
   },
   "extends": "tsconfig.base",
   "exclude": [

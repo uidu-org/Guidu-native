@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
+    // "rootDirs": [".", "../../packages/web/src"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "paths": {
-      "react-native": ["react-native-web"]
+      "react-native": ["react-native-web"],
+      "@/*": ["src/*"],
+      "~/*": ["../../packages/web/src/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

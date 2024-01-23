@@ -15,4 +15,5 @@ export const GuiButton = styled(Button, {
     },
   } as const,
 })
+
 export type GuiButtonProps = GetProps<typeof GuiButton>

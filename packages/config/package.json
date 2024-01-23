@@ -5,8 +5,8 @@
     "*.css"
   ],
   "typings": "types",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/uidu-native-config.cjs.js",
+  "module": "dist/uidu-native-config.esm.js",
   "files": [
     "dist",
     "types"

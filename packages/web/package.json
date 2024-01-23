@@ -5,8 +5,8 @@
     "*.css"
   ],
   "types": "types",
-  "main": "dist/cjs/index.js",
-  "module": "dist/cjs/index.js",
+  "main": "dist/uidu-web.cjs.js",
+  "module": "dist/uidu-web.esm.js",
   "module:jsx0": "dist/jsx/index.js",
   "files": [
     "types",
@@ -28,7 +28,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.314.0",
-    "tailwind-merge": "^2.2.0",
+    "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "tamagui": "^1.85.12"
@@ -40,5 +40,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "peerDependencies": {
+    "react": "*"
   }
 }

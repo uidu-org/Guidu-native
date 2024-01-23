@@ -7,4 +7,5 @@ export const GuiAvatar = styled(Avatar, {
     example: {},
   } as const,
 })
+
 export type GuiAvatarProps = GetProps<typeof GuiAvatar>

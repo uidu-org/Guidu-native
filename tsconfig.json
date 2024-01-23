@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strictNullChecks": true,
+    "isolatedModules": false,
     "noUncheckedIndexedAccess": true,
     "paths": {
       "app/*": ["./packages/app/*"],
@@ -8,7 +9,7 @@
     },
     "jsx": "react-jsx"
   },
-  "extends": "tsconfig.base",
+  "extends": "./tsconfig.base.json",
   "exclude": [
     "**/node_modules",
     "**/dist",

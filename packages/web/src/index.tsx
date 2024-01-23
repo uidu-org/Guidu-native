@@ -1,2 +1,1 @@
-export { Button as UiButton } from "./core/Button";
-
+export { Button as UiButton } from './core/Button'

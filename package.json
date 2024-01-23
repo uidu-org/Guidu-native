@@ -7,14 +7,16 @@
   ],
   "scripts": {
     "native": "cd apps/expo && yarn start",
+    "native:ios": "cd apps/expo && yarn ios",
+    "native:android": "cd apps/expo && yarn android",
+    "postinstall": "preconstruct dev",
     "watch": "yarn workspaces foreach -pi run watch",
     "vercel:install": "yarn set version 3.5 && yarn install",
-    "web": "yarn build && cd apps/next && yarn next",
+    "web": "cd apps/next && yarn next",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
     "web:prod": "yarn workspace next-app build",
     "web:prod:serve": "yarn workspace next-app serve",
     "fix": "manypkg fix",
-    "postinstall": "yarn check-deps && yarn build",
     "build": "yarn workspaces foreach --all --exclude next-app run build",
     "upgrade:tamagui": "yarn up '*tamagui*'@latest '@tamagui/*'@latest react-native-web-lite@latest",
     "upgrade:tamagui:canary": "yarn up '*tamagui*'@canary '@tamagui/*'@canary react-native-web-lite@canary",
@@ -28,8 +30,13 @@
     "react-native-web": "~0.19.6"
   },
   "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
     "@babel/runtime": "^7.18.9",
     "@manypkg/cli": "^0.19.1",
+    "@preconstruct/cli": "^2.8.3",
     "@uidu/native-config": "0.0.8",
     "check-dependency-version-consistency": "^3.0.3",
     "downshift": "^8.3.1",
@@ -41,5 +48,18 @@
     "turbo": "^1.10.3",
     "typescript": "^5.3.3"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "preconstruct": {
+    "packages": [
+      "./packages/*"
+    ]
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7",
+    "@types/babel__preset-env": "^7"
+  },
+  "peerDependencies": {
+    "@uidu/native": "workspace:^",
+    "react": "*"
+  }
 }

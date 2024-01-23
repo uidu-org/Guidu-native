@@ -616,7 +616,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         19: import("tamagui").Variable<number>;
         20: import("tamagui").Variable<number>;
     };
-}, "space" | "color" | "zIndex" | "size" | "radius">, Omit<{
+}, "color" | "radius" | "size" | "space" | "zIndex">, Omit<{
     readonly light: {
         background: string;
         backgroundHover: string;
@@ -634,6 +634,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -664,6 +665,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -694,6 +696,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -724,6 +727,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -754,6 +758,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -784,6 +789,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -814,6 +820,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -844,6 +851,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -874,6 +882,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -904,6 +913,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -934,6 +944,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -964,6 +975,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -994,6 +1006,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1024,6 +1037,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1054,6 +1068,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1084,6 +1099,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1114,6 +1130,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1144,6 +1161,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1174,6 +1192,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1204,6 +1223,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1234,6 +1254,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1264,6 +1285,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1294,6 +1316,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1324,6 +1347,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1354,6 +1378,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1384,6 +1409,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1414,6 +1440,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1444,6 +1471,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1474,6 +1502,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1504,6 +1533,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1534,6 +1564,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1564,6 +1595,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1594,6 +1626,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1624,6 +1657,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1654,6 +1688,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1684,6 +1719,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1714,6 +1750,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1744,6 +1781,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1774,6 +1812,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1804,6 +1843,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1834,6 +1874,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1864,6 +1905,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1894,6 +1936,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1924,6 +1967,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1954,6 +1998,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -1984,6 +2029,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2014,6 +2060,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2044,6 +2091,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2074,6 +2122,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2104,6 +2153,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2134,6 +2184,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2164,6 +2215,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2194,6 +2246,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2224,6 +2277,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2254,6 +2308,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2284,6 +2339,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2314,6 +2370,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2344,6 +2401,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2374,6 +2432,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2404,6 +2463,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2434,6 +2494,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2464,6 +2525,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2494,6 +2556,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2524,6 +2587,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2554,6 +2618,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2584,6 +2649,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2614,6 +2680,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2644,6 +2711,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2674,6 +2742,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2704,6 +2773,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2734,6 +2804,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2764,6 +2835,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2794,6 +2866,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2824,6 +2897,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2854,6 +2928,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2884,6 +2959,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2914,6 +2990,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2944,6 +3021,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -2974,6 +3052,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3004,6 +3083,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3034,6 +3114,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3064,6 +3145,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3094,6 +3176,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3124,6 +3207,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3154,6 +3238,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3184,6 +3269,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3214,6 +3300,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3244,6 +3331,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3274,6 +3362,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3304,6 +3393,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3334,6 +3424,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3364,6 +3455,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3394,6 +3486,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3424,6 +3517,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3454,6 +3548,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3484,6 +3579,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3514,6 +3610,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3544,6 +3641,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3574,6 +3672,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3604,6 +3703,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3634,6 +3734,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3664,6 +3765,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3694,6 +3796,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3724,6 +3827,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3754,6 +3858,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3784,6 +3889,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3814,6 +3920,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3844,6 +3951,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3874,6 +3982,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3904,6 +4013,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3934,6 +4044,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3964,6 +4075,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -3994,6 +4106,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4024,6 +4137,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4054,6 +4168,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4084,6 +4199,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4114,6 +4230,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4144,6 +4261,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4174,6 +4292,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4204,6 +4323,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4234,6 +4354,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4264,6 +4385,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4294,6 +4416,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4324,6 +4447,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4354,6 +4478,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4384,6 +4509,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4414,6 +4540,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4444,6 +4571,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4474,6 +4602,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4504,6 +4633,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4534,6 +4664,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4564,6 +4695,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4594,6 +4726,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4624,6 +4757,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4654,6 +4788,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4684,6 +4819,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4714,6 +4850,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4744,6 +4881,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4774,6 +4912,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4804,6 +4943,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4834,6 +4974,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4864,6 +5005,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4894,6 +5036,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4924,6 +5067,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4954,6 +5098,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -4984,6 +5129,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5014,6 +5160,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5044,6 +5191,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5074,6 +5222,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5104,6 +5253,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5134,6 +5284,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5164,6 +5315,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5194,6 +5346,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5224,6 +5377,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5254,6 +5408,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5284,6 +5439,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5314,6 +5470,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5344,6 +5501,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5374,6 +5532,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5404,6 +5563,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5434,6 +5594,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5464,6 +5625,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5494,6 +5656,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5524,6 +5687,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5554,6 +5718,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5584,6 +5749,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5614,6 +5780,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5644,6 +5811,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5674,6 +5842,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5704,6 +5873,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5734,6 +5904,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5764,6 +5935,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5794,6 +5966,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5824,6 +5997,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5854,6 +6028,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5884,6 +6059,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5914,6 +6090,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5944,6 +6121,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -5974,6 +6152,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6004,6 +6183,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6034,6 +6214,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6064,6 +6245,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6094,6 +6276,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6124,6 +6307,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6154,6 +6338,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6184,6 +6369,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6214,6 +6400,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6244,6 +6431,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6274,6 +6462,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6304,6 +6493,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6334,6 +6524,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6364,6 +6555,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6394,6 +6586,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6424,6 +6617,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6454,6 +6648,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6484,6 +6679,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6514,6 +6710,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6544,6 +6741,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6574,6 +6772,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6604,6 +6803,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6634,6 +6834,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6664,6 +6865,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6694,6 +6896,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6724,6 +6927,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6754,6 +6958,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6784,6 +6989,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6814,6 +7020,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6844,6 +7051,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6874,6 +7082,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6904,6 +7113,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6934,6 +7144,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6964,6 +7175,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -6994,6 +7206,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7024,6 +7237,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7054,6 +7268,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7084,6 +7299,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7114,6 +7330,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7144,6 +7361,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7174,6 +7392,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7204,6 +7423,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7234,6 +7454,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7264,6 +7485,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7294,6 +7516,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7324,6 +7547,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7354,6 +7578,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7384,6 +7609,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7414,6 +7640,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7444,6 +7671,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7474,6 +7702,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7504,6 +7733,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7534,6 +7764,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7564,6 +7795,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7594,6 +7826,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7624,6 +7857,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7654,6 +7888,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7684,6 +7919,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7714,6 +7950,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7744,6 +7981,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7774,6 +8012,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7804,6 +8043,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7834,6 +8074,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7864,6 +8105,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7894,6 +8136,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7924,6 +8167,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7954,6 +8198,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -7984,6 +8229,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8014,6 +8260,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8044,6 +8291,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8074,6 +8322,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8104,6 +8353,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8134,6 +8384,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8164,6 +8415,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8194,6 +8446,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8224,6 +8477,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8254,6 +8508,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8284,6 +8539,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8314,6 +8570,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8344,6 +8601,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8374,6 +8632,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8404,6 +8663,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8434,6 +8694,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8464,6 +8725,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8494,6 +8756,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8524,6 +8787,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8554,6 +8818,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8584,6 +8849,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8614,6 +8880,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8644,6 +8911,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8674,6 +8942,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8704,6 +8973,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8734,6 +9004,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8764,6 +9035,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8794,6 +9066,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8824,6 +9097,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8854,6 +9128,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8884,6 +9159,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8914,6 +9190,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8944,6 +9221,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -8974,6 +9252,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9004,6 +9283,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9034,6 +9314,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9064,6 +9345,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9094,6 +9376,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9124,6 +9407,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9154,6 +9438,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9184,6 +9469,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9214,6 +9500,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9244,6 +9531,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9274,6 +9562,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9304,6 +9593,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9334,6 +9624,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9364,6 +9655,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9394,6 +9686,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9424,6 +9717,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9454,6 +9748,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9484,6 +9779,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9514,6 +9810,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9544,6 +9841,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9574,6 +9872,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9604,6 +9903,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9634,6 +9934,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9664,6 +9965,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9694,6 +9996,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9724,6 +10027,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9754,6 +10058,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9784,6 +10089,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9814,6 +10120,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9844,6 +10151,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9874,6 +10182,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9904,6 +10213,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9934,6 +10244,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9964,6 +10275,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -9994,6 +10306,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10024,6 +10337,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10054,6 +10368,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10084,6 +10399,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10114,6 +10430,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10144,6 +10461,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10174,6 +10492,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10204,6 +10523,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10234,6 +10554,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10264,6 +10585,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10294,6 +10616,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10324,6 +10647,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10354,6 +10678,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10384,6 +10709,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10414,6 +10740,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10444,6 +10771,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10474,6 +10802,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10504,6 +10833,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10534,6 +10864,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10564,6 +10895,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10594,6 +10926,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10624,6 +10957,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10654,6 +10988,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10684,6 +11019,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10714,6 +11050,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10744,6 +11081,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10774,6 +11112,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10804,6 +11143,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10834,6 +11174,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10864,6 +11205,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10894,6 +11236,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10924,6 +11267,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10954,6 +11298,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -10984,6 +11329,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11014,6 +11360,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11044,6 +11391,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11074,6 +11422,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11104,6 +11453,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11134,6 +11484,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11164,6 +11515,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11194,6 +11546,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11224,6 +11577,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11254,6 +11608,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11284,6 +11639,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11314,6 +11670,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11344,6 +11701,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11374,6 +11732,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11404,6 +11763,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11434,6 +11794,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11464,6 +11825,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11494,6 +11856,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11524,6 +11887,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11554,6 +11918,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11584,6 +11949,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11614,6 +11980,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11644,6 +12011,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11674,6 +12042,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11704,6 +12073,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11734,6 +12104,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11764,6 +12135,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11794,6 +12166,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11824,6 +12197,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11854,6 +12228,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11884,6 +12259,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11914,6 +12290,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11944,6 +12321,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -11974,6 +12352,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12004,6 +12383,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12034,6 +12414,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12064,6 +12445,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12094,6 +12476,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12124,6 +12507,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12154,6 +12538,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12184,6 +12569,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12214,6 +12600,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12244,6 +12631,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12274,6 +12662,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12304,6 +12693,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12334,6 +12724,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12364,6 +12755,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12394,6 +12786,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12424,6 +12817,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12454,6 +12848,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12484,6 +12879,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12514,6 +12910,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12544,6 +12941,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12574,6 +12972,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12604,6 +13003,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12634,6 +13034,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12664,6 +13065,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12694,6 +13096,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12724,6 +13127,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12754,6 +13158,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12784,6 +13189,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12814,6 +13220,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12844,6 +13251,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12874,6 +13282,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12904,6 +13313,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12934,6 +13344,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12964,6 +13375,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -12994,6 +13406,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13024,6 +13437,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13054,6 +13468,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13084,6 +13499,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13114,6 +13530,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13144,6 +13561,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13174,6 +13592,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13204,6 +13623,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13234,6 +13654,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13264,6 +13685,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13294,6 +13716,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13324,6 +13747,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13354,6 +13778,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13384,6 +13809,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13414,6 +13840,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13444,6 +13871,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13474,6 +13902,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13504,6 +13933,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13534,6 +13964,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13564,6 +13995,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13594,6 +14026,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13624,6 +14057,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13654,6 +14088,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13684,6 +14119,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13714,6 +14150,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13744,6 +14181,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13774,6 +14212,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13804,6 +14243,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13834,6 +14274,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13864,6 +14305,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13894,6 +14336,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13924,6 +14367,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13954,6 +14398,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -13984,6 +14429,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14014,6 +14460,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14044,6 +14491,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14074,6 +14522,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14104,6 +14553,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14134,6 +14584,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14164,6 +14615,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14194,6 +14646,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14224,6 +14677,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14254,6 +14708,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14284,6 +14739,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14314,6 +14770,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14344,6 +14801,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14374,6 +14832,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14404,6 +14863,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14434,6 +14894,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14464,6 +14925,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14494,6 +14956,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14524,6 +14987,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14554,6 +15018,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14584,6 +15049,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14614,6 +15080,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14644,6 +15111,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14674,6 +15142,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14704,6 +15173,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14734,6 +15204,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14764,6 +15235,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14794,6 +15266,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14824,6 +15297,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14854,6 +15328,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14884,6 +15359,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14914,6 +15390,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14944,6 +15421,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -14974,6 +15452,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15004,6 +15483,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15034,6 +15514,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15064,6 +15545,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15094,6 +15576,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15124,6 +15607,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15154,6 +15638,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15184,6 +15669,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15214,6 +15700,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15244,6 +15731,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15274,6 +15762,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15304,6 +15793,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15334,6 +15824,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15364,6 +15855,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15394,6 +15886,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15424,6 +15917,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15454,6 +15948,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15484,6 +15979,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15514,6 +16010,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15544,6 +16041,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15574,6 +16072,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15604,6 +16103,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15634,6 +16134,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15664,6 +16165,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15694,6 +16196,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15724,6 +16227,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15754,6 +16258,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15784,6 +16289,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15814,6 +16320,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15844,6 +16351,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15874,6 +16382,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15904,6 +16413,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15934,6 +16444,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15964,6 +16475,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -15994,6 +16506,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16024,6 +16537,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16054,6 +16568,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16084,6 +16599,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16114,6 +16630,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16144,6 +16661,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16174,6 +16692,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16204,6 +16723,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16234,6 +16754,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16264,6 +16785,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16294,6 +16816,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16324,6 +16847,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16354,6 +16878,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16384,6 +16909,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16414,6 +16940,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16444,6 +16971,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16474,6 +17002,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16504,6 +17033,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16534,6 +17064,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16564,6 +17095,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16594,6 +17126,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16624,6 +17157,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16654,6 +17188,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16684,6 +17219,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16714,6 +17250,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16744,6 +17281,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16774,6 +17312,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16804,6 +17343,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16834,6 +17374,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16864,6 +17405,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16894,6 +17436,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16924,6 +17467,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16954,6 +17498,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -16984,6 +17529,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17014,6 +17560,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17044,6 +17591,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17074,6 +17622,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17104,6 +17653,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17134,6 +17684,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17164,6 +17715,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17194,6 +17746,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17224,6 +17777,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17254,6 +17808,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17284,6 +17839,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17314,6 +17870,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17344,6 +17901,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17374,6 +17932,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17404,6 +17963,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17434,6 +17994,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17464,6 +18025,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17494,6 +18056,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17524,6 +18087,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17554,6 +18118,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17584,6 +18149,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17614,6 +18180,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17644,6 +18211,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17674,6 +18242,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17704,6 +18273,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17734,6 +18304,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17764,6 +18335,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17794,6 +18366,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17824,6 +18397,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17854,6 +18428,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17884,6 +18459,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17914,6 +18490,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17944,6 +18521,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -17974,6 +18552,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18004,6 +18583,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18034,6 +18614,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18064,6 +18645,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18094,6 +18676,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18124,6 +18707,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18154,6 +18738,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18184,6 +18769,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18214,6 +18800,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18244,6 +18831,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18274,6 +18862,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18304,6 +18893,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18334,6 +18924,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18364,6 +18955,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18394,6 +18986,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18424,6 +19017,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18454,6 +19048,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18484,6 +19079,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18514,6 +19110,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18544,6 +19141,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18574,6 +19172,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18604,6 +19203,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18634,6 +19234,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18664,6 +19265,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18694,6 +19296,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18724,6 +19327,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18754,6 +19358,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18784,6 +19389,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18814,6 +19420,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18844,6 +19451,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18874,6 +19482,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18904,6 +19513,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18934,6 +19544,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18964,6 +19575,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -18994,6 +19606,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19024,6 +19637,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19054,6 +19668,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19084,6 +19699,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19114,6 +19730,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19144,6 +19761,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19174,6 +19792,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19204,6 +19823,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19234,6 +19854,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19264,6 +19885,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19294,6 +19916,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19324,6 +19947,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19354,6 +19978,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19384,6 +20009,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19414,6 +20040,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19444,6 +20071,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19474,6 +20102,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19504,6 +20133,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19534,6 +20164,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19564,6 +20195,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19594,6 +20226,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19624,6 +20257,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19654,6 +20288,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19684,6 +20319,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19714,6 +20350,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19744,6 +20381,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19774,6 +20412,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19804,6 +20443,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19834,6 +20474,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19864,6 +20505,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19894,6 +20536,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19924,6 +20567,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19954,6 +20598,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -19984,6 +20629,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20014,6 +20660,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20044,6 +20691,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20074,6 +20722,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20104,6 +20753,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20134,6 +20784,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20164,6 +20815,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20194,6 +20846,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20224,6 +20877,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20254,6 +20908,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20284,6 +20939,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20314,6 +20970,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20344,6 +21001,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20374,6 +21032,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20404,6 +21063,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20434,6 +21094,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20464,6 +21125,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20494,6 +21156,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20524,6 +21187,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20554,6 +21218,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20584,6 +21249,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20614,6 +21280,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20644,6 +21311,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20674,6 +21342,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20704,6 +21373,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20734,6 +21404,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20764,6 +21435,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20794,6 +21466,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20824,6 +21497,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20854,6 +21528,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20884,6 +21559,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20914,6 +21590,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20944,6 +21621,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -20974,6 +21652,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21004,6 +21683,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21034,6 +21714,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21064,6 +21745,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21094,6 +21776,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21124,6 +21807,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21154,6 +21838,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21184,6 +21869,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21214,6 +21900,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21244,6 +21931,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21274,6 +21962,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21304,6 +21993,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21334,6 +22024,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21364,6 +22055,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21394,6 +22086,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21424,6 +22117,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21454,6 +22148,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21484,6 +22179,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21514,6 +22210,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21544,6 +22241,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21574,6 +22272,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21604,6 +22303,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21634,6 +22334,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21664,6 +22365,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21694,6 +22396,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21724,6 +22427,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21754,6 +22458,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21784,6 +22489,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21814,6 +22520,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21844,6 +22551,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21874,6 +22582,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21904,6 +22613,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21934,6 +22644,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21964,6 +22675,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -21994,6 +22706,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22024,6 +22737,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22054,6 +22768,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22084,6 +22799,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22114,6 +22830,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22144,6 +22861,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22174,6 +22892,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22204,6 +22923,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22234,6 +22954,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22264,6 +22985,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22294,6 +23016,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22324,6 +23047,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22354,6 +23078,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22384,6 +23109,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22414,6 +23140,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22444,6 +23171,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22474,6 +23202,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22504,6 +23233,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22534,6 +23264,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22564,6 +23295,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22594,6 +23326,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22624,6 +23357,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22654,6 +23388,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22684,6 +23419,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22714,6 +23450,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22744,6 +23481,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22774,6 +23512,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22804,6 +23543,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22834,6 +23574,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22864,6 +23605,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22894,6 +23636,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22924,6 +23667,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22954,6 +23698,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -22984,6 +23729,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23014,6 +23760,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23044,6 +23791,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23074,6 +23822,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23104,6 +23853,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23134,6 +23884,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23164,6 +23915,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23194,6 +23946,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23224,6 +23977,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23254,6 +24008,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23284,6 +24039,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23314,6 +24070,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23344,6 +24101,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23374,6 +24132,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23404,6 +24163,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23434,6 +24194,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23464,6 +24225,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23494,6 +24256,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23524,6 +24287,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23554,6 +24318,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23584,6 +24349,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23614,6 +24380,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23644,6 +24411,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23674,6 +24442,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23704,6 +24473,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23734,6 +24504,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23764,6 +24535,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23794,6 +24566,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23824,6 +24597,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23854,6 +24628,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23884,6 +24659,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23914,6 +24690,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23944,6 +24721,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -23974,6 +24752,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24004,6 +24783,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24034,6 +24814,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24064,6 +24845,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24094,6 +24876,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24124,6 +24907,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24154,6 +24938,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24184,6 +24969,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24214,6 +25000,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24244,6 +25031,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24274,6 +25062,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24304,6 +25093,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24334,6 +25124,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24364,6 +25155,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24394,6 +25186,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24424,6 +25217,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24454,6 +25248,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24484,6 +25279,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24514,6 +25310,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24544,6 +25341,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24574,6 +25372,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24604,6 +25403,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24634,6 +25434,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24664,6 +25465,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24694,6 +25496,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24724,6 +25527,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24754,6 +25558,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24784,6 +25589,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24814,6 +25620,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24844,6 +25651,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24874,6 +25682,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24904,6 +25713,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24934,6 +25744,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24964,6 +25775,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -24994,6 +25806,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25024,6 +25837,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25054,6 +25868,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25084,6 +25899,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25114,6 +25930,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25144,6 +25961,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25174,6 +25992,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25204,6 +26023,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25234,6 +26054,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25264,6 +26085,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25294,6 +26116,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25324,6 +26147,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25354,6 +26178,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25384,6 +26209,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25414,6 +26240,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25444,6 +26271,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25474,6 +26302,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25504,6 +26333,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25534,6 +26364,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25564,6 +26395,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25594,6 +26426,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25624,6 +26457,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25654,6 +26488,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25684,6 +26519,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25714,6 +26550,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25744,6 +26581,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25774,6 +26612,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25804,6 +26643,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25834,6 +26674,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25864,6 +26705,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25894,6 +26736,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25924,6 +26767,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25954,6 +26798,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -25984,6 +26829,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26014,6 +26860,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26044,6 +26891,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26074,6 +26922,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26104,6 +26953,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26134,6 +26984,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26164,6 +27015,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26194,6 +27046,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26224,6 +27077,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26254,6 +27108,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26284,6 +27139,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26314,6 +27170,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26344,6 +27201,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26374,6 +27232,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26404,6 +27263,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26434,6 +27294,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26464,6 +27325,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26494,6 +27356,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26524,6 +27387,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26554,6 +27418,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26584,6 +27449,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26614,6 +27480,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26644,6 +27511,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26674,6 +27542,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26704,6 +27573,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26734,6 +27604,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26764,6 +27635,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26794,6 +27666,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26824,6 +27697,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26854,6 +27728,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26884,6 +27759,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26914,6 +27790,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26944,6 +27821,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -26974,6 +27852,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27004,6 +27883,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27034,6 +27914,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27064,6 +27945,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27094,6 +27976,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27124,6 +28007,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27154,6 +28038,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27184,6 +28069,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27214,6 +28100,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27244,6 +28131,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27274,6 +28162,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27304,6 +28193,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27334,6 +28224,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27364,6 +28255,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27394,6 +28286,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27424,6 +28317,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27454,6 +28348,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27484,6 +28379,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27514,6 +28410,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27544,6 +28441,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27574,6 +28472,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27604,6 +28503,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27634,6 +28534,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27664,6 +28565,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27694,6 +28596,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27724,6 +28627,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27754,6 +28658,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27784,6 +28689,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27814,6 +28720,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27844,6 +28751,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27874,6 +28782,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27904,6 +28813,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27934,6 +28844,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27964,6 +28875,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -27994,6 +28906,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28024,6 +28937,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28054,6 +28968,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28084,6 +28999,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28114,6 +29030,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28144,6 +29061,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28174,6 +29092,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28204,6 +29123,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28234,6 +29154,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28264,6 +29185,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28294,6 +29216,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28324,6 +29247,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28354,6 +29278,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28384,6 +29309,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28414,6 +29340,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28444,6 +29371,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28474,6 +29402,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28504,6 +29433,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28534,6 +29464,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28564,6 +29495,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28594,6 +29526,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28624,6 +29557,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28654,6 +29588,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28684,6 +29619,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28714,6 +29650,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28744,6 +29681,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28774,6 +29712,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28804,6 +29743,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28834,6 +29774,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28864,6 +29805,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28894,6 +29836,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28924,6 +29867,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28954,6 +29898,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -28984,6 +29929,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29014,6 +29960,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29044,6 +29991,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29074,6 +30022,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29104,6 +30053,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29134,6 +30084,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29164,6 +30115,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29194,6 +30146,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29224,6 +30177,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29254,6 +30208,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29284,6 +30239,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29314,6 +30270,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29344,6 +30301,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29374,6 +30332,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29404,6 +30363,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29434,6 +30394,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29464,6 +30425,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29494,6 +30456,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29524,6 +30487,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29554,6 +30518,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29584,6 +30549,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29614,6 +30580,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29644,6 +30611,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29674,6 +30642,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29704,6 +30673,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29734,6 +30704,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29764,6 +30735,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29794,6 +30766,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29824,6 +30797,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29854,6 +30828,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29884,6 +30859,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29914,6 +30890,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29944,6 +30921,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -29974,6 +30952,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30004,6 +30983,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30034,6 +31014,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30064,6 +31045,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30094,6 +31076,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30124,6 +31107,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30154,6 +31138,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30184,6 +31169,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30214,6 +31200,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30244,6 +31231,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30274,6 +31262,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30304,6 +31293,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30334,6 +31324,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30364,6 +31355,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30394,6 +31386,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30424,6 +31417,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30454,6 +31448,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30484,6 +31479,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30514,6 +31510,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30544,6 +31541,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30574,6 +31572,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30604,6 +31603,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30634,6 +31634,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30664,6 +31665,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30694,6 +31696,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30724,6 +31727,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30754,6 +31758,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30784,6 +31789,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30814,6 +31820,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30844,6 +31851,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30874,6 +31882,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30904,6 +31913,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30934,6 +31944,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30964,6 +31975,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -30994,6 +32006,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31024,6 +32037,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31054,6 +32068,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31084,6 +32099,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31114,6 +32130,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31144,6 +32161,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31174,6 +32192,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31204,6 +32223,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31234,6 +32254,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31264,6 +32285,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31294,6 +32316,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31324,6 +32347,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31354,6 +32378,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31384,6 +32409,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31414,6 +32440,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31444,6 +32471,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31474,6 +32502,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31504,6 +32533,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31534,6 +32564,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31564,6 +32595,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31594,6 +32626,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31624,6 +32657,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31654,6 +32688,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31684,6 +32719,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31714,6 +32750,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31744,6 +32781,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31774,6 +32812,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31804,6 +32843,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31834,6 +32874,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31864,6 +32905,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31894,6 +32936,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31924,6 +32967,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31954,6 +32998,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -31984,6 +33029,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32014,6 +33060,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32044,6 +33091,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32074,6 +33122,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32104,6 +33153,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32134,6 +33184,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32164,6 +33215,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32194,6 +33246,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32224,6 +33277,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32254,6 +33308,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32284,6 +33339,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32314,6 +33370,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32344,6 +33401,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32374,6 +33432,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32404,6 +33463,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32434,6 +33494,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32464,6 +33525,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32494,6 +33556,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32524,6 +33587,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32554,6 +33618,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32584,6 +33649,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32614,6 +33680,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32644,6 +33711,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32674,6 +33742,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32704,6 +33773,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32734,6 +33804,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32764,6 +33835,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32794,6 +33866,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32824,6 +33897,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32854,6 +33928,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32884,6 +33959,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32914,6 +33990,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32944,6 +34021,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -32974,6 +34052,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33004,6 +34083,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33034,6 +34114,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33064,6 +34145,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33094,6 +34176,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33124,6 +34207,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33154,6 +34238,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33184,6 +34269,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33214,6 +34300,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33244,6 +34331,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33274,6 +34362,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33304,6 +34393,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33334,6 +34424,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33364,6 +34455,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33394,6 +34486,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33424,6 +34517,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33454,6 +34548,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33484,6 +34579,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33514,6 +34610,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33544,6 +34641,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33574,6 +34672,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33604,6 +34703,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33634,6 +34734,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33664,6 +34765,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33694,6 +34796,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33724,6 +34827,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33754,6 +34858,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33784,6 +34889,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33814,6 +34920,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33844,6 +34951,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33874,6 +34982,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33904,6 +35013,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33934,6 +35044,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33964,6 +35075,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -33994,6 +35106,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34024,6 +35137,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34054,6 +35168,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34084,6 +35199,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34114,6 +35230,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34144,6 +35261,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34174,6 +35292,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34204,6 +35323,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34234,6 +35354,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34264,6 +35385,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34294,6 +35416,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34324,6 +35447,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34354,6 +35478,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34384,6 +35509,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34414,6 +35540,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34444,6 +35571,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34474,6 +35602,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34504,6 +35633,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34534,6 +35664,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34564,6 +35695,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34594,6 +35726,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34624,6 +35757,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34654,6 +35788,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34684,6 +35819,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34714,6 +35850,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34744,6 +35881,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34774,6 +35912,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34804,6 +35943,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34834,6 +35974,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34864,6 +36005,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34894,6 +36036,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34924,6 +36067,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34954,6 +36098,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -34984,6 +36129,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35014,6 +36160,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35044,6 +36191,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35074,6 +36222,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35104,6 +36253,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35134,6 +36284,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35164,6 +36315,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35194,6 +36346,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35224,6 +36377,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35254,6 +36408,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35284,6 +36439,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35314,6 +36470,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35344,6 +36501,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35374,6 +36532,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35404,6 +36563,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35434,6 +36594,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35464,6 +36625,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35494,6 +36656,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35524,6 +36687,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35554,6 +36718,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35584,6 +36749,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35614,6 +36780,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35644,6 +36811,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35674,6 +36842,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35704,6 +36873,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35734,6 +36904,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35764,6 +36935,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35794,6 +36966,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35824,6 +36997,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35854,6 +37028,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35884,6 +37059,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35914,6 +37090,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35944,6 +37121,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -35974,6 +37152,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36004,6 +37183,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36034,6 +37214,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36064,6 +37245,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36094,6 +37276,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36124,6 +37307,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36154,6 +37338,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36184,6 +37369,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36214,6 +37400,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36244,6 +37431,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36274,6 +37462,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36304,6 +37493,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36334,6 +37524,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36364,6 +37555,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36394,6 +37586,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36424,6 +37617,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36454,6 +37648,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36484,6 +37679,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36514,6 +37710,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36544,6 +37741,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36574,6 +37772,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36604,6 +37803,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36634,6 +37834,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36664,6 +37865,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36694,6 +37896,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36724,6 +37927,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36754,6 +37958,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36784,6 +37989,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36814,6 +38020,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36844,6 +38051,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36874,6 +38082,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36904,6 +38113,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36934,6 +38144,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36964,6 +38175,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -36994,6 +38206,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37024,6 +38237,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37054,6 +38268,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37084,6 +38299,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37114,6 +38330,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37144,6 +38361,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37174,6 +38392,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37204,6 +38423,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37234,6 +38454,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37264,6 +38485,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37294,6 +38516,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37324,6 +38547,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37354,6 +38578,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37384,6 +38609,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37414,6 +38640,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37444,6 +38671,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37474,6 +38702,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37504,6 +38733,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37534,6 +38764,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37564,6 +38795,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37594,6 +38826,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37624,6 +38857,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37654,6 +38888,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37684,6 +38919,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37714,6 +38950,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37744,6 +38981,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37774,6 +39012,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37804,6 +39043,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37834,6 +39074,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37864,6 +39105,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37894,6 +39136,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37924,6 +39167,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37954,6 +39198,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -37984,6 +39229,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38014,6 +39260,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38044,6 +39291,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38074,6 +39322,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38104,6 +39353,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38134,6 +39384,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38164,6 +39415,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38194,6 +39446,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38224,6 +39477,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38254,6 +39508,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38284,6 +39539,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38314,6 +39570,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38344,6 +39601,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38374,6 +39632,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38404,6 +39663,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38434,6 +39694,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38464,6 +39725,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38494,6 +39756,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38524,6 +39787,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38554,6 +39818,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38584,6 +39849,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38614,6 +39880,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38644,6 +39911,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38674,6 +39942,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38704,6 +39973,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38734,6 +40004,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38764,6 +40035,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38794,6 +40066,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38824,6 +40097,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38854,6 +40128,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38884,6 +40159,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38914,6 +40190,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38944,6 +40221,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -38974,6 +40252,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39004,6 +40283,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39034,6 +40314,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39064,6 +40345,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39094,6 +40376,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39124,6 +40407,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39154,6 +40438,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39184,6 +40469,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39214,6 +40500,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39244,6 +40531,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39274,6 +40562,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39304,6 +40593,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39334,6 +40624,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39364,6 +40655,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39394,6 +40686,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39424,6 +40717,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39454,6 +40748,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39484,6 +40779,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39514,6 +40810,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39544,6 +40841,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39574,6 +40872,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39604,6 +40903,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39634,6 +40934,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39664,6 +40965,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39694,6 +40996,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39724,6 +41027,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39754,6 +41058,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39784,6 +41089,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39814,6 +41120,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39844,6 +41151,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39874,6 +41182,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39904,6 +41213,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39934,6 +41244,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39964,6 +41275,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -39994,6 +41306,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40024,6 +41337,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40054,6 +41368,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40084,6 +41399,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40114,6 +41430,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40144,6 +41461,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40174,6 +41492,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40204,6 +41523,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40234,6 +41554,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40264,6 +41585,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40294,6 +41616,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40324,6 +41647,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40354,6 +41678,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40384,6 +41709,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40414,6 +41740,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40444,6 +41771,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40474,6 +41802,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40504,6 +41833,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40534,6 +41864,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40564,6 +41895,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40594,6 +41926,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40624,6 +41957,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40654,6 +41988,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40684,6 +42019,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40714,6 +42050,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40744,6 +42081,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40774,6 +42112,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40804,6 +42143,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40834,6 +42174,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40864,6 +42205,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40894,6 +42236,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40924,6 +42267,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40954,6 +42298,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -40984,6 +42329,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41014,6 +42360,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41044,6 +42391,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41074,6 +42422,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41104,6 +42453,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41134,6 +42484,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41164,6 +42515,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41194,6 +42546,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41224,6 +42577,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41254,6 +42608,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41284,6 +42639,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41314,6 +42670,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41344,6 +42701,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41374,6 +42732,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41404,6 +42763,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41434,6 +42794,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41464,6 +42825,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41494,6 +42856,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41524,6 +42887,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41554,6 +42918,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41584,6 +42949,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41614,6 +42980,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41644,6 +43011,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41674,6 +43042,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41704,6 +43073,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41734,6 +43104,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41764,6 +43135,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41794,6 +43166,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41824,6 +43197,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41854,6 +43228,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41884,6 +43259,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41914,6 +43290,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41944,6 +43321,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -41974,6 +43352,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42004,6 +43383,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42034,6 +43414,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42064,6 +43445,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42094,6 +43476,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42124,6 +43507,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42154,6 +43538,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42184,6 +43569,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42214,6 +43600,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42244,6 +43631,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42274,6 +43662,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42304,6 +43693,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42334,6 +43724,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42364,6 +43755,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42394,6 +43786,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42424,6 +43817,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42454,6 +43848,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42484,6 +43879,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42514,6 +43910,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42544,6 +43941,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42574,6 +43972,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42604,6 +44003,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42634,6 +44034,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42664,6 +44065,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42694,6 +44096,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42724,6 +44127,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42754,6 +44158,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42784,6 +44189,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42814,6 +44220,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42844,6 +44251,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42874,6 +44282,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42904,6 +44313,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42934,6 +44344,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42964,6 +44375,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -42994,6 +44406,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43024,6 +44437,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43054,6 +44468,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43084,6 +44499,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43114,6 +44530,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43144,6 +44561,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43174,6 +44592,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43204,6 +44623,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43234,6 +44654,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43264,6 +44685,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43294,6 +44716,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43324,6 +44747,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43354,6 +44778,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43384,6 +44809,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43414,6 +44840,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43444,6 +44871,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43474,6 +44902,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43504,6 +44933,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43534,6 +44964,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43564,6 +44995,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43594,6 +45026,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43624,6 +45057,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43654,6 +45088,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43684,6 +45119,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43714,6 +45150,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43744,6 +45181,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43774,6 +45212,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43804,6 +45243,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43834,6 +45274,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43864,6 +45305,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43894,6 +45336,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43924,6 +45367,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43954,6 +45398,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -43984,6 +45429,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44014,6 +45460,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44044,6 +45491,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44074,6 +45522,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44104,6 +45553,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44134,6 +45584,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44164,6 +45615,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44194,6 +45646,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44224,6 +45677,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44254,6 +45708,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44284,6 +45739,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44314,6 +45770,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44344,6 +45801,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44374,6 +45832,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44404,6 +45863,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44434,6 +45894,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44464,6 +45925,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44494,6 +45956,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44524,6 +45987,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44554,6 +46018,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44584,6 +46049,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44614,6 +46080,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44644,6 +46111,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44674,6 +46142,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44704,6 +46173,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44734,6 +46204,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44764,6 +46235,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44794,6 +46266,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44824,6 +46297,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44854,6 +46328,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44884,6 +46359,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44914,6 +46390,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44944,6 +46421,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -44974,6 +46452,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45004,6 +46483,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45034,6 +46514,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45064,6 +46545,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45094,6 +46576,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45124,6 +46607,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45154,6 +46638,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45184,6 +46669,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45214,6 +46700,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45244,6 +46731,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45274,6 +46762,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45304,6 +46793,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45334,6 +46824,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45364,6 +46855,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45394,6 +46886,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45424,6 +46917,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45454,6 +46948,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45484,6 +46979,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45514,6 +47010,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45544,6 +47041,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45574,6 +47072,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45604,6 +47103,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45634,6 +47134,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45664,6 +47165,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45694,6 +47196,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45724,6 +47227,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45754,6 +47258,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45784,6 +47289,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45814,6 +47320,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45844,6 +47351,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45874,6 +47382,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45904,6 +47413,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45934,6 +47444,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45964,6 +47475,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -45994,6 +47506,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46024,6 +47537,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46054,6 +47568,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46084,6 +47599,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46114,6 +47630,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46144,6 +47661,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46174,6 +47692,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46204,6 +47723,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46234,6 +47754,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46264,6 +47785,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46294,6 +47816,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46324,6 +47847,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46354,6 +47878,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46384,6 +47909,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46414,6 +47940,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46444,6 +47971,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46474,6 +48002,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46504,6 +48033,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46534,6 +48064,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46564,6 +48095,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46594,6 +48126,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46624,6 +48157,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46654,6 +48188,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46684,6 +48219,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46714,6 +48250,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46744,6 +48281,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46774,6 +48312,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46804,6 +48343,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46834,6 +48374,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46864,6 +48405,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46894,6 +48436,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46924,6 +48467,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46954,6 +48498,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -46984,6 +48529,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47014,6 +48560,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47044,6 +48591,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47074,6 +48622,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47104,6 +48653,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47134,6 +48684,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47164,6 +48715,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47194,6 +48746,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47224,6 +48777,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47254,6 +48808,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47284,6 +48839,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47314,6 +48870,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47344,6 +48901,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47374,6 +48932,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47404,6 +48963,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47434,6 +48994,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47464,6 +49025,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47494,6 +49056,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47524,6 +49087,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47554,6 +49118,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47584,6 +49149,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47614,6 +49180,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47644,6 +49211,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47674,6 +49242,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47704,6 +49273,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47734,6 +49304,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47764,6 +49335,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47794,6 +49366,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47824,6 +49397,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47854,6 +49428,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47884,6 +49459,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47914,6 +49490,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47944,6 +49521,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -47974,6 +49552,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -48004,6 +49583,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -48034,6 +49614,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -48064,6 +49645,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -48094,6 +49676,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -48124,6 +49707,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -48155,6 +49739,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -48286,6 +49871,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         borderColorFocus: string;
         borderColorPress: string;
         placeholderColor: string;
+        outlineColor: string;
         color1: string;
         color2: string;
         color3: string;
@@ -48552,7 +50138,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         stiffness: number;
     };
 }, {
-    body: import("@tamagui/font-inter").FillInFont<import("tamagui").GenericFont, 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | "true">;
+    body: import("@tamagui/font-inter").FillInFont<import("tamagui").GenericFont, 16 | 1 | "true" | 2 | 4 | 3 | 9 | 15 | 10 | 5 | 6 | 7 | 8 | 12 | 14 | 11 | 13>;
     heading: import("@tamagui/font-inter").FillInFont<{
         size: {
             6: number;
@@ -48585,7 +50171,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
                 normal: string;
             };
         };
-    }, 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | "true">;
+    }, 16 | 1 | "true" | 2 | 4 | 3 | 9 | 15 | 10 | 5 | 6 | 7 | 8 | 12 | 14 | 11 | 13>;
 }, true, string, {
     allowedStyleValues: "somewhat-strict";
 }>;

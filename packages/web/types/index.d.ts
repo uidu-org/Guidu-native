@@ -1,2 +1,2 @@
-export { Button as UiButton } from "./core/Button";
+export { Button as UiButton } from './core/Index'
 //# sourceMappingURL=index.d.ts.map

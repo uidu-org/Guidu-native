@@ -1,1 +1,2 @@
-export { Button as UiButton } from './core/Button'
+export * from "../components/Button/src";
+

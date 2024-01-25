@@ -4,7 +4,8 @@
   "workspaces": [
     "./apps/*",
     "./packages/*",
-    "./packages/web/components/*"
+    "./packages/web/components/*",
+    "./packages/web/lib"
   ],
   "scripts": {
     "native": "cd apps/expo && yarn start",
@@ -57,7 +58,7 @@
   "packageManager": "yarn@4.0.2",
   "preconstruct": {
     "packages": [
-      "./packages/*"
+      "./packages/**/*"
     ]
   },
   "peerDependencies": {

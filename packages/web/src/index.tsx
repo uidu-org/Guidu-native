@@ -1,2 +1,1 @@
-export * from "../components/Button/src";
-
+export * from '@uidu/button-ui'

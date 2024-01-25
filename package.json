@@ -4,7 +4,7 @@
   "workspaces": [
     "./apps/*",
     "./packages/*",
-    "./packages/web/components/*",
+    "./packages/web/components/**/*",
     "./packages/web/lib"
   ],
   "scripts": {

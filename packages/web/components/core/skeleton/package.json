@@ -1,0 +1,20 @@
+{
+  "name": "@uidu/skeleton-ui",
+  "version": "0.0.1",
+  "main": "dist/uidu-skeleton-ui.cjs.js",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@uidu/lib": "workspace:^",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

@@ -67,7 +67,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.13.16, @babel/core@npm:^7.17.9, @babel/core@npm:^7.20.0, @babel/core@npm:^7.23.3, @babel/core@npm:^7.23.7, @babel/core@npm:^7.7.7":
+"@babel/core@npm:^7.13.16, @babel/core@npm:^7.20.0, @babel/core@npm:^7.23.3, @babel/core@npm:^7.23.7, @babel/core@npm:^7.7.7":
   version: 7.23.7
   resolution: "@babel/core@npm:7.23.7"
   dependencies:
@@ -5520,9 +5520,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uidu-org/button@npm:*, @uidu-org/button@npm:0.0.1, @uidu-org/button@workspace:packages/web/components/Button":
+"@uidu/button-ui@workspace:packages/web/components/Button":
   version: 0.0.0-use.local
-  resolution: "@uidu-org/button@workspace:packages/web/components/Button"
+  resolution: "@uidu/button-ui@workspace:packages/web/components/Button"
   dependencies:
     "@radix-ui/react-slot": "npm:^1.0.2"
     "@types/react": "npm:^18"
@@ -5539,7 +5539,6 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
-    "@uidu-org/button": "npm:*"
     "@uidu/web": "npm:0.0.2"
     autoprefixer: "npm:^10.0.1"
     class-variance-authority: "npm:^0.7.0"
@@ -5572,7 +5571,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/native@npm:0.0.22, @uidu/native@workspace:packages/ui":
+"@uidu/native@npm:*, @uidu/native@npm:0.0.22, @uidu/native@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@uidu/native@workspace:packages/ui"
   dependencies:
@@ -5580,7 +5579,9 @@ __metadata:
     "@tamagui/lucide-icons": "npm:^1.85.12"
     "@uidu/native-config": "npm:0.0.8"
     downshift: "npm:^8.3.1"
+    react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
+    react-native: "npm:0.72.6"
     react-native-svg: "npm:13.9.0"
     tamagui: "npm:^1.85.12"
   peerDependencies:
@@ -5595,6 +5596,7 @@ __metadata:
   dependencies:
     "@preconstruct/cli": "npm:^2.8.3"
     clsx: "npm:^2.1.0"
+    react: "npm:^18.2.0"
     tailwind-merge: "npm:^2.2.1"
     tailwindcss: "npm:^3.4.1"
     tailwindcss-animate: "npm:^1.0.7"
@@ -9595,7 +9597,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "guidu-native@workspace:apps/expo"
   dependencies:
-    "@babel/core": "npm:^7.17.9"
+    "@babel/core": "npm:^7.23.7"
     "@babel/runtime": "npm:^7.18.9"
     "@expo/config-plugins": "npm:~7.2.2"
     "@expo/metro-config": "npm:~0.10.0"
@@ -15994,20 +15996,20 @@ __metadata:
     "@preconstruct/cli": "npm:^2.8.3"
     "@types/babel__core": "npm:^7"
     "@types/babel__preset-env": "npm:^7"
-    "@uidu-org/button": "npm:0.0.1"
+    "@uidu/native": "npm:*"
     "@uidu/native-config": "npm:0.0.8"
     check-dependency-version-consistency: "npm:^3.0.3"
     downshift: "npm:^8.3.1"
     eslint: "npm:^8.21.0"
     node-gyp: "npm:^9.3.1"
     prettier: "npm:^2.7.1"
+    react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
     tamagui: "npm:^1.85.12"
     tsup: "npm:^8.0.1"
     turbo: "npm:^1.10.3"
     typescript: "npm:^5.3.3"
   peerDependencies:
-    "@uidu-org/button": "workspace:^"
     "@uidu/native": "workspace:^"
     react: "*"
   languageName: unknown

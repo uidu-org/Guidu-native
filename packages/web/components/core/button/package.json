@@ -1,6 +1,6 @@
 {
   "name": "@uidu/button-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "ISC",
   "main": "dist/uidu-button-ui.cjs.js",
   "module": "dist/uidu-button-ui.esm.js",

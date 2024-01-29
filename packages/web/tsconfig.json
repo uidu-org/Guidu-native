@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.base",
-  "include": ["**/*.ts", "**/*.tsx", "src"],
+  "include": ["**/*.ts", "**/*.tsx", "src", "components"],
   "compilerOptions": {
     "baseUrl": ".",
     "composite": true,

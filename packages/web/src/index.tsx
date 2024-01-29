@@ -1,1 +1,1 @@
-export * from '@uidu/button-ui'
+export * from '@uidu/button-ui';

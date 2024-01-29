@@ -8,7 +8,8 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     '../../node_modules/@uidu/web/dist/**/*.{js,ts,jsx,tsx,mdx}',
     '../../packages/web/src/**/*.{js,ts,jsx,tsx,mdx}',
-    '../../packages/web/components/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../packages/web/components/core/**/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../packages/web/components/forms/**/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     container: {
@@ -53,10 +54,6 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
       },
       keyframes: {
         'accordion-down': {

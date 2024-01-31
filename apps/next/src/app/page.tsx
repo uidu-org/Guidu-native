@@ -1,7 +1,9 @@
 "use client"
 
 import { Dialog, DialogClose, DialogContent, DialogTrigger } from "@uidu/dialog-ui"
+import { Image as UiImagee } from "@uidu/image-ui"
 import { MediaCard } from "@uidu/media-card-ui"
+import Image from "next/image"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 
@@ -42,6 +44,10 @@ export default function Home() {
         <MediaCard files={arr} onClickAction={handleremove} />
       </div>
 
+
+      <UiImagee src={"/images/rome.jpeg"} height={400} width={400} />
+
+      <Image src={"/images/rome.jpeg"} height={300} width={300} alt="" />
 
     </main>
   )

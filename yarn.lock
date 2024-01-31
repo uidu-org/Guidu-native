@@ -7116,6 +7116,7 @@ __metadata:
     "@uidu/card-ui": "npm:0.0.1"
     "@uidu/checkbox-ui": "npm:0.0.2"
     "@uidu/dialog-ui": "npm:0.0.1"
+    "@uidu/image-ui": "workspace:^"
     "@uidu/input-ui": "npm:0.0.1"
     "@uidu/media-card-ui": "npm:0.0.1"
     "@uidu/popover-ui": "npm:0.0.1"
@@ -7138,6 +7139,20 @@ __metadata:
     tailwindcss: "npm:^3.4.1"
     tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
+"@uidu/image-ui@workspace:^, @uidu/image-ui@workspace:packages/web/components/core/image":
+  version: 0.0.0-use.local
+  resolution: "@uidu/image-ui@workspace:packages/web/components/core/image"
+  dependencies:
+    "@radix-ui/react-accordion": "npm:1.1.2"
+    "@radix-ui/react-avatar": "npm:^1.0.4"
+    "@types/react": "npm:^18"
+    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/lib": "npm:0.0.1"
+    class-variance-authority: "npm:^0.7.0"
+    react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 

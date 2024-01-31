@@ -1,0 +1,22 @@
+{
+  "name": "@uidu/carousel-ui",
+  "version": "0.0.1",
+  "main": "dist/uidu-carousel-ui.cjs.js",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@uidu/button-ui": "0.0.2",
+    "@uidu/lib": "0.0.1",
+    "embla-carousel-react": "8.0.0-rc22",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

@@ -4,7 +4,7 @@ import { cn } from "@uidu/lib";
 import { VariantProps, cva } from "class-variance-authority";
 import * as React from "react";
 
-export interface InputProps
+interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   inputVariants?: VariantProps<typeof inputVariants>
   disabled?: boolean;
@@ -150,5 +150,5 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 )
 Input.displayName = "Input"
 
-export { Input };
+export { Input, InputProps };
 

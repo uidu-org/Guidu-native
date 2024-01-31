@@ -3,27 +3,33 @@
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import * as React from "react";
 
+import { Button } from "@uidu/button-ui";
 import { cn } from "@uidu/lib";
 import { VariantProps, cva } from 'class-variance-authority';
 import Loading from "./icons/Loading";
+import PencilIcon from "./icons/Pencil";
+import RemoveIcon from "./icons/Remove";
 import User from "./icons/User";
 
 
+/* ------------------------- extend AvatarProps here ------------------------ */
 interface AvatarProps
     extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>,
     VariantProps<typeof avatarVariants> {
-    /* ------------------------- extend AvatarProps here ------------------------ */
 }
 
+/* ------------------------- extend AvatarImageProps here ------------------------ */
 interface AvatarImageProps
     extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
-    /* ------------------------- extend AvatarImageProps here ------------------------ */
+    appearance?: React.ReactNode | boolean;
+    onClickAction?: () => void
+    typeIconAction?: "remove" | "edit" | React.ReactNode
 }
 
+/* ------------------------- extend AvatarFallbackProps here ------------------------ */
 interface AvatarFallbackProps
     extends
     React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> {
-    /* ------------------------- extend AvatarFallbackProps here ------------------------ */
     children?: React.ReactNode;
     typeFallback?: "user" | "loading"
 }
@@ -46,7 +52,7 @@ const avatarVariants = cva(
         },
         defaultVariants: {
             size: "medium",
-            shape: "circle"
+            shape: "square"
         }
     }
 )
@@ -78,13 +84,40 @@ Avatar.displayName = AvatarPrimitive.Root.displayName
 const AvatarImage = React.forwardRef<
     React.ElementRef<typeof AvatarPrimitive.Image>,
     AvatarImageProps
->(({ className, ...props }, ref) => (
-    <AvatarPrimitive.Image
-        ref={ref}
-        className={cn("aspect-square h-full w-full", className)}
-        {...props}
-    />
-))
+>(({ className, appearance, onClickAction, typeIconAction = "remove", ...props }, ref) => {
+
+    type IconType = "remove" | "edit";
+    const iconComponents: Record<IconType, React.ReactElement> = {
+        remove: <RemoveIcon className="w-6 h-6 bg-red-600 absolute right-0 bottom-0 p-0.5 rounded-full" />,
+        edit: <PencilIcon className="w-6 h-6 bg-yellow-400 absolute right-0 bottom-0 p-0.5 rounded-full" />,
+    };
+
+    const isJsx = React.isValidElement(appearance)
+    const isBool = typeof appearance === "boolean"
+
+    const isFunction = typeof onClickAction === "function"
+    const Icon = iconComponents[typeIconAction as IconType] || (React.isValidElement(typeIconAction) && typeIconAction as React.ReactNode);
+
+    return (
+        <div className="relative">
+
+            <AvatarPrimitive.Image
+                ref={ref}
+                className={cn("aspect-square h-full w-full rounded-full", className)}
+                {...props}
+            />
+
+            {isJsx && !isBool && React.cloneElement(appearance)}
+            {isBool && !isJsx && < span className="absolute top-0 right-0 bg-green-600 w-4 h-4 rounded-full" />}
+
+            {isFunction && (
+                <Button onClick={onClickAction} iconAfter={Icon} />
+            )}
+
+        </div>
+    )
+}
+)
 AvatarImage.displayName = AvatarPrimitive.Image.displayName
 
 
@@ -100,14 +133,14 @@ const AvatarFallback = React.forwardRef<
 
     const isChild = !!children || !!typeFallback
 
-    const RenderTypeFallback = () => typeFallback === "user" ? (<User />) : (<Loading className="animate-spin" />)
+    const RenderTypeFallback = () => typeFallback === "user" ? (<User className="absolute inset-0 z-[99999]" />) : (<Loading className="animate-spin bg-stone-100 absolute inset-0 z-[99999] rounded-full overflow-hidden" />)
 
     return (
         <AvatarPrimitive.Fallback
             asChild={isChild}
             ref={ref}
             className={cn(
-                "flex h-full w-full items-center justify-center rounded-full bg-stone-100 dark:bg-stone-800",
+                "absolute inset-0 flex h-full w-full items-center justify-center dark:bg-stone-800 z-[9999] bg-stone-100",
                 className
             )}
             {...props}

@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from './button'
+import { Button, buttonVariants, type ButtonProps } from './button'
 
 // export component
-export { Button, buttonVariants }
+export { Button, ButtonProps, buttonVariants }

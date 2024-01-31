@@ -1,3 +1,4 @@
 import { CheckboxBase } from './checkbox'
+import { RHFCheckbox } from './RHFCheckbox'
 
-export { CheckboxBase }
+export { CheckboxBase, RHFCheckbox }

@@ -1,4 +1,4 @@
-import { Input } from './input'
+import { Input, type InputProps } from './input'
 import { RHFInput } from './RHFInput'
 
-export { Input, RHFInput }
+export { Input, InputProps, RHFInput }

@@ -11,7 +11,7 @@ import Check from "./icons/Check"
 //todo: checked | value
 
 /* ------------------------ extend CheckboxBase here ------------------------ */
-interface CheckboxBaseProps extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
+export interface CheckboxBaseProps extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
   //checkbox
   disabled?: boolean;
   checkboxVariant?: VariantProps<typeof checkboxVariants>

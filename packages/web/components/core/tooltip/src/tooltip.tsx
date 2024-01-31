@@ -1,11 +1,23 @@
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+import { Button } from "@uidu/button-ui"
 import * as React from "react"
 
 import { cn } from "@uidu/lib"
 
+/* --------------------- extend TooltipContentProps here -------------------- */
+export interface TooltipProps {
+  content: React.ReactNode
+  children?: React.ReactNode
+  delay?: number
+  offset?: number
+  placement?: "top" | "right" | "bottom" | "left"
+}
+
 const TooltipProvider = TooltipPrimitive.Provider
 
-const Tooltip = TooltipPrimitive.Root
+const TooltipRoot = TooltipPrimitive.Root
+
+const TooltipPortal = TooltipPrimitive.Portal
 
 const TooltipTrigger = TooltipPrimitive.Trigger
 
@@ -25,5 +37,26 @@ const TooltipContent = React.forwardRef<
 ))
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
 
-export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger }
+
+const Tooltip = ({ content, delay = 100, offset = -5, placement = "top", children }: TooltipProps) => {
+
+  return (
+    <TooltipProvider >
+      <TooltipRoot delayDuration={delay} >
+        <TooltipTrigger asChild >
+          {children ?? <Button variant="outline">Hover</Button>}
+        </TooltipTrigger>
+
+        <TooltipContent
+          side={placement}
+          sideOffset={offset}
+        >
+          {content}
+        </TooltipContent>
+      </TooltipRoot>
+    </TooltipProvider>
+  )
+}
+
+export { Tooltip }
 

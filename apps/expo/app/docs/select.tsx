@@ -1,7 +1,5 @@
-import { Check } from '@tamagui/lucide-icons'
-import { GuiButton, GuiControlSelect, GuiText, GuiView, Select } from '@uidu/native'
+import { GuiButton, GuiText, GuiView } from '@uidu/native'
 import { useForm } from 'react-hook-form'
-import { FlatList } from 'react-native'
 
 export default function SelectDocsPage() {
   const { control, getValues } = useForm({})
@@ -13,7 +11,7 @@ export default function SelectDocsPage() {
       </GuiText>
       <GuiText>Remember ! The Select accept children that must follow the tamagui Anatomy</GuiText>
 
-      <GuiControlSelect
+      {/* <GuiControlSelect
         control={control}
         label="Example"
         name="test"
@@ -34,7 +32,7 @@ export default function SelectDocsPage() {
             </Select.Item>
           )}
         />
-      </GuiControlSelect>
+      </GuiControlSelect> */}
 
       <GuiView>
         <GuiButton

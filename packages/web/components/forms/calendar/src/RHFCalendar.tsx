@@ -1,5 +1,5 @@
 import { Control, Controller, FieldValues, RegisterOptions } from "react-hook-form";
-import { DatePicker } from "./datePicker";
+import DatePicker from "./datePicker";
 
 
 export function RHFCalendar({ name, control, rules, ...rest }: {

@@ -8,7 +8,7 @@ interface MediaCardProps {
     onClickAction: (id: string) => void
 }
 
-export function MediaCard({
+export function MediaCardCollection({
     files,
     onClickAction
 }: MediaCardProps) {
@@ -19,7 +19,7 @@ export function MediaCard({
             <DialogTrigger>
                 <div className="flex overflow-x-auto overflow-y-hidden -webkit-overflow-scrolling-touch whitespace-nowrap pb-4 pt-4 mt-[-1rem] mb-[-1rem]">
                     {files.map((file, idx) => (
-                        <Card>
+                        <Card key={idx}>
                             <img className="h-full w-full" src={file?.img} />
                         </Card>
                     ))}

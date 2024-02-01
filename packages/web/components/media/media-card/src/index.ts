@@ -1,4 +1,4 @@
-import { MediaCard } from './mediaCardCollection'
+import { MediaCardCollection } from './mediaCardCollection'
 
 // export component
-export { MediaCard }
+export { MediaCardCollection }

@@ -32,7 +32,7 @@ const timeOnlyStyles = {
     base: "[&.react-datepicker--time-only>div]:pr-0 [&.react-datepicker--time-only>div]:w-28",
 };
 
-interface DatePickerProps<selectsRange extends boolean | undefined>
+export interface DatePickerProps<selectsRange extends boolean | undefined>
     extends Omit<ReactDatePickerProps, "selectsRange" | "onChange"> {
     onChange(
         date: selectsRange extends false | undefined
@@ -99,5 +99,5 @@ const DatePicker = ({
 };
 
 DatePicker.displayName = "DatePicker";
-export { DatePicker, DatePickerProps };
+export default DatePicker;
 

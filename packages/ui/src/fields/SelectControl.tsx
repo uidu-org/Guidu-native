@@ -49,7 +49,7 @@ export function GuiControlSelect({
             value={value as string}
             onValueChange={onChange}
             disablePreventBodyScroll
-            // size={'$2'}
+          // size={'$2'}
           >
             <Select.Trigger bw="$0" width="100%">
               <Select.Value style={isBox && boxStyles} placeholder={placeholder} />
@@ -79,13 +79,13 @@ export function GuiControlSelect({
 
             <Select.Content zIndex={200000}>
               <Select.ScrollUpButton
-                alignItems="center"
-                justifyContent="center"
+                ai="center"
+                jc="center"
                 position="relative"
                 width="100%"
                 height="$3"
               >
-                <YStack zIndex={10}>
+                <YStack zi={10}>
                   <ChevronUp size={20} />
                 </YStack>
               </Select.ScrollUpButton>
@@ -106,13 +106,13 @@ export function GuiControlSelect({
               </Select.Viewport>
 
               <Select.ScrollDownButton
-                alignItems="center"
-                justifyContent="center"
-                position="relative"
-                width="100%"
-                height="$3"
+                ai="center"
+                jc="center"
+                // position="relative"
+                w="100%"
+                h="$3"
               >
-                <YStack zIndex={10}>
+                <YStack zi={10} >
                   <ChevronDown size={20} />
                 </YStack>
               </Select.ScrollDownButton>

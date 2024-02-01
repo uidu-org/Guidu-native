@@ -1,9 +1,6 @@
 "use client"
 
-import { Dialog, DialogClose, DialogContent, DialogTrigger } from "@uidu/dialog-ui"
-import { Image as UiImagee } from "@uidu/image-ui"
-import { MediaCard } from "@uidu/media-card-ui"
-import Image from "next/image"
+import { MediaCardCollection } from "@uidu/media-card-ui"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 
@@ -23,32 +20,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen p-24">
-      {/* <AvatarGroup
-        onClickActions={handleremove}
-        items={arr}
-      /> */}
-
-      <Dialog >
-        <DialogTrigger asChild>
-          <p>openn</p>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogClose >xx</DialogClose>
-
-          <div className="bg-red-600 h-20 w-20"></div>
-
-        </DialogContent>
-      </Dialog>
-
       <div className="h-40 " >
-        <MediaCard files={arr} onClickAction={handleremove} />
+        <MediaCardCollection files={arr} onClickAction={handleremove} />
       </div>
-
-
-      <UiImagee src={"/images/rome.jpeg"} height={400} width={400} />
-
-      <Image src={"/images/rome.jpeg"} height={300} width={300} alt="" />
-
     </main>
   )
 }

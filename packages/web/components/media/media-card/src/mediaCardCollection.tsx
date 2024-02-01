@@ -2,11 +2,10 @@
 import { Card, CardContent } from "@uidu/card-ui"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@uidu/carousel-ui"
 import { Dialog, DialogContent, DialogPortal, DialogTrigger } from "@uidu/dialog-ui"
-import { useCallback } from "react"
 
 interface MediaCardProps {
     files: object[]
-    onClickAction?: (id: string) => void
+    onClickAction: (id: string) => void
 }
 
 export function MediaCard({
@@ -14,15 +13,6 @@ export function MediaCard({
     onClickAction
 }: MediaCardProps) {
 
-
-    const handleSubmit = useCallback(
-        ({ id }: { id: string }) => {
-            if (onClickAction) {
-                onClickAction(id);
-            }
-        },
-        []
-    );
 
     return (
         <Dialog>
@@ -43,14 +33,14 @@ export function MediaCard({
                         }}
                         className="w-full max-w-sm"
                     >
-                        <CarouselContent>
+                        <CarouselContent className="h-[calc(100vh-6rem)]">
                             {files.map((file, idx) => (
-                                <CarouselItem key={idx}>
-                                    <div className="p-1 relative">
-                                        <Card>
+                                <CarouselItem key={idx} className="flex flex-col justify-center items-center">
+                                    <div className="p-1">
+                                        <Card className="relative">
                                             <button
-                                                className="absolute top-0 right-0"
-                                                onClick={() => handleSubmit({ id: file?.id + 1 })}>dele</button>
+                                                className="absolute top-0 right-0 w-8 h-8 rounded-full bg-red-800"
+                                                onClick={() => onClickAction(file?.id)}>dele</button>
                                             <CardContent className="flex aspect-square items-center justify-center p-6">
                                                 <img className="h-full w-full" src={file.img} />
                                             </CardContent>

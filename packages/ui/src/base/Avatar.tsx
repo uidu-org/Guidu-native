@@ -1,6 +1,6 @@
 import { Avatar, GetProps, styled } from 'tamagui'
 
-export const GuiAvatar = styled(Avatar, {
+export const GuiAvatarTest = styled(Avatar, {
   name: 'GuiAvatar',
 
   variants: {
@@ -8,4 +8,4 @@ export const GuiAvatar = styled(Avatar, {
   } as const,
 })
 
-export type GuiAvatarProps = GetProps<typeof GuiAvatar>
+export type GuiAvatarProps = GetProps<typeof GuiAvatarTest>

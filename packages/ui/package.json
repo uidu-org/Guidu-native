@@ -7,13 +7,13 @@
   "typings": "types",
   "main": "dist/uidu-native.cjs.js",
   "module": "dist/uidu-native.esm.js",
+  "module:jsx": "dist/jsx/index.js",
   "files": [
     "dist",
     "types"
   ],
   "scripts": {
-    "build": "tamagui-build --skipLibCheck",
-    "watch": "tamagui-build --skip-types --watch"
+    "watch": "yarn preconstruct build --watch"
   },
   "dependencies": {
     "@tamagui/lucide-icons": "^1.85.12",
@@ -21,6 +21,7 @@
     "downshift": "^8.3.1",
     "react-hook-form": "^7.49.3",
     "react-native-svg": "13.9.0",
+    "react-use": "^17.5.0",
     "tamagui": "^1.85.12"
   },
   "devDependencies": {

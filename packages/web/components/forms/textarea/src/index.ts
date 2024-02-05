@@ -1,3 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from './avatar'
+import { RHFTextarea } from './RHF-Textarea'
+import { Textarea, type TextareaProps } from './textarea'
 
-export { Avatar, AvatarFallback, AvatarImage }
+export { RHFTextarea, Textarea, TextareaProps }

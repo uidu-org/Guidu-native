@@ -3,7 +3,10 @@
   "include": ["app/**/*.ts", "app/**/*.tsx"],
   "compilerOptions": {
     "composite": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "~/*": ["../../packages/ui/src/index.tsx"]
+    }
   },
   "references": []
 }

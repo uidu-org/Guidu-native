@@ -15,7 +15,7 @@ export function RHFInput({ name, control, rules, ...rest }: InputProps & {
             name={name}
             control={control}
             rules={rules}
-            render={({ field: { name, onChange, ref, value = "", disabled, onBlur } }) => (
+            render={({ field: { name, onChange, ref, value = "", disabled, onBlur }, fieldState: { error } }) => (
                 <Input
                     id={name}
                     onChange={onChange}
@@ -23,6 +23,7 @@ export function RHFInput({ name, control, rules, ...rest }: InputProps & {
                     value={value}
                     disabled={disabled}
                     onBlur={onBlur}
+                    error={error}
                     {...rest}
                 />
             )} />

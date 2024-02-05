@@ -11,8 +11,8 @@ module.exports = function (api) {
           root: ['../..'],
           alias: {
             // define aliases to shorten the import paths
-            app: '../../packages/app',
-            '@uidu/native': '../../packages/ui',
+            // app: '../../packages/app',
+            // '@uidu/native': '../../packages/ui',
           },
           extensions: ['.js', '.jsx', '.tsx', '.ios.js', '.android.js'],
         },

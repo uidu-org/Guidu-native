@@ -3,6 +3,7 @@ import { FieldHelperText } from "@uidu/field-helper-text-ui";
 import { cn } from "@uidu/lib";
 import { VariantProps, cva } from "class-variance-authority";
 import * as React from "react";
+import { FieldError } from "react-hook-form";
 
 interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -17,7 +18,7 @@ interface InputProps
   helperText?: string
   helperClassName?: string;
   //error
-  error?: string
+  error?: FieldError | string
   errorClassName?: string;
 }
 
@@ -105,7 +106,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
 
       <div>
-        <div className={"gap-2 mb-1"}>
+        <div className={"space-y-2 mb-1"}>
 
           {label && <label className={cn("", labelClassName)} htmlFor={id}>{label}</label>}
 
@@ -139,9 +140,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {error && (
           <FieldErrorText
             className={cn(errorClassName)}
-          >
-            {error}
-          </FieldErrorText>
+            error={error}
+          />
         )}
 
       </div>

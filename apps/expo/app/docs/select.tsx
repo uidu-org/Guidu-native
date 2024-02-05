@@ -1,5 +1,7 @@
-import { GuiButton, GuiText, GuiView } from '@uidu/native'
+import { GuiButton, GuiControlSelect, GuiText, GuiView, Select } from '@uidu/native'
+import { CheckIcon } from "lucide-react"
 import { useForm } from 'react-hook-form'
+import { FlatList } from 'react-native'
 
 export default function SelectDocsPage() {
   const { control, getValues } = useForm({})
@@ -11,7 +13,7 @@ export default function SelectDocsPage() {
       </GuiText>
       <GuiText>Remember ! The Select accept children that must follow the tamagui Anatomy</GuiText>
 
-      {/* <GuiControlSelect
+      <GuiControlSelect
         control={control}
         label="Example"
         name="test"
@@ -27,12 +29,12 @@ export default function SelectDocsPage() {
                 {item.name}
               </Select.ItemText>
               <Select.ItemIndicator marginLeft="auto">
-                <Check size={16} />
+                <CheckIcon size={16} />
               </Select.ItemIndicator>
             </Select.Item>
           )}
         />
-      </GuiControlSelect> */}
+      </GuiControlSelect>
 
       <GuiView>
         <GuiButton

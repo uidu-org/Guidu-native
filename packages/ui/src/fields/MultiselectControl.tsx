@@ -1,20 +1,26 @@
-import { Check, X } from '@tamagui/lucide-icons'
-import { useMultipleSelection, useSelect } from 'downshift'
-import { useMemo, useState } from 'react'
-import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form'
-import { FlatList } from 'react-native'
-import { Checkbox, Separator, Sheet, XStack } from 'tamagui'
-import { GuiButton } from '../base/Button'
-import { GuiText } from '../base/Text'
-import { GuiView } from '../base/View'
+import { Check, X } from '@tamagui/lucide-icons';
+import { Checkbox, GuiSheet, GuiText, Separator, XStack } from '@uidu/native';
+import { useState } from 'react';
+import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form';
+import { FlatList } from 'react-native';
+import { GuiButton } from '../base/Button';
+import { GuiView } from '../base/View';
+import { useList } from "../lib/react-use/useList";
+;
 
-type GuiMultiselectProps = {
+
+type Option = {
+  id: string
+  label: string;
+  value: string;
+};
+
+export type GuiMultiselectProps = {
   label: string
-  items: object[]
   control: Control
-  initialItems: object[]
+  initialItems: Option[]
+  options: Option[]
   onClick: (item: any) => void
-
   name: string
   rules: Omit<
     RegisterOptions<FieldValues, string>,
@@ -23,61 +29,18 @@ type GuiMultiselectProps = {
 }
 
 export function GuiControlMultiselect({
-  items: itemsFromProps,
   onClick: onItemClick,
   label,
   initialItems = [],
   control,
   name,
   rules,
+  options
 }: GuiMultiselectProps) {
   const [open, setOpen] = useState(false)
-  const memoSnapPoints = useMemo(() => [85], [])
 
-  function getArrayFilter(selectedUsers) {
-    return function booksFilter(book) {
-      return selectedUsers.indexOf(book) < 0
-    }
-  }
-
-  const {
-    getSelectedItemProps,
-    getDropdownProps,
-    addSelectedItem,
-    removeSelectedItem,
-    selectedItems,
-  } = useMultipleSelection({ initialSelectedItems: initialItems })
-
-  const items = itemsFromProps.filter(getArrayFilter(selectedItems)) || []
-
-  const {
-    // selectedItem,
-    getToggleButtonProps,
-    // getLabelProps,
-    getMenuProps,
-    // highlightedIndex,
-    getItemProps,
-  } = useSelect({
-    selectedItem: null,
-    defaultHighlightedIndex: 0,
-    items,
-    onStateChange: ({ type, selectedItem: newSelectedItem }) => {
-      switch (type) {
-        case useSelect.stateChangeTypes.ToggleButtonKeyDownEnter:
-        case useSelect.stateChangeTypes.ToggleButtonKeyDownSpaceButton:
-        case useSelect.stateChangeTypes.ItemClick:
-        case useSelect.stateChangeTypes.ToggleButtonBlur:
-          if (newSelectedItem) {
-            addSelectedItem(newSelectedItem)
-          }
-          break
-        default:
-          break
-      }
-    },
-  })
-
-  // console.log('ITEMS ==>', JSON.stringify(initialItems, null, 2));
+  const [value, { push, removeAt }] = useList<object>(initialItems);
+  const selectedItems = options.filter((o) => value.includes(o.value))
 
   return (
     <Controller
@@ -88,12 +51,12 @@ export function GuiControlMultiselect({
       render={({ field: { value = initialItems, onChange } }) => (
         <>
           <XStack>
-            <GuiButton {...getToggleButtonProps()} bg="transparent" onPress={() => setOpen(true)}>
+            <GuiButton bg="transparent" onPress={() => setOpen(true)}>
               {label}{' '}
             </GuiButton>
             <GuiView fd="row">
               <GuiView fd="row" p="$2" gap="$2">
-                {selectedItems.slice(0, 2).map((selectedItemForRender, index) => (
+                {value.slice(0, 2).map((selectedItemForRender, index) => (
                   <GuiView
                     jc="center"
                     ai="center"
@@ -103,13 +66,9 @@ export function GuiControlMultiselect({
                     borderTopRightRadius={10}
                     borderBottomRightRadius={10}
                     key={`selected-item-${selectedItemForRender.id}`}
-                    {...getSelectedItemProps({
-                      selectedItem: selectedItemForRender,
-                      index,
-                    })}
                   >
                     <GuiText numberOfLines={1} ellipsizeMode="tail">
-                      {selectedItemForRender?.name || 'null'}
+                      {selectedItemForRender?.label || 'null'}
                     </GuiText>
 
                     <X
@@ -122,8 +81,8 @@ export function GuiControlMultiselect({
                         padding: 1,
                       }}
                       onPress={() => {
-                        removeSelectedItem(selectedItemForRender)
-                        // setValue('testMSelect', selectedItems);
+
+                        removeAt(index)
                         onChange(value.filter((val) => val.id !== selectedItemForRender.id))
 
                         onItemClick(selectedItemForRender)
@@ -132,124 +91,90 @@ export function GuiControlMultiselect({
                     />
                   </GuiView>
                 ))}
-                {selectedItems.length - 2 > 0 && (
+                {value.length - 2 > 0 && (
                   <GuiText>+ {`${selectedItems.length - 2}`}</GuiText>
                 )}
               </GuiView>
             </GuiView>
           </XStack>
 
-          <Sheet
-            forceRemoveScrollEnabled={open}
-            modal
-            open={open}
-            onOpenChange={setOpen}
-            snapPoints={memoSnapPoints}
-            dismissOnSnapToBottom
-            zIndex={9999999}
-            animation="medium"
-            {...getDropdownProps()}
+          <GuiSheet
+            setStatus={setOpen}
+            snapPoints={[85]}
+            status={open}
           >
-            <Sheet.Overlay
-              animation="lazy"
-              enterStyle={{ opacity: 0 }}
-              exitStyle={{ opacity: 0 }}
-            />
-            <Sheet.Handle />
-            <Sheet.Frame
-              // style={{
-              //   display: open ? 'flex' : 'none',
-              // }}
-              {...getMenuProps()}
-            >
-              <GuiView>
-                {selectedItems.length > 0 &&
-                  selectedItems.map((selectedItemForRender, index) => (
-                    <>
-                      <XStack
-                        jc="space-between"
-                        ai="center"
-                        p="$2.5"
-                        key={`selected-item-${index}`}
-                        {...getSelectedItemProps({
-                          selectedItem: selectedItemForRender,
-                          index,
-                        })}
+            <GuiView>
+              {value.length > 0 &&
+                value.map((selectedItemForRender, index) => (
+                  <>
+                    <XStack
+                      jc="space-between"
+                      ai="center"
+                      p="$2.5"
+                      key={`selected-item-${index}`}
+
+                    >
+                      <GuiText>{selectedItemForRender?.label}</GuiText>
+
+                      <Checkbox
+                        defaultChecked
+                        id={selectedItemForRender?.id}
+                        size="$5"
+                        key={selectedItemForRender?.id}
+                        p="$2"
+                        onPress={async (e) => {
+                          removeAt(index)
+                          await onItemClick(selectedItemForRender)
+                        }}
                       >
-                        <GuiText>{selectedItemForRender?.name}</GuiText>
+                        <Checkbox.Indicator>
+                          <Check />
+                        </Checkbox.Indicator>
+                      </Checkbox>
+                    </XStack>
+                    <Separator />
+                  </>
+                ))}
+            </GuiView>
 
-                        <Checkbox
-                          defaultChecked
-                          id={selectedItemForRender?.id}
-                          size="$5"
-                          key={selectedItemForRender?.id}
-                          p="$2"
-                          onPress={async (e) => {
-                            e.stopPropagation()
-                            removeSelectedItem(selectedItemForRender)
-                            await onItemClick(selectedItemForRender)
-                          }}
-                        >
-                          <Checkbox.Indicator>
-                            <Check />
-                          </Checkbox.Indicator>
-                        </Checkbox>
-                      </XStack>
-                      <Separator />
-                    </>
-                  ))}
-              </GuiView>
+            <GuiView h={7} bg="$gray7Light" mx="$2" borderRadius={30} my="$4" />
 
-              <GuiView h={7} bg="$gray7Light" mx="$2" borderRadius={30} my="$4" />
+            <FlatList
+              data={options.filter((o) => !value.includes(o.value))}
+              keyExtractor={(item, index) => index.toString()}
+              renderItem={({ item, index }) => {
 
-              <FlatList
-                data={items}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({ item, index }) => {
-                  const {
-                    'aria-selected': ariaSelected,
-                    onMouseMove,
-                    onMouseDown,
-                    onClick,
-                    onPress,
-                    ...rest
-                  } = getItemProps({
-                    item,
-                    index,
-                  })
 
-                  return (
-                    <>
-                      <XStack key={item.id} jc="space-between" ai="center" p="$2.5">
-                        <GuiText>{item.name}</GuiText>
+                return (
+                  <>
+                    <XStack key={item.id} jc="space-between" ai="center" p="$2.5">
+                      <GuiText>{item.label}</GuiText>
 
-                        <Checkbox
-                          id={item.id}
-                          size="$5"
-                          key={item.id}
-                          p="$2"
-                          onPress={async (e) => {
-                            onPress(e)
-                            // setValue('testMSelect', selectedItemsRef.current);
+                      <Checkbox
+                        id={item.id}
+                        size="$5"
+                        key={item.id}
+                        p="$2"
+                        onPress={(e) => {
+                          push({ id: item.id })
+                          // setValue('testMSelect', selectedItemsRef.current);
+                          onChange([...value, item])
 
-                            onChange([...value, item])
+                          onItemClick(item)
+                        }}
 
-                            await onItemClick(item)
-                          }}
-                          {...rest}
-                        >
-                          <Checkbox.Indicator>
-                            <Check />
-                          </Checkbox.Indicator>
-                        </Checkbox>
-                      </XStack>
-                      <Separator />
-                    </>
-                  )
-                }}
-              />
-            </Sheet.Frame>
-          </Sheet>
+                      >
+                        <Checkbox.Indicator>
+                          <Check />
+                        </Checkbox.Indicator>
+                      </Checkbox>
+                    </XStack>
+                    <Separator />
+                  </>
+                )
+              }}
+            />
+          </GuiSheet>
         </>
       )}
     />

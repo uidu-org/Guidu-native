@@ -1,3 +1,4 @@
+import { RHFSelect } from './RHF-Select'
 import {
   Select,
   SelectContent,
@@ -12,6 +13,7 @@ import {
 } from './select'
 
 export {
+  RHFSelect,
   Select,
   SelectContent,
   SelectGroup,

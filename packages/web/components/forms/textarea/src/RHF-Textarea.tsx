@@ -1,8 +1,8 @@
 import { Control, Controller, FieldValues, RegisterOptions } from "react-hook-form";
-import { CheckboxBase, CheckboxBaseProps } from "./checkbox";
+import { Textarea, TextareaProps } from "./textarea";
 
 
-export function RHFCheckbox({ name, control, rules, ...rest }: CheckboxBaseProps & {
+export function RHFTextarea({ name, control, rules, ...rest }: TextareaProps & {
     name: string
     control: Control;
     rules: Omit<
@@ -15,8 +15,8 @@ export function RHFCheckbox({ name, control, rules, ...rest }: CheckboxBaseProps
             name={name}
             control={control}
             rules={rules}
-            render={({ field: { name, onChange, ref, value, disabled, onBlur } }) => (
-                <CheckboxBase
+            render={({ field: { name, onChange, ref, value = "", disabled, onBlur } }) => (
+                <Textarea
                     id={name}
                     onChange={onChange}
                     ref={ref}

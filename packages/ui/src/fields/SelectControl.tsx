@@ -17,7 +17,7 @@ type GuiControlSelectProps = {
   isBox?: boolean
 }
 
-export function GuiControlSelect({
+function GuiControlSelect({
   label,
   control,
   name,
@@ -123,3 +123,4 @@ export function GuiControlSelect({
     </XStack>
   )
 }
+export { GuiControlSelect }

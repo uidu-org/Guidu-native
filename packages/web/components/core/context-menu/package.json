@@ -7,7 +7,7 @@
     "dist"
   ],
   "dependencies": {
-    "@radix-ui/react-context-menu": "2.1.5",
+    "@radix-ui/react-context-menu": "^2.1.5",
     "@uidu/lib": "0.0.1",
     "react": "^18.2.0"
   },

@@ -1,6 +1,7 @@
 import { cn } from '@uidu/lib';
 import { VariantProps, cva } from 'class-variance-authority';
 import React from 'react';
+import { FieldError } from 'react-hook-form';
 import AlertCircle from './icons/AlertCircle';
 
 const helperTextVariants = cva(
@@ -25,12 +26,14 @@ export interface FieldErrorTextProps
   VariantProps<typeof helperTextVariants> {
   as?: 'div' | 'span';
   className?: string;
+  error?: FieldError | string
 }
 
 export function FieldErrorText({
   size,
   as = 'div',
   children,
+  error,
   className,
 }: React.PropsWithChildren<FieldErrorTextProps>) {
   const Component = as;
@@ -40,7 +43,7 @@ export function FieldErrorText({
       className={cn("border border-red-600 text-red-600 rounded-md px-1 text-sm flex gap-2", helperTextVariants({ size, className }))}
     >
       <AlertCircle className='w-5 h-5' />
-      {children}
+      {error as string}
     </Component>
   );
 }

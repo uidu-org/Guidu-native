@@ -4,8 +4,8 @@
     "isolatedModules": false,
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "app/*": ["./packages/app/*"],
-      "@uidu/native/*": ["./packages/ui/*"]
+      "app/*": ["./packages/app/*"]
+      // "@uidu/native/*": ["./packages/ui/*"]
     },
     "jsx": "react-jsx"
   },

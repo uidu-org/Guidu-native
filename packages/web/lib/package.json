@@ -11,7 +11,6 @@
     "dist"
   ],
   "scripts": {
-    "prepare": "panda codegen",
     "watch": "yarn preconstruct build --watch"
   },
   "dependencies": {

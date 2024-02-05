@@ -1,7 +1,3 @@
-import {
-  CustomDialog as GuiDialog,
-  CustomDialogTitle as GuiDialogTitle,
-  DialogueDescription as GuiDialogueDescription,
-} from './Dialog';
+import { GuiDialog, GuiDialogTitle, GuiDialogueDescription } from './Dialog'
 
-export { GuiDialog, GuiDialogTitle, GuiDialogueDescription };
+export { GuiDialog, GuiDialogTitle, GuiDialogueDescription }

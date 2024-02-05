@@ -49,5 +49,5 @@ const Popover = ({ children, content, offset = 5, placement }: PopoverProps) => 
   )
 }
 
-export { Popover }
+export { Popover, PopoverContent, PopoverRoot, PopoverTrigger }
 

@@ -8,17 +8,19 @@ import ChevronUpIcon from './icons/ChevronUp';
 
 
 type Option = {
+  id: string
   label: string;
   value: string;
 };
-type Props = {
+type MultiselectProps = {
   options: Option[];
+  initialItems: Option[]
 };
 
-const Multiselect: React.FC<Props> = (props) => {
+const Multiselect: React.FC<MultiselectProps> = ({ options, initialItems }) => {
 
-  const { options } = props;
-  const [value, { push, removeAt }] = useList<string>([]);
+
+  const [value, { push, removeAt }] = useList<string>(initialItems.map((i) => i.id));
   const selectedItems = options.filter((o) => value.includes(o.value))
 
   return (

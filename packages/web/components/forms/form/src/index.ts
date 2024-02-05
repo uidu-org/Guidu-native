@@ -1,3 +1,21 @@
-import { Form, FormControl, FormField, useFormField } from './form'
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  useFormField,
+} from './form'
 
-export { Form, FormControl, FormField, useFormField }
+export {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  useFormField,
+}

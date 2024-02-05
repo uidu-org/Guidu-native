@@ -1,5 +1,6 @@
 import { FieldErrorText } from "@uidu/field-error-text-ui";
 import { FieldHelperText } from "@uidu/field-helper-text-ui";
+import { Label } from "@uidu/label-ui";
 import { cn } from "@uidu/lib";
 import { VariantProps, cva } from "class-variance-authority";
 import * as React from "react";
@@ -108,7 +109,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <div>
         <div className={"space-y-2 mb-1"}>
 
-          {label && <label className={cn("", labelClassName)} htmlFor={id}>{label}</label>}
+          {label && <Label className={cn("", labelClassName)} htmlFor={id}>{label}</Label>}
 
           <input
             id={id}
@@ -120,7 +121,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             )}
             ref={ref}
             disabled={disabled}
-
             {...props}
           />
         </div>

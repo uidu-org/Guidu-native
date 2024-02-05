@@ -1,4 +1,4 @@
-import { Popover } from './popover'
+import { Popover, PopoverContent, PopoverRoot, PopoverTrigger } from './popover'
 
 // export component
-export { Popover }
+export { Popover, PopoverContent, PopoverRoot, PopoverTrigger }

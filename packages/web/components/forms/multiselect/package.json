@@ -1,7 +1,7 @@
 {
-  "name": "@uidu/multi-select-ui",
+  "name": "@uidu/multiselect-ui",
   "version": "0.0.2",
-  "main": "dist/uidu-multi-select-ui.cjs.js",
+  "main": "dist/uidu-multiselect-ui.cjs.js",
   "license": "ISC",
   "files": [
     "dist"

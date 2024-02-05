@@ -116,7 +116,8 @@ const labelVariants = cva(
 const CheckboxBase = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   CheckboxBaseProps
->(({ className, disabled, icon = <Check className="h-3 w-3" />, checked,
+>(({ className, disabled, icon = <Check className="h-3 w-3" />,
+  checked,
   id,
   name,
   labelVariant,
@@ -143,6 +144,7 @@ const CheckboxBase = React.forwardRef<
             "bg-transparent border-2 border-black rounded-md flex items-center justify-center shadow-md focus:border-black focus:shadow-black", !!error && "border-red-600", className
           )}
           id={id}
+          checked={checked}
           {...props}
         >
           <CheckboxPrimitive.Indicator

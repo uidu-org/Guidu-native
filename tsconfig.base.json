@@ -3,6 +3,8 @@
     "baseUrl": ".",
     "rootDir": ".",
     "importHelpers": true,
+    "declarationMap": true,
+    "composite": true,
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,

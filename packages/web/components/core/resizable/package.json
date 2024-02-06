@@ -9,10 +9,10 @@
   "dependencies": {
     "@uidu/lib": "0.0.1",
     "react": "^18.2.0",
-    "react-resizable-panels": "^2.0.2"
+    "react-resizable-panels": "^2.0.3"
   },
   "devDependencies": {
-    "@types/react": "^18"
+    "@types/react": "^18.2.55"
   },
   "publishConfig": {
     "access": "public",

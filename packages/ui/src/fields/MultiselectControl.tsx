@@ -1,19 +1,19 @@
-import { Check, X } from '@tamagui/lucide-icons';
-import { Checkbox, GuiSheet, GuiText, Separator, XStack } from '@uidu/native';
-import { useState } from 'react';
-import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form';
-import { FlatList } from 'react-native';
-import { GuiButton } from '../base/Button';
-import { GuiView } from '../base/View';
-import { useList } from "../lib/react-use/useList";
-;
-
+import { Check, X } from '@tamagui/lucide-icons'
+import { useState } from 'react'
+import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form'
+import { FlatList } from 'react-native'
+import { Checkbox, Separator, XStack } from 'tamagui'
+import { GuiText } from '../base'
+import { GuiButton } from '../base/Button'
+import { GuiView } from '../base/View'
+import { useList } from '../lib/react-use/useList'
+import { GuiSheet } from '../widget/Sheet'
 
 type Option = {
   id: string
-  label: string;
-  value: string;
-};
+  label: string
+  value: string
+}
 
 export type GuiMultiselectProps = {
   label: string
@@ -35,11 +35,11 @@ export function GuiControlMultiselect({
   control,
   name,
   rules,
-  options
+  options,
 }: GuiMultiselectProps) {
   const [open, setOpen] = useState(false)
 
-  const [value, { push, removeAt }] = useList<object>(initialItems);
+  const [value, { push, removeAt }] = useList<object>(initialItems)
   const selectedItems = options.filter((o) => value.includes(o.value))
 
   return (
@@ -52,7 +52,7 @@ export function GuiControlMultiselect({
         <>
           <XStack>
             <GuiButton bg="transparent" onPress={() => setOpen(true)}>
-              {label}{' '}
+              {label}
             </GuiButton>
             <GuiView fd="row">
               <GuiView fd="row" p="$2" gap="$2">
@@ -81,7 +81,6 @@ export function GuiControlMultiselect({
                         padding: 1,
                       }}
                       onPress={() => {
-
                         removeAt(index)
                         onChange(value.filter((val) => val.id !== selectedItemForRender.id))
 
@@ -91,29 +90,17 @@ export function GuiControlMultiselect({
                     />
                   </GuiView>
                 ))}
-                {value.length - 2 > 0 && (
-                  <GuiText>+ {`${selectedItems.length - 2}`}</GuiText>
-                )}
+                {value.length - 2 > 0 && <GuiText>+ {`${selectedItems.length - 2}`}</GuiText>}
               </GuiView>
             </GuiView>
           </XStack>
 
-          <GuiSheet
-            setStatus={setOpen}
-            snapPoints={[85]}
-            status={open}
-          >
+          <GuiSheet setStatus={setOpen} snapPoints={[85]} status={open}>
             <GuiView>
               {value.length > 0 &&
                 value.map((selectedItemForRender, index) => (
                   <>
-                    <XStack
-                      jc="space-between"
-                      ai="center"
-                      p="$2.5"
-                      key={`selected-item-${index}`}
-
-                    >
+                    <XStack jc="space-between" ai="center" p="$2.5" key={`selected-item-${index}`}>
                       <GuiText>{selectedItemForRender?.label}</GuiText>
 
                       <Checkbox
@@ -143,8 +130,6 @@ export function GuiControlMultiselect({
               data={options.filter((o) => !value.includes(o.value))}
               keyExtractor={(item, index) => index.toString()}
               renderItem={({ item, index }) => {
-
-
                 return (
                   <>
                     <XStack key={item.id} jc="space-between" ai="center" p="$2.5">
@@ -162,7 +147,6 @@ export function GuiControlMultiselect({
 
                           onItemClick(item)
                         }}
-
                       >
                         <Checkbox.Indicator>
                           <Check />

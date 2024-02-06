@@ -20,6 +20,7 @@ export function GuiSheet({
   ...props
 }: GuiSheetProps) {
   const memoSnapPoints = useMemo(() => snapPoints, [snapPoints])
+
   return (
     <Sheet
       open={status}

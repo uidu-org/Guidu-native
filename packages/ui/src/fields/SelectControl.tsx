@@ -1,7 +1,7 @@
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
-import { Adapt, Select, Sheet, XStack, YStack } from '@uidu/native'
 import { ReactNode } from 'react'
 import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form'
+import { Adapt, Select, Sheet, XStack, YStack } from 'tamagui'
 
 type GuiControlSelectProps = {
   label: string
@@ -49,12 +49,11 @@ function GuiControlSelect({
             value={value as string}
             onValueChange={onChange}
             disablePreventBodyScroll
-          // size={'$2'}
+            // size={'$2'}
           >
             <Select.Trigger bw="$0" width="100%">
               <Select.Value style={isBox && boxStyles} placeholder={placeholder} />
             </Select.Trigger>
-
             <Adapt when="sm" platform="touch">
               <Sheet
                 modal
@@ -76,7 +75,6 @@ function GuiControlSelect({
                 />
               </Sheet>
             </Adapt>
-
             <Select.Content zIndex={200000}>
               <Select.ScrollUpButton
                 ai="center"
@@ -112,7 +110,7 @@ function GuiControlSelect({
                 w="100%"
                 h="$3"
               >
-                <YStack zi={10} >
+                <YStack zi={10}>
                   <ChevronDown size={20} />
                 </YStack>
               </Select.ScrollDownButton>

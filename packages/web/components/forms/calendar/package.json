@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.4",
-    "@types/react-datepicker": "^4.19.5",
+    "@types/react-datepicker": "^4.19.6",
     "@uidu/button-ui": "0.0.2",
     "@uidu/field-error-text-ui": "0.0.1",
     "@uidu/field-helper-text-ui": "0.0.1",
@@ -21,7 +21,7 @@
     "react-hook-form": "^7.49.3"
   },
   "devDependencies": {
-    "@types/react": "^18"
+    "@types/react": "^18.2.55"
   },
   "publishConfig": {
     "access": "public",

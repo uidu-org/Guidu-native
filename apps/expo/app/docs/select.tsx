@@ -1,5 +1,5 @@
+import { Check } from '@tamagui/lucide-icons'
 import { GuiButton, GuiControlSelect, GuiText, GuiView, Select } from '@uidu/native'
-import { CheckIcon } from "lucide-react"
 import { useForm } from 'react-hook-form'
 import { FlatList } from 'react-native'
 
@@ -29,7 +29,7 @@ export default function SelectDocsPage() {
                 {item.name}
               </Select.ItemText>
               <Select.ItemIndicator marginLeft="auto">
-                <CheckIcon size={16} />
+                <Check size={16} />
               </Select.ItemIndicator>
             </Select.Item>
           )}

@@ -1,12 +1,16 @@
 {
   "extends": "../../tsconfig.base",
   "include": ["app/**/*.ts", "app/**/*.tsx"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "composite": true,
     "jsx": "react-jsx",
     "paths": {
       "~/*": ["../../packages/ui/src/index.tsx"]
-    }
+    },
+    "isolatedModules": true,
+    "module": "esnext",
+    "moduleResolution": "node"
   },
   "references": []
 }

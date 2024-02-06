@@ -1,6 +1,3 @@
-
 export default function AvatarDocsPage() {
-    return (
-        <div>AvatarDocsPage</div>
-    )
+  return <div>AvatarDocsPage</div>
 }

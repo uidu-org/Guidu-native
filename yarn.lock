@@ -3839,7 +3839,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-dialog@npm:1.0.5, @radix-ui/react-dialog@npm:^1.0.4, @radix-ui/react-dialog@npm:^1.0.5":
+"@radix-ui/react-dialog@npm:1.0.5, @radix-ui/react-dialog@npm:^1.0.4":
   version: 1.0.5
   resolution: "@radix-ui/react-dialog@npm:1.0.5"
   dependencies:
@@ -7338,7 +7338,7 @@ __metadata:
     "@uidu/button-ui": "npm:0.0.2"
     "@uidu/field-error-text-ui": "npm:0.0.1"
     "@uidu/field-helper-text-ui": "npm:0.0.1"
-    "@uidu/input-ui": "npm:0.0.1"
+    "@uidu/input-ui": "npm:0.0.2"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -7370,7 +7370,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/checkbox-ui@npm:0.0.2, @uidu/checkbox-ui@workspace:packages/web/components/forms/checkbox":
+"@uidu/checkbox-ui@npm:0.0.1, @uidu/checkbox-ui@workspace:packages/web/components/forms/checkbox":
   version: 0.0.0-use.local
   resolution: "@uidu/checkbox-ui@workspace:packages/web/components/forms/checkbox"
   dependencies:
@@ -7378,6 +7378,7 @@ __metadata:
     "@types/react": "npm:^18"
     "@uidu/field-error-text-ui": "npm:0.0.1"
     "@uidu/field-helper-text-ui": "npm:0.0.1"
+    "@uidu/form-ui": "npm:0.0.1"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -7546,12 +7547,13 @@ __metadata:
     "@types/react": "npm:^18"
     "@uidu/button-ui": "npm:0.0.2"
     "@uidu/calendar-ui": "npm:0.0.2"
-    "@uidu/checkbox-ui": "npm:0.0.2"
+    "@uidu/checkbox-ui": "npm:0.0.1"
     "@uidu/color-picker-ui": "npm:0.0.1"
     "@uidu/form-ui": "npm:0.0.1"
-    "@uidu/input-ui": "npm:0.0.1"
+    "@uidu/input-ui": "npm:0.0.2"
     "@uidu/lib": "npm:0.0.1"
     "@uidu/multiselect-ui": "npm:0.0.2"
+    "@uidu/pin-code-ui": "npm:0.0.2"
     "@uidu/radio-group-ui": "npm:0.0.1"
     "@uidu/select-ui": "npm:0.0.2"
     "@uidu/slider-ui": "npm:0.0.1"
@@ -7561,6 +7563,7 @@ __metadata:
     "@uidu/toggle-ui": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
+    react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
@@ -7618,11 +7621,11 @@ __metadata:
     "@uidu/button": "npm:^1.8.1"
     "@uidu/calendar-ui": "npm:0.0.2"
     "@uidu/card-ui": "npm:0.0.1"
-    "@uidu/checkbox-ui": "npm:0.0.2"
+    "@uidu/checkbox-ui": "npm:0.0.1"
     "@uidu/dialog-ui": "npm:0.0.1"
     "@uidu/forms-ui": "npm:0.0.1"
     "@uidu/image-ui": "npm:0.0.1"
-    "@uidu/input-ui": "npm:0.0.1"
+    "@uidu/input-ui": "npm:0.0.2"
     "@uidu/media-card-ui": "npm:0.0.1"
     "@uidu/multiselect-ui": "npm:0.0.2"
     "@uidu/popover-ui": "npm:0.0.1"
@@ -7667,11 +7670,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/input-ui@npm:0.0.1, @uidu/input-ui@workspace:packages/web/components/forms/input":
+"@uidu/input-ui@npm:0.0.2, @uidu/input-ui@workspace:packages/web/components/forms/input":
   version: 0.0.0-use.local
   resolution: "@uidu/input-ui@workspace:packages/web/components/forms/input"
   dependencies:
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18"
     "@uidu/field-error-text-ui": "npm:0.0.1"
     "@uidu/field-helper-text-ui": "npm:0.0.1"
@@ -7808,6 +7810,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@uidu/pin-code-ui@npm:0.0.2, @uidu/pin-code-ui@workspace:packages/web/components/forms/pin-code":
+  version: 0.0.0-use.local
+  resolution: "@uidu/pin-code-ui@workspace:packages/web/components/forms/pin-code"
+  dependencies:
+    "@radix-ui/react-checkbox": "npm:^1.0.4"
+    "@types/react": "npm:^18"
+    "@uidu/field-error-text-ui": "npm:0.0.1"
+    "@uidu/field-helper-text-ui": "npm:0.0.1"
+    "@uidu/lib": "npm:0.0.1"
+    class-variance-authority: "npm:^0.7.0"
+    react: "npm:^18.2.0"
+    react-hook-form: "npm:^7.49.3"
+  languageName: unknown
+  linkType: soft
+
 "@uidu/popover-ui@npm:0.0.1, @uidu/popover-ui@workspace:packages/web/components/core/popover":
   version: 0.0.0-use.local
   resolution: "@uidu/popover-ui@workspace:packages/web/components/core/popover"
@@ -7841,6 +7858,7 @@ __metadata:
   dependencies:
     "@radix-ui/react-radio-group": "npm:^1.1.3"
     "@types/react": "npm:^18"
+    "@uidu/form-ui": "npm:0.0.1"
     "@uidu/lib": "npm:0.0.1"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
@@ -7873,11 +7891,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/select-ui@workspace:packages/web/components/forms/select"
   dependencies:
-    "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@radix-ui/react-select": "npm:^2.0.0"
     "@types/react": "npm:^18"
-    "@uidu/field-error-text-ui": "npm:0.0.1"
-    "@uidu/field-helper-text-ui": "npm:0.0.1"
+    "@uidu/form-ui": "npm:0.0.1"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -8081,7 +8097,7 @@ __metadata:
     "@hookform/resolvers": "npm:^3.3.4"
     "@preconstruct/cli": "npm:^2.8.3"
     "@radix-ui/react-context-menu": "npm:^2.1.5"
-    "@radix-ui/react-dialog": "npm:^1.0.5"
+    "@radix-ui/react-dialog": "npm:1.0.5"
     "@radix-ui/react-label": "npm:^2.0.2"
     "@radix-ui/react-menubar": "npm:^1.0.4"
     "@radix-ui/react-navigation-menu": "npm:^1.1.4"

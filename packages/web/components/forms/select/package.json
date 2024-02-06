@@ -1,16 +1,14 @@
 {
   "name": "@uidu/select-ui",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "main": "dist/uidu-select-ui.cjs.js",
   "license": "ISC",
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-select": "^2.0.0",
-    "@uidu/field-error-text-ui": "0.0.1",
-    "@uidu/field-helper-text-ui": "0.0.1",
+    "@uidu/form-ui": "0.0.1",
     "@uidu/lib": "0.0.1",
     "class-variance-authority": "^0.7.0",
     "react": "^18.2.0",

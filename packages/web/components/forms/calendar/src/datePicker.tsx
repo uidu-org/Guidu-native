@@ -47,7 +47,7 @@ export interface DatePickerProps<selectsRange extends boolean | undefined>
 const DatePicker = ({
     customInput,
     showPopperArrow = false,
-    dateFormat = "d MMMM yyyy, h:mm aa",
+    dateFormat = "yyyy",
     selectsRange = false,
     onCalendarOpen,
     onCalendarClose,

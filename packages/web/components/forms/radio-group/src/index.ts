@@ -1,5 +1,5 @@
 import { RadioGroup, RadioGroupItem } from './radio-group'
-import { RHFRadioGroupItem } from './RHF-Radio-group'
+import { RHFRadioGroup } from './RHF-Radio-group'
 
 // export component
-export { RadioGroup, RadioGroupItem, RHFRadioGroupItem }
+export { RadioGroup, RadioGroupItem, RHFRadioGroup }

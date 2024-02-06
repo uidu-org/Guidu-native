@@ -5,11 +5,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@uidu/button-ui";
 import { CheckboxBase } from "@uidu/checkbox-ui";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "@uidu/command-ui";
-import { Form, RHFInput } from "@uidu/forms-ui";
+import { RHFCheckbox, RHFInput, RHFRadioGroup, RHFSelect, UiForm } from "@uidu/forms-ui";
 import { PopoverContent, PopoverRoot, PopoverTrigger } from "@uidu/popover-ui";
 import { CarFront } from "lucide-react";
 import { useState } from "react";
-import { Control, Controller, useForm } from "react-hook-form";
+import { Control, Controller, useForm, } from "react-hook-form";
 import { useList } from "react-use";
 import { z } from "zod";
 
@@ -17,9 +17,16 @@ const formSchema = z.object({
     username: z.string().min(2, {
         message: "Username must be at least 2 characters.",
     }),
+    selectTest: z.string().min(2, {
+        message: "Select is required by zod",
+    }),
     multiselect: z.array(z.string()).refine(data => data.length >= 1, {
         message: "multiselect must contain at least 1 item.",
     }),
+    checkboxTest: z.literal<boolean>(true, { errorMap: () => ({ message: "Custom message here", }), }),
+    radioTest: z.string().min(1, {
+        message: "use a radio",
+    })
 });
 
 
@@ -29,7 +36,10 @@ export default function FormsIndexPage() {
         resolver: zodResolver(formSchema),
         defaultValues: {
             username: "",
-            multiselect: [""]
+            multiselect: [""],
+            checkboxTest: false,
+            radioTest: "",
+            selectTest: ""
         },
     })
 
@@ -39,7 +49,7 @@ export default function FormsIndexPage() {
 
     return (
         <div className="min-h-dvh">
-            <Form {...form} >
+            <UiForm {...form} >
                 <form id="formica" className="p-4" onSubmit={form.handleSubmit(onSubmit)}>
 
                     <RHFInput
@@ -49,6 +59,8 @@ export default function FormsIndexPage() {
                         error={(form.formState.errors?.username?.message as string)}
                         helperText="chooseeeeeeeee"
                     />
+
+                    {/* <RHFPinCode name="pin-code" control={form.control} rules={{ required: true }} mask /> */}
 
                     <div>
                         {/* <RHFCalendar name="calendarTest" control={form.control} rules={{ required: "123s" }} key={"1"} dateFormat="d MMMM yyyy, h:mm aa" /> */}
@@ -64,10 +76,42 @@ export default function FormsIndexPage() {
                             }
                         ]} />
 
+                    <RHFCheckbox
+                        name="checkboxTest"
+                        control={form.control}
+                        rules={{ required: true }}
+                        error={(form.formState.errors?.username?.message as string)}
+                        helperText="checkbox helper text" />
+
+                    <RHFRadioGroup
+                        name="radioTest"
+                        control={form.control}
+                        rules={{ required: true }}
+                        error={(form.formState.errors?.username?.message as string)}
+                        helperText="checkbox helper text"
+                        values={["1", "2", "3", "4"]}
+                        label="choose one"
+                    />
+
+                    <RHFSelect
+                        name="selectTest"
+                        control={form.control}
+                        rules={{ required: true }}
+                        error={(form.formState.errors?.username?.message as string)}
+                        helperText="checkbox helper text"
+                        items={frameworks}
+                    />
+
                 </form>
 
-            </Form>
+            </UiForm>
 
+
+            <hr />
+
+            <div className="h-96">
+
+            </div>
 
             <hr />
 
@@ -127,10 +171,12 @@ function MyComboBox({ initialItems, control, name }: { control: Control }) {
                         </PopoverTrigger>
                         <Command>
                             <PopoverContent>
+
                                 <CommandInput
                                     placeholder="Filter fruits"
                                     aria-label="Filter fruits"
                                 />
+
                                 <CommandEmpty>No framework found.</CommandEmpty>
 
                                 <CommandGroup >
@@ -164,6 +210,7 @@ function MyComboBox({ initialItems, control, name }: { control: Control }) {
                                         </CommandItem>
                                     ))}
                                 </CommandGroup>
+
                             </PopoverContent>
                         </Command>
                     </PopoverRoot>

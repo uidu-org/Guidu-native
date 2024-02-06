@@ -1,8 +1,9 @@
-import { Control, Controller, FieldValues, RegisterOptions } from "react-hook-form";
+import { FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@uidu/form-ui";
+import { Control, FieldValues, RegisterOptions } from "react-hook-form";
 import { CheckboxBase, CheckboxBaseProps } from "./checkbox";
 
 
-export function RHFCheckbox({ name, control, rules, ...rest }: CheckboxBaseProps & {
+export function RHFCheckbox({ name, control, rules, label, helperText, error, ...rest }: CheckboxBaseProps & {
     name: string
     control: Control;
     rules: Omit<
@@ -11,20 +12,30 @@ export function RHFCheckbox({ name, control, rules, ...rest }: CheckboxBaseProps
     >
 }) {
     return (
-        <Controller
+        <FormField
             name={name}
             control={control}
             rules={rules}
-            render={({ field: { name, onChange, ref, value, disabled, onBlur } }) => (
-                <CheckboxBase
-                    id={name}
-                    onChange={onChange}
-                    ref={ref}
-                    value={value}
-                    disabled={disabled}
-                    onBlur={onBlur}
-                    {...rest}
-                />
-            )} />
+
+            render={({ field: { name, onChange, ref, value, disabled, onBlur }, fieldState: { error } }) => (
+                <FormItem>
+                    <FormLabel>{label}</FormLabel>
+                    <CheckboxBase
+                        id={name}
+                        onCheckedChange={onChange}
+                        ref={ref}
+                        value={value}
+                        disabled={disabled}
+                        onBlur={onBlur}
+                        // error={error}
+                        {...rest}
+                    />
+                    <FormDescription >
+                        {helperText}
+                    </FormDescription>
+                    <FormMessage />
+                </FormItem>
+            )}
+        />
     )
 }

@@ -11,12 +11,13 @@
     "@radix-ui/react-avatar": "^1.0.4",
     "@uidu/button-ui": "0.0.2",
     "@uidu/calendar-ui": "0.0.2",
-    "@uidu/checkbox-ui": "0.0.2",
+    "@uidu/checkbox-ui": "0.0.1",
     "@uidu/color-picker-ui": "0.0.1",
     "@uidu/form-ui": "0.0.1",
-    "@uidu/input-ui": "0.0.1",
+    "@uidu/input-ui": "0.0.2",
     "@uidu/lib": "0.0.1",
     "@uidu/multiselect-ui": "0.0.2",
+    "@uidu/pin-code-ui": "0.0.2",
     "@uidu/radio-group-ui": "0.0.1",
     "@uidu/select-ui": "0.0.2",
     "@uidu/slider-ui": "0.0.1",
@@ -25,7 +26,8 @@
     "@uidu/textarea-ui": "0.0.1",
     "@uidu/toggle-ui": "0.0.1",
     "class-variance-authority": "^0.7.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-hook-form": "^7.49.3"
   },
   "devDependencies": {
     "@types/react": "^18"

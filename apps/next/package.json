@@ -24,6 +24,7 @@
     "@uidu/multiselect-ui": "0.0.2",
     "@uidu/popover-ui": "0.0.1",
     "@uidu/radio-group-ui": "0.0.1",
+    "@uidu/resizable-ui": "workspace:^",
     "@uidu/select-ui": "0.0.1",
     "@uidu/slider-ui": "0.0.1",
     "@uidu/stepper-ui": "0.0.2",

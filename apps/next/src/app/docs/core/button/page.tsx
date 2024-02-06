@@ -1,11 +1,9 @@
-import { Button } from "~/index"
+import { Button } from '~/index'
 
 export default function ButtonDocsPage() {
   return (
     <div className="min-h-dvh">
-      <Button variant={"outline"}>
-        Example
-      </Button>
+      <Button variant={'outline'}>Example</Button>
     </div>
   )
 }

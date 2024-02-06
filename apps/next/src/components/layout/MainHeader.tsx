@@ -1,14 +1,13 @@
-"use client"
+'use client'
 
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuTrigger
-} from "@/components/ui/navigation-menu"
-import Link from "next/link"
-
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu'
+import Link from 'next/link'
 
 export default function MainHeader() {
   return (
@@ -18,7 +17,6 @@ export default function MainHeader() {
           <NavigationMenuTrigger>Docs</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-
               <Link href="/docs" title="Introduction">
                 UIDU Re-usable components built using Radix UI and Tailwind CSS.
               </Link>
@@ -33,6 +31,5 @@ export default function MainHeader() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-
   )
 }

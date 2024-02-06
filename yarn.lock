@@ -7225,6 +7225,7 @@ __metadata:
     "@uidu/multiselect-ui": "npm:0.0.2"
     "@uidu/popover-ui": "npm:0.0.1"
     "@uidu/radio-group-ui": "npm:0.0.1"
+    "@uidu/resizable-ui": "workspace:^"
     "@uidu/select-ui": "npm:0.0.1"
     "@uidu/slider-ui": "npm:0.0.1"
     "@uidu/stepper-ui": "npm:0.0.2"
@@ -7459,7 +7460,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/resizable-ui@workspace:packages/web/components/core/resizable":
+"@uidu/resizable-ui@workspace:^, @uidu/resizable-ui@workspace:packages/web/components/core/resizable":
   version: 0.0.0-use.local
   resolution: "@uidu/resizable-ui@workspace:packages/web/components/core/resizable"
   dependencies:

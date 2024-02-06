@@ -1,33 +1,31 @@
-import { FieldErrorText } from "@uidu/field-error-text-ui";
-import { FieldHelperText } from "@uidu/field-helper-text-ui";
-import { Label } from "@uidu/label-ui";
-import { cn } from "@uidu/lib";
-import { VariantProps, cva } from "class-variance-authority";
-import * as React from "react";
-import { FieldError } from "react-hook-form";
+import { FieldErrorText } from '@uidu/field-error-text-ui'
+import { FieldHelperText } from '@uidu/field-helper-text-ui'
+import { Label } from '@uidu/label-ui'
+import { cn } from '@uidu/lib'
+import { VariantProps, cva } from 'class-variance-authority'
+import * as React from 'react'
+import { FieldError } from 'react-hook-form'
 
-interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   inputVariants?: VariantProps<typeof inputVariants>
-  disabled?: boolean;
+  disabled?: boolean
   //label
   labelVariant?: VariantProps<typeof labelVariants>
   inLine?: boolean
   label?: string
-  labelClassName?: string;
+  labelClassName?: string
   //helper
   helperText?: string
-  helperClassName?: string;
+  helperClassName?: string
   //error
   error?: FieldError | string
-  errorClassName?: string;
+  errorClassName?: string
 }
 
 const labelVariants = cva(
   'peer checked:bg-none focus:ring-offset-background transition duration-200 ease-in-out',
   {
     variants: {
-
       variant: {
         outline:
           'bg-transparent border border-muted ring-[0.6px] ring-muted focus:ring-muted checked:!bg-primary checked:!border-primary hover:enabled:border-primary',
@@ -49,24 +47,21 @@ const labelVariants = cva(
         lg: 'rounded-md',
         full: 'rounded-full',
       },
-      activeIcon:
-      {
-        true: 'peer-checked:opacity-100 absolute opacity-0 top-0 left-0 text-primary-foreground'
+      activeIcon: {
+        true: 'peer-checked:opacity-100 absolute opacity-0 top-0 left-0 text-primary-foreground',
       },
     },
     defaultVariants: {
-      size: "md",
-      variant: "outline"
-    }
+      size: 'md',
+      variant: 'outline',
+    },
   }
-
 )
 
 const inputVariants = cva(
   'peer checked:bg-none focus:ring-offset-background transition duration-200 ease-in-out',
   {
     variants: {
-
       variant: {
         outline:
           'bg-transparent border border-muted ring-[0.6px] ring-muted focus:ring-muted checked:!bg-primary checked:!border-primary hover:enabled:border-primary',
@@ -88,35 +83,50 @@ const inputVariants = cva(
         lg: 'rounded-md',
         full: 'rounded-full',
       },
-      activeIcon:
-      {
-        true: 'peer-checked:opacity-100 absolute opacity-0 top-0 left-0 text-primary-foreground'
+      activeIcon: {
+        true: 'peer-checked:opacity-100 absolute opacity-0 top-0 left-0 text-primary-foreground',
       },
     },
     defaultVariants: {
-      size: "md",
-      variant: "outline"
-    }
+      size: 'md',
+      variant: 'outline',
+    },
   }
-
 )
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, disabled, label, labelClassName, id, inLine = false, error, helperText, helperClassName, errorClassName, ...props }, ref) => {
+  (
+    {
+      className,
+      type,
+      disabled,
+      label,
+      labelClassName,
+      id,
+      inLine = false,
+      error,
+      helperText,
+      helperClassName,
+      errorClassName,
+      ...props
+    },
+    ref
+  ) => {
     return (
-
-
       <div>
-        <div className={"space-y-2 mb-1"}>
-
-          {label && <Label className={cn("", labelClassName)} htmlFor={id}>{label}</Label>}
+        <div className={'space-y-2 mb-1'}>
+          {label && (
+            <Label className={cn('', labelClassName)} htmlFor={id}>
+              {label}
+            </Label>
+          )}
 
           <input
             id={id}
             type={type}
             className={cn(
-              "flex h-8 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-stone-500 focus-visible:outline-0 focus-visible:ring-1 focus-visible:ring-stone-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-              !!error && "border-red-600",
+              'flex h-8 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-stone-500 focus-visible:outline-0 focus-visible:ring-1 focus-visible:ring-stone-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+              !!error && 'border-red-600',
               className
             )}
             ref={ref}
@@ -126,29 +136,17 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         </div>
 
         {!error && helperText && (
-          <FieldHelperText
-            className={cn(
-              disabled && 'text-muted-foreground',
-              helperClassName
-            )}
-          >
+          <FieldHelperText className={cn(disabled && 'text-muted-foreground', helperClassName)}>
             {helperText}
           </FieldHelperText>
-
         )}
 
-        {error && (
-          <FieldErrorText
-            className={cn(errorClassName)}
-            error={error}
-          />
-        )}
-
+        {error && <FieldErrorText className={cn(errorClassName)} error={error} />}
       </div>
     )
   }
 )
-Input.displayName = "Input"
+Input.displayName = 'Input'
 
-export { Input, InputProps };
-
+export { Input }
+export type { InputProps }

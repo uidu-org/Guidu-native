@@ -1,0 +1,161 @@
+{
+  "routes": [
+    {
+      "key": "guide",
+      "title": "Guide",
+      "defaultOpen": true,
+      "keywords": "guide, getting started, start, nextui",
+      "routes": [
+        {
+          "key": "introduction",
+          "title": "Introduction",
+          "keywords": "introduction, nextui",
+          "path": "/docs/guide/introduction.mdx"
+        },
+        {
+          "key": "installation",
+          "title": "Installation",
+          "keywords": "getting started, installation, start, nextui",
+          "path": "/docs/guide/installation.mdx"
+        },
+        {
+          "key": "design-principles",
+          "title": "Design Principles",
+          "keywords": "design principles, nextui",
+          "path": "/docs/guide/design-principles.mdx"
+        },
+        {
+          "key": "routing",
+          "title": "Routing",
+          "keywords": "client side routing, routing, browser routing, nextui, next.js router, react router, remix router",
+          "path": "/docs/guide/routing.mdx",
+          "newPost": true
+        },
+        {
+          "key": "upgrade-to-v2",
+          "title": "Upgrade to v2",
+          "keywords": "upgrade, v2, nextui",
+          "path": "/docs/guide/upgrade-to-v2.mdx"
+        }
+      ]
+    },
+    {
+      "key": "customization",
+      "title": "Customization",
+      "keywords": "customization, nextui, themes, colors, dark mode, override styles",
+      "defaultOpen": false,
+      "routes": [
+        {
+          "key": "theme",
+          "title": "Theme",
+          "path": "/docs/customization/theme.mdx"
+        },
+        {
+          "key": "layout",
+          "title": "Layout",
+          "path": "/docs/customization/layout.mdx"
+        },
+        {
+          "key": "colors",
+          "title": "Colors",
+          "path": "/docs/customization/colors.mdx"
+        },
+        {
+          "key": "dark-mode",
+          "title": "Dark mode",
+          "path": "/docs/customization/dark-mode.mdx"
+        },
+        {
+          "key": "override-styles",
+          "title": "Override styles",
+          "path": "/docs/customization/override-styles.mdx"
+        },
+        {
+          "key": "custom-variants",
+          "title": "Custom variants",
+          "path": "/docs/customization/custom-variants.mdx"
+        }
+      ]
+    },
+    {
+      "key": "core",
+      "title": "Core",
+      "keywords": "interface elements, interactive components, UI core components",
+      "defaultOpen": true,
+      "routes": [
+        {
+          "key": "avatar",
+          "title": "Avatar",
+          "keywords": "avatar, profile picture, user representation, identity",
+          "path": "/docs/core/avatar"
+        },
+        {
+          "key": "badge",
+          "title": "Badge",
+          "keywords": "badge, markers, status indication, count display",
+          "path": "/docs/core/badge"
+        },
+        {
+          "key": "button",
+          "title": "Button",
+          "keywords": "button, interactive, action trigger, click events",
+          "path": "/docs/core/button"
+        },
+        {
+          "key": "tooltip",
+          "title": "Tooltip",
+          "keywords": "tooltip, hint, descriptive message, hover info",
+          "path": "/docs/core/tooltip"
+        }
+      ]
+    },
+    {
+      "key": "forms",
+      "title": "Forms",
+      "keywords": "interface elements, interactive components, UI forms components",
+      "defaultOpen": true,
+      "routes": [
+        {
+          "key": "switch",
+          "title": "Switch",
+          "keywords": "switch on/off control",
+          "path": "/docs/forms/switch"
+        }
+      ]
+    }
+  ],
+  "mobileRoutes": [
+    {
+      "key": "getting-started",
+      "title": "Getting Started",
+      "defaultOpen": true,
+      "keywords": "getting started, main routes, blog, docs, components, nextui",
+      "routes": [
+        {
+          "key": "docs",
+          "title": "Documentation",
+          "keywords": "documentation, guide, nextui",
+          "path": "/docs/guide/introduction.mdx"
+        },
+        {
+          "key": "components",
+          "title": "Components",
+          "keywords": "components, nextui",
+          "path": "/docs/components/avatar"
+        },
+        {
+          "key": "blog",
+          "title": "Blog",
+          "keywords": "blog, nextui, news, updates",
+          "path": "/blog"
+        },
+        {
+          "key": "figma",
+          "title": "Figma",
+          "keywords": "figma, nextui, design, ui kit",
+          "path": "/figma"
+        }
+      ]
+    }
+  ]
+}

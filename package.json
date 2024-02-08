@@ -12,6 +12,7 @@
     "./packages/web/lib"
   ],
   "scripts": {
+    "storybook": " cd packages/web/storybook && npx storybook dev -p 6006",
     "native": "cd apps/expo && npx expo prebuild && yarn start",
     "native:ios": "cd apps/expo && yarn ios",
     "native:android": "cd apps/expo && yarn android",
@@ -45,6 +46,8 @@
     "@babel/runtime": "^7.23.9",
     "@manypkg/cli": "^0.21.2",
     "@preconstruct/cli": "^2.8.3",
+    "@storybook/addon-a11y": "^7.6.13",
+    "@storybook/react": "^7.6.13",
     "@types/babel__core": "^7.20.5",
     "@types/babel__preset-env": "^7.9.6",
     "check-dependency-version-consistency": "^4.1.0",

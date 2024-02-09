@@ -1,39 +1,21 @@
-//*docs: https://www.npmjs.com/package/@next/mdx
+import { withContentlayer } from 'next-contentlayer'
+// import redirects from './next-redirect.js'
+
 /** @type {import('next').NextConfig} */
-import MDX from '@next/mdx'
-
-const withMDX = MDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-})
-
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'upload.wikimedia.org',
-        pathname: '*',
-      },
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        pathname: '*',
-      },
-    ],
+  transpilePackages: ['@nextui-org/react', '@nextui-org/theme'],
+  swcMinify: true,
+  reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
+  // redirects: redirects,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    config.resolve.alias['next-mdx-import-source-file'] = [
-      'private-next-root-dir/src/mdx-components',
-      'private-next-root-dir/mdx-components',
-      '@mdx-js/react',
-    ]
-    return config
+  typescript: {
+    // ignoreBuildErrors: process.env.IS_VERCEL_ENV === "true",
+    ignoreBuildErrors: true,
+  },
+  images: {
+    remotePatterns: [],
   },
 }
-
-export default withMDX(nextConfig)
+export default withContentlayer(nextConfig)

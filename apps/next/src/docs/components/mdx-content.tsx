@@ -1,15 +1,21 @@
-import type { MDXComponents } from 'mdx/types'
+/* eslint-disable react/display-name */
+"use client";
+import type { MDXComponents as MDXComponentsType } from "mdx/types";
 
-// This file allows you to provide custom React components
-// to be used in MDX files. You can import and use any
-// React component you want, including components from
-// other libraries.
+import { useMDXComponent } from "next-contentlayer/hooks";
 
-// This file is required to use MDX in `app` directory.
-export function useMDXComponents(components: MDXComponents): MDXComponents {
-    return {
-        // Allows customizing built-in components, e.g. to add styling.
-        // h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
-        ...components,
-    }
+import { MDXComponents } from "./mdx-components";
+
+interface MDXContentProps {
+    code: string;
+}
+
+export function MDXContent({ code }: MDXContentProps) {
+    const Component = useMDXComponent(code);
+
+    return (
+        <div className="mdx">
+            <Component components={MDXComponents as MDXComponentsType} />
+        </div>
+    );
 }

@@ -75,7 +75,7 @@
       "./packages/web",
       "./packages/web/lib",
       "./packages/web/components/*/*",
-      "./packages/web/src/*/*"
+      "./packages/web/src/**/*"
     ]
   },
   "peerDependencies": {

@@ -14,6 +14,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
+  type DropdownMenuTriggerProps
 } from './dropdown-menu'
 
 export {
@@ -32,4 +33,6 @@ export {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
+  type DropdownMenuTriggerProps
 }
+

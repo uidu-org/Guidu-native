@@ -1,7 +1,7 @@
 "use client";
 
-import { useScrollPosition } from "@/hook/useScrollPosition";
-import { useScrollSpy } from "@/hook/useScrollSpy";
+import { useScrollPosition } from "@/hooks/useScrollPosition";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { Heading } from "@/lib/getHeadings";
 import clsx from "clsx";
 import { CircleDotIcon } from "lucide-react";

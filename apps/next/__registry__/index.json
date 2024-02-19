@@ -1,0 +1,103 @@
+[
+  {
+    "name": "accordion-demo",
+    "registryDependencies": [
+      "accordion"
+    ],
+    "files": [
+      "src/docs/components/example/accordion-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "alert-demo",
+    "registryDependencies": [
+      "alert"
+    ],
+    "files": [
+      "src/docs/components/example/alert-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "alert-destructive",
+    "registryDependencies": [
+      "alert"
+    ],
+    "files": [
+      "src/docs/components/example/alert-destructive.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "alert-dialog-demo",
+    "registryDependencies": [
+      "alert-dialog",
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/alert-dialog-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "avatar-demo",
+    "registryDependencies": [
+      "avatar"
+    ],
+    "files": [
+      "src/docs/components/example/avatar-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "badge-demo",
+    "registryDependencies": [
+      "badge"
+    ],
+    "files": [
+      "src/docs/components/example/badge-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "badge-destructive",
+    "registryDependencies": [
+      "badge"
+    ],
+    "files": [
+      "src/docs/components/example/badge-destructive.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "badge-outline",
+    "registryDependencies": [
+      "badge"
+    ],
+    "files": [
+      "src/docs/components/example/badge-outline.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "badge-secondary",
+    "registryDependencies": [
+      "badge"
+    ],
+    "files": [
+      "src/docs/components/example/badge-secondary.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-demo",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-demo.tsx"
+    ],
+    "type": "components:example"
+  }
+]

@@ -32,7 +32,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
+    ".contentlayer/generated",
+    "scripts"
   ],
   "exclude": ["node_modules", "next-redirect.js"]
 }

@@ -1,5 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 
+import { rehypeComponent } from './src/lib/rehype-component'
+
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
   slug: {
@@ -31,4 +33,7 @@ export const Docs = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: './src/docs/content',
   documentTypes: [Docs],
+  mdx: {
+    rehypePlugins: [rehypeComponent],
+  },
 })

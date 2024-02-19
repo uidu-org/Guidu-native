@@ -9,6 +9,7 @@ import {
   type ToastActionElement,
   type ToastProps,
 } from './toast'
+import { reducer, toast, useToast } from './use-toast'
 
 export {
   Toast,
@@ -20,4 +21,7 @@ export {
   ToastProvider,
   ToastTitle,
   ToastViewport,
+  reducer,
+  toast,
+  useToast,
 }

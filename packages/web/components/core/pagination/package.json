@@ -1,6 +1,6 @@
 {
   "name": "@uidu/pagination-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/uidu-pagination-ui.cjs.js",
   "license": "ISC",
   "files": [

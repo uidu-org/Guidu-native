@@ -1,6 +1,6 @@
 {
   "name": "@uidu/alert-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "dist/uidu-alert-ui.cjs.js",
   "license": "ISC",
   "files": [

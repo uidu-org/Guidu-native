@@ -1,6 +1,6 @@
 {
   "name": "@uidu/avatar-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "dist/uidu-avatar-ui.cjs.js",
   "license": "ISC",
   "files": [

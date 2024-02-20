@@ -9,6 +9,7 @@ import {
   DialogPortal,
   DialogTitle,
   DialogTrigger,
+  type DialogProps,
 } from './dialog'
 
 export {
@@ -20,6 +21,7 @@ export {
   DialogHeader,
   DialogOverlay,
   DialogPortal,
+  DialogProps,
   DialogTitle,
   DialogTrigger,
 }

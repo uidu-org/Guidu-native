@@ -7,7 +7,7 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/button-ui": "0.0.2",
+    "@uidu/button-ui": "0.0.3",
     "@uidu/lib": "0.0.1",
     "react": "^18.2.0"
   },

@@ -34,7 +34,7 @@ for (const item of result.data) {
   index += `
     name: "${item.name}",
     type: "${item.type}",
-    egistryDependencies: ${JSON.stringify(item.registryDependencies)},
+    registryDependencies: ${JSON.stringify(item.registryDependencies)},
     component: React.lazy(() => import("@/docs/components/${type}/${item.name}")),
     files: [${resolveFiles.map((file) => `"${file}"`)}],
   },`

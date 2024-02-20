@@ -84,6 +84,24 @@
       "defaultOpen": true,
       "routes": [
         {
+          "key": "accordion",
+          "title": "Accordion",
+          "keywords": "accordion",
+          "path": "/docs/core/accordion"
+        },
+        {
+          "key": "alert-dialog",
+          "title": "Alert-dialog",
+          "keywords": "",
+          "path": "/docs/core/alert-dialog"
+        },
+        {
+          "key": "alert",
+          "title": "Alert",
+          "keywords": "",
+          "path": "/docs/core/alert"
+        },
+        {
           "key": "avatar",
           "title": "Avatar",
           "keywords": "avatar, profile picture, user representation, identity",
@@ -102,10 +120,46 @@
           "path": "/docs/core/button"
         },
         {
-          "key": "tooltip",
-          "title": "Tooltip",
-          "keywords": "tooltip, hint, descriptive message, hover info",
-          "path": "/docs/core/tooltip"
+          "key": "card",
+          "title": "Card",
+          "keywords": "",
+          "path": "/docs/core/card"
+        },
+        {
+          "key": "carousel",
+          "title": "Carousel",
+          "keywords": "",
+          "path": "/docs/core/carousel"
+        },
+        {
+          "key": "checkbox",
+          "title": "Checkbox",
+          "keywords": "",
+          "path": "/docs/core/checkbox"
+        },
+        {
+          "key": "collapsable",
+          "title": "Collapsable",
+          "keywords": "",
+          "path": "/docs/core/collapsable"
+        },
+        {
+          "key": "combobox",
+          "title": "Combobox",
+          "keywords": "",
+          "path": "/docs/core/combobox"
+        },
+        {
+          "key": "command",
+          "title": "Command",
+          "keywords": "",
+          "path": "/docs/core/command"
+        },
+        {
+          "key": "context-menu",
+          "title": "Context-menu",
+          "keywords": "",
+          "path": "/docs/core/context-menu"
         }
       ]
     },

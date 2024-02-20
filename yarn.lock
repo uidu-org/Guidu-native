@@ -8440,9 +8440,7 @@ __metadata:
   resolution: "@uidu/accordion-ui@workspace:packages/web/components/core/accordion"
   dependencies:
     "@radix-ui/react-accordion": "npm:1.1.2"
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -8455,7 +8453,7 @@ __metadata:
   dependencies:
     "@radix-ui/react-alert-dialog": "npm:1.0.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -8481,7 +8479,7 @@ __metadata:
   dependencies:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -8492,17 +8490,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/badge-ui@workspace:packages/web/components/core/badge"
   dependencies:
-    "@radix-ui/react-accordion": "npm:1.1.2"
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/button-ui@npm:0.0.2, @uidu/button-ui@workspace:packages/web/components/core/button":
+"@uidu/button-ui@npm:0.0.3, @uidu/button-ui@workspace:packages/web/components/core/button":
   version: 0.0.0-use.local
   resolution: "@uidu/button-ui@workspace:packages/web/components/core/button"
   dependencies:
@@ -8539,7 +8534,7 @@ __metadata:
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
     "@types/react-datepicker": "npm:^4.19.6"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/field-error-text-ui": "npm:0.0.1"
     "@uidu/field-helper-text-ui": "npm:0.0.1"
     "@uidu/input-ui": "npm:0.0.2"
@@ -8567,7 +8562,7 @@ __metadata:
   resolution: "@uidu/carousel-ui@workspace:packages/web/components/core/carousel"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/lib": "npm:0.0.1"
     embla-carousel-react: "npm:8.0.0-rc22"
     react: "npm:^18.2.0"
@@ -8594,13 +8589,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/collapsable-ui@workspace:packages/web/components/core/collapsable"
   dependencies:
-    "@radix-ui/react-accordion": "npm:1.1.2"
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@radix-ui/react-collapsible": "npm:1.0.3"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
@@ -8621,10 +8611,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/command-ui@workspace:packages/web/components/core/command"
   dependencies:
-    "@radix-ui/react-dialog": "npm:1.0.5"
-    "@radix-ui/react-tooltip": "npm:^1.0.7"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
     "@uidu/dialog-ui": "npm:0.0.1"
     "@uidu/lib": "npm:0.0.1"
     cmdk: "npm:^0.2.1"
@@ -8652,7 +8639,7 @@ __metadata:
     "@uidu/alert-ui": "npm:0.0.1"
     "@uidu/avatar-ui": "npm:0.0.1"
     "@uidu/badge-ui": "npm:0.0.1"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/card-ui": "npm:0.0.1"
     "@uidu/carousel-ui": "npm:0.0.1"
     "@uidu/collapsable-ui": "npm:0.0.1"
@@ -8685,7 +8672,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/dialog-ui@workspace:packages/web/components/core/dialog"
   dependencies:
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@radix-ui/react-dialog": "npm:1.0.5"
     "@types/react": "npm:^18.2.55"
     "@uidu/lib": "npm:0.0.1"
@@ -8698,12 +8684,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/drawer-ui@workspace:packages/web/components/core/drawer"
   dependencies:
-    "@radix-ui/react-accordion": "npm:1.1.2"
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
     "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     vaul: "npm:^0.9.0"
   languageName: unknown
@@ -8713,12 +8695,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/dropdown-menu-ui@workspace:packages/web/components/core/dropdown-menu"
   dependencies:
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@radix-ui/react-dropdown-menu": "npm:2.0.6"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
     "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
@@ -8787,7 +8766,7 @@ __metadata:
     "@radix-ui/react-accordion": "npm:1.1.2"
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/calendar-ui": "npm:0.0.2"
     "@uidu/checkbox-ui": "npm:0.0.1"
     "@uidu/color-picker-ui": "npm:0.0.1"
@@ -8821,7 +8800,7 @@ __metadata:
     "@react-navigation/native": "npm:^6.1.6"
     "@tamagui/babel-plugin": "npm:^1.89.8"
     "@tamagui/lucide-icons": "npm:^1.89.8"
-    "@uidu/native": "npm:0.0.22"
+    "@uidu/native": "npm:0.0.23"
     "@uidu/native-config": "npm:0.0.8"
     babel-plugin-module-resolver: "npm:^4.1.0"
     babel-plugin-transform-inline-environment-variables: "npm:^0.4.4"
@@ -8935,12 +8914,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/image-ui@workspace:packages/web/components/core/image"
   dependencies:
-    "@radix-ui/react-accordion": "npm:1.1.2"
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
@@ -9041,7 +9015,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/native@npm:0.0.22, @uidu/native@workspace:packages/ui":
+"@uidu/native@npm:0.0.23, @uidu/native@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@uidu/native@workspace:packages/ui"
   dependencies:
@@ -9078,7 +9052,7 @@ __metadata:
   resolution: "@uidu/pagination-ui@workspace:packages/web/components/core/pagination"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/lib": "npm:0.0.1"
     react: "npm:^18.2.0"
   languageName: unknown
@@ -9105,7 +9079,7 @@ __metadata:
   dependencies:
     "@radix-ui/react-popover": "npm:^1.0.7"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/lib": "npm:0.0.1"
     react: "npm:^18.2.0"
   languageName: unknown
@@ -9115,13 +9089,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/progress-ui@workspace:packages/web/components/core/progress"
   dependencies:
-    "@radix-ui/react-accordion": "npm:1.1.2"
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@radix-ui/react-progress": "npm:1.0.3"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
     "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
@@ -9327,11 +9297,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/toast-ui@workspace:packages/web/components/core/toast"
   dependencies:
-    "@radix-ui/react-accordion": "npm:1.1.2"
-    "@radix-ui/react-avatar": "npm:^1.0.4"
     "@radix-ui/react-toast": "npm:1.1.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -9358,7 +9325,7 @@ __metadata:
   dependencies:
     "@radix-ui/react-tooltip": "npm:^1.0.7"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.2"
+    "@uidu/button-ui": "npm:0.0.3"
     "@uidu/lib": "npm:0.0.1"
     react: "npm:^18.2.0"
   languageName: unknown

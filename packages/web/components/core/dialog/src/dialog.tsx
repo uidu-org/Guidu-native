@@ -1,4 +1,6 @@
 import * as DialogPrimitive from "@radix-ui/react-dialog"
+import { type DialogProps } from "@radix-ui/react-dialog"
+
 import * as React from "react"
 
 import { cn } from "@uidu/lib"
@@ -109,4 +111,5 @@ DialogDescription.displayName = DialogPrimitive.Description.displayName
 export {
   Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger
 }
+export type { DialogProps }
 

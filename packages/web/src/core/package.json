@@ -1,6 +1,6 @@
 {
   "name": "@uidu/core-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/uidu-core-ui.cjs.js",
   "license": "ISC",
   "files": [
@@ -11,7 +11,7 @@
     "@uidu/alert-ui": "0.0.1",
     "@uidu/avatar-ui": "0.0.1",
     "@uidu/badge-ui": "0.0.1",
-    "@uidu/button-ui": "0.0.2",
+    "@uidu/button-ui": "0.0.3",
     "@uidu/card-ui": "0.0.1",
     "@uidu/carousel-ui": "0.0.1",
     "@uidu/collapsable-ui": "0.0.1",

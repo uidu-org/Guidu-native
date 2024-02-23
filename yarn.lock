@@ -8606,6 +8606,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@uidu/button-ui@npm:0.0.2":
+  version: 0.0.2
+  resolution: "@uidu/button-ui@npm:0.0.2"
+  dependencies:
+    "@radix-ui/react-slot": "npm:^1.0.2"
+    "@uidu/lib": "workspace:^"
+    class-variance-authority: "npm:^0.7.0"
+    react: "npm:^18.2.0"
+  checksum: 795bb8e97745d941897a9f42dce6447f07bbbd618fbe9301392f657571b2bb523dd1f003af4df27218a7e4faeae912a631c89b90f316a3140f8de09d438dc0af
+  languageName: node
+  linkType: hard
+
 "@uidu/button-ui@npm:0.0.3, @uidu/button-ui@workspace:packages/web/components/core/button":
   version: 0.0.0-use.local
   resolution: "@uidu/button-ui@workspace:packages/web/components/core/button"
@@ -9056,7 +9068,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/lib@npm:0.0.1, @uidu/lib@workspace:packages/web/lib":
+"@uidu/lib@npm:0.0.1, @uidu/lib@workspace:^, @uidu/lib@workspace:packages/web/lib":
   version: 0.0.0-use.local
   resolution: "@uidu/lib@workspace:packages/web/lib"
   dependencies:

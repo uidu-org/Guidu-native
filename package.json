@@ -12,7 +12,7 @@
     "./packages/web/lib"
   ],
   "scripts": {
-    "storybook": " cd packages/web/storybook && npx storybook dev -p 6006",
+    "storybook": "cd packages/web/storybook && npx storybook dev -p 6006",
     "native": "cd apps/expo && npx expo prebuild && yarn start",
     "native:ios": "cd apps/expo && yarn ios",
     "native:android": "cd apps/expo && yarn android",

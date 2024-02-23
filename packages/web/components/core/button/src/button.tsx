@@ -1,21 +1,19 @@
-import { Slot } from '@radix-ui/react-slot'
-import { cn } from '@uidu/lib'
-import { cva, VariantProps, } from 'class-variance-authority'
-import * as React from 'react'
-import Spinner from './icons/Spinner'
-
-
+import { Slot } from '@radix-ui/react-slot';
+import { cn } from '@uidu/lib';
+import { cva, VariantProps } from 'class-variance-authority';
+import * as React from 'react';
+import Spinner from './icons/Spinner';
 
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-  VariantProps<typeof buttonVariants> {
-  children?: React.ReactNode
-  asChild?: boolean
+    VariantProps<typeof buttonVariants> {
+  children?: React.ReactNode;
+  asChild?: boolean;
   isLoading?: boolean;
   isDisabled?: boolean;
   fitContent?: boolean;
-  iconBefore?: React.ReactNode
-  iconAfter?: React.ReactNode
+  iconBefore?: React.ReactNode;
+  iconAfter?: React.ReactNode;
 }
 
 const buttonVariants = cva(
@@ -37,48 +35,61 @@ const buttonVariants = cva(
         icon: 'h-10 w-10',
       },
       isLoading: {
-        true: "pointer-events-none border-red-500 border-2"
+        true: 'pointer-events-none border-red-500 border-2',
       },
       fitContent: {
-        true: "w-full"
-      }
+        true: 'w-full',
+      },
     },
     defaultVariants: {
       variant: 'link',
       size: 'default',
     },
   }
-)
+);
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, children, asChild = false, isLoading = false, isDisabled = false, fitContent = false, iconAfter, iconBefore, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'button'
+  (
+    {
+      className,
+      variant,
+      size,
+      children,
+      asChild = false,
+      isLoading = false,
+      isDisabled = false,
+      fitContent = false,
+      iconAfter,
+      iconBefore,
+      ...props
+    },
+    ref
+  ) => {
+    const Comp = asChild ? Slot : 'button';
 
     return (
-      <Comp disabled={isDisabled || isLoading} className={cn(buttonVariants({ variant, size, className, isLoading, fitContent }))} ref={ref} {...props}>
-        {isLoading && <Spinner className='me-3 animate-spin' />}
+      <Comp
+        disabled={isDisabled || isLoading}
+        className={cn(buttonVariants({ variant, size, className, isLoading, fitContent }))}
+        ref={ref}
+        {...props}
+      >
+        {isLoading && <Spinner className="me-3 animate-spin" />}
 
         {iconBefore && !isLoading && (
-          <span className={!!children ? "mr-3" : undefined}>
-            {iconBefore}
-          </span>
+          <span className={!!children ? 'mr-3' : undefined}>{iconBefore}</span>
         )}
 
         {children}
 
         {iconAfter && !isLoading && (
-          <span className={!!children || iconBefore ? "ms-3" : undefined} >
-            {iconAfter}
-          </span>
+          <span className={!!children || iconBefore ? 'ms-3' : undefined}>{iconAfter}</span>
         )}
-
       </Comp>
-    )
+    );
   }
-)
-Button.displayName = 'Button'
+);
+Button.displayName = 'Button';
 
-
-export { Button, buttonVariants }
-export type { ButtonProps }
-
+export { Button, buttonVariants };
+export type { ButtonProps };

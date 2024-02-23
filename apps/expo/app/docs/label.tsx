@@ -1,4 +1,4 @@
-import { Fieldset, GuiInput, GuiLabel, GuiText, GuiView } from '@uidu/native'
+import { Fieldset, GuiInput, GuiLabel, GuiText, GuiView } from '@uidu/native';
 
 export default function LabelDocumentsPage() {
   return (
@@ -9,5 +9,5 @@ export default function LabelDocumentsPage() {
         <GuiInput w={'$10'} />
       </Fieldset>
     </GuiView>
-  )
+  );
 }

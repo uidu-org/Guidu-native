@@ -1,5 +1,5 @@
-import { GuiButton, GuiView, H3 } from '@uidu/native'
-import { Link } from 'expo-router'
+import { GuiButton, GuiView, H3 } from '@uidu/native';
+import { Link } from 'expo-router';
 
 export default function Screen() {
   return (
@@ -11,5 +11,5 @@ export default function Screen() {
         </Link>
       </GuiView>
     </GuiView>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { TestInput } from "@uidu/native"
-import { Text, View } from 'react-native'
+import { TestInput } from '@uidu/native';
+import { Text, View } from 'react-native';
 
 export default function IndexDocsPage() {
   return (
@@ -7,5 +7,5 @@ export default function IndexDocsPage() {
       <Text>IndexDocsPage</Text>
       <TestInput />
     </View>
-  )
+  );
 }

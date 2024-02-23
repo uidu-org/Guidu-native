@@ -1,9 +1,9 @@
 {
   "name": "@uidu/storybook",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.1.0",
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "main": "src/index.ts",
   "sideEffects": true,
@@ -24,7 +24,7 @@
     "@storybook/test": "^7.6.13",
     "prop-types": "^15.8.1",
     "storybook": "^7.6.13",
-    "tailwindcss": "^3.3.5",
+    "tailwindcss": "^3.4.1",
     "vite": "^4.4.7"
   },
   "scripts": {

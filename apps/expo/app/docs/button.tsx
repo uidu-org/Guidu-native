@@ -1,8 +1,8 @@
-import { GuiButton, GuiText, GuiView } from '@uidu/native'
-import { useState } from 'react'
+import { GuiButton, GuiText, GuiView } from '@uidu/native';
+import { useState } from 'react';
 
 export default function ButtonDocsPage() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <GuiView centered>
       <GuiText>This is a Button</GuiText>
@@ -11,5 +11,5 @@ export default function ButtonDocsPage() {
       </GuiView>
       {isVisible ? <GuiText>Visible</GuiText> : <GuiText>NOT Visible</GuiText>}
     </GuiView>
-  )
+  );
 }

@@ -5,6 +5,7 @@
     "./apps/*",
     "./packages/config",
     "./packages/ui",
+    "./packages/web/storybook",
     "./packages/web/components/core/*",
     "./packages/web/components/forms/*",
     "./packages/web/components/media/*",
@@ -72,6 +73,7 @@
     "packages": [
       "./packages/ui",
       "./packages/config",
+      "!./packages/web/storybook",
       "./packages/web",
       "./packages/web/lib",
       "./packages/web/components/*/*",
@@ -81,8 +83,5 @@
   "peerDependencies": {
     "react": "*"
   },
-  "version": "1.0.0",
-  "devDependencies": {
-    "@babel/core": "^7.20.0"
-  }
+  "version": "1.0.0"
 }

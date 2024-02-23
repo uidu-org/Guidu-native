@@ -60,7 +60,7 @@ function GuiControlSelect({
                 dismissOnSnapToBottom
                 animationConfig={{
                   type: 'spring',
-                  damping: 20,
+                  damping: 80,
                   mass: 1.2,
                   stiffness: 250,
                 }}
@@ -98,7 +98,6 @@ function GuiControlSelect({
               >
                 <Select.Group>
                   <Select.Label>Choose the right one</Select.Label>
-
                   {children}
                 </Select.Group>
               </Select.Viewport>

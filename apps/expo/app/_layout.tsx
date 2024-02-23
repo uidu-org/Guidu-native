@@ -1,15 +1,15 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
-import { TamaguiProvider } from '@uidu/native'
-import { config } from '@uidu/native-config'
-import { Slot } from 'expo-router'
-import { useColorScheme } from 'react-native'
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { TamaguiProvider } from '@uidu/native';
+import { config } from '@uidu/native-config';
+import { Slot } from 'expo-router';
+import { useColorScheme } from 'react-native';
 
 export default function HomeLayout() {
   // const [loaded] = useFonts({
   //   Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
   //   InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
   // })
-  const scheme = useColorScheme()
+  const scheme = useColorScheme();
 
   // if (!loaded) {
   //   return null
@@ -20,5 +20,5 @@ export default function HomeLayout() {
         <Slot />
       </TamaguiProvider>
     </ThemeProvider>
-  )
+  );
 }

@@ -1,8 +1,14 @@
-import { GuiButton, GuiDialog, GuiDialogTitle, GuiDialogueDescription, GuiView } from '@uidu/native'
-import { useState } from 'react'
+import {
+  GuiButton,
+  GuiDialog,
+  GuiDialogTitle,
+  GuiDialogueDescription,
+  GuiView,
+} from '@uidu/native';
+import { useState } from 'react';
 
 export default function DialogDocsPage() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <GuiView centered>
@@ -17,5 +23,5 @@ export default function DialogDocsPage() {
         </GuiDialogueDescription>
       </GuiDialog>
     </GuiView>
-  )
+  );
 }

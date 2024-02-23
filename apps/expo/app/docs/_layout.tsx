@@ -1,4 +1,4 @@
-import { Drawer } from 'expo-router/drawer'
+import { Drawer } from 'expo-router/drawer';
 
 export default function DocsLayout() {
   return (
@@ -10,5 +10,5 @@ export default function DocsLayout() {
         }}
       />
     </Drawer>
-  )
+  );
 }

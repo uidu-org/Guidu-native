@@ -11,7 +11,8 @@ export interface Route {
   title: string
   keywords: string
   defaultOpen: boolean
-  path: string
+  path?: string
   icon?: React.ReactNode
   subRoutes?: Route[]
+  action?: () => void
 }

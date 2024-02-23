@@ -1,7 +1,12 @@
 import { Calendar, Check, Home } from "@tamagui/lucide-icons";
-import { Accordion, GuiDropdownMenu, GuiView, type Route } from "@uidu/native";
+import { Accordion, GuiDropdownMenu, GuiSheet, GuiText, GuiView, type Route } from "@uidu/native";
+import { useState } from "react";
 
 export default function DropdownMenuDocsPage() {
+
+
+  const [open, setOpen] = useState(false)
+
   const routes: Route[] = [
     {
       key: "1",
@@ -30,10 +35,10 @@ export default function DropdownMenuDocsPage() {
         },
         {
           key: "1-2",
-          title: "Subroute 1-2",
+          title: "Hey",
           keywords: "subroute 1-2",
           defaultOpen: true,
-          path: "/route1/subroute2",
+          action: () => setOpen(!open),
           icon: <Check />
         },
         {
@@ -47,10 +52,10 @@ export default function DropdownMenuDocsPage() {
     },
     {
       key: "2",
-      title: "Route 2",
-      keywords: "route 2",
+      title: "Avatar",
+      keywords: "avatar",
       defaultOpen: true,
-      path: "/route2"
+      path: "/docs/avatar"
     }
   ];
 
@@ -66,6 +71,13 @@ export default function DropdownMenuDocsPage() {
           <GuiDropdownMenu key={route.key} route={route} />
         ))}
       </Accordion>
+
+      <GuiSheet status={open} setStatus={setOpen} snapPoints={[70]} >
+        <GuiText
+        >
+          Yes , it works
+        </GuiText>
+      </GuiSheet>
 
     </GuiView>
   );

@@ -1,4 +1,4 @@
-export { GuiAvatarTest as AvatarGuiTest } from './Avatar'
+export { GuiAvatar } from './Avatar'
 export { GuiButton } from './Button'
 export { GuiCard } from './Card'
 export { GuiInput } from './Input'

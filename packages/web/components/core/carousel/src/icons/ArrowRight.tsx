@@ -10,6 +10,8 @@ export default function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
     >
       <path d="M5 12h14" />
       <path d="m12 5 7 7-7 7" />

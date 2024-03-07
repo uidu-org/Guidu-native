@@ -62,11 +62,11 @@ export default function DropdownMenuDocsPage() {
   return (
     <GuiView p="$3">
       <Accordion style={{
-        borderColor: "black",
-        borderWidth: 1,
         padding: 5,
         borderRadius: 7
-      }} type="multiple">
+      }}
+
+        type="multiple">
         {routes.map(route => (
           <GuiDropdownMenu key={route.key} route={route} />
         ))}

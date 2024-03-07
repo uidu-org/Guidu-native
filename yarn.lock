@@ -10937,8 +10937,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/native@workspace:packages/ui"
   dependencies:
-    "@datepicker-react/hooks": "npm:^2.8.4"
-    "@tamagui-extras/core": "npm:^1.11.0"
     "@tamagui-extras/form": "npm:^1.16.0"
     "@tamagui/build": "npm:^1.89.8"
     "@tamagui/linear-gradient": "npm:^1.91.3"
@@ -10947,17 +10945,11 @@ __metadata:
     date-fns: "npm:^3.4.0"
     dayjs: "npm:1.11.10"
     downshift: "npm:^8.3.1"
-    expo-image-picker: "npm:^14.7.1"
     expo-router: "npm:3.4.7"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
     react-native: "npm:0.72.10"
-    react-native-context-menu-view: "npm:^1.15.0"
-    react-native-gesture-handler: "npm:~2.12.0"
-    react-native-modal-datetime-picker: "npm:^17.1.0"
-    react-native-parsed-text: "npm:^0.0.22"
-    react-native-reanimated: "npm:~3.3.0"
-    react-native-safe-area-context: "npm:4.6.3"
+    react-native-reanimated: "npm:3.7.1"
     react-native-svg: "npm:14.1.0"
     react-use: "npm:^17.5.0"
     tamagui: "npm:^1.89.8"
@@ -25699,12 +25691,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.43.9, react-hook-form@npm:^7.49.3":
+"react-hook-form@npm:^7.43.9":
   version: 7.51.0
   resolution: "react-hook-form@npm:7.51.0"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18
   checksum: 2697e2b56afca36098aed04d187e9756641e1f61e1a29c566b7bba0899c885fc5f995219a29a9535db748bd55e186cdf95ff8af546247a4bf3418a00863cbd24
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.49.3":
+  version: 7.50.1
+  resolution: "react-hook-form@npm:7.50.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 54a9daa2143c601a9867e96a2159a0bbe98707b5bbeb5953bfdf3342d2f04bfcaa6169907ed167c5c1f3a044630860d4f43685f4ac4e15b9cd892d1b00d54dde
   languageName: node
   linkType: hard
 
@@ -25850,18 +25851,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-modal-datetime-picker@npm:^17.1.0":
-  version: 17.1.0
-  resolution: "react-native-modal-datetime-picker@npm:17.1.0"
-  dependencies:
-    prop-types: "npm:^15.7.2"
-  peerDependencies:
-    "@react-native-community/datetimepicker": ">=6.7.0"
-    react-native: ">=0.65.0"
-  checksum: fcb20d62885b0a288719c21b731fb4129be9f5e3a78e0d9971bfcc8e6083164434da13ddab0079d0924074b3324f5ec7d664598127db5470b4eb7278960e01df
-  languageName: node
-  linkType: hard
-
 "react-native-parsed-text@npm:^0.0.22":
   version: 0.0.22
   resolution: "react-native-parsed-text@npm:0.0.22"
@@ -25871,6 +25860,27 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 0ce25087c4a1041441ba680b79bd994de86d77a73cc733ab22b26f21c36be238f510b32eecd79fc099575615fa8fad9f600a495391cdaaf7b84bc6342f04f27b
+  languageName: node
+  linkType: hard
+
+"react-native-reanimated@npm:3.7.1":
+  version: 3.7.1
+  resolution: "react-native-reanimated@npm:3.7.1"
+  dependencies:
+    "@babel/plugin-transform-object-assign": "npm:^7.16.7"
+    "@babel/preset-typescript": "npm:^7.16.7"
+    convert-source-map: "npm:^2.0.0"
+    invariant: "npm:^2.2.4"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.0.0-0
+    "@babel/plugin-proposal-optional-chaining": ^7.0.0-0
+    "@babel/plugin-transform-arrow-functions": ^7.0.0-0
+    "@babel/plugin-transform-shorthand-properties": ^7.0.0-0
+    "@babel/plugin-transform-template-literals": ^7.0.0-0
+    react: "*"
+    react-native: "*"
+  checksum: 118161e98e32024c2dab9d22dfa77292d61bb120d2b9eeb5d14725796827b23ff7a965813dbe29a57ebc1266ba2466b0bc6667f5594f84ede08c01dc1a546907
   languageName: node
   linkType: hard
 

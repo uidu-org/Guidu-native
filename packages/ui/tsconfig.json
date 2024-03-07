@@ -4,9 +4,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/**/*.tsx",
-    "../config/src/tamagui.config.ts",
-    "./gui-chat/assets/**/*",
-    "./gui-chat/assets/lottie/typing.json"
+    "../config/src/tamagui.config.ts"
   ],
   "compilerOptions": {
     "composite": true,

@@ -2,4 +2,3 @@ dist/
 .DS_Store
 THUMBS_DB
 node_modules/
-types/

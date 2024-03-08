@@ -1,10 +1,10 @@
 import { Controller, FieldValues } from 'react-hook-form'
 import { GInput, GuiInputProps } from '../GuiInput'
-import { LmRhfProps } from './GuiRhfProps'
+import { GuiRhfProps } from './GuiRhfProps'
 
-export type GuiInputRhfProps<T extends FieldValues = FieldValues> = GuiInputProps & LmRhfProps<T>
+export type GuiInputRhfProps<T extends FieldValues = FieldValues> = GuiInputProps & GuiRhfProps<T>
 
-export function LmInputRhf<T extends FieldValues = FieldValues>({
+export function GInputRhf<T extends FieldValues = FieldValues>({
   name,
   control,
   rules = {},

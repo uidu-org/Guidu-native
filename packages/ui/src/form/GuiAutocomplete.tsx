@@ -1,3 +1,8 @@
+import {
+  LmPopover,
+  LmPopoverProps,
+  usePopoverState,
+} from "@tamagui-extras/core"
 import { forwardRef, useDeferredValue, useEffect, useId, useRef, useState } from 'react'
 import { Platform, useWindowDimensions } from 'react-native'
 import {
@@ -5,7 +10,6 @@ import {
   Input,
   ListItem,
   ListItemTitle,
-  Popover as LmPopover,
   ScrollView,
   SizeTokens,
   ThemeName,
@@ -13,15 +17,13 @@ import {
   XStack,
   YGroup,
   YStack,
-  type PopoverProps as LmPopoverProps
 } from 'tamagui'
 import {
   CaretDownRegular,
   CheckSquareRegular,
   ListPlusRegular,
   SquareRegular,
-} from '../../content/icons'
-import { usePopoverState } from '../../core'
+} from '../content/icons'
 import { GFormFieldContainer } from './GuiFormFieldContainer'
 import { GuiFormContainerBaseTypes } from './formContainerTypes'
 
@@ -193,7 +195,7 @@ export function GAutocomplete({
   )
 }
 
-type LmAutocompleteInputContentProps = GuiAutocompleteProps &
+type LmAutocompleteInputContentProps = LmAutocompleteProps &
   AutocompleteContext & {
     onAddNew: (str: string) => void
   }
@@ -295,7 +297,7 @@ const LmAutocompleteInputContent = forwardRef(function LmAutocompleteInputConten
 })
 
 type LmAutocompleteListProps = AutocompleteContext & {
-  options: GuiAutocompleteProps['options']
+  options: LmAutocompleteProps['options']
 }
 
 function LmAutocompleteList({ options, isSelected, onChangeSelection }: LmAutocompleteListProps) {

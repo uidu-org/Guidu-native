@@ -1,4 +1,4 @@
-import { Form, GuiButton, GuiView, XStack } from "@uidu/native";
+import { GAutocompleteRhf, GFormRhfProvider, YStack } from "@uidu/native";
 import { useState } from "react";
 
 export default function kitchen() {
@@ -10,42 +10,16 @@ export default function kitchen() {
 
     return (
         <>
-            <GuiView>
-                <GFormRhfProvider
-                    defaultValues={{
-                        name: '',
-                        email: ''
-                    }}
-                >
-                    {({ control, handleSubmit, reset }) => (
-                        <Form gap={'$3'}
-                            onSubmit={handleSubmit(data => {
-                                console.log(data);
-                            })}
-                        >
-                            <GInputRhf name={'name'} control={control} label={'Name'} placeholder={'Type your name...'} labelInline
-                                required />
-                            <GInputRhf name={'email'} control={control} label={'Name'} placeholder={'Type your email...'} labelInline />
-                            <XStack gap={'$3'}>
-                                <GuiButton onPress={() => reset()}>Reset</GuiButton>
-                                <Form.Trigger asChild>
-                                    <GuiButton>Submit</GuiButton>
-                                </Form.Trigger>
-                            </XStack>
-                        </Form>)}
-                </GFormRhfProvider>
-            </GuiView>
-            <GFormRhfProvider
-                defaultValues={{
-                    ...form,
-                }}
-            >
-
-                <GAutocompleteRhf label={'Multiple'} name={'autocomplete'} options={options} multiple />
-
-                <GSubmitButtonRhf onSubmit={() => console.log(form)
-                }>Submit</GSubmitButtonRhf>
-
+            <GFormRhfProvider>
+                <YStack space>
+                    <GAutocompleteRhf
+                        label={'Multiple - Match ID'}
+                        name={'pre_matched'}
+                        matchId
+                        options={options}
+                        multiple
+                    />
+                </YStack>
             </GFormRhfProvider>
         </>
     )

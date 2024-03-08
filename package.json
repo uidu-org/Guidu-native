@@ -71,6 +71,7 @@
   "preconstruct": {
     "packages": [
       "./packages/ui",
+      "./packages/ui/*",
       "./packages/config",
       "./packages/web",
       "./packages/web/lib",

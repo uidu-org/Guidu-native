@@ -1,7 +1,7 @@
 import { forwardRef, useId, useState } from 'react'
 import { Pressable } from 'react-native'
 import { Input, InputProps, Stack, TextArea } from 'tamagui'
-import { EyeRegular, EyeSlashRegular, IconProps } from '../../content/icons'
+import { EyeRegular, EyeSlashRegular, IconProps } from '../content/icons'
 import { GFormFieldContainer } from './GuiFormFieldContainer'
 import { GuiFormContainerBaseTypes } from './formContainerTypes'
 

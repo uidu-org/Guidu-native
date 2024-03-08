@@ -5,8 +5,8 @@ import {
   CaretDownRegular,
   CaretUpRegular,
   CheckRegular,
-} from '../../content/icons'
-import { ThemeColors, colormap } from "../../core"
+} from '../content/icons'
+import { ThemeColors, colormap } from "../core"
 import { GFormFieldContainer } from './GuiFormFieldContainer'
 import { GuiFormContainerBaseTypes } from './formContainerTypes'
 

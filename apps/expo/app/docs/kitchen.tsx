@@ -1,4 +1,11 @@
-import { Form, GuiButton, GuiView, XStack } from '@uidu/native';
+import {
+  Form,
+  GFormRhfProvider,
+  GInputRhf,
+  GuiButton,
+  GuiView,
+  XStack,
+} from '@uidu/native';
 import { useState } from 'react';
 
 export default function kitchen() {
@@ -31,13 +38,6 @@ export default function kitchen() {
                 labelInline
                 required
               />
-              <GInputRhf
-                name={'email'}
-                control={control}
-                label={'Name'}
-                placeholder={'Type your email...'}
-                labelInline
-              />
               <XStack gap={'$3'}>
                 <GuiButton onPress={() => reset()}>Reset</GuiButton>
                 <Form.Trigger asChild>
@@ -53,16 +53,27 @@ export default function kitchen() {
           ...form,
         }}
       >
-        <GAutocompleteRhf
-          label={'Multiple'}
-          name={'autocomplete'}
-          options={options}
-          multiple
+        <GInputRhf
+          name={'name'}
+          control={control}
+          label={'Name'}
+          placeholder={'Type your name...'}
+          labelInline
+          required
         />
-
-        <GSubmitButtonRhf onSubmit={() => console.log(form)}>
-          Submit
-        </GSubmitButtonRhf>
+        <GInputRhf
+          name={'email'}
+          control={control}
+          label={'Name'}
+          placeholder={'Type your email...'}
+          labelInline
+        />
+        <XStack gap={'$3'}>
+          <GuiButton onPress={() => reset()}>Reset</GuiButton>
+          <Form.Trigger asChild>
+            <GuiButton>Submit</GuiButton>
+          </Form.Trigger>
+        </XStack>
       </GFormRhfProvider>
     </>
   );

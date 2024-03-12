@@ -1,3 +1,4 @@
+import { GuiView } from '@uidu/native';
 import dayjs from 'dayjs';
 import type { ForwardedRef } from 'react';
 import React, { useCallback, useEffect, useRef } from 'react';
@@ -6,8 +7,7 @@ import {
   Keyboard,
   KeyboardAvoidingView,
   Platform,
-  StyleSheet,
-  View,
+  StyleSheet
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Footer } from './Footer';
@@ -48,9 +48,9 @@ export const Chatty = React.forwardRef(
 
     const renderLoading = useCallback(() => {
       return (
-        <View style={[styles.loadingContainer]}>
+        <GuiView style={[styles.loadingContainer]}>
           <ActivityIndicator />
-        </View>
+        </GuiView>
       );
     }, []);
 

@@ -1,8 +1,7 @@
+import { GuiSheet, H2 } from '@uidu/native';
 import { useCallback, useContext, useState } from 'react';
 import { ActionSheetIOS, Platform } from 'react-native';
 import ContextMenuView from 'react-native-context-menu-view';
-import { H2 } from 'tamagui';
-import { GuiSheet } from '../../widget/Sheet';
 import { PropsContext } from '../Chatty';
 import type { IMessage } from '../components/types/Chatty.types';
 import { ChatEmitter } from '../utils/eventEmitter';

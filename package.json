@@ -5,6 +5,7 @@
     "./apps/*",
     "./packages/config",
     "./packages/ui",
+    "./packages/gui-chat",
     "./packages/web/components/core/*",
     "./packages/web/components/forms/*",
     "./packages/web/components/media/*",
@@ -81,8 +82,5 @@
   "peerDependencies": {
     "react": "*"
   },
-  "version": "1.0.0",
-  "devDependencies": {
-    "@babel/core": "^7.20.0"
-  }
+  "version": "1.0.0"
 }

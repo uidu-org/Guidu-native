@@ -1,11 +1,11 @@
 
 import { useCallback, useContext, useState } from 'react';
 import { ActionSheetIOS, Platform } from 'react-native';
+import ContextMenuView from 'react-native-context-menu-view';
 import { H2 } from 'tamagui';
 import { GuiSheet } from '../../widget/Sheet';
 import { PropsContext } from '../Chatty';
 import type { IMessage } from '../components/types/Chatty.types';
-import { contextMenuView } from '../utils/contextMenu';
 import { ChatEmitter } from '../utils/eventEmitter';
 
 
@@ -57,12 +57,12 @@ function ContextMenuWrapper(props: IProps) {
 
   if (Platform.OS === 'ios' && parseInt(Platform.Version, 10) >= 13) {
     return (
-      <contextMenuView.default
+      <ContextMenuView
         actions={propsContext.bubbleProps?.actions?.options}
         onPress={(e: any) => onPress(e.nativeEvent.index)}
       >
         {props.children}
-      </contextMenuView.default>
+      </ContextMenuView>
     );
   }
   return (

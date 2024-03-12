@@ -5,9 +5,9 @@ import {
   ImageBackground,
   InteractionManager,
   StyleSheet,
-  View,
+  TouchableWithoutFeedback,
+  View
 } from 'react-native';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { Video } from './Video';
 import type { IMedia } from './types/Chatty.types';
 

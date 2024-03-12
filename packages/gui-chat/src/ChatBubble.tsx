@@ -1,4 +1,5 @@
 import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
+import { GuiText, GuiView } from '@uidu/native';
 import dayjs from 'dayjs';
 import React, {
   useCallback,
@@ -13,10 +14,8 @@ import {
   ImageBackground,
   InteractionManager,
   StyleSheet,
-  Text,
   TouchableOpacity,
-  View,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 import { PropsContext } from './Chatty';
 import { PhotoView } from './components/PhotoView';
@@ -191,25 +190,25 @@ function _ChatBubble(props: IChatBubble) {
         case MessageStatus.Sending:
           return (
             propsContext.bubbleProps?.tickProps?.sendingElement ?? (
-              <Text>🔄</Text>
+              <GuiText>🔄</GuiText>
             )
           );
 
         case MessageStatus.Sent:
           return (
-            propsContext.bubbleProps?.tickProps?.sentElement ?? <Text>✔</Text>
+            propsContext.bubbleProps?.tickProps?.sentElement ?? <GuiText>✔</GuiText>
           );
 
         case MessageStatus.Delivered:
           return (
             propsContext.bubbleProps?.tickProps?.deliveredElement ?? (
-              <Text>☑</Text>
+              <GuiText>☑</GuiText>
             )
           );
 
         case MessageStatus.Read:
           return (
-            propsContext.bubbleProps?.tickProps?.readElement ?? <Text>✅</Text>
+            propsContext.bubbleProps?.tickProps?.readElement ?? <GuiText>✅</GuiText>
           );
       }
     }
@@ -225,8 +224,8 @@ function _ChatBubble(props: IChatBubble) {
 
   const renderFooter = useCallback(() => {
     return (
-      <View style={styles.bubbleFooter}>
-        <Text
+      <GuiView style={styles.bubbleFooter}>
+        <GuiText
           style={[
             styles.date,
             propsContext?.bubbleProps?.dateStyle &&
@@ -234,9 +233,9 @@ function _ChatBubble(props: IChatBubble) {
           ]}
         >
           {createdAt}
-        </Text>
+        </GuiText>
         {renderTicks()}
-      </View>
+      </GuiView>
     );
   }, [
     createdAt,
@@ -251,8 +250,8 @@ function _ChatBubble(props: IChatBubble) {
     if (message?.me) {
       return (
         <>
-          <View style={[styles.rightArrow, bubbleBackgroundColor]}></View>
-          <View
+          <GuiView style={[styles.rightArrow, bubbleBackgroundColor]}></GuiView>
+          <GuiView
             style={[
               styles.rightArrowOverlap,
               {
@@ -261,14 +260,14 @@ function _ChatBubble(props: IChatBubble) {
                   '#fff',
               },
             ]}
-          ></View>
+          ></GuiView>
         </>
       );
     } else {
       return (
         <>
-          <View style={[styles.leftArrow, bubbleBackgroundColor]}></View>
-          <View
+          <GuiView style={[styles.leftArrow, bubbleBackgroundColor]}></GuiView>
+          <GuiView
             style={[
               styles.leftArrowOverlap,
               {
@@ -277,7 +276,7 @@ function _ChatBubble(props: IChatBubble) {
                   '#fff',
               },
             ]}
-          ></View>
+          ></GuiView>
         </>
       );
     }
@@ -315,15 +314,15 @@ function _ChatBubble(props: IChatBubble) {
       });
 
       return (
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+        <GuiView style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
           {message?.media.map((media, index) => {
             if (index < 3) {
               return (
                 <TouchableOpacity onPress={() => setShowMedia(true)}>
                   {media.type === MediaType.Image && mediaLoaded && (
-                    <View>
+                    <GuiView>
                       <Image source={{ uri: media.uri }} style={styles.media} />
-                    </View>
+                    </GuiView>
                   )}
                   {media.type === MediaType.Video && (
                     <VideoThumbnail media={media} />
@@ -344,13 +343,13 @@ function _ChatBubble(props: IChatBubble) {
                   borderRadius: 15,
                 }}
               >
-                <View style={styles.backgroundOverlay}>
-                  <Text
+                <GuiView style={styles.backgroundOverlay}>
+                  <GuiText
                     style={{ color: '#fff', textAlign: 'center', fontSize: 20 }}
                   >
                     + {message.media.length - 3}
-                  </Text>
-                </View>
+                  </GuiText>
+                </GuiView>
               </ImageBackground>
             </TouchableOpacity>
           )}
@@ -362,7 +361,7 @@ function _ChatBubble(props: IChatBubble) {
               onRequestClose={() => setShowMedia(false)}
             />
           )}
-        </View>
+        </GuiView>
       );
     }
 
@@ -372,14 +371,14 @@ function _ChatBubble(props: IChatBubble) {
   const renderUrlPreview = useMemo(() => {
     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
       return (
-        <View style={{ marginTop: 10 }}>
+        <GuiView style={{ marginTop: 10 }}>
           <UrlPreviewBubble
             title={urlPreviewData.title}
             description={urlPreviewData.description}
             image={urlPreviewData.image}
             url={urlPreviewData.url}
           />
-        </View>
+        </GuiView>
       );
     }
 
@@ -387,9 +386,9 @@ function _ChatBubble(props: IChatBubble) {
   }, [message?.repliedTo, showUrlPreview, urlPreviewData]);
 
   return (
-    <View style={[styles.wrapper, bubbleAlignment]}>
+    <GuiView style={[styles.wrapper, bubbleAlignment]}>
       {propsContext.bubbleProps?.trailingAccessory && message?.me && (
-        <View>{propsContext.bubbleProps.trailingAccessory}</View>
+        <GuiView>{propsContext.bubbleProps.trailingAccessory}</GuiView>
       )}
 
       {propsContext.bubbleProps?.showAvatars?.visible && !message?.me && (
@@ -404,7 +403,7 @@ function _ChatBubble(props: IChatBubble) {
       )}
 
       <ContextMenuWrapper message={message as IMessage}>
-        <View
+        <GuiView
           style={[
             bubbleBackgroundColor,
             styles.container,
@@ -441,25 +440,25 @@ function _ChatBubble(props: IChatBubble) {
                   {renderFooter()}
                 </>
               ) : (
-                <View>
+                <GuiView>
                   {renderMedia()}
 
-                  <Text
+                  <GuiText
                     style={
                       propsContext?.bubbleProps?.labelStyle &&
                       propsContext.bubbleProps?.labelStyle(message?.me ?? false)
                     }
                   >
                     {message?.text}
-                  </Text>
+                  </GuiText>
                   {renderUrlPreview}
                   {renderFooter()}
-                </View>
+                </GuiView>
               )}
             </>
           )}
           {renderCornerRounding()}
-        </View>
+        </GuiView>
       </ContextMenuWrapper>
 
       {propsContext.bubbleProps?.showAvatars?.visible && message?.me && (
@@ -474,9 +473,9 @@ function _ChatBubble(props: IChatBubble) {
       )}
 
       {propsContext.bubbleProps?.trailingAccessory && !message?.me && (
-        <View>{propsContext.bubbleProps.trailingAccessory}</View>
+        <GuiView>{propsContext.bubbleProps.trailingAccessory}</GuiView>
       )}
-    </View>
+    </GuiView>
   );
 }
 

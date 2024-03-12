@@ -1,6 +1,13 @@
 {
   "extends": "../../tsconfig.base",
-  "include": ["**/*.ts", "**/*.tsx", "**/**/*.tsx", "../config/src/tamagui.config.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/**/*.tsx",
+    "../config/src/tamagui.config.ts",
+    "./gui-chat/assets/**/*",
+    "./gui-chat/assets/lottie/typing.json"
+  ],
   "compilerOptions": {
     "composite": true,
     "jsx": "react-jsx"

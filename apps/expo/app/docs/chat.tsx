@@ -1,5 +1,6 @@
-import { Chatty } from "@uidu/gui-chat"
+import { Chatty } from '@uidu/native'
 import { useRef, useState } from 'react'
+
 
 export default function DocsChatPage() {
     const [messages, setMessages] = useState
@@ -33,7 +34,6 @@ export default function DocsChatPage() {
                 }
             }}
             footerProps={{
-                // To prevent any unnecessary re-rendering, we're using ref instead of states.
                 onChangeText: (_text) => text.current = _text,
                 onPressSend
             }}

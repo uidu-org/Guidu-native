@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import {
   Image,
   Linking,
@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import type { IUrlPreviewBubble } from 'src/types/Chatty.types';
+import type { IUrlPreviewBubble } from './types/Chatty.types';
 
 export const UrlPreviewBubble = (props: IUrlPreviewBubble) => {
   const { url, title, description, image } = props;

@@ -25,8 +25,6 @@ import { FAB, IFabRef } from './components/FAB';
 import { LoadEarlier } from './components/LoadEarlier';
 import { RenderDate } from './components/RenderDate';
 import { TypingStatus } from './components/TypingStatus';
-import { useHaptic } from './hooks/useHaptic';
-import { usePrevious } from './hooks/usePrevious';
 import {
   HapticType,
   IListProps,
@@ -34,7 +32,9 @@ import {
   ITypingStatusRef,
   LayoutType,
   ListRef,
-} from './types/Chatty.types';
+} from './components/types/Chatty.types';
+import { useHaptic } from './hooks/useHaptic';
+import { usePrevious } from './hooks/usePrevious';
 import { ChatBubbleEmitter } from './utils/eventEmitter';
 import { wait } from './utils/helpers';
 

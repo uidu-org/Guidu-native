@@ -1,6 +1,5 @@
-import React from 'react';
-import type { IMedia } from '../types/Chatty.types';
 import { RenderVideoExpo, videoRef } from '../utils/videoRenderer';
+import type { IMedia } from './types/Chatty.types';
 
 interface IProps {
   media: IMedia;

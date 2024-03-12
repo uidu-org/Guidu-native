@@ -1,4 +1,4 @@
-import { Chatty } from '@uidu/native'
+import { GuiText } from '@uidu/native'
 import { useRef, useState } from 'react'
 
 
@@ -24,19 +24,6 @@ export default function DocsChatPage() {
         console.log(data);
     }
     return (
-        <Chatty
-            messages={messages}
-            headerProps={{
-                id: 0,
-                username: "Muhammed Kaplan",
-                avatar: {
-                    uri: "https://blalala.com"
-                }
-            }}
-            footerProps={{
-                onChangeText: (_text) => text.current = _text,
-                onPressSend
-            }}
-        />
+        <GuiText>Ciao</GuiText>
     )
 }

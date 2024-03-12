@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { useCallback } from 'react';
-import { ActivityIndicator } from 'react-native';
-import { Text, TouchableOpacity } from 'react-native';
-import type { ILoadEarlierProps } from 'src/types/Chatty.types';
+import React, { useCallback, useState } from 'react';
+import { ActivityIndicator, Text, TouchableOpacity } from 'react-native';
+import type { ILoadEarlierProps } from './types/Chatty.types';
 
 function _LoadEarlier(props: ILoadEarlierProps) {
   const { onLoadEarlier } = props;

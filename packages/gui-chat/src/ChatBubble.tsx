@@ -25,10 +25,11 @@ import { UrlPreviewBubble } from './components/UrlPreviewBubble';
 import { VideoThumbnail } from './components/VideoThumbnail';
 import {
   IChatBubble,
+  IMessage,
   IUrlPreviewBubble,
   MediaType,
-  MessageStatus
-} from './types/Chatty.types';
+  MessageStatus,
+} from './components/types/Chatty.types';
 import { ChatEmitter } from './utils/eventEmitter';
 import { extractUrlFromString, fetchMetaData } from './utils/helpers';
 import {
@@ -39,6 +40,7 @@ import {
   URL_PATTERN_SHAPE,
   loadParsedText,
 } from './utils/patterns';
+import { ContextMenuWrapper } from './wrappers/ContextMenuWrapper';
 
 const ParsedText = loadParsedText();
 
@@ -228,7 +230,7 @@ function _ChatBubble(props: IChatBubble) {
           style={[
             styles.date,
             propsContext?.bubbleProps?.dateStyle &&
-            propsContext?.bubbleProps?.dateStyle!(message?.me ?? false),
+              propsContext?.bubbleProps?.dateStyle!(message?.me ?? false),
           ]}
         >
           {createdAt}
@@ -393,73 +395,79 @@ function _ChatBubble(props: IChatBubble) {
       {propsContext.bubbleProps?.showAvatars?.visible && !message?.me && (
         <Image
           source={
-            message?.user.avatar ?? ""
+            message?.user.avatar ?? {
+              uri: 'https://cdn.iconscout.com/icon/free/png-256/free-avatar-372-456324.png',
+            }
           }
           style={[styles.avatar, avatarSize]}
         />
       )}
 
-      <View
-        style={[
-          bubbleBackgroundColor,
-          styles.container,
-          propsContext.bubbleProps?.containerStyle,
-          { padding: message?.repliedTo ? 5 : 15 },
-        ]}
-      >
-        {children ? (
-          children
-        ) : (
-          <>
-            {message?.repliedTo && (
-              <ReplyingTo
-                username={message?.repliedTo?.user.username}
-                text={message?.repliedTo.text}
-                messageId={message?.repliedTo.id}
-              />
-            )}
+      <ContextMenuWrapper message={message as IMessage}>
+        <View
+          style={[
+            bubbleBackgroundColor,
+            styles.container,
+            propsContext.bubbleProps?.containerStyle,
+            { padding: message?.repliedTo ? 5 : 15 },
+          ]}
+        >
+          {children ? (
+            children
+          ) : (
+            <>
+              {message?.repliedTo && (
+                <ReplyingTo
+                  username={message?.repliedTo?.user.username}
+                  text={message?.repliedTo.text}
+                  messageId={message?.repliedTo.id}
+                />
+              )}
 
-            {propsContext?.enablePatterns && ParsedText ? (
-              <>
-                {renderMedia()}
+              {propsContext?.enablePatterns && ParsedText ? (
+                <>
+                  {renderMedia()}
 
-                <ParsedText
-                  parse={messagePatterns}
-                  style={
-                    propsContext?.bubbleProps?.labelStyle &&
-                    propsContext.bubbleProps?.labelStyle(message?.me ?? false)
-                  }
-                >
-                  {message?.text}
-                </ParsedText>
-                {renderUrlPreview}
-                {renderFooter()}
-              </>
-            ) : (
-              <View>
-                {renderMedia()}
+                  <ParsedText
+                    parse={messagePatterns}
+                    style={
+                      propsContext?.bubbleProps?.labelStyle &&
+                      propsContext.bubbleProps?.labelStyle(message?.me ?? false)
+                    }
+                  >
+                    {message?.text}
+                  </ParsedText>
+                  {renderUrlPreview}
+                  {renderFooter()}
+                </>
+              ) : (
+                <View>
+                  {renderMedia()}
 
-                <Text
-                  style={
-                    propsContext?.bubbleProps?.labelStyle &&
-                    propsContext.bubbleProps?.labelStyle(message?.me ?? false)
-                  }
-                >
-                  {message?.text}
-                </Text>
-                {renderUrlPreview}
-                {renderFooter()}
-              </View>
-            )}
-          </>
-        )}
-        {renderCornerRounding()}
-      </View>
+                  <Text
+                    style={
+                      propsContext?.bubbleProps?.labelStyle &&
+                      propsContext.bubbleProps?.labelStyle(message?.me ?? false)
+                    }
+                  >
+                    {message?.text}
+                  </Text>
+                  {renderUrlPreview}
+                  {renderFooter()}
+                </View>
+              )}
+            </>
+          )}
+          {renderCornerRounding()}
+        </View>
+      </ContextMenuWrapper>
 
       {propsContext.bubbleProps?.showAvatars?.visible && message?.me && (
         <Image
           source={
-            message?.user.avatar ?? ""
+            message?.user.avatar ?? {
+              uri: 'https://cdn.iconscout.com/icon/free/png-256/free-avatar-372-456324.png',
+            }
           }
           style={[styles.avatarMe, avatarSize]}
         />

@@ -12,7 +12,6 @@ export * from './form/src/GuiStarRating';
 export * from './form/src/GuiSwitch';
 export * from './form/src/formContainerTypes';
 export * from './form/src/rhf';
-export * from './gui-chat';
 export * from './navigation';
 
 export {

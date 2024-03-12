@@ -10,14 +10,19 @@ import {
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Animated, { FadeInDown, FadeOutDown } from 'react-native-reanimated';
 import { PropsContext } from './Chatty';
-import { IFooterProps, IMedia, MediaType } from './types/Chatty.types';
+import {
+  IFooterProps,
+  IMedia,
+  IUser,
+  MediaType,
+} from './components/types/Chatty.types';
 import { selectImage } from './utils/imagePicker';
 
 function _Footer(props: IFooterProps) {
   const propsContext = useContext(PropsContext);
   const [message, setMessage] = useState<string>('');
-  const [mentions] = useState(['JohnDoe']);
-  const [foundedMentions, setFoundedMentions] = useState<string[]>([]);
+  const [mentions] = useState(props.mentions);
+  const [foundedMentions, setFoundedMentions] = useState<IUser[]>([]);
   const [image, setImage] = useState<IMedia[] | undefined>();
 
   const cuttedText = useMemo(() => {
@@ -30,22 +35,24 @@ function _Footer(props: IFooterProps) {
 
   const onChangeText = useCallback(
     (text: string) => {
-      const foundedMentions: string[] = [];
+      const foundedMentions: IUser[] = [];
 
       // Iterate over all text
-      text.split(' ').forEach((word) => {
-        foundedMentions.push(
-          // Check and push if word exists in mentions
-          ...mentions.filter((mention) => {
-            console.log(text, mention.indexOf(word));
-            return (
-              mention
-                .toLowerCase()
-                .indexOf(word.toLowerCase().replace('@', '')) != -1
-            );
-          })
-        );
-      });
+      if (mentions) {
+        text.split(' ').forEach((word) => {
+          foundedMentions.push(
+            // Check and push if word exists in mentions
+            ...mentions.filter((mention) => {
+              console.log(text, mention.username.indexOf(word));
+              return (
+                mention.username
+                  .toLowerCase()
+                  .indexOf(word.toLowerCase().replace('@', '')) != -1
+              );
+            })
+          );
+        });
+      }
 
       setFoundedMentions(foundedMentions);
 
@@ -93,11 +100,13 @@ function _Footer(props: IFooterProps) {
             }
           >
             {foundedMentions.map((mention) => (
-              <TouchableOpacity onPress={() => onPressMention(mention)}>
+              <TouchableOpacity
+                onPress={() => onPressMention(mention.username)}
+              >
                 <Text
                   style={props.mentionStyles?.labelStyle ?? styles.mentionLabel}
                 >
-                  @{mention}
+                  @{mention.username}
                 </Text>
               </TouchableOpacity>
             ))}

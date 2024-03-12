@@ -9,14 +9,13 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { List } from './List';
-import { ActionsProvider } from "./context/ActionsContext";
-import type { IChatty, ListRef } from './types/Chatty.types';
+import type { IChatty, ListRef } from './components/types/Chatty.types';
 
 export const PropsContext = React.createContext<IChatty>({} as IChatty);
-
 
 export const Chatty = React.forwardRef(
   (props: IChatty, ref: ForwardedRef<ListRef>) => {
@@ -56,29 +55,26 @@ export const Chatty = React.forwardRef(
     }, []);
 
     return (
-      <PropsContext.Provider value={props}>
-        {props?.renderHeader ? (
-          props.renderHeader(props.headerProps)
-        ) : (
-          <Header {...props.headerProps} />
-        )}
-        <KeyboardAvoidingView
-          behavior={Platform.select({
-            android: 'position',
-            ios: 'position',
-          })}
-          keyboardVerticalOffset={Platform.select({
-            android: 20,
-          })}
-        >
-          {props.messages.length < 1 ? (
-            renderLoading()
+      <SafeAreaView>
+        <PropsContext.Provider value={props}>
+          {props?.renderHeader ? (
+            props.renderHeader(props.headerProps)
           ) : (
-            <>
-              <ActionsProvider
-                onOpen={() => console.log('Opening actions sheet')} // Handle opening logic (e.g., toggle state)
-                onClose={() => console.log('Closing actions sheet')} // Handle closing logic (e.g., toggle state)
-              >
+            <Header {...props.headerProps} />
+          )}
+          <KeyboardAvoidingView
+            behavior={Platform.select({
+              android: 'position',
+              ios: 'position',
+            })}
+            keyboardVerticalOffset={Platform.select({
+              android: 20,
+            })}
+          >
+            {props.messages.length < 1 ? (
+              renderLoading()
+            ) : (
+              <>
                 <List
                   data={messages}
                   //@ts-ignore
@@ -88,19 +84,19 @@ export const Chatty = React.forwardRef(
                   }
                   {...props.listProps}
                 />
-              </ActionsProvider>
-              {props?.renderFooter ? (
-                props.renderFooter(props.footerProps)
-              ) : (
-                <Footer
-                  {...props.footerProps}
-                  replyingTo={props.replyingTo}
-                />
-              )}
-            </>
-          )}
-        </KeyboardAvoidingView>
-      </PropsContext.Provider>
+                {props?.renderFooter ? (
+                  props.renderFooter(props.footerProps)
+                ) : (
+                  <Footer
+                    {...props.footerProps}
+                    replyingTo={props.replyingTo}
+                  />
+                )}
+              </>
+            )}
+          </KeyboardAvoidingView>
+        </PropsContext.Provider>
+      </SafeAreaView>
     );
   }
 );

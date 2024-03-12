@@ -1,9 +1,9 @@
 import React, { Ref, useContext, useImperativeHandle, useState } from 'react';
 import { Text } from 'react-native';
-import type { ITypingStatusRef } from 'src/types/Chatty.types';
 import { ChatBubble } from '../ChatBubble';
 import { PropsContext } from '../Chatty';
 import { loadLottie } from '../utils/lottie';
+import type { ITypingStatusRef } from './types/Chatty.types';
 
 function _TypingStatus(_: any, ref: Ref<ITypingStatusRef>) {
   const [isTyping, setIsTyping] = useState(false);
@@ -25,24 +25,13 @@ function _TypingStatus(_: any, ref: Ref<ITypingStatusRef>) {
   if (LottieView) {
     if (propsContext?.renderTypingBubble) {
       return propsContext.renderTypingBubble({
-        // typingAnimation: (
-        // <LottieView
-        //   source={require('../assets/lottie/typing.json')}
-        //   autoPlay
-        //   style={{ width: 30 }}
-        // />
-        // ),
-      }
-      );
+        typingAnimation: <LottieView autoPlay style={{ width: 30 }} />,
+      });
     }
 
     return (
       <ChatBubble>
-        {/* <LottieView
-          source={require('../assets/lottie/typing.json')}
-          autoPlay
-          style={{ width: 30 }}
-        /> */}
+        <LottieView autoPlay style={{ width: 30 }} />
       </ChatBubble>
     );
   } else {

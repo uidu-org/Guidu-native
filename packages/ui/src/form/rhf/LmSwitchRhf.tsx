@@ -2,15 +2,15 @@ import { Controller, FieldValues } from 'react-hook-form'
 import { GSwitch, GuiSwitchProps } from '../GuiSwitch'
 import { GuiRhfProps } from './GuiRhfProps'
 
-export type LmSwitchRhfProps<T extends FieldValues> = GuiSwitchProps & GuiRhfProps<T> & {}
+export type GuiSwitchRhfProps<T extends FieldValues> = GuiSwitchProps & GuiRhfProps<T> & {}
 
-export function LmSwitchRhf<T extends FieldValues>({
+export function GSwitchRhf<T extends FieldValues>({
   name,
   control,
   rules = {},
   defaultValue,
   ...inputProps
-}: LmSwitchRhfProps<T>) {
+}: GuiSwitchRhfProps<T>) {
   return (
     <Controller
       name={name}

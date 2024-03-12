@@ -1,8 +1,8 @@
 import { Controller, FieldValues } from 'react-hook-form'
 import { GAutocomplete, GuiAutocompleteProps } from '../GuiAutocomplete'
-import { LmRhfProps } from './GuiRhfProps'
+import { GuiRhfProps } from './GuiRhfProps'
 
-export type GuiAutocompleteRhfProps<T extends FieldValues> = LmRhfProps<T> &
+export type GuiAutocompleteRhfProps<T extends FieldValues> = GuiRhfProps<T> &
   GuiAutocompleteProps & {
     matchId?: boolean
   }

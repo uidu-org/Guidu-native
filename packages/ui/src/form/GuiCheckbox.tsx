@@ -12,7 +12,7 @@ import {
   XStackProps,
   YStack,
 } from 'tamagui'
-import { CheckRegular, MinusRegular } from '../../content/icons'
+import { CheckRegular, MinusRegular } from '../content/icons'
 
 export type GuiCheckboxProps = XStackProps & {
   checkboxProps?: Omit<CheckboxProps, 'disabled'>

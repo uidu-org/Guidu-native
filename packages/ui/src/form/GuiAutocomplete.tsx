@@ -1,3 +1,8 @@
+import {
+  LmPopover,
+  LmPopoverProps,
+  usePopoverState,
+} from "@tamagui-extras/core"
 import { forwardRef, useDeferredValue, useEffect, useId, useRef, useState } from 'react'
 import { Platform, useWindowDimensions } from 'react-native'
 import {
@@ -5,7 +10,6 @@ import {
   Input,
   ListItem,
   ListItemTitle,
-  Popover as LmPopover,
   ScrollView,
   SizeTokens,
   ThemeName,
@@ -13,21 +17,20 @@ import {
   XStack,
   YGroup,
   YStack,
-  type PopoverProps as LmPopoverProps
 } from 'tamagui'
 import {
   CaretDownRegular,
   CheckSquareRegular,
   ListPlusRegular,
   SquareRegular,
-} from '../../content/icons'
-import { usePopoverState } from '../../core'
+} from '../content/icons'
 import { GFormFieldContainer } from './GuiFormFieldContainer'
 import { GuiFormContainerBaseTypes } from './formContainerTypes'
 
 type Option = { label: string; value: string | number }
 export type GuiAutocompleteProps = GuiFormContainerBaseTypes & {
   options: Option[]
+  initialOptions?: Option[]
   multiple?: boolean
   value?: null | Option | Option[]
   onChange?: (v: null | Option | Option[]) => void
@@ -38,6 +41,7 @@ export type GuiAutocompleteProps = GuiFormContainerBaseTypes & {
   allowNewHook?: (newValue: string) => Option
   popoverProps?: LmPopoverProps
   size?: SizeTokens
+  bgItemList?: string
 }
 
 type AutocompleteContext = {
@@ -49,6 +53,7 @@ type ConditionalOption<T extends boolean> = T extends true ? Option[] : Option
 
 export function GAutocomplete({
   options,
+  initialOptions,
   labelInline,
   labelProps,
   helperText,
@@ -64,6 +69,7 @@ export function GAutocomplete({
   popoverProps,
   containerProps,
   size,
+  bgItemList,
   ...rest
 }: GuiAutocompleteProps) {
   const id = useId()
@@ -172,6 +178,7 @@ export function GAutocomplete({
               options={opts}
               isSelected={isSelected}
               onChangeSelection={onChangeSelection}
+              bgItemList={bgItemList}
               onAddNew={(newVal) => {
                 if (newVal) {
                   const newItem =
@@ -208,6 +215,7 @@ const LmAutocompleteInputContent = forwardRef(function LmAutocompleteInputConten
     onAddNew,
     onChangeSelection,
     isSelected,
+    bgItemList
   }: LmAutocompleteInputContentProps,
   ref
 ) {
@@ -279,6 +287,7 @@ const LmAutocompleteInputContent = forwardRef(function LmAutocompleteInputConten
               options={filteredOptions}
               onChangeSelection={onChangeSelection}
               isSelected={isSelected}
+              bgItemList={bgItemList}
             />
           </ScrollView>
           {allowNew && !filteredOptions?.length && deferredTerm && (
@@ -296,11 +305,12 @@ const LmAutocompleteInputContent = forwardRef(function LmAutocompleteInputConten
 
 type LmAutocompleteListProps = AutocompleteContext & {
   options: GuiAutocompleteProps['options']
+  bgItemList?: GuiAutocompleteProps["bgItemList"]
 }
 
-function LmAutocompleteList({ options, isSelected, onChangeSelection }: LmAutocompleteListProps) {
+function LmAutocompleteList({ options, isSelected, onChangeSelection, bgItemList }: LmAutocompleteListProps) {
   return (
-    <YGroup borderRadius={0}>
+    <YGroup borderRadius={0} gap={"$1.5"}>
       {options.map((item, i) => {
         return (
           <YGroup.Item key={item.value}>
@@ -308,6 +318,14 @@ function LmAutocompleteList({ options, isSelected, onChangeSelection }: LmAutoco
               hoverTheme
               pressTheme
               focusTheme
+              {...(bgItemList ? {
+                bw: 1,
+                boc: bgItemList,
+              } : null)}
+              style={{
+                borderRadius: bgItemList ? 10 : undefined
+              }}
+              h={30}
               cursor={'pointer'}
               icon={isSelected(item) ? <CheckSquareRegular /> : <SquareRegular />}
               onPress={() => onChangeSelection(item)}

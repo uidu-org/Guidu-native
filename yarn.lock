@@ -1874,6 +1874,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@datepicker-react/hooks@npm:^2.8.4":
+  version: 2.8.4
+  resolution: "@datepicker-react/hooks@npm:2.8.4"
+  dependencies:
+    date-fns: "npm:^2.14.0"
+  peerDependencies:
+    react: ">= 16.8.5"
+  checksum: 1f4301bce7c32efa35b982e6697718a541e1ecb4d636d5f27240ea16780ef9e5f04e59083a364f9e4f79a5fd20a13774128bcb5e9b9a3bee0773e74d1a04277b
+  languageName: node
+  linkType: hard
+
 "@discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
@@ -7684,6 +7695,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tamagui-extras/core@npm:^1.11.0":
+  version: 1.12.2
+  resolution: "@tamagui-extras/core@npm:1.12.2"
+  peerDependencies:
+    react: ^18.2.0
+    react-native: 0.72.6
+    react-native-svg: ^13.9.0
+    tamagui: 1.29.3
+  checksum: 16691ade13be7219caeffd0b2792f3796fd8d7380cf76beffa58848dfdf4b04868c8c9bf6a5010ce3f28e69af7d9abc8c3e773945031ce8b2b1f21a8812232e8
+  languageName: node
+  linkType: hard
+
 "@tamagui-extras/form@npm:^1.16.0":
   version: 1.16.0
   resolution: "@tamagui-extras/form@npm:1.16.0"
@@ -10494,7 +10517,7 @@ __metadata:
     "@react-navigation/native": "npm:^6.1.6"
     "@tamagui/babel-plugin": "npm:^1.89.8"
     "@tamagui/lucide-icons": "npm:^1.89.8"
-    "@uidu/native": "npm:0.0.25"
+    "@uidu/native": "npm:0.0.28"
     "@uidu/native-config": "npm:0.0.8"
     babel-plugin-module-resolver: "npm:^4.1.0"
     babel-plugin-transform-inline-environment-variables: "npm:^0.4.4"
@@ -10709,7 +10732,38 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/native@npm:0.0.25, @uidu/native@workspace:packages/ui":
+"@uidu/native@npm:0.0.28":
+  version: 0.0.28
+  resolution: "@uidu/native@npm:0.0.28"
+  dependencies:
+    "@datepicker-react/hooks": "npm:^2.8.4"
+    "@tamagui-extras/core": "npm:^1.11.0"
+    "@tamagui-extras/form": "npm:^1.16.0"
+    "@tamagui/linear-gradient": "npm:^1.91.3"
+    "@tamagui/lucide-icons": "npm:^1.89.8"
+    "@uidu/native-config": "npm:0.0.8"
+    date-fns: "npm:^3.4.0"
+    dayjs: "npm:1.11.10"
+    downshift: "npm:^8.3.1"
+    expo-image-picker: "npm:14.7.1"
+    expo-router: "npm:3.4.7"
+    react-hook-form: "npm:^7.49.3"
+    react-native-context-menu-view: "npm:^1.15.0"
+    react-native-gesture-handler: "npm:~2.12.0"
+    react-native-parsed-text: "npm:^0.0.22"
+    react-native-reanimated: "npm:~3.3.0"
+    react-native-safe-area-context: "npm:4.6.3"
+    react-native-svg: "npm:14.1.0"
+    react-use: "npm:^17.5.0"
+    tamagui: "npm:^1.89.8"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: f95cfc3b41b7c3d4953b57aff1e74ee6106ed90c2b8085e469cd694eea4528a4ad81a2248295cc2d766095ce9e3227954a367af595f3ab02d8b5791fc79453f9
+  languageName: node
+  linkType: hard
+
+"@uidu/native@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@uidu/native@workspace:packages/ui"
   dependencies:
@@ -13553,7 +13607,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.0.1, date-fns@npm:^2.30.0":
+"date-fns@npm:^2.0.1, date-fns@npm:^2.14.0, date-fns@npm:^2.30.0":
   version: 2.30.0
   resolution: "date-fns@npm:2.30.0"
   dependencies:
@@ -13569,7 +13623,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.8.15":
+"date-fns@npm:^3.4.0":
+  version: 3.6.0
+  resolution: "date-fns@npm:3.6.0"
+  checksum: cac35c58926a3b5d577082ff2b253612ec1c79eb6754fddef46b6a8e826501ea2cb346ecbd211205f1ba382ddd1f9d8c3f00bf433ad63cc3063454d294e3a6b8
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:1.11.10, dayjs@npm:^1.8.15":
   version: 1.11.10
   resolution: "dayjs@npm:1.11.10"
   checksum: 27e8f5bc01c0a76f36c656e62ab7f08c2e7b040b09e613cd4844abf03fb258e0350f0a83b02c887b84d771c1f11e092deda0beef8c6df2a1afbc3f6c1fade279
@@ -15465,6 +15526,26 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 1d6f8a337043f5f452d8201ba8f795d4057a83ef17ac0fc758adaaf8ffcc70c67a1eb1edfe8cb15df923d6e3dcbc91ad29ce7bfc4bcfd3a8e099d850df046c1d
+  languageName: node
+  linkType: hard
+
+"expo-image-loader@npm:~4.6.0":
+  version: 4.6.0
+  resolution: "expo-image-loader@npm:4.6.0"
+  peerDependencies:
+    expo: "*"
+  checksum: 02981667f03dc429cd9db37e0acc302e4a0c4bb5875dc087b1c26388ef64563481e52dddc1d42dd32794eb7051d1acf5bc0c078413469c29025a02d4d4af1154
+  languageName: node
+  linkType: hard
+
+"expo-image-picker@npm:14.7.1":
+  version: 14.7.1
+  resolution: "expo-image-picker@npm:14.7.1"
+  dependencies:
+    expo-image-loader: "npm:~4.6.0"
+  peerDependencies:
+    expo: "*"
+  checksum: 43a139c2f52bc71ca9e5c520fe70ef3a2af229118d1cf4485947841f6e464440f974c9c07fc250fe7dd085fc63a812829c2f29e4ee98569af9be8dcecbd46162
   languageName: node
   linkType: hard
 
@@ -22902,7 +22983,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.10, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.10, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.7.x, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -23391,6 +23472,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-context-menu-view@npm:^1.15.0":
+  version: 1.15.0
+  resolution: "react-native-context-menu-view@npm:1.15.0"
+  peerDependencies:
+    react: ^16.8.1 || ^17.0.0 || ^18.0.0
+    react-native: ">=0.60.0-rc.0 <1.0.x"
+  checksum: 49fce7b6c769331b23b69b227358137c7bbbb39a3322d5330b5f493296839399832173f38aead22e417dee717dc7708b605c6c10fa549df87d09b82eb2e7e9cf
+  languageName: node
+  linkType: hard
+
 "react-native-gesture-handler@npm:~2.12.0":
   version: 2.12.1
   resolution: "react-native-gesture-handler@npm:2.12.1"
@@ -23404,6 +23495,18 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: b83590b50a113fae6afcee580f5019c29b6a7da144dd8c11ea8676ec580a5dc5776d595d88745989da5918669279f577cd2cd8ae02d43ea04a0d34efc6a1553b
+  languageName: node
+  linkType: hard
+
+"react-native-parsed-text@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "react-native-parsed-text@npm:0.0.22"
+  dependencies:
+    prop-types: "npm:^15.7.x"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 0ce25087c4a1041441ba680b79bd994de86d77a73cc733ab22b26f21c36be238f510b32eecd79fc099575615fa8fad9f600a495391cdaaf7b84bc6342f04f27b
   languageName: node
   linkType: hard
 

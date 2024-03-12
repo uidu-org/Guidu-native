@@ -1,6 +1,6 @@
 import { ComponentType, useId, useState } from 'react'
 import { SizableStack, SizeTokens, XStack, XStackProps } from 'tamagui'
-import { IconProps, StarFill } from '../../content/icons'
+import { IconProps, StarFill } from '../content/icons'
 import { GFormFieldContainer } from './GuiFormFieldContainer'
 import { GuiFormContainerBaseTypes } from './formContainerTypes'
 

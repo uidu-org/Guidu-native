@@ -6797,7 +6797,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui-extras/core@npm:1.11.0":
+"@tamagui-extras/core@npm:1.11.0, @tamagui-extras/core@npm:^1.11.0":
   version: 1.11.0
   resolution: "@tamagui-extras/core@npm:1.11.0"
   peerDependencies:
@@ -9760,6 +9760,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/native@workspace:packages/ui"
   dependencies:
+    "@tamagui-extras/core": "npm:^1.11.0"
     "@tamagui-extras/form": "npm:^1.16.0"
     "@tamagui/build": "npm:^1.89.8"
     "@tamagui/linear-gradient": "npm:^1.91.3"

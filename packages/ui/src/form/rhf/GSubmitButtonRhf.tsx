@@ -1,6 +1,6 @@
 import { FieldValues, UseFormReturn, useFormContext } from 'react-hook-form'
 import { ButtonProps } from 'tamagui'
-import { GuiButton } from '../../../base'
+import { GuiButton } from '../../base'
 
 export type GuiButtonRhfProps<T extends FieldValues> = ButtonProps & {
   onSubmit: (data: T, context: UseFormReturn<T, any>) => void | Promise<void>

@@ -1,6 +1,8 @@
-import React, { useCallback, useState } from 'react';
-import { ActivityIndicator, Text, TouchableOpacity } from 'react-native';
-import type { ILoadEarlierProps } from './types/Chatty.types';
+import React, { useState } from 'react';
+import { useCallback } from 'react';
+import { ActivityIndicator } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
+import type { ILoadEarlierProps } from 'src/types/Chatty.types';
 
 function _LoadEarlier(props: ILoadEarlierProps) {
   const { onLoadEarlier } = props;
@@ -19,13 +21,13 @@ function _LoadEarlier(props: ILoadEarlierProps) {
         props?.buttonContainerStyle
           ? props.buttonContainerStyle
           : {
-            padding: 10,
-            backgroundColor: !fetchingEarlier ? '#eb8334' : undefined,
-            maxWidth: 100,
-            margin: 10,
-            borderRadius: 10,
-            alignSelf: 'center',
-          }
+              padding: 10,
+              backgroundColor: !fetchingEarlier ? '#eb8334' : undefined,
+              maxWidth: 100,
+              margin: 10,
+              borderRadius: 10,
+              alignSelf: 'center',
+            }
       }
     >
       <Text style={props?.labelStyle ? props.labelStyle : { color: '#fff' }}>

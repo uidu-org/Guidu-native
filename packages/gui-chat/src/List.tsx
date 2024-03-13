@@ -25,6 +25,8 @@ import { FAB, IFabRef } from './components/FAB';
 import { LoadEarlier } from './components/LoadEarlier';
 import { RenderDate } from './components/RenderDate';
 import { TypingStatus } from './components/TypingStatus';
+import { useHaptic } from './hooks/useHaptic';
+import { usePrevious } from './hooks/usePrevious';
 import {
   HapticType,
   IListProps,
@@ -32,9 +34,7 @@ import {
   ITypingStatusRef,
   LayoutType,
   ListRef,
-} from './components/types/Chatty.types';
-import { useHaptic } from './hooks/useHaptic';
-import { usePrevious } from './hooks/usePrevious';
+} from './types/Chatty.types';
 import { ChatBubbleEmitter } from './utils/eventEmitter';
 import { wait } from './utils/helpers';
 
@@ -224,7 +224,7 @@ in the current messages. If it is, then it will not scroll to the bottom. */
           if (
             (!isFirstMessage &&
               dayjs(currentMessage.createdAt).date() !==
-              dayjs(prevMessage.createdAt).date()) ||
+                dayjs(prevMessage.createdAt).date()) ||
             isFirstMessage
           ) {
             return LayoutType.Dated;

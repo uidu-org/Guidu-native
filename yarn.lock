@@ -1849,6 +1849,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@datepicker-react/hooks@npm:^2.8.4":
+  version: 2.8.4
+  resolution: "@datepicker-react/hooks@npm:2.8.4"
+  dependencies:
+    date-fns: "npm:^2.14.0"
+  peerDependencies:
+    react: ">= 16.8.5"
+  checksum: 1f4301bce7c32efa35b982e6697718a541e1ecb4d636d5f27240ea16780ef9e5f04e59083a364f9e4f79a5fd20a13774128bcb5e9b9a3bee0773e74d1a04277b
+  languageName: node
+  linkType: hard
+
 "@effect-ts/core@npm:^0.60.5":
   version: 0.60.5
   resolution: "@effect-ts/core@npm:0.60.5"
@@ -9575,12 +9586,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@uidu/native@workspace:packages/ui"
   dependencies:
+    "@datepicker-react/hooks": "npm:^2.8.4"
     "@tamagui-extras/core": "npm:^1.11.0"
     "@tamagui-extras/form": "npm:^1.16.0"
     "@tamagui/build": "npm:^1.89.8"
     "@tamagui/linear-gradient": "npm:^1.91.3"
     "@tamagui/lucide-icons": "npm:^1.89.8"
     "@uidu/native-config": "npm:0.0.8"
+    date-fns: "npm:^3.4.0"
     dayjs: "npm:1.11.10"
     downshift: "npm:^8.3.1"
     expo-image-picker: "npm:14.7.1"
@@ -9590,6 +9603,7 @@ __metadata:
     react-native: "npm:0.72.10"
     react-native-context-menu-view: "npm:^1.15.0"
     react-native-gesture-handler: "npm:~2.12.0"
+    react-native-modal-datetime-picker: "npm:^17.1.0"
     react-native-parsed-text: "npm:^0.0.22"
     react-native-reanimated: "npm:~3.3.0"
     react-native-safe-area-context: "npm:4.6.3"
@@ -12071,7 +12085,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.0.1, date-fns@npm:^2.30.0":
+"date-fns@npm:^2.0.1, date-fns@npm:^2.14.0, date-fns@npm:^2.30.0":
   version: 2.30.0
   resolution: "date-fns@npm:2.30.0"
   dependencies:
@@ -12084,6 +12098,13 @@ __metadata:
   version: 3.3.1
   resolution: "date-fns@npm:3.3.1"
   checksum: 98231936765dfb6fc6897676319b500a06a39f051b2c3ecbdd541a07ce9b1344b770277b8bfb1049fb7a2f70bf365ac8e6f1e2bb452b10e1a8101d518ca7f95d
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "date-fns@npm:3.4.0"
+  checksum: 38932c99ad28a69a18bd9e2331d0c86a46146d3e9efc92cbc612400a075785231c3271822948eb0377db738fa8a583aa4782d8246a939fe6f188727ea9323c29
   languageName: node
   linkType: hard
 
@@ -20877,6 +20898,18 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: b83590b50a113fae6afcee580f5019c29b6a7da144dd8c11ea8676ec580a5dc5776d595d88745989da5918669279f577cd2cd8ae02d43ea04a0d34efc6a1553b
+  languageName: node
+  linkType: hard
+
+"react-native-modal-datetime-picker@npm:^17.1.0":
+  version: 17.1.0
+  resolution: "react-native-modal-datetime-picker@npm:17.1.0"
+  dependencies:
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    "@react-native-community/datetimepicker": ">=6.7.0"
+    react-native: ">=0.65.0"
+  checksum: fcb20d62885b0a288719c21b731fb4129be9f5e3a78e0d9971bfcc8e6083164434da13ddab0079d0924074b3324f5ec7d664598127db5470b4eb7278960e01df
   languageName: node
   linkType: hard
 

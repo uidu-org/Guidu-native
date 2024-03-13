@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 import { Swipeable } from 'react-native-gesture-handler';
 import { ChatBubble } from './ChatBubble';
 import { PropsContext } from './Chatty';
-import type { ISwipeableBubble } from './components/types/Chatty.types';
+import type { ISwipeableBubble } from './types/Chatty.types';
 
 function _SwipeableBubble(props: ISwipeableBubble) {
   const { onReply, message, children } = props;

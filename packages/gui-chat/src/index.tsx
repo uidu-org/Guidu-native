@@ -1,4 +1,3 @@
 export { Chatty } from './Chatty';
-export { MessageStatus } from './components/types/Chatty.types';
 export { ChatEmitter } from './utils/eventEmitter';
-
+export { MessageStatus } from './types/Chatty.types';

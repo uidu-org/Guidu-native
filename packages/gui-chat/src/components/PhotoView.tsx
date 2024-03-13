@@ -1,7 +1,7 @@
 import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
-import { useCallback } from 'react';
-import { PhotoView as _PhotoView } from '../utils/photoView';
+import React, { useCallback } from 'react';
 import { videoRef } from '../utils/videoRenderer';
+import { PhotoView as _PhotoView } from '../utils/photoView';
 
 interface IProps {
   views: ViewSource[];

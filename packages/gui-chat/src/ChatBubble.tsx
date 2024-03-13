@@ -1,5 +1,4 @@
 import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
-import { GuiText, GuiView } from '@uidu/native';
 import dayjs from 'dayjs';
 import React, {
   useCallback,
@@ -14,8 +13,10 @@ import {
   ImageBackground,
   InteractionManager,
   StyleSheet,
+  Text,
   TouchableOpacity,
-  ViewStyle
+  View,
+  ViewStyle,
 } from 'react-native';
 import { PropsContext } from './Chatty';
 import { PhotoView } from './components/PhotoView';
@@ -24,11 +25,10 @@ import { UrlPreviewBubble } from './components/UrlPreviewBubble';
 import { VideoThumbnail } from './components/VideoThumbnail';
 import {
   IChatBubble,
-  IMessage,
   IUrlPreviewBubble,
   MediaType,
-  MessageStatus,
-} from './components/types/Chatty.types';
+  MessageStatus
+} from './types/Chatty.types';
 import { ChatEmitter } from './utils/eventEmitter';
 import { extractUrlFromString, fetchMetaData } from './utils/helpers';
 import {
@@ -39,7 +39,6 @@ import {
   URL_PATTERN_SHAPE,
   loadParsedText,
 } from './utils/patterns';
-import { ContextMenuWrapper } from './wrappers/ContextMenuWrapper';
 
 const ParsedText = loadParsedText();
 
@@ -190,25 +189,25 @@ function _ChatBubble(props: IChatBubble) {
         case MessageStatus.Sending:
           return (
             propsContext.bubbleProps?.tickProps?.sendingElement ?? (
-              <GuiText>🔄</GuiText>
+              <Text>🔄</Text>
             )
           );
 
         case MessageStatus.Sent:
           return (
-            propsContext.bubbleProps?.tickProps?.sentElement ?? <GuiText>✔</GuiText>
+            propsContext.bubbleProps?.tickProps?.sentElement ?? <Text>✔</Text>
           );
 
         case MessageStatus.Delivered:
           return (
             propsContext.bubbleProps?.tickProps?.deliveredElement ?? (
-              <GuiText>☑</GuiText>
+              <Text>☑</Text>
             )
           );
 
         case MessageStatus.Read:
           return (
-            propsContext.bubbleProps?.tickProps?.readElement ?? <GuiText>✅</GuiText>
+            propsContext.bubbleProps?.tickProps?.readElement ?? <Text>✅</Text>
           );
       }
     }
@@ -224,8 +223,8 @@ function _ChatBubble(props: IChatBubble) {
 
   const renderFooter = useCallback(() => {
     return (
-      <GuiView style={styles.bubbleFooter}>
-        <GuiText
+      <View style={styles.bubbleFooter}>
+        <Text
           style={[
             styles.date,
             propsContext?.bubbleProps?.dateStyle &&
@@ -233,9 +232,9 @@ function _ChatBubble(props: IChatBubble) {
           ]}
         >
           {createdAt}
-        </GuiText>
+        </Text>
         {renderTicks()}
-      </GuiView>
+      </View>
     );
   }, [
     createdAt,
@@ -250,8 +249,8 @@ function _ChatBubble(props: IChatBubble) {
     if (message?.me) {
       return (
         <>
-          <GuiView style={[styles.rightArrow, bubbleBackgroundColor]}></GuiView>
-          <GuiView
+          <View style={[styles.rightArrow, bubbleBackgroundColor]}></View>
+          <View
             style={[
               styles.rightArrowOverlap,
               {
@@ -260,14 +259,14 @@ function _ChatBubble(props: IChatBubble) {
                   '#fff',
               },
             ]}
-          ></GuiView>
+          ></View>
         </>
       );
     } else {
       return (
         <>
-          <GuiView style={[styles.leftArrow, bubbleBackgroundColor]}></GuiView>
-          <GuiView
+          <View style={[styles.leftArrow, bubbleBackgroundColor]}></View>
+          <View
             style={[
               styles.leftArrowOverlap,
               {
@@ -276,7 +275,7 @@ function _ChatBubble(props: IChatBubble) {
                   '#fff',
               },
             ]}
-          ></GuiView>
+          ></View>
         </>
       );
     }
@@ -314,15 +313,15 @@ function _ChatBubble(props: IChatBubble) {
       });
 
       return (
-        <GuiView style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
           {message?.media.map((media, index) => {
             if (index < 3) {
               return (
                 <TouchableOpacity onPress={() => setShowMedia(true)}>
                   {media.type === MediaType.Image && mediaLoaded && (
-                    <GuiView>
+                    <View>
                       <Image source={{ uri: media.uri }} style={styles.media} />
-                    </GuiView>
+                    </View>
                   )}
                   {media.type === MediaType.Video && (
                     <VideoThumbnail media={media} />
@@ -343,13 +342,13 @@ function _ChatBubble(props: IChatBubble) {
                   borderRadius: 15,
                 }}
               >
-                <GuiView style={styles.backgroundOverlay}>
-                  <GuiText
+                <View style={styles.backgroundOverlay}>
+                  <Text
                     style={{ color: '#fff', textAlign: 'center', fontSize: 20 }}
                   >
                     + {message.media.length - 3}
-                  </GuiText>
-                </GuiView>
+                  </Text>
+                </View>
               </ImageBackground>
             </TouchableOpacity>
           )}
@@ -361,7 +360,7 @@ function _ChatBubble(props: IChatBubble) {
               onRequestClose={() => setShowMedia(false)}
             />
           )}
-        </GuiView>
+        </View>
       );
     }
 
@@ -371,14 +370,14 @@ function _ChatBubble(props: IChatBubble) {
   const renderUrlPreview = useMemo(() => {
     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
       return (
-        <GuiView style={{ marginTop: 10 }}>
+        <View style={{ marginTop: 10 }}>
           <UrlPreviewBubble
             title={urlPreviewData.title}
             description={urlPreviewData.description}
             image={urlPreviewData.image}
             url={urlPreviewData.url}
           />
-        </GuiView>
+        </View>
       );
     }
 
@@ -386,96 +385,90 @@ function _ChatBubble(props: IChatBubble) {
   }, [message?.repliedTo, showUrlPreview, urlPreviewData]);
 
   return (
-    <GuiView style={[styles.wrapper, bubbleAlignment]}>
+    <View style={[styles.wrapper, bubbleAlignment]}>
       {propsContext.bubbleProps?.trailingAccessory && message?.me && (
-        <GuiView>{propsContext.bubbleProps.trailingAccessory}</GuiView>
+        <View>{propsContext.bubbleProps.trailingAccessory}</View>
       )}
 
       {propsContext.bubbleProps?.showAvatars?.visible && !message?.me && (
         <Image
           source={
-            message?.user.avatar ?? {
-              uri: "https://cdn.iconscout.com/icon/free/png-256/free-avatar-372-456324.png"
-            }
+            message?.user.avatar ?? ""
           }
           style={[styles.avatar, avatarSize]}
         />
       )}
 
-      <ContextMenuWrapper message={message as IMessage}>
-        <GuiView
-          style={[
-            bubbleBackgroundColor,
-            styles.container,
-            propsContext.bubbleProps?.containerStyle,
-            { padding: message?.repliedTo ? 5 : 15 },
-          ]}
-        >
-          {children ? (
-            children
-          ) : (
-            <>
-              {message?.repliedTo && (
-                <ReplyingTo
-                  username={message?.repliedTo?.user.username}
-                  text={message?.repliedTo.text}
-                  messageId={message?.repliedTo.id}
-                />
-              )}
+      <View
+        style={[
+          bubbleBackgroundColor,
+          styles.container,
+          propsContext.bubbleProps?.containerStyle,
+          { padding: message?.repliedTo ? 5 : 15 },
+        ]}
+      >
+        {children ? (
+          children
+        ) : (
+          <>
+            {message?.repliedTo && (
+              <ReplyingTo
+                username={message?.repliedTo?.user.username}
+                text={message?.repliedTo.text}
+                messageId={message?.repliedTo.id}
+              />
+            )}
 
-              {propsContext?.enablePatterns && ParsedText ? (
-                <>
-                  {renderMedia()}
+            {propsContext?.enablePatterns && ParsedText ? (
+              <>
+                {renderMedia()}
 
-                  <ParsedText
-                    parse={messagePatterns}
-                    style={
-                      propsContext?.bubbleProps?.labelStyle &&
-                      propsContext.bubbleProps?.labelStyle(message?.me ?? false)
-                    }
-                  >
-                    {message?.text}
-                  </ParsedText>
-                  {renderUrlPreview}
-                  {renderFooter()}
-                </>
-              ) : (
-                <GuiView>
-                  {renderMedia()}
+                <ParsedText
+                  parse={messagePatterns}
+                  style={
+                    propsContext?.bubbleProps?.labelStyle &&
+                    propsContext.bubbleProps?.labelStyle(message?.me ?? false)
+                  }
+                >
+                  {message?.text}
+                </ParsedText>
+                {renderUrlPreview}
+                {renderFooter()}
+              </>
+            ) : (
+              <View>
+                {renderMedia()}
 
-                  <GuiText
-                    style={
-                      propsContext?.bubbleProps?.labelStyle &&
-                      propsContext.bubbleProps?.labelStyle(message?.me ?? false)
-                    }
-                  >
-                    {message?.text}
-                  </GuiText>
-                  {renderUrlPreview}
-                  {renderFooter()}
-                </GuiView>
-              )}
-            </>
-          )}
-          {renderCornerRounding()}
-        </GuiView>
-      </ContextMenuWrapper>
+                <Text
+                  style={
+                    propsContext?.bubbleProps?.labelStyle &&
+                    propsContext.bubbleProps?.labelStyle(message?.me ?? false)
+                  }
+                >
+                  {message?.text}
+                </Text>
+                {renderUrlPreview}
+                {renderFooter()}
+              </View>
+            )}
+          </>
+        )}
+        {renderCornerRounding()}
+      </View>
 
       {propsContext.bubbleProps?.showAvatars?.visible && message?.me && (
         <Image
           source={
-            message?.user.avatar ?? {
-              uri: "https://cdn.iconscout.com/icon/free/png-256/free-avatar-372-456324.png"
-            }
+            message?.user.avatar ?? ""
           }
           style={[styles.avatarMe, avatarSize]}
         />
       )}
 
       {propsContext.bubbleProps?.trailingAccessory && !message?.me && (
-        <GuiView>{propsContext.bubbleProps.trailingAccessory}</GuiView>
+        <View>{propsContext.bubbleProps.trailingAccessory}</View>
       )}
-    </GuiView>
+    </View>
   );
 }
 

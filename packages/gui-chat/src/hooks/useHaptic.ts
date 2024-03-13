@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import type { HapticType } from '../components/types/Chatty.types';
+import type { HapticType } from '../types/Chatty.types';
 import { triggerHaptic } from '../utils/hapticEngine';
 
 /**

@@ -1,15 +1,15 @@
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   Image,
   ImageBackground,
   InteractionManager,
   StyleSheet,
-  TouchableWithoutFeedback,
-  View
+  View,
 } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import type { IMedia } from '../types/Chatty.types';
 import { Video } from './Video';
-import type { IMedia } from './types/Chatty.types';
 
 interface IProps {
   media: IMedia;
@@ -64,12 +64,10 @@ export function VideoThumbnail({ media, isSelected }: IProps) {
         imageStyle={styles.contentContainer}
       >
         <View style={styles.overlay} />
-        <Image
-          source={{
-            uri: "https://w7.pngwing.com/pngs/244/695/png-transparent-play-icon-video-player-information-play-icon-miscellaneous-angle-text-thumbnail.png"
-          }}
+        {/* <Image
+          source={""}
           style={!isSelected ? styles.image : styles.isSelectedImage}
-        />
+        /> */}
       </ImageBackground>
     </TouchableWithoutFeedback>
   );

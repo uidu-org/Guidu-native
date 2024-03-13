@@ -1,7 +1,11 @@
-import { GFormRhfProvider, GInputRhf, LmDateSelectionRhf } from '@uidu/native';
-import { YStack } from 'tamagui';
+import {
+  GFormRhfProvider,
+  GSubmitButtonRhf,
+  GuiDateRangePickerRhf,
+  YStack,
+} from '@uidu/native';
 
-export default function DocsDatePage() {
+export default function DateDocsPage() {
   return (
     <GFormRhfProvider
       defaultValues={{
@@ -9,16 +13,29 @@ export default function DocsDatePage() {
       }}
     >
       <YStack space>
-        <LmDateSelectionRhf name={'birthday'} label={'Birthday'} required />
+        {/* <GuiDateSelectionRhf name={'birthday'} label={'Birthday'} required />
+                <GuiDateSelectionRhf name={'preselect'} label={'Preselect'} required /> */}
+        <GuiDateRangePickerRhf
+          start={'rangeReq'}
+          end={'rangeEndReq'}
+          label={'Range Required'}
+          required
+          labelInline
+        />
+        <GuiDateRangePickerRhf
+          start={'rangeStartP'}
+          end={'rangeEndP'}
+          label={'Range Preselect'}
+          labelInline
+        />
+        <GSubmitButtonRhf
+          onSubmit={(form) => {
+            console.log(form);
+          }}
+        >
+          Submit
+        </GSubmitButtonRhf>
       </YStack>
-
-      <GInputRhf name={'input'} label={'Input Field'} />
-      <LmDatepickerRhf
-        name={'required'}
-        label={'Required'}
-        required
-        fullWidth
-      />
     </GFormRhfProvider>
   );
 }

@@ -1,14 +1,19 @@
-import { useDay } from '@datepicker-react/hooks'
-import { useRef } from 'react'
-import { SizableText, Stack } from 'tamagui'
-import { useDatepickerContext } from './DatepickerProvider'
+import { useDay } from '@datepicker-react/hooks';
+import { useRef } from 'react';
+import { SizableText, Stack } from 'tamagui';
+import { useDatepickerContext } from './DatepickerProvider';
 
-export type LmDayProps = {
-  date: Date
-  dayLabel: string
-}
+export type GuiDayProps = {
+  date: Date;
+  dayLabel: string;
+};
 
-const getColor = (isSelected: boolean, isSelectedStartOrEnd: boolean, isWithinHoverRange: boolean, isDisabled: boolean) => {
+const getColor = (
+  isSelected: boolean,
+  isSelectedStartOrEnd: boolean,
+  isWithinHoverRange: boolean,
+  isDisabled: boolean
+) => {
   return ({
     selectedFirstOrLastColor,
     normalColor,
@@ -16,29 +21,29 @@ const getColor = (isSelected: boolean, isSelectedStartOrEnd: boolean, isWithinHo
     rangeHoverColor,
     disabledColor,
   }: {
-    selectedFirstOrLastColor: string,
-    normalColor: string,
-    selectedColor: string,
-    rangeHoverColor: string,
-    disabledColor: string,
+    selectedFirstOrLastColor: string;
+    normalColor: string;
+    selectedColor: string;
+    rangeHoverColor: string;
+    disabledColor: string;
   }) => {
     if (isSelectedStartOrEnd) {
-      return selectedFirstOrLastColor
+      return selectedFirstOrLastColor;
     } else if (isSelected) {
-      return selectedColor
+      return selectedColor;
     } else if (isWithinHoverRange) {
-      return rangeHoverColor
+      return rangeHoverColor;
     } else if (isDisabled) {
-      return disabledColor
+      return disabledColor;
     } else {
-      return normalColor
+      return normalColor;
     }
-  }
-}
+  };
+};
 
-export function GuiDay({ dayLabel, date }: LmDayProps) {
-  const dayRef = useRef(null)
-  const datepickerContext = useDatepickerContext()
+export function GuiDay({ dayLabel, date }: GuiDayProps) {
+  const dayRef = useRef(null);
+  const datepickerContext = useDatepickerContext();
   const {
     isSelected,
     isSelectedStartOrEnd,
@@ -50,13 +55,18 @@ export function GuiDay({ dayLabel, date }: LmDayProps) {
     date,
     dayRef,
     ...datepickerContext,
-  })
+  });
 
   if (!dayLabel) {
-    return <Stack display={'flex'} flex={1} />
+    return <Stack display={'flex'} flex={1} />;
   }
 
-  const getColorFn = getColor(isSelected, isSelectedStartOrEnd, isWithinHoverRange, disabledDate)
+  const getColorFn = getColor(
+    isSelected,
+    isSelectedStartOrEnd,
+    isWithinHoverRange,
+    disabledDate
+  );
 
   return (
     <SizableText
@@ -78,5 +88,5 @@ export function GuiDay({ dayLabel, date }: LmDayProps) {
     >
       {dayLabel}
     </SizableText>
-  )
+  );
 }

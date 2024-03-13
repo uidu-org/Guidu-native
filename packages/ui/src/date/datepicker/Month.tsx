@@ -1,4 +1,4 @@
-import { UseMonthProps, useMonth } from '@datepicker-react/hooks'
+import { UseMonthProps, useMonth } from '@datepicker-react/hooks';
 import {
   ArrowLeftRegular,
   ArrowRightRegular,
@@ -6,17 +6,17 @@ import {
   CaretDoubleRightRegular,
   CaretLeftRegular,
   CaretRightRegular,
-} from '@tamagui-extras/core'
-import { Button, H5, H6, SizableText, Stack, XStack } from 'tamagui'
-import { useDatepickerContext } from './DatepickerProvider'
+} from '@tamagui-extras/core';
+import { Button, H5, H6, SizableText, Stack, XStack } from 'tamagui';
+import { useDatepickerContext } from './DatepickerProvider';
 
 export type GuiMonthProps = UseMonthProps & {
-  onPrevious?: () => void
-  onNext?: () => void
-  monthsCount: number
-  isFirst: boolean
-  isLast: boolean
-}
+  onPrevious?: () => void;
+  onNext?: () => void;
+  monthsCount: number;
+  isFirst: boolean;
+  isLast: boolean;
+};
 
 export function GuiMonth({
   onPrevious,
@@ -29,9 +29,9 @@ export function GuiMonth({
   const { days, weekdayLabels, monthLabel } = useMonth({
     ...props,
     monthLabelFormat(date: Date) {
-      return new Intl.DateTimeFormat(undefined, { month: 'long' }).format(date)
+      return new Intl.DateTimeFormat(undefined, { month: 'long' }).format(date);
     },
-  })
+  });
   const {
     goToPreviousYear,
     goToPreviousMonths,
@@ -39,9 +39,9 @@ export function GuiMonth({
     goToNextMonthsByOneMonth,
     goToNextMonths,
     goToNextYear,
-  } = useDatepickerContext()
+  } = useDatepickerContext();
 
-  const { year } = props
+  const { year } = props;
 
   return (
     <Stack width={250}>
@@ -81,12 +81,18 @@ export function GuiMonth({
         />
       </XStack>
 
-      <XStack justifyContent={'space-between'} alignItems={'center'} height={40}>
+      <XStack
+        justifyContent={'space-between'}
+        alignItems={'center'}
+        height={40}
+      >
         <Button
           focusable={false}
           opacity={isFirst ? undefined : 0}
           disabled={!isFirst}
-          onPress={monthsCount > 1 ? goToPreviousMonths : goToPreviousMonthsByOneMonth}
+          onPress={
+            monthsCount > 1 ? goToPreviousMonths : goToPreviousMonthsByOneMonth
+          }
           icon={<ArrowLeftRegular />}
           circular
           chromeless
@@ -119,12 +125,18 @@ export function GuiMonth({
       <XStack display={'flex'} flexWrap={'wrap'} width={250}>
         {days.map((day, index) => {
           if (typeof day === 'object') {
-            return <LmDay dayLabel={day.dayLabel} date={day.date} key={day.date.toString()} />
+            return (
+              <GuiDay
+                dayLabel={day.dayLabel}
+                date={day.date}
+                key={day.date.toString()}
+              />
+            );
           }
-          return <Stack key={index} width={`${100 / 7}%`} />
+          return <Stack key={index} width={`${100 / 7}%`} />;
         })}
       </XStack>
       <XStack display={'flex'}></XStack>
     </Stack>
-  )
+  );
 }

@@ -1,9 +1,12 @@
-import { Controller, FieldValues } from 'react-hook-form'
-import { GuiRhfProps } from '../../../form'
-import { LmDateSelection, LmDateSelectionProps } from '../dateSelection/DateSelection'
+import { Controller, FieldValues } from 'react-hook-form';
+import { GuiRhfProps } from '../../../form';
+import {
+  GuiDateSelection,
+  GuiDateSelectionProps,
+} from '../dateSelection/DateSelection';
 
-
-export type GuiDateSelectionRhfProps<T extends FieldValues> = GuiRhfProps<T> & LmDateSelectionProps
+export type GuiDateSelectionRhfProps<T extends FieldValues> = GuiRhfProps<T> &
+  GuiDateSelectionProps;
 
 export function GuiDateSelectionRhf<T extends FieldValues>({
   name,
@@ -13,7 +16,7 @@ export function GuiDateSelectionRhf<T extends FieldValues>({
   ...rest
 }: GuiDateSelectionRhfProps<T>) {
   if (rest.required) {
-    rules.required = 'This field is required'
+    rules.required = 'This field is required';
   }
   return (
     <Controller
@@ -23,15 +26,15 @@ export function GuiDateSelectionRhf<T extends FieldValues>({
       rules={rules}
       render={({ field: { onChange, name, value }, fieldState: { error } }) => {
         return (
-          <LmDateSelection
+          <GuiDateSelection
             {...rest}
             value={value}
             onChange={onChange}
             error={!!error}
             helperText={error ? error.message : rest.helperText}
           />
-        )
+        );
       }}
     />
-  )
+  );
 }

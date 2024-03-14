@@ -67,11 +67,15 @@ export function GuiDay({ dayLabel, date }: GuiDayProps) {
     isWithinHoverRange,
     disabledDate
   );
-
+  function swapOnClick<D>(d: D) {
+    //@ts-ignore
+    d.onPress = d.onClick;
+    return d;
+  }
   return (
     <SizableText
       ref={dayRef as any}
-      onPress={onClick as any}
+      {...swapOnClick(onClick)}
       onHoverIn={onMouseEnter as any}
       disabled={disabledDate}
       width={`${100 / 7}%`}

@@ -9,7 +9,7 @@ export default function MultiselectDocsPage() {
 
       <GuiControlMultiselect
         control={control}
-        items={items}
+        options={options}
         name="test"
         label="Fruits"
         onClick={() => {}}
@@ -30,27 +30,25 @@ export default function MultiselectDocsPage() {
   )
 }
 
-const items = [
+const options = [
+  { id: '1', label: 'The Shawshank Redemption', value: 'The Shawshank Redemption' },
+  { id: '2', label: 'The Godfather', value: 'The Godfather' },
+  { id: '3', label: 'The Godfather: Part II', value: 'The Godfather: Part II' },
+  { id: '4', label: 'The Dark Knight', value: 'The Dark Knight' },
+  { id: '5', label: '12 Angry Men', value: '12 Angry Men' },
+  { id: '6', label: "Schindler's List", value: "Schindler's List" },
+  { id: '7', label: 'Pulp Fiction', value: 'Pulp Fiction' },
   {
-    id: '1',
-    name: 'Banana',
+    id: '8',
+    label: 'The Lord of the Rings: The Return of the King',
+    value: 'The Lord of the Rings: The Return of the King',
   },
   {
-    id: '2',
-    name: 'Apple',
+    id: '9',
+    label: 'The Good, the Bad and the Ugly',
+    value: 'The Good, the Bad and the Ugly',
   },
-  {
-    id: '3',
-    name: 'Pear',
-  },
-  {
-    id: '4',
-    name: 'Watermelon',
-  },
+  { id: '10', label: 'Fight Club', value: 'Fight Club' },
 ]
-const initialItems = [
-  {
-    id: '4',
-    name: 'Watermelon',
-  },
-]
+
+const initialItems = [{ id: '10', label: 'Fight Club', value: 'Fight Club' }]

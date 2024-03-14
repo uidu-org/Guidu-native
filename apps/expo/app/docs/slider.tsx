@@ -1,4 +1,4 @@
-import { GuiSlider, GuiText, GuiView } from '@uidu/native'
+import { GuiSlider, GuiText, GuiView } from '@uidu/native';
 
 export default function SliderDocsPage() {
   return (
@@ -16,5 +16,5 @@ export default function SliderDocsPage() {
         </GuiSlider>
       </GuiView>
     </GuiView>
-  )
+  );
 }

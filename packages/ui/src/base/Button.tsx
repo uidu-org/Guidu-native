@@ -1,4 +1,4 @@
-import { Button, GetProps, styled } from 'tamagui'
+import { Button, GetProps, styled } from 'tamagui';
 
 export const GuiButton = styled(Button, {
   name: 'GuiButton',
@@ -14,6 +14,6 @@ export const GuiButton = styled(Button, {
       },
     },
   } as const,
-})
+});
 
-export type GuiButtonProps = GetProps<typeof GuiButton>
+export type GuiButtonProps = GetProps<typeof GuiButton>;

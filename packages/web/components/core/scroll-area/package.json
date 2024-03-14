@@ -1,0 +1,21 @@
+{
+  "name": "@uidu/scroll-area-ui",
+  "version": "0.0.1",
+  "main": "dist/uidu-scroll-area-ui.cjs.js",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@radix-ui/react-scroll-area": "1.0.5",
+    "@uidu/lib": "0.0.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

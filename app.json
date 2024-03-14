@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "uidu-ui-monorepo",
+    "slug": "uidu-ui-monorepo",
+    "version": "1.0.0",
+    "sdkVersion": "49.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android": {
+      "package": "com.flavio_scimeca.uiduuimonorepo"
+    },
+    "ios": {
+      "bundleIdentifier": "a"
+    }
+  }
+}

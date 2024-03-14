@@ -3,7 +3,7 @@ module.exports = function (api) {
   return {
     presets: [['babel-preset-expo', { jsxRuntime: 'automatic' }]],
     plugins: [
-      require.resolve('expo-router/babel'),
+      // require.resolve('expo-router/babel'),
       'react-native-reanimated/plugin',
       [
         require.resolve('babel-plugin-module-resolver'),
@@ -11,8 +11,8 @@ module.exports = function (api) {
           root: ['../..'],
           alias: {
             // define aliases to shorten the import paths
-            app: '../../packages/app',
-            '@uidu/native': '../../packages/ui',
+            // app: '../../packages/app',
+            // '@uidu/native': '../../packages/ui',
           },
           extensions: ['.js', '.jsx', '.tsx', '.ios.js', '.android.js'],
         },

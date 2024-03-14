@@ -1,4 +1,4 @@
-import { GuiInput, GuiText, GuiView } from '@uidu/native'
+import { GuiInput, GuiText, GuiView } from '@uidu/native';
 
 export default function InputDocsPage() {
   return (
@@ -7,5 +7,5 @@ export default function InputDocsPage() {
 
       <GuiInput w={'$10'} />
     </GuiView>
-  )
+  );
 }

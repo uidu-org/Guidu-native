@@ -1,3 +1,3 @@
-import { CustomSheet as GuiSheet } from './Sheet'
+import { GuiSheet } from './Sheet'
 
 export { GuiSheet }

@@ -1,4 +1,4 @@
-import { GuiText, GuiView } from '@uidu/native'
+import { GuiText, GuiView } from '@uidu/native';
 
 export default function ViewDocsPage() {
   return (
@@ -12,5 +12,5 @@ export default function ViewDocsPage() {
         </GuiView>
       </GuiView>
     </GuiView>
-  )
+  );
 }

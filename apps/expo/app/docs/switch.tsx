@@ -1,4 +1,4 @@
-import { GuiLabel, GuiSwitch, GuiText, GuiView, Separator, XStack } from '@uidu/native'
+import { GuiLabel, GuiSwitch, GuiText, GuiView, Separator, XStack } from '@uidu/native';
 
 export default function SwitchDocsPage() {
   return (
@@ -44,5 +44,5 @@ export default function SwitchDocsPage() {
         </XStack>
       </GuiView>
     </GuiView>
-  )
+  );
 }

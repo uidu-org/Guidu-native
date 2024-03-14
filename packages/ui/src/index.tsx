@@ -1,29 +1,12 @@
 export { config } from '@uidu/native-config'
 export * from 'tamagui'
-export { GuiAvatar } from './base/Avatar'
-export type { GuiAvatarProps } from './base/Avatar'
-export { GuiButton } from './base/Button'
-export type { GuiButtonProps } from './base/Button'
-export { GuiCard } from './base/Card'
-export type { GuiCardProps } from './base/Card'
-export { GuiInput } from './base/Input'
-export { GuiLabel } from './base/Label'
-export { GuiSizableText } from './base/SizableText'
-export type { GuiSizableTextProps } from './base/SizableText'
-export { GuiSlider } from './base/Slider'
-export type { GuiSliderProps } from './base/Slider'
-export { GuiSuspendedView } from './base/SuspendedView'
-export { GuiSwitch } from './base/Switch'
-export type { GuiSwitchProps } from './base/Switch'
-export { GuiText } from './base/Text'
-export { GuiTextArea } from './base/Textarea'
-export { GuiView } from './base/View'
-
-export { GuiControlInput } from './fields/InputControl'
-export { GuiControlMultiselect } from './fields/MultiselectControl'
-export { GuiControlSelect } from './fields/SelectControl'
-export { GuiControlTextarea } from './fields/TextAreaControl'
+export * from "./base"
+export * from "./fields"
+export * from "./navigation"
+export { type Route } from "./types"
 
 export { GuiDialog, GuiDialogTitle, GuiDialogueDescription } from './widget/Dialog/Dialog'
-
 export { GuiSheet } from './widget/Sheet/Sheet'
+
+
+

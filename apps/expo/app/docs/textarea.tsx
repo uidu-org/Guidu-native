@@ -1,4 +1,4 @@
-import { GuiText, GuiTextArea, GuiView } from '@uidu/native'
+import { GuiText, GuiTextArea, GuiView } from '@uidu/native';
 
 export default function TextareaDocsPage() {
   return (
@@ -7,5 +7,5 @@ export default function TextareaDocsPage() {
 
       <GuiTextArea w={'$20'} />
     </GuiView>
-  )
+  );
 }

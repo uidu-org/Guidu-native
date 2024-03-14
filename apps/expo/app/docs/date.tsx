@@ -1,36 +1,23 @@
-import { GFormRhfProvider, GSubmitButtonRhf, GuiDateRangePickerRhf, YStack } from '@uidu/native'
+import { GFormRhfProvider, GuiDateRangePickerRhf } from '@uidu/native'
 
 export default function DateDocsPage() {
     return (
         <GFormRhfProvider
             defaultValues={{
-                preselect: '1980-02-21',
+                single: '2022-12-24',
+                singleDate: new Date('2022-12-31'),
+                rangeStartP: '2022-12-24',
+                rangeEndP: '2022-12-31',
             }}
         >
-            <YStack space>
-                {/* <GuiDateSelectionRhf name={'birthday'} label={'Birthday'} required />
-                <GuiDateSelectionRhf name={'preselect'} label={'Preselect'} required /> */}
-                <GuiDateRangePickerRhf
-                    start={'rangeReq'}
-                    end={'rangeEndReq'}
-                    label={'Range Required'}
-                    required
-                    labelInline
-                />
-                <GuiDateRangePickerRhf
-                    start={'rangeStartP'}
-                    end={'rangeEndP'}
-                    label={'Range Preselect'}
-                    labelInline
-                />
-                <GSubmitButtonRhf
-                    onSubmit={(form) => {
-                        console.log(form)
-                    }}
-                >
-                    Submit
-                </GSubmitButtonRhf>
-            </YStack>
+            <GuiDateRangePickerRhf
+                start={'rangeReq'}
+                end={'rangeEndReq'}
+                label={'Range Required'}
+                required
+                labelInline
+            />
         </GFormRhfProvider>
+
     )
 }

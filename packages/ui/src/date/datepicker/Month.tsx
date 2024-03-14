@@ -52,7 +52,9 @@ export function GuiMonth({
           chromeless
           focusable={false}
           circular
-          onPress={() => goToPreviousYear(10)}
+          onPress={() => {
+            goToPreviousYear(10)
+          }}
           icon={<CaretDoubleLeftRegular />}
         />
         <Button

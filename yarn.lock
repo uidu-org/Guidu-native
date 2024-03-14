@@ -9333,7 +9333,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/gui-chat@npm:0.0.1, @uidu/gui-chat@workspace:packages/gui-chat":
+"@uidu/gui-chat@npm:0.0.2, @uidu/gui-chat@workspace:packages/gui-chat":
   version: 0.0.0-use.local
   resolution: "@uidu/gui-chat@workspace:packages/gui-chat"
   dependencies:
@@ -9364,9 +9364,10 @@ __metadata:
     "@expo/metro-config": "npm:~0.10.0"
     "@react-navigation/drawer": "npm:^6.6.6"
     "@react-navigation/native": "npm:^6.1.6"
+    "@tamagui-extras/form": "npm:^1.16.0"
     "@tamagui/babel-plugin": "npm:^1.89.8"
     "@tamagui/lucide-icons": "npm:^1.89.8"
-    "@uidu/gui-chat": "npm:0.0.1"
+    "@uidu/gui-chat": "npm:0.0.2"
     "@uidu/native": "npm:0.0.28"
     "@uidu/native-config": "npm:0.0.8"
     babel-plugin-module-resolver: "npm:^4.1.0"

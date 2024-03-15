@@ -54,6 +54,7 @@
     "check-dependency-version-consistency": "^4.1.0",
     "downshift": "^8.3.1",
     "eslint": "^8.56.0",
+    "eslint-config-uidu": "^0.9.2",
     "expo": "~49.0.18",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",

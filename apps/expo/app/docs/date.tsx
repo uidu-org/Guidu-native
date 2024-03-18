@@ -1,22 +1,39 @@
-import { GFormRhfProvider, GuiDateRangePickerRhf } from '@uidu/native';
+import {
+  Button,
+  GFormRhfProvider,
+  GuiDatepickerRhf,
+  XStack,
+  YStack,
+} from '@uidu/native';
 
 export default function DateDocsPage() {
   return (
-    <GFormRhfProvider
-      defaultValues={{
-        single: '2022-12-24',
-        singleDate: new Date('2022-12-31'),
-        rangeStartP: '2022-12-24',
-        rangeEndP: '2022-12-31',
-      }}
-    >
-      <GuiDateRangePickerRhf
-        start={'rangeReq'}
-        end={'rangeEndReq'}
-        label={'Range Required'}
-        required
-        labelInline
-      />
-    </GFormRhfProvider>
+    <>
+      <GFormRhfProvider
+        defaultValues={{
+          date: new Date(),
+        }}
+      >
+        {({ control, handleSubmit, reset }) => (
+          <YStack gap={'$3'}>
+            <GuiDatepickerRhf
+              control={control}
+              name="date"
+              selectedDate={[new Date()]}
+            />
+            <XStack gap={'$3'}>
+              <Button onPress={() => reset()}>Reset</Button>
+              <Button
+                onPress={handleSubmit((data) => {
+                  console.log(data);
+                })}
+              >
+                Submit
+              </Button>
+            </XStack>
+          </YStack>
+        )}
+      </GFormRhfProvider>
+    </>
   );
 }

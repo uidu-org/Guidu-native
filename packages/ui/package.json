@@ -1,6 +1,6 @@
 {
   "name": "@uidu/native",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "sideEffects": [
     "*.css"
   ],
@@ -11,6 +11,8 @@
   ],
   "dependencies": {
     "@datepicker-react/hooks": "^2.8.4",
+    "@react-native-community/datetimepicker": "^7.2.0",
+    "@rehookify/datepicker": "^6.6.0",
     "@tamagui-extras/core": "^1.11.0",
     "@tamagui-extras/form": "^1.16.0",
     "@tamagui/linear-gradient": "^1.91.3",

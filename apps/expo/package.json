@@ -12,6 +12,8 @@
   "dependencies": {
     "@babel/runtime": "^7.23.9",
     "@expo/config-plugins": "~7.2.2",
+    "@expo/webpack-config": "^19.0.0",
+    "@react-native-community/datetimepicker": "7.2.0",
     "@react-navigation/drawer": "^6.6.6",
     "@react-navigation/native": "^6.1.6",
     "@tamagui-extras/form": "^1.16.0",

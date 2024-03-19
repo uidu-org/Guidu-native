@@ -19,7 +19,7 @@
     "@tamagui-extras/form": "^1.16.0",
     "@tamagui/lucide-icons": "^1.89.8",
     "@uidu/gui-chat": "0.0.2",
-    "@uidu/native": "0.0.28",
+    "@uidu/native": "0.0.29",
     "@uidu/native-config": "0.0.8",
     "babel-plugin-module-resolver": "^4.1.0",
     "burnt": "^0.12.1",

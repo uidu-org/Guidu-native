@@ -19,7 +19,7 @@ export default function DateDocsPage() {
             <GuiDatepickerRhf
               control={control}
               name="date"
-              selectedDate={[new Date()]}
+              defaultDates={[new Date()]}
             />
             <XStack gap={'$3'}>
               <Button onPress={() => reset()}>Reset</Button>

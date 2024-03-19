@@ -3,13 +3,15 @@ import { Controller, FieldValues } from "react-hook-form";
 import { GuiDatePicker } from "./DatePicker";
 
 export interface DatepickerRhfProps extends FieldValues {
-  selectedDate?: Date[];
+  defaultDates?: Date[];
+  titleDialog?: string
 }
 
 export function GuiDatepickerRhf({
   name,
   control,
-  selectedDate,
+  defaultDates,
+  titleDialog,
   valueProps
 }: DatepickerRhfProps) {
   return (
@@ -19,7 +21,8 @@ export function GuiDatepickerRhf({
         name={name}
         render={({ field: { onChange } }) => (
           <GuiDatePicker
-            selectedDate={selectedDate}
+            titleDialog={titleDialog}
+            defaultDates={defaultDates}
             onChange={onChange}
           />
         )}

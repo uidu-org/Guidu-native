@@ -295,7 +295,7 @@ function YearPicker() {
   );
 }
 
-function DatePickerBody() {
+function DatePickerBody({ onChange }) {
   const now = new Date();
   const [selectedDates, onDatesChange] = useState<Date[]>([]);
   const [offsetDate, onOffsetChange] = useState<Date>(now);
@@ -305,7 +305,11 @@ function DatePickerBody() {
     <DatePickerProvider
       config={{
         selectedDates,
-        onDatesChange,
+        onDatesChange: (date) => {
+          console.log(date);
+          onDatesChange(date)
+          onChange(date)
+        },
         offsetDate,
         onOffsetChange,
         dates: {
@@ -336,8 +340,17 @@ function DatePickerBody() {
   );
 }
 
+
+interface GuiRangePickerProps {
+  startDate?: Date | null;
+  endDate?: Date | null;
+  value?: Date | null;
+  onChange: any;
+  selectedDate?: Date[];
+}
+
 /** ------ EXAMPLE ------ */
-export function GuiRangePicker() {
+export function GuiRangePicker({ onChange, selectedDate }: GuiRangePickerProps) {
   const [open, setOpen] = useState(false);
 
   // uncomment this to limit the range of dates
@@ -380,7 +393,7 @@ export function GuiRangePicker() {
           >
             <Button onPress={() => setOpen(false)}>close</Button>
             <Dialog.Title>Calendar range</Dialog.Title>
-            <DatePickerBody />
+            <DatePickerBody onChange={onChange} />
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog>

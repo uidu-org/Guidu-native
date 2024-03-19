@@ -296,8 +296,8 @@ export function GuiDatePicker({ onChange, defaultDates, titleDialog }) {
         />
         <Calendar ml={"auto"} onPress={() => setOpen(true)} />
       </XStack>
-      <Dialog open={open} onOpenChange={setOpen} >
-        <Dialog.Portal>
+      <Dialog open={open} onOpenChange={setOpen} modal >
+        <Dialog.Portal zi={999999} >
           <Dialog.Overlay />
 
           <Dialog.Content

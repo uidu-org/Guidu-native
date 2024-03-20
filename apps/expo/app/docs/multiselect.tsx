@@ -1,8 +1,10 @@
-import { GuiButton, GuiControlMultiselect, GuiText, GuiView } from '@uidu/native'
+import { GAutocompleteRhf, GuiButton, GuiControlMultiselect, GuiSheet, GuiText, GuiView } from '@uidu/native'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 export default function MultiselectDocsPage() {
   const { control, getValues } = useForm({})
+  const [open, setOpen] = useState(false)
   return (
     <GuiView gap="$5" centered>
       <GuiText>This is a Basic Textarea Field</GuiText>
@@ -12,7 +14,7 @@ export default function MultiselectDocsPage() {
         options={options}
         name="test"
         label="Fruits"
-        onClick={() => {}}
+        onClick={() => { }}
         initialItems={initialItems}
         rules={{ required: false }}
       />
@@ -26,6 +28,12 @@ export default function MultiselectDocsPage() {
           Press to see your bag (in logs)
         </GuiButton>
       </GuiView>
+
+      <GuiButton onPress={() => setOpen(true)} >Open</GuiButton>
+      <GuiSheet setStatus={setOpen} status={open} snapPoints={[80]} >
+        <GAutocompleteRhf name='taskStatus' options={optionsExample} label="Status" control={control} placeholderSearch="Seleziona Status" rules={{ required: false }} />
+      </GuiSheet>
+
     </GuiView>
   )
 }
@@ -52,3 +60,30 @@ const options = [
 ]
 
 const initialItems = [{ id: '10', label: 'Fight Club', value: 'Fight Club' }]
+export const optionsExample = [
+  { label: 'Apple' },
+  { label: 'Pear' },
+  { label: 'Blackberry' },
+  { label: 'Peach' },
+  { label: 'Apricot' },
+  { label: 'Melon' },
+  { label: 'Honeydew' },
+  { label: 'Starfruit' },
+  { label: 'Blueberry' },
+  { label: 'Rasberry' },
+  { label: 'Strawberry' },
+  { label: 'Mango' },
+  { label: 'Pineapple' },
+  { label: 'Lime' },
+  { label: 'Lemon' },
+  { label: 'Coconut' },
+  { label: 'Guava' },
+  { label: 'Papaya' },
+  { label: 'Orange' },
+  { label: 'Grape' },
+  { label: 'Jackfruit' },
+  { label: 'Durian' }
+].map(i => ({
+  value: i.label,
+  label: i.label
+}))

@@ -1,2 +1,2 @@
-export * from './ChatList'
+export * from './GuiChat'
 export type * from './types'

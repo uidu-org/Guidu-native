@@ -1,5 +1,6 @@
-import { GuiButton, GuiView, H3 } from '@uidu/native'
+import { GuiButton, GuiText, GuiView, H3 } from '@uidu/native'
 import { Link } from 'expo-router'
+import { PixelRatio } from 'react-native'
 
 export default function Screen() {
   return (
@@ -9,6 +10,7 @@ export default function Screen() {
         <Link asChild href={'/docs'}>
           <GuiButton>Go to docs</GuiButton>
         </Link>
+        <GuiText>{PixelRatio.get()}</GuiText>
       </GuiView>
     </GuiView>
   )

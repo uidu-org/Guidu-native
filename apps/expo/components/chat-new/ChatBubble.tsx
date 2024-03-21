@@ -1,58 +1,221 @@
-
-import { CheckCircle2 } from "@tamagui/lucide-icons";
-import { AnimatePresence, Avatar, Button, Image, SizableText, Text, Theme, ThemeableStack, View, XStack, YStack } from "@uidu/native";
+import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
 import dayjs from 'dayjs';
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { Dimensions, ImageBackground, InteractionManager, StyleSheet } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-// import { PhotoView } from './components/PhotoView';
-import PhotoView from "react-native-image-viewing";
-import { ImageSource } from 'react-native-image-viewing/dist/@types';
-import { MediaType, type GMessage } from "./types";
+import React, {
+    useCallback,
+    useEffect,
+    useMemo,
+    useState
+} from 'react';
+import {
+    Dimensions,
+    Image,
+    ImageBackground,
+    InteractionManager,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+    ViewStyle,
+} from 'react-native';
+import {
+    GChatBubble,
+    GUrlPreviewBubble,
+    MediaType
+} from './types';
+import { ChatEmitter } from './utils/eventEmitter';
+import {
+    loadParsedText
+} from './utils/patterns';
 
+const ParsedText = loadParsedText();
 
-const ChatBubble = ({ message }: { message: GMessage }) => {
-    const { text, user, itsMe } = message
-
-    const [showMedia, setShowMedia] = useState<boolean>(false);
+function _ChatBubble(props: GChatBubble) {
+    const { message, children } = props;
     const [mediaLoaded, setMediaLoaded] = useState<boolean>(false);
-    const [imageIndex, setImageIndex] = useState<number>(0)
-
-
+    const [showMedia, setShowMedia] = useState<boolean>(false);
+    const [showUrlPreview, setShowUrlPreview] = useState(false);
+    const [urlPreviewData, setUrlPreviewData] = useState<GUrlPreviewBubble>();
     const createdAt = useMemo(() => {
         return message && dayjs(message.createdAt).format('HH:mm');
     }, [message]);
 
 
+    const bubbleBackgroundColor = useMemo<ViewStyle>(() => {
+        if (message?.itsMe) {
+            return {
+                backgroundColor:
+                    '#afddfa',
+            };
+        }
+        return {
+            backgroundColor:
+                '#c8faaf',
+        }
+    }, [
+        message?.itsMe,
+    ]);
+
+    useEffect(() => {
+        if (message?.media) {
+            message.media.forEach((media) => {
+                if (media.type === MediaType.Image) {
+                    InteractionManager.runAfterInteractions(() => {
+                        Image.prefetch(media.uri).then(() => {
+                            setMediaLoaded(true);
+                        });
+                    });
+                }
+            });
+        }
+
+        // if (propsContext.enableUrlPreviews) {
+        //     InteractionManager.runAfterInteractions(async () => {
+        //         const url = extractUrlFromString(message?.text ?? '');
+
+        //         if (url) {
+        //             const data = await fetchMetaData(url);
+
+        //             if (data) {
+        //                 setShowUrlPreview(true);
+        //                 setUrlPreviewData(data);
+        //             }
+        //         }
+        //     });
+        // }
+    }, [message?.media, message?.text]);
+
+    const onPressPattern = useCallback(
+        (pattern: string, index: number) => {
+            if (!message) return;
+            ChatEmitter?.emit('patternPressed', pattern, index, message);
+        },
+        [message]
+    );
+
+    // const messagePatterns = useMemo(() => {
+    //     const patterns: any[] = [];
+    //     if (!ParsedText) return;
+
+    //     LoadAllPaternShapes(onPressPattern);
+
+    //     if (propsContext.patternProps?.customPatterns) {
+    //         patterns.push(...propsContext.patternProps.customPatterns);
+    //     }
+
+    //     if (propsContext?.patternProps?.allowPatterns) {
+    //         propsContext.patternProps.allowPatterns.forEach((pattern) => {
+    //             switch (pattern) {
+    //                 case 'hashtag':
+    //                     patterns.push(HASHTAG_PATTERN_SHAPE);
+    //                     break;
+    //                 case 'mention':
+    //                     patterns.push(MENTION_PATTERN_SHAPE);
+    //                     break;
+    //                 case 'url':
+    //                     patterns.push(URL_PATTERN_SHAPE);
+    //                     break;
+    //             }
+    //         });
+    //     } else {
+    //         ALL_PATERNS_SHAPES.forEach((pattern) => patterns.push(pattern));
+    //     }
+
+    //     return patterns;
+    // }, [
+    //     onPressPattern,
+    //     propsContext?.enablePatterns,
+    //     propsContext?.patternProps?.allowPatterns,
+    //     propsContext?.patternProps?.customPatterns,
+    // ]);
+
+    // const renderTicks = useCallback(() => {
+    //     if (message?.status) {
+    //         switch (message.status) {
+    //             case MessageStatus.Sending:
+    //                 return (
+    //                     propsContext.bubbleProps?.tickProps?.sendingElement ?? (
+    //                         <Text>🔄</Text>
+    //                     )
+    //                 );
+
+    //             case MessageStatus.Sent:
+    //                 return (
+    //                     propsContext.bubbleProps?.tickProps?.sentElement ?? <Text>✔</Text>
+    //                 );
+
+    //             case MessageStatus.Delivered:
+    //                 return (
+    //                     propsContext.bubbleProps?.tickProps?.deliveredElement ?? (
+    //                         <Text>☑</Text>
+    //                     )
+    //                 );
+
+    //             case MessageStatus.Read:
+    //                 return (
+    //                     propsContext.bubbleProps?.tickProps?.readElement ?? <Text>✅</Text>
+    //                 );
+    //         }
+    //     }
+
+    //     return null;
+    // }, [
+    //     message?.status,
+    //     propsContext.bubbleProps?.tickProps?.deliveredElement,
+    //     propsContext.bubbleProps?.tickProps?.readElement,
+    //     propsContext.bubbleProps?.tickProps?.sendingElement,
+    //     propsContext.bubbleProps?.tickProps?.sentElement,
+    // ]);
+
+    const renderFooter = useCallback(() => {
+        return (
+            <View style={styles.bubbleFooter}>
+                <Text
+                    style={[
+                        styles.date,
+                    ]}
+                >
+                    {createdAt}
+                </Text>
+                {/* {renderTicks()} */}
+            </View>
+        );
+    }, [
+        createdAt,
+        message?.itsMe,
+    ]);
+
     const renderMedia = useCallback(() => {
         if (message?.media) {
-            const photoViewCompatible: ImageSource[] = [];
+            const photoViewCompatible: ViewSource[] = [];
 
             message.media.forEach((media) => {
                 if (media.type === MediaType.Image) {
                     photoViewCompatible.push({
-                        uri: media.uri,
+                        type: 'image',
+                        source: {
+                            uri: media.uri,
+                        },
                     });
                 }
 
                 // if (media.type === MediaType.Video) {
-                //   photoViewCompatible.push({
-                //     type: 'view',
-                //     children: <VideoThumbnail media={media} isSelected />,
-                //   });
-                //   photoViewCompatible.push({
-                //     type: 'view',
-                //     children: <VideoThumbnail media={media} isSelected />,
-                //   });
+                //     photoViewCompatible.push({
+                //         type: 'view',
+                //         children: <VideoThumbnail media={media} isSelected />,
+                //     });
+                //     photoViewCompatible.push({
+                //         type: 'view',
+                //         children: <VideoThumbnail media={media} isSelected />,
+                //     });
                 // }
             });
 
             return (
-                <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 5, maxWidth: 210 }}>
                     {message?.media.map((media, index) => {
                         if (index < 3) {
                             return (
-                                <TouchableOpacity onPress={() => { setImageIndex(photoViewCompatible); setShowMedia(true) }}>
+                                <TouchableOpacity key={media.uri} onPress={() => setShowMedia(true)}>
                                     {media.type === MediaType.Image && mediaLoaded && (
                                         <View>
                                             <Image source={{ uri: media.uri }} style={styles.media} />
@@ -88,13 +251,13 @@ const ChatBubble = ({ message }: { message: GMessage }) => {
                         </TouchableOpacity>
                     )}
 
-
-                    <PhotoView
-                        imageIndex={imageIndex}
-                        images={photoViewCompatible}
-                        visible={showMedia}
-                        onRequestClose={() => setShowMedia(false)}
-                    />
+                    {/* {showMedia && (
+                        <PhotoView
+                            views={photoViewCompatible}
+                            visible={showMedia}
+                            onRequestClose={() => setShowMedia(false)}
+                        />
+                    )} */}
                 </View>
             );
         }
@@ -102,112 +265,109 @@ const ChatBubble = ({ message }: { message: GMessage }) => {
         return null;
     }, [mediaLoaded, message, showMedia]);
 
+    // const renderUrlPreview = useMemo(() => {
+    //     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
+    //         return (
+    //             <View style={{ marginTop: 10 }}>
+    //                 <UrlPreviewBubble
+    //                     title={urlPreviewData.title}
+    //                     description={urlPreviewData.description}
+    //                     image={urlPreviewData.image}
+    //                     url={urlPreviewData.url}
+    //                 />
+    //             </View>
+    //         );
+    //     }
 
-    useEffect(() => {
-        if (message?.media) {
-            message.media.forEach((media) => {
-                if (media.type === MediaType.Image) {
-                    InteractionManager.runAfterInteractions(() => {
-                        Image.prefetch(media.uri).then(() => {
-                            setMediaLoaded(true);
-                        });
-                    });
-                }
-            });
-        }
-
-        // if (propsContext.enableUrlPreviews) {
-        //   InteractionManager.runAfterInteractions(async () => {
-        //     const url = extractUrlFromString(message?.text ?? '');
-
-        //     if (url) {
-        //       const data = await fetchMetaData(url);
-
-        //       if (data) {
-        //         setShowUrlPreview(true);
-        //         setUrlPreviewData(data);
-        //       }
-        //     }
-        //   });
-        // }
-    }, [message?.media, message?.text,]);
+    //     return null;
+    // }, [message?.repliedTo, showUrlPreview, urlPreviewData]);
 
     return (
-        <AnimatePresence>
-            <XStack
-                fd={itsMe ? 'row-reverse' : 'row'}
-                ai="flex-start"
-                gap="$4"
-                als={itsMe ? 'flex-end' : 'flex-start'}
-                maw="100%"
-                marginBottom={"$2"}
-            >
-                <Button
-                    animation="quick"
-                    enterStyle={{
-                        o: 0,
-                        scale: 0,
-                    }}
-                    size="$5"
-                    circular
-                    chromeless
-                >
-                    <XStack>
-                        <Avatar circular size="$3">
-                            <Avatar.Image resizeMode="cover" source={user.avatar} />
-                            <Avatar.Fallback bc="$background" />
-                        </Avatar>
-                    </XStack>
-                </Button>
-                <YStack
-                    ai={itsMe ? 'flex-end' : 'flex-start'}
-                    gap="$2"
-                    maw={400}
-                    jc="center"
-                    fs={1}
-                >
-                    <Theme name={itsMe ? 'green_alt2' : 'gray_alt1'}>
-                        <ThemeableStack
-                            animation="bouncy"
-                            enterStyle={{
-                                o: 0,
-                                x: itsMe ? 50 : -50,
-                            }}
-                            backgrounded
-                            radiused
-                            p="$4"
-                            elevation={5}
-                            fs={1}
-                        >
-                            {renderMedia()}
-                            <SizableText size="$2" fs={1}>
-                                {text}
-                            </SizableText>
-                        </ThemeableStack>
-                    </Theme>
-                    <XStack fd={itsMe ? 'row' : 'row-reverse'} gap="$2">
-                        <SizableText size="$1" theme="alt1">
-                            {dayjs(createdAt).format('dddd D MMM')}
-                        </SizableText>
-                        <CheckCircle2 size={16} color="green" />
-                    </XStack>
-                </YStack>
-            </XStack>
-        </AnimatePresence>
-    )
-}
-export default React.memo(ChatBubble)
+        <View style={[styles.wrapper]}>
+            {/* {propsContext.bubbleProps?.trailingAccessory && message?.itsMe && (
+                <View>{propsContext.bubbleProps.trailingAccessory}</View>
+            )} */}
 
+            {!message?.itsMe && (
+                <Image
+                    source={
+                        message?.user.avatar
+                    }
+                    style={[styles.avatar, {
+                        width: 40,
+                        height: 40,
+                        borderRadius: 40,
+                        marginTop: "auto",
+                    }]}
+                />
+            )}
+            <View
+                style={[
+                    bubbleBackgroundColor,
+                    styles.container,
+                    { padding: 10 },
+                    { marginStart: message?.itsMe ? "auto" : undefined }
+                ]}
+            >
+
+                <>
+                    {/* {message?.repliedTo && (
+                            <ReplyingTo
+                                username={message?.repliedTo?.user.username}
+                                text={message?.repliedTo.text}
+                                messageId={message?.repliedTo.id}
+                            />
+                        )} */}
+
+
+                    <View >
+                        {renderMedia()}
+
+                        <Text>
+                            {message?.text}
+                        </Text>
+                        {/* {renderUrlPreview} */}
+                        {renderFooter()}
+                    </View>
+
+                </>
+                {/* {renderCornerRounding()} */}
+            </View>
+
+
+            {message?.itsMe && (
+                <Image
+                    source={
+                        message?.user?.avatar
+                    }
+                    style={[styles.avatarMe, {
+                        width: 40,
+                        height: 40,
+                        borderRadius: 40,
+                        marginTop: "auto",
+                    }]}
+                />
+            )}
+
+            {/* {propsContext.bubbleProps?.trailingAccessory && !message?.me && (
+                <View>{propsContext.bubbleProps.trailingAccessory}</View>
+            )} */}
+        </View>
+    );
+}
+
+export const ChatBubble = React.memo(_ChatBubble);
 
 export const styles = StyleSheet.create({
     wrapper: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        height: "100%",
+        width: Dimensions.get('screen').width,
     },
     container: {
-        margin: 20,
-        maxWidth: Dimensions.get('screen').width - 120,
+        margin: 10,
+        maxWidth: Dimensions.get('screen').width - 90,
         borderRadius: 10,
     },
     rightArrow: {
@@ -249,14 +409,17 @@ export const styles = StyleSheet.create({
     },
     avatar: {
         marginLeft: 10,
+        backgroundColor: "red",
+        padding: 5,
+        marginBottom: 15
     },
     avatarMe: {
         marginRight: 10,
+        marginBottom: 15
     },
     bubbleFooter: {
         justifyContent: 'flex-end',
         flexDirection: 'row',
-        marginTop: 5,
     },
     moreMedia: {
         width: 100,
@@ -269,14 +432,12 @@ export const styles = StyleSheet.create({
         borderColor: '#ccc',
     },
     media: {
-        width: 110,
+        width: 100,
         height: 100,
         borderRadius: 15,
-        marginRight: 10,
-        marginBottom: 10,
     },
     backgroundOverlay: {
-        width: 110,
+        width: 100,
         height: 100,
         backgroundColor: 'rgba(0,0,0,0.6)',
         borderRadius: 15,

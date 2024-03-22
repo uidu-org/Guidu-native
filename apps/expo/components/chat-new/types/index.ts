@@ -8,7 +8,7 @@ import type { RecyclerListViewProps } from 'recyclerlistview'
 
 export interface GUser {
   id: number
-  username: string
+  name: string
   avatar: ImageSourcePropType
 }
 
@@ -130,7 +130,8 @@ export interface GPatternProps {
   customPatterns?: GPatternShape[]
 }
 
-export interface GChatty {
+export interface GChatty
+  extends Pick<GFooterProps, 'onPressSend' | 'value' | 'onChangeText'> {
   messages: GMessage[]
   replyingTo?: GMessage
   bubbleProps?: Omit<GChatBubble, 'customContent'>
@@ -144,9 +145,24 @@ export interface GChatty {
   patternProps?: GPatternProps
   onReply?: (message: GMessage) => void
   renderBubble?: (props?: GMessage) => JSX.Element
+  currentUser: GUser
+  mentions: GUser[]
 }
 
 // export interface GActionProps {
 //   options: Pick<ContextMenuAction, 'title' | 'destructive' | 'systemIcon'>[];
 //   cancelButtonLabel?: string;
 // }
+
+export interface GFooterProps extends Pick<GChatty, 'replyingTo' | 'mentions'> {
+  onChangeText: (text: string) => void
+  onPressSend: (text: string, repliedTo: GMessage) => void
+  onPressCancelReply: () => void
+  closeReplyButton?: (props?: GFooterProps) => JSX.Element
+  sendButton?: (props?: Pick<GFooterProps, 'onPressSend'>) => JSX.Element
+  value?: string
+  inputStyle?: ViewStyle
+  containerStyle?: ViewStyle
+  placeholder?: string
+  renderImageAction?: (props: { onPressImage: () => void }) => JSX.Element
+}

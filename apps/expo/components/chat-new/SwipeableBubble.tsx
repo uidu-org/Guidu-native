@@ -1,5 +1,5 @@
+import { Reply } from '@tamagui/lucide-icons';
 import React, { useCallback, useEffect, useRef } from 'react';
-import { Text } from 'react-native';
 import { Swipeable } from 'react-native-gesture-handler';
 import { ChatBubble } from './ChatBubble';
 import { useChatContext } from './context/WrapperContext';
@@ -18,7 +18,7 @@ function _SwipeableBubble(props: GSwipeableBubble) {
   }, [message, swipeableRef]);
 
   const renderLeftActions = useCallback(() => {
-    return <Text> </Text>;
+    return <Reply size={20} />;
   }, []);
 
   useEffect(() => {
@@ -28,8 +28,9 @@ function _SwipeableBubble(props: GSwipeableBubble) {
   return (
     <Swipeable
       renderLeftActions={renderLeftActions}
-      friction={2}
-      overshootFriction={2}
+      friction={3}
+      overshootFriction={8}
+      leftThreshold={70}
       onEnded={() => _onReply()}
       enableTrackpadTwoFingerGesture
       ref={swipeableRef}

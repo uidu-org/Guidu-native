@@ -1,95 +1,38 @@
-import { useCallback, useMemo, useRef, useState } from 'react';
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import { MarkdownStyle, MarkdownTextInput } from '@expensify/react-native-live-markdown';
+import {
+    BottomSheetFlatList,
+    BottomSheetModal,
+    BottomSheetModalProvider
+} from '@gorhom/bottom-sheet';
+import { PlusCircle, SendHorizontal, X } from '@tamagui/lucide-icons';
+import { GuiButton, GuiText } from '@uidu/native';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import { useChatContext } from './context/WrapperContext';
-import { GUser } from './types';
+import { GFooterProps, GUser } from './types';
 
-export default function ChatFooter({ onPressSend }) {
+export const _ChatFooter = (props: GFooterProps) => {
+    const { mentions, onPressSend } = props
+    const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+
+    const snapPoints = useMemo(() => ["30%", '50%'], []);
+
+    // callbacks
+    const handlePresentModalPress = useCallback(() => {
+        bottomSheetModalRef.current?.present();
+    }, []);
+    const handleSheetChanges = useCallback((index: number) => {
+        console.log('handleSheetChanges', index);
+    }, []);
+
+
     const { message, setMessage } = useChatContext()
-    const [mentions, setMentions] = useState<GUser[]>(basicMentions);
-    const [filteredMentions, setFilteredMentions] = useState<GUser[]>([]);
-    const [openSheetMentions, setOpenSheetMentions] = useState(false);
-    const [textMessage, setTextMessage] = useState("");
-    const textInputRef = useRef<TextInput>(null);
+    const [text, setText] = useState("");
 
-    const onChangeText = useCallback(
-        (text: string) => {
-            const foundMentions: GUser[] = [];
-            let currentWord = "";
-            let triggeredBySpace = false; // Flag to track space after "@"
-
-            // Iterate over each character
-            for (let i = 0; i < text.length; i++) {
-                const char = text[i];
-
-                // Handle "@" symbol
-                if (char === "@") {
-                    // If starts with "@" or space before "@", show all mentions
-                    if (i === 0 || text[i - 1] === " ") {
-                        setOpenSheetMentions(true); // Open mentions sheet
-                        setFilteredMentions(basicMentions); // Show all mentions
-                        currentWord = ""; // Reset current word
-                        triggeredBySpace = true; // Space triggered the mention sheet
-                    } else {
-                        currentWord += char; // Add "@" to current word
-                        triggeredBySpace = false; // Reset space trigger flag
-                    }
-                } else if (char === " ") {
-                    // Check if current word is a mention and add to foundMentions
-                    if (currentWord.length > 1) {
-                        const matchedUser = basicMentions.find((user) =>
-                            user.username.toLowerCase() === currentWord.slice(1).toLowerCase()
-                        );
-                        if (matchedUser) {
-                            foundMentions.push(matchedUser);
-                        }
-                    }
-                    currentWord = ""; // Reset current word
-
-                    // Don't filter if space follows "@" triggered by space
-                    if (!triggeredBySpace) {
-                        setFilteredMentions(basicMentions.filter((user) =>
-                            user.username.toLowerCase().startsWith(text.slice(text.lastIndexOf("@") + 1).toLowerCase())
-                        ));
-                    }
-                } else {
-                    currentWord += char;
-
-                    // Filter mentions only if not triggered by space
-                    if (!triggeredBySpace) {
-                        setFilteredMentions(basicMentions.filter((user) =>
-                            user.username.toLowerCase().startsWith(text.slice(text.lastIndexOf("@") + 1).toLowerCase())
-                        ));
-                    }
-                }
-            }
-
-            // Handle last word as a mention
-            if (currentWord.length > 1) {
-                const matchedUser = basicMentions.find((user) =>
-                    user.username.toLowerCase() === currentWord.slice(1).toLowerCase()
-                );
-                if (matchedUser) {
-                    foundMentions.push(matchedUser);
-                }
-            }
-
-            // Update mentions state and text state
-            setMentions(foundMentions);
-            setTextMessage(text);
-        },
-        [basicMentions]
-    );
-
-    // const onPressSend = useCallback(() => {
-    //     props.onPressSend({
-    //       text: message,
-    //       repliedTo: props.replyingTo,
-    //       media: image,
-    //     });
-    //     setMessage('');
-    //     setImage([]);
-    //   }, [message, props, image]);
+    const _onPressSend = useCallback(() => {
+        onPressSend(text, message);
+        setText("")
+    }, [message, text]);
 
     const cuttedText = useMemo(() => {
         if (message) {
@@ -98,33 +41,18 @@ export default function ChatFooter({ onPressSend }) {
         return null;
     }, [message]);
 
-    const handleMentionSelect = (username: string) => {
-        const currentText = textMessage;
-        const atPosition = currentText.lastIndexOf("@");
 
-        // Check if there's already a username after "@"
-        let newText = currentText;
-        if (atPosition !== -1) {
-            newText = currentText.slice(0, atPosition + 1); // Keep "@" symbol
-        } else {
-            newText = currentText + " "; // Add space after "@" if none exists
-        }
-
-        // Append selected username
-        setTextMessage(newText + username);
-        setOpenSheetMentions(false); // Close mentions sheet
-    };
-
-
-    const _onPressSend = useCallback(() => {
-        onPressSend()
-    }, [message]);
+    const renderItem = useCallback(({ item }) => (
+        <GuiButton>
+            <GuiText>{item.username}</GuiText>
+        </GuiButton>
+    ), [])
 
     return (
-        <>
-            <View style={[styles.container]}>
+        <BottomSheetModalProvider>
+            <View>
                 {message && (
-                    <View style={[styles.reply, { width: "100%" }]}>
+                    <View style={{ width: "100%", flexDirection: "row", position: "absolute", bottom: 45, backgroundColor: "white", padding: 5 }}>
                         <View style={styles.replyBody}>
                             <Text
                                 style={[styles.replyUsername]}
@@ -133,45 +61,52 @@ export default function ChatFooter({ onPressSend }) {
                             </Text>
                             <Text>{cuttedText}</Text>
                         </View>
-                        <Button title="cancel" onPress={() => setMessage(null)} />
+                        <X size={20} onPress={() => setMessage(null)} />
                     </View>
                 )}
-                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <TouchableOpacity
-                        //   onPress={onPressImage}
-                        style={{ paddingHorizontal: 5 }}>
-                        <Text style={{ fontSize: 15 }}>📷</Text>
-                    </TouchableOpacity>
-                    <TextInput
-                        // ref={textInputRef}
-                        value={textMessage}
-                        onChangeText={onChangeText}
-                        style={[
-                            styles.textInput,
-                        ]}
-                        placeholder={'Type a message...'}
-                    />
-                    <Button title="Send"
-                        onPress={onPressSend}
-                        color="#0084ff" />
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingHorizontal: 10 }}>
+                    <View>
+                        <PlusCircle size={30} onPress={() => handlePresentModalPress()} />
+                    </View>
+                    <View style={{ flexDirection: "row", flexGrow: 1 }}  >
+                        <MarkdownTextInput
+                            value={text}
+                            onChangeText={setText}
+                            markdownStyle={markdownStyle}
+                            placeholder='type a message..'
+                            style={{}}
 
+                        />
+                    </View>
+                    <View style={{ padding: 2, backgroundColor: "green", borderRadius: 30, margin: 3 }} >
+                        <SendHorizontal color={"white"} size={29} margin={4} onPress={_onPressSend} />
+                    </View>
                 </View>
             </View>
-            {/* <GuiSheet status={openSheetMentions} setStatus={setOpenSheetMentions} snapPoints={[60]} zIndex={-9999} >
-                <FlatList data={filteredMentions} keyExtractor={(item) => item.id.toString()} renderItem={({ item: user }) => (
-                    <GuiView onPress={() => handleMentionSelect(user.username)}>
-                        <GuiText>{user.username}</GuiText>
-                    </GuiView>
-                )} />
-            </GuiSheet> */}
-        </>
+            <BottomSheetModal
+                ref={bottomSheetModalRef}
+                index={1}
+                snapPoints={snapPoints}
+                onChange={handleSheetChanges}
+            >
+
+
+                <BottomSheetFlatList data={mentions} keyExtractor={(item) => item.id.toString()} renderItem={renderItem} />
+
+
+            </BottomSheetModal>
+        </BottomSheetModalProvider>
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        padding: 5,
+const stylesSheet = StyleSheet.create({
+    contentContainer: {
+        flex: 1,
+        alignItems: 'center',
     },
+});
+
+const styles = StyleSheet.create({
     textInput: {
         padding: 5,
         width: '80%',
@@ -189,13 +124,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#fcba03',
     },
     reply: {
-        flexDirection: 'row',
-        padding: 10,
-        backgroundColor: '#f5f5f5',
-        borderLeftColor: '#c8faaf',
-        borderLeftWidth: 6,
-        position: "absolute",
-        bottom: 45
+        // flexDirection: 'row',
+        // padding: 10,
+        // backgroundColor: '#f5f5f5',
+        // borderLeftColor: '#c8faaf',
+        // borderLeftWidth: 6,
+        // position: "absolute",
+        // bottom: 45
     },
     replyBody: {
         flex: 1,
@@ -270,3 +205,66 @@ const basicMentions: GUser[] = [
         avatar: { uri: 'https://i.pravatar.cc/200' },
     }
 ]
+
+
+
+const markdownStyle: MarkdownStyle = {
+    syntax: {
+        color: 'gray',
+    },
+    link: {
+        color: 'blue',
+    },
+    h1: {
+        fontSize: 25,
+    },
+    blockquote: {
+        borderColor: 'gray',
+        borderWidth: 6,
+        marginLeft: 6,
+        paddingLeft: 6,
+    },
+    code: {
+        fontFamily: 'monospace',
+        color: 'black',
+        backgroundColor: 'lightgray',
+    },
+    pre: {
+        fontFamily: 'monospace',
+        color: 'black',
+        backgroundColor: 'lightgray',
+    },
+    mentionHere: {
+        color: 'green',
+        backgroundColor: 'lime',
+    },
+    mentionUser: {
+        color: 'blue',
+        backgroundColor: 'cyan'
+    }
+}
+
+export default React.memo(_ChatFooter)
+
+
+{/* <MentionInput
+                            value={text}
+                            onChange={setText}
+                            placeholder='Type a message...'
+                            partTypes={[
+                                {
+                                    trigger: '@',
+                                    renderSuggestions: (p) => {
+                                        console.log();
+                                        setText("triggered")
+                                        return renderSuggestions(
+                                            mentions.map((m) => ({
+                                                id: m.id.toString(),
+                                                name: m.name,
+                                            }))
+                                        )(p)
+                                    },
+                                    textStyle: { fontWeight: 'bold', color: 'blue' }, // The mention style in the input
+                                },
+                            ]}
+                        /> */}

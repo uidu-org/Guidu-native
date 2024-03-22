@@ -17,6 +17,7 @@ import {
     View,
     ViewStyle,
 } from 'react-native';
+import SIZES from './constants';
 import {
     GChatBubble,
     GUrlPreviewBubble,
@@ -306,7 +307,9 @@ function _ChatBubble(props: GChatBubble) {
                     bubbleBackgroundColor,
                     styles.container,
                     { padding: 10 },
-                    { marginStart: message?.itsMe ? "auto" : undefined }
+                    { marginStart: message?.itsMe ? "auto" : undefined },
+                    { width: message?.media && message?.media?.length ? SIZES.MIN_IMAGE_WIDTH : undefined, },
+                    { maxWidth: SIZES.BUBBLE_CHAT_WIDTH }
                 ]}
             >
 
@@ -367,7 +370,6 @@ export const styles = StyleSheet.create({
     },
     container: {
         margin: 10,
-        maxWidth: Dimensions.get('screen').width - 90,
         borderRadius: 10,
     },
     rightArrow: {
@@ -432,8 +434,8 @@ export const styles = StyleSheet.create({
         borderColor: '#ccc',
     },
     media: {
-        width: 100,
-        height: 100,
+        width: SIZES.MIN_IMAGE_WIDTH - 20,
+        height: SIZES.IMAGE_HEIGHT,
         borderRadius: 15,
     },
     backgroundOverlay: {

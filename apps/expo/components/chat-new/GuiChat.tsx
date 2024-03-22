@@ -1,30 +1,47 @@
-import React, { useRef } from 'react'
-import { KeyboardAvoidingView, Platform, SafeAreaView } from 'react-native'
+import { GuiText } from '@uidu/native'
+import { ForwardedRef, useCallback, useEffect, useRef } from 'react'
+import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView } from 'react-native'
 import ChatFooter from './ChatFooter'
 import { ChatList } from './ChatList'
 import { ChatContextProvider } from './context/WrapperContext'
-import { GMessage, ListRef } from './types'
+import { GChatty, GMessage, ListRef } from './types'
 
 
-export function GuiChat({ messages, onPressSend }: { messages: GMessage[], onPressSend }) {
+export const GuiChat = (props: GChatty, ref: ForwardedRef<ListRef>) => {
+  const { messages, currentUser, mentions } = props
 
   const listRef = useRef<ListRef>();
 
-  const __onPressSend = React.useCallback(
-    () => {
+  useEffect(() => {
+    const listener = Keyboard.addListener('keyboardDidShow', () => {
+      if (listRef.current) {
+        listRef.current?.scrollToEnd(true);
+      } else if (ref) {
+        //@ts-ignore
+        ref.current?.scrollToEnd(true);
+      } else {
+        console.warn('No ref found');
+      }
+    });
+
+    return () => {
+      listener.remove();
+    };
+  }, [ref]);
+
+  const _onPressSend = useCallback(
+    (text: string, repliedTo?: GMessage) => {
       //@ts-ignore
       listRef.current.appendMessage({
-        id: 13,
-        text: "sss",
-        itsMe: Math.floor(Math.random() * 2) === 0,
+        id: messages.length + 1,
+        text: text,
+        itsMe: true,
         createdAt: new Date(),
-        user: {
-          id: 2,
-          username: 'John Doe',
-          avatar: { uri: 'https://i.pravatar.cc/300' },
-        },
+        user: currentUser,
+        ...(repliedTo && {
+          repliedTo: repliedTo
+        })
       });
-      //@ts-ignor
     },
     []
   );
@@ -41,16 +58,20 @@ export function GuiChat({ messages, onPressSend }: { messages: GMessage[], onPre
             android: 10,
           })}
         >
-          <ChatList
-            data={messages}
-            //@ts-ignore
-            ref={listRef}
-          />
-          <ChatFooter onPressSend={__onPressSend} />
+          {
+            messages.length < 1 ? (
+              <GuiText>Empty chat</GuiText>
+            ) : (
+              <ChatList
+                data={messages}
+                //@ts-ignore
+                ref={listRef}
+              />
+            )
+          }
+          <ChatFooter mentions={mentions} onPressSend={_onPressSend} />
         </KeyboardAvoidingView>
       </ChatContextProvider>
     </SafeAreaView>
   )
 }
-
-GuiChat.fileName = 'GuiChat'

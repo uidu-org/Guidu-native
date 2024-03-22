@@ -1,22 +1,20 @@
 import { View } from '@uidu/native';
 import React, { ForwardedRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
-import { Dimensions, PixelRatio, Platform, useWindowDimensions } from 'react-native';
+import { Platform, useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { DataProvider, LayoutProvider, RecyclerListView } from 'recyclerlistview';
 import { ScrollEvent } from 'recyclerlistview/dist/reactnative/core/scrollcomponent/BaseScrollView';
 import { ChatBubble } from './ChatBubble';
+import { SwipeableBubble } from './SwipeableBubble';
 import { ScrollToBottom } from './components/ScrollToBottom';
 import { useChatContext } from './context/WrapperContext';
 import { usePrevious } from './hooks/usePrevious';
 import { GFabRef, GListProps, GMessage, GTypingStatusRef, LayoutType, ListRef } from './types';
+import { calculateMessageHeight } from './utils/calculateItemHeight';
 import { ChatBubbleEmitter } from './utils/eventEmitter';
 import { wait } from "./utils/helpers";
 
-const averageCharWidth = Math.ceil(PixelRatio.get())
-const DIMENSION_WIDTH = Dimensions.get('screen').width
-
 export const ChatList = React.forwardRef((props: GListProps, ref: ForwardedRef<ListRef>) => {
-    console.log("width-dimension",  Math.ceil(DIMENSION_WIDTH) - 90 - 20 - 20);
 
     const { setMessage } = useChatContext()
     const recyclerlistviewRef = useRef<RecyclerListView<any, any>>();
@@ -26,7 +24,7 @@ export const ChatList = React.forwardRef((props: GListProps, ref: ForwardedRef<L
     // const { trigger } = useHaptic();
     const typingStatusRef = useRef<GTypingStatusRef>(null);
     const listHeight = useMemo(
-        () => windowDimensions.height - safeArea.bottom - (safeArea.top - 10),
+        () => windowDimensions.height - 45 - safeArea.bottom - (safeArea.top - 10),
         [windowDimensions, safeArea]
     );
     const { rowRenderer: rowRendererProp, data } = props;
@@ -39,7 +37,6 @@ export const ChatList = React.forwardRef((props: GListProps, ref: ForwardedRef<L
             return false;
         });
     }, []);
-
 
     const [messages, setMessages] = useState<DataProvider>(dataProvider);
     const previousMessages = usePrevious<DataProvider>(messages);
@@ -145,57 +142,23 @@ in the current messages. If it is, then it will not scroll to the bottom. */
             (index) => {
                 const currentMessage: GMessage = messages.getAllData()[index];
                 const prevMessage: GMessage = index > 0 ? messages.getAllData()[index - 1] : null;
-    
+
                 // Calculate the height based on message content
                 const height = calculateMessageHeight(currentMessage, prevMessage);
-    
+
                 return height;
             },
             (type, dim) => {
                 dim.width = windowDimensions.width;
-                
+
                 dim.height = Math.ceil(+type);
             }
         );
     }, [messages, windowDimensions.width]);
-    
+
     // Function to calculate the height of each message
-    const calculateMessageHeight = (message: GMessage, prevMessage: GMessage | null) => {
-        const textLength = message.text.length;
-        const thresholdPercentage = 0.5;
-        const padding = 20
-        const margin = 20
-        const maxWidth = Math.ceil(DIMENSION_WIDTH) - 90 - padding - margin;
 
-        const textWidth = textLength * averageCharWidth; 
-        
-        // let linesNumber = Math.ceil(textWidth / maxWidth);
-        // if ((textWidth % maxWidth) / maxWidth > thresholdPercentage) {
-        //     linesNumber++;
-        // }
 
-        const wrappedText = message.text.split(/\r?\n/); // Split by both \r and \n
-
-        // Count lines accurately, considering existing line breaks and wrapping
-        let linesNumber = wrappedText.length;
-        for (const line of wrappedText) {
-            linesNumber += Math.ceil(line.length * averageCharWidth / maxWidth);
-        }
-        
-        console.log("number of lines message", {
-            text : message.text,
-            textWidth,
-            linesNumber
-        });
-        
-          // Calculate height based on number of lines and additional padding
-    const lineHeight = 30; // Adjusted line height
-    const additionalPadding = 30; // Additional padding
-
-    const height = (linesNumber * lineHeight) + additionalPadding;
-        return height;
-    };
-    
 
     const onScroll = useCallback(
         (e: ScrollEvent, offsetX: number, offsetY: number) => {
@@ -257,9 +220,9 @@ in the current messages. If it is, then it will not scroll to the bottom. */
                 ) : (
                   <ChatBubble message={data} />
                 )} */}
-                        {/* <SwipeableBubble message={data} onReply={setMessage} > */}
+                        <SwipeableBubble message={data} onReply={setMessage} >
                             <ChatBubble message={data} />
-                        {/* </SwipeableBubble> */}
+                        </SwipeableBubble>
                     </>
                 </>
             );
@@ -298,7 +261,7 @@ in the current messages. If it is, then it will not scroll to the bottom. */
                 // forceNonDeterministicRendering
                 canChangeSize={true}
                 rowRenderer={rowRenderer}
-                initialRenderIndex={messages.getAllData().length- 1}
+                initialRenderIndex={messages.getAllData().length - 1}
                 //   renderFooter={() => <TypingStatus ref={typingStatusRef} />}
                 onEndReached={props?.onEndReached}
                 onEndReachedThreshold={props?.onEndReachedThreshold}
@@ -309,31 +272,3 @@ in the current messages. If it is, then it will not scroll to the bottom. */
         </View>
     )
 })
-
-
-// const _layoutProvider = useMemo(()=>new LayoutProvider(
-//     i => {
-//     return { item: dataProvider.getDataForIndex(i), index: i }
-//     },
-//     async ({ item, index }, dim) => {
-//     let height = 85
-//     dim.width = width
-    
-//       if (item?.images?.length || (item?.ogImage && item?.ogImage?.url)) {
-//         height = height  + s(160)
-//       }
-    
-//       height =height + (item?.titleHeight+10 || 0) + (item?.link ? vs(20) : 0)
-    
-//       if (item?.contentHeight) {
-//         if (item?.contentHeight >= vs(43)) {
-//           height = height + vs(55)
-//         } else {
-//           height = height + (item?.contentHeight || 0)
-//         }
-//       }
-//       height = height + 12 + 34 + 80+5+6
-//       dim.height = height
-    
-//     },
-//     ),[dataProvider])

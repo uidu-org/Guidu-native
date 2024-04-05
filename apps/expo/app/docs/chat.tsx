@@ -1,12 +1,13 @@
 import { faker } from '@faker-js/faker';
 import { Stack } from 'expo-router';
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { GuiChat, type GMessage } from '../../components/chat-new';
 
 
 export default function DocsChatPage() {
 
-    const [text, setText] = useState("")
+    const message = useRef<string>('');
+    const listRef = useRef(null);
 
     const fakeUsers: GMessage[] = useMemo(() => (
         new Array(70).fill(null).map(() => ({
@@ -34,20 +35,49 @@ export default function DocsChatPage() {
     const mentions = useMemo(() => {
         return messages.map((m) => m.user)
     }, [messages])
+
+    const _onPressSend = useCallback(
+        (text: string, repliedTo?: GMessage) => {
+            console.log("testo parent", text);
+
+            //@ts-ignore
+            listRef.current.appendMessage({
+                id: messages.length + 1,
+                text: text,
+                itsMe: true,
+                createdAt: new Date(),
+                user: currentUser,
+                ...(repliedTo && {
+                    repliedTo: repliedTo
+                })
+            });
+            console.log("hey");
+        },
+        []
+    );
+
     return (
         <>
             <Stack.Screen options={{
-                headerShown: false
+                headerShown: true
             }} />
             <GuiChat
+                ref={listRef}
                 mentions={mentions}
-                currentUser={{
-                    id: 1,
-                    name: "John Doe",
-                    avatar: { uri: "https://i.pravatar.cc/300" },
-                }} messages={messages} onChangeText={setText} value={text} />
+                currentUser={currentUser}
+                messages={messages}
+                // onChangeText={onChangeText}
+                onPressSend={_onPressSend}
+            />
+
         </>
     )
+}
+
+const currentUser = {
+    id: 1,
+    name: "John Doe",
+    avatar: { uri: "https://i.pravatar.cc/300" },
 }
 
 const newMessage = {

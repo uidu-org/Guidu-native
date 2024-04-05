@@ -155,9 +155,9 @@ export interface GChatty
 // }
 
 export interface GFooterProps extends Pick<GChatty, 'replyingTo' | 'mentions'> {
-  onChangeText: (text: string) => void
+  onChangeText?: (text: string) => void
   onPressSend: (text: string, repliedTo: GMessage) => void
-  onPressCancelReply: () => void
+  onPressCancelReply?: () => void
   closeReplyButton?: (props?: GFooterProps) => JSX.Element
   sendButton?: (props?: Pick<GFooterProps, 'onPressSend'>) => JSX.Element
   value?: string

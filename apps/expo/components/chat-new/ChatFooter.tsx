@@ -96,24 +96,21 @@ export const _ChatFooter = (props: GFooterProps) => {
           <Sheet.Handle />
           <Sheet.Frame
             padding="$4"
-            justifyContent="center"
-            alignItems="center"
-            space="$5"
+            // justifyContent="center"
+            // alignItems="center"
           >
             <FlatList
               data={mentions}
               keyExtractor={(item) => item.id.toString()}
               renderItem={renderItem}
+              contentContainerStyle={{ gap: 10 }}
             />
           </Sheet.Frame>
         </Sheet>
       );
     };
 
-  const renderMentionSuggestions = useCallback(
-    () => renderSuggestions(mentions),
-    [mentions]
-  );
+  const renderMentionSuggestions = renderSuggestions(mentions);
 
   const __onPressSend = useCallback(() => {
     console.log('testo', text);

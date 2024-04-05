@@ -13,7 +13,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
   AlertTitle,
-} from './alert'
+} from './alert';
 
 export {
   Alert,
@@ -30,4 +30,4 @@ export {
   AlertDialogTitle,
   AlertDialogTrigger,
   AlertTitle,
-}
+};

@@ -36,6 +36,8 @@ export default function DocsChatPage() {
     return messages.map((m) => m.user);
   }, [messages]);
 
+  console.log('mentions', mentions);
+
   const message = useRef<string>('');
 
   const _onPressSend = useCallback((text: string, repliedTo?: GMessage) => {

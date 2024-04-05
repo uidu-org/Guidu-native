@@ -13,13 +13,16 @@ export default function DialogDocsPage() {
   return (
     <GuiView centered>
       <GuiView>
-        <GuiButton onPress={() => setIsVisible((prev) => !prev)}>Press me!</GuiButton>
+        <GuiButton onPress={() => setIsVisible((prev) => !prev)}>
+          Press me!
+        </GuiButton>
       </GuiView>
       <GuiDialog setStatus={setIsVisible} status={isVisible}>
         <GuiDialogTitle>Questo è un Dialog</GuiDialogTitle>
         <GuiDialogueDescription>
-          E questa una breve description del contenuto, il dialog è un componente molto versatile
-          con la propietà "minHeight" puoi faro sembrare anche un piccolo toast!
+          E questa una breve description del contenuto, il dialog è un
+          componente molto versatile con la propietà "minHeight" puoi faro
+          sembrare anche un piccolo toast!
         </GuiDialogueDescription>
       </GuiDialog>
     </GuiView>

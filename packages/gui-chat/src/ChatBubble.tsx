@@ -1,12 +1,6 @@
 import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
 import dayjs from 'dayjs';
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Dimensions,
   Image,
@@ -18,95 +12,33 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import { PropsContext } from './Chatty';
-import { PhotoView } from './components/PhotoView';
-import { ReplyingTo } from './components/ReplyingTo';
-import { UrlPreviewBubble } from './components/UrlPreviewBubble';
-import { VideoThumbnail } from './components/VideoThumbnail';
-import {
-  IChatBubble,
-  IUrlPreviewBubble,
-  MediaType,
-  MessageStatus
-} from './types/Chatty.types';
+import SIZES from './constants';
+import { GChatBubble, GUrlPreviewBubble, MediaType } from './types';
 import { ChatEmitter } from './utils/eventEmitter';
-import { extractUrlFromString, fetchMetaData } from './utils/helpers';
-import {
-  ALL_PATERNS_SHAPES,
-  HASHTAG_PATTERN_SHAPE,
-  LoadAllPaternShapes,
-  MENTION_PATTERN_SHAPE,
-  URL_PATTERN_SHAPE,
-  loadParsedText,
-} from './utils/patterns';
+import { loadParsedText } from './utils/patterns';
 
 const ParsedText = loadParsedText();
 
-function _ChatBubble(props: IChatBubble) {
+function _ChatBubble(props: GChatBubble) {
   const { message, children } = props;
-  const propsContext = useContext(PropsContext);
   const [mediaLoaded, setMediaLoaded] = useState<boolean>(false);
   const [showMedia, setShowMedia] = useState<boolean>(false);
   const [showUrlPreview, setShowUrlPreview] = useState(false);
-  const [urlPreviewData, setUrlPreviewData] = useState<IUrlPreviewBubble>();
+  const [urlPreviewData, setUrlPreviewData] = useState<GUrlPreviewBubble>();
   const createdAt = useMemo(() => {
     return message && dayjs(message.createdAt).format('HH:mm');
   }, [message]);
 
-  const avatarSize = useMemo(() => {
-    return {
-      width: propsContext.bubbleProps?.showAvatars?.width || 40,
-      height: propsContext.bubbleProps?.showAvatars?.width || 40,
-      borderRadius: propsContext.bubbleProps?.showAvatars?.width || 40,
-    };
-  }, [propsContext.bubbleProps?.showAvatars?.width]);
-
   const bubbleBackgroundColor = useMemo<ViewStyle>(() => {
-    if (propsContext.bubbleProps?.containerStyle) {
-      if (message?.me) {
-        return {
-          backgroundColor:
-            propsContext?.bubbleProps?.selfBubbleColor ?? '#afddfa',
-          ...propsContext.bubbleProps.containerStyle,
-        };
-      } else {
-        return {
-          backgroundColor:
-            propsContext?.bubbleProps?.otherBubbleColor ?? '#c8faaf',
-
-          ...propsContext.bubbleProps.containerStyle,
-        };
-      }
-    }
-
-    if (message?.me) {
+    if (message?.itsMe) {
       return {
-        backgroundColor:
-          propsContext?.bubbleProps?.selfBubbleColor ?? '#afddfa',
+        backgroundColor: '#afddfa',
       };
     }
-
     return {
-      backgroundColor: propsContext?.bubbleProps?.otherBubbleColor ?? '#c8faaf',
+      backgroundColor: '#c8faaf',
     };
-  }, [
-    message?.me,
-    propsContext?.bubbleProps?.otherBubbleColor,
-    propsContext?.bubbleProps?.selfBubbleColor,
-    propsContext.bubbleProps?.containerStyle,
-  ]);
-
-  const bubbleAlignment = useMemo<ViewStyle>(() => {
-    if (message?.me) {
-      return {
-        alignSelf: 'flex-end',
-      };
-    }
-
-    return {
-      alignSelf: 'flex-start',
-    };
-  }, [message?.me]);
+  }, [message?.itsMe]);
 
   useEffect(() => {
     if (message?.media) {
@@ -121,21 +53,21 @@ function _ChatBubble(props: IChatBubble) {
       });
     }
 
-    if (propsContext.enableUrlPreviews) {
-      InteractionManager.runAfterInteractions(async () => {
-        const url = extractUrlFromString(message?.text ?? '');
+    // if (propsContext.enableUrlPreviews) {
+    //     InteractionManager.runAfterInteractions(async () => {
+    //         const url = extractUrlFromString(message?.text ?? '');
 
-        if (url) {
-          const data = await fetchMetaData(url);
+    //         if (url) {
+    //             const data = await fetchMetaData(url);
 
-          if (data) {
-            setShowUrlPreview(true);
-            setUrlPreviewData(data);
-          }
-        }
-      });
-    }
-  }, [message?.media, message?.text, propsContext.enableUrlPreviews]);
+    //             if (data) {
+    //                 setShowUrlPreview(true);
+    //                 setUrlPreviewData(data);
+    //             }
+    //         }
+    //     });
+    // }
+  }, [message?.media, message?.text]);
 
   const onPressPattern = useCallback(
     (pattern: string, index: number) => {
@@ -145,146 +77,88 @@ function _ChatBubble(props: IChatBubble) {
     [message]
   );
 
-  const messagePatterns = useMemo(() => {
-    const patterns: any[] = [];
+  // const messagePatterns = useMemo(() => {
+  //     const patterns: any[] = [];
+  //     if (!ParsedText) return;
 
-    if (!propsContext?.enablePatterns) return;
-    if (!ParsedText) return;
+  //     LoadAllPaternShapes(onPressPattern);
 
-    LoadAllPaternShapes(onPressPattern);
+  //     if (propsContext.patternProps?.customPatterns) {
+  //         patterns.push(...propsContext.patternProps.customPatterns);
+  //     }
 
-    if (propsContext.patternProps?.customPatterns) {
-      patterns.push(...propsContext.patternProps.customPatterns);
-    }
+  //     if (propsContext?.patternProps?.allowPatterns) {
+  //         propsContext.patternProps.allowPatterns.forEach((pattern) => {
+  //             switch (pattern) {
+  //                 case 'hashtag':
+  //                     patterns.push(HASHTAG_PATTERN_SHAPE);
+  //                     break;
+  //                 case 'mention':
+  //                     patterns.push(MENTION_PATTERN_SHAPE);
+  //                     break;
+  //                 case 'url':
+  //                     patterns.push(URL_PATTERN_SHAPE);
+  //                     break;
+  //             }
+  //         });
+  //     } else {
+  //         ALL_PATERNS_SHAPES.forEach((pattern) => patterns.push(pattern));
+  //     }
 
-    if (propsContext?.patternProps?.allowPatterns) {
-      propsContext.patternProps.allowPatterns.forEach((pattern) => {
-        switch (pattern) {
-          case 'hashtag':
-            patterns.push(HASHTAG_PATTERN_SHAPE);
-            break;
-          case 'mention':
-            patterns.push(MENTION_PATTERN_SHAPE);
-            break;
-          case 'url':
-            patterns.push(URL_PATTERN_SHAPE);
-            break;
-        }
-      });
-    } else {
-      ALL_PATERNS_SHAPES.forEach((pattern) => patterns.push(pattern));
-    }
+  //     return patterns;
+  // }, [
+  //     onPressPattern,
+  //     propsContext?.enablePatterns,
+  //     propsContext?.patternProps?.allowPatterns,
+  //     propsContext?.patternProps?.customPatterns,
+  // ]);
 
-    return patterns;
-  }, [
-    onPressPattern,
-    propsContext?.enablePatterns,
-    propsContext?.patternProps?.allowPatterns,
-    propsContext?.patternProps?.customPatterns,
-  ]);
+  // const renderTicks = useCallback(() => {
+  //     if (message?.status) {
+  //         switch (message.status) {
+  //             case MessageStatus.Sending:
+  //                 return (
+  //                     propsContext.bubbleProps?.tickProps?.sendingElement ?? (
+  //                         <Text>🔄</Text>
+  //                     )
+  //                 );
 
-  const renderTicks = useCallback(() => {
-    if (message?.status) {
-      switch (message.status) {
-        case MessageStatus.Sending:
-          return (
-            propsContext.bubbleProps?.tickProps?.sendingElement ?? (
-              <Text>🔄</Text>
-            )
-          );
+  //             case MessageStatus.Sent:
+  //                 return (
+  //                     propsContext.bubbleProps?.tickProps?.sentElement ?? <Text>✔</Text>
+  //                 );
 
-        case MessageStatus.Sent:
-          return (
-            propsContext.bubbleProps?.tickProps?.sentElement ?? <Text>✔</Text>
-          );
+  //             case MessageStatus.Delivered:
+  //                 return (
+  //                     propsContext.bubbleProps?.tickProps?.deliveredElement ?? (
+  //                         <Text>☑</Text>
+  //                     )
+  //                 );
 
-        case MessageStatus.Delivered:
-          return (
-            propsContext.bubbleProps?.tickProps?.deliveredElement ?? (
-              <Text>☑</Text>
-            )
-          );
+  //             case MessageStatus.Read:
+  //                 return (
+  //                     propsContext.bubbleProps?.tickProps?.readElement ?? <Text>✅</Text>
+  //                 );
+  //         }
+  //     }
 
-        case MessageStatus.Read:
-          return (
-            propsContext.bubbleProps?.tickProps?.readElement ?? <Text>✅</Text>
-          );
-      }
-    }
-
-    return null;
-  }, [
-    message?.status,
-    propsContext.bubbleProps?.tickProps?.deliveredElement,
-    propsContext.bubbleProps?.tickProps?.readElement,
-    propsContext.bubbleProps?.tickProps?.sendingElement,
-    propsContext.bubbleProps?.tickProps?.sentElement,
-  ]);
+  //     return null;
+  // }, [
+  //     message?.status,
+  //     propsContext.bubbleProps?.tickProps?.deliveredElement,
+  //     propsContext.bubbleProps?.tickProps?.readElement,
+  //     propsContext.bubbleProps?.tickProps?.sendingElement,
+  //     propsContext.bubbleProps?.tickProps?.sentElement,
+  // ]);
 
   const renderFooter = useCallback(() => {
     return (
       <View style={styles.bubbleFooter}>
-        <Text
-          style={[
-            styles.date,
-            propsContext?.bubbleProps?.dateStyle &&
-            propsContext?.bubbleProps?.dateStyle!(message?.me ?? false),
-          ]}
-        >
-          {createdAt}
-        </Text>
-        {renderTicks()}
+        <Text style={[styles.date]}>{createdAt}</Text>
+        {/* {renderTicks()} */}
       </View>
     );
-  }, [
-    createdAt,
-    message?.me,
-    propsContext?.bubbleProps?.dateStyle,
-    renderTicks,
-  ]);
-
-  const renderCornerRounding = useCallback(() => {
-    if (propsContext.bubbleProps?.enableCornerRounding === false) return null;
-
-    if (message?.me) {
-      return (
-        <>
-          <View style={[styles.rightArrow, bubbleBackgroundColor]}></View>
-          <View
-            style={[
-              styles.rightArrowOverlap,
-              {
-                backgroundColor:
-                  propsContext.listProps?.containerStyle?.backgroundColor ??
-                  '#fff',
-              },
-            ]}
-          ></View>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <View style={[styles.leftArrow, bubbleBackgroundColor]}></View>
-          <View
-            style={[
-              styles.leftArrowOverlap,
-              {
-                backgroundColor:
-                  propsContext.listProps?.containerStyle?.backgroundColor ??
-                  '#fff',
-              },
-            ]}
-          ></View>
-        </>
-      );
-    }
-  }, [
-    bubbleBackgroundColor,
-    message?.me,
-    propsContext.bubbleProps?.enableCornerRounding,
-    propsContext.listProps?.containerStyle?.backgroundColor,
-  ]);
+  }, [createdAt, message?.itsMe]);
 
   const renderMedia = useCallback(() => {
     if (message?.media) {
@@ -300,32 +174,42 @@ function _ChatBubble(props: IChatBubble) {
           });
         }
 
-        if (media.type === MediaType.Video) {
-          photoViewCompatible.push({
-            type: 'view',
-            children: <VideoThumbnail media={media} isSelected />,
-          });
-          photoViewCompatible.push({
-            type: 'view',
-            children: <VideoThumbnail media={media} isSelected />,
-          });
-        }
+        // if (media.type === MediaType.Video) {
+        //     photoViewCompatible.push({
+        //         type: 'view',
+        //         children: <VideoThumbnail media={media} isSelected />,
+        //     });
+        //     photoViewCompatible.push({
+        //         type: 'view',
+        //         children: <VideoThumbnail media={media} isSelected />,
+        //     });
+        // }
       });
 
       return (
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            gap: 5,
+            maxWidth: 210,
+          }}
+        >
           {message?.media.map((media, index) => {
             if (index < 3) {
               return (
-                <TouchableOpacity onPress={() => setShowMedia(true)}>
+                <TouchableOpacity
+                  key={media.uri}
+                  onPress={() => setShowMedia(true)}
+                >
                   {media.type === MediaType.Image && mediaLoaded && (
                     <View>
                       <Image source={{ uri: media.uri }} style={styles.media} />
                     </View>
                   )}
-                  {media.type === MediaType.Video && (
-                    <VideoThumbnail media={media} />
-                  )}
+                  {/* {media.type === MediaType.Video && (
+                                        <VideoThumbnail media={media} />
+                                    )} */}
                 </TouchableOpacity>
               );
             }
@@ -353,13 +237,13 @@ function _ChatBubble(props: IChatBubble) {
             </TouchableOpacity>
           )}
 
-          {showMedia && (
-            <PhotoView
-              views={photoViewCompatible}
-              visible={showMedia}
-              onRequestClose={() => setShowMedia(false)}
-            />
-          )}
+          {/* {showMedia && (
+                        <PhotoView
+                            views={photoViewCompatible}
+                            visible={showMedia}
+                            onRequestClose={() => setShowMedia(false)}
+                        />
+                    )} */}
         </View>
       );
     }
@@ -367,107 +251,96 @@ function _ChatBubble(props: IChatBubble) {
     return null;
   }, [mediaLoaded, message, showMedia]);
 
-  const renderUrlPreview = useMemo(() => {
-    if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
-      return (
-        <View style={{ marginTop: 10 }}>
-          <UrlPreviewBubble
-            title={urlPreviewData.title}
-            description={urlPreviewData.description}
-            image={urlPreviewData.image}
-            url={urlPreviewData.url}
-          />
-        </View>
-      );
-    }
+  // const renderUrlPreview = useMemo(() => {
+  //     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
+  //         return (
+  //             <View style={{ marginTop: 10 }}>
+  //                 <UrlPreviewBubble
+  //                     title={urlPreviewData.title}
+  //                     description={urlPreviewData.description}
+  //                     image={urlPreviewData.image}
+  //                     url={urlPreviewData.url}
+  //                 />
+  //             </View>
+  //         );
+  //     }
 
-    return null;
-  }, [message?.repliedTo, showUrlPreview, urlPreviewData]);
+  //     return null;
+  // }, [message?.repliedTo, showUrlPreview, urlPreviewData]);
 
   return (
-    <View style={[styles.wrapper, bubbleAlignment]}>
-      {propsContext.bubbleProps?.trailingAccessory && message?.me && (
-        <View>{propsContext.bubbleProps.trailingAccessory}</View>
-      )}
+    <View style={[styles.wrapper]}>
+      {/* {propsContext.bubbleProps?.trailingAccessory && message?.itsMe && (
+                <View>{propsContext.bubbleProps.trailingAccessory}</View>
+            )} */}
 
-      {propsContext.bubbleProps?.showAvatars?.visible && !message?.me && (
+      {!message?.itsMe && (
         <Image
-          source={
-            message?.user.avatar ?? ""
-          }
-          style={[styles.avatar, avatarSize]}
+          source={message?.user.avatar}
+          style={[
+            styles.avatar,
+            {
+              width: 40,
+              height: 40,
+              borderRadius: 40,
+              marginTop: 'auto',
+            },
+          ]}
         />
       )}
-
       <View
         style={[
           bubbleBackgroundColor,
           styles.container,
-          propsContext.bubbleProps?.containerStyle,
-          { padding: message?.repliedTo ? 5 : 15 },
+          { padding: 10 },
+          { marginStart: message?.itsMe ? 'auto' : undefined },
+          {
+            width:
+              message?.media && message?.media?.length
+                ? SIZES.MIN_IMAGE_WIDTH
+                : undefined,
+          },
+          { maxWidth: SIZES.BUBBLE_CHAT_WIDTH },
         ]}
       >
-        {children ? (
-          children
-        ) : (
-          <>
-            {message?.repliedTo && (
-              <ReplyingTo
-                username={message?.repliedTo?.user.username}
-                text={message?.repliedTo.text}
-                messageId={message?.repliedTo.id}
-              />
-            )}
+        <>
+          {/* {message?.repliedTo && (
+                            <ReplyingTo
+                                username={message?.repliedTo?.user.username}
+                                text={message?.repliedTo.text}
+                                messageId={message?.repliedTo.id}
+                            />
+                        )} */}
 
-            {propsContext?.enablePatterns && ParsedText ? (
-              <>
-                {renderMedia()}
+          <View>
+            {renderMedia()}
 
-                <ParsedText
-                  parse={messagePatterns}
-                  style={
-                    propsContext?.bubbleProps?.labelStyle &&
-                    propsContext.bubbleProps?.labelStyle(message?.me ?? false)
-                  }
-                >
-                  {message?.text}
-                </ParsedText>
-                {renderUrlPreview}
-                {renderFooter()}
-              </>
-            ) : (
-              <View>
-                {renderMedia()}
-
-                <Text
-                  style={
-                    propsContext?.bubbleProps?.labelStyle &&
-                    propsContext.bubbleProps?.labelStyle(message?.me ?? false)
-                  }
-                >
-                  {message?.text}
-                </Text>
-                {renderUrlPreview}
-                {renderFooter()}
-              </View>
-            )}
-          </>
-        )}
-        {renderCornerRounding()}
+            <Text>{message?.text}</Text>
+            {/* {renderUrlPreview} */}
+            {renderFooter()}
+          </View>
+        </>
+        {/* {renderCornerRounding()} */}
       </View>
 
-      {propsContext.bubbleProps?.showAvatars?.visible && message?.me && (
+      {message?.itsMe && (
         <Image
-          source={
-            message?.user.avatar ?? ""
-          }
-          style={[styles.avatarMe, avatarSize]}
+          source={message?.user?.avatar}
+          style={[
+            styles.avatarMe,
+            {
+              width: 40,
+              height: 40,
+              borderRadius: 40,
+              marginTop: 'auto',
+            },
+          ]}
         />
       )}
 
-      {propsContext.bubbleProps?.trailingAccessory && !message?.me && (
-        <View>{propsContext.bubbleProps.trailingAccessory}</View>
-      )}
+      {/* {propsContext.bubbleProps?.trailingAccessory && !message?.me && (
+                <View>{propsContext.bubbleProps.trailingAccessory}</View>
+            )} */}
     </View>
   );
 }
@@ -478,11 +351,11 @@ export const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    height: '100%',
+    width: Dimensions.get('screen').width,
   },
   container: {
-    margin: 20,
-    maxWidth: Dimensions.get('screen').width - 120,
+    margin: 10,
     borderRadius: 10,
   },
   rightArrow: {
@@ -524,14 +397,17 @@ export const styles = StyleSheet.create({
   },
   avatar: {
     marginLeft: 10,
+    backgroundColor: 'red',
+    padding: 5,
+    marginBottom: 15,
   },
   avatarMe: {
     marginRight: 10,
+    marginBottom: 15,
   },
   bubbleFooter: {
     justifyContent: 'flex-end',
     flexDirection: 'row',
-    marginTop: 5,
   },
   moreMedia: {
     width: 100,
@@ -544,14 +420,12 @@ export const styles = StyleSheet.create({
     borderColor: '#ccc',
   },
   media: {
-    width: 110,
-    height: 100,
+    width: SIZES.MIN_IMAGE_WIDTH - 20,
+    height: SIZES.IMAGE_HEIGHT,
     borderRadius: 15,
-    marginRight: 10,
-    marginBottom: 10,
   },
   backgroundOverlay: {
-    width: 110,
+    width: 100,
     height: 100,
     backgroundColor: 'rgba(0,0,0,0.6)',
     borderRadius: 15,

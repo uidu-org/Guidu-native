@@ -1,0 +1,31 @@
+{
+  "name": "@uidu/lib",
+  "version": "0.0.1",
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "dist/uidu-lib.cjs.js",
+  "module": "dist/uidu-lib.esm.js",
+  "module:jsx": "dist/jsx/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch": "yarn preconstruct build --watch"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.1"
+  },
+  "devDependencies": {
+    "@preconstruct/cli": "^2.8.3",
+    "react": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}

@@ -1,0 +1,299 @@
+[
+  {
+    "name": "accordion-demo",
+    "registryDependencies": [
+      "accordion"
+    ],
+    "files": [
+      "src/docs/components/example/accordion-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "alert-demo",
+    "registryDependencies": [
+      "alert"
+    ],
+    "files": [
+      "src/docs/components/example/alert-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "alert-destructive",
+    "registryDependencies": [
+      "alert"
+    ],
+    "files": [
+      "src/docs/components/example/alert-destructive.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "alert-dialog-demo",
+    "registryDependencies": [
+      "alert-dialog",
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/alert-dialog-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "avatar-demo",
+    "registryDependencies": [
+      "avatar"
+    ],
+    "files": [
+      "src/docs/components/example/avatar-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "badge-demo",
+    "registryDependencies": [
+      "badge"
+    ],
+    "files": [
+      "src/docs/components/example/badge-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "badge-destructive",
+    "registryDependencies": [
+      "badge"
+    ],
+    "files": [
+      "src/docs/components/example/badge-destructive.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "badge-outline",
+    "registryDependencies": [
+      "badge"
+    ],
+    "files": [
+      "src/docs/components/example/badge-outline.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "badge-secondary",
+    "registryDependencies": [
+      "badge"
+    ],
+    "files": [
+      "src/docs/components/example/badge-secondary.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-demo",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-secondary",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-secondary.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-destructive",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-destructive.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-outline",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-outline.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-ghost",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-ghost.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-link",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-link.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-with-icon",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-with-icon.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-loading",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-loading.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-icon",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-icon.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "button-as-child",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "src/docs/components/example/button-as-child.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "card-demo",
+    "registryDependencies": [
+      "card",
+      "button",
+      "switch"
+    ],
+    "files": [
+      "src/docs/components/example/card-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "card-with-form",
+    "registryDependencies": [
+      "button",
+      "card",
+      "input",
+      "label",
+      "select"
+    ],
+    "files": [
+      "src/docs/components/example/card-with-form.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "carousel-demo",
+    "registryDependencies": [
+      "carousel"
+    ],
+    "files": [
+      "src/docs/components/example/carousel-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "carousel-size",
+    "registryDependencies": [
+      "carousel"
+    ],
+    "files": [
+      "src/docs/components/example/carousel-size.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "carousel-spacing",
+    "registryDependencies": [
+      "carousel"
+    ],
+    "files": [
+      "src/docs/components/example/carousel-spacing.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "carousel-orientation",
+    "registryDependencies": [
+      "carousel"
+    ],
+    "files": [
+      "src/docs/components/example/carousel-orientation.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "carousel-api",
+    "registryDependencies": [
+      "carousel"
+    ],
+    "files": [
+      "src/docs/components/example/carousel-api.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "carousel-plugin",
+    "registryDependencies": [
+      "carousel"
+    ],
+    "files": [
+      "src/docs/components/example/carousel-plugin.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "checkbox-demo",
+    "registryDependencies": [
+      "checkbox"
+    ],
+    "files": [
+      "src/docs/components/example/checkbox-demo.tsx"
+    ],
+    "type": "components:example"
+  },
+  {
+    "name": "checkbox-disabled",
+    "registryDependencies": [
+      "checkbox"
+    ],
+    "files": [
+      "src/docs/components/example/checkbox-disabled.tsx"
+    ],
+    "type": "components:example"
+  }
+]

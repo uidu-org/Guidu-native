@@ -1,7 +1,7 @@
-import { config } from '@uidu/native-config'
+// import { config } from '@uidu/native-config'
 
-export type Conf = typeof config
+// export type Conf = typeof config
 
-declare module '@uidu/native' {
-  interface TamaguiCustomConfig extends Conf {}
-}
+// declare module '@uidu/native' {
+//   interface TamaguiCustomConfig extends Conf {}
+// }

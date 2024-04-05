@@ -1,0 +1,22 @@
+{
+  "name": "@uidu/command-ui",
+  "version": "0.0.1",
+  "main": "dist/uidu-command-ui.cjs.js",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@uidu/dialog-ui": "0.0.1",
+    "@uidu/lib": "0.0.1",
+    "cmdk": "^0.2.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

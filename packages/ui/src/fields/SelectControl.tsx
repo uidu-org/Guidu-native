@@ -1,7 +1,7 @@
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
-import { Adapt, Select, Sheet, XStack, YStack } from '@uidu/native'
 import { ReactNode } from 'react'
 import { Control, Controller, FieldValues, RegisterOptions } from 'react-hook-form'
+import { Adapt, Select, Sheet, XStack, YStack } from 'tamagui'
 
 type GuiControlSelectProps = {
   label: string
@@ -17,7 +17,7 @@ type GuiControlSelectProps = {
   isBox?: boolean
 }
 
-export function GuiControlSelect({
+function GuiControlSelect({
   label,
   control,
   name,
@@ -54,14 +54,13 @@ export function GuiControlSelect({
             <Select.Trigger bw="$0" width="100%">
               <Select.Value style={isBox && boxStyles} placeholder={placeholder} />
             </Select.Trigger>
-
             <Adapt when="sm" platform="touch">
               <Sheet
                 modal
                 dismissOnSnapToBottom
                 animationConfig={{
                   type: 'spring',
-                  damping: 20,
+                  damping: 80,
                   mass: 1.2,
                   stiffness: 250,
                 }}
@@ -76,16 +75,15 @@ export function GuiControlSelect({
                 />
               </Sheet>
             </Adapt>
-
             <Select.Content zIndex={200000}>
               <Select.ScrollUpButton
-                alignItems="center"
-                justifyContent="center"
+                ai="center"
+                jc="center"
                 position="relative"
                 width="100%"
                 height="$3"
               >
-                <YStack zIndex={10}>
+                <YStack zi={10}>
                   <ChevronUp size={20} />
                 </YStack>
               </Select.ScrollUpButton>
@@ -100,19 +98,18 @@ export function GuiControlSelect({
               >
                 <Select.Group>
                   <Select.Label>Choose the right one</Select.Label>
-
                   {children}
                 </Select.Group>
               </Select.Viewport>
 
               <Select.ScrollDownButton
-                alignItems="center"
-                justifyContent="center"
-                position="relative"
-                width="100%"
-                height="$3"
+                ai="center"
+                jc="center"
+                // position="relative"
+                w="100%"
+                h="$3"
               >
-                <YStack zIndex={10}>
+                <YStack zi={10}>
                   <ChevronDown size={20} />
                 </YStack>
               </Select.ScrollDownButton>
@@ -123,3 +120,4 @@ export function GuiControlSelect({
     </XStack>
   )
 }
+export { GuiControlSelect }

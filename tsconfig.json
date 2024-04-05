@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "strictNullChecks": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "app/*": ["./packages/app/*"],
-      "@uidu/native/*": ["./packages/ui/*"]
+      "app/*": ["./packages/app/*"]
+      // "@uidu/native/*": ["./packages/ui/*"]
     },
     "jsx": "react-jsx"
   },

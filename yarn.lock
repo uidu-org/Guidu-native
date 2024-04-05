@@ -6508,9 +6508,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shopify/flash-list@npm:^1.6.4":
-  version: 1.6.4
-  resolution: "@shopify/flash-list@npm:1.6.4"
+"@shopify/flash-list@npm:1.4.3":
+  version: 1.4.3
+  resolution: "@shopify/flash-list@npm:1.4.3"
   dependencies:
     recyclerlistview: "npm:4.2.0"
     tslib: "npm:2.4.0"
@@ -6518,7 +6518,7 @@ __metadata:
     "@babel/runtime": "*"
     react: "*"
     react-native: "*"
-  checksum: 8411d375d3471defcf52c205a7f4055fe99552031e9bcbcca85ced00a8df8a816e4019d09c70e67b48877cd2d91465d8ccbc4bbd3a39513559e326f158b56248
+  checksum: 6883480ac7f8b32e91c73bd849bc2796ad4bb29ea6d598a6529230fdd552b382b122bb79564c9dbacda1b651e854dae9b2a9270cb9670594223c5aeed5c5cf40
   languageName: node
   linkType: hard
 
@@ -9720,7 +9720,36 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/gui-chat@workspace:^, @uidu/gui-chat@workspace:packages/gui-chat":
+"@uidu/gui-chat@npm:0.0.13":
+  version: 0.0.13
+  resolution: "@uidu/gui-chat@npm:0.0.13"
+  dependencies:
+    "@tamagui/lucide-icons": "npm:^1.89.8"
+    "@uidu/native": "npm:0.0.31"
+    dayjs: "npm:^1.11.10"
+    eventemitter3: "npm:^5.0.1"
+    expo-av: "npm:^13.10.5"
+    expo-haptics: "npm:^12.8.1"
+    expo-image-picker: "npm:^14.7.1"
+    react: "npm:^18.2.0"
+    react-native: "npm:0.72.10"
+    react-native-controlled-mentions: "npm:^2.2.5"
+    react-native-gesture-handler: "npm:~2.12.0"
+    react-native-parsed-text: "npm:^0.0.22"
+    react-native-reanimated: "npm:~3.3.0"
+    react-native-safe-area-context: "npm:4.6.3"
+    react-native-svg: "npm:^15.1.0"
+    recyclerlistview: "npm:^4.2.0"
+  peerDependencies:
+    react-native-gesture-handler: "*"
+    react-native-reanimated: "*"
+    react-native-safe-area-context: "*"
+    tamagui: "*"
+  checksum: 0827e5338ccefb9301256f883ac3c08ae8fc50a222b93a013e62a9fbc101eb884f2c6b01a2b54b438c5a206fba99c659ad575b4be52d1ba73e990c7c64e2104f
+  languageName: node
+  linkType: hard
+
+"@uidu/gui-chat@workspace:packages/gui-chat":
   version: 0.0.0-use.local
   resolution: "@uidu/gui-chat@workspace:packages/gui-chat"
   dependencies:
@@ -9739,10 +9768,14 @@ __metadata:
     react-native-parsed-text: "npm:^0.0.22"
     react-native-reanimated: "npm:~3.3.0"
     react-native-safe-area-context: "npm:4.6.3"
-    react-native-svg: "npm:^15.1.0"
+    react-native-svg: "npm:^14.1.0"
     recyclerlistview: "npm:^4.2.0"
   peerDependencies:
+    react-native: "*"
+    react-native-gesture-handler: "*"
+    react-native-reanimated: "*"
     react-native-safe-area-context: "*"
+    react-native-svg: "*"
     tamagui: "*"
   languageName: unknown
   linkType: soft
@@ -9763,11 +9796,11 @@ __metadata:
     "@react-native-community/datetimepicker": "npm:7.2.0"
     "@react-navigation/drawer": "npm:^6.6.6"
     "@react-navigation/native": "npm:^6.1.6"
-    "@shopify/flash-list": "npm:^1.6.4"
+    "@shopify/flash-list": "npm:1.4.3"
     "@tamagui-extras/form": "npm:^1.16.0"
     "@tamagui/babel-plugin": "npm:^1.89.8"
     "@tamagui/lucide-icons": "npm:^1.89.8"
-    "@uidu/gui-chat": "workspace:^"
+    "@uidu/gui-chat": "npm:0.0.13"
     "@uidu/native": "npm:0.0.31"
     "@uidu/native-config": "npm:0.0.8"
     babel-plugin-module-resolver: "npm:^4.1.0"
@@ -9776,7 +9809,7 @@ __metadata:
     dayjs: "npm:^1.11.10"
     eventemitter3: "npm:^5.0.1"
     expo: "npm:~49.0.18"
-    expo-av: "npm:^13.10.5"
+    expo-av: "npm:~13.4.1"
     expo-constants: "npm:~14.4.2"
     expo-dev-client: "npm:~2.4.12"
     expo-font: "npm:~11.4.0"
@@ -14925,6 +14958,15 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 50513f4a9fcf85224c3991d046cf71b7b2503801c3bef978b3eeec3463953cf38a84e2c5ef5b43f260ebba9ad9fda7e691d3d3ac14cc7eff49f963b3246b24b9
+  languageName: node
+  linkType: hard
+
+"expo-av@npm:~13.4.1":
+  version: 13.4.1
+  resolution: "expo-av@npm:13.4.1"
+  peerDependencies:
+    expo: "*"
+  checksum: 44d7095c2127772d2b1137770b32ec4dfe6f599798231a7bf04eee8a15974b0e6a3df06ffb98998058eeba96409050039ef55ae28acbaa39c2703471cbbe9cfb
   languageName: node
   linkType: hard
 

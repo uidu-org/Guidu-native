@@ -6,7 +6,6 @@ import { useCallback, useMemo, useRef, useState } from 'react';
 
 export default function DocsChatPage() {
 
-    const message = useRef<string>('');
     const listRef = useRef(null);
 
     const fakeUsers: GMessage[] = useMemo(() => (
@@ -78,16 +77,4 @@ const currentUser = {
     id: 1,
     name: "John Doe",
     avatar: { uri: "https://i.pravatar.cc/300" },
-}
-
-const newMessage = {
-    id: 11,
-    text: "new message",
-    itsMe: true,
-    createdAt: new Date("2024-03-05T00:00:00"),
-    user: {
-        id: 1,
-        username: "John Doe",
-        avatar: { uri: "https://i.pravatar.cc/300" },
-    }
 }

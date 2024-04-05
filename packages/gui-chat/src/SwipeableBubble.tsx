@@ -1,34 +1,36 @@
-import React, { useCallback, useContext, useRef } from 'react';
-import { Text } from 'react-native';
+import { Reply } from '@tamagui/lucide-icons';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { Swipeable } from 'react-native-gesture-handler';
 import { ChatBubble } from './ChatBubble';
-import { PropsContext } from './Chatty';
-import type { ISwipeableBubble } from './components/types/Chatty.types';
+import { useChatContext } from './context/WrapperContext';
+import type { GSwipeableBubble } from './types';
 
-function _SwipeableBubble(props: ISwipeableBubble) {
-  const { onReply, message, children } = props;
-  const propsContext = useContext(PropsContext);
-  const swipeableRef = useRef(null);
+function _SwipeableBubble(props: GSwipeableBubble) {
+  const { message, children } = props;
+  const { setReplyMessage } = useChatContext()
+  const swipeableRef = useRef<Swipeable>(null);
 
   const _onReply = useCallback(() => {
     if (!message) return;
 
-    onReply!(message);
-    //@ts-ignore
+    setReplyMessage!(message);
     swipeableRef.current?.close();
-  }, [message, onReply, swipeableRef]);
+  }, [message, swipeableRef]);
 
   const renderLeftActions = useCallback(() => {
-    return propsContext.bubbleProps?.replyDragElement ?? <Text> </Text>;
-  }, [propsContext.bubbleProps?.replyDragElement]);
+    return <Reply size={20} />;
+  }, []);
 
-  if (!onReply) return children ?? <ChatBubble {...props} />;
+  useEffect(() => {
+    swipeableRef.current?.close();
+  }, []);
 
   return (
     <Swipeable
       renderLeftActions={renderLeftActions}
-      friction={2}
+      friction={1}
       overshootFriction={2}
+      leftThreshold={40}
       onEnded={() => _onReply()}
       enableTrackpadTwoFingerGesture
       ref={swipeableRef}

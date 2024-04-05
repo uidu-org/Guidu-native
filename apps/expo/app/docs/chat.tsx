@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
+import { GuiChat, type GMessage } from '@uidu/gui-chat';
 import { Stack } from 'expo-router';
 import { useCallback, useMemo, useRef, useState } from 'react';
-import { GuiChat, type GMessage } from '../../components/chat-new';
 
 
 export default function DocsChatPage() {

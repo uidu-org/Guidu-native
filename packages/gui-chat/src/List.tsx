@@ -376,7 +376,7 @@ in the current messages. If it is, then it will not scroll to the bottom. */
           }}
           onScroll={onScroll}
           optimizeForInsertDeleteAnimations
-          forceNonDeterministicRendering
+          // forceNonDeterministicRendering
           canChangeSize={true}
           rowRenderer={rowRenderer}
           renderFooter={() => <TypingStatus ref={typingStatusRef} />}

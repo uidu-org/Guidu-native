@@ -2,9 +2,9 @@ import { ReactNode, createContext, useContext, useMemo, useState } from "react";
 import { GMessage } from "../types";
 
 interface ChatContextValue {
-    message: GMessage | null;
+    replyMessage: GMessage | null;
     open: boolean
-    setMessage: (message: GMessage) => void
+    setReplyMessage: (message: GMessage) => void
     setOpen: (status: boolean) => void
 }
 
@@ -18,14 +18,14 @@ interface ChatContextProviderProps {
 
 export const ChatContextProvider: React.FC<ChatContextProviderProps> = ({ children }) => {
     const [open, setOpen] = useState<boolean>(false)
-    const [message, setMessage] = useState<GMessage | null>(null)
+    const [replyMessage, setReplyMessage] = useState<GMessage | null>(null)
 
     const contextValue: ChatContextValue = useMemo(() => ({
-        message,
+        replyMessage,
         open,
-        setMessage,
+        setReplyMessage,
         setOpen,
-    }), [message, open, setMessage, setOpen])
+    }), [replyMessage, open, setReplyMessage, setOpen])
 
     return (
         <ChatContext.Provider value={contextValue} >

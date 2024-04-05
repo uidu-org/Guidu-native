@@ -1,6 +1,6 @@
 import { View } from '@uidu/native';
 import React, { ForwardedRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
-import { Platform, useWindowDimensions } from 'react-native';
+import { useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { DataProvider, LayoutProvider, RecyclerListView } from 'recyclerlistview';
 import { ScrollEvent } from 'recyclerlistview/dist/reactnative/core/scrollcomponent/BaseScrollView';
@@ -24,7 +24,7 @@ export const ChatList = React.forwardRef((props: GListProps, ref: ForwardedRef<L
     // const { trigger } = useHaptic();
     const typingStatusRef = useRef<GTypingStatusRef>(null);
     const listHeight = useMemo(
-        () => windowDimensions.height - 45 - safeArea.bottom - (safeArea.top - 10),
+        () => windowDimensions.height - 75 - safeArea.bottom - safeArea.top,
         [windowDimensions, safeArea]
     );
     const { rowRenderer: rowRendererProp, data } = props;
@@ -242,7 +242,7 @@ in the current messages. If it is, then it will not scroll to the bottom. */
     );
 
     return (
-        <View minHeight={1} minWidth={1} height={listHeight} >
+        <View minHeight={1} minWidth={1} maxHeight={listHeight} >
 
             <ScrollToBottom onPress={scrollToBottom} ref={fabRef} />
 
@@ -253,11 +253,11 @@ in the current messages. If it is, then it will not scroll to the bottom. */
                 style={{ height: "100%" }}
                 // @ts-ignore
                 ref={recyclerlistviewRef}
-                // scrollViewProps={{
-                //     keyboardShouldPersistTaps: 'never',
-                // }}
+                scrollViewProps={{
+                    keyboardShouldPersistTaps: 'never',
+                }}
                 onScroll={onScroll}
-                // optimizeForInsertDeleteAnimations
+                optimizeForInsertDeleteAnimations
                 // forceNonDeterministicRendering
                 canChangeSize={true}
                 rowRenderer={rowRenderer}
@@ -265,8 +265,7 @@ in the current messages. If it is, then it will not scroll to the bottom. */
                 //   renderFooter={() => <TypingStatus ref={typingStatusRef} />}
                 onEndReached={props?.onEndReached}
                 onEndReachedThreshold={props?.onEndReachedThreshold}
-                decelerationRate={Platform.OS == 'ios' ? 0.995 : 0.97}
-                optimizeForInsertDeleteAnimations={true}
+                // decelerationRate={Platform.OS == 'ios' ? 0.995 : 0.97
                 suppressBoundedSizeException={true}
             />
         </View>

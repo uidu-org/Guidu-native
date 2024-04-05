@@ -1,67 +1,119 @@
-import { MarkdownStyle, MarkdownTextInput } from '@expensify/react-native-live-markdown';
+import { MarkdownStyle } from '@expensify/react-native-live-markdown';
 import {
-    BottomSheetFlatList,
-    BottomSheetModal,
-    BottomSheetModalProvider
+    BottomSheetModal
 } from '@gorhom/bottom-sheet';
 import { PlusCircle, SendHorizontal, X } from '@tamagui/lucide-icons';
-import { GuiButton, GuiText } from '@uidu/native';
-import React, { useCallback, useMemo, useRef, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { GuiButton, Sheet } from '@uidu/native';
+import React, { FC, useCallback, useMemo, useRef, useState } from 'react';
+import { FlatList, SafeAreaView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
+import { MentionInput, MentionSuggestionsProps, Suggestion } from "react-native-controlled-mentions";
 import { useChatContext } from './context/WrapperContext';
 import { GFooterProps, GUser } from './types';
 
 export const _ChatFooter = (props: GFooterProps) => {
-    const { mentions, onPressSend } = props
+    const { mentions, value } = props
+    const { replyMessage, setReplyMessage } = useChatContext()
     const bottomSheetModalRef = useRef<BottomSheetModal>(null);
-
+    const [sheetStatus, setSheetStatus] = useState(false)
+    const [text, setText] = useState("");
     const snapPoints = useMemo(() => ["30%", '50%'], []);
+    const { width: windowWidth } = useWindowDimensions()
 
     // callbacks
     const handlePresentModalPress = useCallback(() => {
         bottomSheetModalRef.current?.present();
     }, []);
+    const handleCloseModalPress = useCallback(() => {
+        bottomSheetModalRef.current?.close();
+    }, []);
     const handleSheetChanges = useCallback((index: number) => {
-        console.log('handleSheetChanges', index);
+        setSheetStatus(!sheetStatus)
     }, []);
 
-
-    const { message, setMessage } = useChatContext()
-    const [text, setText] = useState("");
-
-    const _onPressSend = useCallback(() => {
-        onPressSend(text, message);
-        setText("")
-    }, [message, text]);
+    const onChangeText = useCallback((text: string) => {
+        // props?.onChangeText(text)
+        setText(text)
+    }, [])
 
     const cuttedText = useMemo(() => {
-        if (message) {
-            return message.text.slice(0, 100) + '...';
+        if (replyMessage) {
+            return replyMessage.text.slice(0, 100) + '...';
         }
         return null;
-    }, [message]);
+    }, [replyMessage]);
 
+    const renderSuggestions: (suggestions: GUser[]) => FC<MentionSuggestionsProps> = (suggestions) => (
+        { keyword, onSuggestionPress },
+    ) => {
+        if (keyword == null) {
+            return null;
+        }
 
-    const renderItem = useCallback(({ item }) => (
-        <GuiButton>
-            <GuiText>{item.username}</GuiText>
-        </GuiButton>
-    ), [])
+        const mentions = suggestions
+            .map((user) => ({ ...user, id: user.id.toString() }))
+            .filter(one => one.name.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()))
+
+        const renderItem = ({ item: one }: { item: Suggestion }) => {
+            return (
+                <GuiButton
+                    key={one.id}
+                    onPress={() => onSuggestionPress(one)}
+
+                    style={{ padding: 12 }}
+                >
+                    <Text>{one.name}</Text>
+                </GuiButton>
+            )
+        }
+
+        return (
+
+            <Sheet
+                modal
+                open={true}
+                onOpenChange={() => { }}
+                snapPoints={[60]}
+                dismissOnSnapToBottom
+                zIndex={100_000}
+                animation="medium"
+            >
+                <Sheet.Overlay
+                    animation="lazy"
+                    enterStyle={{ opacity: 0 }}
+                    exitStyle={{ opacity: 0 }}
+                />
+                <Sheet.Handle />
+                <Sheet.Frame padding="$4" justifyContent="center" alignItems="center" space="$5">
+                    <FlatList data={mentions} keyExtractor={(item) => item.id.toString()} renderItem={renderItem} />
+
+                </Sheet.Frame>
+            </Sheet>
+        );
+    };
+
+    const renderMentionSuggestions = useCallback(() => renderSuggestions(mentions), [mentions]);
+
+    const __onPressSend = useCallback(() => {
+        console.log("testo", text);
+
+        props.onPressSend(text!, replyMessage!);
+        setText("")
+    }, [text, replyMessage]);
 
     return (
-        <BottomSheetModalProvider>
+        <>
             <View>
-                {message && (
+                {replyMessage && (
                     <View style={{ width: "100%", flexDirection: "row", position: "absolute", bottom: 45, backgroundColor: "white", padding: 5 }}>
                         <View style={styles.replyBody}>
                             <Text
                                 style={[styles.replyUsername]}
                             >
-                                {message.user.username}
+                                {replyMessage.user.name}
                             </Text>
                             <Text>{cuttedText}</Text>
                         </View>
-                        <X size={20} onPress={() => setMessage(null)} />
+                        <X size={20} onPress={() => setReplyMessage(null)} />
                     </View>
                 )}
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingHorizontal: 10 }}>
@@ -69,42 +121,33 @@ export const _ChatFooter = (props: GFooterProps) => {
                         <PlusCircle size={30} onPress={() => handlePresentModalPress()} />
                     </View>
                     <View style={{ flexDirection: "row", flexGrow: 1 }}  >
-                        <MarkdownTextInput
-                            value={text}
-                            onChangeText={setText}
-                            markdownStyle={markdownStyle}
-                            placeholder='type a message..'
-                            style={{}}
+                        <SafeAreaView>
+                            <MentionInput
+                                multiline
+                                value={text}
+                                onChange={onChangeText}
+                                partTypes={[
+                                    {
+                                        trigger: '@',
+                                        renderSuggestions: renderMentionSuggestions,
+                                        textStyle: { fontWeight: '700', color: 'gray' }, // 
+                                    }
+                                ]}
 
-                        />
+                                placeholder="Type here..."
+                                style={{ padding: 12, maxWidth: windowWidth - 120 }}
+
+                            />
+                        </SafeAreaView>
                     </View>
                     <View style={{ padding: 2, backgroundColor: "green", borderRadius: 30, margin: 3 }} >
-                        <SendHorizontal color={"white"} size={29} margin={4} onPress={_onPressSend} />
+                        <SendHorizontal color={"white"} size={29} margin={4} onPress={__onPressSend} />
                     </View>
                 </View>
             </View>
-            <BottomSheetModal
-                ref={bottomSheetModalRef}
-                index={1}
-                snapPoints={snapPoints}
-                onChange={handleSheetChanges}
-            >
-
-
-                <BottomSheetFlatList data={mentions} keyExtractor={(item) => item.id.toString()} renderItem={renderItem} />
-
-
-            </BottomSheetModal>
-        </BottomSheetModalProvider>
+        </>
     )
 }
-
-const stylesSheet = StyleSheet.create({
-    contentContainer: {
-        flex: 1,
-        alignItems: 'center',
-    },
-});
 
 const styles = StyleSheet.create({
     textInput: {
@@ -187,27 +230,6 @@ const styles = StyleSheet.create({
 });
 
 
-const basicMentions: GUser[] = [
-    {
-
-        id: 1,
-        username: 'Jane',
-        avatar: { uri: 'https://i.pravatar.cc/200' },
-    },
-    {
-        id: 2,
-        username: 'Flavio',
-        avatar: { uri: 'https://i.pravatar.cc/200' },
-    },
-    {
-        id: 3,
-        username: 'Checco zalone',
-        avatar: { uri: 'https://i.pravatar.cc/200' },
-    }
-]
-
-
-
 const markdownStyle: MarkdownStyle = {
     syntax: {
         color: 'gray',
@@ -244,27 +266,37 @@ const markdownStyle: MarkdownStyle = {
     }
 }
 
+// const renderItem = useCallback(({ item }: { item: GUser }) => {
+//     const handleUserClick = () => {
+//         console.log("Call handleTextChange to push the mention");
+//         handleTextChange(text, item.id.toString(), item.name);
+//         handleCloseModalPress()
+//     };
+
+//     return (
+//         <TouchableOpacity onPress={handleUserClick}>
+//             <GuiButton>
+//                 <GuiText>{item.name}</GuiText>
+//             </GuiButton>
+//         </TouchableOpacity>
+//     );
+// }, [handleTextChange, text]);
+
+// const handleTextChange = useCallback((newText: string, mentionId?: string, mentionName?: string) => {
+//     setText(newText);
+//     if (newText.endsWith(' @')) {
+//         console.log('Mention triggered!');
+//         handlePresentModalPress();
+//     }
+//     if (!newText.includes('@')) {
+//         if (sheetStatus) {
+//             handleCloseModalPress();
+//         }
+//     }
+//     if (mentionId && mentionName) {
+//         const mentionText = `[${mentionName}](${mentionId}) `;
+//         setText(newText + mentionText);
+//     }
+// }, [handleCloseModalPress, handlePresentModalPress]);
+
 export default React.memo(_ChatFooter)
-
-
-{/* <MentionInput
-                            value={text}
-                            onChange={setText}
-                            placeholder='Type a message...'
-                            partTypes={[
-                                {
-                                    trigger: '@',
-                                    renderSuggestions: (p) => {
-                                        console.log();
-                                        setText("triggered")
-                                        return renderSuggestions(
-                                            mentions.map((m) => ({
-                                                id: m.id.toString(),
-                                                name: m.name,
-                                            }))
-                                        )(p)
-                                    },
-                                    textStyle: { fontWeight: 'bold', color: 'blue' }, // The mention style in the input
-                                },
-                            ]}
-                        /> */}

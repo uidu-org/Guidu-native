@@ -7,13 +7,13 @@ import type { GSwipeableBubble } from './types';
 
 function _SwipeableBubble(props: GSwipeableBubble) {
   const { message, children } = props;
-  const { setMessage } = useChatContext()
+  const { setReplyMessage } = useChatContext()
   const swipeableRef = useRef<Swipeable>(null);
 
   const _onReply = useCallback(() => {
     if (!message) return;
 
-    setMessage!(message);
+    setReplyMessage!(message);
     swipeableRef.current?.close();
   }, [message, swipeableRef]);
 
@@ -28,9 +28,9 @@ function _SwipeableBubble(props: GSwipeableBubble) {
   return (
     <Swipeable
       renderLeftActions={renderLeftActions}
-      friction={3}
-      overshootFriction={8}
-      leftThreshold={70}
+      friction={1}
+      overshootFriction={2}
+      leftThreshold={40}
       onEnded={() => _onReply()}
       enableTrackpadTwoFingerGesture
       ref={swipeableRef}

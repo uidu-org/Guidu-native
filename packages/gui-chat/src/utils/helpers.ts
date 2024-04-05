@@ -1,10 +1,11 @@
-import type { IUrlPreviewBubble } from '../components/types/Chatty.types'
+import { GUrlPreviewBubble } from '../types'
 
 /**
  * `wait` is a function that returns a promise that resolves after a given number of milliseconds
  * @param {number} ms - number
  */
-export const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+export const wait = (ms: number) =>
+  new Promise((resolve) => setTimeout(resolve, ms))
 
 /**
  * It takes a string and returns the first URL found in the string
@@ -31,13 +32,17 @@ export const extractUrlFromString = (string: string): string | null => {
  * @param {string} url - The URL of the page to fetch.
  * @returns An object with the following properties:
  */
-export const fetchMetaData = async (url: string): Promise<IUrlPreviewBubble | null> => {
+export const fetchMetaData = async (
+  url: string
+): Promise<GUrlPreviewBubble | null> => {
   const response = await fetch(url)
   const text = await response.text()
 
   const ogImage = new RegExp('<meta.*property="og:image".*content="(.*)".*/>')
   const ogTitle = new RegExp('<meta.*property="og:title".*content="(.*)".*/>')
-  const ogDescription = new RegExp('<meta.*property="og:description".*content="(.*)".*/>')
+  const ogDescription = new RegExp(
+    '<meta.*property="og:description".*content="(.*)".*/>'
+  )
 
   const image = text.match(ogImage)
   const title = text.match(ogTitle)

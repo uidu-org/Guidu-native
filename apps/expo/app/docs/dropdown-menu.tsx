@@ -1,9 +1,16 @@
-import { Calendar, Check, Home } from '@tamagui/lucide-icons'
-import { Accordion, GuiDropdownMenu, GuiSheet, GuiText, GuiView, type Route } from '@uidu/native'
-import { useState } from 'react'
+import { Calendar, Check, Home } from '@tamagui/lucide-icons';
+import {
+  Accordion,
+  GuiDropdownMenu,
+  GuiSheet,
+  GuiText,
+  GuiView,
+  type Route,
+} from '@uidu/native';
+import { useState } from 'react';
 
 export default function DropdownMenuDocsPage() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const routes: Route[] = [
     {
@@ -55,14 +62,12 @@ export default function DropdownMenuDocsPage() {
       defaultOpen: true,
       path: '/docs/avatar',
     },
-  ]
+  ];
 
   return (
     <GuiView p="$3">
       <Accordion
         style={{
-          borderColor: 'black',
-          borderWidth: 1,
           padding: 5,
           borderRadius: 7,
         }}
@@ -77,5 +82,5 @@ export default function DropdownMenuDocsPage() {
         <GuiText>Yes , it works</GuiText>
       </GuiSheet>
     </GuiView>
-  )
+  );
 }

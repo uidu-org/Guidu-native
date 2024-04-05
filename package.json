@@ -5,7 +5,7 @@
     "./apps/*",
     "./packages/config",
     "./packages/ui",
-    "./packages/web/storybook",
+    "./packages/gui-chat",
     "./packages/web/components/core/*",
     "./packages/web/components/forms/*",
     "./packages/web/components/media/*",
@@ -74,6 +74,7 @@
   "preconstruct": {
     "packages": [
       "./packages/ui",
+      "./packages/gui-chat",
       "./packages/config",
       "!./packages/web/storybook",
       "./packages/web",

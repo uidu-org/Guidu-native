@@ -10,11 +10,12 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/react": "^18.2.55"
+    "@types/react": "^18.2.55",
+    "tamagui": "^1.89.8"
   },
   "dependencies": {
     "@tamagui/lucide-icons": "^1.89.8",
-    "@uidu/native": "0.0.31",
+    "@uidu/native": "0.0.33",
     "dayjs": "^1.11.10",
     "eventemitter3": "^5.0.1",
     "expo-av": "^13.10.5",
@@ -27,7 +28,7 @@
     "react-native-parsed-text": "^0.0.22",
     "react-native-reanimated": "~3.3.0",
     "react-native-safe-area-context": "4.6.3",
-    "react-native-svg": "^14.1.0",
+    "react-native-svg": "14.1.0",
     "recyclerlistview": "^4.2.0"
   },
   "publishConfig": {

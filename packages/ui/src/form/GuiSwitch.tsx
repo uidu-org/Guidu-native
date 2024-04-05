@@ -1,11 +1,11 @@
-import { useId } from 'react'
-import { Label, StackProps, Switch, SwitchProps, XStack } from 'tamagui'
+import { useId } from 'react';
+import { Label, StackProps, Switch, SwitchProps, XStack } from 'tamagui';
 
 export type GuiSwitchProps = SwitchProps & {
-  labelLeft?: string
-  labelRight?: string
-  thumbProps?: StackProps
-}
+  labelLeft?: string;
+  labelRight?: string;
+  thumbProps?: StackProps;
+};
 
 export function GSwitch({
   labelLeft,
@@ -15,7 +15,7 @@ export function GSwitch({
   thumbProps,
   ...rest
 }: GuiSwitchProps) {
-  const id = useId()
+  const id = useId();
   return (
     <XStack alignItems={'center'} space={'$4'}>
       {labelLeft && (
@@ -32,5 +32,5 @@ export function GSwitch({
         </Label>
       )}
     </XStack>
-  )
+  );
 }

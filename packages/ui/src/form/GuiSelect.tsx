@@ -1,28 +1,30 @@
-import { LinearGradient } from '@tamagui/linear-gradient'
-import { useId, useMemo, useState } from 'react'
-import { Select, SelectProps, ThemeProps, YStack, getFontSize } from 'tamagui'
+import { LinearGradient } from '@tamagui/linear-gradient';
+import { useId, useMemo, useState } from 'react';
+import { Select, SelectProps, ThemeProps, YStack, getFontSize } from 'tamagui';
 import {
   CaretDownRegular,
   CaretUpRegular,
   CheckRegular,
-} from '../content/icons'
-import { ThemeColors, colormap } from "../core"
-import { GFormFieldContainer } from './GuiFormFieldContainer'
-import { GuiFormContainerBaseTypes } from './formContainerTypes'
+} from '../content/icons';
+import { ThemeColors, colormap } from '../core';
+import { GFormFieldContainer } from './GuiFormFieldContainer';
+import { GuiFormContainerBaseTypes } from './formContainerTypes';
 
-type GetAltThemeNames<S> = (S extends `${string}_${infer Alt}` ? GetAltThemeNames<Alt> : S) | S
+type GetAltThemeNames<S> =
+  | (S extends `${string}_${infer Alt}` ? GetAltThemeNames<Alt> : S)
+  | S;
 
 export type GuiSelectProps = SelectProps &
   GuiFormContainerBaseTypes & {
-    value?: string
-    options: { label: string; value: string | number }[]
-    colorVariant?: ThemeColors
-    themeName?: ThemeProps['name']
-    width?: number | string
-    placeholder?: string
-    dropDownLabel?: string // above the items list
-    fullWidth?: boolean
-  }
+    value?: string;
+    options: { label: string; value: string | number }[];
+    colorVariant?: ThemeColors;
+    themeName?: ThemeProps['name'];
+    width?: number | string;
+    placeholder?: string;
+    dropDownLabel?: string; // above the items list
+    fullWidth?: boolean;
+  };
 
 export function GSelect({
   value,
@@ -45,14 +47,18 @@ export function GSelect({
   containerProps,
   ...rest
 }: GuiSelectProps) {
-  const [selectVal, setSelectVal] = useState<string>(value ?? defaultValue ?? '')
-  const id = useId()
+  const [selectVal, setSelectVal] = useState<string>(
+    value ?? defaultValue ?? ''
+  );
+  const id = useId();
   // rest.size = rest.size || '$4'
 
   return (
     <GFormFieldContainer
       id={id}
-      theme={colorVariant ? (colormap[colorVariant] as any) : themeName || undefined}
+      theme={
+        colorVariant ? (colormap[colorVariant] as any) : themeName || undefined
+      }
       error={error}
       required={required}
       labelProps={labelProps}
@@ -70,16 +76,16 @@ export function GSelect({
         {...rest}
         value={selectVal}
         onValueChange={(val) => {
-          setSelectVal(val)
+          setSelectVal(val);
           if (typeof onValueChange === 'function') {
-            onValueChange(val)
+            onValueChange(val);
           }
         }}
       >
         <Select.Trigger
           width={fullWidth ? '100%' : width}
           iconAfter={<CaretDownRegular />}
-        // minHeight={rest.size}
+          // minHeight={rest.size}
         >
           <Select.Value placeholder={placeholder} />
         </Select.Trigger>
@@ -121,7 +127,11 @@ export function GSelect({
               {useMemo(
                 () =>
                   options.map((item, i) => (
-                    <Select.Item index={i} key={item.value} value={`${item.value}`}>
+                    <Select.Item
+                      index={i}
+                      key={item.value}
+                      value={`${item.value}`}
+                    >
                       <Select.ItemText>{item.label}</Select.ItemText>
                       <Select.ItemIndicator marginLeft="auto">
                         <CheckRegular size={16} />
@@ -143,7 +153,9 @@ export function GSelect({
                 width={'$4'}
                 pointerEvents="none"
               >
-                <CaretDownRegular size={getFontSize((rest.size ?? '$true') as any)} />
+                <CaretDownRegular
+                  size={getFontSize((rest.size ?? '$true') as any)}
+                />
               </YStack>
             )}
           </Select.Viewport>
@@ -169,5 +181,5 @@ export function GSelect({
         </Select.Content>
       </Select>
     </GFormFieldContainer>
-  )
+  );
 }

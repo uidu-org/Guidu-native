@@ -1,14 +1,21 @@
-import { Label, RadioGroup, RadioGroupProps, SizeTokens, SpaceTokens, XStack } from 'tamagui'
-import { GFormFieldContainer } from './GuiFormFieldContainer'
-import { GuiFormContainerBaseTypes } from './formContainerTypes'
+import {
+  Label,
+  RadioGroup,
+  RadioGroupProps,
+  SizeTokens,
+  SpaceTokens,
+  XStack,
+} from 'tamagui';
+import { GFormFieldContainer } from './GuiFormFieldContainer';
+import { GuiFormContainerBaseTypes } from './formContainerTypes';
 
 export type LmRadioGroupProps = RadioGroupProps &
   GuiFormContainerBaseTypes & {
-    options: { label: string; value: string }[]
-    size?: SizeTokens
-    name?: string
-    spaceItem?: SpaceTokens
-  }
+    options: { label: string; value: string }[];
+    size?: SizeTokens;
+    name?: string;
+    spaceItem?: SpaceTokens;
+  };
 
 export function GRadioGroup({
   options,
@@ -36,9 +43,17 @@ export function GRadioGroup({
       helperTextProps={helperTextProps}
       {...containerProps}
     >
-      <RadioGroup space={rest.flexDirection === 'row' ? '$4' : '$1'} required={required} {...rest}>
+      <RadioGroup
+        space={rest.flexDirection === 'row' ? '$4' : '$1'}
+        required={required}
+        {...rest}
+      >
         {options.map((option, i) => (
-          <XStack key={`${rest.name}-${option.value}-${i}`} alignItems="center" space={spaceItem}>
+          <XStack
+            key={`${rest.name}-${option.value}-${i}`}
+            alignItems="center"
+            space={spaceItem}
+          >
             <RadioGroup.Item
               value={option.value}
               id={`${rest.name}-${option.value}-${i}`}
@@ -48,12 +63,16 @@ export function GRadioGroup({
               <RadioGroup.Indicator />
             </RadioGroup.Item>
 
-            <Label size={size} htmlFor={`${rest.name}-${option.value}-${i}`} cursor={'pointer'}>
+            <Label
+              size={size}
+              htmlFor={`${rest.name}-${option.value}-${i}`}
+              cursor={'pointer'}
+            >
               {option.label}
             </Label>
           </XStack>
         ))}
       </RadioGroup>
     </GFormFieldContainer>
-  )
+  );
 }

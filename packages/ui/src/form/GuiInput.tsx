@@ -1,17 +1,17 @@
-import { forwardRef, useId, useState } from 'react'
-import { Pressable } from 'react-native'
-import { Input, InputProps, Stack, TextArea } from 'tamagui'
-import { EyeRegular, EyeSlashRegular, IconProps } from '../content/icons'
-import { GFormFieldContainer } from './GuiFormFieldContainer'
-import { GuiFormContainerBaseTypes } from './formContainerTypes'
+import { forwardRef, useId, useState } from 'react';
+import { Pressable } from 'react-native';
+import { Input, InputProps, Stack, TextArea } from 'tamagui';
+import { EyeRegular, EyeSlashRegular, IconProps } from '../content/icons';
+import { GFormFieldContainer } from './GuiFormFieldContainer';
+import { GuiFormContainerBaseTypes } from './formContainerTypes';
 
 export type GuiInputProps = InputProps &
   GuiFormContainerBaseTypes & {
-    multiline?: boolean
-    isPassword?: boolean
-    fullWidth?: boolean
-    passwordIconProps?: IconProps
-  }
+    multiline?: boolean;
+    isPassword?: boolean;
+    fullWidth?: boolean;
+    passwordIconProps?: IconProps;
+  };
 
 export const GInput = forwardRef(function GInputEl(
   {
@@ -31,21 +31,21 @@ export const GInput = forwardRef(function GInputEl(
   }: GuiInputProps,
   ref
 ) {
-  const genId = useId()
-  const [show, setShow] = useState<boolean>(false)
-  const id = rest.id || genId
+  const genId = useId();
+  const [show, setShow] = useState<boolean>(false);
+  const id = rest.id || genId;
   const currentInputProps = {
     ...rest,
-  }
+  };
   if (error) {
-    currentInputProps.theme = 'red'
-    currentInputProps.borderColor = error ? '$red8' : undefined
+    currentInputProps.theme = 'red';
+    currentInputProps.borderColor = error ? '$red8' : undefined;
   }
   if (fullWidth) {
-    currentInputProps.minWidth = '100%'
+    currentInputProps.minWidth = '100%';
   }
 
-  let secureTextEntry = !!(rest.secureTextEntry || isPassword)
+  let secureTextEntry = !!(rest.secureTextEntry || isPassword);
 
   return (
     <GFormFieldContainer
@@ -68,13 +68,18 @@ export const GInput = forwardRef(function GInputEl(
           ref={ref as any}
         />
       ) : secureTextEntry ? (
-        <Stack position={'relative'} width={fullWidth ? '100%' : currentInputProps?.width}>
+        <Stack
+          position={'relative'}
+          width={fullWidth ? '100%' : currentInputProps?.width}
+        >
           <Input
             {...currentInputProps}
             ref={ref as any}
             secureTextEntry={!show}
             autoCapitalize="none"
-            placeholderTextColor={rest.placeholderTextColor as InputProps['placeholderTextColor']}
+            placeholderTextColor={
+              rest.placeholderTextColor as InputProps['placeholderTextColor']
+            }
           />
           <Pressable
             style={{
@@ -84,14 +89,14 @@ export const GInput = forwardRef(function GInputEl(
               height: 20,
               ...(rest?.direction === 'rtl'
                 ? {
-                  left: 15,
-                }
+                    left: 15,
+                  }
                 : {
-                  right: 15,
-                }),
+                    right: 15,
+                  }),
             }}
             onPress={() => {
-              setShow((state) => !state)
+              setShow((state) => !state);
             }}
           >
             {show ? (
@@ -105,5 +110,5 @@ export const GInput = forwardRef(function GInputEl(
         <Input {...currentInputProps} autoCapitalize="none" ref={ref as any} />
       )}
     </GFormFieldContainer>
-  )
-})
+  );
+});

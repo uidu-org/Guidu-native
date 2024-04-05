@@ -2,9 +2,16 @@ import {
   LmPopover,
   LmPopoverProps,
   usePopoverState,
-} from "@tamagui-extras/core"
-import { forwardRef, useDeferredValue, useEffect, useId, useRef, useState } from 'react'
-import { Platform, useWindowDimensions } from 'react-native'
+} from '@tamagui-extras/core';
+import {
+  forwardRef,
+  useDeferredValue,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from 'react';
+import { Platform, useWindowDimensions } from 'react-native';
 import {
   Button,
   Input,
@@ -17,39 +24,39 @@ import {
   XStack,
   YGroup,
   YStack,
-} from 'tamagui'
+} from 'tamagui';
 import {
   CaretDownRegular,
   CheckSquareRegular,
   ListPlusRegular,
   SquareRegular,
-} from '../content/icons'
-import { GFormFieldContainer } from './GuiFormFieldContainer'
-import { GuiFormContainerBaseTypes } from './formContainerTypes'
+} from '../content/icons';
+import { GFormFieldContainer } from './GuiFormFieldContainer';
+import { GuiFormContainerBaseTypes } from './formContainerTypes';
 
-type Option = { label: string; value: string | number }
+type Option = { label: string; value: string | number };
 export type GuiAutocompleteProps = GuiFormContainerBaseTypes & {
-  options: Option[]
-  initialOptions?: Option[]
-  multiple?: boolean
-  value?: null | Option | Option[]
-  onChange?: (v: null | Option | Option[]) => void
-  placeholderSearch?: string
-  disableSearch?: boolean
-  theme?: ThemeName
-  allowNew?: boolean
-  allowNewHook?: (newValue: string) => Option
-  popoverProps?: LmPopoverProps
-  size?: SizeTokens
-  bgItemList?: string
-}
+  options: Option[];
+  initialOptions?: Option[];
+  multiple?: boolean;
+  value?: null | Option | Option[];
+  onChange?: (v: null | Option | Option[]) => void;
+  placeholderSearch?: string;
+  disableSearch?: boolean;
+  theme?: ThemeName;
+  allowNew?: boolean;
+  allowNewHook?: (newValue: string) => Option;
+  popoverProps?: LmPopoverProps;
+  size?: SizeTokens;
+  bgItemList?: string;
+};
 
 type AutocompleteContext = {
-  onChangeSelection: (option: Option) => void
-  isSelected: (opts: Option) => boolean
-}
+  onChangeSelection: (option: Option) => void;
+  isSelected: (opts: Option) => boolean;
+};
 
-type ConditionalOption<T extends boolean> = T extends true ? Option[] : Option
+type ConditionalOption<T extends boolean> = T extends true ? Option[] : Option;
 
 export function GAutocomplete({
   options,
@@ -72,53 +79,53 @@ export function GAutocomplete({
   bgItemList,
   ...rest
 }: GuiAutocompleteProps) {
-  const id = useId()
-  const [opts, setOpts] = useState(options)
-  const { width } = useWindowDimensions()
-  const popoverState = usePopoverState()
-  const [popoverWidth, setPopoverWidth] = useState<number>(0)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const searchInputRef = useRef<HTMLInputElement>(null)
-  const [selection, setSelection] = useState<ConditionalOption<typeof multiple> | null>(
-    value ?? (multiple ? [] : null)
-  )
+  const id = useId();
+  const [opts, setOpts] = useState(options);
+  const { width } = useWindowDimensions();
+  const popoverState = usePopoverState();
+  const [popoverWidth, setPopoverWidth] = useState<number>(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const [selection, setSelection] = useState<ConditionalOption<
+    typeof multiple
+  > | null>(value ?? (multiple ? [] : null));
   const isSelected = (item: Option) =>
     Array.isArray(selection)
       ? !!selection?.some((i) => i.value === item.value)
-      : selection?.value === item.value
+      : selection?.value === item.value;
 
   const onChangeSelection = (item: Option) => {
-    let newVal: ConditionalOption<typeof multiple> | null = null
+    let newVal: ConditionalOption<typeof multiple> | null = null;
     if (multiple) {
-      const has = isSelected(item)
+      const has = isSelected(item);
       newVal = has
         ? (selection as Option[])?.filter((i) => i.value !== item.value) ?? []
-        : [...((selection as Option[]) ?? []), item]
+        : [...((selection as Option[]) ?? []), item];
     } else {
-      newVal = isSelected(item) ? null : item
+      newVal = isSelected(item) ? null : item;
     }
-    setSelection(newVal)
+    setSelection(newVal);
     if (typeof onChange === 'function') {
-      onChange(newVal)
+      onChange(newVal);
     }
-  }
+  };
 
   useEffect(() => {
-    const elWidth = inputRef.current?.offsetWidth
+    const elWidth = inputRef.current?.offsetWidth;
     if (elWidth) {
-      setPopoverWidth(elWidth)
+      setPopoverWidth(elWidth);
     }
-  }, [width])
+  }, [width]);
 
   useEffect(() => {
     if (popoverState.open) {
-      searchInputRef.current?.focus?.() // set the focus on the search input field
+      searchInputRef.current?.focus?.(); // set the focus on the search input field
     }
-  }, [popoverState.open])
+  }, [popoverState.open]);
 
   const inputValue = Array.isArray(selection)
     ? selection.map((option) => option?.label).join(', ')
-    : selection?.label || ''
+    : selection?.label || '';
 
   return (
     <GFormFieldContainer
@@ -142,9 +149,9 @@ export function GAutocomplete({
             theme={theme}
             textOverflow={'ellipsis'}
             onFocus={(el) => {
-              popoverState.onOpenChange(!popoverState.open)
+              popoverState.onOpenChange(!popoverState.open);
               // @ts-ignore
-              el.target.blur?.()
+              el.target.blur?.();
             }}
           />
         </XGroup.Item>
@@ -185,10 +192,10 @@ export function GAutocomplete({
                     typeof allowNewHook === 'function'
                       ? allowNewHook(newVal)
                       : {
-                        value: newVal,
-                        label: newVal,
-                      }
-                  setOpts((oldVal) => [newItem, ...oldVal])
+                          value: newVal,
+                          label: newVal,
+                        };
+                  setOpts((oldVal) => [newItem, ...oldVal]);
                 }
               }}
               {...rest}
@@ -197,65 +204,110 @@ export function GAutocomplete({
         </XGroup.Item>
       </XGroup>
     </GFormFieldContainer>
-  )
+  );
 }
 
 type LmAutocompleteInputContentProps = GuiAutocompleteProps &
   AutocompleteContext & {
-    onAddNew: (str: string) => void
-  }
+    onAddNew: (str: string) => void;
+  };
 
-const LmAutocompleteInputContent = forwardRef(function LmAutocompleteInputContentEl(
-  {
-    disableSearch,
-    theme,
-    placeholderSearch,
-    options,
-    allowNew,
-    onAddNew,
-    onChangeSelection,
-    isSelected,
-    bgItemList
-  }: LmAutocompleteInputContentProps,
-  ref
-) {
-  const [searchTerm, setSearchTerm] = useState<string>()
-  const deferredTerm = useDeferredValue(searchTerm)
-  const filteredOptions = deferredTerm?.length
-    ? options.filter((i) => i.label.toLowerCase().includes(deferredTerm))
-    : options
-  const showSearch = !disableSearch || allowNew
-  return (
-    <>
-      {Platform.OS === 'web' ? (
-        <>
-          {showSearch && (
-            <XStack padding={'$4'} width={'100%'}>
-              <Input
-                theme={theme}
-                placeholder={placeholderSearch}
-                width={'100%'}
-                ref={ref as any}
-                onChangeText={(text) => {
-                  setSearchTerm(text.toLowerCase())
-                }}
+const LmAutocompleteInputContent = forwardRef(
+  function LmAutocompleteInputContentEl(
+    {
+      disableSearch,
+      theme,
+      placeholderSearch,
+      options,
+      allowNew,
+      onAddNew,
+      onChangeSelection,
+      isSelected,
+      bgItemList,
+    }: LmAutocompleteInputContentProps,
+    ref
+  ) {
+    const [searchTerm, setSearchTerm] = useState<string>();
+    const deferredTerm = useDeferredValue(searchTerm);
+    const filteredOptions = deferredTerm?.length
+      ? options.filter((i) => i.label.toLowerCase().includes(deferredTerm))
+      : options;
+    const showSearch = !disableSearch || allowNew;
+    return (
+      <>
+        {Platform.OS === 'web' ? (
+          <>
+            {showSearch && (
+              <XStack padding={'$4'} width={'100%'}>
+                <Input
+                  theme={theme}
+                  placeholder={placeholderSearch}
+                  width={'100%'}
+                  ref={ref as any}
+                  onChangeText={(text) => {
+                    setSearchTerm(text.toLowerCase());
+                  }}
+                />
+              </XStack>
+            )}
+            <ScrollView
+              keyboardShouldPersistTaps={'always'}
+              maxHeight={300}
+              width={'100%'}
+              marginTop={!showSearch ? '$4' : undefined}
+              marginBottom={'$4'}
+            >
+              <LmAutocompleteList
+                options={filteredOptions}
+                onChangeSelection={onChangeSelection}
+                isSelected={isSelected}
               />
-            </XStack>
-          )}
-          <ScrollView
-            keyboardShouldPersistTaps={'always'}
-            maxHeight={300}
-            width={'100%'}
-            marginTop={!showSearch ? '$4' : undefined}
-            marginBottom={'$4'}
-          >
-            <LmAutocompleteList
-              options={filteredOptions}
-              onChangeSelection={onChangeSelection}
-              isSelected={isSelected}
-            />
+              {allowNew && !filteredOptions?.length && deferredTerm && (
+                <XStack
+                  justifyContent={'flex-start'}
+                  marginBottom={'$3'}
+                  marginLeft={'$3'}
+                >
+                  <Button
+                    onPress={() => onAddNew(deferredTerm)}
+                    chromeless
+                    icon={<ListPlusRegular />}
+                  >
+                    {deferredTerm}
+                  </Button>
+                </XStack>
+              )}
+            </ScrollView>
+          </>
+        ) : (
+          <YStack>
+            {showSearch && (
+              <XStack padding={'$4'} width={'100%'}>
+                <Input
+                  theme={theme}
+                  ref={ref as any}
+                  placeholder={placeholderSearch}
+                  width={'100%'}
+                  onChangeText={(text) => {
+                    setSearchTerm(text.toLowerCase());
+                  }}
+                />
+              </XStack>
+            )}
+            <ScrollView>
+              <LmAutocompleteList
+                options={filteredOptions}
+                onChangeSelection={onChangeSelection}
+                isSelected={isSelected}
+                bgItemList={bgItemList}
+              />
+            </ScrollView>
             {allowNew && !filteredOptions?.length && deferredTerm && (
-              <XStack justifyContent={'flex-start'} marginBottom={'$3'} marginLeft={'$3'}>
+              <XStack
+                justifyContent={'flex-start'}
+                marginBottom={'$3'}
+                marginLeft={'$3'}
+              >
                 <Button
                   onPress={() => onAddNew(deferredTerm)}
                   chromeless
@@ -265,52 +317,26 @@ const LmAutocompleteInputContent = forwardRef(function LmAutocompleteInputConten
                 </Button>
               </XStack>
             )}
-          </ScrollView>
-        </>
-      ) : (
-        <YStack>
-          {showSearch && (
-            <XStack padding={'$4'} width={'100%'}>
-              <Input
-                theme={theme}
-                ref={ref as any}
-                placeholder={placeholderSearch}
-                width={'100%'}
-                onChangeText={(text) => {
-                  setSearchTerm(text.toLowerCase())
-                }}
-              />
-            </XStack>
-          )}
-          <ScrollView>
-            <LmAutocompleteList
-              options={filteredOptions}
-              onChangeSelection={onChangeSelection}
-              isSelected={isSelected}
-              bgItemList={bgItemList}
-            />
-          </ScrollView>
-          {allowNew && !filteredOptions?.length && deferredTerm && (
-            <XStack justifyContent={'flex-start'} marginBottom={'$3'} marginLeft={'$3'}>
-              <Button onPress={() => onAddNew(deferredTerm)} chromeless icon={<ListPlusRegular />}>
-                {deferredTerm}
-              </Button>
-            </XStack>
-          )}
-        </YStack>
-      )}
-    </>
-  )
-})
+          </YStack>
+        )}
+      </>
+    );
+  }
+);
 
 type LmAutocompleteListProps = AutocompleteContext & {
-  options: GuiAutocompleteProps['options']
-  bgItemList?: GuiAutocompleteProps["bgItemList"]
-}
+  options: GuiAutocompleteProps['options'];
+  bgItemList?: GuiAutocompleteProps['bgItemList'];
+};
 
-function LmAutocompleteList({ options, isSelected, onChangeSelection, bgItemList }: LmAutocompleteListProps) {
+function LmAutocompleteList({
+  options,
+  isSelected,
+  onChangeSelection,
+  bgItemList,
+}: LmAutocompleteListProps) {
   return (
-    <YGroup borderRadius={0} gap={"$1.5"}>
+    <YGroup borderRadius={0} gap={'$1.5'}>
       {options.map((item, i) => {
         return (
           <YGroup.Item key={item.value}>
@@ -318,23 +344,27 @@ function LmAutocompleteList({ options, isSelected, onChangeSelection, bgItemList
               hoverTheme
               pressTheme
               focusTheme
-              {...(bgItemList ? {
-                bw: 1,
-                boc: bgItemList,
-              } : null)}
+              {...(bgItemList
+                ? {
+                    bw: 1,
+                    boc: bgItemList,
+                  }
+                : null)}
               style={{
-                borderRadius: bgItemList ? 10 : undefined
+                borderRadius: bgItemList ? 10 : undefined,
               }}
               h={30}
               cursor={'pointer'}
-              icon={isSelected(item) ? <CheckSquareRegular /> : <SquareRegular />}
+              icon={
+                isSelected(item) ? <CheckSquareRegular /> : <SquareRegular />
+              }
               onPress={() => onChangeSelection(item)}
             >
               <ListItemTitle cursor={'pointer'}>{item.label}</ListItemTitle>
             </ListItem>
           </YGroup.Item>
-        )
+        );
       })}
     </YGroup>
-  )
+  );
 }

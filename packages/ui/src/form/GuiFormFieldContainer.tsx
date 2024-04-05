@@ -7,15 +7,15 @@ import {
   ThemeableStack,
   ThemeableStackProps,
   YStack,
-} from 'tamagui'
-import { GuiFormContainerBaseTypes } from './formContainerTypes'
+} from 'tamagui';
+import { GuiFormContainerBaseTypes } from './formContainerTypes';
 
 type GuiFormContainerProps = ThemeableStackProps &
   GuiFormContainerBaseTypes & {
-    id?: string
-    size?: SizeTokens
-    fullWidth?: boolean
-  }
+    id?: string;
+    size?: SizeTokens;
+    fullWidth?: boolean;
+  };
 
 const StackContainer = styled(ThemeableStack, {
   variants: {
@@ -32,7 +32,7 @@ const StackContainer = styled(ThemeableStack, {
       },
     },
   } as const,
-})
+});
 
 export function GFormFieldContainer({
   label,
@@ -55,7 +55,9 @@ export function GFormFieldContainer({
           {...labelProps}
           color={error ? '$red10' : labelProps?.color}
           width={rest.labelInline ? 150 : labelProps?.width}
-          justifyContent={rest.labelInline ? 'flex-end' : labelProps?.justifyContent}
+          justifyContent={
+            rest.labelInline ? 'flex-end' : labelProps?.justifyContent
+          }
         >
           {label} {required && ` *`}
         </Label>
@@ -75,5 +77,5 @@ export function GFormFieldContainer({
         )}
       </YStack>
     </StackContainer>
-  )
+  );
 }

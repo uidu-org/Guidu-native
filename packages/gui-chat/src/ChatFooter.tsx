@@ -75,7 +75,7 @@ export const _ChatFooter = (props: GFooterProps) => {
                 snapPoints={[60]}
                 dismissOnSnapToBottom
                 zIndex={100_000}
-                animation="medium"
+                animation="quick"
             >
                 <Sheet.Overlay
                     animation="lazy"
@@ -91,7 +91,7 @@ export const _ChatFooter = (props: GFooterProps) => {
         );
     };
 
-    const renderMentionSuggestions = useCallback(() => renderSuggestions(mentions), [mentions]);
+    const renderMentionSuggestions = renderSuggestions(mentions);
 
     const __onPressSend = useCallback(() => {
         console.log("testo", text);

@@ -14,7 +14,7 @@
 		96905EF65AED1B983A6B3ABC /* libPods-GuiduNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-GuiduNative.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		E1B25F0E22894046837D4D10 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290953CACB214626BA79ED88 /* noop-file.swift */; };
+		AA8FC9222F934225AEEE1F8A /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED7535EF024B48A9A84C96 /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,8 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-GuiduNative/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		290953CACB214626BA79ED88 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "GuiduNative/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
-		6DABBC62DF1C49118EDBD1F2 /* GuiduNative-Bridging-Header.h */ = {isa = PBXFileReference; name = "GuiduNative-Bridging-Header.h"; path = "GuiduNative/GuiduNative-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3AED7535EF024B48A9A84C96 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "GuiduNative/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		C7A6C6EF2D364D4E82F46386 /* GuiduNative-Bridging-Header.h */ = {isa = PBXFileReference; name = "GuiduNative-Bridging-Header.h"; path = "GuiduNative/GuiduNative-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +57,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				290953CACB214626BA79ED88 /* noop-file.swift */,
-				6DABBC62DF1C49118EDBD1F2 /* GuiduNative-Bridging-Header.h */,
+				3AED7535EF024B48A9A84C96 /* noop-file.swift */,
+				C7A6C6EF2D364D4E82F46386 /* GuiduNative-Bridging-Header.h */,
 			);
 			name = GuiduNative;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				2EEF79FAD18446E9A6EA50D8 /* GuiduNative-Bridging-Header.h in Resources */,
+				10F9268A0ED943CE850AAE60 /* GuiduNative-Bridging-Header.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +293,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				E1B25F0E22894046837D4D10 /* noop-file.swift in Sources */,
+				AA8FC9222F934225AEEE1F8A /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

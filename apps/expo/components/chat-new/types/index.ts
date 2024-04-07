@@ -1,24 +1,24 @@
 import {
   ImageSourcePropType,
-  TextStyle,
   TouchableOpacityProps,
   ViewStyle,
-} from 'react-native'
-import type { RecyclerListViewProps } from 'recyclerlistview'
+} from 'react-native';
+import { DefaultParseShape } from 'react-native-parsed-text';
+import type { RecyclerListViewProps } from 'recyclerlistview';
 
 export interface GUser {
-  id: number
-  name: string
-  avatar: ImageSourcePropType
+  id: number;
+  name: string;
+  avatar: ImageSourcePropType;
 }
 
 export interface GVideoOptions {
-  [key: string]: any
-  thumbnail?: string
-  pictureInPicture?: boolean
+  [key: string]: any;
+  thumbnail?: string;
+  pictureInPicture?: boolean;
   headers?: {
-    [key: string]: any
-  }
+    [key: string]: any;
+  };
 }
 
 export enum MediaType {
@@ -28,21 +28,21 @@ export enum MediaType {
 }
 
 export interface GMedia {
-  uri: string
-  base64?: string
-  type: MediaType
-  videoOptions?: GVideoOptions
+  uri: string;
+  base64?: string;
+  type: MediaType;
+  videoOptions?: GVideoOptions;
 }
 
 export interface GMessage {
-  id: number
-  itsMe: boolean
-  user: GUser
-  text: string
-  createdAt: Date
-  repliedTo?: GMessage
-  status?: MessageStatus
-  media?: GMedia[]
+  id: number;
+  itsMe: boolean;
+  user: GUser;
+  text: string;
+  createdAt: Date;
+  repliedTo?: GMessage;
+  status?: MessageStatus;
+  media?: GMedia[];
 }
 
 export enum MessageStatus {
@@ -53,10 +53,10 @@ export enum MessageStatus {
 }
 
 export interface ListRef {
-  appendMessage: (message: GMessage | GMessage[], firstIndex?: boolean) => void
-  removeMessage: (id: number) => void
-  scrollToEnd: (animated?: boolean) => void
-  setIsTyping: (isTyping?: boolean) => void
+  appendMessage: (message: GMessage | GMessage[], firstIndex?: boolean) => void;
+  removeMessage: (id: number) => void;
+  scrollToEnd: (animated?: boolean) => void;
+  setIsTyping: (isTyping?: boolean) => void;
 }
 
 export interface GListProps
@@ -64,20 +64,20 @@ export interface GListProps
     RecyclerListViewProps,
     'onEndReached' | 'onEndReachedThreshold' | 'onScroll'
   > {
-  rowRenderer?: (data: GMessage) => JSX.Element
-  data: GMessage[]
-  containerStyle?: ViewStyle
+  rowRenderer?: (data: GMessage) => JSX.Element;
+  data: GMessage[];
+  containerStyle?: ViewStyle;
 }
 
 export interface GTypingStatusRef {
-  setIsTyping: (isTyping: boolean) => void
+  setIsTyping: (isTyping: boolean) => void;
 }
 
 export interface GUrlPreviewBubble {
-  title: string
-  image: string
-  description: string
-  url: string
+  title: string;
+  image: string;
+  description: string;
+  url: string;
 }
 
 export const LayoutType = {
@@ -90,63 +90,58 @@ export const LayoutType = {
   ExtremeLong: 6,
   Media: 7,
   Media2x: 8,
-}
+};
 
 export interface GFabRef {
-  show: () => void
-  hide: () => void
+  show: () => void;
+  hide: () => void;
 }
 
 export interface GScrollToBottomProps
   extends Pick<TouchableOpacityProps, 'onPress'> {
-  containerStyle?: ViewStyle
-  content?: JSX.Element
+  containerStyle?: ViewStyle;
+  content?: JSX.Element;
 }
 
-export interface GPatternShape {
-  type?: string
-  pattern?: RegExp | string
-  style: TextStyle
-  onPress?: (pattern: string, index: number) => void
-}
+export interface GPatternShape extends DefaultParseShape {}
 
 export interface GChatBubble {
-  message?: GMessage
-  replyDragElement?: JSX.Element
-  trailingAccessory?: JSX.Element
+  message?: GMessage;
+  replyDragElement?: JSX.Element;
+  trailingAccessory?: JSX.Element;
   // actions?: GActionProps;
-  enableCornerRounding?: boolean
-  children?: JSX.Element
+  enableCornerRounding?: boolean;
+  children?: JSX.Element;
 }
 
 export interface GSwipeableBubble
   extends GChatBubble,
     Pick<GChatty, 'onReply'> {
-  children?: JSX.Element
+  children?: JSX.Element;
 }
 
 export interface GPatternProps {
-  allowPatterns?: Array<'mention' | 'hashtag' | 'url'>
-  customPatterns?: GPatternShape[]
+  allowPatterns?: Array<'mention' | 'hashtag' | 'url'>;
+  customPatterns?: GPatternShape[];
 }
 
 export interface GChatty
   extends Pick<GFooterProps, 'onPressSend' | 'value' | 'onChangeText'> {
-  messages: GMessage[]
-  replyingTo?: GMessage
-  bubbleProps?: Omit<GChatBubble, 'customContent'>
-  enableHapticFeedback?: boolean
-  enableImageUploads?: boolean
-  showScrollToBottomButton?: boolean
-  setDateLocale?: string | ILocale
-  listProps?: Omit<GListProps, 'rowRenderer' | 'data'>
-  enablePatterns?: boolean
-  enableUrlPreviews?: boolean
-  patternProps?: GPatternProps
-  onReply?: (message: GMessage) => void
-  renderBubble?: (props?: GMessage) => JSX.Element
-  currentUser: GUser
-  mentions: GUser[]
+  messages: GMessage[];
+  replyingTo?: GMessage;
+  bubbleProps?: Omit<GChatBubble, 'customContent'>;
+  enableHapticFeedback?: boolean;
+  enableImageUploads?: boolean;
+  showScrollToBottomButton?: boolean;
+  setDateLocale?: string | ILocale;
+  listProps?: Omit<GListProps, 'rowRenderer' | 'data'>;
+  enablePatterns?: boolean;
+  enableUrlPreviews?: boolean;
+  patternProps?: GPatternProps;
+  onReply?: (message: GMessage) => void;
+  renderBubble?: (props?: GMessage) => JSX.Element;
+  currentUser: GUser;
+  mentions: GUser[];
 }
 
 // export interface GActionProps {
@@ -155,14 +150,14 @@ export interface GChatty
 // }
 
 export interface GFooterProps extends Pick<GChatty, 'replyingTo' | 'mentions'> {
-  onChangeText?: (text: string) => void
-  onPressSend: (text: string, repliedTo: GMessage) => void
-  onPressCancelReply?: () => void
-  closeReplyButton?: (props?: GFooterProps) => JSX.Element
-  sendButton?: (props?: Pick<GFooterProps, 'onPressSend'>) => JSX.Element
-  value?: string
-  inputStyle?: ViewStyle
-  containerStyle?: ViewStyle
-  placeholder?: string
-  renderImageAction?: (props: { onPressImage: () => void }) => JSX.Element
+  onChangeText?: (text: string) => void;
+  onPressSend: (text: string, repliedTo: GMessage) => void;
+  onPressCancelReply?: () => void;
+  closeReplyButton?: (props?: GFooterProps) => JSX.Element;
+  sendButton?: (props?: Pick<GFooterProps, 'onPressSend'>) => JSX.Element;
+  value?: string;
+  inputStyle?: ViewStyle;
+  containerStyle?: ViewStyle;
+  placeholder?: string;
+  renderImageAction?: (props: { onPressImage: () => void }) => JSX.Element;
 }

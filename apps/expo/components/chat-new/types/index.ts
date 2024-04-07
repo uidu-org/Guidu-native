@@ -29,9 +29,9 @@ export enum MediaType {
 
 export interface GMedia {
   uri: string;
-  base64?: string;
-  type: MediaType;
-  videoOptions?: GVideoOptions;
+  // base64?: string;
+  // type: MediaType;
+  // videoOptions?: GVideoOptions;
 }
 
 export interface GMessage {

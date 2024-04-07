@@ -22,7 +22,11 @@ export default function DocsChatPage() {
           media: [
             {
               uri: faker.image.url(),
-              type: 0,
+              // type: 0,
+            },
+            {
+              uri: faker.image.url(),
+              // type: 0,
             },
           ],
         }),

@@ -41,7 +41,6 @@ export const ChatList = React.forwardRef(
     const fabRef = useRef<GFabRef>(null);
     // const { trigger } = useHaptic();
     const safeArea = useSafeAreaInsets();
-
     const typingStatusRef = useRef<GTypingStatusRef>(null);
     const { rowRenderer: rowRendererProp, data } = props;
 
@@ -51,10 +50,10 @@ export const ChatList = React.forwardRef(
     );
 
     // todo: remove console.log
-    console.log('height', listHeight);
-    console.log('windowDimensions.height', windowDimensions.height);
-    console.log('safeArea.bottom', safeArea.bottom);
-    console.log('safeArea.top', safeArea.top);
+    // console.log('height', listHeight);
+    // console.log('windowDimensions.height', windowDimensions.height);
+    // console.log('safeArea.bottom', safeArea.bottom);
+    // console.log('safeArea.top', safeArea.top);
 
     const dataProvider = useMemo<DataProvider>(() => {
       return new DataProvider((r1: GMessage, r2: GMessage) => {

@@ -8,19 +8,20 @@ import {
   InteractionManager,
   StyleSheet,
   Text,
-  TouchableOpacity,
+  TouchableWithoutFeedback,
   View,
   ViewStyle,
 } from 'react-native';
 import ReactNativeParsedText from 'react-native-parsed-text';
 import SIZES from './constants';
-import { GChatBubble, GUrlPreviewBubble, MediaType } from './types';
+import { useChatContext } from './context/WrapperContext';
+import { GChatBubble, GUrlPreviewBubble } from './types';
 import { ALL_PATERNS_SHAPES } from './utils/patterns';
 
 function _ChatBubble(props: GChatBubble) {
   const { message, children } = props;
   const [mediaLoaded, setMediaLoaded] = useState<boolean>(false);
-  const [showMedia, setShowMedia] = useState<boolean>(false);
+  const { setShowMedia } = useChatContext();
   const [showUrlPreview, setShowUrlPreview] = useState(false);
   const [urlPreviewData, setUrlPreviewData] = useState<GUrlPreviewBubble>();
   const createdAt = useMemo(() => {
@@ -41,13 +42,11 @@ function _ChatBubble(props: GChatBubble) {
   useEffect(() => {
     if (message?.media) {
       message.media.forEach((media) => {
-        if (media.type === MediaType.Image) {
-          InteractionManager.runAfterInteractions(() => {
-            Image.prefetch(media.uri).then(() => {
-              setMediaLoaded(true);
-            });
+        InteractionManager.runAfterInteractions(() => {
+          Image.prefetch(media.uri).then(() => {
+            setMediaLoaded(true);
           });
-        }
+        });
       });
     }
 
@@ -81,15 +80,14 @@ function _ChatBubble(props: GChatBubble) {
       const photoViewCompatible: ViewSource[] = [];
 
       message.media.forEach((media) => {
-        if (media.type === MediaType.Image) {
-          photoViewCompatible.push({
-            type: 'image',
-            source: {
-              uri: media.uri,
-            },
-          });
-        }
-
+        // if (media.type === MediaType.Image) {
+        //   photoViewCompatible.push({
+        //     type: 'image',
+        //     source: {
+        //       uri: media.uri,
+        //     },
+        //   });
+        // }
         // if (media.type === MediaType.Video) {
         //     photoViewCompatible.push({
         //         type: 'view',
@@ -112,21 +110,23 @@ function _ChatBubble(props: GChatBubble) {
           }}
         >
           {message?.media.map((media, index) => {
-            if (index < 3) {
+            if (index < 2) {
               return (
-                <TouchableOpacity
+                <TouchableWithoutFeedback
                   key={media.uri}
-                  onPress={() => setShowMedia(true)}
+                  onPress={() => {
+                    setShowMedia(media.uri);
+                    console.log('press');
+                  }}
                 >
-                  {media.type === MediaType.Image && mediaLoaded && (
-                    <View>
-                      <Image source={{ uri: media.uri }} style={styles.media} />
-                    </View>
-                  )}
+                  <View>
+                    <Image source={{ uri: media.uri }} style={styles.media} />
+                  </View>
+
                   {/* {media.type === MediaType.Video && (
                                         <VideoThumbnail media={media} />
-                                    )} */}
-                </TouchableOpacity>
+                  )} */}
+                </TouchableWithoutFeedback>
               );
             }
 
@@ -134,7 +134,12 @@ function _ChatBubble(props: GChatBubble) {
           })}
 
           {message.media.length > 3 && (
-            <TouchableOpacity onPress={() => setShowMedia(true)}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                setShowMedia(true);
+                console.log('press');
+              }}
+            >
               <ImageBackground
                 style={styles.media}
                 source={{ uri: message.media[3]?.uri }}
@@ -150,22 +155,14 @@ function _ChatBubble(props: GChatBubble) {
                   </Text>
                 </View>
               </ImageBackground>
-            </TouchableOpacity>
+            </TouchableWithoutFeedback>
           )}
-
-          {/* {showMedia && (
-                        <PhotoView
-                            views={photoViewCompatible}
-                            visible={showMedia}
-                            onRequestClose={() => setShowMedia(false)}
-                        />
-                    )} */}
         </View>
       );
     }
 
     return null;
-  }, [mediaLoaded, message, showMedia]);
+  }, [mediaLoaded, message]);
 
   // const renderUrlPreview = useMemo(() => {
   //     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {

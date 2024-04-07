@@ -1,15 +1,16 @@
 import { GuiText } from '@uidu/native';
 import React, { ForwardedRef, useEffect, useRef } from 'react';
 import { Keyboard, KeyboardAvoidingView, Platform, View } from 'react-native';
+import { ImageSource } from 'react-native-image-viewing/dist/@types';
 import ChatFooter from './ChatFooter';
 import { ChatList } from './ChatList';
+import { PhotoView } from './components/PhotoView';
 import { ChatContextProvider } from './context/WrapperContext';
 import { GChatty, ListRef } from './types';
 
 export const GuiChat = React.forwardRef(
   (props: GChatty, ref: ForwardedRef<ListRef>) => {
     const { messages, currentUser, mentions } = props;
-
     const listRef = useRef<ListRef>();
 
     useEffect(() => {
@@ -65,6 +66,14 @@ export const GuiChat = React.forwardRef(
             />
           </View>
         </KeyboardAvoidingView>
+        <PhotoView
+          images={
+            messages
+              .map((m) => m.media)
+              .filter((media) => media !== undefined)
+              .flat() as ImageSource[]
+          }
+        />
       </ChatContextProvider>
     );
   }

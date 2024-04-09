@@ -1,7 +1,7 @@
 import { MarkdownStyle } from '@expensify/react-native-live-markdown';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { PlusCircle, SendHorizontal, X } from '@tamagui/lucide-icons';
-import { GuiButton, Sheet } from '@uidu/native';
+import { GuiButton, GuiView, Sheet } from '@uidu/native';
 import React, { FC, useCallback, useMemo, useRef, useState } from 'react';
 import {
   FlatList,
@@ -86,7 +86,7 @@ export const _ChatFooter = (props: GFooterProps) => {
           snapPoints={[60]}
           dismissOnSnapToBottom
           zIndex={100_000}
-          animation="quick"
+          animation="medium"
         >
           <Sheet.Overlay
             animation="lazy"
@@ -96,14 +96,14 @@ export const _ChatFooter = (props: GFooterProps) => {
           <Sheet.Handle />
           <Sheet.Frame
             padding="$4"
-            justifyContent="center"
-            alignItems="center"
-            space="$5"
+            // justifyContent="center"
+            // alignItems="center"
           >
             <FlatList
               data={mentions}
               keyExtractor={(item) => item.id.toString()}
               renderItem={renderItem}
+              contentContainerStyle={{ gap: 10 }}
             />
           </Sheet.Frame>
         </Sheet>
@@ -121,7 +121,7 @@ export const _ChatFooter = (props: GFooterProps) => {
 
   return (
     <>
-      <View>
+      <GuiView borderTopWidth={1} borderTopColor="$gray5Light" flexGrow={1}>
         {replyMessage && (
           <View
             style={{
@@ -142,16 +142,14 @@ export const _ChatFooter = (props: GFooterProps) => {
             <X size={20} onPress={() => setReplyMessage(null)} />
           </View>
         )}
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: 10,
-            paddingHorizontal: 10,
-          }}
+        <GuiView
+          flexDirection="row"
+          alignItems="center"
+          gap="$2"
+          paddingHorizontal="$4"
         >
           <View>
-            <PlusCircle size={30} onPress={() => handlePresentModalPress()} />
+            <PlusCircle size={24} onPress={() => handlePresentModalPress()} />
           </View>
           <View style={{ flexDirection: 'row', flexGrow: 1 }}>
             <SafeAreaView>
@@ -181,13 +179,13 @@ export const _ChatFooter = (props: GFooterProps) => {
           >
             <SendHorizontal
               color={'white'}
-              size={29}
+              size={14}
               margin={4}
               onPress={__onPressSend}
             />
           </View>
-        </View>
-      </View>
+        </GuiView>
+      </GuiView>
     </>
   );
 };

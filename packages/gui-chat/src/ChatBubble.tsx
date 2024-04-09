@@ -8,21 +8,20 @@ import {
   InteractionManager,
   StyleSheet,
   Text,
-  TouchableOpacity,
+  TouchableWithoutFeedback,
   View,
   ViewStyle,
 } from 'react-native';
+import ReactNativeParsedText from 'react-native-parsed-text';
 import SIZES from './constants';
-import { GChatBubble, GUrlPreviewBubble, MediaType } from './types';
-import { ChatEmitter } from './utils/eventEmitter';
-import { loadParsedText } from './utils/patterns';
+import { useChatContext } from './context/WrapperContext';
+import { GChatBubble, GUrlPreviewBubble } from './types';
+import { ALL_PATERNS_SHAPES } from './utils/patterns';
 
-const ParsedText = loadParsedText();
-
-function _ChatBubble(props: GChatBubble) {
+function ChatBubbleComp(props: GChatBubble) {
   const { message, children } = props;
   const [mediaLoaded, setMediaLoaded] = useState<boolean>(false);
-  const [showMedia, setShowMedia] = useState<boolean>(false);
+  const { setShowMedia } = useChatContext();
   const [showUrlPreview, setShowUrlPreview] = useState(false);
   const [urlPreviewData, setUrlPreviewData] = useState<GUrlPreviewBubble>();
   const createdAt = useMemo(() => {
@@ -32,24 +31,22 @@ function _ChatBubble(props: GChatBubble) {
   const bubbleBackgroundColor = useMemo<ViewStyle>(() => {
     if (message?.itsMe) {
       return {
-        backgroundColor: '#afddfa',
+        backgroundColor: '#719198',
       };
     }
     return {
-      backgroundColor: '#c8faaf',
+      backgroundColor: '#e0e2db',
     };
   }, [message?.itsMe]);
 
   useEffect(() => {
     if (message?.media) {
       message.media.forEach((media) => {
-        if (media.type === MediaType.Image) {
-          InteractionManager.runAfterInteractions(() => {
-            Image.prefetch(media.uri).then(() => {
-              setMediaLoaded(true);
-            });
+        InteractionManager.runAfterInteractions(() => {
+          Image.prefetch(media.uri).then(() => {
+            setMediaLoaded(true);
           });
-        }
+        });
       });
     }
 
@@ -69,88 +66,6 @@ function _ChatBubble(props: GChatBubble) {
     // }
   }, [message?.media, message?.text]);
 
-  const onPressPattern = useCallback(
-    (pattern: string, index: number) => {
-      if (!message) return;
-      ChatEmitter?.emit('patternPressed', pattern, index, message);
-    },
-    [message]
-  );
-
-  // const messagePatterns = useMemo(() => {
-  //     const patterns: any[] = [];
-  //     if (!ParsedText) return;
-
-  //     LoadAllPaternShapes(onPressPattern);
-
-  //     if (propsContext.patternProps?.customPatterns) {
-  //         patterns.push(...propsContext.patternProps.customPatterns);
-  //     }
-
-  //     if (propsContext?.patternProps?.allowPatterns) {
-  //         propsContext.patternProps.allowPatterns.forEach((pattern) => {
-  //             switch (pattern) {
-  //                 case 'hashtag':
-  //                     patterns.push(HASHTAG_PATTERN_SHAPE);
-  //                     break;
-  //                 case 'mention':
-  //                     patterns.push(MENTION_PATTERN_SHAPE);
-  //                     break;
-  //                 case 'url':
-  //                     patterns.push(URL_PATTERN_SHAPE);
-  //                     break;
-  //             }
-  //         });
-  //     } else {
-  //         ALL_PATERNS_SHAPES.forEach((pattern) => patterns.push(pattern));
-  //     }
-
-  //     return patterns;
-  // }, [
-  //     onPressPattern,
-  //     propsContext?.enablePatterns,
-  //     propsContext?.patternProps?.allowPatterns,
-  //     propsContext?.patternProps?.customPatterns,
-  // ]);
-
-  // const renderTicks = useCallback(() => {
-  //     if (message?.status) {
-  //         switch (message.status) {
-  //             case MessageStatus.Sending:
-  //                 return (
-  //                     propsContext.bubbleProps?.tickProps?.sendingElement ?? (
-  //                         <Text>🔄</Text>
-  //                     )
-  //                 );
-
-  //             case MessageStatus.Sent:
-  //                 return (
-  //                     propsContext.bubbleProps?.tickProps?.sentElement ?? <Text>✔</Text>
-  //                 );
-
-  //             case MessageStatus.Delivered:
-  //                 return (
-  //                     propsContext.bubbleProps?.tickProps?.deliveredElement ?? (
-  //                         <Text>☑</Text>
-  //                     )
-  //                 );
-
-  //             case MessageStatus.Read:
-  //                 return (
-  //                     propsContext.bubbleProps?.tickProps?.readElement ?? <Text>✅</Text>
-  //                 );
-  //         }
-  //     }
-
-  //     return null;
-  // }, [
-  //     message?.status,
-  //     propsContext.bubbleProps?.tickProps?.deliveredElement,
-  //     propsContext.bubbleProps?.tickProps?.readElement,
-  //     propsContext.bubbleProps?.tickProps?.sendingElement,
-  //     propsContext.bubbleProps?.tickProps?.sentElement,
-  // ]);
-
   const renderFooter = useCallback(() => {
     return (
       <View style={styles.bubbleFooter}>
@@ -165,15 +80,14 @@ function _ChatBubble(props: GChatBubble) {
       const photoViewCompatible: ViewSource[] = [];
 
       message.media.forEach((media) => {
-        if (media.type === MediaType.Image) {
-          photoViewCompatible.push({
-            type: 'image',
-            source: {
-              uri: media.uri,
-            },
-          });
-        }
-
+        // if (media.type === MediaType.Image) {
+        //   photoViewCompatible.push({
+        //     type: 'image',
+        //     source: {
+        //       uri: media.uri,
+        //     },
+        //   });
+        // }
         // if (media.type === MediaType.Video) {
         //     photoViewCompatible.push({
         //         type: 'view',
@@ -196,21 +110,23 @@ function _ChatBubble(props: GChatBubble) {
           }}
         >
           {message?.media.map((media, index) => {
-            if (index < 3) {
+            if (index < 2) {
               return (
-                <TouchableOpacity
+                <TouchableWithoutFeedback
                   key={media.uri}
-                  onPress={() => setShowMedia(true)}
+                  onPress={() => {
+                    setShowMedia(media.uri);
+                    console.log('press');
+                  }}
                 >
-                  {media.type === MediaType.Image && mediaLoaded && (
-                    <View>
-                      <Image source={{ uri: media.uri }} style={styles.media} />
-                    </View>
-                  )}
+                  <View>
+                    <Image source={{ uri: media.uri }} style={styles.media} />
+                  </View>
+
                   {/* {media.type === MediaType.Video && (
                                         <VideoThumbnail media={media} />
-                                    )} */}
-                </TouchableOpacity>
+                  )} */}
+                </TouchableWithoutFeedback>
               );
             }
 
@@ -218,7 +134,12 @@ function _ChatBubble(props: GChatBubble) {
           })}
 
           {message.media.length > 3 && (
-            <TouchableOpacity onPress={() => setShowMedia(true)}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                setShowMedia(true);
+                console.log('press');
+              }}
+            >
               <ImageBackground
                 style={styles.media}
                 source={{ uri: message.media[3]?.uri }}
@@ -234,22 +155,14 @@ function _ChatBubble(props: GChatBubble) {
                   </Text>
                 </View>
               </ImageBackground>
-            </TouchableOpacity>
+            </TouchableWithoutFeedback>
           )}
-
-          {/* {showMedia && (
-                        <PhotoView
-                            views={photoViewCompatible}
-                            visible={showMedia}
-                            onRequestClose={() => setShowMedia(false)}
-                        />
-                    )} */}
         </View>
       );
     }
 
     return null;
-  }, [mediaLoaded, message, showMedia]);
+  }, [mediaLoaded, message]);
 
   // const renderUrlPreview = useMemo(() => {
   //     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
@@ -315,7 +228,9 @@ function _ChatBubble(props: GChatBubble) {
           <View>
             {renderMedia()}
 
-            <Text>{message?.text}</Text>
+            <ReactNativeParsedText parse={ALL_PATERNS_SHAPES}>
+              {message?.text}
+            </ReactNativeParsedText>
             {/* {renderUrlPreview} */}
             {renderFooter()}
           </View>
@@ -345,7 +260,7 @@ function _ChatBubble(props: GChatBubble) {
   );
 }
 
-export const ChatBubble = React.memo(_ChatBubble);
+export const ChatBubble = React.memo(ChatBubbleComp);
 
 export const styles = StyleSheet.create({
   wrapper: {

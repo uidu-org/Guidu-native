@@ -9488,7 +9488,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/gui-chat@npm:0.0.15, @uidu/gui-chat@workspace:packages/gui-chat":
+"@uidu/gui-chat@npm:0.0.16, @uidu/gui-chat@workspace:packages/gui-chat":
   version: 0.0.0-use.local
   resolution: "@uidu/gui-chat@workspace:packages/gui-chat"
   dependencies:
@@ -9504,6 +9504,7 @@ __metadata:
     react-native: "npm:0.72.10"
     react-native-controlled-mentions: "npm:^2.2.5"
     react-native-gesture-handler: "npm:~2.12.0"
+    react-native-image-viewing: "npm:^0.2.2"
     react-native-parsed-text: "npm:^0.0.22"
     react-native-reanimated: "npm:~3.3.0"
     react-native-safe-area-context: "npm:4.6.3"
@@ -9540,7 +9541,7 @@ __metadata:
     "@tamagui-extras/form": "npm:^1.16.0"
     "@tamagui/babel-plugin": "npm:^1.89.8"
     "@tamagui/lucide-icons": "npm:^1.89.8"
-    "@uidu/gui-chat": "npm:0.0.15"
+    "@uidu/gui-chat": "npm:0.0.16"
     "@uidu/native": "npm:0.0.33"
     "@uidu/native-config": "npm:0.0.8"
     babel-plugin-module-resolver: "npm:^4.1.0"

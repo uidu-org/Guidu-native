@@ -77,7 +77,7 @@
     "packages": [
       "./packages/ui",
       "./packages/gui-chat",
-      "!./packages/config",
+      "./packages/config",
       "!./packages/web/storybook",
       "!./packages/web",
       "!./packages/web/lib",

@@ -10,7 +10,8 @@
     "./packages/web/components/forms/*",
     "./packages/web/components/media/*",
     "./packages/web/src/**/*",
-    "./packages/web/lib"
+    "./packages/web/lib",
+    "./packages/web/"
   ],
   "scripts": {
     "storybook": "cd packages/web/storybook && npx storybook dev -p 6006",
@@ -26,6 +27,7 @@
     "web:prod:serve": "yarn workspace next-app serve",
     "fix": "manypkg fix",
     "build": "yarn workspaces foreach --all --exclude next-app run build",
+    "turbo:build": "turbo build --filter=!@uidu/guidu-website",
     "upgrade:tamagui": "yarn up '*tamagui*'@latest '@tamagui/*'@latest react-native-web-lite@latest",
     "upgrade:tamagui:canary": "yarn up '*tamagui*'@canary '@tamagui/*'@canary react-native-web-lite@canary",
     "check-deps": "check-dependency-version-consistency .",
@@ -75,12 +77,12 @@
     "packages": [
       "./packages/ui",
       "./packages/gui-chat",
-      "./packages/config",
+      "!./packages/config",
       "!./packages/web/storybook",
-      "./packages/web",
-      "./packages/web/lib",
-      "./packages/web/components/*/*",
-      "./packages/web/src/**/*"
+      "!./packages/web",
+      "!./packages/web/lib",
+      "!./packages/web/components/*/*",
+      "!./packages/web/src/**/*"
     ]
   },
   "peerDependencies": {

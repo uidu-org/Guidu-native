@@ -1,69 +1,70 @@
-import { DocsToc } from "@/components/layout/DocsToc";
-import { Route } from "@/components/layout/Sidebar";
-import { MDXContent } from "@/docs/components/mdx-content";
-import { getHeadings } from "@/lib/getHeadings";
-import { allDocs } from "contentlayer/generated";
+import { docs } from "@/app/source";
+import { DocsBody, DocsPage } from "fumadocs-ui/page";
+import { ExternalLinkIcon } from "lucide-react";
+import { notFound } from "next/navigation";
 
-interface ComponentList {
-    [key: string]: React.FC;
+export default function Page({ params }: { params: { slug?: string[] } }) {
+  const page = docs.getPage(params.slug);
+
+  if (!page) notFound();
+
+  const Content = page.data.exports.default;
+
+  return (
+      <DocsPage
+        toc={page.data.exports.toc}
+        tableOfContent={{
+          footer: (
+            <a
+              // href={`https://github.com/yeecord/website/tree/master/${page.file.path}`}
+              rel="noreferrer noopener"
+              target="_blank"
+              className="inline-flex items-center text-xs text-muted-foreground hover:text-accent-foreground"
+            >
+            - Github - <ExternalLinkIcon className="ml-2 h-3 w-3" />
+            </a>
+          ),
+        }}
+      >
+          <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
+          {page.data.title}
+        </h1>
+        <p className="mb-8 text-lg text-muted-foreground">
+          {page.data.description}
+        </p>
+        <DocsBody>
+          <Content />
+        </DocsBody>
+      </DocsPage>
+  );
 }
 
-type SlugKey = keyof ComponentList;
-
-interface DocPageProps {
-    params: {
-        slug: string[];
-    };
+export function generateStaticParams(): { slug: string[] }[] {
+  return docs.getPages().map((page) => ({
+    slug: page.slugs,
+  }));
 }
 
-async function getDocFromParams({ params }: DocPageProps) {
-    const slug = params.slug?.join("/") || "";
+// export function generateMetadata({ params }: { params: { slug?: string[] } }) {
+//   const page = docs.getPage(params.slug);
 
-    const doc = allDocs.find((doc) => doc.slugAsParams === slug);
+//   if (page == null) notFound();
 
-    if (!doc) {
-        null;
-    }
-
-    const headings = getHeadings(doc?.body.raw);
-
-    const currentRoute: Route = {
-        key: doc?._id,
-        title: doc?.title,
-        path: `/${doc?._raw?.sourceFilePath}`,
-    };
-
-    return { doc, headings, currentRoute };
-}
-
-export default async function DocsPages({ params }: DocPageProps) {
-    const slug = params.slug?.join("") || ""
-
-    const { doc, headings, currentRoute } = await getDocFromParams({ params });
-
-
-    // if (!componentList.hasOwnProperty(slug)) return null
-    // const Component = componentList[slug]
-
-    // const headings = getHeadings(
-    //     //docs stringify per leggere e creare i #inner anchor link
-    // );
-
-    return (
-        <>
-            <div className="col-span-12 lg:col-span-10 xl:col-span-8 lg:px-16 mt-10">
-                <div className="w-full prose prose-neutral">
-
-                    <MDXContent code={doc.body.code} />
-
-                </div>
-            </div>
-            {headings && headings.length > 0 && (
-                <div className="hidden z-10 xl:flex xl:col-span-2 mt-8 pl-4">
-                    <DocsToc headings={headings} />
-                </div>
-            )}
-        </>
-
-    )
-}
+//   return {
+//     title: page.data.title,
+//     description: page.data.description,
+//     alternates: {
+//       canonical: `${domain}/docs/` + (params.slug ?? []).join("/"),
+//     },
+//     openGraph: {
+//       images: {
+//         url: `/og${page.url}.png`,
+//         width: 1200,
+//         height: 630,
+//         alt: "Banner",
+//       },
+//       title: page.data.title,
+//       description: page.data.description,
+//     },
+//   } satisfies Metadata;
+// }

@@ -19,8 +19,8 @@ export default function MainPage() {
         </h1>
 
         <div className="flex justify-around w-56 mx-auto">
-          <Link href={'/docs'}>
-            <Button>Docs</Button>
+          <Link href={'/docs/core/accordion'}>
+            <Button>Docs example</Button>
           </Link>
           <Link target="_blank" href={'https://github.com/uidu-org/Guidu-native'}>
             <Button iconBefore={<Github />}>Git hub</Button>

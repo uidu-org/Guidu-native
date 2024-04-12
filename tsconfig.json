@@ -1,22 +1,52 @@
 {
+  "include": ["types", "packages"],
   "compilerOptions": {
+    "incremental": false,
+    "target": "es2020",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "importHelpers": true,
+    "declarationMap": true,
+    "composite": false,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "preserveSymlinks": true,
+    "jsx": "react-jsx",
+    "module": "system",
+    "moduleResolution": "node",
+    "noEmitOnError": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "useUnknownInCatchVariables": false,
+    "preserveConstEnums": true,
+    // DONT DO THIS so jsdoc will remain
+    "removeComments": false,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "types": ["node"],
+    "lib": ["dom", "esnext"],
     "strictNullChecks": true,
     "isolatedModules": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
       "app/*": ["./packages/app/*"]
       // "@uidu/native/*": ["./packages/ui/*"]
-    },
-    "jsx": "react-jsx"
+    }
   },
-  "include": ["types"],
-  "extends": "./tsconfig.base.json",
   "exclude": [
+    "_",
     "**/node_modules",
     "**/dist",
     "**/types",
     "apps/next/out",
     "apps/next/.next",
     "apps/next/.tamagui"
-  ]
+  ],
+  "typeAcquisition": {
+    "enable": true
+  }
 }

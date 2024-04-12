@@ -9,6 +9,7 @@ import React, {
   useState,
 } from 'react';
 import { useWindowDimensions } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
   DataProvider,
   LayoutProvider,
@@ -34,14 +35,25 @@ import { wait } from './utils/helpers';
 
 export const ChatList = React.forwardRef(
   (props: GListProps, ref: ForwardedRef<ListRef>) => {
-    const { setMessage } = useChatContext();
+    const { setReplyMessage } = useChatContext();
     const recyclerlistviewRef = useRef<RecyclerListView<any, any>>();
     const windowDimensions = useWindowDimensions();
     const fabRef = useRef<GFabRef>(null);
     // const { trigger } = useHaptic();
+    const safeArea = useSafeAreaInsets();
     const typingStatusRef = useRef<GTypingStatusRef>(null);
-
     const { rowRenderer: rowRendererProp, data } = props;
+
+    const listHeight = useMemo(
+      () => windowDimensions.height - safeArea.bottom - safeArea.top,
+      [windowDimensions, safeArea]
+    );
+
+    // todo: remove console.log
+    // console.log('height', listHeight);
+    // console.log('windowDimensions.height', windowDimensions.height);
+    // console.log('safeArea.bottom', safeArea.bottom);
+    // console.log('safeArea.top', safeArea.top);
 
     const dataProvider = useMemo<DataProvider>(() => {
       return new DataProvider((r1: GMessage, r2: GMessage) => {
@@ -231,7 +243,7 @@ in the current messages. If it is, then it will not scroll to the bottom. */
                 ) : (
                   <ChatBubble message={data} />
                 )} */}
-              <SwipeableBubble message={data} onReply={setMessage}>
+              <SwipeableBubble message={data} onReply={setReplyMessage}>
                 <ChatBubble message={data} />
               </SwipeableBubble>
             </>
@@ -256,11 +268,14 @@ in the current messages. If it is, then it will not scroll to the bottom. */
       <GuiView
         // minHeight={1}
         // minWidth={1}
-        style={{
-          // minHeight: '100%',
-          flex: 1,
-          flexGrow: 1,
-        }}
+        maxHeight={listHeight}
+        style={
+          {
+            // minHeight: '100%',/
+            // flex: 1,
+            // flexGrow: 1,
+          }
+        }
       >
         <ScrollToBottom onPress={scrollToBottom} ref={fabRef} />
         <RecyclerListView

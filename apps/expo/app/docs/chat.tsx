@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
+import { GMessage, GuiChat } from '@uidu/gui-chat';
 import { Stack } from 'expo-router';
 import { useCallback, useMemo, useRef, useState } from 'react';
-import { GMessage, GuiChat } from '../../components/chat-new';
 
 export default function DocsChatPage() {
   const listRef = useRef(null);
@@ -22,7 +22,11 @@ export default function DocsChatPage() {
           media: [
             {
               uri: faker.image.url(),
-              type: 0,
+              // type: 0,
+            },
+            {
+              uri: faker.image.url(),
+              // type: 0,
             },
           ],
         }),
@@ -35,8 +39,6 @@ export default function DocsChatPage() {
   const mentions = useMemo(() => {
     return messages.map((m) => m.user);
   }, [messages]);
-
-  console.log('mentions', mentions);
 
   const message = useRef<string>('');
 
@@ -54,7 +56,7 @@ export default function DocsChatPage() {
         repliedTo: repliedTo,
       }),
     });
-    console.log('hey');
+    console.log('message send');
   }, []);
 
   return (

@@ -11,10 +11,6 @@
     "dist",
     "types"
   ],
-  "scripts": {
-    "build": "tamagui-build --skipLibCheck",
-    "watch": "tamagui-build --skip-types --watch"
-  },
   "dependencies": {
     "@tamagui/animations-react-native": "^1.89.8",
     "@tamagui/font-inter": "^1.89.8",

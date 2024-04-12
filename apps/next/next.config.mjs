@@ -1,21 +1,25 @@
-import { withContentlayer } from 'next-contentlayer'
-// import redirects from './next-redirect.js'
+import createMDX from "fumadocs-mdx/config";
+
+const withMDX = createMDX({
+  rootMapPath: "./src/_map.ts",
+  rootContentPath: "./content",
+  buildSearchIndex: {
+    filter: (path) => {
+      return path.startsWith("docs");
+    },
+  },
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['@nextui-org/react', '@nextui-org/theme'],
-  swcMinify: true,
-  reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
-  // redirects: redirects,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    // ignoreBuildErrors: process.env.IS_VERCEL_ENV === "true",
-    ignoreBuildErrors: true,
-  },
+  pageExtensions: ["ts", "tsx", "mdx"],
   images: {
-    remotePatterns: [],
+    unoptimized: true,
   },
-}
-export default withContentlayer(nextConfig)
+  experimental: {
+    webpackBuildWorker: true,
+  },
+  output: "export",
+};
+
+export default withMDX(nextConfig);

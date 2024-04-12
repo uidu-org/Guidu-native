@@ -1,41 +1,23 @@
-import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
-import { GuiText } from '@uidu/native';
-import { useCallback } from 'react';
-import _PhotoView from "react-native-image-viewing";
-import { videoRef } from '../utils/videoRenderer';
+import { useMemo } from 'react';
+import ImageView from 'react-native-image-viewing';
+import { ImageSource } from 'react-native-image-viewing/dist/@types';
+import { useChatContext } from '../context/WrapperContext';
 
-interface IProps {
-  views: ViewSource[];
-  visible: boolean;
-  imageIndex: number
-  onRequestClose: () => void;
-}
+export const PhotoView = ({ images }: { images: ImageSource[] }) => {
+  const { setShowMedia, showMedia } = useChatContext();
 
-export const PhotoView = (props: IProps) => {
-  const { onRequestClose } = props;
+  const currentIndex = useMemo(
+    () => images.findIndex((image) => image.uri === showMedia),
+    [images, showMedia]
+  );
 
-  const _onRequestClose = useCallback(() => {
-    if (videoRef.current) {
-      videoRef.current?.unloadAsync();
-    }
-    onRequestClose();
-  }, [onRequestClose]);
-
-  const _onImageIndexChange = useCallback(() => {
-    if (videoRef.current) {
-      videoRef.current?.unloadAsync();
-    }
-  }, []);
-
-  <_PhotoView
-    {...props}
-    images={props.views}
-    imageIndex={props.imageIndex}
-    onRequestClose={_onRequestClose}
-    onImageIndexChange={_onImageIndexChange}
-    swipeToCloseEnabled
-  />
-
-  return <GuiText>hey</GuiText>
-
+  return (
+    <ImageView
+      keyExtractor={(item, index) => index.toString()}
+      images={images}
+      imageIndex={currentIndex}
+      visible={!!showMedia}
+      onRequestClose={() => setShowMedia(undefined)}
+    />
+  );
 };

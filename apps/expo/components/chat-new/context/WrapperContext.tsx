@@ -4,6 +4,8 @@ import { GMessage } from '../types';
 interface ChatContextValue {
   replyMessage: GMessage | null;
   open: boolean;
+  showMedia: string | undefined;
+  setShowMedia: React.Dispatch<React.SetStateAction<string | undefined>>;
   setReplyMessage: (message: GMessage) => void;
   setOpen: (status: boolean) => void;
 }
@@ -18,16 +20,19 @@ export const ChatContextProvider: React.FC<ChatContextProviderProps> = ({
   children,
 }) => {
   const [open, setOpen] = useState<boolean>(false);
+  const [showMedia, setShowMedia] = useState<string | undefined>();
   const [replyMessage, setReplyMessage] = useState<GMessage | null>(null);
 
   const contextValue: ChatContextValue = useMemo(
     () => ({
       replyMessage,
       open,
+      showMedia,
       setReplyMessage,
       setOpen,
+      setShowMedia,
     }),
-    [replyMessage, open, setReplyMessage, setOpen]
+    [replyMessage, open, showMedia, setReplyMessage, setOpen, setShowMedia]
   );
 
   return (

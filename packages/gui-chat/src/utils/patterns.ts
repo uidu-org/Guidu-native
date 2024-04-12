@@ -1,39 +1,42 @@
-import ReactNativeParsedText from 'react-native-parsed-text'
-import { GPatternShape } from '../types'
-export function loadParsedText() {
-  try {
-    return ReactNativeParsedText
-  } catch (err) {
-    console.warn(
-      "Couldn't load react-native-parsed-text, please install it if you want to use the pattern feature"
-    )
-  }
-}
+import { Alert } from 'react-native';
+import { replaceMentionValues } from 'react-native-controlled-mentions';
+import { ParseShape } from 'react-native-parsed-text';
 
-export const HASHTAG_PATTERN_SHAPE: GPatternShape = {
-  pattern: /#(\w+)/,
-  style: {
-    color: 'cyan',
+export const ALL_PATERNS_SHAPES: ParseShape[] = [
+  {
+    type: 'url',
+    style: {
+      color: 'blue',
+    },
+    onPress: (url, _index) => Alert.alert(`${url} has been pressed!`),
   },
-}
-export const MENTION_PATTERN_SHAPE: GPatternShape = {
-  pattern: /\B@\w+/g,
-  style: {
-    color: 'orange',
+  {
+    pattern: /\B@\w+/g,
+    style: {
+      color: 'orange',
+    },
+    onPress: (mention, _index) => Alert.alert(`${mention} has been pressed!`),
   },
-}
-export const URL_PATTERN_SHAPE: GPatternShape = {
-  type: 'url',
-  style: {
-    color: 'blue',
+  {
+    pattern: /#(\w+)/,
+    style: {
+      color: 'cyan',
+    },
+    onPress: (mention, _index) => Alert.alert(`${mention} has been pressed!`),
   },
-}
-
-export const ALL_PATERNS_SHAPES = [
-  HASHTAG_PATTERN_SHAPE,
-  MENTION_PATTERN_SHAPE,
-  URL_PATTERN_SHAPE,
-]
+  {
+    pattern: /@\[([^)]+)]\(([^)]+)\)/,
+    style: {
+      color: '#394876',
+    },
+    onPress: (prop, _index) => {
+      const userId = extractIdFromMention(prop);
+      Alert.alert(`${userId} has been pressed!`);
+    },
+    renderText: (value) =>
+      replaceMentionValues(value, ({ name }) => `@${name}`),
+  },
+];
 
 /**
  * Load all the patterns and set the onPress function
@@ -43,9 +46,21 @@ export function LoadAllPaternShapes(
   onPress: (pattern: string, index: number) => void
 ) {
   ALL_PATERNS_SHAPES.map((pattern) => {
-    if (pattern?.onPress) return
+    if (pattern?.onPress) return;
 
-    pattern.onPress = onPress
-    Object.freeze(pattern)
-  })
+    pattern.onPress = onPress;
+    Object.freeze(pattern);
+  });
+}
+
+function extractIdFromMention(mentionText: string) {
+  const mentionRegex = /@\[([^)]+)]\(([^)]+)\)/;
+  const match = mentionText.match(mentionRegex);
+
+  if (match) {
+    const id = match[2];
+    return id;
+  }
+
+  return null; // Return null if no match is found
 }

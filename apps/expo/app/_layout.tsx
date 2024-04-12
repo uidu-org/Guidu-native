@@ -1,8 +1,12 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import {
+  DarkTheme,
+  DefaultTheme,
+  ThemeProvider,
+} from '@react-navigation/native';
 import { TamaguiProvider } from '@uidu/native';
 import { config } from '@uidu/native-config';
 import { Slot } from 'expo-router';
-import { useColorScheme } from 'react-native';
+import React, { useColorScheme } from 'react-native';
 
 export default function HomeLayout() {
   // const [loaded] = useFonts({

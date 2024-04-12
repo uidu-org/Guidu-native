@@ -1,5 +1,5 @@
 module.exports = function (api) {
-  api.cache(true)
+  api.cache(true);
   return {
     presets: [['babel-preset-expo', { jsxRuntime: 'automatic' }]],
     plugins: [
@@ -32,5 +32,5 @@ module.exports = function (api) {
           ]),
       'transform-inline-environment-variables',
     ],
-  }
-}
+  };
+};

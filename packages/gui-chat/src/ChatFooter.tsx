@@ -1,4 +1,3 @@
-import { MarkdownStyle } from '@expensify/react-native-live-markdown';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { PlusCircle, SendHorizontal, X } from '@tamagui/lucide-icons';
 import { GuiButton, GuiView, Sheet } from '@uidu/native';
@@ -19,7 +18,7 @@ import {
 import { useChatContext } from './context/WrapperContext';
 import { GFooterProps, GUser } from './types';
 
-export const _ChatFooter = (props: GFooterProps) => {
+const ChatFooterComp: FC<GFooterProps> = (props) => {
   const { mentions, value } = props;
   const { replyMessage, setReplyMessage } = useChatContext();
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -81,7 +80,7 @@ export const _ChatFooter = (props: GFooterProps) => {
       return (
         <Sheet
           modal
-          open={true}
+          open
           onOpenChange={() => {}}
           snapPoints={[60]}
           dismissOnSnapToBottom
@@ -90,8 +89,8 @@ export const _ChatFooter = (props: GFooterProps) => {
         >
           <Sheet.Overlay
             animation="lazy"
-            enterStyle={{ opacity: 0 }}
-            exitStyle={{ opacity: 0 }}
+            enterStyle={{ o: 0 }}
+            exitStyle={{ o: 0 }}
           />
           <Sheet.Handle />
           <Sheet.Frame
@@ -120,73 +119,69 @@ export const _ChatFooter = (props: GFooterProps) => {
   }, [text, replyMessage]);
 
   return (
-    <>
-      <GuiView borderTopWidth={1} borderTopColor="$gray5Light" flexGrow={1}>
-        {replyMessage && (
-          <View
-            style={{
-              width: '100%',
-              flexDirection: 'row',
-              position: 'absolute',
-              bottom: 45,
-              backgroundColor: 'white',
-              padding: 5,
-            }}
-          >
-            <View style={styles.replyBody}>
-              <Text style={[styles.replyUsername]}>
-                {replyMessage.user.name}
-              </Text>
-              <Text>{cuttedText}</Text>
-            </View>
-            <X size={20} onPress={() => setReplyMessage(null)} />
-          </View>
-        )}
-        <GuiView
-          flexDirection="row"
-          alignItems="center"
-          gap="$2"
-          paddingHorizontal="$4"
+    <GuiView borderTopWidth={1} borderTopColor="$gray5Light" flexGrow={1}>
+      {replyMessage && (
+        <View
+          style={{
+            width: '100%',
+            flexDirection: 'row',
+            position: 'absolute',
+            bottom: 45,
+            backgroundColor: 'white',
+            padding: 5,
+          }}
         >
-          <View>
-            <PlusCircle size={24} onPress={() => handlePresentModalPress()} />
+          <View style={styles.replyBody}>
+            <Text style={[styles.replyUsername]}>{replyMessage.user.name}</Text>
+            <Text>{cuttedText}</Text>
           </View>
-          <View style={{ flexDirection: 'row', flexGrow: 1 }}>
-            <SafeAreaView>
-              <MentionInput
-                multiline
-                value={text}
-                onChange={onChangeText}
-                partTypes={[
-                  {
-                    trigger: '@',
-                    renderSuggestions: renderMentionSuggestions,
-                    textStyle: { fontWeight: '700', color: 'gray' }, //
-                  },
-                ]}
-                placeholder="Type here..."
-                style={{ padding: 12, maxWidth: windowWidth - 120 }}
-              />
-            </SafeAreaView>
-          </View>
-          <View
-            style={{
-              padding: 2,
-              backgroundColor: 'green',
-              borderRadius: 30,
-              margin: 3,
-            }}
-          >
-            <SendHorizontal
-              color={'white'}
-              size={14}
-              margin={4}
-              onPress={__onPressSend}
+          <X size={20} onPress={() => setReplyMessage(null)} />
+        </View>
+      )}
+      <GuiView
+        flexDirection="row"
+        alignItems="center"
+        gap="$2"
+        paddingHorizontal="$4"
+      >
+        <View>
+          <PlusCircle size={24} onPress={() => handlePresentModalPress()} />
+        </View>
+        <View style={{ flexDirection: 'row', flexGrow: 1 }}>
+          <SafeAreaView>
+            <MentionInput
+              multiline
+              value={text}
+              onChange={onChangeText}
+              partTypes={[
+                {
+                  trigger: '@',
+                  renderSuggestions: renderMentionSuggestions,
+                  textStyle: { fontWeight: '700', color: 'gray' }, //
+                },
+              ]}
+              placeholder="Type here..."
+              style={{ padding: 12, maxWidth: windowWidth - 120 }}
             />
-          </View>
-        </GuiView>
+          </SafeAreaView>
+        </View>
+        <View
+          style={{
+            padding: 2,
+            backgroundColor: 'green',
+            borderRadius: 30,
+            margin: 3,
+          }}
+        >
+          <SendHorizontal
+            color={'white'}
+            size={14}
+            margin={4}
+            onPress={__onPressSend}
+          />
+        </View>
       </GuiView>
-    </>
+    </GuiView>
   );
 };
 
@@ -270,42 +265,6 @@ const styles = StyleSheet.create({
   },
 });
 
-const markdownStyle: MarkdownStyle = {
-  syntax: {
-    color: 'gray',
-  },
-  link: {
-    color: 'blue',
-  },
-  h1: {
-    fontSize: 25,
-  },
-  blockquote: {
-    borderColor: 'gray',
-    borderWidth: 6,
-    marginLeft: 6,
-    paddingLeft: 6,
-  },
-  code: {
-    fontFamily: 'monospace',
-    color: 'black',
-    backgroundColor: 'lightgray',
-  },
-  pre: {
-    fontFamily: 'monospace',
-    color: 'black',
-    backgroundColor: 'lightgray',
-  },
-  mentionHere: {
-    color: 'green',
-    backgroundColor: 'lime',
-  },
-  mentionUser: {
-    color: 'blue',
-    backgroundColor: 'cyan',
-  },
-};
-
 // const renderItem = useCallback(({ item }: { item: GUser }) => {
 //     const handleUserClick = () => {
 //         console.log("Call handleTextChange to push the mention");
@@ -339,4 +298,4 @@ const markdownStyle: MarkdownStyle = {
 //     }
 // }, [handleCloseModalPress, handlePresentModalPress]);
 
-export default React.memo(_ChatFooter);
+export default React.memo(ChatFooterComp);

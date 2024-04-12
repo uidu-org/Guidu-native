@@ -9,7 +9,6 @@ import React, {
   useState,
 } from 'react';
 import { useWindowDimensions } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
   DataProvider,
   LayoutProvider,
@@ -40,14 +39,14 @@ export const ChatList = React.forwardRef(
     const windowDimensions = useWindowDimensions();
     const fabRef = useRef<GFabRef>(null);
     // const { trigger } = useHaptic();
-    const safeArea = useSafeAreaInsets();
+    // const safeArea = useSafeAreaInsets();
     const typingStatusRef = useRef<GTypingStatusRef>(null);
     const { rowRenderer: rowRendererProp, data } = props;
 
-    const listHeight = useMemo(
-      () => windowDimensions.height - safeArea.bottom - safeArea.top,
-      [windowDimensions, safeArea]
-    );
+    // const listHeight = useMemo(
+    //   () => windowDimensions.height - safeArea.bottom - safeArea.top,
+    //   [windowDimensions, safeArea]
+    // );
 
     // todo: remove console.log
     // console.log('height', listHeight);
@@ -266,16 +265,14 @@ in the current messages. If it is, then it will not scroll to the bottom. */
 
     return (
       <GuiView
-        // minHeight={1}
-        // minWidth={1}
-        maxHeight={listHeight}
-        style={
-          {
-            // minHeight: '100%',/
-            // flex: 1,
-            // flexGrow: 1,
-          }
-        }
+        minHeight={1}
+        minWidth={1}
+        // maxHeight={listHeight}
+        style={{
+          // minHeight: '100%',/
+          flex: 1,
+          flexGrow: 1,
+        }}
       >
         <ScrollToBottom onPress={scrollToBottom} ref={fabRef} />
         <RecyclerListView

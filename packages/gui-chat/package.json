@@ -1,6 +1,6 @@
 {
   "name": "@uidu/gui-chat",
-  "version": "0.0.20",
+  "version": "0.0.29",
   "sideEffects": [
     "*.css"
   ],
@@ -13,8 +13,7 @@
     "build": "npx tsup src"
   },
   "devDependencies": {
-    "@types/react": "^18.2.55",
-    "tamagui": "^1.89.8"
+    "@types/react": "^18.2.55"
   },
   "dependencies": {
     "@tamagui/lucide-icons": "^1.89.8",
@@ -25,14 +24,13 @@
     "expo-haptics": "^12.8.1",
     "expo-image-picker": "^14.7.1",
     "react": "^18.2.0",
-    "react-native": "0.72.10",
+    "react-native": "0.73.6",
     "react-native-controlled-mentions": "^2.2.5",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-image-viewing": "0.2.2",
     "react-native-parsed-text": "^0.0.22",
     "react-native-reanimated": "~3.3.0",
-    "react-native-safe-area-context": "4.6.3",
-    "react-native-svg": "^14.1.0",
+    "react-native-svg": "13.9.0",
     "recyclerlistview": "^4.2.0"
   },
   "publishConfig": {
@@ -41,10 +39,8 @@
   },
   "peerDependencies": {
     "react-native": "*",
-    "react-native-gesture-handler": "*",
-    "react-native-reanimated": "*",
-    "react-native-safe-area-context": "*",
-    "react-native-svg": "*",
-    "tamagui": "*"
+    "react-native-gesture-handler": "~2.12.0",
+    "react-native-reanimated": "~3.3.0",
+    "react-native-svg": "13.9.0"
   }
 }

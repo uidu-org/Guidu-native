@@ -1,11 +1,10 @@
 import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
 import dayjs from 'dayjs';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   Dimensions,
   Image,
   ImageBackground,
-  InteractionManager,
   StyleSheet,
   Text,
   TouchableWithoutFeedback,
@@ -18,15 +17,16 @@ import { useChatContext } from './context/WrapperContext';
 import { GChatBubble, GUrlPreviewBubble } from './types';
 import { ALL_PATERNS_SHAPES } from './utils/patterns';
 
-function _ChatBubble(props: GChatBubble) {
+function ChatBubbleComp(props: GChatBubble) {
   const { message, children } = props;
   const [mediaLoaded, setMediaLoaded] = useState<boolean>(false);
   const { setShowMedia } = useChatContext();
   const [showUrlPreview, setShowUrlPreview] = useState(false);
   const [urlPreviewData, setUrlPreviewData] = useState<GUrlPreviewBubble>();
-  const createdAt = useMemo(() => {
-    return message && dayjs(message.createdAt).format('HH:mm');
-  }, [message]);
+  const createdAt = useMemo(
+    () => message && dayjs(message.createdAt).format('HH:mm'),
+    [message]
+  );
 
   const bubbleBackgroundColor = useMemo<ViewStyle>(() => {
     if (message?.itsMe) {
@@ -39,41 +39,42 @@ function _ChatBubble(props: GChatBubble) {
     };
   }, [message?.itsMe]);
 
-  useEffect(() => {
-    if (message?.media) {
-      message.media.forEach((media) => {
-        InteractionManager.runAfterInteractions(() => {
-          Image.prefetch(media.uri).then(() => {
-            setMediaLoaded(true);
-          });
-        });
-      });
-    }
+  // useEffect(() => {
+  //   if (message?.media) {
+  //     message.media.forEach((media) => {
+  //       InteractionManager.runAfterInteractions(() => {
+  //         Image.prefetch(media.uri).then(() => {
+  //           setMediaLoaded(true);
+  //         });
+  //       });
+  //     });
+  //   }
 
-    // if (propsContext.enableUrlPreviews) {
-    //     InteractionManager.runAfterInteractions(async () => {
-    //         const url = extractUrlFromString(message?.text ?? '');
+  // if (propsContext.enableUrlPreviews) {
+  //     InteractionManager.runAfterInteractions(async () => {
+  //         const url = extractUrlFromString(message?.text ?? '');
 
-    //         if (url) {
-    //             const data = await fetchMetaData(url);
+  //         if (url) {
+  //             const data = await fetchMetaData(url);
 
-    //             if (data) {
-    //                 setShowUrlPreview(true);
-    //                 setUrlPreviewData(data);
-    //             }
-    //         }
-    //     });
-    // }
-  }, [message?.media, message?.text]);
+  //             if (data) {
+  //                 setShowUrlPreview(true);
+  //                 setUrlPreviewData(data);
+  //             }
+  //         }
+  //     });
+  // }
+  // }, [message?.media, message?.text]);
 
-  const renderFooter = useCallback(() => {
-    return (
+  const renderFooter = useCallback(
+    () => (
       <View style={styles.bubbleFooter}>
         <Text style={[styles.date]}>{createdAt}</Text>
         {/* {renderTicks()} */}
       </View>
-    );
-  }, [createdAt, message?.itsMe]);
+    ),
+    [createdAt, message?.itsMe]
+  );
 
   const renderMedia = useCallback(() => {
     if (message?.media) {
@@ -136,8 +137,7 @@ function _ChatBubble(props: GChatBubble) {
           {message.media.length > 3 && (
             <TouchableWithoutFeedback
               onPress={() => {
-                setShowMedia(true);
-                console.log('press');
+                setShowMedia(message.media[3]?.uri);
               }}
             >
               <ImageBackground
@@ -162,7 +162,7 @@ function _ChatBubble(props: GChatBubble) {
     }
 
     return null;
-  }, [mediaLoaded, message]);
+  }, [message, setShowMedia]);
 
   // const renderUrlPreview = useMemo(() => {
   //     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
@@ -260,7 +260,7 @@ function _ChatBubble(props: GChatBubble) {
   );
 }
 
-export const ChatBubble = React.memo(_ChatBubble);
+export const ChatBubble = React.memo(ChatBubbleComp);
 
 export const styles = StyleSheet.create({
   wrapper: {

@@ -10357,7 +10357,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/core-ui@npm:0.0.6, @uidu/core-ui@workspace:packages/web/src/core":
+"@uidu/core-ui@npm:0.0.7, @uidu/core-ui@workspace:packages/web/src/core":
   version: 0.0.0-use.local
   resolution: "@uidu/core-ui@workspace:packages/web/src/core"
   dependencies:
@@ -10611,7 +10611,7 @@ __metadata:
     "@types/unist": "npm:^3.0.2"
     "@typescript-eslint/eslint-plugin": "npm:^7.6.0"
     "@typescript-eslint/parser": "npm:^7.6.0"
-    "@uidu/core-ui": "npm:0.0.6"
+    "@uidu/core-ui": "npm:0.0.7"
     autoprefixer: "npm:^10.4.17"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"

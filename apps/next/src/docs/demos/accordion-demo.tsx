@@ -1,3 +1,5 @@
+"use client"
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@uidu/core-ui'
 
 export default function AccordionDemo() {

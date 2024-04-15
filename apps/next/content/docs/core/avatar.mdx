@@ -3,4 +3,44 @@ title: "Avatars"
 description: a great way to use Avatarss!
 ---
 
-## testing step 1
+import AvatarDemo from "../../../src/docs/demos/avatar-demo"
+
+## Avatar
+
+<AvatarDemo />
+
+## Tabs with preview and code
+
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+
+<div style={{height : 300, display  :"grid", placeItems : "center"}}>
+<AvatarDemo />
+</div>
+
+</Tab>
+
+<Tab value="code">
+
+```ts
+"use client"
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@uidu/core-ui"
+
+export default function AvatarDemo() {
+  return (
+    <Avatar>
+      <AvatarImage src="https://avatars.githubusercontent.com/u/124514869?v=4" alt="random photo" />
+      <AvatarFallback>CN</AvatarFallback>
+    </Avatar>
+  )
+}
+``` 
+</Tab>
+
+</Tabs>

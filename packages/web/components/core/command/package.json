@@ -8,7 +8,7 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/dialog-ui": "0.0.1",
+    "@uidu/dialog-ui": "0.0.2",
     "@uidu/lib": "0.0.1",
     "cmdk": "^0.2.1",
     "react": "^18.2.0"

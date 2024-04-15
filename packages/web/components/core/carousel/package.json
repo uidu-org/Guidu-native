@@ -8,7 +8,7 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/button-ui": "0.0.3",
+    "@uidu/button-ui": "0.0.4",
     "@uidu/lib": "0.0.1",
     "embla-carousel-react": "8.0.0-rc22",
     "react": "^18.2.0"

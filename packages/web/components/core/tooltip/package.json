@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@uidu/button-ui": "workspace:^",
+    "@uidu/button-ui": "0.0.4",
     "@uidu/lib": "0.0.1",
     "react": "^18.2.0"
   },

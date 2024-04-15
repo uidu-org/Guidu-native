@@ -11,7 +11,8 @@
     "./packages/web/components/media/*",
     "./packages/web/src/**/*",
     "./packages/web/lib",
-    "./packages/web/"
+    "./packages/web/",
+    "./packages/web/storybook"
   ],
   "scripts": {
     "storybook": "cd packages/web/storybook && npx storybook dev -p 6006",

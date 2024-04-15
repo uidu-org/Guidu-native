@@ -9,9 +9,6 @@
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "npx tsup src"
-  },
   "devDependencies": {
     "@types/react": "^18.2.55"
   },

@@ -8,7 +8,7 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/accordion-ui": "0.0.6",
+    "@uidu/accordion-ui": "0.0.9",
     "@uidu/alert-ui": "0.0.4",
     "@uidu/avatar-ui": "0.0.5",
     "@uidu/badge-ui": "0.0.2",

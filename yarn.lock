@@ -10193,7 +10193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uidu/accordion-ui@npm:0.0.6, @uidu/accordion-ui@workspace:packages/web/components/core/accordion":
+"@uidu/accordion-ui@npm:0.0.9, @uidu/accordion-ui@workspace:packages/web/components/core/accordion":
   version: 0.0.0-use.local
   resolution: "@uidu/accordion-ui@workspace:packages/web/components/core/accordion"
   dependencies:
@@ -10362,7 +10362,7 @@ __metadata:
   resolution: "@uidu/core-ui@workspace:packages/web/src/core"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/accordion-ui": "npm:0.0.6"
+    "@uidu/accordion-ui": "npm:0.0.9"
     "@uidu/alert-ui": "npm:0.0.4"
     "@uidu/avatar-ui": "npm:0.0.5"
     "@uidu/badge-ui": "npm:0.0.2"

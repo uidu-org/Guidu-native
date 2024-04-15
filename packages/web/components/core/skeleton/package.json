@@ -20,9 +20,9 @@
   },
   "scripts": {
     "build": "npx tsup src --dts",
-    "versionPatch": "npm version patch",
-    "versionMinor": "npm version minor",
-    "versionMajor": "npm version major",
+    "versionPatch": "yarn version patch",
+    "versionMinor": "yarn version minor",
+    "versionMajor": "yarn version major",
     "npmPublish": "npm publish"
   }
 }

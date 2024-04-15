@@ -10193,31 +10193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uidu/accordion-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/accordion-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-accordion": "npm:1.1.2"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: db55a43500be7067748e45748fa5b72e18873c7e9b7e7b388745198f5b286aef18991d0fc40691fe9520ff12e0d223020edf0d6adf4f2e13b58c8ce1c66524f2
-  languageName: node
-  linkType: hard
-
-"@uidu/accordion-ui@npm:0.0.5":
-  version: 0.0.5
-  resolution: "@uidu/accordion-ui@npm:0.0.5"
-  dependencies:
-    "@radix-ui/react-accordion": "npm:1.1.2"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: ccc61ad8fdc71f98e0a39b4ffa0fd99b32401bb784971db0c6c2d43071b68b987ac10b8a317eb26f3dd8e4b22b343c1b1beaa934ec8b9ceec2d804b3989d4107
-  languageName: node
-  linkType: hard
-
-"@uidu/accordion-ui@workspace:packages/web/components/core/accordion":
+"@uidu/accordion-ui@npm:0.0.6, @uidu/accordion-ui@workspace:packages/web/components/core/accordion":
   version: 0.0.0-use.local
   resolution: "@uidu/accordion-ui@workspace:packages/web/components/core/accordion"
   dependencies:
@@ -10228,19 +10204,6 @@ __metadata:
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
-
-"@uidu/alert-ui@npm:0.0.3":
-  version: 0.0.3
-  resolution: "@uidu/alert-ui@npm:0.0.3"
-  dependencies:
-    "@radix-ui/react-alert-dialog": "npm:1.0.5"
-    "@uidu/button-ui": "npm:0.0.3"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: dd9224f4432c49128863bf5e1eb4ce157da70edee7156a74d10beef3a3ea42b9e3c521d9138ff004b8bbba9fc1ac23e8a334c869137cb8f523c7494a0ae2528d
-  languageName: node
-  linkType: hard
 
 "@uidu/alert-ui@npm:0.0.4, @uidu/alert-ui@workspace:packages/web/components/core/alert":
   version: 0.0.0-use.local
@@ -10255,19 +10218,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/avatar-ui@npm:0.0.3":
-  version: 0.0.3
-  resolution: "@uidu/avatar-ui@npm:0.0.3"
-  dependencies:
-    "@radix-ui/react-avatar": "npm:^1.0.4"
-    "@uidu/button-ui": "npm:0.0.3"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: ed046d34411fe5e4983db3603c091df7e0857fd775b3ac188fd3f184bc26d32e47c509bbf3aa8d05311f5372045e864e0736b34ba9ebab931112cc24652f19be
-  languageName: node
-  linkType: hard
-
 "@uidu/avatar-ui@npm:0.0.5, @uidu/avatar-ui@workspace:packages/web/components/core/avatar":
   version: 0.0.0-use.local
   resolution: "@uidu/avatar-ui@workspace:packages/web/components/core/avatar"
@@ -10281,17 +10231,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/badge-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/badge-ui@npm:0.0.1"
-  dependencies:
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: 8df313f8f54b776794337cdbdd31d3b89f25e918af2047727acd5b90bf3b99f69959fb573fa114ea26b3dfc54178f70ea1c7f75e1cfa6af962c0db0160b8c799
-  languageName: node
-  linkType: hard
-
 "@uidu/badge-ui@npm:0.0.2, @uidu/badge-ui@workspace:packages/web/components/core/badge":
   version: 0.0.0-use.local
   resolution: "@uidu/badge-ui@workspace:packages/web/components/core/badge"
@@ -10302,18 +10241,6 @@ __metadata:
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
-
-"@uidu/button-ui@npm:0.0.3":
-  version: 0.0.3
-  resolution: "@uidu/button-ui@npm:0.0.3"
-  dependencies:
-    "@radix-ui/react-slot": "npm:^1.0.2"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: 7dc9ec98cefa08e758de29cdef48ee919daf1aa365ecc25388865b31d0092f8d387680f1ec4bf465e21249f98154e2516b897276979734eb4c8f6f07bfec69dc
-  languageName: node
-  linkType: hard
 
 "@uidu/button-ui@npm:0.0.4, @uidu/button-ui@workspace:packages/web/components/core/button":
   version: 0.0.0-use.local
@@ -10347,16 +10274,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/card-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/card-ui@npm:0.0.1"
-  dependencies:
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: 196d8ccd6d523b16bc2b1a1be39fefef471bbb36429b202a5741229eab4fe9290c6dad010705f01dd900fa5d5a9390459e8a8053b3d47649768f8327d7266ed1
-  languageName: node
-  linkType: hard
-
 "@uidu/card-ui@npm:0.0.2, @uidu/card-ui@workspace:packages/web/components/core/card":
   version: 0.0.0-use.local
   resolution: "@uidu/card-ui@workspace:packages/web/components/core/card"
@@ -10366,18 +10283,6 @@ __metadata:
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
-
-"@uidu/carousel-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/carousel-ui@npm:0.0.1"
-  dependencies:
-    "@uidu/button-ui": "npm:0.0.3"
-    "@uidu/lib": "npm:0.0.1"
-    embla-carousel-react: "npm:8.0.0-rc22"
-    react: "npm:^18.2.0"
-  checksum: 4831f010f56e93d5a3faef69d9fc97d700ea9990919b7d897ae4264545c85932072a9fbeb0e799a951c11d783a2525accfd1edba25a0b9332ec75e360b9186fd
-  languageName: node
-  linkType: hard
 
 "@uidu/carousel-ui@npm:0.0.2, @uidu/carousel-ui@workspace:packages/web/components/core/carousel":
   version: 0.0.0-use.local
@@ -10406,16 +10311,6 @@ __metadata:
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
-
-"@uidu/collapsable-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/collapsable-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-collapsible": "npm:1.0.3"
-    react: "npm:^18.2.0"
-  checksum: 7340888cdee3affb947b98a792c01414a1ca969f3acceaaf23b64c641b94eee0836c7f313137c258d9a8c26fa86a27a348aed23d0cbe1d537e9248d2923cee23
-  languageName: node
-  linkType: hard
 
 "@uidu/collapsable-ui@npm:0.0.2, @uidu/collapsable-ui@workspace:packages/web/components/core/collapsable":
   version: 0.0.0-use.local
@@ -10451,17 +10346,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/context-menu-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/context-menu-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-context-menu": "npm:^2.1.5"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: 175a6b355523db30f8c9ca129e70303b0c43d252b01e868172e429c85bac1edbbd45506d72f31516cebd336bb35139b5bdc95d521afaea966082da3c1a74011a
-  languageName: node
-  linkType: hard
-
 "@uidu/context-menu-ui@npm:0.0.2, @uidu/context-menu-ui@workspace:packages/web/components/core/context-menu":
   version: 0.0.0-use.local
   resolution: "@uidu/context-menu-ui@workspace:packages/web/components/core/context-menu"
@@ -10473,50 +10357,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/core-ui@npm:0.0.5":
-  version: 0.0.5
-  resolution: "@uidu/core-ui@npm:0.0.5"
-  dependencies:
-    "@uidu/accordion-ui": "npm:0.0.1"
-    "@uidu/alert-ui": "npm:0.0.3"
-    "@uidu/avatar-ui": "npm:0.0.3"
-    "@uidu/badge-ui": "npm:0.0.1"
-    "@uidu/button-ui": "npm:0.0.3"
-    "@uidu/card-ui": "npm:0.0.1"
-    "@uidu/carousel-ui": "npm:0.0.1"
-    "@uidu/collapsable-ui": "npm:0.0.1"
-    "@uidu/command-ui": "npm:0.0.1"
-    "@uidu/context-menu-ui": "npm:0.0.1"
-    "@uidu/dialog-ui": "npm:0.0.1"
-    "@uidu/drawer-ui": "npm:0.0.1"
-    "@uidu/dropdown-menu-ui": "npm:0.0.1"
-    "@uidu/image-ui": "npm:0.0.1"
-    "@uidu/label-ui": "npm:0.0.1"
-    "@uidu/media-card-ui": "npm:0.0.2"
-    "@uidu/navigation-menu-ui": "npm:0.0.1"
-    "@uidu/pagination-ui": "npm:0.0.2"
-    "@uidu/popover-ui": "npm:0.0.2"
-    "@uidu/progress-ui": "npm:0.0.1"
-    "@uidu/resizable-ui": "npm:0.0.1"
-    "@uidu/scroll-area-ui": "npm:0.0.1"
-    "@uidu/separator-ui": "npm:0.0.1"
-    "@uidu/sheet-ui": "npm:0.0.1"
-    "@uidu/table-ui": "npm:0.0.1"
-    "@uidu/tabs-ui": "npm:0.0.1"
-    "@uidu/toast-ui": "npm:0.0.1"
-    "@uidu/tooltip-ui": "npm:0.0.2"
-    react: "npm:^18.2.0"
-    react-hook-form: "npm:^7.49.3"
-  checksum: baf304bb3730298a15a02783898bae2863d5d94957bf321b702f49d296244ca6bf9355d968759916e24c58ea397f65c7a9ed592f186b3c257dfcdbf59d66a2fd
-  languageName: node
-  linkType: hard
-
-"@uidu/core-ui@workspace:packages/web/src/core":
+"@uidu/core-ui@npm:0.0.6, @uidu/core-ui@workspace:packages/web/src/core":
   version: 0.0.0-use.local
   resolution: "@uidu/core-ui@workspace:packages/web/src/core"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/accordion-ui": "npm:0.0.5"
+    "@uidu/accordion-ui": "npm:0.0.6"
     "@uidu/alert-ui": "npm:0.0.4"
     "@uidu/avatar-ui": "npm:0.0.5"
     "@uidu/badge-ui": "npm:0.0.2"
@@ -10549,18 +10395,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/dialog-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/dialog-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-dialog": "npm:1.0.5"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: 9a394d68cb07cd897693bedb0addbd3a222f1b5f53a6405e0f8f1c514c4141eb8e8661f86ca5c3e1399606de670ba9ba8edc3af0a785dc92eff35103b48d667b
-  languageName: node
-  linkType: hard
-
 "@uidu/dialog-ui@npm:0.0.2, @uidu/dialog-ui@workspace:packages/web/components/core/dialog":
   version: 0.0.0-use.local
   resolution: "@uidu/dialog-ui@workspace:packages/web/components/core/dialog"
@@ -10573,17 +10407,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/drawer-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/drawer-ui@npm:0.0.1"
-  dependencies:
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-    vaul: "npm:^0.9.0"
-  checksum: 9aa29765a47bd71213f592adc22df5dcb91f2b2f946b915a4c2393067a622dfd788c90c9a9e25e63a0617f7bea031f4092d69615a3ba9da376c7619a5ff5eedd
-  languageName: node
-  linkType: hard
-
 "@uidu/drawer-ui@npm:0.0.2, @uidu/drawer-ui@workspace:packages/web/components/core/drawer":
   version: 0.0.0-use.local
   resolution: "@uidu/drawer-ui@workspace:packages/web/components/core/drawer"
@@ -10594,17 +10417,6 @@ __metadata:
     vaul: "npm:^0.9.0"
   languageName: unknown
   linkType: soft
-
-"@uidu/dropdown-menu-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/dropdown-menu-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-dropdown-menu": "npm:2.0.6"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: e06b607aa873239a933f0bfd549d1eab560d70a769addac0ef7f5ddba3c635fe0e617ba83cc6aaf23bda0c1d96883de5b2a66ffd8886acbcc66ac2ba1bd2690e
-  languageName: node
-  linkType: hard
 
 "@uidu/dropdown-menu-ui@npm:0.0.2, @uidu/dropdown-menu-ui@workspace:packages/web/components/core/dropdown-menu":
   version: 0.0.0-use.local
@@ -10799,7 +10611,7 @@ __metadata:
     "@types/unist": "npm:^3.0.2"
     "@typescript-eslint/eslint-plugin": "npm:^7.6.0"
     "@typescript-eslint/parser": "npm:^7.6.0"
-    "@uidu/core-ui": "npm:0.0.5"
+    "@uidu/core-ui": "npm:0.0.6"
     autoprefixer: "npm:^10.4.17"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"
@@ -10840,15 +10652,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/image-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/image-ui@npm:0.0.1"
-  dependencies:
-    react: "npm:^18.2.0"
-  checksum: 2e2333729750d7feb99b49db14c9830223a08f0a61f642b2a4c46a50136f55a6ddbfaf0203d598e168e5a0be0005fb707b369fc35b8007d4115d2588bf1b0397
-  languageName: node
-  linkType: hard
-
 "@uidu/image-ui@npm:0.0.2, @uidu/image-ui@workspace:packages/web/components/core/image":
   version: 0.0.0-use.local
   resolution: "@uidu/image-ui@workspace:packages/web/components/core/image"
@@ -10873,18 +10676,6 @@ __metadata:
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
-
-"@uidu/label-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/label-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-label": "npm:^2.0.2"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: 9f75eb07187bbee8e5a364dc2e1d3dcbe01b11eba7cfd3898a93a064a8ae04aa895566a09fcac04200ceb4c7dbd16df9539dcc4ff7128014894ae44de0c64908
-  languageName: node
-  linkType: hard
 
 "@uidu/label-ui@npm:0.0.2, @uidu/label-ui@workspace:packages/web/components/core/label":
   version: 0.0.0-use.local
@@ -10994,18 +10785,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/navigation-menu-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/navigation-menu-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-navigation-menu": "npm:^1.1.4"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: c1e6e2226497f39ce03666eae606753682e4be7e64038ea6f7dc79ef21dc846f3091a94040a200ee674e13835e20313bdeef6d5380875d137fd20a74cd7cc163
-  languageName: node
-  linkType: hard
-
 "@uidu/navigation-menu-ui@npm:0.0.2, @uidu/navigation-menu-ui@workspace:packages/web/components/core/navigation-menu":
   version: 0.0.0-use.local
   resolution: "@uidu/navigation-menu-ui@workspace:packages/web/components/core/navigation-menu"
@@ -11017,17 +10796,6 @@ __metadata:
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
-
-"@uidu/pagination-ui@npm:0.0.2":
-  version: 0.0.2
-  resolution: "@uidu/pagination-ui@npm:0.0.2"
-  dependencies:
-    "@uidu/button-ui": "npm:0.0.3"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: d4060e253f0f7a38d73740747db58b1032aee2674a32e8d5b25ea8eeeab5a2d3a47e552afc961be5a61fd053587bc29d2cf01e310f4a194e33545364ce4b1257
-  languageName: node
-  linkType: hard
 
 "@uidu/pagination-ui@npm:0.0.3, @uidu/pagination-ui@workspace:packages/web/components/core/pagination":
   version: 0.0.0-use.local
@@ -11055,18 +10823,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/popover-ui@npm:0.0.2":
-  version: 0.0.2
-  resolution: "@uidu/popover-ui@npm:0.0.2"
-  dependencies:
-    "@radix-ui/react-popover": "npm:^1.0.7"
-    "@uidu/button-ui": "npm:0.0.3"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: 563fb268adc65d5ce67e76c2fa1422259d8e72d6359cb14876014a6fd1fa454a6b19c334ed63b4270cb964de51554b79ffdb0344250ffbcdbe579a8c8af96cc3
-  languageName: node
-  linkType: hard
-
 "@uidu/popover-ui@npm:0.0.3, @uidu/popover-ui@workspace:packages/web/components/core/popover":
   version: 0.0.0-use.local
   resolution: "@uidu/popover-ui@workspace:packages/web/components/core/popover"
@@ -11078,17 +10834,6 @@ __metadata:
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
-
-"@uidu/progress-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/progress-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-progress": "npm:1.0.3"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: 0e71e5b3f4b7eee73ef0ed8ceba138404d2bdd8be2b61fb9279c420e3dce8a4b15b517085456f2698764fc41d7e320d6c210bcd973dcb597b042e17004efcf49
-  languageName: node
-  linkType: hard
 
 "@uidu/progress-ui@npm:0.0.2, @uidu/progress-ui@workspace:packages/web/components/core/progress":
   version: 0.0.0-use.local
@@ -11114,17 +10859,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/resizable-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/resizable-ui@npm:0.0.1"
-  dependencies:
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-    react-resizable-panels: "npm:^2.0.3"
-  checksum: 32a2e69e506b6d1497871ad266df458bf0bf87540f7e4938af19d4e6195f6cc1710135f6027f12495dff23369aa0f8def7a3aedc5534bb7cb6b74a2311dd9782
-  languageName: node
-  linkType: hard
-
 "@uidu/resizable-ui@npm:0.0.2, @uidu/resizable-ui@workspace:packages/web/components/core/resizable":
   version: 0.0.0-use.local
   resolution: "@uidu/resizable-ui@workspace:packages/web/components/core/resizable"
@@ -11135,17 +10869,6 @@ __metadata:
     react-resizable-panels: "npm:^2.0.3"
   languageName: unknown
   linkType: soft
-
-"@uidu/scroll-area-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/scroll-area-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-scroll-area": "npm:1.0.5"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: a51c7bb727ff0048944efccea94b4bdc9dceae4b5a44eadd0fcfd68c19b9f646dec2aac12e6254ead6d913736595cff91f46d545fcac9b2c483c29e38b85c470
-  languageName: node
-  linkType: hard
 
 "@uidu/scroll-area-ui@npm:0.0.2, @uidu/scroll-area-ui@workspace:packages/web/components/core/scroll-area":
   version: 0.0.0-use.local
@@ -11172,17 +10895,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/separator-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/separator-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-separator": "npm:1.0.3"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: 64b07b248ff692c0347eb9794cde5630d838a26f3d83c3ea5dcb1db0b66457d9989009b706acc5820f01ea5553d307ed131e98ba5cd876c81b1cd46372aced67
-  languageName: node
-  linkType: hard
-
 "@uidu/separator-ui@npm:0.0.2, @uidu/separator-ui@workspace:packages/web/components/core/separator":
   version: 0.0.0-use.local
   resolution: "@uidu/separator-ui@workspace:packages/web/components/core/separator"
@@ -11193,18 +10905,6 @@ __metadata:
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
-
-"@uidu/sheet-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/sheet-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-dialog": "npm:1.0.5"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: ecea4a08426a0365ac965f64b46cc34992f34939cfdd56bab79a0c46819ffa3814129ec983dc511800f9c75e907d79dfa0208f9b5ec25f9a581f899d28be618e
-  languageName: node
-  linkType: hard
 
 "@uidu/sheet-ui@npm:0.0.2, @uidu/sheet-ui@workspace:packages/web/components/core/sheet":
   version: 0.0.0-use.local
@@ -11285,17 +10985,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/table-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/table-ui@npm:0.0.1"
-  dependencies:
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: 2800617f32e9a5cfd4a54f7d72dde4056f3e0ae2193066bc53b70a178cb8ed502ed814cab38245494b01fc594db0b1c71f2af4ea2b6b0d07b8bbfdace79e99b9
-  languageName: node
-  linkType: hard
-
 "@uidu/table-ui@npm:0.0.2, @uidu/table-ui@workspace:packages/web/components/core/table":
   version: 0.0.0-use.local
   resolution: "@uidu/table-ui@workspace:packages/web/components/core/table"
@@ -11306,17 +10995,6 @@ __metadata:
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
-
-"@uidu/tabs-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/tabs-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-tabs": "npm:^1.0.4"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: 82765c9e5a2856e72929b8ceea84567515e9f026caa356dcb9657ad50175e34f89ed29482d258e4c507f08ad167744af28d06112f5bcafeb2754dd25eb6107b3
-  languageName: node
-  linkType: hard
 
 "@uidu/tabs-ui@npm:0.0.2, @uidu/tabs-ui@workspace:packages/web/components/core/tabs":
   version: 0.0.0-use.local
@@ -11354,18 +11032,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/toast-ui@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@uidu/toast-ui@npm:0.0.1"
-  dependencies:
-    "@radix-ui/react-toast": "npm:1.1.5"
-    "@uidu/lib": "npm:0.0.1"
-    class-variance-authority: "npm:^0.7.0"
-    react: "npm:^18.2.0"
-  checksum: 49dc38372dae5a176441cca22d6036986fc7a9be56787233fa0c42a0b1bf57a78d47a606d1c8d07ec9d072a45cb64f1df510bc46593a11de609b414aed3adb8a
-  languageName: node
-  linkType: hard
-
 "@uidu/toast-ui@npm:0.0.2, @uidu/toast-ui@workspace:packages/web/components/core/toast":
   version: 0.0.0-use.local
   resolution: "@uidu/toast-ui@workspace:packages/web/components/core/toast"
@@ -11391,18 +11057,6 @@ __metadata:
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
-
-"@uidu/tooltip-ui@npm:0.0.2":
-  version: 0.0.2
-  resolution: "@uidu/tooltip-ui@npm:0.0.2"
-  dependencies:
-    "@radix-ui/react-tooltip": "npm:^1.0.7"
-    "@uidu/button-ui": "npm:0.0.3"
-    "@uidu/lib": "npm:0.0.1"
-    react: "npm:^18.2.0"
-  checksum: e8eeaec01a1c2d91e57bd8e68b28222662164b22aee9ded79fe2b41fbb795f4f58bb4aad1b4f02d8d672fb10c01e8c4e5641c6cd87225b561f518cef8691f459
-  languageName: node
-  linkType: hard
 
 "@uidu/tooltip-ui@npm:0.0.3, @uidu/tooltip-ui@workspace:packages/web/components/core/tooltip":
   version: 0.0.0-use.local

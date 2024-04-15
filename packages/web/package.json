@@ -4,14 +4,13 @@
   "sideEffects": [
     "*.css"
   ],
-  "main": "dist/uidu-web.cjs.js",
-  "module": "dist/uidu-web.esm.js",
+  "main": "src/index.ts",
+  "module": "dist/index.mjs",
   "files": [
     "dist"
   ],
   "scripts": {
-    "watch": "yarn preconstruct build --watch",
-    "prepare": "panda codegen"
+    "watch": "yarn preconstruct build --watch"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",

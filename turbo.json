@@ -12,6 +12,15 @@
         "node_modules/.cache/metro/**"
       ]
     },
+    "versionPatch": {
+      "outputs": [],
+      "cache": false
+    },
+    "npmPublish": {
+      "dependsOn": ["build", "versionPatch"],
+      "outputs": [],
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true

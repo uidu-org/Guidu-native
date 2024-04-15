@@ -7,9 +7,9 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/card-ui": "0.0.2",
-    "@uidu/carousel-ui": "0.0.2",
-    "@uidu/dialog-ui": "0.0.2",
+    "@uidu/card-ui": "0.0.3",
+    "@uidu/carousel-ui": "0.0.3",
+    "@uidu/dialog-ui": "0.0.3",
     "@uidu/lib": "0.0.1",
     "react": "^18.2.0"
   },

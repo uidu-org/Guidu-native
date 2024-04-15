@@ -9,7 +9,7 @@
   "dependencies": {
     "@radix-ui/react-accordion": "1.1.2",
     "@radix-ui/react-avatar": "^1.0.4",
-    "@uidu/button-ui": "0.0.4",
+    "@uidu/button-ui": "0.0.5",
     "@uidu/calendar-ui": "0.0.2",
     "@uidu/checkbox-ui": "0.0.1",
     "@uidu/color-picker-ui": "0.0.1",

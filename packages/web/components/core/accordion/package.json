@@ -1,6 +1,6 @@
 {
   "name": "@uidu/accordion-ui",
-  "version": "0.0.9",
+  "version": "0.0.12",
   "main": "src/index.ts",
   "module": "dist/index.mjs",
   "license": "ISC",
@@ -12,7 +12,7 @@
     "versionPatch": "yarn version patch",
     "versionMinor": "yarn version minor",
     "versionMajor": "yarn version major",
-    "npmPublish": "yarn publish"
+    "npmPublish": "npm publish"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "1.1.2",

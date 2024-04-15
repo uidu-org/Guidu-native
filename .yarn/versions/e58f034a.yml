@@ -1,0 +1,46 @@
+releases:
+  "@uidu/calendar-ui": patch
+  "@uidu/checkbox-ui": patch
+  "@uidu/core-ui": patch
+  "@uidu/form-ui": patch
+  "@uidu/forms-ui": patch
+  "@uidu/gui-chat": patch
+  "@uidu/guidu-native": patch
+  "@uidu/guidu-website": patch
+  "@uidu/input-ui": patch
+  "@uidu/media-card-ui": patch
+  "@uidu/native": patch
+  "@uidu/radio-group-ui": patch
+  "@uidu/select-ui": patch
+  "@uidu/web": patch
+  uidu-ui-monorepo: patch
+
+undecided:
+  - "@uidu/accordion-ui"
+  - "@uidu/alert-ui"
+  - "@uidu/avatar-ui"
+  - "@uidu/badge-ui"
+  - "@uidu/button-ui"
+  - "@uidu/card-ui"
+  - "@uidu/carousel-ui"
+  - "@uidu/collapsable-ui"
+  - "@uidu/command-ui"
+  - "@uidu/context-menu-ui"
+  - "@uidu/dialog-ui"
+  - "@uidu/drawer-ui"
+  - "@uidu/dropdown-menu-ui"
+  - "@uidu/image-ui"
+  - "@uidu/label-ui"
+  - "@uidu/menubar-ui"
+  - "@uidu/navigation-menu-ui"
+  - "@uidu/pagination-ui"
+  - "@uidu/popover-ui"
+  - "@uidu/progress-ui"
+  - "@uidu/resizable-ui"
+  - "@uidu/scroll-area-ui"
+  - "@uidu/separator-ui"
+  - "@uidu/sheet-ui"
+  - "@uidu/skeleton-ui"
+  - "@uidu/table-ui"
+  - "@uidu/tabs-ui"
+  - "@uidu/toast-ui"

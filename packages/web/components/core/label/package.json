@@ -1,7 +1,7 @@
 {
   "name": "@uidu/label-ui",
-  "version": "0.0.1",
-  "main": "dist/index.js",
+  "version": "0.1.0",
+  "main": "src/index.ts",
   "module": "dist/index.mjs",
   "license": "ISC",
   "files": [
@@ -21,6 +21,10 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "npx tsup src --dts"
+    "build": "npx tsup src --dts",
+    "versionPatch": "yarn version patch",
+    "versionMinor": "yarn version minor",
+    "versionMajor": "yarn version major",
+    "npmPublish": "npm publish"
   }
 }

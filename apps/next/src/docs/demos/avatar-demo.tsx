@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Avatar,
   AvatarFallback,
@@ -7,7 +9,7 @@ import {
 export default function AvatarDemo() {
   return (
     <Avatar>
-      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <AvatarImage src="https://avatars.githubusercontent.com/u/124514869?v=4" alt="random photo" />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
   )

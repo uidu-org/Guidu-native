@@ -4,14 +4,13 @@
   "sideEffects": [
     "*.css"
   ],
-  "main": "dist/uidu-web.cjs.js",
-  "module": "dist/uidu-web.esm.js",
+  "main": "src/index.ts",
+  "module": "dist/index.mjs",
   "files": [
     "dist"
   ],
   "scripts": {
-    "watch": "yarn preconstruct build --watch",
-    "prepare": "panda codegen"
+    "watch": "yarn preconstruct build --watch"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -25,11 +24,11 @@
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
-    "@uidu/button-ui": "0.0.3",
-    "@uidu/popover-ui": "0.0.1",
+    "@uidu/button-ui": "0.1.0",
+    "@uidu/popover-ui": "0.1.0",
     "clsx": "^2.1.0",
     "cmdk": "^0.2.1",
-    "date-fns": "^3.3.1",
+    "date-fns": "^3.4.0",
     "embla-carousel-react": "8.0.0-rc22",
     "next-themes": "^0.2.1",
     "react-hook-form": "^7.49.3",

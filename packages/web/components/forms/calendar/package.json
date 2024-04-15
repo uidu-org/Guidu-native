@@ -9,7 +9,7 @@
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.4",
     "@types/react-datepicker": "^4.19.6",
-    "@uidu/button-ui": "0.0.3",
+    "@uidu/button-ui": "0.1.0",
     "@uidu/field-error-text-ui": "0.0.1",
     "@uidu/field-helper-text-ui": "0.0.1",
     "@uidu/input-ui": "0.0.2",

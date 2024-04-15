@@ -10193,7 +10193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uidu/accordion-ui@npm:0.0.12, @uidu/accordion-ui@workspace:packages/web/components/core/accordion":
+"@uidu/accordion-ui@npm:0.1.0, @uidu/accordion-ui@workspace:packages/web/components/core/accordion":
   version: 0.0.0-use.local
   resolution: "@uidu/accordion-ui@workspace:packages/web/components/core/accordion"
   dependencies:
@@ -10205,33 +10205,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/alert-ui@npm:0.0.6, @uidu/alert-ui@workspace:packages/web/components/core/alert":
+"@uidu/alert-ui@npm:0.1.0, @uidu/alert-ui@workspace:packages/web/components/core/alert":
   version: 0.0.0-use.local
   resolution: "@uidu/alert-ui@workspace:packages/web/components/core/alert"
   dependencies:
     "@radix-ui/react-alert-dialog": "npm:1.0.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.5"
+    "@uidu/button-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/avatar-ui@npm:0.0.6, @uidu/avatar-ui@workspace:packages/web/components/core/avatar":
+"@uidu/avatar-ui@npm:0.1.0, @uidu/avatar-ui@workspace:packages/web/components/core/avatar":
   version: 0.0.0-use.local
   resolution: "@uidu/avatar-ui@workspace:packages/web/components/core/avatar"
   dependencies:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.5"
+    "@uidu/button-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/badge-ui@npm:0.0.3, @uidu/badge-ui@workspace:packages/web/components/core/badge":
+"@uidu/badge-ui@npm:0.1.0, @uidu/badge-ui@workspace:packages/web/components/core/badge":
   version: 0.0.0-use.local
   resolution: "@uidu/badge-ui@workspace:packages/web/components/core/badge"
   dependencies:
@@ -10242,7 +10242,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/button-ui@npm:0.0.5, @uidu/button-ui@workspace:packages/web/components/core/button":
+"@uidu/button-ui@npm:0.1.0, @uidu/button-ui@workspace:packages/web/components/core/button":
   version: 0.0.0-use.local
   resolution: "@uidu/button-ui@workspace:packages/web/components/core/button"
   dependencies:
@@ -10261,7 +10261,7 @@ __metadata:
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
     "@types/react-datepicker": "npm:^4.19.6"
-    "@uidu/button-ui": "npm:0.0.5"
+    "@uidu/button-ui": "npm:0.1.0"
     "@uidu/field-error-text-ui": "npm:0.0.1"
     "@uidu/field-helper-text-ui": "npm:0.0.1"
     "@uidu/input-ui": "npm:0.0.2"
@@ -10274,7 +10274,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/card-ui@npm:0.0.3, @uidu/card-ui@workspace:packages/web/components/core/card":
+"@uidu/card-ui@npm:0.1.0, @uidu/card-ui@workspace:packages/web/components/core/card":
   version: 0.0.0-use.local
   resolution: "@uidu/card-ui@workspace:packages/web/components/core/card"
   dependencies:
@@ -10284,12 +10284,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/carousel-ui@npm:0.0.3, @uidu/carousel-ui@workspace:packages/web/components/core/carousel":
+"@uidu/carousel-ui@npm:0.1.0, @uidu/carousel-ui@workspace:packages/web/components/core/carousel":
   version: 0.0.0-use.local
   resolution: "@uidu/carousel-ui@workspace:packages/web/components/core/carousel"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.5"
+    "@uidu/button-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     embla-carousel-react: "npm:8.0.0-rc22"
     react: "npm:^18.2.0"
@@ -10312,7 +10312,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/collapsable-ui@npm:0.0.3, @uidu/collapsable-ui@workspace:packages/web/components/core/collapsable":
+"@uidu/collapsable-ui@npm:0.1.0, @uidu/collapsable-ui@workspace:packages/web/components/core/collapsable":
   version: 0.0.0-use.local
   resolution: "@uidu/collapsable-ui@workspace:packages/web/components/core/collapsable"
   dependencies:
@@ -10334,19 +10334,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/command-ui@npm:0.0.4, @uidu/command-ui@workspace:packages/web/components/core/command":
+"@uidu/command-ui@npm:0.1.0, @uidu/command-ui@workspace:packages/web/components/core/command":
   version: 0.0.0-use.local
   resolution: "@uidu/command-ui@workspace:packages/web/components/core/command"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/dialog-ui": "npm:0.0.3"
+    "@uidu/dialog-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     cmdk: "npm:^0.2.1"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/context-menu-ui@npm:0.0.3, @uidu/context-menu-ui@workspace:packages/web/components/core/context-menu":
+"@uidu/context-menu-ui@npm:0.1.0, @uidu/context-menu-ui@workspace:packages/web/components/core/context-menu":
   version: 0.0.0-use.local
   resolution: "@uidu/context-menu-ui@workspace:packages/web/components/core/context-menu"
   dependencies:
@@ -10362,40 +10362,40 @@ __metadata:
   resolution: "@uidu/core-ui@workspace:packages/web/src/core"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/accordion-ui": "npm:0.0.12"
-    "@uidu/alert-ui": "npm:0.0.6"
-    "@uidu/avatar-ui": "npm:0.0.6"
-    "@uidu/badge-ui": "npm:0.0.3"
-    "@uidu/button-ui": "npm:0.0.5"
-    "@uidu/card-ui": "npm:0.0.3"
-    "@uidu/carousel-ui": "npm:0.0.3"
-    "@uidu/collapsable-ui": "npm:0.0.3"
-    "@uidu/command-ui": "npm:0.0.4"
-    "@uidu/context-menu-ui": "npm:0.0.3"
-    "@uidu/dialog-ui": "npm:0.0.3"
-    "@uidu/drawer-ui": "npm:0.0.3"
-    "@uidu/dropdown-menu-ui": "npm:0.0.4"
-    "@uidu/image-ui": "npm:0.0.4"
-    "@uidu/label-ui": "npm:0.0.3"
+    "@uidu/accordion-ui": "npm:0.1.0"
+    "@uidu/alert-ui": "npm:0.1.0"
+    "@uidu/avatar-ui": "npm:0.1.0"
+    "@uidu/badge-ui": "npm:0.1.0"
+    "@uidu/button-ui": "npm:0.1.0"
+    "@uidu/card-ui": "npm:0.1.0"
+    "@uidu/carousel-ui": "npm:0.1.0"
+    "@uidu/collapsable-ui": "npm:0.1.0"
+    "@uidu/command-ui": "npm:0.1.0"
+    "@uidu/context-menu-ui": "npm:0.1.0"
+    "@uidu/dialog-ui": "npm:0.1.0"
+    "@uidu/drawer-ui": "npm:0.1.0"
+    "@uidu/dropdown-menu-ui": "npm:0.1.0"
+    "@uidu/image-ui": "npm:0.1.0"
+    "@uidu/label-ui": "npm:0.1.0"
     "@uidu/media-card-ui": "npm:0.0.2"
-    "@uidu/navigation-menu-ui": "npm:0.0.3"
-    "@uidu/pagination-ui": "npm:0.0.4"
-    "@uidu/popover-ui": "npm:0.0.4"
-    "@uidu/progress-ui": "npm:0.0.3"
-    "@uidu/resizable-ui": "npm:0.0.4"
-    "@uidu/scroll-area-ui": "npm:0.0.4"
-    "@uidu/separator-ui": "npm:0.0.3"
-    "@uidu/sheet-ui": "npm:0.0.3"
-    "@uidu/table-ui": "npm:0.0.3"
-    "@uidu/tabs-ui": "npm:0.0.3"
-    "@uidu/toast-ui": "npm:0.0.4"
-    "@uidu/tooltip-ui": "npm:0.0.4"
+    "@uidu/navigation-menu-ui": "npm:0.1.0"
+    "@uidu/pagination-ui": "npm:0.1.0"
+    "@uidu/popover-ui": "npm:0.1.0"
+    "@uidu/progress-ui": "npm:0.1.0"
+    "@uidu/resizable-ui": "npm:0.1.0"
+    "@uidu/scroll-area-ui": "npm:0.1.0"
+    "@uidu/separator-ui": "npm:0.1.0"
+    "@uidu/sheet-ui": "npm:0.1.0"
+    "@uidu/table-ui": "npm:0.1.0"
+    "@uidu/tabs-ui": "npm:0.1.0"
+    "@uidu/toast-ui": "npm:0.1.0"
+    "@uidu/tooltip-ui": "npm:0.1.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/dialog-ui@npm:0.0.3, @uidu/dialog-ui@workspace:packages/web/components/core/dialog":
+"@uidu/dialog-ui@npm:0.1.0, @uidu/dialog-ui@workspace:packages/web/components/core/dialog":
   version: 0.0.0-use.local
   resolution: "@uidu/dialog-ui@workspace:packages/web/components/core/dialog"
   dependencies:
@@ -10407,7 +10407,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/drawer-ui@npm:0.0.3, @uidu/drawer-ui@workspace:packages/web/components/core/drawer":
+"@uidu/drawer-ui@npm:0.1.0, @uidu/drawer-ui@workspace:packages/web/components/core/drawer":
   version: 0.0.0-use.local
   resolution: "@uidu/drawer-ui@workspace:packages/web/components/core/drawer"
   dependencies:
@@ -10418,7 +10418,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/dropdown-menu-ui@npm:0.0.4, @uidu/dropdown-menu-ui@workspace:packages/web/components/core/dropdown-menu":
+"@uidu/dropdown-menu-ui@npm:0.1.0, @uidu/dropdown-menu-ui@workspace:packages/web/components/core/dropdown-menu":
   version: 0.0.0-use.local
   resolution: "@uidu/dropdown-menu-ui@workspace:packages/web/components/core/dropdown-menu"
   dependencies:
@@ -10462,7 +10462,7 @@ __metadata:
     "@types/react": "npm:^18.2.55"
     "@uidu/field-error-text-ui": "npm:0.0.1"
     "@uidu/field-helper-text-ui": "npm:0.0.1"
-    "@uidu/label-ui": "npm:0.0.3"
+    "@uidu/label-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -10477,7 +10477,7 @@ __metadata:
     "@radix-ui/react-accordion": "npm:1.1.2"
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.5"
+    "@uidu/button-ui": "npm:0.1.0"
     "@uidu/calendar-ui": "npm:0.0.2"
     "@uidu/checkbox-ui": "npm:0.0.1"
     "@uidu/color-picker-ui": "npm:0.0.1"
@@ -10652,7 +10652,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/image-ui@npm:0.0.4, @uidu/image-ui@workspace:packages/web/components/core/image":
+"@uidu/image-ui@npm:0.1.0, @uidu/image-ui@workspace:packages/web/components/core/image":
   version: 0.0.0-use.local
   resolution: "@uidu/image-ui@workspace:packages/web/components/core/image"
   dependencies:
@@ -10669,7 +10669,7 @@ __metadata:
     "@uidu/field-error-text-ui": "npm:0.0.1"
     "@uidu/field-helper-text-ui": "npm:0.0.1"
     "@uidu/form-ui": "npm:0.0.1"
-    "@uidu/label-ui": "npm:0.0.3"
+    "@uidu/label-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
@@ -10677,7 +10677,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/label-ui@npm:0.0.3, @uidu/label-ui@workspace:packages/web/components/core/label":
+"@uidu/label-ui@npm:0.1.0, @uidu/label-ui@workspace:packages/web/components/core/label":
   version: 0.0.0-use.local
   resolution: "@uidu/label-ui@workspace:packages/web/components/core/label"
   dependencies:
@@ -10707,9 +10707,9 @@ __metadata:
   resolution: "@uidu/media-card-ui@workspace:packages/web/components/media/media-card"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/card-ui": "npm:0.0.3"
-    "@uidu/carousel-ui": "npm:0.0.3"
-    "@uidu/dialog-ui": "npm:0.0.3"
+    "@uidu/card-ui": "npm:0.1.0"
+    "@uidu/carousel-ui": "npm:0.1.0"
+    "@uidu/dialog-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     react: "npm:^18.2.0"
   languageName: unknown
@@ -10785,7 +10785,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/navigation-menu-ui@npm:0.0.3, @uidu/navigation-menu-ui@workspace:packages/web/components/core/navigation-menu":
+"@uidu/navigation-menu-ui@npm:0.1.0, @uidu/navigation-menu-ui@workspace:packages/web/components/core/navigation-menu":
   version: 0.0.0-use.local
   resolution: "@uidu/navigation-menu-ui@workspace:packages/web/components/core/navigation-menu"
   dependencies:
@@ -10797,12 +10797,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/pagination-ui@npm:0.0.4, @uidu/pagination-ui@workspace:packages/web/components/core/pagination":
+"@uidu/pagination-ui@npm:0.1.0, @uidu/pagination-ui@workspace:packages/web/components/core/pagination":
   version: 0.0.0-use.local
   resolution: "@uidu/pagination-ui@workspace:packages/web/components/core/pagination"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.5"
+    "@uidu/button-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     react: "npm:^18.2.0"
   languageName: unknown
@@ -10823,19 +10823,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/popover-ui@npm:0.0.4, @uidu/popover-ui@workspace:packages/web/components/core/popover":
+"@uidu/popover-ui@npm:0.1.0, @uidu/popover-ui@workspace:packages/web/components/core/popover":
   version: 0.0.0-use.local
   resolution: "@uidu/popover-ui@workspace:packages/web/components/core/popover"
   dependencies:
     "@radix-ui/react-popover": "npm:^1.0.7"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.5"
+    "@uidu/button-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/progress-ui@npm:0.0.3, @uidu/progress-ui@workspace:packages/web/components/core/progress":
+"@uidu/progress-ui@npm:0.1.0, @uidu/progress-ui@workspace:packages/web/components/core/progress":
   version: 0.0.0-use.local
   resolution: "@uidu/progress-ui@workspace:packages/web/components/core/progress"
   dependencies:
@@ -10859,7 +10859,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/resizable-ui@npm:0.0.4, @uidu/resizable-ui@workspace:packages/web/components/core/resizable":
+"@uidu/resizable-ui@npm:0.1.0, @uidu/resizable-ui@workspace:packages/web/components/core/resizable":
   version: 0.0.0-use.local
   resolution: "@uidu/resizable-ui@workspace:packages/web/components/core/resizable"
   dependencies:
@@ -10870,7 +10870,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/scroll-area-ui@npm:0.0.4, @uidu/scroll-area-ui@workspace:packages/web/components/core/scroll-area":
+"@uidu/scroll-area-ui@npm:0.1.0, @uidu/scroll-area-ui@workspace:packages/web/components/core/scroll-area":
   version: 0.0.0-use.local
   resolution: "@uidu/scroll-area-ui@workspace:packages/web/components/core/scroll-area"
   dependencies:
@@ -10895,7 +10895,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/separator-ui@npm:0.0.3, @uidu/separator-ui@workspace:packages/web/components/core/separator":
+"@uidu/separator-ui@npm:0.1.0, @uidu/separator-ui@workspace:packages/web/components/core/separator":
   version: 0.0.0-use.local
   resolution: "@uidu/separator-ui@workspace:packages/web/components/core/separator"
   dependencies:
@@ -10906,7 +10906,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/sheet-ui@npm:0.0.3, @uidu/sheet-ui@workspace:packages/web/components/core/sheet":
+"@uidu/sheet-ui@npm:0.1.0, @uidu/sheet-ui@workspace:packages/web/components/core/sheet":
   version: 0.0.0-use.local
   resolution: "@uidu/sheet-ui@workspace:packages/web/components/core/sheet"
   dependencies:
@@ -10985,7 +10985,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/table-ui@npm:0.0.3, @uidu/table-ui@workspace:packages/web/components/core/table":
+"@uidu/table-ui@npm:0.1.0, @uidu/table-ui@workspace:packages/web/components/core/table":
   version: 0.0.0-use.local
   resolution: "@uidu/table-ui@workspace:packages/web/components/core/table"
   dependencies:
@@ -10996,7 +10996,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/tabs-ui@npm:0.0.3, @uidu/tabs-ui@workspace:packages/web/components/core/tabs":
+"@uidu/tabs-ui@npm:0.1.0, @uidu/tabs-ui@workspace:packages/web/components/core/tabs":
   version: 0.0.0-use.local
   resolution: "@uidu/tabs-ui@workspace:packages/web/components/core/tabs"
   dependencies:
@@ -11032,7 +11032,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/toast-ui@npm:0.0.4, @uidu/toast-ui@workspace:packages/web/components/core/toast":
+"@uidu/toast-ui@npm:0.1.0, @uidu/toast-ui@workspace:packages/web/components/core/toast":
   version: 0.0.0-use.local
   resolution: "@uidu/toast-ui@workspace:packages/web/components/core/toast"
   dependencies:
@@ -11058,13 +11058,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/tooltip-ui@npm:0.0.4, @uidu/tooltip-ui@workspace:packages/web/components/core/tooltip":
+"@uidu/tooltip-ui@npm:0.1.0, @uidu/tooltip-ui@workspace:packages/web/components/core/tooltip":
   version: 0.0.0-use.local
   resolution: "@uidu/tooltip-ui@workspace:packages/web/components/core/tooltip"
   dependencies:
     "@radix-ui/react-tooltip": "npm:^1.0.7"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.0.5"
+    "@uidu/button-ui": "npm:0.1.0"
     "@uidu/lib": "npm:0.0.1"
     react: "npm:^18.2.0"
   languageName: unknown
@@ -11086,8 +11086,8 @@ __metadata:
     "@radix-ui/react-select": "npm:^2.0.0"
     "@radix-ui/react-slot": "npm:^1.0.2"
     "@radix-ui/react-tabs": "npm:^1.0.4"
-    "@uidu/button-ui": "npm:0.0.5"
-    "@uidu/popover-ui": "npm:0.0.4"
+    "@uidu/button-ui": "npm:0.1.0"
+    "@uidu/popover-ui": "npm:0.1.0"
     clsx: "npm:^2.1.0"
     cmdk: "npm:^0.2.1"
     date-fns: "npm:^3.4.0"

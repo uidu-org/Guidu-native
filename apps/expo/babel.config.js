@@ -4,7 +4,11 @@ module.exports = function (api) {
     presets: [['babel-preset-expo', { jsxRuntime: 'automatic' }]],
     plugins: [
       // require.resolve('expo-router/babel'),
-      'react-native-reanimated/plugin',
+      [
+        'react-native-reanimated/plugin', {
+            relativeSourceLocation: true,
+        },
+    ],
       [
         require.resolve('babel-plugin-module-resolver'),
         {

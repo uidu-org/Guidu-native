@@ -1,12 +1,9 @@
 import {
-  Form,
+  GAutocompleteRhf,
   GFormRhfProvider,
-  GInputRhf,
-  GuiButton,
-  GuiView,
-  XStack,
+  YStack
 } from '@uidu/native';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function kitchen() {
   const [form, setForm] = useState<any>({
@@ -15,67 +12,26 @@ export default function kitchen() {
   });
 
   return (
-    <>
-      <GuiView>
-        <GFormRhfProvider
-          defaultValues={{
-            name: '',
-            email: '',
-          }}
-        >
-          {({ control, handleSubmit, reset }) => (
-            <Form
-              gap={'$3'}
-              onSubmit={handleSubmit((data) => {
-                console.log(data);
-              })}
-            >
-              <GInputRhf
-                name={'name'}
-                control={control}
-                label={'Name'}
-                placeholder={'Type your name...'}
-                labelInline
-                required
-              />
-              <XStack gap={'$3'}>
-                <GuiButton onPress={() => reset()}>Reset</GuiButton>
-                <Form.Trigger asChild>
-                  <GuiButton>Submit</GuiButton>
-                </Form.Trigger>
-              </XStack>
-            </Form>
-          )}
-        </GFormRhfProvider>
-      </GuiView>
-      <GFormRhfProvider
-        defaultValues={{
-          ...form,
-        }}
-      >
-        <GInputRhf
-          name={'name'}
-          control={control}
-          label={'Name'}
-          placeholder={'Type your name...'}
-          labelInline
-          required
+    <GFormRhfProvider
+      defaultValues={{
+        pre: { value: 'Pear', label: 'Pear' },
+        pre_matched: 'Pear',
+      }}
+    >
+      <YStack space>
+        <GAutocompleteRhf label={'Single'} name={'autocomplete'} options={options} />
+        <GAutocompleteRhf
+          label={'With Allow New Hook'}
+          name={'with-hook'}
+          options={options.map((i) => ({ ...i, otherVal: i.value }))}
+          allowNew
+          allowNewHook={(newValue) => ({
+            label: newValue,
+            value: (Math.random() + 1).toString(36).substring(7),
+          })}
         />
-        <GInputRhf
-          name={'email'}
-          control={control}
-          label={'Name'}
-          placeholder={'Type your email...'}
-          labelInline
-        />
-        <XStack gap={'$3'}>
-          <GuiButton onPress={() => reset()}>Reset</GuiButton>
-          <Form.Trigger asChild>
-            <GuiButton>Submit</GuiButton>
-          </Form.Trigger>
-        </XStack>
-      </GFormRhfProvider>
-    </>
+      </YStack>
+    </GFormRhfProvider>
   );
 }
 

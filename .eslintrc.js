@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   extends: [
     'eslint-config-uidu',
     'eslint:recommended',
@@ -13,4 +14,24 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off',
     'react/function-component-definition': 'off',
   },
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+  },
+  ignorePatterns: ['.eslintrc.js'],
+  overrides: [
+    {
+      files: ['src/**/*.ts'],
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+    },
+    {
+      files: ['__tests__/**/*.test.ts'],
+      parserOptions: {
+        project: './tsconfig.test.json',
+      },
+    },
+  ],
 };

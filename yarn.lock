@@ -10221,6 +10221,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@uidu/breadcrumb-ui@workspace:^, @uidu/breadcrumb-ui@workspace:packages/web/components/core/breadcrumb":
+  version: 0.0.0-use.local
+  resolution: "@uidu/breadcrumb-ui@workspace:packages/web/components/core/breadcrumb"
+  dependencies:
+    "@radix-ui/react-slot": "npm:^1.0.2"
+    "@types/react": "npm:^18.2.55"
+    "@uidu/lib": "npm:0.0.1"
+    class-variance-authority: "npm:^0.7.0"
+    react: "npm:^18.2.0"
+  languageName: unknown
+  linkType: soft
+
 "@uidu/button-ui@npm:0.1.0, @uidu/button-ui@workspace:packages/web/components/core/button":
   version: 0.0.0-use.local
   resolution: "@uidu/button-ui@workspace:packages/web/components/core/button"
@@ -10345,6 +10357,7 @@ __metadata:
     "@uidu/alert-ui": "npm:0.1.0"
     "@uidu/avatar-ui": "npm:0.1.0"
     "@uidu/badge-ui": "npm:0.1.0"
+    "@uidu/breadcrumb-ui": "workspace:^"
     "@uidu/button-ui": "npm:0.1.0"
     "@uidu/card-ui": "npm:0.1.0"
     "@uidu/carousel-ui": "npm:0.1.0"

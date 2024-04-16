@@ -12,6 +12,7 @@
     "@uidu/alert-ui": "0.1.0",
     "@uidu/avatar-ui": "0.1.0",
     "@uidu/badge-ui": "0.1.0",
+    "@uidu/breadcrumb-ui": "workspace:^",
     "@uidu/button-ui": "0.1.0",
     "@uidu/card-ui": "0.1.0",
     "@uidu/carousel-ui": "0.1.0",

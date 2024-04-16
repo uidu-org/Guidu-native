@@ -1,12 +1,12 @@
-{
-  "extends": [
-    "next/core-web-vitals", 
-    "eslint-config-uidu",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier"
-    ],
-  "rules": {
+module.exports = {
+  extends: [
+  "next",
+  "prettier",
+  "plugin:@typescript-eslint/recommended",
+  "plugin:@typescript-eslint/recommended-requiring-type-checking",
+  ],
+  root: true,
+  rules: {
     "@next/next/no-html-link-for-pages": "off",
     "@typescript-eslint/unbound-method": "off",
     "@typescript-eslint/restrict-template-expressions": "off",
@@ -24,12 +24,4 @@
     ],
     "@typescript-eslint/no-unsafe-assignment": "off"
   },
-  "ignorePatterns": ["**/*.config.js", "**/*.config.mjs", "**/*.config.cjs"],
-  "reportUnusedDisableDirectives": true,
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "tsconfigRootDir": "__dirname",
-    "project": ["./tsconfig.json"]
-  }
 }

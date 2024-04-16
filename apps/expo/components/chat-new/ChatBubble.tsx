@@ -1,6 +1,6 @@
 import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
 import dayjs from 'dayjs';
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import {
   Dimensions,
   Image,
@@ -12,17 +12,14 @@ import {
   ViewStyle,
 } from 'react-native';
 import ReactNativeParsedText from 'react-native-parsed-text';
-import SIZES from './constants';
+import SIZES from './constants/SIZES';
 import { useChatContext } from './context/WrapperContext';
-import { GChatBubble, GUrlPreviewBubble } from './types';
+import { GChatBubble } from './types';
 import { ALL_PATERNS_SHAPES } from './utils/patterns';
 
 function ChatBubbleComp(props: GChatBubble) {
   const { message, children } = props;
-  const [mediaLoaded, setMediaLoaded] = useState<boolean>(false);
   const { setShowMedia } = useChatContext();
-  const [showUrlPreview, setShowUrlPreview] = useState(false);
-  const [urlPreviewData, setUrlPreviewData] = useState<GUrlPreviewBubble>();
   const createdAt = useMemo(
     () => message && dayjs(message.createdAt).format('HH:mm'),
     [message]
@@ -164,23 +161,6 @@ function ChatBubbleComp(props: GChatBubble) {
     return null;
   }, [message, setShowMedia]);
 
-  // const renderUrlPreview = useMemo(() => {
-  //     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
-  //         return (
-  //             <View style={{ marginTop: 10 }}>
-  //                 <UrlPreviewBubble
-  //                     title={urlPreviewData.title}
-  //                     description={urlPreviewData.description}
-  //                     image={urlPreviewData.image}
-  //                     url={urlPreviewData.url}
-  //                 />
-  //             </View>
-  //         );
-  //     }
-
-  //     return null;
-  // }, [message?.repliedTo, showUrlPreview, urlPreviewData]);
-
   return (
     <View style={[styles.wrapper]}>
       {/* {propsContext.bubbleProps?.trailingAccessory && message?.itsMe && (
@@ -205,7 +185,7 @@ function ChatBubbleComp(props: GChatBubble) {
         style={[
           bubbleBackgroundColor,
           styles.container,
-          { padding: 10 },
+          { padding: SIZES.BUBBLE_CHAT_PADDING },
           { marginStart: message?.itsMe ? 'auto' : undefined },
           {
             width:
@@ -228,7 +208,10 @@ function ChatBubbleComp(props: GChatBubble) {
           <View>
             {renderMedia()}
 
-            <ReactNativeParsedText parse={ALL_PATERNS_SHAPES}>
+            <ReactNativeParsedText
+              style={{ lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT }}
+              parse={ALL_PATERNS_SHAPES}
+            >
               {message?.text}
             </ReactNativeParsedText>
             {/* {renderUrlPreview} */}

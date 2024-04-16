@@ -5,12 +5,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "react-jsx",
-    "paths": {
-      "~/*": ["../../packages/ui/src/index.tsx"]
-    },
+    "paths": {},
     "isolatedModules": true,
     "module": "esnext",
     "moduleResolution": "node"
   },
+  "include": ["src", "app"],
   "references": []
 }

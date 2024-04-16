@@ -1,8 +1,10 @@
 import { PixelRatio } from 'react-native';
-import SIZES from '../constants';
+import SIZES from '../constants/SIZES';
 import { GMessage } from '../types';
 
 const averageCharWidth = Math.ceil(PixelRatio.get());
+
+const ADDITIONAL_PADDING = 30;
 
 export const calculateMessageHeight = (
   message: GMessage,
@@ -10,9 +12,11 @@ export const calculateMessageHeight = (
 ) => {
   const textLength = message.text.length;
   const thresholdPercentage = 0.5;
-  const padding = 20;
-  const margin = 20;
-  const maxWidth = SIZES.BUBBLE_CHAT_WIDTH - padding - margin;
+
+  const maxWidth =
+    SIZES.BUBBLE_CHAT_WIDTH -
+    SIZES.BUBBLE_CHAT_PADDING -
+    SIZES.BUBBLE_CHAT_MARGIN;
 
   const textWidth = textLength * averageCharWidth;
 
@@ -23,10 +27,7 @@ export const calculateMessageHeight = (
     linesNumber += Math.ceil((line.length * averageCharWidth) / maxWidth);
   }
 
-  const lineHeight = 30;
-  const additionalPadding = 30;
-
-  let height = linesNumber * lineHeight + additionalPadding;
+  let height = linesNumber * SIZES.BUBBLE_CHAT_LINE_HEIGHT + ADDITIONAL_PADDING;
 
   if (message?.media) {
     if (message.media.length === 2) {

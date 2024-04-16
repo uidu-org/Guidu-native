@@ -4,14 +4,19 @@
   "sideEffects": [
     "*.css"
   ],
-  "main": "dist/uidu-lib.cjs.js",
-  "module": "dist/uidu-lib.esm.js",
+  "main": "src/index.ts",
+  "module": "dist/index.mjs",
   "module:jsx": "dist/jsx/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "watch": "yarn preconstruct build --watch"
+    "watch": "yarn preconstruct build --watch",
+    "build": "npx tsup src --dts",
+    "versionPatch": "yarn version patch",
+    "versionMinor": "yarn version minor",
+    "versionMajor": "yarn version major",
+    "npmPublish": "npm publish"
   },
   "dependencies": {
     "clsx": "^2.1.0",

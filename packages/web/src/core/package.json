@@ -1,6 +1,6 @@
 {
   "name": "@uidu/core-ui",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "main": "src/index.ts",
   "module": "dist/index.mjs",
   "license": "ISC",
@@ -12,7 +12,7 @@
     "@uidu/alert-ui": "0.1.0",
     "@uidu/avatar-ui": "0.1.0",
     "@uidu/badge-ui": "0.1.0",
-    "@uidu/breadcrumb-ui": "workspace:^",
+    "@uidu/breadcrumb-ui": "0.1.1",
     "@uidu/button-ui": "0.1.0",
     "@uidu/card-ui": "0.1.0",
     "@uidu/carousel-ui": "0.1.0",

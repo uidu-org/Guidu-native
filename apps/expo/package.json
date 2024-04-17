@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.23.9",
+    "@devvie/bottom-sheet": "^0.3.0",
     "@expo/config-plugins": "~7.2.2",
     "@expo/webpack-config": "^19.0.0",
     "@faker-js/faker": "^8.4.1",
@@ -29,7 +30,7 @@
     "dayjs": "^1.11.10",
     "eventemitter3": "^5.0.1",
     "expo": "~49.0.18",
-    "expo-av": "~13.4.1",
+    "expo-av": "^13.10.5",
     "expo-constants": "~14.4.2",
     "expo-dev-client": "~2.4.12",
     "expo-font": "~11.4.0",

@@ -1,4 +1,7 @@
+"use client"
+
 import { Terminal } from "lucide-react"
+
 
 import {
   Alert,

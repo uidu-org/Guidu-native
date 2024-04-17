@@ -1,13 +1,12 @@
 import { Reply } from '@tamagui/lucide-icons';
 import React, { useCallback, useEffect, useRef } from 'react';
 import { Swipeable } from 'react-native-gesture-handler';
-import { ChatBubble } from './ChatBubble';
 import { useChatContext } from './context/WrapperContext';
 import type { GSwipeableBubble } from './types';
 
 function _SwipeableBubble(props: GSwipeableBubble) {
   const { message, children } = props;
-  const { setReplyMessage } = useChatContext()
+  const { setReplyMessage } = useChatContext();
   const swipeableRef = useRef<Swipeable>(null);
 
   const _onReply = useCallback(() => {
@@ -18,24 +17,36 @@ function _SwipeableBubble(props: GSwipeableBubble) {
   }, [message, swipeableRef]);
 
   const renderLeftActions = useCallback(() => {
-    return <Reply size={20} />;
+    return <Reply marginVertical="auto" marginLeft={10} size={25} />;
   }, []);
 
   useEffect(() => {
     swipeableRef.current?.close();
   }, []);
 
+  const _onEnded = (event) => {
+    console.log('event', event);
+
+    if (event.nativeEvent.state > 50) {
+      // Adjust threshold value here
+      _onReply();
+    } else {
+      swipeableRef.current?.close(); // Close swipeable if not enough swipe
+    }
+  };
+
   return (
     <Swipeable
+      ref={swipeableRef}
+      enableTrackpadTwoFingerGesture
       renderLeftActions={renderLeftActions}
       friction={1}
-      overshootFriction={2}
-      leftThreshold={40}
-      onEnded={() => _onReply()}
-      enableTrackpadTwoFingerGesture
-      ref={swipeableRef}
+      overshootLeft={false}
+      leftThreshold={60}
+      onFailed={() => null}
+      onSwipeableOpen={(ev) => _onReply()}
     >
-      {children ?? <ChatBubble {...props} />}
+      {children}
     </Swipeable>
   );
 }

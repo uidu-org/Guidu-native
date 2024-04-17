@@ -1876,6 +1876,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@devvie/bottom-sheet@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@devvie/bottom-sheet@npm:0.3.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 272c532e0e8bbb3cc3c125c60305385e830d2458a0b3c195eabf60841982d800560e26770421d03bc0e8b9ce8b3dc8fe9fa6e970b0b1cc199d93426d24dda11d
+  languageName: node
+  linkType: hard
+
 "@discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
@@ -10221,6 +10231,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@uidu/breadcrumb-ui@npm:0.1.1, @uidu/breadcrumb-ui@workspace:packages/web/components/core/breadcrumb":
+  version: 0.0.0-use.local
+  resolution: "@uidu/breadcrumb-ui@workspace:packages/web/components/core/breadcrumb"
+  dependencies:
+    "@radix-ui/react-slot": "npm:^1.0.2"
+    "@types/react": "npm:^18.2.55"
+    "@uidu/lib": "npm:0.0.1"
+    class-variance-authority: "npm:^0.7.0"
+    react: "npm:^18.2.0"
+  languageName: unknown
+  linkType: soft
+
 "@uidu/button-ui@npm:0.1.0, @uidu/button-ui@workspace:packages/web/components/core/button":
   version: 0.0.0-use.local
   resolution: "@uidu/button-ui@workspace:packages/web/components/core/button"
@@ -10336,7 +10358,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/core-ui@npm:0.0.7, @uidu/core-ui@workspace:packages/web/src/core":
+"@uidu/core-ui@npm:0.0.9, @uidu/core-ui@workspace:packages/web/src/core":
   version: 0.0.0-use.local
   resolution: "@uidu/core-ui@workspace:packages/web/src/core"
   dependencies:
@@ -10345,6 +10367,7 @@ __metadata:
     "@uidu/alert-ui": "npm:0.1.0"
     "@uidu/avatar-ui": "npm:0.1.0"
     "@uidu/badge-ui": "npm:0.1.0"
+    "@uidu/breadcrumb-ui": "npm:0.1.1"
     "@uidu/button-ui": "npm:0.1.0"
     "@uidu/card-ui": "npm:0.1.0"
     "@uidu/carousel-ui": "npm:0.1.0"
@@ -10513,6 +10536,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.23.9"
     "@babel/runtime": "npm:^7.23.9"
+    "@devvie/bottom-sheet": "npm:^0.3.0"
     "@expo/config-plugins": "npm:~7.2.2"
     "@expo/metro-config": "npm:~0.10.0"
     "@expo/webpack-config": "npm:^19.0.0"
@@ -10534,7 +10558,7 @@ __metadata:
     dayjs: "npm:^1.11.10"
     eventemitter3: "npm:^5.0.1"
     expo: "npm:~49.0.18"
-    expo-av: "npm:~13.4.1"
+    expo-av: "npm:^13.10.5"
     expo-constants: "npm:~14.4.2"
     expo-dev-client: "npm:~2.4.12"
     expo-font: "npm:~11.4.0"
@@ -10589,7 +10613,7 @@ __metadata:
     "@types/unist": "npm:^3.0.2"
     "@typescript-eslint/eslint-plugin": "npm:^7.6.0"
     "@typescript-eslint/parser": "npm:^7.6.0"
-    "@uidu/core-ui": "npm:0.0.7"
+    "@uidu/core-ui": "npm:0.0.9"
     autoprefixer: "npm:^10.4.17"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"
@@ -16079,15 +16103,6 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 50513f4a9fcf85224c3991d046cf71b7b2503801c3bef978b3eeec3463953cf38a84e2c5ef5b43f260ebba9ad9fda7e691d3d3ac14cc7eff49f963b3246b24b9
-  languageName: node
-  linkType: hard
-
-"expo-av@npm:~13.4.1":
-  version: 13.4.1
-  resolution: "expo-av@npm:13.4.1"
-  peerDependencies:
-    expo: "*"
-  checksum: 44d7095c2127772d2b1137770b32ec4dfe6f599798231a7bf04eee8a15974b0e6a3df06ffb98998058eeba96409050039ef55ae28acbaa39c2703471cbbe9cfb
   languageName: node
   linkType: hard
 

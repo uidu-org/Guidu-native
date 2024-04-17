@@ -1,10 +1,10 @@
 
-import { Card, CardContent } from "@uidu/card-ui"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@uidu/carousel-ui"
-import { Dialog, DialogContent, DialogPortal, DialogTrigger } from "@uidu/dialog-ui"
+import { Card, CardContent } from "@uidu/card-ui";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@uidu/carousel-ui";
+import { Dialog, DialogContent, DialogPortal, DialogTrigger } from "@uidu/dialog-ui";
 
 interface MediaCardProps {
-    files: object[]
+    files: {id: string; img:string;}[]
     onClickAction: (id: string) => void
 }
 

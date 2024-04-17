@@ -8,7 +8,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { useWindowDimensions } from 'react-native';
+import { Keyboard, useWindowDimensions } from 'react-native';
 import {
   DataProvider,
   LayoutProvider,
@@ -34,7 +34,7 @@ import { wait } from './utils/helpers';
 
 export const ChatList = React.forwardRef(
   (props: GListProps, ref: ForwardedRef<ListRef>) => {
-    const { setReplyMessage } = useChatContext();
+    const { setReplyMessage, replyMessage } = useChatContext();
     const recyclerlistviewRef = useRef<RecyclerListView<any, any>>();
     const windowDimensions = useWindowDimensions();
     const fabRef = useRef<GFabRef>(null);
@@ -85,10 +85,22 @@ to the replied message. */
         }
       });
 
+      if (replyMessage) {
+        recyclerlistviewRef.current?.scrollToEnd(true);
+      }
+
+      if (Keyboard.isVisible()) {
+        console.log('scroll to bottom');
+        recyclerlistviewRef.current?.scrollToIndex(
+          messages[messages.getAllData().length - 1],
+          true
+        );
+      }
+
       return () => {
         ChatBubbleEmitter.removeAllListeners();
       };
-    }, [messages]);
+    }, [messages, replyMessage, Keyboard]);
 
     /* This code is checking if the first message in the previous messages is the same as the first message
 in the current messages. If it is, then it will not scroll to the bottom. */
@@ -170,13 +182,14 @@ in the current messages. If it is, then it will not scroll to the bottom. */
 
           // Calculate the height based on message content
           const height = calculateMessageHeight(currentMessage, prevMessage);
+          // console.log('height', height);
 
           return height;
         },
-        (type, dim) => {
+        (height, dim) => {
           dim.width = windowDimensions.width;
 
-          dim.height = Math.ceil(+type);
+          dim.height = Math.ceil(+height);
         }
       );
     }, [messages, windowDimensions.width]);

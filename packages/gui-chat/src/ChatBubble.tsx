@@ -1,9 +1,9 @@
-import type { ViewSource } from '@muhammedkpln/react-native-image-viewing/dist/ImageViewing';
+import { Image as ImageIcon } from '@tamagui/lucide-icons';
+import { GuiText, GuiView, Image } from '@uidu/native';
 import dayjs from 'dayjs';
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import {
   Dimensions,
-  Image,
   ImageBackground,
   StyleSheet,
   Text,
@@ -12,17 +12,14 @@ import {
   ViewStyle,
 } from 'react-native';
 import ReactNativeParsedText from 'react-native-parsed-text';
-import SIZES from './constants';
+import SIZES from './constants/SIZES';
 import { useChatContext } from './context/WrapperContext';
-import { GChatBubble, GUrlPreviewBubble } from './types';
+import { GChatBubble } from './types';
 import { ALL_PATERNS_SHAPES } from './utils/patterns';
 
 function ChatBubbleComp(props: GChatBubble) {
   const { message, children } = props;
-  const [mediaLoaded, setMediaLoaded] = useState<boolean>(false);
   const { setShowMedia } = useChatContext();
-  const [showUrlPreview, setShowUrlPreview] = useState(false);
-  const [urlPreviewData, setUrlPreviewData] = useState<GUrlPreviewBubble>();
   const createdAt = useMemo(
     () => message && dayjs(message.createdAt).format('HH:mm'),
     [message]
@@ -70,7 +67,6 @@ function ChatBubbleComp(props: GChatBubble) {
     () => (
       <View style={styles.bubbleFooter}>
         <Text style={[styles.date]}>{createdAt}</Text>
-        {/* {renderTicks()} */}
       </View>
     ),
     [createdAt, message?.itsMe]
@@ -78,84 +74,53 @@ function ChatBubbleComp(props: GChatBubble) {
 
   const renderMedia = useCallback(() => {
     if (message?.media) {
-      const photoViewCompatible: ViewSource[] = [];
-
-      message.media.forEach((media) => {
-        // if (media.type === MediaType.Image) {
-        //   photoViewCompatible.push({
-        //     type: 'image',
-        //     source: {
-        //       uri: media.uri,
-        //     },
-        //   });
-        // }
-        // if (media.type === MediaType.Video) {
-        //     photoViewCompatible.push({
-        //         type: 'view',
-        //         children: <VideoThumbnail media={media} isSelected />,
-        //     });
-        //     photoViewCompatible.push({
-        //         type: 'view',
-        //         children: <VideoThumbnail media={media} isSelected />,
-        //     });
-        // }
-      });
-
       return (
         <View
           style={{
             flexDirection: 'row',
             flexWrap: 'wrap',
-            gap: 5,
-            maxWidth: 210,
+            gap: SIZES.BUBBLE_CHAT_GAP,
+            maxWidth: SIZES.BUBBLE_CHAT_MAX_WIDTH,
           }}
         >
-          {message?.media.map((media, index) => {
-            if (index < 2) {
-              return (
-                <TouchableWithoutFeedback
-                  key={media.uri}
-                  onPress={() => {
-                    setShowMedia(media.uri);
-                    console.log('press');
-                  }}
-                >
-                  <View>
-                    <Image source={{ uri: media.uri }} style={styles.media} />
-                  </View>
-
-                  {/* {media.type === MediaType.Video && (
-                                        <VideoThumbnail media={media} />
-                  )} */}
-                </TouchableWithoutFeedback>
-              );
-            }
-
-            return null;
-          })}
-
-          {message.media.length > 3 && (
-            <TouchableWithoutFeedback
-              onPress={() => {
-                setShowMedia(message.media[3]?.uri);
-              }}
-            >
-              <ImageBackground
-                style={styles.media}
-                source={{ uri: message.media[3]?.uri }}
-                imageStyle={{
-                  borderRadius: 15,
+          {message.media.length <= 2 ? (
+            message.media.slice(0, 2).map((media) => (
+              <TouchableWithoutFeedback
+                key={media.uri}
+                onPress={() => {
+                  setShowMedia(media.uri);
                 }}
               >
-                <View style={styles.backgroundOverlay}>
-                  <Text
-                    style={{ color: '#fff', textAlign: 'center', fontSize: 20 }}
-                  >
-                    + {message.media.length - 3}
-                  </Text>
+                <View>
+                  <Image source={{ uri: media.uri }} style={styles.media} />
                 </View>
-              </ImageBackground>
-            </TouchableWithoutFeedback>
+
+                {/* {media.type === MediaType.Video && (
+                                        <VideoThumbnail media={media} />
+                  )} */}
+              </TouchableWithoutFeedback>
+            ))
+          ) : (
+            <ImageBackground
+              style={styles.media}
+              source={{ uri: message.media[0]?.uri }}
+              imageStyle={{ borderRadius: 15 }}
+            >
+              <GuiView
+                onPress={() => setShowMedia(message.media[0]?.uri)}
+                style={styles.backgroundOverlay}
+              >
+                <Text
+                  style={{
+                    color: '#fff',
+                    textAlign: 'center',
+                    fontSize: 20,
+                  }}
+                >
+                  + {message.media?.length}
+                </Text>
+              </GuiView>
+            </ImageBackground>
           )}
         </View>
       );
@@ -164,23 +129,6 @@ function ChatBubbleComp(props: GChatBubble) {
     return null;
   }, [message, setShowMedia]);
 
-  // const renderUrlPreview = useMemo(() => {
-  //     if (showUrlPreview && urlPreviewData && !message?.repliedTo) {
-  //         return (
-  //             <View style={{ marginTop: 10 }}>
-  //                 <UrlPreviewBubble
-  //                     title={urlPreviewData.title}
-  //                     description={urlPreviewData.description}
-  //                     image={urlPreviewData.image}
-  //                     url={urlPreviewData.url}
-  //                 />
-  //             </View>
-  //         );
-  //     }
-
-  //     return null;
-  // }, [message?.repliedTo, showUrlPreview, urlPreviewData]);
-
   return (
     <View style={[styles.wrapper]}>
       {/* {propsContext.bubbleProps?.trailingAccessory && message?.itsMe && (
@@ -188,24 +136,12 @@ function ChatBubbleComp(props: GChatBubble) {
             )} */}
 
       {!message?.itsMe && (
-        <Image
-          source={message?.user.avatar}
-          style={[
-            styles.avatar,
-            {
-              width: 40,
-              height: 40,
-              borderRadius: 40,
-              marginTop: 'auto',
-            },
-          ]}
-        />
+        <Image source={message?.user?.avatar} style={styles.avatar} />
       )}
       <View
         style={[
           bubbleBackgroundColor,
           styles.container,
-          { padding: 10 },
           { marginStart: message?.itsMe ? 'auto' : undefined },
           {
             width:
@@ -213,22 +149,42 @@ function ChatBubbleComp(props: GChatBubble) {
                 ? SIZES.MIN_IMAGE_WIDTH
                 : undefined,
           },
-          { maxWidth: SIZES.BUBBLE_CHAT_WIDTH },
         ]}
       >
         <>
-          {/* {message?.repliedTo && (
-                            <ReplyingTo
-                                username={message?.repliedTo?.user.username}
-                                text={message?.repliedTo.text}
-                                messageId={message?.repliedTo.id}
-                            />
-                        )} */}
+          {message?.repliedTo && (
+            <GuiView
+              position="relative"
+              backgroundColor={'white'}
+              padding={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_PADDING}
+              borderRadius={5}
+              maxHeight={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MAX_HEIGHT}
+              marginBottom={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MARGIN_BOTTOM}
+            >
+              {message.repliedTo.media && (
+                <ImageIcon size={20} position="absolute" right={2} top={2} />
+              )}
+              <GuiText
+                width={'80%'}
+                numberOfLines={1}
+                ellipsizeMode="tail"
+                fontWeight={'bold'}
+              >
+                {message.repliedTo.user.name}
+              </GuiText>
+              <GuiText numberOfLines={2} ellipsizeMode="tail">
+                {message.repliedTo.text}
+              </GuiText>
+            </GuiView>
+          )}
 
-          <View>
+          <View style={{ gap: SIZES.BUBBLE_CHAT_GAP }}>
             {renderMedia()}
 
-            <ReactNativeParsedText parse={ALL_PATERNS_SHAPES}>
+            <ReactNativeParsedText
+              style={{ lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT }}
+              parse={ALL_PATERNS_SHAPES}
+            >
               {message?.text}
             </ReactNativeParsedText>
             {/* {renderUrlPreview} */}
@@ -239,18 +195,7 @@ function ChatBubbleComp(props: GChatBubble) {
       </View>
 
       {message?.itsMe && (
-        <Image
-          source={message?.user?.avatar}
-          style={[
-            styles.avatarMe,
-            {
-              width: 40,
-              height: 40,
-              borderRadius: 40,
-              marginTop: 'auto',
-            },
-          ]}
-        />
+        <Image source={message?.user?.avatar} style={styles.avatarMe} />
       )}
 
       {/* {propsContext.bubbleProps?.trailingAccessory && !message?.me && (
@@ -270,59 +215,40 @@ export const styles = StyleSheet.create({
     width: Dimensions.get('screen').width,
   },
   container: {
-    margin: 10,
+    marginHorizontal: SIZES.BUBBLE_CHAT_MARGIN_HORIZONTAL,
+    marginVertical: SIZES.BUBBLE_CHAT_MARGIN_VERTICAL,
     borderRadius: 10,
-  },
-  rightArrow: {
-    position: 'absolute',
-    width: 20,
-    height: 25,
-    bottom: 0,
-    borderBottomLeftRadius: 25,
-    right: -7,
-  },
-  rightArrowOverlap: {
-    position: 'absolute',
-    width: 20,
-    height: 35,
-    bottom: -6,
-    borderBottomLeftRadius: 18,
-    right: -20,
-  },
-  leftArrow: {
-    position: 'absolute',
-    width: 20,
-    height: 25,
-    bottom: 0,
-    borderBottomRightRadius: 25,
-    left: -10,
-  },
-
-  leftArrowOverlap: {
-    position: 'absolute',
-    width: 20,
-    height: 35,
-    bottom: -6,
-    borderBottomRightRadius: 18,
-    left: -20,
+    padding: SIZES.BUBBLE_CHAT_PADDING,
+    maxWidth: SIZES.BUBBLE_CHAT_MAX_WIDTH,
   },
   date: {
     color: '#a8a8a8',
     fontSize: 11,
   },
   avatar: {
+    marginTop: 'auto',
     marginLeft: 10,
-    backgroundColor: 'red',
-    padding: 5,
     marginBottom: 15,
+    padding: 5,
+    width: 40,
+    height: 40,
+    borderRadius: 40,
+    backgroundColor: 'gray',
   },
   avatarMe: {
+    marginTop: 'auto',
     marginRight: 10,
     marginBottom: 15,
+    padding: 5,
+    width: 40,
+    height: 40,
+    borderRadius: 40,
+    backgroundColor: 'gray',
   },
   bubbleFooter: {
     justifyContent: 'flex-end',
     flexDirection: 'row',
+    height: SIZES.BUBBLE_CHAT_FOOTER_HEIGHT,
   },
   moreMedia: {
     width: 100,
@@ -335,13 +261,13 @@ export const styles = StyleSheet.create({
     borderColor: '#ccc',
   },
   media: {
-    width: SIZES.MIN_IMAGE_WIDTH - 20,
+    width: SIZES.MIN_IMAGE_WIDTH - SIZES.BUBBLE_CHAT_PADDING * 2,
     height: SIZES.IMAGE_HEIGHT,
     borderRadius: 15,
   },
   backgroundOverlay: {
-    width: 100,
-    height: 100,
+    width: '100%',
+    height: '100%',
     backgroundColor: 'rgba(0,0,0,0.6)',
     borderRadius: 15,
     justifyContent: 'center',

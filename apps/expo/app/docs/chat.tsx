@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { Stack } from 'expo-router';
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { GMessage, GuiChat } from '../../components/chat-new';
 
 export default function DocsChatPage() {
@@ -8,9 +8,9 @@ export default function DocsChatPage() {
 
   const fakeUsers: GMessage[] = useMemo(
     () =>
-      new Array(70).fill(null).map(() => ({
+      new Array(20).fill(null).map(() => ({
         id: faker.number.int({ max: 99999 }),
-        text: faker.lorem.sentence(), // Consider using sentence() for chat messages
+        text: faker.lorem.sentence(),
         itsMe: faker.datatype.boolean(),
         createdAt: faker.date.anytime(),
         user: {
@@ -19,16 +19,30 @@ export default function DocsChatPage() {
           avatar: { uri: faker.image.avatar() },
         },
         ...(faker.datatype.boolean() && {
-          media: [
-            {
-              uri: faker.image.url(),
-              // type: 0,
+          media: Array.from({ length: 3 }).map(() => ({
+            uri: faker.image.url(),
+            // type: 0, // Add type property if needed
+          })),
+        }),
+        ...(faker.datatype.boolean() && {
+          repliedTo: {
+            id: faker.number.int({ max: 99999 }),
+            text: faker.lorem.sentence(),
+            itsMe: faker.datatype.boolean(),
+            createdAt: faker.date.anytime(),
+            user: {
+              id: faker.number.int({ max: 99999 }),
+              name: faker.person.fullName(),
+              avatar: { uri: faker.image.avatar() },
             },
-            {
-              uri: faker.image.url(),
-              // type: 0,
-            },
-          ],
+            ...(faker.datatype.boolean() && {
+              media: Array.from({
+                length: Math.floor(Math.random() * 2) + 1,
+              }).map(() => ({
+                uri: faker.image.url(),
+              })),
+            }),
+          },
         }),
       })),
     []

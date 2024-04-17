@@ -1876,6 +1876,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@devvie/bottom-sheet@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@devvie/bottom-sheet@npm:0.3.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 272c532e0e8bbb3cc3c125c60305385e830d2458a0b3c195eabf60841982d800560e26770421d03bc0e8b9ce8b3dc8fe9fa6e970b0b1cc199d93426d24dda11d
+  languageName: node
+  linkType: hard
+
 "@discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
@@ -10526,6 +10536,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.23.9"
     "@babel/runtime": "npm:^7.23.9"
+    "@devvie/bottom-sheet": "npm:^0.3.0"
     "@expo/config-plugins": "npm:~7.2.2"
     "@expo/metro-config": "npm:~0.10.0"
     "@expo/webpack-config": "npm:^19.0.0"

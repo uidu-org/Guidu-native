@@ -4,7 +4,78 @@ description: a great way to use badges!
 ---
 
 import BadgeDemo from "../../../src/docs/demos/badge-demo"
+import BadgeDestructive from "../../../src/docs/demos/badge-destructive"
+import BadgeOutline from "../../../src/docs/demos/badge-outline"
+import BadgeSecondary from "../../../src/docs/demos/badge-secondary"
+
 
 ## Installation
 
 <BadgeDemo />
+
+
+## Variants
+
+<Steps>
+
+<Step> 
+### Destructive
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-80 p-16 flex items-center justify-center">
+    <BadgeDestructive />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+
+"use client"
+
+import { Badge } from "@uidu/core-ui"
+
+export default function BadgeDestructive() {
+  return <Badge variant="destructive">Destructive</Badge>
+}
+
+```
+</Tab>
+
+</Tabs></Step>
+
+<Step> 
+### Outline
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-80 p-16 flex items-center justify-center">
+    <BadgeOutline />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+```
+</Tab>
+
+</Tabs></Step>
+
+<Step> 
+### Secondary
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-80 p-16 flex items-center justify-center">
+    <BadgeSecondary />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+```
+</Tab>
+
+</Tabs></Step>
+
+</Steps>

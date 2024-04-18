@@ -1,3 +1,5 @@
+"use client"
+
 import { Badge } from "@uidu/core-ui"
 
 export default function BadgeDestructive() {

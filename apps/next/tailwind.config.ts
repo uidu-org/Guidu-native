@@ -11,6 +11,7 @@ const config: Config = {
     '../../packages/web/components/core/**/**/*.{js,ts,jsx,tsx,mdx}',
     '../../packages/web/components/forms/**/**/*.{js,ts,jsx,tsx,mdx}',
     '../../packages/web/components/media/**/**/*.{js,ts,jsx,tsx,mdx}',
+    './content/docs/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     container: {

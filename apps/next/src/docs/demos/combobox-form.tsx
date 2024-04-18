@@ -7,25 +7,25 @@ import { z } from "zod"
 
 import { cn } from "@/lib/utils"
 import {
-  Button, Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-  toast
+    Button, Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+    toast
 } from "@uidu/core-ui"
 
 import {
-  UiForm as Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+    UiForm as Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
 } from "@uidu/forms-ui"
 
 const languages = [

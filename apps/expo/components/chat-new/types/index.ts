@@ -7,7 +7,7 @@ import { DefaultParseShape } from 'react-native-parsed-text';
 import type { RecyclerListViewProps } from 'recyclerlistview';
 
 export interface GUser {
-  id: number;
+  id: string;
   name: string;
   avatar: ImageSourcePropType;
 }
@@ -35,7 +35,7 @@ export interface GMedia {
 }
 
 export interface GMessage {
-  id: number;
+  id: string;
   itsMe: boolean;
   user: GUser;
   text: string;
@@ -112,6 +112,7 @@ export interface GChatBubble {
   // actions?: GActionProps;
   enableCornerRounding?: boolean;
   children?: JSX.Element;
+  staticPathToUserInfoSection: string;
 }
 
 export interface GSwipeableBubble
@@ -148,6 +149,13 @@ export interface GChatty
 //   options: Pick<ContextMenuAction, 'title' | 'destructive' | 'systemIcon'>[];
 //   cancelButtonLabel?: string;
 // }
+
+export interface GDialogHelperProps {
+  title: string;
+  userInfo?: GUser;
+  description: string;
+  action: (params: any) => void;
+}
 
 export interface GFooterProps extends Pick<GChatty, 'replyingTo' | 'mentions'> {
   onChangeText?: (text: string) => void;

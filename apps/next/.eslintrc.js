@@ -3,7 +3,7 @@ module.exports = {
   "next",
   "prettier",
   "plugin:@typescript-eslint/recommended",
-  "plugin:@typescript-eslint/recommended-requiring-type-checking",
+  "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   root: true,
   rules: {
@@ -24,4 +24,9 @@ module.exports = {
     ],
     "@typescript-eslint/no-unsafe-assignment": "off"
   },
+  // parserOptions: {
+  //   parser: '@typescript-eslint/parser',
+  //   project: './tsconfig.json',
+  //   tsconfigRootDir: __dirname,
+  // },
 }

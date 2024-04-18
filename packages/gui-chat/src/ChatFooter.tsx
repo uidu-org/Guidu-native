@@ -1,6 +1,6 @@
 import { Image as ImageIcon, SendHorizontal, X } from '@tamagui/lucide-icons';
 import { GuiText, GuiView, Image, Sheet, XStack } from '@uidu/native';
-import React, { FC, useCallback, useMemo, useRef, useState } from 'react';
+import React, { FC, useCallback, useRef, useState } from 'react';
 import {
   FlatList,
   Keyboard,
@@ -22,6 +22,7 @@ const ChatFooterComp: FC<GFooterProps> = (props) => {
   const { mentions, value } = props;
   const { replyMessage, setReplyMessage } = useChatContext();
   const [text, setText] = useState('');
+  const [offsetReplyMessageHeight, setOffsetReplyMessageHeight] = useState();
   const { width: windowWidth } = useWindowDimensions();
   const inputRef = useRef<TextInput>(null);
 
@@ -30,12 +31,12 @@ const ChatFooterComp: FC<GFooterProps> = (props) => {
     setText(text);
   }, []);
 
-  const cuttedText = useMemo(() => {
-    if (replyMessage) {
-      return replyMessage.text.slice(0, 100) + '...';
-    }
-    return null;
-  }, [replyMessage]);
+  const onLayout = (event) => {
+    const {
+      layout: { height },
+    } = event.nativeEvent;
+    setOffsetReplyMessageHeight(height);
+  };
 
   const renderSuggestions: (
     suggestions: GUser[]
@@ -131,13 +132,14 @@ const ChatFooterComp: FC<GFooterProps> = (props) => {
   //     <Text>{cuttedText}</Text>
   //   </View>
   // </View>
+
   return (
     <GuiView borderTopWidth={1} borderTopColor="#c5c3c3" flexGrow={1}>
       {replyMessage && (
         <XStack
           backgroundColor={'white'}
           position={'absolute'}
-          bottom={45}
+          bottom={offsetReplyMessageHeight}
           width={'100%'}
           padding={5}
         >
@@ -172,6 +174,7 @@ const ChatFooterComp: FC<GFooterProps> = (props) => {
         alignItems="center"
         gap="$2"
         paddingHorizontal={8}
+        onLayout={onLayout}
       >
         {/* <View>
           <PlusCircle size={24} onPress={() => handlePresentModalPress()} />

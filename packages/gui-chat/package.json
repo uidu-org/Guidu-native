@@ -1,6 +1,6 @@
 {
   "name": "@uidu/gui-chat",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "sideEffects": [
     "*.css"
   ],
@@ -20,6 +20,8 @@
     "expo-av": "^13.10.5",
     "expo-haptics": "^12.8.1",
     "expo-image-picker": "^14.7.1",
+    "expo-linking": "^6.2.2",
+    "expo-router": "^3.4.8",
     "react": "^18.2.0",
     "react-native": "0.72.10",
     "react-native-controlled-mentions": "^2.2.5",
@@ -38,6 +40,8 @@
     "react-native": "*",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-reanimated": "~3.3.0",
-    "react-native-svg": "13.9.0"
+    "react-native-svg": "13.9.0",
+    "expo-router": ">= 3.0.0",
+    "expo-linking": "*"
   }
 }

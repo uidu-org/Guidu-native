@@ -1,7 +1,16 @@
 import { Image as ImageIcon } from '@tamagui/lucide-icons';
-import { GuiText, GuiView, Image } from '@uidu/native';
+import {
+  AlertDialog,
+  GuiButton,
+  GuiText,
+  GuiView,
+  Image,
+  XStack,
+} from '@uidu/native';
 import dayjs from 'dayjs';
-import React, { useCallback, useMemo } from 'react';
+import * as Linking from 'expo-linking';
+import { router } from 'expo-router';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   Dimensions,
   ImageBackground,
@@ -11,15 +20,17 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import ReactNativeParsedText from 'react-native-parsed-text';
+import { replaceMentionValues } from 'react-native-controlled-mentions';
+import ReactNativeParsedText, { ParseShape } from 'react-native-parsed-text';
 import SIZES from './constants/SIZES';
 import { useChatContext } from './context/WrapperContext';
-import { GChatBubble } from './types';
-import { ALL_PATERNS_SHAPES } from './utils/patterns';
+import { GChatBubble, GDialogHelperProps } from './types';
 
 function ChatBubbleComp(props: GChatBubble) {
-  const { message, children } = props;
+  const { message, staticPathToUserInfoSection, children } = props;
   const { setShowMedia } = useChatContext();
+  const [dialogHelperInfo, setDialogHelperInfo] =
+    useState<GDialogHelperProps>();
   const createdAt = useMemo(
     () => message && dayjs(message.createdAt).format('HH:mm'),
     [message]
@@ -129,79 +140,170 @@ function ChatBubbleComp(props: GChatBubble) {
     return null;
   }, [message, setShowMedia]);
 
+  const ALL_PATERNS_SHAPES: ParseShape[] = useMemo(
+    () => [
+      {
+        type: 'url',
+        style: {
+          color: 'blue',
+        },
+        onPress: (url, _index) => {
+          setDialogHelperInfo({
+            action: async () => Linking.openURL(url),
+            title: 'Open url',
+            description: `Open the url: ${url}`,
+          });
+        },
+      },
+      {
+        type: 'email',
+        style: {
+          color: '#872424fa',
+        },
+        onPress: (mailTo, _index) => {
+          setDialogHelperInfo({
+            action: async () => Linking.openURL(`mailto:${mailTo}`),
+            title: 'Open mail',
+            description: `Open the mail: ${mailTo}`,
+          });
+        },
+      },
+      {
+        type: 'phone',
+        // pattern: /#(\w+)/,
+        style: {
+          color: 'cyan',
+        },
+        onPress: (phone, _index) => {
+          setDialogHelperInfo({
+            action: async () => Linking.openURL(`tel:${phone}`),
+            title: 'Open dialer',
+            description: `Open the phone number: ${phone}`,
+          });
+        },
+      },
+      {
+        pattern: /@\[([^)]+)]\(([^)]+)\)/,
+        style: {
+          color: '#394876',
+        },
+        onPress: (prop, _index) => {
+          const { userId, userName } = extractIdFromMention(prop);
+          console.log(userId);
+          setDialogHelperInfo({
+            action: () =>
+              router.push(`${staticPathToUserInfoSection}/${userId}`),
+            title: ` Open User info`,
+            description: `Open ${userName ?? 'User'} info section`,
+          });
+        },
+        renderText: (value) =>
+          replaceMentionValues(value, ({ name }) => `@${name}`),
+      },
+    ],
+    []
+  );
+
   return (
-    <View style={[styles.wrapper]}>
-      {/* {propsContext.bubbleProps?.trailingAccessory && message?.itsMe && (
+    <>
+      <View style={[styles.wrapper]}>
+        {/* {propsContext.bubbleProps?.trailingAccessory && message?.itsMe && (
                 <View>{propsContext.bubbleProps.trailingAccessory}</View>
             )} */}
 
-      {!message?.itsMe && (
-        <Image source={message?.user?.avatar} style={styles.avatar} />
-      )}
-      <View
-        style={[
-          bubbleBackgroundColor,
-          styles.container,
-          { marginStart: message?.itsMe ? 'auto' : undefined },
-          {
-            width:
-              message?.media && message?.media?.length
-                ? SIZES.MIN_IMAGE_WIDTH
-                : undefined,
-          },
-        ]}
-      >
-        <>
-          {message?.repliedTo && (
-            <GuiView
-              position="relative"
-              backgroundColor={'white'}
-              padding={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_PADDING}
-              borderRadius={5}
-              maxHeight={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MAX_HEIGHT}
-              marginBottom={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MARGIN_BOTTOM}
-            >
-              {message.repliedTo.media && (
-                <ImageIcon size={20} position="absolute" right={2} top={2} />
-              )}
-              <GuiText
-                width={'80%'}
-                numberOfLines={1}
-                ellipsizeMode="tail"
-                fontWeight={'bold'}
+        {!message?.itsMe && (
+          <Image source={message?.user?.avatar} style={styles.avatar} />
+        )}
+        <View
+          style={[
+            bubbleBackgroundColor,
+            styles.container,
+            { marginStart: message?.itsMe ? 'auto' : undefined },
+            {
+              width:
+                message?.media && message?.media?.length
+                  ? SIZES.MIN_IMAGE_WIDTH
+                  : undefined,
+            },
+          ]}
+        >
+          <>
+            {message?.repliedTo && (
+              <GuiView
+                position="relative"
+                backgroundColor={'white'}
+                padding={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_PADDING}
+                borderRadius={5}
+                maxHeight={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MAX_HEIGHT}
+                marginBottom={SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MARGIN_BOTTOM}
               >
-                {message.repliedTo.user.name}
-              </GuiText>
-              <GuiText numberOfLines={2} ellipsizeMode="tail">
-                {message.repliedTo.text}
-              </GuiText>
-            </GuiView>
-          )}
+                {message.repliedTo.media && (
+                  <ImageIcon size={20} position="absolute" right={2} top={2} />
+                )}
+                <GuiText
+                  width={'80%'}
+                  numberOfLines={1}
+                  ellipsizeMode="tail"
+                  fontWeight={'bold'}
+                >
+                  {message.repliedTo.user.name}
+                </GuiText>
+                <GuiText numberOfLines={2} ellipsizeMode="tail">
+                  {message.repliedTo.text}
+                </GuiText>
+              </GuiView>
+            )}
 
-          <View style={{ gap: SIZES.BUBBLE_CHAT_GAP }}>
-            {renderMedia()}
+            <View style={{ gap: SIZES.BUBBLE_CHAT_GAP }}>
+              {renderMedia()}
 
-            <ReactNativeParsedText
-              style={{ lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT }}
-              parse={ALL_PATERNS_SHAPES}
-            >
-              {message?.text}
-            </ReactNativeParsedText>
-            {/* {renderUrlPreview} */}
-            {renderFooter()}
-          </View>
-        </>
-        {/* {renderCornerRounding()} */}
+              <ReactNativeParsedText
+                style={{ lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT }}
+                parse={ALL_PATERNS_SHAPES}
+              >
+                {message?.text}
+              </ReactNativeParsedText>
+              {/* {renderUrlPreview} */}
+              {renderFooter()}
+            </View>
+          </>
+          {/* {renderCornerRounding()} */}
+        </View>
+
+        {message?.itsMe && (
+          <Image source={message?.user?.avatar} style={styles.avatarMe} />
+        )}
       </View>
-
-      {message?.itsMe && (
-        <Image source={message?.user?.avatar} style={styles.avatarMe} />
-      )}
-
-      {/* {propsContext.bubbleProps?.trailingAccessory && !message?.me && (
-                <View>{propsContext.bubbleProps.trailingAccessory}</View>
-            )} */}
-    </View>
+      <AlertDialog key={dialogHelperInfo?.title} open={!!dialogHelperInfo}>
+        <AlertDialog.Portal>
+          <AlertDialog.Overlay />
+          <AlertDialog.Content minWidth={300} minHeight={200}>
+            <AlertDialog.Title numberOfLines={1} ellipsizeMode="tail">
+              {dialogHelperInfo?.title}
+            </AlertDialog.Title>
+            <AlertDialog.Description>
+              {dialogHelperInfo?.description}
+            </AlertDialog.Description>
+            <XStack gap={20} justifyContent="flex-end" marginTop="auto">
+              <AlertDialog.Cancel asChild>
+                <GuiButton onPress={() => setDialogHelperInfo(undefined)}>
+                  Close
+                </GuiButton>
+              </AlertDialog.Cancel>
+              <AlertDialog.Action asChild>
+                <GuiButton
+                  onPress={dialogHelperInfo?.action}
+                  onPressOut={() => setDialogHelperInfo(undefined)}
+                  theme="active"
+                >
+                  Open
+                </GuiButton>
+              </AlertDialog.Action>
+            </XStack>
+          </AlertDialog.Content>
+        </AlertDialog.Portal>
+      </AlertDialog>
+    </>
   );
 }
 
@@ -275,3 +377,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+function extractIdFromMention(mentionText: string) {
+  const mentionRegex = /@\[([^)]+)]\(([^)]+)\)/;
+  const match = mentionText.match(mentionRegex);
+
+  const id = match![2];
+  const name = match![1];
+  return { userId: id, userName: name };
+}

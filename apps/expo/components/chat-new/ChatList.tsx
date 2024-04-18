@@ -85,18 +85,6 @@ to the replied message. */
         }
       });
 
-      if (replyMessage) {
-        recyclerlistviewRef.current?.scrollToEnd(true);
-      }
-
-      if (Keyboard.isVisible()) {
-        console.log('scroll to bottom');
-        recyclerlistviewRef.current?.scrollToIndex(
-          messages[messages.getAllData().length - 1],
-          true
-        );
-      }
-
       return () => {
         ChatBubbleEmitter.removeAllListeners();
       };
@@ -304,7 +292,7 @@ in the current messages. If it is, then it will not scroll to the bottom. */
           canChangeSize={true}
           rowRenderer={rowRenderer}
           initialRenderIndex={messages.getAllData().length - 1}
-          //   renderFooter={() => <TypingStatus ref={typingStatusRef} />}
+          // renderFooter={() => {}}
           onEndReached={props?.onEndReached}
           onEndReachedThreshold={props?.onEndReachedThreshold}
           // decelerationRate={Platform.OS == 'ios' ? 0.995 : 0.97

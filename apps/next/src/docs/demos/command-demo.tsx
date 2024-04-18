@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Calculator,
   Calendar,
@@ -16,7 +18,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/default/ui/command"
+} from "@uidu/core-ui"
 
 export default function CommandDemo() {
   return (

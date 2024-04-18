@@ -1,6 +1,8 @@
+"use client"
+
 import { toast } from "sonner"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@uidu/core-ui"
 
 export default function SonnerDemo() {
   return (

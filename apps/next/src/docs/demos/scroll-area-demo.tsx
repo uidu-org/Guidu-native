@@ -1,7 +1,7 @@
-import * as React from "react"
+"use client"
 
-import { ScrollArea } from "@/registry/default/ui/scroll-area"
-import { Separator } from "@/registry/default/ui/separator"
+
+import { ScrollArea, Separator } from "@uidu/core-ui"
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`

@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Pagination,
   PaginationContent,
@@ -6,7 +8,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/default/ui/pagination"
+} from "@uidu/core-ui"
 
 export default function PaginationDemo() {
   return (

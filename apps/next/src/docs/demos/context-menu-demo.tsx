@@ -1,3 +1,5 @@
+"use client"
+
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -12,7 +14,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/default/ui/context-menu"
+} from "@uidu/core-ui"
 
 export default function ContextMenuDemo() {
   return (

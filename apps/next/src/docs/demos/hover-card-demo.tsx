@@ -4,13 +4,12 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
-import { Button } from "@/registry/default/ui/button"
-import {
+  Button,
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/default/ui/hover-card"
+} from "@uidu/core-ui"
+
 
 export default function HoverCardDemo() {
   return (

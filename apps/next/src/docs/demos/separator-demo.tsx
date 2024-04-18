@@ -1,4 +1,6 @@
-import { Separator } from "@/registry/default/ui/separator"
+"use client"
+
+import { Separator } from "@uidu/core-ui"
 
 export default function SeparatorDemo() {
   return (

@@ -1,15 +1,25 @@
-import { Button } from "@/registry/default/ui/button"
+// import { Button } from "@/registry/default/ui/button"
+// import {
+//   Dialog,
+//   DialogContent,
+//   DialogDescription,
+//   DialogFooter,
+//   DialogHeader,
+//   DialogTitle,
+//   DialogTrigger,
+// } from "@/registry/default/ui/dialog"
+// import { Input } from "@/registry/default/ui/input"
+// import { Label } from "@/registry/default/ui/label"
+
 import {
-  Dialog,
+  Button, Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-} from "@/registry/default/ui/dialog"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+  DialogTrigger, Input, Label
+} from "@uidu/core-ui"
 
 export default function DialogDemo() {
   return (

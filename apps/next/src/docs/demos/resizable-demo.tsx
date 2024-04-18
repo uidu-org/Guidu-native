@@ -1,8 +1,10 @@
+"use client"
+
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/default/ui/resizable"
+} from "@uidu/core-ui"
 
 export default function ResizableDemo() {
   return (

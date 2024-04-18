@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Cloud,
   CreditCard,
@@ -15,9 +17,8 @@ import {
   Users,
 } from "lucide-react"
 
-import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenu,
+  Button, DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
@@ -28,8 +29,8 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+  DropdownMenuTrigger
+} from "@uidu/core-ui"
 
 export default function DropdownMenuDemo() {
   return (

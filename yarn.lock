@@ -10786,6 +10786,8 @@ __metadata:
     react-native-svg: "npm:13.9.0"
     recyclerlistview: "npm:^4.2.0"
   peerDependencies:
+    expo-linking: "*"
+    expo-router: ">= 3.0.0"
     react-native: "*"
     react-native-gesture-handler: ~2.12.0
     react-native-reanimated: ~3.3.0

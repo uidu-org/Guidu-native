@@ -1,19 +1,30 @@
 ---
-title: "Carousel" 
-description: A dynamic component that presents a rotating display of content items within a confined space.   
+title: "Carousel"
+description: A dynamic component that presents a rotating display of content items within a confined space.
 ---
 
-import CarouselDemo from "../../../src/docs/demos/carousel-demo"
-import CarouselSize from "../../../src/docs/demos/carousel-size"
-import CarouselSpacing from "../../../src/docs/demos/carousel-spacing"
-import CarouselOrientation from "../../../src/docs/demos/carousel-orientation"
-import CarouselApi from "../../../src/docs/demos/carousel-api"
-import CarouselPlugin from "../../../src/docs/demos/carousel-plugin"
-
+import CarouselDemo from "../../../src/docs/demos/carousel-demo";
+import CarouselSize from "../../../src/docs/demos/carousel-size";
+import CarouselSpacing from "../../../src/docs/demos/carousel-spacing";
+import CarouselOrientation from "../../../src/docs/demos/carousel-orientation";
+import CarouselApi from "../../../src/docs/demos/carousel-api";
+import CarouselPlugin from "../../../src/docs/demos/carousel-plugin";
 
 <div className="flex items-center">
-  <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/carousel-ui" target="_blank">@uidu/carousel-ui</a>
-  <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/carousel" target="_blank">Source</a>
+  <a
+    className="mr-4 "
+    href="https://www.npmjs.com/package/@uidu/carousel-ui"
+    target="_blank"
+  >
+    @uidu/carousel-ui
+  </a>
+  <a
+    className="mx-4"
+    href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/carousel"
+    target="_blank"
+  >
+    Source
+  </a>
 </div>
 
 ## Carousel
@@ -22,7 +33,7 @@ import CarouselPlugin from "../../../src/docs/demos/carousel-plugin"
   <CarouselDemo />
 </div>
 
-## Usage 
+## Usage
 
   <Tabs items={["preview" , "code"]}>
     <Tab value="preview">
@@ -68,35 +79,30 @@ import CarouselPlugin from "../../../src/docs/demos/carousel-plugin"
       }
     ```
     </Tab>
+
   </Tabs>
 
 ## Installation
 
-  <Tabs items={["npm" , "yarn"]}>
-    <Tab value="npm">
-      ```bash
-      npm install @uidu/carousel-ui
-      ```
-    </Tab>
-    <Tab value="yarn">
-      ```bash
-      yarn add @uidu/carousel-ui
-      ```
-    </Tab>
-  </Tabs>
+{" "}
+<Tabs items={["npm", "yarn"]}>
+  <Tab value="npm">```bash npm install @uidu/carousel-ui ```</Tab>
+  <Tab value="yarn">```bash yarn add @uidu/carousel-ui ```</Tab>
+</Tabs>
 
-## Import 
+## Import
 
-  ```tsx
-  import {
-    Card, CardContent,
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-  } from "@uidu/core-ui"
-  ```
+```tsx
+import {
+  Card,
+  CardContent,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@uidu/core-ui";
+```
 
 ## Options
 
@@ -157,7 +163,7 @@ import CarouselPlugin from "../../../src/docs/demos/carousel-plugin"
     </Step>
     <Step>
       ### Size
-      Apply the `basis` utility class on the `<CarouselItem />` to adjust the item size. 
+      Apply the `basis` utility class on the `<CarouselItem />` to adjust the item size.
       <Tabs items={["preview", "code"]}>
         <Tab value="preview">
           <div className="flex py-10 items-center justify-center">
@@ -208,7 +214,7 @@ import CarouselPlugin from "../../../src/docs/demos/carousel-plugin"
     </Step>
     <Step>
       ### Spacing
-      
+
         Apply the `pl-[VALUE]` utility on the `<CarouselItem />` and a negative `-ml-[VALUE]` on the `<CarouselContent />` to set the spacing between items.
 
       <Tabs items={["preview" , "code"]}>
@@ -255,7 +261,7 @@ import CarouselPlugin from "../../../src/docs/demos/carousel-plugin"
       </Tabs>
     </Step>
     <Step>
-      ### Api 
+      ### Api
       Utilize a state and the `setApi` props to acquire an instance of the carousel API.
       <Tabs items={["preview" , "code"]}>
         <Tab value="preview">

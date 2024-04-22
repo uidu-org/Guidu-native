@@ -1,5 +1,6 @@
 {
   "name": "uidu-ui-monorepo",
+  "version": "1.0.2",
   "private": true,
   "workspaces": [
     "./apps/*",
@@ -44,7 +45,6 @@
     "react-dom": "^18.2.0",
     "react-refresh": "^0.14.0",
     "react-native-svg": "13.9.0",
-    "react-native-web": "~0.19.6",
     "eslint-plugin-react-hooks": "<5"
   },
   "dependencies": {
@@ -55,27 +55,18 @@
     "@babel/runtime": "^7.23.9",
     "@manypkg/cli": "^0.21.2",
     "@preconstruct/cli": "^2.8.3",
-    "@storybook/addon-a11y": "^7.6.13",
-    "@storybook/react": "^7.6.13",
     "@types/babel__core": "^7.20.5",
     "@types/babel__preset-env": "^7.9.6",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
     "check-dependency-version-consistency": "^4.1.0",
-    "downshift": "^8.3.1",
     "eslint": "^8.56.0",
     "eslint-config-uidu": "^0.9.2",
-    "expo": "~49.0.18",
-    "expo-splash-screen": "~0.20.5",
-    "expo-status-bar": "~1.6.0",
-    "framer-motion": "^11.0.3",
-    "hermes-parser": "^0.20.1",
-    "node-gyp": "^9.4.1",
     "prettier": ">=3.0.0",
     "react": "^18.2.0",
-    "react-hook-form": "^7.49.3",
-    "react-native": "0.72.10",
-    "tamagui": "^1.89.8",
+    "react-dom": "^18.2.0",
+    "react-native": "0.73.6",
+    "react-native-web": "^0.19.10",
     "tsup": "^8.0.2",
     "turbo": "^1.12.2",
     "typescript": "^5.3.3"
@@ -94,6 +85,5 @@
   },
   "peerDependencies": {
     "react": "*"
-  },
-  "version": "1.0.0"
+  }
 }

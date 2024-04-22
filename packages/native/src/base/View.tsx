@@ -1,10 +1,10 @@
-import { Stack, styled } from 'tamagui'
+import { YStack, styled } from 'tamagui';
 
 export const GuiView = styled(
-  Stack,
+  YStack,
   {
     name: 'GuiView',
-
+    bg: '$background',
     variants: {
       centered: {
         true: {
@@ -16,4 +16,4 @@ export const GuiView = styled(
     } as const,
   },
   {}
-)
+);

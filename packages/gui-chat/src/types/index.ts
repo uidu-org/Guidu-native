@@ -67,6 +67,8 @@ export interface GListProps
   rowRenderer?: (data: GMessage) => JSX.Element;
   data: GMessage[];
   containerStyle?: ViewStyle;
+  staticPathToUserInfoSection?: string;
+  forceNonDeterministicRendering?: boolean;
 }
 
 export interface GTypingStatusRef {
@@ -105,14 +107,14 @@ export interface GScrollToBottomProps
 
 export interface GPatternShape extends DefaultParseShape {}
 
-export interface GChatBubble {
+export interface GChatBubble
+  extends Pick<GListProps, 'staticPathToUserInfoSection'> {
   message?: GMessage;
   replyDragElement?: JSX.Element;
   trailingAccessory?: JSX.Element;
   // actions?: GActionProps;
   enableCornerRounding?: boolean;
   children?: JSX.Element;
-  staticPathToUserInfoSection: string;
 }
 
 export interface GSwipeableBubble
@@ -143,6 +145,8 @@ export interface GChatty
   renderBubble?: (props?: GMessage) => JSX.Element;
   currentUser: GUser;
   mentions: GUser[];
+  staticPathToUserInfoSection?: string;
+  forceNonDeterministicRendering?: boolean;
 }
 
 // export interface GActionProps {

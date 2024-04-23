@@ -78,6 +78,23 @@ import ButtonWithIcon from "../../../src/docs/demos/button-with-icon";
 </Tabs>
 
 ## Variants
+  ### Usage
+    
+    Use the `buttonVariants` helper to generate a button-styled link
+
+    ```tsx 
+      import { buttonVariants } from "@uidu/core-ui"
+
+      <Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
+    ```
+
+    Or you can use the `asChild` parameter to nest the link component
+    ```tsx
+      <Button asChild>
+        <Link href="/login">Login</Link>
+      </Button>
+
+    ```
 
 ### Usage
 

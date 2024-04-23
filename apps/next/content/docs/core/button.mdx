@@ -1,6 +1,6 @@
 ---
 title: "Button"
-description: a great way to use buttons!
+description: An interactive component used for triggering actions or events with a click or tap.
 ---
 
 import ButtonDemo from "../../../src/docs/demos/button-demo"
@@ -74,6 +74,23 @@ import ButtonAsChild from "../../../src/docs/demos/button-as-child"
   </Tabs>
 
 ## Variants
+  ### Usage
+    
+    Use the `buttonVariants` helper to generate a button-styled link
+
+    ```tsx 
+      import { buttonVariants } from "@uidu/core-ui"
+
+      <Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
+    ```
+
+    Or you can use the `asChild` parameter to nest the link component
+    ```tsx
+      <Button asChild>
+        <Link href="/login">Login</Link>
+      </Button>
+
+    ```
 
 <Steps>
   <Step>
@@ -265,7 +282,7 @@ import ButtonAsChild from "../../../src/docs/demos/button-as-child"
       <Tabs items={["preview", "code"]}>
         <Tab value="preview">
           <div className="py-16 flex items-center justify-center">
-            
+              <ButtonDemo />
           </div>
         </Tab>
         <Tab value="code">

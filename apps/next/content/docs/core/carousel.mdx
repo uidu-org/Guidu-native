@@ -1,6 +1,6 @@
 ---
 title: "Carousel" 
-description: a great way to use carousels! 
+description: A dynamic component that presents a rotating display of content items within a confined space.   
 ---
 
 import CarouselDemo from "../../../src/docs/demos/carousel-demo"
@@ -8,6 +8,7 @@ import CarouselSize from "../../../src/docs/demos/carousel-size"
 import CarouselSpacing from "../../../src/docs/demos/carousel-spacing"
 import CarouselOrientation from "../../../src/docs/demos/carousel-orientation"
 import CarouselApi from "../../../src/docs/demos/carousel-api"
+import CarouselPlugin from "../../../src/docs/demos/carousel-plugin"
 
 
 <div className="flex items-center">
@@ -33,38 +34,38 @@ import CarouselApi from "../../../src/docs/demos/carousel-api"
     </Tab>
     <Tab value="code">
     ```tsx
-  "use client"
+      "use client"
 
-  import {
-    Card, CardContent,
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-  } from "@uidu/core-ui"
+      import {
+        Card, CardContent,
+        Carousel,
+        CarouselContent,
+        CarouselItem,
+        CarouselNext,
+        CarouselPrevious,
+      } from "@uidu/core-ui"
 
-  export default function CarouselDemo() {
-    return (
-      <Carousel className="w-full max-w-xs">
-        <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index}>
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-4xl font-semibold">{index + 1}</span>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    )
-  }
+      export default function CarouselDemo() {
+        return (
+          <Carousel className="w-full max-w-xs">
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-4xl font-semibold">{index + 1}</span>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        )
+      }
     ```
     </Tab>
   </Tabs>
@@ -102,6 +103,7 @@ import CarouselApi from "../../../src/docs/demos/carousel-api"
   <Steps>
     <Step>
       ### Orientation
+        Use the `orientation` prop to define the carousel's orientation
       <Tabs items={["preview", "code"]}>
         <Tab value="preview">
           <div className="flex py-10 items-center justify-center">
@@ -155,6 +157,7 @@ import CarouselApi from "../../../src/docs/demos/carousel-api"
     </Step>
     <Step>
       ### Size
+      Apply the `basis` utility class on the `<CarouselItem />` to adjust the item size. 
       <Tabs items={["preview", "code"]}>
         <Tab value="preview">
           <div className="flex py-10 items-center justify-center">
@@ -205,6 +208,8 @@ import CarouselApi from "../../../src/docs/demos/carousel-api"
     </Step>
     <Step>
       ### Spacing
+      
+        Apply the `pl-[VALUE]` utility on the `<CarouselItem />` and a negative `-ml-[VALUE]` on the `<CarouselContent />` to set the spacing between items.
 
       <Tabs items={["preview" , "code"]}>
         <Tab value="preview">
@@ -234,6 +239,138 @@ import CarouselApi from "../../../src/docs/demos/carousel-api"
                           <Card>
                             <CardContent className="flex aspect-square items-center justify-center p-6">
                               <span className="text-2xl font-semibold">{index + 1}</span>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              )
+            }
+          ```
+        </Tab>
+      </Tabs>
+    </Step>
+    <Step>
+      ### Api 
+      Utilize a state and the `setApi` props to acquire an instance of the carousel API.
+      <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+          <div className="flex py-10 items-center justify-center">
+            <div className="w-40">
+              <CarouselApi />
+            </div>
+          </div>
+        </Tab>
+        <Tab value="code">
+          ```tsx
+            "use client"
+            import * as React from "react"
+
+            import {
+              Card, CardContent,
+              Carousel,
+              CarouselContent,
+              CarouselItem,
+              CarouselNext,
+              CarouselPrevious,
+              type CarouselApi,
+            } from "@uidu/core-ui"
+
+            export default function CarouselDApiDemo() {
+              const [api, setApi] = React.useState<CarouselApi>()
+              const [current, setCurrent] = React.useState(0)
+              const [count, setCount] = React.useState(0)
+
+              React.useEffect(() => {
+                if (!api) {
+                  return
+                }
+
+                setCount(api.scrollSnapList().length)
+                setCurrent(api.selectedScrollSnap() + 1)
+
+                api.on("select", () => {
+                  console.log("current")
+                  setCurrent(api.selectedScrollSnap() + 1)
+                })
+              }, [api])
+
+              return (
+                <div>
+                  <Carousel setApi={setApi} className="w-full max-w-xs">
+                    <CarouselContent>
+                      {Array.from({ length: 5 }).map((_, index) => (
+                        <CarouselItem key={index}>
+                          <Card>
+                            <CardContent className="flex aspect-square items-center justify-center p-6">
+                              <span className="text-4xl font-semibold">{index + 1}</span>
+                            </CardContent>
+                          </Card>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                  <div className="py-2 text-center text-sm text-muted-foreground">
+                    Slide {current} of {count}
+                  </div>
+                </div>
+              )
+            }
+          ```
+        </Tab>
+      </Tabs>
+    </Step>
+    <Step>
+      ### Plugin
+      Integrate plugins into the carousel effortlessly by using the `plugins` prop.
+      <Tabs items={["preview" , "code" ]}>
+        <Tab value="preview">
+          <div className="flex py-10 items-center justify-center">
+            <div className="w-40">
+              <CarouselPlugin />
+            </div>
+          </div>
+        </Tab>
+        <Tab value="code">
+          ```tsx
+            "use client"
+            import Autoplay from "embla-carousel-autoplay"
+            import * as React from "react"
+
+            import {
+              Card, CardContent,
+              Carousel,
+              CarouselContent,
+              CarouselItem,
+              CarouselNext,
+              CarouselPrevious,
+            } from "@uidu/core-ui"
+
+            export default function CarouselPlugin() {
+              const plugin = React.useRef(
+                Autoplay({ delay: 2000, stopOnInteraction: true })
+              )
+
+              return (
+                <Carousel
+                  plugins={[plugin.current]}
+                  className="w-full max-w-xs"
+                  onMouseEnter={plugin.current.stop}
+                  onMouseLeave={plugin.current.reset}
+                >
+                  <CarouselContent>
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <Card>
+                            <CardContent className="flex aspect-square items-center justify-center p-6">
+                              <span className="text-4xl font-semibold">{index + 1}</span>
                             </CardContent>
                           </Card>
                         </div>

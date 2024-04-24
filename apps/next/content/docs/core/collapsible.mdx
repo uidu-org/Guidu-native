@@ -5,6 +5,96 @@ description: a great way to use collapsible!
 
 import CollapsibleDemo from "../../../src/docs/demos/collapsible-demo" 
 
-## Installation
 
-<CollapsibleDemo />
+    <div className="flex items-center">
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/collapsable-ui" target="_blank">@uidu/collapsable-ui></a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/collapsable" target="_blank">Source</a>
+    </div>
+
+## Collapsible
+
+  <CollapsibleDemo />
+
+## Usage 
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <CollapsibleDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx 
+                "use client"
+
+                import { ChevronsUpDown } from "lucide-react"
+                import * as React from "react"
+
+                import {
+                  Button,
+                  Collapsible,
+                  CollapsibleContent,
+                  CollapsibleTrigger,
+                } from "@uidu/core-ui"
+
+                export default function CollapsibleDemo() {
+                  const [isOpen, setIsOpen] = React.useState(false)
+
+                  return (
+                    <Collapsible
+                      open={isOpen}
+                      onOpenChange={setIsOpen}
+                      className="w-[350px] space-y-2"
+                    >
+                      <div className="flex items-center justify-between space-x-4 px-4">
+                        <h4 className="text-sm font-semibold">
+                          @peduarte starred 3 repositories
+                        </h4>
+                        <CollapsibleTrigger asChild>
+                          <Button variant="ghost" size="sm" className="w-9 p-0">
+                            <ChevronsUpDown className="h-4 w-4" />
+                            <span className="sr-only">Toggle</span>
+                          </Button>
+                        </CollapsibleTrigger>
+                      </div>
+                      <div className="rounded-md border px-4 py-3 font-mono text-sm">
+                        @radix-ui/primitives
+                      </div>
+                      <CollapsibleContent className="space-y-2">
+                        <div className="rounded-md border px-4 py-3 font-mono text-sm">
+                          @radix-ui/colors
+                        </div>
+                        <div className="rounded-md border px-4 py-3 font-mono text-sm">
+                          @stitches/react
+                        </div>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  )
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation 
+      <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/collapsable-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/collapsable-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import 
+
+  ```tsx
+  import {
+    Button,
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+  } from "@uidu/core-ui"
+  ```

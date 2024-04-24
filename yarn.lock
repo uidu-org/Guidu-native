@@ -17032,6 +17032,7 @@ __metadata:
     react-native-svg: "npm:14.1.0"
     react-native-web: "npm:^0.19.10"
     react-test-renderer: "npm:18.2.0"
+    rn-text-size: "npm:^4.0.0-rc.3"
     storybook: "npm:^8.0.9"
     typescript: "npm:^5.3.3"
   languageName: unknown
@@ -26785,6 +26786,15 @@ __metadata:
   bin:
     rimraf: ./bin.js
   checksum: 756419f2fa99aa119c46a9fc03e09d84ecf5421a80a72d1944c5088c9e4671e77128527a900a313ed9d3fdbdd37e2ae05486cd7e9116d5812d8c31f2399d7c86
+  languageName: node
+  linkType: hard
+
+"rn-text-size@npm:^4.0.0-rc.3":
+  version: 4.0.0-rc.3
+  resolution: "rn-text-size@npm:4.0.0-rc.3"
+  peerDependencies:
+    react-native: ">=0.59.0"
+  checksum: 378a392a70be45fda63296f47f1ab065893e588f51765412cce9e0617c1e0d794a55591746fb5a1d137702a0708d8409711e5c8e8c55b5e36631f65eb6a1ee83
   languageName: node
   linkType: hard
 

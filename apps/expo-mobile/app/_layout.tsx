@@ -45,7 +45,11 @@ function RootLayoutNav() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <TamaguiProvider config={config}>
         <GestureHandlerRootView style={{ flex: 1 }}>
-          <Stack />
+          <Stack
+            screenOptions={{
+              headerShown: false,
+            }}
+          />
         </GestureHandlerRootView>
       </TamaguiProvider>
     </ThemeProvider>

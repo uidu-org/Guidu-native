@@ -1,5 +1,5 @@
+import { GMessage, GuiChat } from '@/components/chat';
 import { faker } from '@faker-js/faker';
-import { GMessage, GuiChat } from '@uidu/gui-chat';
 import { Stack } from 'expo-router';
 import { useCallback, useMemo, useRef, useState } from 'react';
 
@@ -8,43 +8,59 @@ export default function DocsChatPage() {
 
   const fakeUsers: GMessage[] = useMemo(
     () =>
-      new Array(20).fill(null).map(() => ({
-        id: faker.number.int({ max: 99999 }).toString(),
-        text: faker.lorem.sentence(),
-        itsMe: faker.datatype.boolean(),
-        createdAt: faker.date.anytime(),
-        user: {
+      new Array(50).fill(null).map(() => {
+        const text = faker.lorem.sentence();
+        const hasLink = faker.datatype.boolean(); // Determine if the sentence will have a link
+
+        // Function to generate a random link
+        const generateLink = () => ({
+          uri: faker.internet.url(),
+          // type: 0, // Add type property if needed
+        });
+
+        // Add a link if 'hasLink' is true
+        const link = hasLink ? generateLink() : null;
+
+        return {
           id: faker.number.int({ max: 99999 }).toString(),
-          name: faker.person.fullName(),
-          avatar: { uri: faker.image.avatar() },
-        },
-        ...(faker.datatype.boolean() && {
-          media: Array.from({ length: 3 }).map(() => ({
-            uri: faker.image.url(),
-            // type: 0, // Add type property if needed
-          })),
-        }),
-        ...(faker.datatype.boolean() && {
-          repliedTo: {
+          text: hasLink ? text : '',
+          itsMe: faker.datatype.boolean(),
+          createdAt: faker.date.anytime(),
+          user: {
             id: faker.number.int({ max: 99999 }).toString(),
-            text: faker.lorem.sentence(),
-            itsMe: faker.datatype.boolean(),
-            createdAt: faker.date.anytime(),
-            user: {
-              id: faker.number.int({ max: 99999 }).toString(),
-              name: faker.person.fullName(),
-              avatar: { uri: faker.image.avatar() },
-            },
-            ...(faker.datatype.boolean() && {
-              media: Array.from({
-                length: Math.floor(Math.random() * 2) + 1,
-              }).map(() => ({
-                uri: faker.image.url(),
-              })),
-            }),
+            name: faker.person.fullName(),
+            avatar: { uri: faker.image.avatar() },
           },
-        }),
-      })),
+          ...(faker.datatype.boolean() && {
+            media: Array.from({
+              length: Math.floor(Math.random() * 3) + 1,
+            }).map(() => ({
+              uri: faker.image.url(),
+              // type: 0, // Add type property if needed
+            })),
+          }),
+          // ...(faker.datatype.boolean() && {
+          //   repliedTo: {
+          //     id: faker.number.int({ max: 99999 }).toString(),
+          //     text: faker.lorem.sentence(),
+          //     itsMe: faker.datatype.boolean(),
+          //     createdAt: faker.date.anytime(),
+          //     user: {
+          //       id: faker.number.int({ max: 99999 }).toString(),
+          //       name: faker.person.fullName(),
+          //       avatar: { uri: faker.image.avatar() },
+          //     },
+          //     ...(faker.datatype.boolean() && {
+          //       media: Array.from({
+          //         length: Math.floor(Math.random() * 2) + 1,
+          //       }).map(() => ({
+          //         uri: faker.image.url(),
+          //       })),
+          //     }),
+          //   },
+          // }),
+        };
+      }),
     []
   );
 
@@ -60,16 +76,20 @@ export default function DocsChatPage() {
     console.log('testo parent', text);
 
     //@ts-ignore
-    listRef.current.appendMessage({
-      id: messages.length + 1,
-      text: text,
-      itsMe: true,
-      createdAt: new Date(),
-      user: currentUser,
-      ...(repliedTo && {
-        repliedTo: repliedTo,
-      }),
-    });
+    setMessages((prev) => [
+      ...prev,
+      {
+        id: messages.length + 1,
+        text: text,
+        itsMe: true,
+        createdAt: new Date(),
+        user: currentUser,
+        ...(repliedTo && {
+          repliedTo: repliedTo,
+        }),
+      },
+    ]);
+
     console.log('message send');
   }, []);
 
@@ -87,6 +107,7 @@ export default function DocsChatPage() {
         messages={messages}
         // onChangeText={onChangeText}
         onPressSend={_onPressSend}
+        forceNonDeterministicRendering
       />
     </>
   );

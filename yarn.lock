@@ -10733,7 +10733,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/forms-ui@workspace:packages/web/src/forms":
+"@uidu/forms-ui@workspace:^, @uidu/forms-ui@workspace:packages/web/src/forms":
   version: 0.0.0-use.local
   resolution: "@uidu/forms-ui@workspace:packages/web/src/forms"
   dependencies:
@@ -10880,6 +10880,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^7.6.0
     "@typescript-eslint/parser": ^7.6.0
     "@uidu/core-ui": 0.0.9
+    "@uidu/forms-ui": "workspace:^"
     autoprefixer: ^10.4.17
     class-variance-authority: ^0.7.0
     clsx: ^2.1.0

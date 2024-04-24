@@ -1,4 +1,13 @@
-import { GuiButton, GuiCard, GuiText, GuiView, H2, Image, Paragraph, XStack } from '@uidu/native';
+import {
+  GuiButton,
+  GuiCard,
+  GuiText,
+  GuiView,
+  H2,
+  Image,
+  Paragraph,
+  XStack,
+} from '@uidu/native';
 
 export default function CardDocsPage() {
   return (

@@ -23,7 +23,7 @@ export default function DocsChatPage() {
 
         return {
           id: faker.number.int({ max: 99999 }).toString(),
-          text: hasLink ? text : '',
+          text: hasLink ? `${text}: ${link?.uri}` : text,
           itsMe: faker.datatype.boolean(),
           createdAt: faker.date.anytime(),
           user: {
@@ -39,26 +39,26 @@ export default function DocsChatPage() {
               // type: 0, // Add type property if needed
             })),
           }),
-          // ...(faker.datatype.boolean() && {
-          //   repliedTo: {
-          //     id: faker.number.int({ max: 99999 }).toString(),
-          //     text: faker.lorem.sentence(),
-          //     itsMe: faker.datatype.boolean(),
-          //     createdAt: faker.date.anytime(),
-          //     user: {
-          //       id: faker.number.int({ max: 99999 }).toString(),
-          //       name: faker.person.fullName(),
-          //       avatar: { uri: faker.image.avatar() },
-          //     },
-          //     ...(faker.datatype.boolean() && {
-          //       media: Array.from({
-          //         length: Math.floor(Math.random() * 2) + 1,
-          //       }).map(() => ({
-          //         uri: faker.image.url(),
-          //       })),
-          //     }),
-          //   },
-          // }),
+          ...(faker.datatype.boolean() && {
+            repliedTo: {
+              id: faker.number.int({ max: 99999 }).toString(),
+              text: faker.lorem.sentence(),
+              itsMe: faker.datatype.boolean(),
+              createdAt: faker.date.anytime(),
+              user: {
+                id: faker.number.int({ max: 99999 }).toString(),
+                name: faker.person.fullName(),
+                avatar: { uri: faker.image.avatar() },
+              },
+              ...(faker.datatype.boolean() && {
+                media: Array.from({
+                  length: Math.floor(Math.random() * 2) + 1,
+                }).map(() => ({
+                  uri: faker.image.url(),
+                })),
+              }),
+            },
+          }),
         };
       }),
     []

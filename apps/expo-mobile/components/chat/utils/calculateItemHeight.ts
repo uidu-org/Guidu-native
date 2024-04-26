@@ -1,10 +1,13 @@
 import { PixelRatio } from 'react-native';
 import SIZES from '../constants/SIZES';
+
+import { measureHeights } from '@bigbee.dev/expo-measure-text';
 import { GMessage } from '../types';
 
 const averageCharWidth = Math.ceil(PixelRatio.get());
 
-const thresholdPercentage = 0.51; // Adjust threshold if needed
+const normalThresholdPercentage = 0.51;
+const linkThresholdPercentage = 0.9;
 
 export const calculateMessageHeight = (
   message: GMessage,
@@ -15,13 +18,11 @@ export const calculateMessageHeight = (
   const maxWidthMessage =
     SIZES.BUBBLE_CHAT_MAX_WIDTH - SIZES.BUBBLE_CHAT_PADDING * 2;
 
-  // Split text into lines based on word boundaries
-  const { lines, links } = calculateTextLayout(text, maxWidthMessage);
-
-  const linesNumber = lines.length;
-  if (linesNumber) {
-    height = +linesNumber * (SIZES.BUBBLE_CHAT_LINE_HEIGHT + 3);
-  }
+  const measuredHeight = measureHeights({
+    texts: [text],
+    width: maxWidthMessage,
+    lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT,
+  });
 
   if (message?.media) {
     if (message.media.length === 2) {
@@ -45,75 +46,26 @@ export const calculateMessageHeight = (
         : 55 + SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MARGIN_BOTTOM;
   }
 
+  const textLayoutHeight = measuredHeight.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+
   const finalHeight =
     height +
+    textLayoutHeight +
     SIZES.BUBBLE_CHAT_FOOTER_HEIGHT +
     SIZES.BUBBLE_CHAT_MARGIN_VERTICAL * 2 +
     SIZES.BUBBLE_CHAT_PADDING * 2;
 
-  // console.log(
-  //   'message_calc_data',
-  //   JSON.stringify(
-  //     {
-  //       message: message.text,
-  //       finalHeight,
-  //       linesNumber,
-  //       links,
-  //     },
-  //     null,
-  //     2
-  //   )
-  // );
   return Math.ceil(finalHeight);
 };
 
 function calculateTextLayout(text: string, maxWidth: number) {
   if (!text) {
-    return { lines: [], links: [] };
+    return { lines: [] };
   }
 
-  const links: string[] = [];
-
-  const textWithoutLinks = text.replace(/\bhttps?:\/\/\S+\b/g, (match) => {
-    links.push(match); // Save the link
-    return ''; // Replace the link with an empty string
-  });
-
-  const words = textWithoutLinks.split(/\s+/);
-
-  let lines = []; // Initialize lines with an empty line
-  let currentLine = '';
-
-  for (const word of words) {
-    const testLine = currentLine + ' ' + word;
-
-    // Check if exceeding threshold percentage of max width
-    if (testLine.length * averageCharWidth < maxWidth * thresholdPercentage) {
-      currentLine = testLine.trim(); // Trim trailing whitespace
-    } else {
-      lines.push(currentLine.trim()); // Add current line to lines
-      currentLine = word; // Start new line with current word
-    }
-  }
-
-  // Add the last line (if any)
-  if (currentLine.length > 0) {
-    lines.push(currentLine.trim());
-  }
-
-  for (const link of links) {
-    const lastLine = currentLine.length > 0 ? currentLine.trim() : '';
-    const linkWidth = (link.length + lastLine.length) * averageCharWidth;
-    const numLines = Math.ceil(linkWidth / maxWidth);
-    for (let i = 1; i < numLines; i++) {
-      lines.push(''); // Add empty lines for the link
-    }
-  }
-
-  return { lines, links };
-}
-
-function calculateTextLayout1(text: string, maxWidth: number) {
   const words = text.split(/\s+/);
 
   let lines = []; // Initialize lines with an empty line
@@ -122,12 +74,34 @@ function calculateTextLayout1(text: string, maxWidth: number) {
   for (const word of words) {
     const testLine = currentLine + ' ' + word;
 
-    // Check if exceeding threshold percentage of max width
-    if (testLine.length * averageCharWidth < maxWidth * thresholdPercentage) {
-      currentLine = testLine.trim(); // Trim trailing whitespace
+    // Check if current word is a link (assuming valid URL format)
+    if (/^https?:\/\/\S+$/.test(word)) {
+      if (
+        testLine.length * averageCharWidth <
+        maxWidth * linkThresholdPercentage
+      ) {
+        currentLine = testLine.trim();
+      } else {
+        console.log('maggiore', testLine);
+        lines.push(currentLine.trim());
+        currentLine = word;
+      }
+      if (word.length * averageCharWidth > maxWidth) {
+        console.log('huge link');
+
+        lines.push(`huge link: ${word}`);
+      }
     } else {
-      lines.push(currentLine.trim()); // Add current line to lines
-      currentLine = word; // Start new line with current word
+      // For non-links, use the threshold logic
+      if (
+        testLine.length * averageCharWidth <
+        maxWidth * normalThresholdPercentage
+      ) {
+        currentLine = testLine.trim(); // Trim trailing whitespace
+      } else {
+        lines.push(currentLine.trim()); // Add current line to lines
+        currentLine = word; // Start new line with current word
+      }
     }
   }
 
@@ -136,5 +110,5 @@ function calculateTextLayout1(text: string, maxWidth: number) {
     lines.push(currentLine.trim());
   }
 
-  return { lines, currentLine };
+  return { lines };
 }

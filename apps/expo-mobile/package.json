@@ -19,6 +19,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@bigbee.dev/expo-measure-text": "^0.1.3",
     "@expo/vector-icons": "^14.0.0",
     "@faker-js/faker": "^8.4.1",
     "@react-navigation/drawer": "^6.6.15",

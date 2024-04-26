@@ -2,6 +2,7 @@ import { Button, GetProps, styled } from 'tamagui';
 
 export const GuiButton = styled(Button, {
   name: 'GuiButton',
+  bg: '$background',
   alignSelf: 'flex-start',
   variants: {
     variant: {

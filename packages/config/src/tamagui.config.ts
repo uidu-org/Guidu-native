@@ -1,11 +1,11 @@
-import { createInterFont } from '@tamagui/font-inter'
-import { createMedia } from '@tamagui/react-native-media-driver'
-import { shorthands } from '@tamagui/shorthands'
-import { tokens } from '@tamagui/themes/v2'
-import { themes } from '@tamagui/themes/v2-themes'
-import { createTamagui } from 'tamagui'
+import { createInterFont } from '@tamagui/font-inter';
+import { createMedia } from '@tamagui/react-native-media-driver';
+import { shorthands } from '@tamagui/shorthands';
+import { tokens } from '@tamagui/themes/v2';
+import { themes } from '@tamagui/themes/v2-themes';
+import { createTamagui } from 'tamagui';
 
-import { animations } from './animations'
+import { animations } from './animations';
 
 const headingFont = createInterFont({
   size: {
@@ -37,7 +37,7 @@ const headingFont = createInterFont({
   face: {
     700: { normal: 'InterBold' },
   },
-})
+});
 
 const bodyFont = createInterFont(
   {
@@ -49,23 +49,29 @@ const bodyFont = createInterFont(
     sizeSize: (size) => Math.round(size * 1.1),
     sizeLineHeight: (size) => Math.round(size * 1.1 + (size > 20 ? 10 : 10)),
   }
-)
+);
 
 export const config = createTamagui({
   defaultFont: 'body',
   animations,
   shouldAddPrefersColorThemes: true,
-  themeClassNameOnRoot: true,
-  onlyAllowShorthands: true,
   shorthands,
   fonts: {
     body: bodyFont,
     heading: headingFont,
   },
-  settings: {
-    allowedStyleValues: 'somewhat-strict',
+  themes: {
+    ...themes,
+    dark_Button: {
+      ...themes.dark_Button,
+      borderColor: '$red',
+    },
+    light_Button: {
+      ...themes.light_Button,
+      backgroundPress: 'green',
+      borderColorPress: 'blue',
+    },
   },
-  themes,
   tokens,
   media: createMedia({
     xs: { maxWidth: 660 },
@@ -83,7 +89,7 @@ export const config = createTamagui({
     hoverNone: { hover: 'none' },
     pointerCoarse: { pointer: 'coarse' },
   }),
-})
+});
 
 // for the compiler to find it
-export default config
+export default config;

@@ -1772,6 +1772,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bigbee.dev/expo-measure-text@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "@bigbee.dev/expo-measure-text@npm:0.1.3"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 78b7cbd1dd6bc86c6e89b2d488ea8addb7899b65ef27bd264ee103e88d18bd17a53ce99ebbc22eec1bd6ece6fee591439c243b7979c82960cbf09b0fc82f65cc
+  languageName: node
+  linkType: hard
+
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -16985,6 +16996,7 @@ __metadata:
   resolution: "expo-mobile@workspace:apps/expo-mobile"
   dependencies:
     "@babel/core": "npm:^7.23.9"
+    "@bigbee.dev/expo-measure-text": "npm:^0.1.3"
     "@expo/vector-icons": "npm:^14.0.0"
     "@faker-js/faker": "npm:^8.4.1"
     "@react-native-async-storage/async-storage": "npm:1.21.0"

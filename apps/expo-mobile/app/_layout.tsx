@@ -4,7 +4,7 @@ import {
   DefaultTheme,
   ThemeProvider,
 } from '@react-navigation/native';
-import { TamaguiProvider } from '@uidu/native';
+import { TamaguiProvider, Theme } from '@uidu/native';
 import { config } from '@uidu/native-config';
 import Constants from 'expo-constants';
 import { useFonts } from 'expo-font';
@@ -44,13 +44,15 @@ function RootLayoutNav() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <TamaguiProvider config={config}>
-        <GestureHandlerRootView style={{ flex: 1 }}>
-          <Stack
-            screenOptions={{
-              headerShown: false,
-            }}
-          />
-        </GestureHandlerRootView>
+        <Theme name={'light'}>
+          <GestureHandlerRootView style={{ flex: 1 }}>
+            <Stack
+              screenOptions={{
+                headerShown: false,
+              }}
+            />
+          </GestureHandlerRootView>
+        </Theme>
       </TamaguiProvider>
     </ThemeProvider>
   );

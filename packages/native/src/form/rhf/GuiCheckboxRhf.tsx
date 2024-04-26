@@ -1,8 +1,9 @@
-import { Controller, FieldValues } from 'react-hook-form'
-import { GCheckbox, GuiCheckboxProps } from '../GuiCheckbox'
-import { LmRhfProps } from './GuiRhfProps'
+import { Controller, FieldValues } from 'react-hook-form';
+import { GCheckbox, GuiCheckboxProps } from '../GuiCheckbox';
+import { GuiRhfProps } from './GuiRhfProps';
 
-type GuiCheckboxRhfProps<T extends FieldValues> = GuiCheckboxProps & LmRhfProps<T>
+type GuiCheckboxRhfProps<T extends FieldValues> = GuiCheckboxProps &
+  GuiRhfProps<T>;
 
 export function GCheckboxRhf<T extends FieldValues>({
   name,
@@ -12,7 +13,7 @@ export function GCheckboxRhf<T extends FieldValues>({
   ...inputProps
 }: GuiCheckboxRhfProps<T>) {
   if (inputProps.required) {
-    rules.required = 'This field is required'
+    rules.required = 'This field is required';
   }
   return (
     <Controller
@@ -30,5 +31,5 @@ export function GCheckboxRhf<T extends FieldValues>({
         />
       )}
     />
-  )
+  );
 }

@@ -5,6 +5,7 @@ import { measureHeights } from '@bigbee.dev/expo-measure-text';
 import { GMessage } from '../types';
 
 const averageCharWidth = Math.ceil(PixelRatio.get());
+const MAGIC_NUMBER = 3;
 
 const normalThresholdPercentage = 0.51;
 const linkThresholdPercentage = 0.9;
@@ -18,10 +19,14 @@ export const calculateMessageHeight = (
   const maxWidthMessage =
     SIZES.BUBBLE_CHAT_MAX_WIDTH - SIZES.BUBBLE_CHAT_PADDING * 2;
 
+  const testText = text.split('\n');
+
   const measuredHeight = measureHeights({
-    texts: [text],
+    texts: testText.length > 1 ? testText : [text],
     width: maxWidthMessage,
     lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT,
+    fontSize: SIZES.BUBBLE_CHAT_FONT_SIZE,
+    fontWeight: SIZES.BUBBLE_CHAT_FONT_WEIGHT,
   });
 
   if (message?.media) {
@@ -47,9 +52,14 @@ export const calculateMessageHeight = (
   }
 
   const textLayoutHeight = measuredHeight.reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
+    (accumulator, currentValue) => accumulator + currentValue + MAGIC_NUMBER,
     0
   );
+
+  // if (testText.length > 1) {
+  //   //! this is not accurate
+  //   height += (testText.length / 2) * (SIZES.BUBBLE_CHAT_LINE_HEIGHT - 3);
+  // }
 
   const finalHeight =
     height +
@@ -57,6 +67,17 @@ export const calculateMessageHeight = (
     SIZES.BUBBLE_CHAT_FOOTER_HEIGHT +
     SIZES.BUBBLE_CHAT_MARGIN_VERTICAL * 2 +
     SIZES.BUBBLE_CHAT_PADDING * 2;
+
+  console.log(
+    'calc_height',
+    JSON.stringify(
+      {
+        measuredHeight,
+      },
+      null,
+      2
+    )
+  );
 
   return Math.ceil(finalHeight);
 };

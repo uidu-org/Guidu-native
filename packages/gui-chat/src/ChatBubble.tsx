@@ -262,7 +262,7 @@ function ChatBubbleComp(props: GChatBubble) {
                 <ReactNativeParsedText
                   style={{
                     lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT,
-                    // fontSize: SIZES.BUBBLE_CHAT_FONT_SIZE,
+                    fontSize: SIZES.BUBBLE_CHAT_FONT_SIZE,
                     fontWeight: SIZES.BUBBLE_CHAT_FONT_WEIGHT,
                   }}
                   parse={ALL_PATERNS_SHAPES}

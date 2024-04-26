@@ -8,7 +8,7 @@ export default function DocsChatPage() {
 
   const fakeUsers: GMessage[] = useMemo(
     () =>
-      new Array(50).fill(null).map(() => {
+      new Array(1).fill(null).map(() => {
         const text = faker.lorem.sentence();
         const hasLink = faker.datatype.boolean(); // Determine if the sentence will have a link
 
@@ -64,7 +64,20 @@ export default function DocsChatPage() {
     []
   );
 
-  const [messages, setMessages] = useState<GMessage[]>(fakeUsers);
+  const [messages, setMessages] = useState<GMessage[]>([
+    ...fakeUsers,
+    {
+      id: faker.number.int({ max: 99999 }).toString(),
+      text: textProva,
+      itsMe: faker.datatype.boolean(),
+      createdAt: faker.date.anytime(),
+      user: {
+        id: faker.number.int({ max: 99999 }).toString(),
+        name: faker.person.fullName(),
+        avatar: { uri: faker.image.avatar() },
+      },
+    },
+  ]);
 
   const mentions = useMemo(() => {
     return messages.map((m) => m.user);
@@ -118,3 +131,5 @@ const currentUser = {
   name: 'John Doe',
   avatar: { uri: 'https://i.pravatar.cc/300' },
 };
+
+const textProva = `Hello bando da Fondazione Brodolini che offre 20k per digitalizzazione.\nIn the framework of the European project SocialTech4EU we have launched a call for social enterprises across Europe, to apply for financial support for training. If selected in this call, the enterprises will also be able to compete for additional funding for innovation and acceleration.\nWe also launched an invitation for stakeholders and providers to join the project registry, which will be used by the social enterprises to purchase their services.\nThe news is now on FGB’s website (https://www.fondazionebrodolini.it/en/news-and-events/socialtech4eu-lookout-social-enterprises-and-stakeholders, https://www.fondazionebrodolini.it/news-ed-eventi/socialtech4eu-cerca-imprese-stakeholder-economia-sociale) and social media.\nWe kindly ask you to help us share the call/invitation\nwithin your networks.\nPrimary countries are Italy, Spain, Belgium, Germany, Romania and Sweden, but we also have to select at least 10 enterprises and 10 stakeholders/providers from other EU countries, so any help with this is mostly welcome.\nThanks a lot, and you can email me at menozzi@fondazionebrodolini.eu for any question or info.\nChe ne pensate? Se lo vincessimo questo comunque rientrerebbe negli obiettivi di budget anche se indiretti. Non abbiamo una cerchia per le Application, non so se può aver senso farla e nel caso creiamo una cerchia!`;

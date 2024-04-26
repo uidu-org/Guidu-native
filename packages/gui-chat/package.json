@@ -1,6 +1,6 @@
 {
   "name": "@uidu/gui-chat",
-  "version": "0.0.30",
+  "version": "0.0.32",
   "sideEffects": [
     "*.css"
   ],
@@ -21,7 +21,7 @@
     "expo-haptics": "^12.8.1",
     "expo-image-picker": "^14.7.1",
     "expo-linking": "^6.2.2",
-    "expo-router": "^3.4.8",
+    "expo-router": "^2.0.0",
     "react": "^18.2.0",
     "react-native": "0.72.10",
     "react-native-controlled-mentions": "^2.2.5",

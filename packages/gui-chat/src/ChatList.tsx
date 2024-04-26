@@ -41,7 +41,12 @@ export const ChatList = React.forwardRef(
     // const { trigger } = useHaptic();
     // const safeArea = useSafeAreaInsets();
     const typingStatusRef = useRef<GTypingStatusRef>(null);
-    const { rowRenderer: rowRendererProp, data } = props;
+    const {
+      rowRenderer: rowRendererProp,
+      data,
+      staticPathToUserInfoSection,
+      forceNonDeterministicRendering,
+    } = props;
 
     // const listHeight = useMemo(
     //   () => windowDimensions.height - safeArea.bottom - safeArea.top,
@@ -205,49 +210,13 @@ in the current messages. If it is, then it will not scroll to the bottom. */
 
     const renderBubble = useCallback(
       (data: GMessage, withDate?: boolean) => {
-        //   if (rowRendererProp) {
-        //     return (
-        //       <View>
-        //         {withDate && (
-        //           <RenderDate
-        //             date={data.createdAt}
-        //             {...propsContext.renderDateProps}
-        //           />
-        //         )}
-
-        //         <Animated.View entering={FadeInDown} exiting={FadeOutUp}>
-        //           <SwipeableBubble message={data} onReply={propsContext.onReply}>
-        //             {rowRendererProp(data)}
-        //           </SwipeableBubble>
-        //         </Animated.View>
-        //       </View>
-        //     );
-        //   }
-
         return (
-          <>
-            {/* {withDate && (
-                <RenderDate
-                  date={data.createdAt}
-                  {...propsContext.renderDateProps}
-                />
-              )} */}
-            <>
-              {/* {propsContext.onReply ? (
-                  <>
-                    <SwipeableBubble
-                      message={data}
-                      onReply={propsContext.onReply}
-                    />
-                  </>
-                ) : (
-                  <ChatBubble message={data} />
-                )} */}
-              <SwipeableBubble message={data} onReply={setReplyMessage}>
-                <ChatBubble message={data} />
-              </SwipeableBubble>
-            </>
-          </>
+          <SwipeableBubble message={data} onReply={setReplyMessage}>
+            <ChatBubble
+              staticPathToUserInfoSection={staticPathToUserInfoSection}
+              message={data}
+            />
+          </SwipeableBubble>
         );
       },
       [rowRendererProp]
@@ -281,22 +250,23 @@ in the current messages. If it is, then it will not scroll to the bottom. */
           //   externalScrollView={ScrollViewWithHeader}
           dataProvider={messages}
           style={{ height: '100%' }}
-          // @ts-ignore
           ref={recyclerlistviewRef}
           scrollViewProps={{
             keyboardShouldPersistTaps: 'never',
           }}
           onScroll={onScroll}
           optimizeForInsertDeleteAnimations
-          // forceNonDeterministicRendering
-          canChangeSize={true}
+          forceNonDeterministicRendering={
+            forceNonDeterministicRendering ?? false
+          }
+          canChangeSize
           rowRenderer={rowRenderer}
           initialRenderIndex={messages.getAllData().length - 1}
           // renderFooter={() => {}}
           onEndReached={props?.onEndReached}
           onEndReachedThreshold={props?.onEndReachedThreshold}
           // decelerationRate={Platform.OS == 'ios' ? 0.995 : 0.97
-          suppressBoundedSizeException={true}
+          suppressBoundedSizeException
         />
       </GuiView>
     );

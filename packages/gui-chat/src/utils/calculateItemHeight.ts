@@ -4,8 +4,6 @@ import { GMessage } from '../types';
 
 const averageCharWidth = Math.ceil(PixelRatio.get());
 
-const ADDITIONAL_GAP_SPACE = 10;
-
 const thresholdPercentage = 0.5; // Adjust threshold if needed
 
 export const calculateMessageHeight = (
@@ -17,7 +15,7 @@ export const calculateMessageHeight = (
   const maxWidthMessage =
     SIZES.BUBBLE_CHAT_MAX_WIDTH -
     SIZES.BUBBLE_CHAT_PADDING * 2 -
-    SIZES.BUBBLE_CHAT_MARGIN_HORIZONTAL;
+    SIZES.BUBBLE_CHAT_MARGIN_HORIZONTAL * 2;
   // Split text into lines based on word boundaries
 
   const { lines } = calculateTextLayout(text, maxWidthMessage);
@@ -50,8 +48,7 @@ export const calculateMessageHeight = (
   const finalHeight =
     height +
     SIZES.BUBBLE_CHAT_FOOTER_HEIGHT +
-    SIZES.BUBBLE_CHAT_MARGIN_VERTICAL +
-    ADDITIONAL_GAP_SPACE;
+    SIZES.BUBBLE_CHAT_MARGIN_VERTICAL;
 
   // console.log(
   //   'message_data',

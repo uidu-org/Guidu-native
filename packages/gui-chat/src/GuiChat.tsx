@@ -10,7 +10,8 @@ import { GChatty, ListRef } from './types';
 
 export const GuiChat = React.forwardRef(
   (props: GChatty, ref: ForwardedRef<ListRef>) => {
-    const { messages, currentUser, mentions } = props;
+    const { messages, currentUser, mentions, staticPathToUserInfoSection } =
+      props;
     const listRef = useRef<ListRef>();
 
     useEffect(() => {
@@ -54,6 +55,7 @@ export const GuiChat = React.forwardRef(
                 data={messages}
                 //@ts-ignore
                 ref={ref ?? listRef}
+                staticPathToUserInfoSection={staticPathToUserInfoSection}
               />
             )}
           </View>

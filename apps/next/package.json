@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "packageManager": "yarn@3.8.1",
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@mdx-js/loader": "^3.0.0",

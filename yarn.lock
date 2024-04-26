@@ -11210,7 +11210,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/forms-ui@npm:0.0.1, @uidu/forms-ui@workspace:packages/web/src/forms":
+"@uidu/forms-ui@npm:0.0.2, @uidu/forms-ui@workspace:packages/web/src/forms":
   version: 0.0.0-use.local
   resolution: "@uidu/forms-ui@workspace:packages/web/src/forms"
   dependencies:
@@ -11299,7 +11299,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.6.0"
     "@typescript-eslint/parser": "npm:^7.6.0"
     "@uidu/core-ui": "npm:0.0.9"
-    "@uidu/forms-ui": "npm:0.0.1"
+    "@uidu/forms-ui": "npm:0.0.2"
     autoprefixer: "npm:^10.4.17"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"

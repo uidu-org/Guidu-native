@@ -8,4 +8,5 @@ export default defineConfig({
   outDir: 'dist',
   clean: true,
   target: 'es2019',
+  banner: { js: '"use client";' },
 });

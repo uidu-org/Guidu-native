@@ -26,7 +26,7 @@
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
     "@uidu/core-ui": "0.0.9",
-    "@uidu/forms-ui": "0.0.1",
+    "@uidu/forms-ui": "0.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "contentlayer": "^0.3.4",

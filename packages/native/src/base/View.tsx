@@ -1,4 +1,4 @@
-import { YStack, styled } from 'tamagui';
+import { GetProps, YStack, styled } from 'tamagui';
 
 export const GuiView = styled(
   YStack,
@@ -17,3 +17,4 @@ export const GuiView = styled(
   },
   {}
 );
+export type GuiViewProps = GetProps<typeof GuiView>;

@@ -11,6 +11,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "packageManager": "yarn@3.8.1",
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@mdx-js/loader": "^3.0.0",
@@ -28,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
     "@uidu/core-ui": "0.0.9",
+    "@uidu/forms-ui": "workspace:^",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "contentlayer": "^0.3.4",

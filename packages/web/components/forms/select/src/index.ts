@@ -1,19 +1,5 @@
-import { RHFSelect } from './RHF-Select'
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectScrollDownButton,
-  SelectScrollUpButton,
-  SelectSeparator,
-  SelectTrigger,
-  SelectValue,
-} from './select'
-
+export { RHFSelect } from './RHF-Select';
 export {
-  RHFSelect,
   Select,
   SelectContent,
   SelectGroup,
@@ -24,4 +10,4 @@ export {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-}
+} from './select';

@@ -1,18 +1,18 @@
-import { Input, InputProps } from '@uidu/input-ui'
-import { cn } from '@uidu/lib'
-import { useState } from 'react'
-import type { ReactDatePickerProps } from 'react-datepicker'
-import ReactDatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
-import CalendarIcon from './icons/Calendar'
-import ChevronDownIcon from './icons/ChevronDown'
+import { Input, InputProps } from '@uidu/input-ui';
+import { cn } from '@uidu/lib';
+import { useState } from 'react';
+import type { ReactDatePickerProps } from 'react-datepicker';
+import ReactDatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import CalendarIcon from './icons/Calendar';
+import ChevronDownIcon from './icons/ChevronDown';
 
 const calendarContainerStyles = {
   base: '[&.react-datepicker]:shadow-lg [&.react-datepicker]:border-gray-100 [&.react-datepicker]:rounded-md',
   monthContainer: {
     padding: '[&.react-datepicker>div]:pt-5 [&.react-datepicker>div]:pb-3',
   },
-}
+};
 
 const prevNextButtonStyles = {
   base: '[&.react-datepicker>button]:items-baseline [&.react-datepicker>button]:top-7',
@@ -25,20 +25,22 @@ const prevNextButtonStyles = {
       '[&.react-datepicker>button>span]:before:border-t-[1.5px] [&.react-datepicker>button>span]:before:border-r-[1.5px] [&.react-datepicker>button>span]:before:border-muted',
     size: '[&.react-datepicker>button>span]:before:h-[7px] [&.react-datepicker>button>span]:before:w-[7px]',
   },
-}
+};
 
 const timeOnlyStyles = {
   base: '[&.react-datepicker--time-only>div]:pr-0 [&.react-datepicker--time-only>div]:w-28',
-}
+};
 
-export interface DatePickerProps<selectsRange extends boolean | undefined>
+export interface DatePickerProps<SelectsRange extends boolean | undefined>
   extends Omit<ReactDatePickerProps, 'selectsRange' | 'onChange'> {
   onChange(
-    date: selectsRange extends false | undefined ? Date | null : [Date | null, Date | null],
+    date: SelectsRange extends false | undefined
+      ? Date | null
+      : [Date | null, Date | null],
     event: React.SyntheticEvent<any> | undefined
-  ): void
-  selectsRange?: selectsRange
-  inputProps?: InputProps
+  ): void;
+  selectsRange?: SelectsRange;
+  inputProps?: InputProps;
 }
 
 const DatePicker = ({
@@ -52,18 +54,22 @@ const DatePicker = ({
   calendarClassName,
   ...props
 }: DatePickerProps<boolean>) => {
-  const [isCalenderOpen, setIsCalenderOpen] = useState(false)
-  const handleCalenderOpen = () => setIsCalenderOpen(true)
-  const handleCalenderClose = () => setIsCalenderOpen(false)
+  const [isCalenderOpen, setIsCalenderOpen] = useState(false);
+  const handleCalenderOpen = () => setIsCalenderOpen(true);
+  const handleCalenderClose = () => setIsCalenderOpen(false);
   return (
     <ReactDatePicker
       customInput={
         customInput || (
           <Input
+            // @ts-expect-error
             prefix={<CalendarIcon className="w-5 h-5 text-gray-500" />}
             suffix={
               <ChevronDownIcon
-                className={cn('h-4 w-4 text-gray-500 transition', isCalenderOpen && 'rotate-180')}
+                className={cn(
+                  'h-4 w-4 text-gray-500 transition',
+                  isCalenderOpen && 'rotate-180'
+                )}
               />
             }
             {...inputProps}
@@ -71,7 +77,7 @@ const DatePicker = ({
         )
       }
       showPopperArrow={showPopperArrow}
-      dateFormat={'yyyy'}
+      dateFormat="yyyy"
       selectsRange={selectsRange}
       onCalendarOpen={onCalendarOpen || handleCalenderOpen}
       onCalendarClose={onCalendarClose || handleCalenderClose}
@@ -89,8 +95,8 @@ const DatePicker = ({
       )}
       {...props}
     />
-  )
-}
+  );
+};
 
-DatePicker.displayName = 'DatePicker'
-export default DatePicker
+DatePicker.displayName = 'DatePicker';
+export default DatePicker;

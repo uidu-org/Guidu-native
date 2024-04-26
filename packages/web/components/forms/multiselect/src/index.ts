@@ -1,3 +1,1 @@
-import { Multiselect } from './multiselect'
-
-export { Multiselect }
+export { Multiselect } from './multiselect';

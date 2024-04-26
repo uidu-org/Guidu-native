@@ -4,5 +4,5 @@
       "main": false
     }
   },
-  "installCommand": "yarn set version 4 && yarn install"
+  "installCommand": "yarn install"
 }

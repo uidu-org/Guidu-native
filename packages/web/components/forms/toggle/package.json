@@ -24,9 +24,9 @@
   },
   "scripts": {
     "build": "npx tsup src --dts",
-    "versionPatch": "yarn version patch",
-    "versionMinor": "yarn version minor",
-    "versionMajor": "yarn version major",
-    "npmPublish": "npm publish"
+    "versionPatchFormsWeb": "yarn version patch",
+    "versionMinorFormsWeb": "yarn version minor",
+    "versionMajorFormsWeb": "yarn version major",
+    "npmPublishFormsWeb": "npm publish"
   }
 }

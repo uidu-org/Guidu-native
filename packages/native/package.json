@@ -25,7 +25,6 @@
     "tamagui": "^1.89.8"
   },
   "devDependencies": {
-    "@tamagui/build": "^1.89.8",
     "expo-router": "^2.0.0",
     "react": "^18.2.0",
     "react-native": "0.73.6",

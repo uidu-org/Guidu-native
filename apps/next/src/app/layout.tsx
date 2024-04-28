@@ -4,7 +4,9 @@ import { Noto_Sans_TC } from "next/font/google";
 import type { ReactNode } from "react";
 import { DocsProvider } from "./docs-provider";
 
+
 import "./global.css";
+
 
 const noto = Noto_Sans_TC({
   weight: "400",

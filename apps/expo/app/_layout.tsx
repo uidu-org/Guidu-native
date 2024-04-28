@@ -6,6 +6,7 @@ import {
 } from '@react-navigation/native';
 import { TamaguiProvider, Theme } from '@uidu/native';
 import { config } from '@uidu/native-config';
+import Constants from 'expo-constants';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -57,4 +58,10 @@ function RootLayoutNav() {
   );
 }
 
-export default RootLayout;
+let AppEntryPoint = RootLayout;
+
+if (Constants.expoConfig?.extra?.storybookEnabled === 'true') {
+  AppEntryPoint = require('../.ondevice').default;
+}
+
+export default AppEntryPoint;

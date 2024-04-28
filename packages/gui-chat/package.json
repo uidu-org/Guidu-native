@@ -22,7 +22,7 @@
     "expo-haptics": "^12.8.1",
     "expo-image-picker": "^14.7.1",
     "expo-linking": "^6.2.2",
-    "expo-router": "^2.0.0",
+    "expo-router": ">= 3.0.0",
     "react": "^18.2.0",
     "react-native": "0.73.6",
     "react-native-controlled-mentions": "^2.2.5",

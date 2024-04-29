@@ -50,6 +50,12 @@ const config: Config = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        danger: {
+          DEFAULT: 'var(--danger)',
+        },
+        default: {
+          DEFAULT: 'var(--default)',
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

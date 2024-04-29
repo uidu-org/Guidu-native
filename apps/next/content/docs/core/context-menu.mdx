@@ -1,0 +1,157 @@
+---
+title: "Context Menu"
+description: a great way to use context menus!
+---
+
+import ContextMenuDemo from "../../../src/docs/demos/context-menu-demo" 
+
+    <div className="flex items-center">
+        <a className="mr-4 " href="" target="_blank">@uidu/</a>
+        <a className="mx-4"  href="" target="_blank">Source</a>
+    </div>
+
+## Context menu 
+
+<ContextMenuDemo />
+
+## Usage 
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 p-56 flex items-center justify-center">
+                <ContextMenuDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx 
+                "use client"
+
+                import {
+                  ContextMenu,
+                  ContextMenuCheckboxItem,
+                  ContextMenuContent,
+                  ContextMenuItem,
+                  ContextMenuLabel,
+                  ContextMenuRadioGroup,
+                  ContextMenuRadioItem,
+                  ContextMenuSeparator,
+                  ContextMenuShortcut,
+                  ContextMenuSub,
+                  ContextMenuSubContent,
+                  ContextMenuSubTrigger,
+                  ContextMenuTrigger,
+                } from "@uidu/core-ui"
+
+                export default function ContextMenuDemo() {
+                  return (
+                    <ContextMenu>
+                      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+                        Right click here
+                      </ContextMenuTrigger>
+                      <ContextMenuContent className="w-64">
+                        <ContextMenuItem inset>
+                          Back
+                          <ContextMenuShortcut>⌘[</ContextMenuShortcut>
+                        </ContextMenuItem>
+                        <ContextMenuItem inset disabled>
+                          Forward
+                          <ContextMenuShortcut>⌘]</ContextMenuShortcut>
+                        </ContextMenuItem>
+                        <ContextMenuItem inset>
+                          Reload
+                          <ContextMenuShortcut>⌘R</ContextMenuShortcut>
+                        </ContextMenuItem>
+                        <ContextMenuSub>
+                          <ContextMenuSubTrigger inset>More Tools</ContextMenuSubTrigger>
+                          <ContextMenuSubContent className="w-48">
+                            <ContextMenuItem>
+                              Save Page As...
+                              <ContextMenuShortcut>⇧⌘S</ContextMenuShortcut>
+                            </ContextMenuItem>
+                            <ContextMenuItem>Create Shortcut...</ContextMenuItem>
+                            <ContextMenuItem>Name Window...</ContextMenuItem>
+                            <ContextMenuSeparator />
+                            <ContextMenuItem>Developer Tools</ContextMenuItem>
+                          </ContextMenuSubContent>
+                        </ContextMenuSub>
+                        <ContextMenuSeparator />
+                        <ContextMenuCheckboxItem checked>
+                          Show Bookmarks Bar
+                          <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
+                        </ContextMenuCheckboxItem>
+                        <ContextMenuCheckboxItem>Show Full URLs</ContextMenuCheckboxItem>
+                        <ContextMenuSeparator />
+                        <ContextMenuRadioGroup value="pedro">
+                          <ContextMenuLabel inset>People</ContextMenuLabel>
+                          <ContextMenuSeparator />
+                          <ContextMenuRadioItem value="pedro">
+                            Pedro Duarte
+                          </ContextMenuRadioItem>
+                          <ContextMenuRadioItem value="colm">Colm Tuite</ContextMenuRadioItem>
+                        </ContextMenuRadioGroup>
+                      </ContextMenuContent>
+                    </ContextMenu>
+                  )
+                }
+
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/context-menu-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/context-menu-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import 
+
+ <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import {
+                  ContextMenu,
+                  ContextMenuCheckboxItem,
+                  ContextMenuContent,
+                  ContextMenuItem,
+                  ContextMenuLabel,
+                  ContextMenuRadioGroup,
+                  ContextMenuRadioItem,
+                  ContextMenuSeparator,
+                  ContextMenuShortcut,
+                  ContextMenuSub,
+                  ContextMenuSubContent,
+                  ContextMenuSubTrigger,
+                  ContextMenuTrigger,
+                } from "@uidu/core-ui"
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+              import {
+                ContextMenu,
+                ContextMenuCheckboxItem,
+                ContextMenuContent,
+                ContextMenuItem,
+                ContextMenuLabel,
+                ContextMenuRadioGroup,
+                ContextMenuRadioItem,
+                ContextMenuSeparator,
+                ContextMenuShortcut,
+                ContextMenuSub,
+                ContextMenuSubContent,
+                ContextMenuSubTrigger,
+                ContextMenuTrigger,
+              } from "@uidu/context-menu-ui"
+            ```
+        </Tab>
+    </Tabs>

@@ -1,0 +1,144 @@
+--- 
+title: "Command"
+description: a great way to use commands
+---
+
+import CommandDemo  from "../../../src/docs/demos/command-demo" 
+
+    <div className="flex items-center">
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/command-ui" target="_blank">@uidu/command-ui</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/command" target="_blank">Source</a>
+    </div>
+
+## Command
+
+<div className="h-auto">
+  <CommandDemo /> 
+</div>
+
+## Usage 
+
+  <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 px-24 flex items-center justify-center">
+                <CommandDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx 
+              "use client"
+
+              import {
+                Calculator,
+                Calendar,
+                CreditCard,
+                Settings,
+                Smile,
+                User,
+              } from "lucide-react"
+
+              import {
+                Command,
+                CommandEmpty,
+                CommandGroup,
+                CommandInput,
+                CommandItem,
+                CommandList,
+                CommandSeparator,
+                CommandShortcut,
+              } from "@uidu/core-ui"
+
+              export default function CommandDemo() {
+                return (
+                  <Command className="rounded-lg border shadow-md">
+                    <CommandInput placeholder="Type a command or search..." />
+                    <CommandList>
+                      <CommandEmpty>No results found.</CommandEmpty>
+                      <CommandGroup heading="Suggestions">
+                        <CommandItem>
+                          <Calendar className="mr-2 h-4 w-4" />
+                          <span>Calendar</span>
+                        </CommandItem>
+                        <CommandItem>
+                          <Smile className="mr-2 h-4 w-4" />
+                          <span>Search Emoji</span>
+                        </CommandItem>
+                        <CommandItem>
+                          <Calculator className="mr-2 h-4 w-4" />
+                          <span>Calculator</span>
+                        </CommandItem>
+                      </CommandGroup>
+                      <CommandSeparator />
+                      <CommandGroup heading="Settings">
+                        <CommandItem>
+                          <User className="mr-2 h-4 w-4" />
+                          <span>Profile</span>
+                          <CommandShortcut>⌘P</CommandShortcut>
+                        </CommandItem>
+                        <CommandItem>
+                          <CreditCard className="mr-2 h-4 w-4" />
+                          <span>Billing</span>
+                          <CommandShortcut>⌘B</CommandShortcut>
+                        </CommandItem>
+                        <CommandItem>
+                          <Settings className="mr-2 h-4 w-4" />
+                          <span>Settings</span>
+                          <CommandShortcut>⌘S</CommandShortcut>
+                        </CommandItem>
+                      </CommandGroup>
+                    </CommandList>
+                  </Command>
+                )
+              }
+
+            ```
+        </Tab>
+  </Tabs>
+
+## Installation 
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/command-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/command-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import 
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import {
+                  Command,
+                  CommandEmpty,
+                  CommandGroup,
+                  CommandInput,
+                  CommandItem,
+                  CommandList,
+                  CommandSeparator,
+                  CommandShortcut,
+                } from "@uidu/core-ui"
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import {
+                  Command,
+                  CommandEmpty,
+                  CommandGroup,
+                  CommandInput,
+                  CommandItem,
+                  CommandList,
+                  CommandSeparator,
+                  CommandShortcut,
+                } from "@uidu/command-ui"
+            ```
+        </Tab>
+    </Tabs>

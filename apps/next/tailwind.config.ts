@@ -6,6 +6,7 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './content/**/**/*.{js,ts,jsx,tsx,mdx}',
     '../../node_modules/@uidu/web/dist/**/*.{js,ts,jsx,tsx,mdx}',
     '../../packages/web/src/**/*.{js,ts,jsx,tsx,mdx}',
     '../../packages/web/components/core/**/**/*.{js,ts,jsx,tsx,mdx}',

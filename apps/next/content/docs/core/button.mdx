@@ -1,31 +1,308 @@
 ---
 title: "Button"
-description: a great way to use buttons!
+description: An interactive component used for triggering actions or events with a click or tap.
 ---
 
 import ButtonDemo from "../../../src/docs/demos/button-demo"
+import ButtonSecondary from "../../../src/docs/demos/button-secondary"
+import ButtonOutline from "../../../src/docs/demos/button-outline"
 import ButtonGhost from "../../../src/docs/demos/button-ghost"
+import ButtonDestructive from "../../../src/docs/demos/button-destructive"
 import ButtonLink from "../../../src/docs/demos/button-link"
 import ButtonIcon from "../../../src/docs/demos/button-icon"
+import ButtonWithIcon from "../../../src/docs/demos/button-with-icon"
 import ButtonLoading from "../../../src/docs/demos/button-loading"
+import ButtonAsChild from "../../../src/docs/demos/button-as-child"
 
+<div className="flex items-center">
+  <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/button-ui" target="_blank">@uidu/button-ui</a>
+  <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/button" target="_blank">Source</a>
+</div>
 
-### Button demo
+## Button 
 
 <ButtonDemo />
 
-### Button ghost
+## Usage 
 
-<ButtonGhost />
+<Tabs items={["preview" , "code"]}>
+  <Tab value="preview">
+    <div className="py-16 flex items-center justify-center">
+      <ButtonDemo />
+    </div>
+  </Tab>
+  <Tab value="code">
+    ```tsx
+      "use client"
 
-### Button link
+      import { Button } from "@uidu/core-ui"
 
-<ButtonLink />
+      export default function ButtonDemo() {
+        return <Button>Button</Button>
+      }
+    ```
+  </Tab>
+</Tabs>
 
-### Button icon
+## Installation
+  <Tabs items={["npm", "yarn"]}>
+    <Tab value="npm">
+      ```bash
+        npm install @uidu/button-ui
+      ```
+    </Tab>
+    <Tab value="yarn">
+      ```bash
+        yarn add @uidu/button-ui
+      ```
+    </Tab>
+  </Tabs>
 
-<ButtonIcon />
+## Import
 
-### Button loading
+  <Tabs items={["generic", "individual"]}>
+    <Tab value="generic">
+      ```tsx
+        import { Button } from "@uidu/core-ui"
+      ```
+    </Tab>
+    <Tab value="individual">
+      ```tsx
+        import { Button } from "@uidu/button-ui"
+      ```
+    </Tab>
+  </Tabs>
 
-<ButtonLoading />
+## Variants
+  ### Usage
+    
+    Use the `buttonVariants` helper to generate a button-styled link
+
+    ```tsx 
+      import { buttonVariants } from "@uidu/core-ui"
+
+      <Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
+    ```
+
+    Or you can use the `asChild` parameter to nest the link component
+    ```tsx
+      <Button asChild>
+        <Link href="/login">Login</Link>
+      </Button>
+
+    ```
+
+<Steps>
+  <Step>
+    ### Secondary
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+            <ButtonSecondary />
+          </div>
+        </Tab>
+      <Tab value="code">
+      ```tsx
+        "use client"
+          import { Button } from "@uidu/core-ui"
+
+          export default function ButtonSecondary() {
+          return <Button variant="secondary">Secondary</Button>
+        }
+      ```
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step>
+    ### Outline
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+            <ButtonOutline />
+          </div>
+        </Tab>
+        <Tab value="code">
+        ```tsx
+          "use client"
+
+          import { Button } from "@uidu/core-ui"
+
+          export default function ButtonOutline() {
+          return <Button variant="outline">Outline</Button>
+        }
+        ```
+        </Tab>
+      </Tabs>
+  </Step>
+  <Step>
+    ### Ghost
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+            <ButtonGhost />
+          </div>
+        </Tab>
+        <Tab value="code">
+          ```tsx
+            "use client"
+
+            import { Button } from "@uidu/core-ui"
+
+            export default function ButtonGhost() {
+            return <Button variant="ghost">Ghost</Button>
+            }
+          ```
+        </Tab>
+      </Tabs>
+  </Step>
+  <Step>
+    ### Destructive
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+            <ButtonDestructive />
+          </div>
+        </Tab>
+        <Tab value="code">
+        ```tsx
+          "use client"
+          import { Button } from "@uidu/core-ui"
+
+          export default function ButtonDestructive() {
+          return <Button variant="destructive">Destructive</Button>
+          }
+        ```
+        </Tab>
+      </Tabs>
+  </Step>
+  <Step>
+    ### Link
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+            <ButtonLink />
+          </div>
+        </Tab>
+        <Tab value="code">
+          ```tsx
+            "use client"
+
+            import { Button } from "@uidu/core-ui"
+
+            export default function ButtonLink() {
+            return <Button variant="link">Link</Button>
+            }
+          ```
+        </Tab>
+      </Tabs>
+  </Step>
+  <Step>
+    ### Icon
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+            <ButtonIcon />
+          </div>
+        </Tab>
+        <Tab value="code">
+          ```tsx
+          "use client"
+
+          import { ChevronRight } from "lucide-react"
+
+          import { Button } from "@uidu/core-ui"
+
+          export default function ButtonIcon() {
+            return (
+            <Button variant="outline" size="icon">
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+            )
+          }
+          ```
+        </Tab>
+      </Tabs> 
+  </Step>
+  <Step>
+    ### With Icon 
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+            <ButtonWithIcon />
+          </div>
+        </Tab>
+        <Tab value="code">
+        ```tsx
+        "use client"
+        import { Mail } from "lucide-react"
+
+        import { Button } from "@uidu/core-ui"
+
+        export default function ButtonWithIcon() {
+          return (
+            <Button>
+              <Mail className="mr-2 h-4 w-4" /> Login with Email
+            </Button>
+          )
+        }
+        ```
+        </Tab>
+      </Tabs>
+  </Step>
+  <Step>
+    ### Loading
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+            <ButtonLoading />
+          </div>
+        </Tab>
+        <Tab value="code">
+          ```tsx
+          "use client"
+
+          import { Loader2 } from "lucide-react"
+
+          import { Button } from "@uidu/core-ui"
+
+          export default function ButtonLoading() {
+            return (
+              <Button disabled>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Please wait
+              </Button>
+            )
+          }
+          ```
+        </Tab>
+      </Tabs>
+    </Step>
+    <Step>
+    ### As Child
+      <Tabs items={["preview", "code"]}>
+        <Tab value="preview">
+          <div className="py-16 flex items-center justify-center">
+              <ButtonDemo />
+          </div>
+        </Tab>
+        <Tab value="code">
+          ```tsx
+            "use client"
+
+            import Link from "next/link"
+
+            import { Button } from "@uidu/core-ui"
+
+            export default function ButtonAsChild() {
+              return (
+                <Button asChild>
+                  <Link href="/login">Login</Link>
+                </Button>
+              )
+            }
+          ```
+        </Tab>
+      </Tabs>
+  </Step> 
+</Steps>
+

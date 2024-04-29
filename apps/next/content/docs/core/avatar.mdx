@@ -1,15 +1,20 @@
 ---
 title: "Avatars"
-description: a great way to use Avatarss!
+description: Provides a visual representation of a user, typically through an image or icon.
 ---
 
 import AvatarDemo from "../../../src/docs/demos/avatar-demo"
+
+<div className="flex items-center">
+<a className="mr-4 " href="https://www.npmjs.com/package/@uidu/avatar-ui" target="_blank">@uidu/avatar-ui</a>
+<a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/avatar" target="_blank">Source</a>
+</div>
 
 ## Avatar
 
 <AvatarDemo />
 
-## Tabs with preview and code
+## Usage 
 
 <Tabs items={["preview", "code"]}>
 
@@ -23,7 +28,7 @@ import AvatarDemo from "../../../src/docs/demos/avatar-demo"
 
 <Tab value="code">
 
-```ts
+```tsx
 "use client"
 
 import {
@@ -43,4 +48,35 @@ export default function AvatarDemo() {
 ``` 
 </Tab>
 
+</Tabs>
+
+## Installation
+
+<Tabs items={["npm", "yarn"]}>
+<Tab value="npm">
+```bash
+npm install @uidu/avatar-ui
+```
+</Tab>
+<Tab value="yarn">
+```bash
+yarn add @uidu/avatar-ui
+```
+</Tab>
+
+</Tabs>
+
+## Import
+
+<Tabs items={["generic", "individual"]}>
+<Tab value="generic">
+```tsx
+import  {Avatar, AvatarFallback, AvatarImage} from "@uidu/core-ui"
+```
+</Tab>
+<Tab value="individual">
+```tsx 
+import {Avatar, AvatarFallback, AvatarImage} from "@uidu/avatar-ui"
+```
+</Tab>
 </Tabs>

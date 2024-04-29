@@ -1,10 +1,154 @@
 ---
 title: "Alert"
-description: a great way to use alerts!
+description: Displays a message to interact with the user
 ---
 
 import AlertDemo from "../../../src/docs/demos/alert-demo"
+import AlertDestructive from "../../../src/docs/demos/alert-destructive"
 
-## Installation
+<div className="flex items-center ">
+<a className="mr-4 " href="https://www.npmjs.com/package/@uidu/alert-ui" target="_blank">@uidu/alert-ui</a>
+<a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/alert" target="_blank">Source</a>
+</div>
+
+## Alert  
 
 <AlertDemo />
+
+## Usage
+
+<Tabs items= {["preview", "code"]}>
+  <Tab value="preview">
+    <div className=" h-80 p-16 flex items-center justify-center">
+     <AlertDemo />
+    </div>
+
+  </Tab>
+  <Tab value="code">
+  ```tsx
+    "use client"
+
+import { Terminal } from "lucide-react"
+
+
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@uidu/core-ui"
+
+export default function AlertDemo() {
+  return (
+    <Alert>
+      <Terminal className="h-4 w-4" />
+      <AlertTitle>Heads up!</AlertTitle>
+      <AlertDescription>
+        You can add components to your app using the cli.
+      </AlertDescription>
+    </Alert>
+  )
+}
+
+  ```
+
+  </Tab>
+
+</Tabs>
+
+## Installation 
+
+<Tabs items={["npm", "yarn"]}>
+
+<Tab value="npm" >
+
+```bash
+npm install @uidu/alert-ui
+```
+
+</Tab>
+
+<Tab value={"yarn"}>
+```bash
+yarn add @uidu/alert-ui
+```
+</Tab>
+
+</Tabs>
+
+## Import
+
+<Tabs items={["generic" , "individual"]}>
+<Tab value={"generic"}>
+```tsx
+
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@uidu/core-ui"
+
+```
+</Tab>
+
+<Tab value={"individual"}>
+```tsx
+
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@uidu/alert-ui"
+
+```
+</Tab>
+</Tabs>
+
+## Variants
+
+<Steps>
+
+<Step> 
+### Destructive
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-80 p-16 flex items-center justify-center">
+    <AlertDestructive />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+"use client"
+
+import { AlertCircle } from "lucide-react"
+
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@uidu/core-ui"
+
+export default function AlertDestructive() {
+  return (
+    <Alert variant="destructive">
+      <AlertCircle className="h-4 w-4" />
+      <AlertTitle>Error</AlertTitle>
+      <AlertDescription>
+        Your session has expired. Please log in again.
+      </AlertDescription>
+    </Alert>
+  )
+}
+```
+
+
+</Tab>
+
+</Tabs></Step>
+
+</Steps>
+
+
+
+

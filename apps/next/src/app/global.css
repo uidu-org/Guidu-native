@@ -9,3 +9,10 @@
 .prose {
   --tw-prose-body: hsl(var(--muted-foreground));
 }
+
+@layer {
+  :root {
+    --danger: hsl(0, 75%, 45%);
+    --default: hsl(187, 4%, 57%);
+  }
+}

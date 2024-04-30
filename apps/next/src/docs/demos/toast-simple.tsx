@@ -1,7 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/default/ui/button"
-import { useToast } from "@/registry/default/ui/use-toast"
+import { Button, useToast } from "@uidu/core-ui"
 
 export default function ToastSimple() {
   const { toast } = useToast()

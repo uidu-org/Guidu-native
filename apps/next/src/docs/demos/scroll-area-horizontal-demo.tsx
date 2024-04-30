@@ -1,7 +1,8 @@
-import * as React from "react"
+"use client"
+
 import Image from "next/image"
 
-import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@uidu/core-ui"
 
 export interface Artwork {
   artist: string

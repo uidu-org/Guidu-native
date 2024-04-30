@@ -5,7 +5,79 @@ description: a great way to use separators
 
 import SeparatorDemo from "../../../src/docs/demos/separator-demo"
 
+    <div className="flex items-center">
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/separator-ui" target="_blank">@uidu/separator-ui</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/separator" target="_blank">Source</a>
+    </div>
+
+## Separator
+
+<SeparatorDemo />
+
+## Usage 
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <SeparatorDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx 
+                "use client"
+
+                import { Separator } from "@uidu/core-ui"
+
+                export default function SeparatorDemo() {
+                  return (
+                    <div>
+                      <div className="space-y-1">
+                        <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
+                        <p className="text-sm text-muted-foreground">
+                          An open-source UI component library.
+                        </p>
+                      </div>
+                      <Separator className="my-4" />
+                      <div className="flex h-5 items-center space-x-4 text-sm">
+                        <div>Blog</div>
+                        <Separator orientation="vertical" />
+                        <div>Docs</div>
+                        <Separator orientation="vertical" />
+                        <div>Source</div>
+                      </div>
+                    </div>
+                  )
+                }
+            ```
+        </Tab>
+    </Tabs>
 
 ## Installation
 
-<SeparatorDemo />
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/separator-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/separator-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import 
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { Separator } from "@uidu/core-ui"
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { Separator } from "@uidu/separator-ui"
+            ```
+        </Tab>
+    </Tabs>

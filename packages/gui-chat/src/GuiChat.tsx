@@ -10,8 +10,12 @@ import { GChatty, ListRef } from './types';
 
 export const GuiChat = React.forwardRef(
   (props: GChatty, ref: ForwardedRef<ListRef>) => {
-    const { messages, currentUser, mentions, staticPathToUserInfoSection } =
-      props;
+    const {
+      messages,
+      isDark = false,
+      mentions,
+      staticPathToUserInfoSection,
+    } = props;
     const listRef = useRef<ListRef>();
 
     useEffect(() => {
@@ -65,6 +69,7 @@ export const GuiChat = React.forwardRef(
               value={props.value}
               mentions={mentions}
               onPressSend={props.onPressSend}
+              isDark={isDark}
             />
           </View>
         </KeyboardAvoidingView>

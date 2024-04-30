@@ -4,7 +4,6 @@ import React, { FC, useCallback, useRef, useState } from 'react';
 import {
   FlatList,
   Keyboard,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -19,11 +18,11 @@ import { useChatContext } from './context/WrapperContext';
 import { GFooterProps, GUser } from './types';
 
 const ChatFooterComp: FC<GFooterProps> = (props) => {
-  const { mentions, value } = props;
+  const { width: windowWidth } = useWindowDimensions();
+  const { mentions, value, isDark } = props;
   const { replyMessage, setReplyMessage } = useChatContext();
   const [text, setText] = useState('');
   const [offsetReplyMessageHeight, setOffsetReplyMessageHeight] = useState();
-  const { width: windowWidth } = useWindowDimensions();
   const inputRef = useRef<TextInput>(null);
 
   const onChangeText = useCallback((text: string) => {
@@ -195,7 +194,11 @@ const ChatFooterComp: FC<GFooterProps> = (props) => {
               },
             ]}
             placeholder="Type here..."
-            style={{ padding: 12, maxWidth: windowWidth - 120 }}
+            style={{
+              padding: 12,
+              maxWidth: windowWidth - 120,
+              color: isDark ? 'white' : 'black',
+            }}
           />
         </View>
 
@@ -220,86 +223,6 @@ const ChatFooterComp: FC<GFooterProps> = (props) => {
     </GuiView>
   );
 };
-
-const styles = StyleSheet.create({
-  textInput: {
-    padding: 5,
-    width: '80%',
-    borderWidth: 1,
-    borderColor: '#ccc',
-  },
-  shortedTextInput: {
-    padding: 10,
-    width: '70%',
-    borderWidth: 1,
-    borderColor: '#ccc',
-  },
-  button: {
-    width: '20%',
-    backgroundColor: '#fcba03',
-  },
-  reply: {
-    // flexDirection: 'row',
-    // padding: 10,
-    // backgroundColor: '#f5f5f5',
-    // borderLeftColor: '#c8faaf',
-    // borderLeftWidth: 6,
-    // position: "absolute",
-    // bottom: 45
-  },
-  replyBody: {
-    flex: 1,
-  },
-  replyUsername: {
-    fontWeight: 'bold',
-  },
-
-  addMore: {
-    width: 100,
-    height: 100,
-    borderWidth: 1,
-    borderStyle: 'dashed',
-    borderRadius: 15,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderColor: '#ccc',
-  },
-  imageClearButton: {
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    width: 18,
-    height: 18,
-    marginLeft: 10,
-    marginTop: 5,
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignContent: 'center',
-  },
-  media: {
-    width: 110,
-    height: 100,
-    borderRadius: 15,
-    marginRight: 10,
-    marginBottom: 10,
-  },
-  mediaOverlay: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'rgba(0,0,0,0.2)',
-    borderRadius: 15,
-  },
-  mentionContainer: {
-    position: 'absolute',
-    bottom: 50,
-    width: '100%',
-    padding: 10,
-    backgroundColor: '#E5EEFA',
-  },
-  mentionLabel: {
-    padding: 10,
-    color: '#1939B7',
-  },
-});
 
 // const renderItem = useCallback(({ item }: { item: GUser }) => {
 //     const handleUserClick = () => {

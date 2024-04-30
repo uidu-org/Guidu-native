@@ -1,7 +1,8 @@
-import { PixelRatio } from 'react-native';
-import SIZES from '../constants/SIZES';
-
 import { measureHeights } from '@bigbee.dev/expo-measure-text';
+import { PixelRatio } from 'react-native';
+import { replaceMentionValues } from 'react-native-controlled-mentions';
+
+import SIZES from '../constants/SIZES';
 import { GMessage } from '../types';
 
 const averageCharWidth = Math.ceil(PixelRatio.get());
@@ -19,10 +20,12 @@ export const calculateMessageHeight = (
   const maxWidthMessage =
     SIZES.BUBBLE_CHAT_MAX_WIDTH - SIZES.BUBBLE_CHAT_PADDING * 2;
 
-  const testText = text.split('\n');
+  const cleanedText = replaceMentionValues(text, ({ name }) => `@${name}`);
+
+  const testText = cleanedText.split('\n');
 
   const measuredHeight = measureHeights({
-    texts: testText.length > 1 ? testText : [text],
+    texts: testText.length > 1 ? testText : [cleanedText],
     width: maxWidthMessage,
     lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT,
     fontSize: SIZES.BUBBLE_CHAT_FONT_SIZE,
@@ -38,17 +41,46 @@ export const calculateMessageHeight = (
   }
 
   if (message.repliedTo?.id) {
+    const repliedcleanedText = replaceMentionValues(
+      message.repliedTo?.text,
+      ({ name }) => `@${name}`
+    );
+    const repliedTextTest = repliedcleanedText.split('\n');
+
     const maxWidthMessageReplayed =
       maxWidthMessage - SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_PADDING * 2;
-    const { lines } = calculateTextLayout(
-      message.repliedTo.text,
-      maxWidthMessageReplayed
+    const measuredRepliedMessageHeight = measureHeights({
+      texts:
+        repliedTextTest.length > 1 ? repliedTextTest : [repliedcleanedText],
+      width: maxWidthMessageReplayed,
+      lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT,
+      fontSize: SIZES.BUBBLE_CHAT_FONT_SIZE,
+      fontWeight: SIZES.BUBBLE_CHAT_FONT_WEIGHT,
+      maxLines: 2,
+    });
+    const measuredRepliedMessageUserHeight = measureHeights({
+      texts: [message.repliedTo?.user.name],
+      width: maxWidthMessageReplayed,
+      lineHeight: SIZES.BUBBLE_CHAT_LINE_HEIGHT,
+      fontSize: SIZES.BUBBLE_CHAT_FONT_SIZE,
+      fontWeight: 'bold',
+      maxLines: 1,
+    });
+    const textLayoutRepliedMessageHeight = measuredRepliedMessageHeight.reduce(
+      (accumulator, currentValue) => accumulator + currentValue + MAGIC_NUMBER,
+      0
     );
-
+    const textLayoutRepliedMessageUserHeight =
+      measuredRepliedMessageUserHeight.reduce(
+        (accumulator, currentValue) =>
+          accumulator + currentValue + MAGIC_NUMBER,
+        0
+      );
     height +=
-      SIZES.BUBBLE_CHAT_GAP + lines.length >= 2
-        ? SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MAX_HEIGHT
-        : 55 + SIZES.BUBBLE_CHAT_REPLIED_MESSAGE_MARGIN_BOTTOM;
+      SIZES.BUBBLE_CHAT_GAP +
+      textLayoutRepliedMessageHeight +
+      textLayoutRepliedMessageUserHeight +
+      5;
   }
 
   const textLayoutHeight = measuredHeight.reduce(
@@ -132,4 +164,9 @@ function calculateTextLayout(text: string, maxWidth: number) {
   }
 
   return { lines };
+}
+
+function removeMentionFilter(text: string) {
+  const mentionRegex = /@\[([^\]]+)]\([^)]+\)/g;
+  return text.replace(mentionRegex, (match, p1) => `@${p1}`);
 }

@@ -147,6 +147,7 @@ export interface GChatty
   mentions: GUser[];
   staticPathToUserInfoSection?: string;
   forceNonDeterministicRendering?: boolean;
+  isDark?: boolean;
 }
 
 // export interface GActionProps {
@@ -161,7 +162,8 @@ export interface GDialogHelperProps {
   action: (params: any) => void;
 }
 
-export interface GFooterProps extends Pick<GChatty, 'replyingTo' | 'mentions'> {
+export interface GFooterProps
+  extends Pick<GChatty, 'replyingTo' | 'mentions' | 'isDark'> {
   onChangeText?: (text: string) => void;
   onPressSend: (text: string, repliedTo: GMessage) => void;
   onPressCancelReply?: () => void;

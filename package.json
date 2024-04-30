@@ -48,7 +48,7 @@
   "resolutions": {
     "react-refresh": "^0.14.0",
     "eslint-plugin-react-hooks": "<5",
-    "react-native-reanimated": "^3.8.0"
+    "react-native-reanimated": "3.8.0"
   },
   "dependencies": {
     "@babel/core": "^7.23.9",

@@ -68,16 +68,16 @@ export const calculateMessageHeight = (
     SIZES.BUBBLE_CHAT_MARGIN_VERTICAL * 2 +
     SIZES.BUBBLE_CHAT_PADDING * 2;
 
-  console.log(
-    'calc_height',
-    JSON.stringify(
-      {
-        measuredHeight,
-      },
-      null,
-      2
-    )
-  );
+  // console.log(
+  //   'calc_height',
+  //   JSON.stringify(
+  //     {
+  //       measuredHeight,
+  //     },
+  //     null,
+  //     2
+  //   )
+  // );
 
   return Math.ceil(finalHeight);
 };

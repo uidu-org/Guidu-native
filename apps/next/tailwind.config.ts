@@ -1,4 +1,6 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+const { createPreset } = require('fumadocs-ui/tailwind-plugin');
+
 
 const config: Config = {
   darkMode: ['class'],
@@ -12,6 +14,7 @@ const config: Config = {
     '../../packages/web/components/core/**/**/*.{js,ts,jsx,tsx,mdx}',
     '../../packages/web/components/forms/**/**/*.{js,ts,jsx,tsx,mdx}',
     '../../packages/web/components/media/**/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../node_modules/fumadocs-ui/dist/**/*.js',
   ],
   theme: {
     container: {
@@ -73,6 +76,7 @@ const config: Config = {
       },
     },
   },
+  presets: [createPreset()],
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
 }
 export default config

@@ -11404,10 +11404,13 @@ __metadata:
     "@tamagui-extras/form": "npm:^1.17.2"
     "@tamagui/linear-gradient": "npm:^1.91.3"
     "@tamagui/lucide-icons": "npm:^1.89.8"
+    "@types/lodash": "npm:^4"
     "@uidu/native-config": "npm:0.0.8"
     dayjs: "npm:^1.11.10"
     expo-image-picker: "npm:^14.7.1"
     expo-router: "npm:>= 3.0.0"
+    export: "npm:^0.1.337"
+    lodash: "npm:^4.17.21"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
     react-native: "npm:0.73.6"
@@ -12116,6 +12119,13 @@ __metadata:
   version: 0.9.0
   resolution: "@zxing/text-encoding@npm:0.9.0"
   checksum: 10/268e4ef64b8eaa32b990240bdfd1f7b3e2b501a6ed866a565f7c9747f04ac884fbe0537fe12bb05d9241b98fb111270c0fd0023ef0a02d23a6619b4589e98f6b
+  languageName: node
+  linkType: hard
+
+"abbrev@npm:1":
+  version: 1.1.1
+  resolution: "abbrev@npm:1.1.1"
+  checksum: 10/2d882941183c66aa665118bafdab82b7a177e9add5eb2776c33e960a4f3c89cff88a1b38aba13a456de01d0dd9d66a8bea7c903268b21ea91dd1097e1e2e8243
   languageName: node
   linkType: hard
 
@@ -16882,6 +16892,18 @@ __metadata:
   version: 3.1.1
   resolution: "exponential-backoff@npm:3.1.1"
   checksum: 10/2d9bbb6473de7051f96790d5f9a678f32e60ed0aa70741dc7fdc96fec8d631124ec3374ac144387604f05afff9500f31a1d45bd9eee4cdc2e4f9ad2d9b9d5dbd
+  languageName: node
+  linkType: hard
+
+"export@npm:^0.1.337":
+  version: 0.1.337
+  resolution: "export@npm:0.1.337"
+  dependencies:
+    nopt: "npm:2.1.x"
+    underscore: "npm:1.4.x"
+  bin:
+    exportjs: ./bin/exportjs
+  checksum: 10/9df0501568aa79043c29253fc7a87a5a699c154c4a1f4b82e5a60dda915638c4ef596deaa1dbe1b556d194a7938cba05ee6d9dc3b28ae6b7de05cbe8218187c6
   languageName: node
   linkType: hard
 
@@ -22988,6 +23010,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nopt@npm:2.1.x":
+  version: 2.1.2
+  resolution: "nopt@npm:2.1.2"
+  dependencies:
+    abbrev: "npm:1"
+  bin:
+    nopt: ./bin/nopt.js
+  checksum: 10/43826df24f66cb9138726275602ca195ceef1e55b2f9a4b37f4b3606a10856b2df7bc69c4023df95819c8c2e6ef8bae7600d2cb2749869b056f34102b132f521
+  languageName: node
+  linkType: hard
+
 "nopt@npm:^7.0.0":
   version: 7.2.0
   resolution: "nopt@npm:7.2.0"
@@ -28205,6 +28238,13 @@ __metadata:
     has-symbols: "npm:^1.0.3"
     which-boxed-primitive: "npm:^1.0.2"
   checksum: 10/06e1ee41c1095e37281cb71a975cb3350f7cb470a0665d2576f02cc9564f623bd90cfc0183693b8a7fdf2d242963dcc3010b509fa3ac683f540c765c0f3e7e43
+  languageName: node
+  linkType: hard
+
+"underscore@npm:1.4.x":
+  version: 1.4.4
+  resolution: "underscore@npm:1.4.4"
+  checksum: 10/483d51b4996f5dae66d2256e7a64c297fa7b9a70eab52bf40d8740d5fd8f056846dd1992fe0943161cf51a75e3a0c423a4acddb9ee8a8930c5d2532ce3783bb7
   languageName: node
   linkType: hard
 

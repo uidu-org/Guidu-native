@@ -1,5 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from 'react';
+import { FormatValue } from './FormatValue';
 
 import { cn } from '@uidu/lib';
 
@@ -8,13 +9,20 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
+        // outline: 'text-stone-950 dark:text-stone-50',
+
         default:
-          'border-transparent bg-stone-900 text-stone-50 hover:bg-stone-900/80 dark:bg-stone-50 dark:text-stone-900 dark:hover:bg-stone-50/80',
-        secondary:
-          'border-transparent bg-stone-100 text-stone-900 hover:bg-stone-100/80 dark:bg-stone-800 dark:text-stone-50 dark:hover:bg-stone-800/80',
-        destructive:
-          'border-transparent bg-red-500 text-stone-50 hover:bg-red-500/80 dark:bg-red-900 dark:text-stone-50 dark:hover:bg-red-900/80',
-        outline: 'text-stone-950 dark:text-stone-50',
+          'border-transparent bg-uiduThemes-neutral-40 text-uiduThemes-neutral-800 hover:bg-uiduThemes-neutral-40/80 dark:bg-uiduThemes-darkNeutral-70 dark:text-uiduThemes-darkNeutral-900 dark:hover:bg-uiduThemes-darkNeutral-70/80',
+        added:
+          'border-transparent bg-uiduThemes-green-50 text-uiduThemes-green-500 hover:bg-uiduThemes-green-50/80',
+        important:
+          'border-transparent bg-uiduThemes-red-400 text-uiduThemes-neutral-0 hover:bg-uiduThemes-red-400/80',
+        primary:
+          'border-transparent bg-uiduThemes-blue-400 text-uiduThemes-neutral-0 hover:bg-uiduThemes-blue-400/80 dark:bg-uiduThemes-blue-100 dark:text-uiduThemes-darkNeutral-0 dark:hover:bg-uiduThemes-blue-100/80',
+        primaryInverted:
+          'border-transparent bg-uiduThemes-neutral-0 text-uiduThemes-blue-500 hover:bg-uiduThemes-neutral-0/80 dark:bg-uiduThemes-darkNeutral-400 dark:text-uiduThemes-darkNeutral-0 dark:hover:bg-uiduThemes-darkNeutral-400/80',
+        removed:
+          'border-transparent bg-uiduThemes-red-50 text-uiduThemes-red-500 hover:bg-uiduThemes-red-50/80',
       },
     },
     defaultVariants: {
@@ -25,11 +33,28 @@ const badgeVariants = cva(
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+    VariantProps<typeof badgeVariants> {
+  children?: number | string;
+  max?: number;
+  testId?: string;
+}
 
-function Badge({ className, variant, ...props }: BadgeProps) {
+function Badge({
+  className,
+  variant,
+  children = 0,
+  max = 99,
+  testId,
+  ...props
+}: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <div className={cn(badgeVariants({ variant }), className)} {...props}>
+      {typeof children === 'string' ? (
+        children
+      ) : (
+        <FormatValue max={max}>{children}</FormatValue>
+      )}
+    </div>
   );
 }
 

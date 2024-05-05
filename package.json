@@ -4,7 +4,7 @@
   "private": true,
   "workspaces": [
     "./apps/*",
-    "./packages/hybrid-native/*",
+    "./packages/native-hybrid/*",
     "./packages/web/components/core/*",
     "./packages/web/components/forms/*",
     "./packages/web/components/media/*",
@@ -71,7 +71,7 @@
   "packageManager": "yarn@4.1.1",
   "preconstruct": {
     "packages": [
-      "./packages/hybrid-native/*",
+      "./packages/native-hybrid/*",
       "!./packages/web/storybook",
       "!./packages/web",
       "!./packages/web/components/*/*",

@@ -17,9 +17,9 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@uidu/native": "0.0.41",
+    "@uidu/native": "^0.0.41",
     "@uidu/native-forms": "0.0.3",
-    "@uidu/native-panels": "0.0.2"
+    "@uidu/native-panels": "^0.0.3"
   },
   "peerDependencies": {
     "@tamagui/linear-gradient": "*",

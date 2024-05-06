@@ -1,6 +1,6 @@
 {
   "name": "@uidu/native",
-  "version": "0.0.38-beta.05",
+  "version": "0.0.41",
   "sideEffects": false,
   "source": "src/index.ts",
   "main": "dist/uidu-native.cjs.js",
@@ -11,7 +11,7 @@
     "build-clean": "tamagui-build clean"
   },
   "dependencies": {
-    "tamagui": "^1.89.8"
+    "tamagui": "^1.96.0"
   },
   "devDependencies": {
     "@tamagui/build": "^1.96.0"

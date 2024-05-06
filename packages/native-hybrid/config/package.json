@@ -12,12 +12,12 @@
     "types"
   ],
   "dependencies": {
-    "@tamagui/animations-react-native": "^1.89.8",
-    "@tamagui/font-inter": "^1.89.8",
-    "@tamagui/react-native-media-driver": "^1.89.8",
-    "@tamagui/shorthands": "^1.89.8",
-    "@tamagui/themes": "^1.89.8",
-    "tamagui": "^1.89.8"
+    "@tamagui/animations-react-native": "^1.96.0",
+    "@tamagui/font-inter": "^1.96.0",
+    "@tamagui/react-native-media-driver": "^1.96.0",
+    "@tamagui/shorthands": "^1.96.0",
+    "@tamagui/themes": "^1.96.0",
+    "tamagui": "^1.96.0"
   },
   "publishConfig": {
     "access": "public",

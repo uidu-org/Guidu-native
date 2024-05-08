@@ -3,6 +3,7 @@ module.exports = function (api) {
   return {
     presets: [['babel-preset-expo', { jsxRuntime: 'automatic' }]],
     plugins: [
+      'react-native-reanimated/plugin',
       [
         require.resolve('babel-plugin-module-resolver'),
         {
@@ -11,20 +12,25 @@ module.exports = function (api) {
         },
       ],
       // if you want reanimated support
-      // 'react-native-reanimated/plugin',
       ...(process.env.EAS_BUILD_PLATFORM === 'android'
         ? []
         : [
             [
               '@tamagui/babel-plugin',
               {
+                config: './tamagui.config.ts',
                 components: ['@uidu/native'],
-                config: '@uidu/native-config',
                 logTimings: true,
-                disableExtraction: process.env.NODE_ENV === 'development'
+                disableExtraction: process.env.NODE_ENV === 'development',
               },
             ],
           ]),
+      [
+        'transform-inline-environment-variables',
+        {
+          include: 'TAMAGUI_TARGET',
+        },
+      ],
     ],
   };
 };

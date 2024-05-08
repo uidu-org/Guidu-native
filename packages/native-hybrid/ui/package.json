@@ -1,0 +1,33 @@
+{
+  "name": "@uidu/native-ui",
+  "version": "0.0.2",
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "main": "dist/uidu-native-ui.cjs.js",
+  "module": "dist/uidu-native-ui.esm.js",
+  "scripts": {
+    "build": "tamagui-build --skip-types",
+    "build-types": "tamagui-build"
+  },
+  "devDependencies": {
+    "@tamagui/build": "^1.96.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@uidu/native": "^0.0.41",
+    "@uidu/native-forms": "0.0.3",
+    "@uidu/native-panels": "^0.0.3"
+  },
+  "peerDependencies": {
+    "@tamagui/linear-gradient": "*",
+    "@tamagui/lucide-icons": "*",
+    "@uidu/native": "*",
+    "react": "*",
+    "react-hook-form": "*",
+    "react-native": "*",
+    "react-native-svg": "*"
+  }
+}

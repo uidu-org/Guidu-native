@@ -47,6 +47,13 @@ thumbs.db
 # turbo build log
 **/.turbo/*
 
+# native-ui
+dist/
+.DS_Store
+THUMBS_DB
+node_modules/
+
+
 ## Panda
 styled-system
 styled-system-studio

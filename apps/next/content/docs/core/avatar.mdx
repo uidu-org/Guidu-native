@@ -3,25 +3,37 @@ title: "Avatars"
 description: Provides a visual representation of a user, typically through an image or icon.
 ---
 
-import AvatarDemo from "../../../src/docs/demos/avatar-demo"
+import AvatarDemo from "../../../src/docs/demos/avatar-demo";
 
 <div className="flex items-center">
-<a className="mr-4 " href="https://www.npmjs.com/package/@uidu/avatar-ui" target="_blank">@uidu/avatar-ui</a>
-<a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/avatar" target="_blank">Source</a>
+  <a
+    className="mr-4 "
+    href="https://www.npmjs.com/package/@uidu/avatar-ui"
+    target="_blank"
+  >
+    @uidu/avatar-ui
+  </a>
+  <a
+    className="mx-4"
+    href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/avatar"
+    target="_blank"
+  >
+    Source
+  </a>
 </div>
 
 ## Avatar
 
 <AvatarDemo />
 
-## Usage 
+## Usage
 
 <Tabs items={["preview", "code"]}>
 
 <Tab value="preview">
 
-<div style={{height : 300, display  :"grid", placeItems : "center"}}>
-<AvatarDemo />
+<div style={{ height: 300, display: "grid", placeItems: "center" }}>
+  <AvatarDemo />
 </div>
 
 </Tab>
@@ -29,23 +41,23 @@ import AvatarDemo from "../../../src/docs/demos/avatar-demo"
 <Tab value="code">
 
 ```tsx
-"use client"
+"use client";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@uidu/core-ui"
+import { Avatar, AvatarFallback, AvatarImage } from "@uidu/core-ui";
 
 export default function AvatarDemo() {
   return (
     <Avatar>
-      <AvatarImage src="https://avatars.githubusercontent.com/u/124514869?v=4" alt="random photo" />
+      <AvatarImage
+        src="https://avatars.githubusercontent.com/u/124514869?v=4"
+        alt="random photo"
+      />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
-  )
+  );
 }
-``` 
+```
+
 </Tab>
 
 </Tabs>
@@ -69,14 +81,12 @@ yarn add @uidu/avatar-ui
 ## Import
 
 <Tabs items={["generic", "individual"]}>
-<Tab value="generic">
-```tsx
-import  {Avatar, AvatarFallback, AvatarImage} from "@uidu/core-ui"
-```
-</Tab>
-<Tab value="individual">
-```tsx 
-import {Avatar, AvatarFallback, AvatarImage} from "@uidu/avatar-ui"
-```
-</Tab>
+  <Tab value="generic">
+    ```tsx import {(Avatar, AvatarFallback, AvatarImage)} from "@uidu/core-ui"
+    ```
+  </Tab>
+  <Tab value="individual">
+    ```tsx import {(Avatar, AvatarFallback, AvatarImage)} from "@uidu/avatar-ui"
+    ```
+  </Tab>
 </Tabs>

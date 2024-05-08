@@ -3,15 +3,27 @@ title: "Alert"
 description: Displays a message to interact with the user
 ---
 
-import AlertDemo from "../../../src/docs/demos/alert-demo"
-import AlertDestructive from "../../../src/docs/demos/alert-destructive"
+import AlertDemo from "../../../src/docs/demos/alert-demo";
+import AlertDestructive from "../../../src/docs/demos/alert-destructive";
 
 <div className="flex items-center ">
-<a className="mr-4 " href="https://www.npmjs.com/package/@uidu/alert-ui" target="_blank">@uidu/alert-ui</a>
-<a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/alert" target="_blank">Source</a>
+  <a
+    className="mr-4 "
+    href="https://www.npmjs.com/package/@uidu/alert-ui"
+    target="_blank"
+  >
+    @uidu/alert-ui
+  </a>
+  <a
+    className="mx-4"
+    href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/alert"
+    target="_blank"
+  >
+    Source
+  </a>
 </div>
 
-## Alert  
+## Alert
 
 <AlertDemo />
 
@@ -28,14 +40,9 @@ import AlertDestructive from "../../../src/docs/demos/alert-destructive"
   ```tsx
     "use client"
 
-import { Terminal } from "lucide-react"
+import { Terminal } from "lucide-react";
 
-
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@uidu/core-ui"
+import { Alert, AlertDescription, AlertTitle } from "@uidu/core-ui";
 
 export default function AlertDemo() {
   return (
@@ -46,16 +53,16 @@ export default function AlertDemo() {
         You can add components to your app using the cli.
       </AlertDescription>
     </Alert>
-  )
+  );
 }
 
-  ```
+````
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
-## Installation 
+## Installation
 
 <Tabs items={["npm", "yarn"]}>
 
@@ -63,15 +70,11 @@ export default function AlertDemo() {
 
 ```bash
 npm install @uidu/alert-ui
-```
+````
 
 </Tab>
 
-<Tab value={"yarn"}>
-```bash
-yarn add @uidu/alert-ui
-```
-</Tab>
+<Tab value={"yarn"}>```bash yarn add @uidu/alert-ui ```</Tab>
 
 </Tabs>
 
@@ -81,13 +84,9 @@ yarn add @uidu/alert-ui
 <Tab value={"generic"}>
 ```tsx
 
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@uidu/core-ui"
+import { Alert, AlertDescription, AlertTitle } from "@uidu/core-ui";
 
-```
+````
 </Tab>
 
 <Tab value={"individual"}>
@@ -99,7 +98,8 @@ import {
   AlertTitle,
 } from "@uidu/alert-ui"
 
-```
+````
+
 </Tab>
 </Tabs>
 
@@ -107,7 +107,7 @@ import {
 
 <Steps>
 
-<Step> 
+<Step>
 ### Destructive
 <Tabs items={["preview", "code"]}>
 
@@ -121,13 +121,9 @@ import {
 ```tsx
 "use client"
 
-import { AlertCircle } from "lucide-react"
+import { AlertCircle } from "lucide-react";
 
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@uidu/core-ui"
+import { Alert, AlertDescription, AlertTitle } from "@uidu/core-ui";
 
 export default function AlertDestructive() {
   return (
@@ -142,13 +138,8 @@ export default function AlertDestructive() {
 }
 ```
 
-
 </Tab>
 
 </Tabs></Step>
 
 </Steps>
-
-
-
-

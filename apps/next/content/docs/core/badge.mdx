@@ -1,18 +1,29 @@
 ---
-title: "Badge" 
+title: "Badge"
 description: A useful way to show small descriptions in your UI
 ---
 
-import BadgeDemo from "../../../src/docs/demos/badge-demo"
-import BadgeDestructive from "../../../src/docs/demos/badge-destructive"
-import BadgeOutline from "../../../src/docs/demos/badge-outline"
-import BadgeSecondary from "../../../src/docs/demos/badge-secondary"
+import BadgeDemo from "../../../src/docs/demos/badge-demo";
+import BadgeDestructive from "../../../src/docs/demos/badge-destructive";
+import BadgeOutline from "../../../src/docs/demos/badge-outline";
+import BadgeSecondary from "../../../src/docs/demos/badge-secondary";
 
 <div className="flex items-center">
-<a className="mr-4 " href="https://www.npmjs.com/package/@uidu/badge-ui" target="_blank">@uidu/badge-ui</a>
-<a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/badge" target="_blank">Source</a>
+  <a
+    className="mr-4 "
+    href="https://www.npmjs.com/package/@uidu/badge-ui"
+    target="_blank"
+  >
+    @uidu/badge-ui
+  </a>
+  <a
+    className="mx-4"
+    href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/badge"
+    target="_blank"
+  >
+    Source
+  </a>
 </div>
-
 
 ## Badge
 
@@ -22,16 +33,16 @@ import BadgeSecondary from "../../../src/docs/demos/badge-secondary"
 
 <Tabs items={["preview", "code"]}>
 
-  <Tab value="preview"> 
+  <Tab value="preview">
       <div className=" h-40 p-4 flex items-center justify-center">
       <BadgeDemo />
       </div>
   </Tab>
   <Tab value="code">
-  ```tsx 
+  ```tsx
   "use client"
 
-import { Badge } from "@uidu/core-ui"
+import { Badge } from "@uidu/core-ui";
 
 export default function BadgeDemo() {
   return <Badge>Badge</Badge>
@@ -41,40 +52,24 @@ export default function BadgeDemo() {
 </Tabs>
 
 ## Installation
+
 <Tabs items={["npm", "yarn"]}>
-  <Tab value="npm">
-   ```bash
-    npm install @uidu/badge-ui
-  ```
-  </Tab>
-  <Tab value ="yarn">
-  ```bash 
-  yarn add @uidu/badge-ui
-  ```
-  </Tab>
+  <Tab value="npm">```bash npm install @uidu/badge-ui ```</Tab>
+  <Tab value="yarn">```bash yarn add @uidu/badge-ui ```</Tab>
 </Tabs>
 
 ## Import
 
 <Tabs items={["generic", "individual"]}>
-  <Tab value="generic">
-  ```tsx 
-  import { Badge } from "@uidu/core-ui"
-  ```
-  </Tab>
-  <Tab value ="individual">
-  ```tsx 
-import { Badge } from "@uidu/badge-ui"
-  ```
-  </Tab>
+  <Tab value="generic">```tsx import {Badge} from "@uidu/core-ui" ```</Tab>
+  <Tab value="individual">```tsx import {Badge} from "@uidu/badge-ui" ```</Tab>
 </Tabs>
-
 
 ## Variants
 
 <Steps>
 
-<Step> 
+<Step>
 ### Destructive
 <Tabs items={["preview", "code"]}>
 
@@ -88,7 +83,7 @@ import { Badge } from "@uidu/badge-ui"
 ```tsx
 "use client"
 
-import { Badge } from "@uidu/core-ui"
+import { Badge } from "@uidu/core-ui";
 
 export default function BadgeDestructive() {
   return <Badge variant="destructive">Destructive</Badge>
@@ -98,7 +93,7 @@ export default function BadgeDestructive() {
 
 </Tabs></Step>
 
-<Step> 
+<Step>
 ### Outline
 <Tabs items={["preview", "code"]}>
 
@@ -112,7 +107,7 @@ export default function BadgeDestructive() {
 ```tsx
 "use client"
 
-import { Badge } from "@uidu/core-ui"
+import { Badge } from "@uidu/core-ui";
 
 export default function BadgeOutline() {
   return <Badge variant="outline">Outline</Badge>
@@ -122,7 +117,7 @@ export default function BadgeOutline() {
 
 </Tabs></Step>
 
-<Step> 
+<Step>
 ### Secondary
 <Tabs items={["preview", "code"]}>
 
@@ -136,7 +131,7 @@ export default function BadgeOutline() {
 ```tsx
 "use client"
 
-import { Badge } from "@uidu/core-ui"
+import { Badge } from "@uidu/core-ui";
 
 export default function BadgeSecondary() {
   return <Badge variant="secondary">Secondary</Badge>

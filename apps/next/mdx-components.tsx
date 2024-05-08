@@ -5,8 +5,10 @@ import type { MDXComponents } from "mdx/types";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    Tabs, Tab,
-    Step, Steps,
+    Tabs,
+    Tab,
+    Step,
+    Steps,
     ...defaultComponents,
     ...components,
   };

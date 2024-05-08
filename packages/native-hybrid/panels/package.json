@@ -15,13 +15,14 @@
   },
   "dependencies": {
     "@tamagui/lucide-icons": "^1.96.0",
-    "@uidu/native": "^0.0.41",
-    "expo-router": "3.4.8",
-    "react": "^18.3.1",
+    "@uidu/native": "workspace:^",
+    "expo-router": "~3.4.10",
+    "react": "^18.2.0",
     "react-native": "^0.74.1"
   },
   "devDependencies": {
-    "@types/react": "^18"
+    "@types/react": "^18.2.55",
+    "react-native-svg": "14.1.0"
   },
   "peerDependencies": {
     "@tamagui/lucide-icons": "*",

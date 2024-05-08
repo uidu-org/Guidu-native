@@ -11,31 +11,31 @@ export default function Page({ params }: { params: { slug?: string[] } }) {
   const Content = page.data.exports.default;
 
   return (
-      <DocsPage
-        toc={page.data.exports.toc}
-        tableOfContent={{
-          footer: (
-            <a
-              // href={`https://github.com/yeecord/website/tree/master/${page.file.path}`}
-              rel="noreferrer noopener"
-              target="_blank"
-              className="inline-flex items-center text-xs text-muted-foreground hover:text-accent-foreground"
-            >
-            - Github - <ExternalLinkIcon className="ml-2 h-3 w-3" />
-            </a>
-          ),
-        }}
-      >
-          <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
-          {page.data.title}
-        </h1>
-        <p className="mb-8 text-lg text-muted-foreground">
-          {page.data.description}
-        </p>
-        <DocsBody>
-          <Content />
-        </DocsBody>
-      </DocsPage>
+    <DocsPage
+      toc={page.data.exports.toc}
+      tableOfContent={{
+        footer: (
+          <a
+            // href={`https://github.com/yeecord/website/tree/master/${page.file.path}`}
+            rel="noreferrer noopener"
+            target="_blank"
+            className="inline-flex items-center text-xs text-muted-foreground hover:text-accent-foreground"
+          >
+            - Github - <ExternalLinkIcon className="w-3 h-3 ml-2" />
+          </a>
+        ),
+      }}
+    >
+      <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
+        {page.data.title}
+      </h1>
+      <p className="mb-8 text-lg text-muted-foreground">
+        {page.data.description}
+      </p>
+      <DocsBody>
+        <Content />
+      </DocsBody>
+    </DocsPage>
   );
 }
 

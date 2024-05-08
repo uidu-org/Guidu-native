@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Button } from "@uidu/core-ui"
+import { Button } from "@uidu/button-ui";
 
 export default function ButtonDemo() {
-  return <Button>Button</Button>
+  return <Button>Button</Button>;
 }

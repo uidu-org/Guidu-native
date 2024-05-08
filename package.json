@@ -4,9 +4,7 @@
   "private": true,
   "workspaces": [
     "./apps/*",
-    "./packages/config",
-    "./packages/native",
-    "./packages/gui-chat",
+    "./packages/native-hybrid/*",
     "./packages/web/components/core/*",
     "./packages/web/components/forms/*",
     "./packages/web/components/media/*",
@@ -73,9 +71,7 @@
   "packageManager": "yarn@4.1.1",
   "preconstruct": {
     "packages": [
-      "./packages/native",
-      "./packages/gui-chat",
-      "./packages/config",
+      "./packages/native-hybrid/*",
       "!./packages/web/storybook",
       "!./packages/web",
       "!./packages/web/components/*/*",

@@ -61,7 +61,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.23.5, @babel/code-frame@npm:^7.24.2, @babel/code-frame@npm:^7.5.5":
+"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.21.4, @babel/code-frame@npm:^7.23.5, @babel/code-frame@npm:^7.24.2, @babel/code-frame@npm:^7.5.5":
   version: 7.24.2
   resolution: "@babel/code-frame@npm:7.24.2"
   dependencies:
@@ -9540,7 +9540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/shorthands@npm:1.95.3, @tamagui/shorthands@npm:^1.89.8":
+"@tamagui/shorthands@npm:1.95.3":
   version: 1.95.3
   resolution: "@tamagui/shorthands@npm:1.95.3"
   checksum: 10/420ae1e978e6114537c284d69b102b75c7268a41e8bd4d68e05602ae2bc814cd18be8166a111d58935c304cddd73512d7d1548ae40a8b1f796bb0c752e2e5227
@@ -9551,13 +9551,6 @@ __metadata:
   version: 1.95.2
   resolution: "@tamagui/shorthands@npm:1.95.2"
   checksum: 10/62b516c9c338ab27a79768e01c098cf858378b7328305a0527a0190db56fa19d94f0b628c88bd3ebab4630f375d1e522abf431f3685402ca6810d3b82d26fe60
-  languageName: node
-  linkType: hard
-
-"@tamagui/simple-hash@npm:1.95.2":
-  version: 1.95.2
-  resolution: "@tamagui/simple-hash@npm:1.95.2"
-  checksum: 10/99e67059317784029d3989a2109b8ee27643014a5f1980bf48ee23bc481452dce73f56d477c453cb29d6b4ed32533d7a127de46f5e1586ce529a366b757f6201
   languageName: node
   linkType: hard
 

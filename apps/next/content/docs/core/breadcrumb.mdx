@@ -3,26 +3,22 @@ title: "Breadcrumb"
 description: a great way to use breadcrumbs!
 ---
 
-import BreadcrumbDemo from "../../../src/docs/demos/breadcrumb-demo"
+import BreadcrumbDemo from "../../../src/docs/demos/breadcrumb-demo";
 
 ## Installation
 
 ## Tabs with preview and code
 
 <Tabs items={["preview", "code"]}>
-
-<Tab value="preview">
-
-<div style={{height : 300, display  :"grid", placeItems : "center"}}>
-<BreadcrumbDemo />
-</div>
-
-</Tab>
+  <Tab value="preview">
+    <div style={{ height: 300, display: "grid", placeItems: "center" }} className="not-prose">
+      <BreadcrumbDemo />
+    </div>
+  </Tab>
 
 <Tab value="code">
-
 ```tsx
-"use client"
+"use client";
 
 import {
   Breadcrumb,
@@ -36,7 +32,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@uidu/core-ui"
+} from "@uidu/core-ui";
 
 export default function BreadcrumbDemo() {
   return (
@@ -69,9 +65,10 @@ export default function BreadcrumbDemo() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }
-``` 
+```
+
 </Tab>
 
 </Tabs>

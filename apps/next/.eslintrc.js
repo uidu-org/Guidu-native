@@ -1,9 +1,10 @@
 module.exports = {
   extends: [
-  "next",
-  "prettier",
-  "plugin:@typescript-eslint/recommended",
-  "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "next",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:mdx/recommended",
   ],
   root: true,
   rules: {
@@ -13,20 +14,20 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_",
-        "caughtErrorsIgnorePattern": "^_"
-      }
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        caughtErrorsIgnorePattern: "^_",
+      },
     ],
     "@typescript-eslint/consistent-type-imports": [
       "error",
-      { "prefer": "type-imports", "fixStyle": "inline-type-imports" }
+      { prefer: "type-imports", fixStyle: "inline-type-imports" },
     ],
-    "@typescript-eslint/no-unsafe-assignment": "off"
+    "@typescript-eslint/no-unsafe-assignment": "off",
   },
-  // parserOptions: {
-  //   parser: '@typescript-eslint/parser',
-  //   project: './tsconfig.json',
-  //   tsconfigRootDir: __dirname,
-  // },
-}
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    project: "./tsconfig.json",
+    tsconfigRootDir: __dirname,
+  },
+};

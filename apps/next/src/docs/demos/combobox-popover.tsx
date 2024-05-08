@@ -1,35 +1,36 @@
-"use client"
+"use client";
+
+import type { LucideIcon } from "lucide-react";
+import {
+  ArrowUpCircle,
+  CheckCircle2,
+  Circle,
+  HelpCircle,
+  XCircle,
+} from "lucide-react";
+
+import * as React from "react";
+
+import { cn } from "@/lib/utils";
 
 import {
-    ArrowUpCircle,
-    CheckCircle2,
-    Circle,
-    HelpCircle,
-    LucideIcon,
-    XCircle,
-} from "lucide-react"
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
-
-import {
-    Button,
-    Command,
-    CommandEmpty,
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList,
-    PopoverRoot as Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@uidu/core-ui"
+  Button,
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  PopoverRoot as Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@uidu/core-ui";
 
 type Status = {
-  value: string
-  label: string
-  icon: LucideIcon
-}
+  value: string;
+  label: string;
+  icon: LucideIcon;
+};
 
 const statuses: Status[] = [
   {
@@ -57,13 +58,13 @@ const statuses: Status[] = [
     label: "Canceled",
     icon: XCircle,
   },
-]
+];
 
 export default function ComboboxPopover() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
-    null
-  )
+    null,
+  );
 
   return (
     <div className="flex items-center space-x-4">
@@ -98,9 +99,9 @@ export default function ComboboxPopover() {
                     onSelect={(value) => {
                       setSelectedStatus(
                         statuses.find((priority) => priority.value === value) ||
-                        null
-                      )
-                      setOpen(false)
+                          null,
+                      );
+                      setOpen(false);
                     }}
                   >
                     <status.icon
@@ -108,7 +109,7 @@ export default function ComboboxPopover() {
                         "mr-2 h-4 w-4",
                         status.value === selectedStatus?.value
                           ? "opacity-100"
-                          : "opacity-40"
+                          : "opacity-40",
                       )}
                     />
                     <span>{status.label}</span>
@@ -120,5 +121,5 @@ export default function ComboboxPopover() {
         </PopoverContent>
       </Popover>
     </div>
-  )
+  );
 }

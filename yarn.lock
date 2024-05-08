@@ -9893,23 +9893,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/shorthands@npm:1.96.0, @tamagui/shorthands@npm:^1.96.0":
-  version: 1.96.0
-  resolution: "@tamagui/shorthands@npm:1.96.0"
-  checksum: 10/8e4cfeed057206af462692fb1d953dd54c280734a3c7124c74c48de57d925d32bc3218ba1ad82c90c6e22db34c9c7b7bbb7c87e930404028ba0352560a9f9d32
+"@tamagui/shorthands@npm:1.95.3, @tamagui/shorthands@npm:^1.89.8":
+  version: 1.95.3
+  resolution: "@tamagui/shorthands@npm:1.95.3"
+  checksum: 10/420ae1e978e6114537c284d69b102b75c7268a41e8bd4d68e05602ae2bc814cd18be8166a111d58935c304cddd73512d7d1548ae40a8b1f796bb0c752e2e5227
   languageName: node
   linkType: hard
 
-"@tamagui/simple-hash@npm:1.96.0":
-  version: 1.96.0
-  resolution: "@tamagui/simple-hash@npm:1.96.0"
-  checksum: 10/c7b75914c6898195531445ce7deacb21066b435ee17c4513d23a4bd22519b45bdbf031112948279267a0a09cbdb270baf1c8b064bccb6b6c4d09e680c1772873
+<<<<<<<<< Temporary merge branch 1
+=========
+"@tamagui/simple-hash@npm:1.95.2":
+  version: 1.95.2
+  resolution: "@tamagui/simple-hash@npm:1.95.2"
+  checksum: 10/99e67059317784029d3989a2109b8ee27643014a5f1980bf48ee23bc481452dce73f56d477c453cb29d6b4ed32533d7a127de46f5e1586ce529a366b757f6201
   languageName: node
   linkType: hard
 
-"@tamagui/slider@npm:1.96.0":
-  version: 1.96.0
-  resolution: "@tamagui/slider@npm:1.96.0"
+>>>>>>>>> Temporary merge branch 2
+"@tamagui/simple-hash@npm:1.95.3":
+  version: 1.95.3
+  resolution: "@tamagui/simple-hash@npm:1.95.3"
+  checksum: 10/ef9951dee3ef0f1729d8c31364d6b326f7263175b6528eabb27b0a865840eb964e619f4cec1446bc494218958232c2072aa10fb384a304c244be729f83dd727e
+  languageName: node
+  linkType: hard
+
+"@tamagui/slider@npm:1.95.3":
+  version: 1.95.3
+  resolution: "@tamagui/slider@npm:1.95.3"
   dependencies:
     "@tamagui/compose-refs": "npm:1.96.0"
     "@tamagui/constants": "npm:1.96.0"

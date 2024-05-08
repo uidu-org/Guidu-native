@@ -7,8 +7,8 @@
     "config": "tailwind.config.js",
     "css": "src/global.css",
     "baseColor": "stone",
-    "cssVariables": false,
-    "prefix": ""
+    "cssVariables": true,
+    "prefix": "shadcn"
   },
   "aliases": {
     "components": "@/components",

@@ -1,47 +1,39 @@
 import { I18nProvider } from "fumadocs-ui/i18n";
 import type { Metadata } from "next";
-import { Noto_Sans_TC } from "next/font/google";
+import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { DocsProvider } from "./docs-provider";
 
-
 import "./global.css";
 
-
-const noto = Noto_Sans_TC({
-  weight: "400",
-  display: "swap",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
     template: "Guidu - %s",
     default: "Guidu website",
-  }
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={noto.className} suppressHydrationWarning>
+    <html lang="en" className={inter.className} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <I18nProvider
           locale="en"
           translations={{
-            en : {
-              name : "English"
+            en: {
+              name: "English",
             },
-            it : {
-              name : "Italian"
-            }
+            it: {
+              name: "Italian",
+            },
           }}
         >
-        
-            <DocsProvider>
-              {children}
-              {/* <Footer categories={footer} /> */}
-            </DocsProvider>
-         
+          <DocsProvider>
+            {children}
+            {/* <Footer categories={footer} /> */}
+          </DocsProvider>
         </I18nProvider>
       </body>
     </html>

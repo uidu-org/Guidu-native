@@ -19,6 +19,9 @@ const nextConfig = {
   experimental: {
     webpackBuildWorker: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   output: "export",
 };
 

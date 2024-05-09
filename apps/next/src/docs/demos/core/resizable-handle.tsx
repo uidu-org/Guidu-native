@@ -17,7 +17,7 @@ export default function ResizableDemo() {
           <span className="font-semibold">One</span>
         </div>
       </ResizablePanel>
-      <ResizableHandle />
+      <ResizableHandle withHandle />
       <ResizablePanel defaultSize={50}>
         <ResizablePanelGroup direction="vertical">
           <ResizablePanel defaultSize={25}>

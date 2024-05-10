@@ -1,6 +1,5 @@
-import BreadcrumbDemo from "@/docs/demos/breadcrumb-demo";
-import ToastDemo from "@/docs/demos/toast-demo";
-import { Badge, Button } from "@uidu/core-ui";
+import BreadcrumbDemo from "@/docs/demos/core/breadcrumb-demo";
+import ToastDemo from "@/docs/demos/core/toast-demo";
 import Link from "next/link";
 
 

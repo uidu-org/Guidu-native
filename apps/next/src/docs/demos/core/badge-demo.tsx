@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Badge } from "@uidu/core-ui"
+import { Badge } from "@uidu/core-ui";
 
 export default function BadgeDemo() {
-  return <Badge>Badge</Badge>
+  return <Badge>Badge</Badge>;
 }

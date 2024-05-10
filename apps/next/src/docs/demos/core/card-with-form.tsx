@@ -1,5 +1,3 @@
-
-
 import {
   Button,
   Card,
@@ -9,14 +7,15 @@ import {
   CardHeader,
   CardTitle,
   Label,
-} from "@uidu/core-ui"
+} from "@uidu/core-ui";
 import {
-  Input, Select,
+  Input,
+  Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@uidu/forms-ui"
+} from "@uidu/forms-ui";
 
 export default function CardWithForm() {
   return (
@@ -27,7 +26,7 @@ export default function CardWithForm() {
       </CardHeader>
       <CardContent>
         <form>
-          <div className="grid w-full items-center gap-4">
+          <div className="grid items-center w-full gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Name</Label>
               <Input id="name" placeholder="Name of your project" />
@@ -54,5 +53,5 @@ export default function CardWithForm() {
         <Button>Deploy</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

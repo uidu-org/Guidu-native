@@ -1,0 +1,71 @@
+---
+title: "Sonner"
+description: a great way to use sonners!
+---
+
+import SonnerDemo from "../../../src/docs/demos/core/sonner-demo";
+
+## Sonner
+
+<SonnerDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <SonnerDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client"
+
+                import { toast } from "sonner"
+
+                import { Button } from "@uidu/core-ui"
+
+                export default function SonnerDemo() {
+                  return (
+                    <Button
+                      variant="outline"
+                      onClick={() =>
+                        toast("Event has been created", {
+                          description: "Sunday, December 03, 2023 at 9:00 AM",
+                          action: {
+                            label: "Undo",
+                            onClick: () => console.log("Undo"),
+                          },
+                        })
+                      }
+                    >
+                      Show Toast
+                    </Button>
+                  )
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install sonner @uidu/button-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add sonner @uidu/button-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+```tsx
+import { toast } from "sonner";
+
+import { Button } from "@uidu/core-ui";
+```

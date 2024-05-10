@@ -1,0 +1,168 @@
+---
+title: "Breadcrumb"
+description: a great way to use breadcrumbs!
+---
+
+import BreadcrumbDemo from "../../../src/docs/demos/core/breadcrumb-demo";
+
+    <div className="flex items-center">
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/breadcrumb-ui" target="_blank">@uidu/breadcrumb-ui</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/breadcrumb" target="_blank">Source</a>
+    </div>
+
+## Breadcrumb
+
+{" "}
+
+<BreadcrumbDemo />
+
+## Usage
+
+  <Tabs items={["preview", "code"]}>
+
+  <Tab value="preview">
+
+{" "}
+
+<div className="flex items-center justify-center py-16">
+  <BreadcrumbDemo />
+</div>
+
+  </Tab>
+
+  <Tab value="code">
+
+```tsx
+"use client";
+
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@uidu/core-ui";
+
+export default function BreadcrumbDemo() {
+  return (
+    <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1">
+              <BreadcrumbEllipsis className="h-4 w-4" />
+              <span className="sr-only">Toggle menu</span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem>Documentation</DropdownMenuItem>
+              <DropdownMenuItem>Themes</DropdownMenuItem>
+              <DropdownMenuItem>GitHub</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/docs/core/accordion">Accordion</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
+  );
+}
+```
+
+  </Tab>
+
+  </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/breadcrumb-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/breadcrumb-ui
+            ```
+        </Tab>
+    </Tabs>
+
+<Tabs items={["preview", "code"]}>
+  <Tab value="preview">
+    <div style={{ height: 300, display: "grid", placeItems: "center" }} className="not-prose">
+      <BreadcrumbDemo />
+    </div>
+  </Tab>
+
+<Tab value="code">
+```tsx
+"use client";
+
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@uidu/core-ui";
+
+export default function BreadcrumbDemo() {
+  return (
+    <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1">
+              <BreadcrumbEllipsis className="h-4 w-4" />
+              <span className="sr-only">Toggle menu</span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem>Documentation</DropdownMenuItem>
+              <DropdownMenuItem>Themes</DropdownMenuItem>
+              <DropdownMenuItem>GitHub</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/docs/core/accordion">Accordion</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
+  );
+}
+```
+
+</Tab>
+
+</Tabs>

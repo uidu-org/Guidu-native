@@ -1,0 +1,76 @@
+---
+title: "Progress"
+description: a great way to use Progress
+---
+
+import ProgressDemo from "../../../src/docs/demos/core/progress-demo.tsx";
+
+    <div className="flex items-center">
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/progress-ui" target="_blank">@uidu/progress-ui</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/progress" target="_blank">Source</a>
+    </div>
+
+## Progress
+
+<ProgressDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <ProgressDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client"
+
+                import * as React from "react"
+
+                import { Progress } from "@uidu/core-ui"
+
+                export default function ProgressDemo() {
+                  const [progress, setProgress] = React.useState(13)
+
+                  React.useEffect(() => {
+                    const timer = setTimeout(() => setProgress(66), 500)
+                    return () => clearTimeout(timer)
+                  }, [])
+
+                  return <Progress value={progress} className="w-[60%]" />
+                }
+
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/progress-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/progress-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { Progress } from "@uidu/core-ui"
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { Progress } from "@uidu/progress-ui"
+            ```
+        </Tab>
+    </Tabs>

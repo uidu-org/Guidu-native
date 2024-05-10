@@ -1,5 +1,5 @@
 {
-  "include": ["types", "packages"],
+  "include": ["types", "packages", "web"],
   "compilerOptions": {
     "incremental": false,
     "target": "es2020",
@@ -32,20 +32,15 @@
     "lib": ["dom", "esnext"],
     "strictNullChecks": true,
     "isolatedModules": true,
-    "noUncheckedIndexedAccess": true,
-    "paths": {
-      "app/*": ["./packages/app/*"]
-      // "@uidu/native/*": ["./packages/ui/*"]
-    }
+    "noUncheckedIndexedAccess": true
   },
   "exclude": [
     "_",
     "**/node_modules",
     "**/dist",
     "**/types",
-    "apps/next/out",
-    "apps/next/.next",
-    "apps/next/.tamagui"
+    "docs/next/out",
+    "docs/next/.next"
   ],
   "typeAcquisition": {
     "enable": true

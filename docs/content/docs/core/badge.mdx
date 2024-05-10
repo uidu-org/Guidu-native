@@ -1,0 +1,144 @@
+---
+title: "Badge"
+description: A useful way to show small descriptions in your UI
+---
+
+import BadgeDemo from "../../../src/docs/demos/core/badge-demo";
+import BadgeDestructive from "../../../src/docs/demos/core/badge-destructive";
+import BadgeOutline from "../../../src/docs/demos/core/badge-outline";
+import BadgeSecondary from "../../../src/docs/demos/core/badge-secondary";
+
+<div className="flex items-center">
+  <a
+    className="mr-4 "
+    href="https://www.npmjs.com/package/@uidu/badge-ui"
+    target="_blank"
+  >
+    @uidu/badge-ui
+  </a>
+  <a
+    className="mx-4"
+    href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/badge"
+    target="_blank"
+  >
+    Source
+  </a>
+</div>
+
+## Badge
+
+<BadgeDemo />
+
+## Usage
+
+<Tabs items={["preview", "code"]}>
+
+  <Tab value="preview">
+      <div className=" h-40 p-4 flex items-center justify-center">
+      <BadgeDemo />
+      </div>
+  </Tab>
+  <Tab value="code">
+  ```tsx
+  "use client"
+
+import { Badge } from "@uidu/core-ui";
+
+export default function BadgeDemo() {
+  return <Badge>Badge</Badge>
+}
+  ```
+  </Tab>
+</Tabs>
+
+## Installation
+
+<Tabs items={["npm", "yarn"]}>
+  <Tab value="npm">```bash npm install @uidu/badge-ui ```</Tab>
+  <Tab value="yarn">```bash yarn add @uidu/badge-ui ```</Tab>
+</Tabs>
+
+## Import
+
+<Tabs items={["generic", "individual"]}>
+  <Tab value="generic">```tsx import {Badge} from "@uidu/core-ui" ```</Tab>
+  <Tab value="individual">```tsx import {Badge} from "@uidu/badge-ui" ```</Tab>
+</Tabs>
+
+## Variants
+
+<Steps>
+
+<Step>
+### Destructive
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-40 p-4 flex items-center justify-center">
+    <BadgeDestructive />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+"use client"
+
+import { Badge } from "@uidu/core-ui";
+
+export default function BadgeDestructive() {
+  return <Badge variant="destructive">Destructive</Badge>
+}
+```
+</Tab>
+
+</Tabs></Step>
+
+<Step>
+### Outline
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-40 p-4 flex items-center justify-center">
+    <BadgeOutline />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+"use client"
+
+import { Badge } from "@uidu/core-ui";
+
+export default function BadgeOutline() {
+  return <Badge variant="outline">Outline</Badge>
+}
+```
+</Tab>
+
+</Tabs></Step>
+
+<Step>
+### Secondary
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-40 p-4 flex items-center justify-center">
+    <BadgeSecondary />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+"use client"
+
+import { Badge } from "@uidu/core-ui";
+
+export default function BadgeSecondary() {
+  return <Badge variant="secondary">Secondary</Badge>
+}
+```
+</Tab>
+
+</Tabs></Step>
+
+</Steps>

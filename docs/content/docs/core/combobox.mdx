@@ -1,0 +1,698 @@
+---
+title: "Combobox"
+description: a great way to use Comboboxes!
+---
+
+import ComboboxDemo from "../../../src/docs/demos/core/combobox-demo";
+import ComboboxPopover from "../../../src/docs/demos/core/combobox-popover.tsx";
+import ComboboxDropdownmenu from "../../../src/docs/demos/core/combobox-dropdown-menu.tsx";
+
+    <div className="flex items-center">
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/command-ui" target="_blank">@uidu/command-ui</a>
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/popover-ui" target="_blank">@uidu/popover-ui</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/command" target="_blank">Source Command</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/popover" target="_blank">Source Popover</a>
+    </div>
+
+## Combobox
+
+<ComboboxDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <ComboboxDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client"
+
+                import { Check, ChevronsUpDown } from "lucide-react"
+                import * as React from "react"
+
+                import { cn } from "@/lib/utils"
+                import {
+                  Button, Command,
+                  CommandEmpty,
+                  CommandGroup,
+                  CommandInput,
+                  CommandItem,
+                  PopoverRoot as Popover,
+                  PopoverContent,
+                  PopoverTrigger,
+                } from "@uidu/core-ui"
+
+                const frameworks = [
+                  {
+                    value: "next.js",
+                    label: "Next.js",
+                  },
+                  {
+                    value: "sveltekit",
+                    label: "SvelteKit",
+                  },
+                  {
+                    value: "nuxt.js",
+                    label: "Nuxt.js",
+                  },
+                  {
+                    value: "remix",
+                    label: "Remix",
+                  },
+                  {
+                    value: "astro",
+                    label: "Astro",
+                  },
+                ]
+
+                export default function ComboboxDemo() {
+                  const [open, setOpen] = React.useState(false)
+                  const [value, setValue] = React.useState("")
+
+                  return (
+                    <Popover open={open} onOpenChange={setOpen}>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          role="combobox"
+                          aria-expanded={open}
+                          className="w-[200px] justify-between"
+                        >
+                          {value
+                            ? frameworks.find((framework) => framework.value === value)?.label
+                            : "Select framework..."}
+                          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-[200px] p-0">
+                        <Command>
+                          <CommandInput placeholder="Search framework..." />
+                          <CommandEmpty>No framework found.</CommandEmpty>
+                          <CommandGroup>
+                            {frameworks.map((framework) => (
+                              <CommandItem
+                                key={framework.value}
+                                value={framework.value}
+                                onSelect={(currentValue) => {
+                                  setValue(currentValue === value ? "" : currentValue)
+                                  setOpen(false)
+                                }}
+                              >
+                                <Check
+                                  className={cn(
+                                    "mr-2 h-4 w-4",
+                                    value === framework.value ? "opacity-100" : "opacity-0"
+                                  )}
+                                />
+                                {framework.label}
+                              </CommandItem>
+                            ))}
+                          </CommandGroup>
+                        </Command>
+                      </PopoverContent>
+                    </Popover>
+                  )
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+    <div className="flex items-center">
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/command-ui" target="_blank">@uidu/command-ui</a>
+        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/popover-ui" target="_blank">@uidu/popover-ui</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/command" target="_blank">Source Command</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/popover" target="_blank">Source Popover</a>
+    </div>
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/command-ui @uidu/popover-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/command-ui @uidu/popover-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+```tsx
+import {
+  Button,
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  PopoverRoot as Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@uidu/core-ui";
+```
+
+## Variants
+
+  <Steps>
+        <Step>
+          ### Popover
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <ComboboxPopover />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+
+                        import {
+                            ArrowUpCircle,
+                            CheckCircle2,
+                            Circle,
+                            HelpCircle,
+                            LucideIcon,
+                            XCircle,
+                        } from "lucide-react"
+                        import * as React from "react"
+
+                        import { cn } from "@/lib/utils"
+
+                        import {
+                            Button,
+                            Command,
+                            CommandEmpty,
+                            CommandGroup,
+                            CommandInput,
+                            CommandItem,
+                            CommandList,
+                            PopoverRoot as Popover,
+                            PopoverContent,
+                            PopoverTrigger,
+                        } from "@uidu/core-ui"
+
+                        type Status = {
+                          value: string
+                          label: string
+                          icon: LucideIcon
+                        }
+
+                        const statuses: Status[] = [
+                          {
+                            value: "backlog",
+                            label: "Backlog",
+                            icon: HelpCircle,
+                          },
+                          {
+                            value: "todo",
+                            label: "Todo",
+                            icon: Circle,
+                          },
+                          {
+                            value: "in progress",
+                            label: "In Progress",
+                            icon: ArrowUpCircle,
+                          },
+                          {
+                            value: "done",
+                            label: "Done",
+                            icon: CheckCircle2,
+                          },
+                          {
+                            value: "canceled",
+                            label: "Canceled",
+                            icon: XCircle,
+                          },
+                        ]
+
+                        export default function ComboboxPopover() {
+                          const [open, setOpen] = React.useState(false)
+                          const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
+                            null
+                          )
+
+                          return (
+                            <div className="flex items-center space-x-4">
+                              <p className="text-sm text-muted-foreground">Status</p>
+                              <Popover open={open} onOpenChange={setOpen}>
+                                <PopoverTrigger asChild>
+                                  <Button
+                                    variant="outline"
+                                    size="sm"
+                                    className="w-[150px] justify-start"
+                                  >
+                                    {selectedStatus ? (
+                                      <>
+                                        <selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
+                                        {selectedStatus.label}
+                                      </>
+                                    ) : (
+                                      <>+ Set status</>
+                                    )}
+                                  </Button>
+                                </PopoverTrigger>
+                                <PopoverContent className="p-0" side="right" align="start">
+                                  <Command>
+                                    <CommandInput placeholder="Change status..." />
+                                    <CommandList>
+                                      <CommandEmpty>No results found.</CommandEmpty>
+                                      <CommandGroup>
+                                        {statuses.map((status) => (
+                                          <CommandItem
+                                            key={status.value}
+                                            value={status.value}
+                                            onSelect={(value) => {
+                                              setSelectedStatus(
+                                                statuses.find((priority) => priority.value === value) ||
+                                                null
+                                              )
+                                              setOpen(false)
+                                            }}
+                                          >
+                                            <status.icon
+                                              className={cn(
+                                                "mr-2 h-4 w-4",
+                                                status.value === selectedStatus?.value
+                                                  ? "opacity-100"
+                                                  : "opacity-40"
+                                              )}
+                                            />
+                                            <span>{status.label}</span>
+                                          </CommandItem>
+                                        ))}
+                                      </CommandGroup>
+                                    </CommandList>
+                                  </Command>
+                                </PopoverContent>
+                              </Popover>
+                            </div>
+                          )
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Dropdown Menu
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <ComboboxDropdownmenu />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+
+                        import { Calendar, MoreHorizontal, Tags, Trash, User } from "lucide-react"
+                        import * as React from "react"
+
+
+                        import {
+                          Button,
+                          Command,
+                          CommandEmpty,
+                          CommandGroup,
+                          CommandInput,
+                          CommandItem,
+                          CommandList,
+                          DropdownMenu,
+                          DropdownMenuContent,
+                          DropdownMenuGroup,
+                          DropdownMenuItem,
+                          DropdownMenuLabel,
+                          DropdownMenuSeparator,
+                          DropdownMenuShortcut,
+                          DropdownMenuSub,
+                          DropdownMenuSubContent,
+                          DropdownMenuSubTrigger,
+                          DropdownMenuTrigger,
+                        } from "@uidu/core-ui"
+
+
+                        const labels = [
+                          "feature",
+                          "bug",
+                          "enhancement",
+                          "documentation",
+                          "design",
+                          "question",
+                          "maintenance",
+                        ]
+
+                        export default function ComboboxDropdownMenu() {
+                          const [label, setLabel] = React.useState("feature")
+                          const [open, setOpen] = React.useState(false)
+
+                          return (
+                            <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
+                              <p className="text-sm font-medium leading-none">
+                                <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
+                                  {label}
+                                </span>
+                                <span className="text-muted-foreground">Create a new project</span>
+                              </p>
+                              <DropdownMenu open={open} onOpenChange={setOpen}>
+                                <DropdownMenuTrigger asChild>
+                                  <Button variant="ghost" size="sm">
+                                    <MoreHorizontal />
+                                  </Button>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent align="end" className="w-[200px]">
+                                  <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                                  <DropdownMenuGroup>
+                                    <DropdownMenuItem>
+                                      <User className="mr-2 h-4 w-4" />
+                                      Assign to...
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                      <Calendar className="mr-2 h-4 w-4" />
+                                      Set due date...
+                                    </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuSub>
+                                      <DropdownMenuSubTrigger>
+                                        <Tags className="mr-2 h-4 w-4" />
+                                        Apply label
+                                      </DropdownMenuSubTrigger>
+                                      <DropdownMenuSubContent className="p-0">
+                                        <Command>
+                                          <CommandInput
+                                            placeholder="Filter label..."
+                                            autoFocus={true}
+                                          />
+                                          <CommandList>
+                                            <CommandEmpty>No label found.</CommandEmpty>
+                                            <CommandGroup>
+                                              {labels.map((label) => (
+                                                <CommandItem
+                                                  key={label}
+                                                  value={label}
+                                                  onSelect={(value) => {
+                                                    setLabel(value)
+                                                    setOpen(false)
+                                                  }}
+                                                >
+                                                  {label}
+                                                </CommandItem>
+                                              ))}
+                                            </CommandGroup>
+                                          </CommandList>
+                                        </Command>
+                                      </DropdownMenuSubContent>
+                                    </DropdownMenuSub>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem className="text-red-600">
+                                      <Trash className="mr-2 h-4 w-4" />
+                                      Delete
+                                      <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
+                                    </DropdownMenuItem>
+                                  </DropdownMenuGroup>
+                                </DropdownMenuContent>
+                              </DropdownMenu>
+                            </div>
+                          )
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Form
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        Component
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+
+                        import { zodResolver } from "@hookform/resolvers/zod"
+                        import { Check, ChevronsUpDown } from "lucide-react"
+                        import { useForm } from "react-hook-form"
+                        import { z } from "zod"
+
+                        import { cn } from "@/lib/utils"
+                        import {
+                            Button, Command,
+                            CommandEmpty,
+                            CommandGroup,
+                            CommandInput,
+                            CommandItem,
+                            Popover,
+                            PopoverContent,
+                            PopoverTrigger,
+                            toast
+                        } from "@uidu/core-ui"
+
+                        import {
+                            UiForm as Form,
+                            FormControl,
+                            FormDescription,
+                            FormField,
+                            FormItem,
+                            FormLabel,
+                            FormMessage,
+                        } from "@uidu/forms-ui"
+
+                        const languages = [
+                          { label: "English", value: "en" },
+                          { label: "French", value: "fr" },
+                          { label: "German", value: "de" },
+                          { label: "Spanish", value: "es" },
+                          { label: "Portuguese", value: "pt" },
+                          { label: "Russian", value: "ru" },
+                          { label: "Japanese", value: "ja" },
+                          { label: "Korean", value: "ko" },
+                          { label: "Chinese", value: "zh" },
+                        ] as const
+
+                        const FormSchema = z.object({
+                          language: z.string({
+                            required_error: "Please select a language.",
+                          }),
+                        })
+
+                        export default function ComboboxForm() {
+                          const form = useForm<z.infer<typeof FormSchema>>({
+                            resolver: zodResolver(FormSchema),
+                          })
+
+                          function onSubmit(data: z.infer<typeof FormSchema>) {
+                            toast({
+                              title: "You submitted the following values:",
+                              description: (
+                                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+                                  <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+                                </pre>
+                              ),
+                            })
+                          }
+
+                          return (
+                            <Form {...form}>
+                              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                                <FormField
+                                  control={form.control}
+                                  name="language"
+                                  render={({ field }) => (
+                                    <FormItem className="flex flex-col">
+                                      <FormLabel>Language</FormLabel>
+                                      <Popover>
+                                        <PopoverTrigger asChild>
+                                          <FormControl>
+                                            <Button
+                                              variant="outline"
+                                              role="combobox"
+                                              className={cn(
+                                                "w-[200px] justify-between",
+                                                !field.value && "text-muted-foreground"
+                                              )}
+                                            >
+                                              {field.value
+                                                ? languages.find(
+                                                  (language) => language.value === field.value
+                                                )?.label
+                                                : "Select language"}
+                                              <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                            </Button>
+                                          </FormControl>
+                                        </PopoverTrigger>
+                                        <PopoverContent className="w-[200px] p-0">
+                                          <Command>
+                                            <CommandInput placeholder="Search language..." />
+                                            <CommandEmpty>No language found.</CommandEmpty>
+                                            <CommandGroup>
+                                              {languages.map((language) => (
+                                                <CommandItem
+                                                  value={language.label}
+                                                  key={language.value}
+                                                  onSelect={() => {
+                                                    form.setValue("language", language.value)
+                                                  }}
+                                                >
+                                                  <Check
+                                                    className={cn(
+                                                      "mr-2 h-4 w-4",
+                                                      language.value === field.value
+                                                        ? "opacity-100"
+                                                        : "opacity-0"
+                                                    )}
+                                                  />
+                                                  {language.label}
+                                                </CommandItem>
+                                              ))}
+                                            </CommandGroup>
+                                          </Command>
+                                        </PopoverContent>
+                                      </Popover>
+                                      <FormDescription>
+                                        This is the language that will be used in the dashboard.
+                                      </FormDescription>
+                                      <FormMessage />
+                                    </FormItem>
+                                  )}
+                                />
+                                <Button type="submit">Submit</Button>
+                              </form>
+                            </Form>
+                          )
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Responsive
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        Component
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+
+                        import { Calendar, MoreHorizontal, Tags, Trash, User } from "lucide-react"
+                        import * as React from "react"
+
+
+                        import {
+                          Button,
+                          Command,
+                          CommandEmpty,
+                          CommandGroup,
+                          CommandInput,
+                          CommandItem,
+                          CommandList,
+                          DropdownMenu,
+                          DropdownMenuContent,
+                          DropdownMenuGroup,
+                          DropdownMenuItem,
+                          DropdownMenuLabel,
+                          DropdownMenuSeparator,
+                          DropdownMenuShortcut,
+                          DropdownMenuSub,
+                          DropdownMenuSubContent,
+                          DropdownMenuSubTrigger,
+                          DropdownMenuTrigger,
+                        } from "@uidu/core-ui"
+
+
+                        const labels = [
+                          "feature",
+                          "bug",
+                          "enhancement",
+                          "documentation",
+                          "design",
+                          "question",
+                          "maintenance",
+                        ]
+
+                        export default function ComboboxDropdownMenu() {
+                          const [label, setLabel] = React.useState("feature")
+                          const [open, setOpen] = React.useState(false)
+
+                          return (
+                            <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
+                              <p className="text-sm font-medium leading-none">
+                                <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
+                                  {label}
+                                </span>
+                                <span className="text-muted-foreground">Create a new project</span>
+                              </p>
+                              <DropdownMenu open={open} onOpenChange={setOpen}>
+                                <DropdownMenuTrigger asChild>
+                                  <Button variant="ghost" size="sm">
+                                    <MoreHorizontal />
+                                  </Button>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent align="end" className="w-[200px]">
+                                  <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                                  <DropdownMenuGroup>
+                                    <DropdownMenuItem>
+                                      <User className="mr-2 h-4 w-4" />
+                                      Assign to...
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                      <Calendar className="mr-2 h-4 w-4" />
+                                      Set due date...
+                                    </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuSub>
+                                      <DropdownMenuSubTrigger>
+                                        <Tags className="mr-2 h-4 w-4" />
+                                        Apply label
+                                      </DropdownMenuSubTrigger>
+                                      <DropdownMenuSubContent className="p-0">
+                                        <Command>
+                                          <CommandInput
+                                            placeholder="Filter label..."
+                                            autoFocus={true}
+                                          />
+                                          <CommandList>
+                                            <CommandEmpty>No label found.</CommandEmpty>
+                                            <CommandGroup>
+                                              {labels.map((label) => (
+                                                <CommandItem
+                                                  key={label}
+                                                  value={label}
+                                                  onSelect={(value) => {
+                                                    setLabel(value)
+                                                    setOpen(false)
+                                                  }}
+                                                >
+                                                  {label}
+                                                </CommandItem>
+                                              ))}
+                                            </CommandGroup>
+                                          </CommandList>
+                                        </Command>
+                                      </DropdownMenuSubContent>
+                                    </DropdownMenuSub>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem className="text-red-600">
+                                      <Trash className="mr-2 h-4 w-4" />
+                                      Delete
+                                      <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
+                                    </DropdownMenuItem>
+                                  </DropdownMenuGroup>
+                                </DropdownMenuContent>
+                              </DropdownMenu>
+                            </div>
+                          )
+                        }
+
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+    </Steps>

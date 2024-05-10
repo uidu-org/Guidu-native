@@ -1,11 +1,11 @@
 {
   "name": "@uidu/badge-ui",
   "version": "0.1.0",
-  "type": "module",
-  "exports": "./src/index.ts",
+  "main": "src/index.ts",
+  "module": "dist/index.mjs",
   "license": "ISC",
   "files": [
-    "src"
+    "dist"
   ],
   "dependencies": {
     "@uidu/lib": "0.0.1",

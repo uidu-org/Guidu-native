@@ -6,14 +6,14 @@ const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "../node_modules/fumadocs-ui/dist/**/*.js",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./content/**/**/*.{js,ts,jsx,tsx,mdx}",
-    "../../node_modules/@uidu/web/dist/**/*.{js,ts,jsx,tsx,mdx}",
-    "../../packages/web/src/**/*.{js,ts,jsx,tsx,mdx}",
-    "../../packages/web/components/core/**/**/*.{js,ts,jsx,tsx,mdx}",
-    "../../packages/web/components/forms/**/**/*.{js,ts,jsx,tsx,mdx}",
-    "../../packages/web/components/media/**/**/*.{js,ts,jsx,tsx,mdx}",
-    "../../node_modules/fumadocs-ui/dist/**/*.js",
+    "../node_modules/@uidu/web/dist/**/*.{js,ts,jsx,tsx,mdx}",
+    "../packages/src/**/*.{js,ts,jsx,tsx,mdx}",
+    "../packages/components/core/**/**/*.{js,ts,jsx,tsx,mdx}",
+    "../packages/components/forms/**/**/*.{js,ts,jsx,tsx,mdx}",
+    "../packages/components/media/**/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     container: {

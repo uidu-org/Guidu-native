@@ -56,6 +56,12 @@ const config: Config = {
         default: {
           DEFAULT: 'var(--default)',
         },
+        danger: {
+          DEFAULT: 'var(--danger)',
+        },
+        default: {
+          DEFAULT: 'var(--default)',
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

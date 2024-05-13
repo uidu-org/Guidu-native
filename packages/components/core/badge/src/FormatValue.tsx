@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 interface Props {
-  children?: number | string;
+  children?: number;
   max?: number;
 }
 

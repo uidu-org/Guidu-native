@@ -9,8 +9,8 @@
   ],
   "dependencies": {
     "@radix-ui/react-radio-group": "^1.1.3",
-    "@uidu/form-ui": "0.1.0",
-    "@uidu/lib": "0.0.1",
+    "@uidu/form-ui": "workspace:^",
+    "@uidu/lib": "workspace:^",
     "react": "^18.2.0",
     "react-hook-form": "^7.49.3"
   },
@@ -22,7 +22,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "npx tsup src --dts",
+    "build": "tsup",
+    "build-dev": "tsup --watch",
     "versionPatchFormsWeb": "yarn version patch",
     "versionMinorFormsWeb": "yarn version minor",
     "versionMajorFormsWeb": "yarn version major",

@@ -9,8 +9,8 @@
   ],
   "dependencies": {
     "@radix-ui/react-alert-dialog": "1.0.5",
-    "@uidu/button-ui": "0.1.0",
-    "@uidu/lib": "0.0.1",
+    "@uidu/button-ui": "workspace:^",
+    "@uidu/lib": "workspace:^",
     "class-variance-authority": "^0.7.0",
     "react": "^18.2.0"
   },

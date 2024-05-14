@@ -1,12 +1,12 @@
 import { defineConfig } from 'tsup';
 
-export default defineConfig({
-  entry: ['src/index.ts'],
-  minify: true,
+export default defineConfig((opts) => ({
+  entry: ['./src/index.ts'],
   format: ['cjs', 'esm'],
+  minify: !opts.watch,
+  clean: !opts.watch,
   dts: true,
   outDir: 'dist',
-  clean: true,
   target: 'es2019',
   banner: { js: '"use client";' },
-});
+}));

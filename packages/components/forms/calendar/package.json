@@ -10,11 +10,11 @@
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.4",
     "@types/react-datepicker": "^4.19.6",
-    "@uidu/button-ui": "0.1.0",
-    "@uidu/field-error-text-ui": "0.1.0",
-    "@uidu/field-helper-text-ui": "0.1.0",
-    "@uidu/input-ui": "0.1.0",
-    "@uidu/lib": "0.0.1",
+    "@uidu/button-ui": "workspace:^",
+    "@uidu/field-error-text-ui": "workspace:^",
+    "@uidu/field-helper-text-ui": "workspace:^",
+    "@uidu/input-ui": "workspace:^",
+    "@uidu/lib": "workspace:^",
     "class-variance-authority": "^0.7.0",
     "react": "^18.2.0",
     "react-datepicker": "^5.0.0",
@@ -29,7 +29,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "npx tsup src --dts",
+    "build": "tsup",
+    "build-dev": "tsup --watch",
     "versionPatchFormsWeb": "yarn version patch",
     "versionMinorFormsWeb": "yarn version minor",
     "versionMajorFormsWeb": "yarn version major",

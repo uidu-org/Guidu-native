@@ -8,8 +8,8 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/dialog-ui": "0.1.0",
-    "@uidu/lib": "0.0.1",
+    "@uidu/dialog-ui": "workspace:^",
+    "@uidu/lib": "workspace:^",
     "cmdk": "^0.2.1",
     "react": "^18.2.0"
   },

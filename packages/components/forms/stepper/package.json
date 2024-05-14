@@ -8,7 +8,7 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/lib": "0.0.1",
+    "@uidu/lib": "workspace:^",
     "class-variance-authority": "^0.7.0",
     "react": "^18.2.0"
   },
@@ -20,7 +20,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "npx tsup src --dts",
+    "build": "tsup",
+    "build-dev": "tsup --watch",
     "versionPatchFormsWeb": "yarn version patch",
     "versionMinorFormsWeb": "yarn version minor",
     "versionMajorFormsWeb": "yarn version major",

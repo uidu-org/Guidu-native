@@ -1,16 +1,15 @@
-"use client"
+"use client";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@uidu/core-ui"
+import { Avatar, AvatarFallback, AvatarImage } from "@uidu/avatar-ui";
 
 export default function AvatarDemo() {
   return (
     <Avatar>
-      <AvatarImage src="https://avatars.githubusercontent.com/u/124514869?v=4" alt="random photo" />
+      <AvatarImage
+        src="https://avatars.githubusercontent.com/u/124514869?v=4"
+        alt="random photo"
+      />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
-  )
+  );
 }

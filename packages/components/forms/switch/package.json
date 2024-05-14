@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "@radix-ui/react-switch": "^1.0.3",
-    "@uidu/lib": "0.0.1",
+    "@uidu/lib": "workspace:^",
     "react": "^18.2.0",
     "react-hook-form": "^7.49.3"
   },
@@ -21,7 +21,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "npx tsup src --dts",
+    "build": "tsup",
+    "build-dev": "tsup --watch",
     "versionPatchFormsWeb": "yarn version patch",
     "versionMinorFormsWeb": "yarn version minor",
     "versionMajorFormsWeb": "yarn version major",

@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "@radix-ui/react-scroll-area": "1.0.5",
-    "@uidu/lib": "0.0.1",
+    "@uidu/lib": "workspace:^",
     "react": "^18.2.0"
   },
   "devDependencies": {

@@ -1,14 +1,19 @@
-import * as React from 'react'
-import { DayPicker } from 'react-day-picker'
+import * as React from 'react';
+import { DayPicker } from 'react-day-picker';
 
-import { buttonVariants } from '@uidu/button-ui'
-import { cn } from '@uidu/lib'
-import ChevronLeft from './icons/Calendar'
-import ChevronRight from './icons/ChevronDown'
+import { buttonVariants } from '@uidu/button-ui';
+import { cn } from '@uidu/lib';
+import ChevronLeft from './icons/Calendar';
+import ChevronRight from './icons/ChevronDown';
 
-type CalendarProps = React.ComponentProps<typeof DayPicker>
+type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
-function Calendar({ className, classNames, showOutsideDays = true, ...props }: CalendarProps) {
+function Calendar({
+  className,
+  classNames,
+  showOutsideDays = true,
+  ...props
+}: CalendarProps) {
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
@@ -27,7 +32,8 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
         nav_button_next: 'absolute right-1',
         table: 'w-full border-collapse space-y-1',
         head_row: 'flex',
-        head_cell: 'text-stone-500 rounded-md w-9 font-normal text-[0.8rem] dark:text-stone-400',
+        head_cell:
+          'text-stone-500 rounded-md w-9 font-normal text-[0.8rem] dark:text-stone-400',
         row: 'flex w-full mt-2',
         cell: 'h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-stone-100/50 [&:has([aria-selected])]:bg-stone-100 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 dark:[&:has([aria-selected].day-outside)]:bg-stone-800/50 dark:[&:has([aria-selected])]:bg-stone-800',
         day: cn(
@@ -37,7 +43,8 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
         day_range_end: 'day-range-end',
         day_selected:
           'bg-stone-900 text-stone-50 hover:bg-stone-900 hover:text-stone-50 focus:bg-stone-900 focus:text-stone-50 dark:bg-stone-50 dark:text-stone-900 dark:hover:bg-stone-50 dark:hover:text-stone-900 dark:focus:bg-stone-50 dark:focus:text-stone-900',
-        day_today: 'bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50',
+        day_today:
+          'bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50',
         day_outside:
           'day-outside text-stone-500 opacity-50 aria-selected:bg-stone-100/50 aria-selected:text-stone-500 aria-selected:opacity-30 dark:text-stone-400 dark:aria-selected:bg-stone-800/50 dark:aria-selected:text-stone-400',
         day_disabled: 'text-stone-500 opacity-50 dark:text-stone-400',
@@ -52,8 +59,8 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
       }}
       {...props}
     />
-  )
+  );
 }
-Calendar.displayName = 'Calendar'
+Calendar.displayName = 'Calendar';
 
-export { Calendar, type CalendarProps }
+export { Calendar, type CalendarProps };

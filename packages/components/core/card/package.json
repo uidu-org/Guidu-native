@@ -8,7 +8,7 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/lib": "0.0.1",
+    "@uidu/lib": "workspace:^",
     "react": "^18.2.0"
   },
   "devDependencies": {

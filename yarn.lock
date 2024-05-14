@@ -1497,7 +1497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.24.1, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.7, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.20.1, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.24.1, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.7, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
   version: 7.24.5
   resolution: "@babel/runtime@npm:7.24.5"
   dependencies:
@@ -1550,6 +1550,241 @@ __metadata:
   version: 1.0.1
   resolution: "@base2/pretty-print-object@npm:1.0.1"
   checksum: 10/c1b78a521ac712baa076589f3bc81318d07c34a5747e9177b6af37043592252587d98f9b7b59ec174968c6bea31a99fe4d7884121173a449b75fe602b7eb2839
+  languageName: node
+  linkType: hard
+
+"@changesets/apply-release-plan@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@changesets/apply-release-plan@npm:7.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.1"
+    "@changesets/config": "npm:^3.0.0"
+    "@changesets/get-version-range-type": "npm:^0.4.0"
+    "@changesets/git": "npm:^3.0.0"
+    "@changesets/types": "npm:^6.0.0"
+    "@manypkg/get-packages": "npm:^1.1.3"
+    detect-indent: "npm:^6.0.0"
+    fs-extra: "npm:^7.0.1"
+    lodash.startcase: "npm:^4.4.0"
+    outdent: "npm:^0.5.0"
+    prettier: "npm:^2.7.1"
+    resolve-from: "npm:^5.0.0"
+    semver: "npm:^7.5.3"
+  checksum: 10/bf02351e8da1d507a3c1aeb28fddc7812ab027d5127c25af5522130fd676bfad219dbee4a8ebbe9eff7c0654c5b2c5e2451c13d4e02ff45d67990f4f0ff87775
+  languageName: node
+  linkType: hard
+
+"@changesets/assemble-release-plan@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@changesets/assemble-release-plan@npm:6.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.1"
+    "@changesets/errors": "npm:^0.2.0"
+    "@changesets/get-dependents-graph": "npm:^2.0.0"
+    "@changesets/types": "npm:^6.0.0"
+    "@manypkg/get-packages": "npm:^1.1.3"
+    semver: "npm:^7.5.3"
+  checksum: 10/ffa8d4877f72209d433987bbc67ac3974c7a06ac700036785e0882bc5bc543b7a52d6643e66c155836dc2e4b08b06fe363d058608a9d57c2c37651d7225222ee
+  languageName: node
+  linkType: hard
+
+"@changesets/changelog-git@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@changesets/changelog-git@npm:0.2.0"
+  dependencies:
+    "@changesets/types": "npm:^6.0.0"
+  checksum: 10/631fcb73cab584fefad30f0e7cc8f7624b36be0f199e526c0d53538da16df2776bef8f8eb6511247b8040d011a2582bdb4840275d3f90a046bacbbd717da6c83
+  languageName: node
+  linkType: hard
+
+"@changesets/cli@npm:^2.27.1":
+  version: 2.27.1
+  resolution: "@changesets/cli@npm:2.27.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.1"
+    "@changesets/apply-release-plan": "npm:^7.0.0"
+    "@changesets/assemble-release-plan": "npm:^6.0.0"
+    "@changesets/changelog-git": "npm:^0.2.0"
+    "@changesets/config": "npm:^3.0.0"
+    "@changesets/errors": "npm:^0.2.0"
+    "@changesets/get-dependents-graph": "npm:^2.0.0"
+    "@changesets/get-release-plan": "npm:^4.0.0"
+    "@changesets/git": "npm:^3.0.0"
+    "@changesets/logger": "npm:^0.1.0"
+    "@changesets/pre": "npm:^2.0.0"
+    "@changesets/read": "npm:^0.6.0"
+    "@changesets/types": "npm:^6.0.0"
+    "@changesets/write": "npm:^0.3.0"
+    "@manypkg/get-packages": "npm:^1.1.3"
+    "@types/semver": "npm:^7.5.0"
+    ansi-colors: "npm:^4.1.3"
+    chalk: "npm:^2.1.0"
+    ci-info: "npm:^3.7.0"
+    enquirer: "npm:^2.3.0"
+    external-editor: "npm:^3.1.0"
+    fs-extra: "npm:^7.0.1"
+    human-id: "npm:^1.0.2"
+    meow: "npm:^6.0.0"
+    outdent: "npm:^0.5.0"
+    p-limit: "npm:^2.2.0"
+    preferred-pm: "npm:^3.0.0"
+    resolve-from: "npm:^5.0.0"
+    semver: "npm:^7.5.3"
+    spawndamnit: "npm:^2.0.0"
+    term-size: "npm:^2.1.0"
+    tty-table: "npm:^4.1.5"
+  bin:
+    changeset: bin.js
+  checksum: 10/b7729fae49af7e707d55751a702095f46e0b1143e28e0ca191651ec1ac61fe54dc2e3c11db8476293e71f538f24cc3eb968b1dbe77ce74d3776a90c3468c1c27
+  languageName: node
+  linkType: hard
+
+"@changesets/config@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@changesets/config@npm:3.0.0"
+  dependencies:
+    "@changesets/errors": "npm:^0.2.0"
+    "@changesets/get-dependents-graph": "npm:^2.0.0"
+    "@changesets/logger": "npm:^0.1.0"
+    "@changesets/types": "npm:^6.0.0"
+    "@manypkg/get-packages": "npm:^1.1.3"
+    fs-extra: "npm:^7.0.1"
+    micromatch: "npm:^4.0.2"
+  checksum: 10/cff983c9af7c8103414a7325d9a196f532f3e7230d65fe9c8261baef9b09eea2f6e205f83530b6c6ece6efcf4adda49f02a491416a934d3bf27563439057b255
+  languageName: node
+  linkType: hard
+
+"@changesets/errors@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@changesets/errors@npm:0.2.0"
+  dependencies:
+    extendable-error: "npm:^0.1.5"
+  checksum: 10/4b79373f92287af4f723e8dbbccaf0299aa8735fc043243d0ad587f04a7614615ea50180be575d4438b9f00aa82d1cf85e902b77a55bdd3e0a8dd97e77b18c60
+  languageName: node
+  linkType: hard
+
+"@changesets/get-dependents-graph@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@changesets/get-dependents-graph@npm:2.0.0"
+  dependencies:
+    "@changesets/types": "npm:^6.0.0"
+    "@manypkg/get-packages": "npm:^1.1.3"
+    chalk: "npm:^2.1.0"
+    fs-extra: "npm:^7.0.1"
+    semver: "npm:^7.5.3"
+  checksum: 10/9b44f2418b5902c9f19bcb70d697c654224fe8f9f8b06ff031a418cd0961e590c1e7a422966fe68d01d4914fd6eea7b1920fc26161ed46ea59a2ef96886e12ca
+  languageName: node
+  linkType: hard
+
+"@changesets/get-release-plan@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@changesets/get-release-plan@npm:4.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.1"
+    "@changesets/assemble-release-plan": "npm:^6.0.0"
+    "@changesets/config": "npm:^3.0.0"
+    "@changesets/pre": "npm:^2.0.0"
+    "@changesets/read": "npm:^0.6.0"
+    "@changesets/types": "npm:^6.0.0"
+    "@manypkg/get-packages": "npm:^1.1.3"
+  checksum: 10/9c893012d7b16e08acf51a76290a38e3bceac6e5421d5482baadf09e04db30c9159738580bd0695d33d51d9a30d4a72bf186f48785ea653f956397457afa44a5
+  languageName: node
+  linkType: hard
+
+"@changesets/get-version-range-type@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@changesets/get-version-range-type@npm:0.4.0"
+  checksum: 10/9868e99b31af652d3fa08fc33d55b9636f2feed1f4efdb318a6dbb4bb061281868de089b93041ce7f2775ab9cf454b92b1199767d0f4f228d8bbc483e61d2fd8
+  languageName: node
+  linkType: hard
+
+"@changesets/git@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@changesets/git@npm:3.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.1"
+    "@changesets/errors": "npm:^0.2.0"
+    "@changesets/types": "npm:^6.0.0"
+    "@manypkg/get-packages": "npm:^1.1.3"
+    is-subdir: "npm:^1.1.1"
+    micromatch: "npm:^4.0.2"
+    spawndamnit: "npm:^2.0.0"
+  checksum: 10/483beda9523d0d353ef51b6557a0a7e18fcb8bbd7b32ded0460c893acd6ffcae7dd680c5162e26892fc08b899ca8040e655c6acc391cff088262d475747d8f76
+  languageName: node
+  linkType: hard
+
+"@changesets/logger@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@changesets/logger@npm:0.1.0"
+  dependencies:
+    chalk: "npm:^2.1.0"
+  checksum: 10/88a54c3a757e3478892a4e455377e7d3f0df88a616476c70e4bce18d01930bb84d4ac5b8f39779f92e8a582a5527435c823b6d8fafdf7d8b124a3f3efec46959
+  languageName: node
+  linkType: hard
+
+"@changesets/parse@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@changesets/parse@npm:0.4.0"
+  dependencies:
+    "@changesets/types": "npm:^6.0.0"
+    js-yaml: "npm:^3.13.1"
+  checksum: 10/0a824582306b198cd775048876e62bd39193b921515608504777407d78f1dcc700ec15e1a6bccd8a3514c5acc6c3fb060238fbfeae94e698aa17dad1121c2d43
+  languageName: node
+  linkType: hard
+
+"@changesets/pre@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@changesets/pre@npm:2.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.1"
+    "@changesets/errors": "npm:^0.2.0"
+    "@changesets/types": "npm:^6.0.0"
+    "@manypkg/get-packages": "npm:^1.1.3"
+    fs-extra: "npm:^7.0.1"
+  checksum: 10/210158d93efbb6592047340132c58beb7133d22d6bd8c668c63dc2764997591718849b77b25083383670887993c33969da0c6ca2d378ac7635db216177de993e
+  languageName: node
+  linkType: hard
+
+"@changesets/read@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@changesets/read@npm:0.6.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.1"
+    "@changesets/git": "npm:^3.0.0"
+    "@changesets/logger": "npm:^0.1.0"
+    "@changesets/parse": "npm:^0.4.0"
+    "@changesets/types": "npm:^6.0.0"
+    chalk: "npm:^2.1.0"
+    fs-extra: "npm:^7.0.1"
+    p-filter: "npm:^2.1.0"
+  checksum: 10/665b52499c1d9e6e837a9fc0b5fc7bade5fd10e4901557d36dfc0fa01f98884f6567acd99e1e44e072febcd7bf8025391b2d5f9f62aceb3d1842ff7ae1416ade
+  languageName: node
+  linkType: hard
+
+"@changesets/types@npm:^4.0.1":
+  version: 4.1.0
+  resolution: "@changesets/types@npm:4.1.0"
+  checksum: 10/4d7c65a447400ac474b2dc2d79bc1a5341c305fbce4a648ef59d9939bc1bbbbd6852684c417a9a4ef0226468b9cb522b9ac2b5393f21fa5f20f1b12bee94eab5
+  languageName: node
+  linkType: hard
+
+"@changesets/types@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@changesets/types@npm:6.0.0"
+  checksum: 10/214c58ff3e3da019c578b94815ec6748729a38b665d950acddf53f3a23073ac7a57dce45812c4bec0cbcd6902c84a482c804457d4c903602005b2399de8a4021
+  languageName: node
+  linkType: hard
+
+"@changesets/write@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@changesets/write@npm:0.3.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.1"
+    "@changesets/types": "npm:^6.0.0"
+    fs-extra: "npm:^7.0.1"
+    human-id: "npm:^1.0.2"
+    prettier: "npm:^2.7.1"
+  checksum: 10/37588eb3ef2af15b3ea09d46864c994780619d20b791ea5b654801a035a3a12540c7f953e6e4f36731678615edc6d1c32f8fe174d599d3e6ce2d68263865788b
   languageName: node
   linkType: hard
 
@@ -2656,6 +2891,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@manypkg/find-root@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@manypkg/find-root@npm:1.1.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.5.5"
+    "@types/node": "npm:^12.7.1"
+    find-up: "npm:^4.1.0"
+    fs-extra: "npm:^8.1.0"
+  checksum: 10/31e7dde82612a0e37ebb07876d76b1bf2aedc5b285b5e50d94cdf63edbf1fa3970349b84a5837a3c687e5b643e9a4f4588ae1f4b4ae9d412516d57bf977a08db
+  languageName: node
+  linkType: hard
+
 "@manypkg/find-root@npm:^2.2.0":
   version: 2.2.1
   resolution: "@manypkg/find-root@npm:2.2.1"
@@ -2664,6 +2911,20 @@ __metadata:
     find-up: "npm:^4.1.0"
     fs-extra: "npm:^8.1.0"
   checksum: 10/7f31120c3ef0711f6e65857ea232fb4f7caf4db388080e738f82d979d7f72572dae60519c8fcd45c431a8e94095b6628257fbf7373b34401359def00687bab13
+  languageName: node
+  linkType: hard
+
+"@manypkg/get-packages@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@manypkg/get-packages@npm:1.1.3"
+  dependencies:
+    "@babel/runtime": "npm:^7.5.5"
+    "@changesets/types": "npm:^4.0.1"
+    "@manypkg/find-root": "npm:^1.1.0"
+    fs-extra: "npm:^8.1.0"
+    globby: "npm:^11.0.0"
+    read-yaml-file: "npm:^1.1.0"
+  checksum: 10/4912e002199ff3974ec48586376a04c5f1815a4faa5f4d36b0698838eec143c9d4e3d42c41e0de009f48a1e2251802ed63c1311ab44de225b50102f85919a248
   languageName: node
   linkType: hard
 
@@ -7096,6 +7357,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^12.7.1":
+  version: 12.20.55
+  resolution: "@types/node@npm:12.20.55"
+  checksum: 10/1f916a06fff02faadb09a16ed6e31820ce170798b202ef0b14fc244bfbd721938c54a3a99836e185e4414ca461fe96c5bb5c67c3d248f153555b7e6347f061dd
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^18.0.0":
   version: 18.19.32
   resolution: "@types/node@npm:18.19.32"
@@ -7494,91 +7762,91 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uidu/accordion-ui@npm:0.1.0, @uidu/accordion-ui@workspace:packages/components/core/accordion":
+"@uidu/accordion-ui@workspace:^, @uidu/accordion-ui@workspace:packages/components/core/accordion":
   version: 0.0.0-use.local
   resolution: "@uidu/accordion-ui@workspace:packages/components/core/accordion"
   dependencies:
     "@radix-ui/react-accordion": "npm:1.1.2"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/alert-ui@npm:0.1.0, @uidu/alert-ui@workspace:packages/components/core/alert":
+"@uidu/alert-ui@workspace:^, @uidu/alert-ui@workspace:packages/components/core/alert":
   version: 0.0.0-use.local
   resolution: "@uidu/alert-ui@workspace:packages/components/core/alert"
   dependencies:
     "@radix-ui/react-alert-dialog": "npm:1.0.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/avatar-ui@npm:0.1.0, @uidu/avatar-ui@workspace:packages/components/core/avatar":
+"@uidu/avatar-ui@workspace:^, @uidu/avatar-ui@workspace:packages/components/core/avatar":
   version: 0.0.0-use.local
   resolution: "@uidu/avatar-ui@workspace:packages/components/core/avatar"
   dependencies:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/badge-ui@npm:0.1.0, @uidu/badge-ui@workspace:^, @uidu/badge-ui@workspace:packages/components/core/badge":
+"@uidu/badge-ui@workspace:^, @uidu/badge-ui@workspace:packages/components/core/badge":
   version: 0.0.0-use.local
   resolution: "@uidu/badge-ui@workspace:packages/components/core/badge"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/breadcrumb-ui@npm:0.1.1, @uidu/breadcrumb-ui@workspace:packages/components/core/breadcrumb":
+"@uidu/breadcrumb-ui@workspace:^, @uidu/breadcrumb-ui@workspace:packages/components/core/breadcrumb":
   version: 0.0.0-use.local
   resolution: "@uidu/breadcrumb-ui@workspace:packages/components/core/breadcrumb"
   dependencies:
     "@radix-ui/react-slot": "npm:^1.0.2"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:*"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/button-ui@npm:0.1.0, @uidu/button-ui@workspace:^, @uidu/button-ui@workspace:packages/components/core/button":
+"@uidu/button-ui@workspace:^, @uidu/button-ui@workspace:packages/components/core/button":
   version: 0.0.0-use.local
   resolution: "@uidu/button-ui@workspace:packages/components/core/button"
   dependencies:
     "@radix-ui/react-slot": "npm:^1.0.2"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/calendar-ui@npm:0.1.0, @uidu/calendar-ui@workspace:packages/components/forms/calendar":
+"@uidu/calendar-ui@workspace:^, @uidu/calendar-ui@workspace:packages/components/forms/calendar":
   version: 0.0.0-use.local
   resolution: "@uidu/calendar-ui@workspace:packages/components/forms/calendar"
   dependencies:
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
     "@types/react-datepicker": "npm:^4.19.6"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/field-error-text-ui": "npm:0.1.0"
-    "@uidu/field-helper-text-ui": "npm:0.1.0"
-    "@uidu/input-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/field-error-text-ui": "workspace:^"
+    "@uidu/field-helper-text-ui": "workspace:^"
+    "@uidu/input-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-datepicker: "npm:^5.0.0"
@@ -7587,45 +7855,45 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/card-ui@npm:0.1.0, @uidu/card-ui@workspace:packages/components/core/card":
+"@uidu/card-ui@workspace:^, @uidu/card-ui@workspace:packages/components/core/card":
   version: 0.0.0-use.local
   resolution: "@uidu/card-ui@workspace:packages/components/core/card"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/carousel-ui@npm:0.1.0, @uidu/carousel-ui@workspace:packages/components/core/carousel":
+"@uidu/carousel-ui@workspace:^, @uidu/carousel-ui@workspace:packages/components/core/carousel":
   version: 0.0.0-use.local
   resolution: "@uidu/carousel-ui@workspace:packages/components/core/carousel"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     embla-carousel-react: "npm:8.0.0-rc22"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/checkbox-ui@npm:0.1.0, @uidu/checkbox-ui@workspace:packages/components/forms/checkbox":
+"@uidu/checkbox-ui@workspace:^, @uidu/checkbox-ui@workspace:packages/components/forms/checkbox":
   version: 0.0.0-use.local
   resolution: "@uidu/checkbox-ui@workspace:packages/components/forms/checkbox"
   dependencies:
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/field-error-text-ui": "npm:0.1.0"
-    "@uidu/field-helper-text-ui": "npm:0.1.0"
-    "@uidu/form-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/field-error-text-ui": "workspace:^"
+    "@uidu/field-helper-text-ui": "workspace:^"
+    "@uidu/form-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/collapsable-ui@npm:0.1.0, @uidu/collapsable-ui@workspace:packages/components/core/collapsable":
+"@uidu/collapsable-ui@workspace:^, @uidu/collapsable-ui@workspace:packages/components/core/collapsable":
   version: 0.0.0-use.local
   resolution: "@uidu/collapsable-ui@workspace:packages/components/core/collapsable"
   dependencies:
@@ -7635,178 +7903,178 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/color-picker-ui@npm:0.1.0, @uidu/color-picker-ui@workspace:packages/components/forms/color-picker":
+"@uidu/color-picker-ui@workspace:^, @uidu/color-picker-ui@workspace:packages/components/forms/color-picker":
   version: 0.0.0-use.local
   resolution: "@uidu/color-picker-ui@workspace:packages/components/forms/color-picker"
   dependencies:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/command-ui@npm:0.1.0, @uidu/command-ui@workspace:packages/components/core/command":
+"@uidu/command-ui@workspace:^, @uidu/command-ui@workspace:packages/components/core/command":
   version: 0.0.0-use.local
   resolution: "@uidu/command-ui@workspace:packages/components/core/command"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/dialog-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/dialog-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     cmdk: "npm:^0.2.1"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/context-menu-ui@npm:0.1.0, @uidu/context-menu-ui@workspace:packages/components/core/context-menu":
+"@uidu/context-menu-ui@workspace:^, @uidu/context-menu-ui@workspace:packages/components/core/context-menu":
   version: 0.0.0-use.local
   resolution: "@uidu/context-menu-ui@workspace:packages/components/core/context-menu"
   dependencies:
     "@radix-ui/react-context-menu": "npm:^2.1.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/core-ui@npm:0.0.9, @uidu/core-ui@workspace:packages/src/core":
+"@uidu/core-ui@workspace:^, @uidu/core-ui@workspace:packages/src/core":
   version: 0.0.0-use.local
   resolution: "@uidu/core-ui@workspace:packages/src/core"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/accordion-ui": "npm:0.1.0"
-    "@uidu/alert-ui": "npm:0.1.0"
-    "@uidu/avatar-ui": "npm:0.1.0"
-    "@uidu/badge-ui": "npm:0.1.0"
-    "@uidu/breadcrumb-ui": "npm:0.1.1"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/card-ui": "npm:0.1.0"
-    "@uidu/carousel-ui": "npm:0.1.0"
-    "@uidu/collapsable-ui": "npm:0.1.0"
-    "@uidu/command-ui": "npm:0.1.0"
-    "@uidu/context-menu-ui": "npm:0.1.0"
-    "@uidu/dialog-ui": "npm:0.1.0"
-    "@uidu/drawer-ui": "npm:0.1.0"
-    "@uidu/dropdown-menu-ui": "npm:0.1.0"
-    "@uidu/image-ui": "npm:0.1.0"
-    "@uidu/label-ui": "npm:0.1.0"
-    "@uidu/media-card-ui": "npm:0.0.2"
-    "@uidu/navigation-menu-ui": "npm:0.1.0"
-    "@uidu/pagination-ui": "npm:0.1.0"
-    "@uidu/popover-ui": "npm:0.1.0"
-    "@uidu/progress-ui": "npm:0.1.0"
-    "@uidu/resizable-ui": "npm:0.1.0"
-    "@uidu/scroll-area-ui": "npm:0.1.0"
-    "@uidu/separator-ui": "npm:0.1.0"
-    "@uidu/sheet-ui": "npm:0.1.0"
-    "@uidu/table-ui": "npm:0.1.0"
-    "@uidu/tabs-ui": "npm:0.1.0"
-    "@uidu/toast-ui": "npm:0.1.0"
-    "@uidu/tooltip-ui": "npm:0.1.0"
+    "@uidu/accordion-ui": "workspace:^"
+    "@uidu/alert-ui": "workspace:^"
+    "@uidu/avatar-ui": "workspace:^"
+    "@uidu/badge-ui": "workspace:^"
+    "@uidu/breadcrumb-ui": "workspace:^"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/card-ui": "workspace:^"
+    "@uidu/carousel-ui": "workspace:^"
+    "@uidu/collapsable-ui": "workspace:^"
+    "@uidu/command-ui": "workspace:^"
+    "@uidu/context-menu-ui": "workspace:^"
+    "@uidu/dialog-ui": "workspace:^"
+    "@uidu/drawer-ui": "workspace:^"
+    "@uidu/dropdown-menu-ui": "workspace:^"
+    "@uidu/image-ui": "workspace:^"
+    "@uidu/label-ui": "workspace:^"
+    "@uidu/media-card-ui": "workspace:^"
+    "@uidu/navigation-menu-ui": "workspace:^"
+    "@uidu/pagination-ui": "workspace:^"
+    "@uidu/popover-ui": "workspace:^"
+    "@uidu/progress-ui": "workspace:^"
+    "@uidu/resizable-ui": "workspace:^"
+    "@uidu/scroll-area-ui": "workspace:^"
+    "@uidu/separator-ui": "workspace:^"
+    "@uidu/sheet-ui": "workspace:^"
+    "@uidu/table-ui": "workspace:^"
+    "@uidu/tabs-ui": "workspace:^"
+    "@uidu/toast-ui": "workspace:^"
+    "@uidu/tooltip-ui": "workspace:^"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/dialog-ui@npm:0.1.0, @uidu/dialog-ui@workspace:packages/components/core/dialog":
+"@uidu/dialog-ui@workspace:^, @uidu/dialog-ui@workspace:packages/components/core/dialog":
   version: 0.0.0-use.local
   resolution: "@uidu/dialog-ui@workspace:packages/components/core/dialog"
   dependencies:
     "@radix-ui/react-dialog": "npm:1.0.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/drawer-ui@npm:0.1.0, @uidu/drawer-ui@workspace:packages/components/core/drawer":
+"@uidu/drawer-ui@workspace:^, @uidu/drawer-ui@workspace:packages/components/core/drawer":
   version: 0.0.0-use.local
   resolution: "@uidu/drawer-ui@workspace:packages/components/core/drawer"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
     vaul: "npm:^0.9.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/dropdown-menu-ui@npm:0.1.0, @uidu/dropdown-menu-ui@workspace:packages/components/core/dropdown-menu":
+"@uidu/dropdown-menu-ui@workspace:^, @uidu/dropdown-menu-ui@workspace:packages/components/core/dropdown-menu":
   version: 0.0.0-use.local
   resolution: "@uidu/dropdown-menu-ui@workspace:packages/components/core/dropdown-menu"
   dependencies:
     "@radix-ui/react-dropdown-menu": "npm:2.0.6"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/field-error-text-ui@npm:0.1.0, @uidu/field-error-text-ui@workspace:packages/components/forms/field-error-text":
+"@uidu/field-error-text-ui@workspace:^, @uidu/field-error-text-ui@workspace:packages/components/forms/field-error-text":
   version: 0.0.0-use.local
   resolution: "@uidu/field-error-text-ui@workspace:packages/components/forms/field-error-text"
   dependencies:
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/field-helper-text-ui@npm:0.1.0, @uidu/field-helper-text-ui@workspace:packages/components/forms/field-helper-text":
+"@uidu/field-helper-text-ui@workspace:^, @uidu/field-helper-text-ui@workspace:packages/components/forms/field-helper-text":
   version: 0.0.0-use.local
   resolution: "@uidu/field-helper-text-ui@workspace:packages/components/forms/field-helper-text"
   dependencies:
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/form-ui@npm:0.1.0, @uidu/form-ui@workspace:packages/components/forms/form":
+"@uidu/form-ui@workspace:^, @uidu/form-ui@workspace:packages/components/forms/form":
   version: 0.0.0-use.local
   resolution: "@uidu/form-ui@workspace:packages/components/forms/form"
   dependencies:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@radix-ui/react-slot": "npm:^1.0.2"
     "@types/react": "npm:^18.2.55"
-    "@uidu/field-error-text-ui": "npm:0.1.0"
-    "@uidu/field-helper-text-ui": "npm:0.1.0"
-    "@uidu/label-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/field-error-text-ui": "workspace:^"
+    "@uidu/field-helper-text-ui": "workspace:^"
+    "@uidu/label-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/forms-ui@npm:0.1.0, @uidu/forms-ui@workspace:packages/src/forms":
+"@uidu/forms-ui@workspace:^, @uidu/forms-ui@workspace:packages/src/forms":
   version: 0.0.0-use.local
   resolution: "@uidu/forms-ui@workspace:packages/src/forms"
   dependencies:
     "@radix-ui/react-accordion": "npm:1.1.2"
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/calendar-ui": "npm:0.1.0"
-    "@uidu/checkbox-ui": "npm:0.1.0"
-    "@uidu/color-picker-ui": "npm:0.1.0"
-    "@uidu/form-ui": "npm:0.1.0"
-    "@uidu/input-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
-    "@uidu/multiselect-ui": "npm:0.1.0"
-    "@uidu/pin-code-ui": "npm:0.1.0"
-    "@uidu/radio-group-ui": "npm:0.1.0"
-    "@uidu/select-ui": "npm:0.1.0"
-    "@uidu/slider-ui": "npm:0.1.0"
-    "@uidu/stepper-ui": "npm:0.1.0"
-    "@uidu/switch-ui": "npm:0.1.0"
-    "@uidu/textarea-ui": "npm:0.1.0"
-    "@uidu/toggle-ui": "npm:0.1.0"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/calendar-ui": "workspace:^"
+    "@uidu/checkbox-ui": "workspace:^"
+    "@uidu/color-picker-ui": "workspace:^"
+    "@uidu/form-ui": "workspace:^"
+    "@uidu/input-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
+    "@uidu/multiselect-ui": "workspace:^"
+    "@uidu/pin-code-ui": "workspace:^"
+    "@uidu/radio-group-ui": "workspace:^"
+    "@uidu/select-ui": "workspace:^"
+    "@uidu/slider-ui": "workspace:^"
+    "@uidu/stepper-ui": "workspace:^"
+    "@uidu/switch-ui": "workspace:^"
+    "@uidu/textarea-ui": "workspace:^"
+    "@uidu/toggle-ui": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
@@ -7840,8 +8108,9 @@ __metadata:
     "@typescript-eslint/parser": "npm:^7.6.0"
     "@uidu/badge-ui": "workspace:^"
     "@uidu/button-ui": "workspace:^"
-    "@uidu/core-ui": "npm:0.0.9"
-    "@uidu/forms-ui": "npm:0.1.0"
+    "@uidu/core-ui": "workspace:^"
+    "@uidu/forms-ui": "workspace:^"
+    "@uidu/switch-ui": "workspace:^"
     autoprefixer: "npm:^10.4.17"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"
@@ -7889,7 +8158,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/image-ui@npm:0.1.0, @uidu/image-ui@workspace:packages/components/core/image":
+"@uidu/image-ui@workspace:^, @uidu/image-ui@workspace:packages/components/core/image":
   version: 0.0.0-use.local
   resolution: "@uidu/image-ui@workspace:packages/components/core/image"
   dependencies:
@@ -7898,35 +8167,35 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/input-ui@npm:0.1.0, @uidu/input-ui@workspace:packages/components/forms/input":
+"@uidu/input-ui@workspace:^, @uidu/input-ui@workspace:packages/components/forms/input":
   version: 0.0.0-use.local
   resolution: "@uidu/input-ui@workspace:packages/components/forms/input"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/field-error-text-ui": "npm:0.1.0"
-    "@uidu/field-helper-text-ui": "npm:0.1.0"
-    "@uidu/form-ui": "npm:0.1.0"
-    "@uidu/label-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/field-error-text-ui": "workspace:^"
+    "@uidu/field-helper-text-ui": "workspace:^"
+    "@uidu/form-ui": "workspace:^"
+    "@uidu/label-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/label-ui@npm:0.1.0, @uidu/label-ui@workspace:packages/components/core/label":
+"@uidu/label-ui@workspace:^, @uidu/label-ui@workspace:packages/components/core/label":
   version: 0.0.0-use.local
   resolution: "@uidu/label-ui@workspace:packages/components/core/label"
   dependencies:
     "@radix-ui/react-label": "npm:^2.0.2"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/lib@npm:0.0.1, @uidu/lib@workspace:packages/lib":
+"@uidu/lib@workspace:*, @uidu/lib@workspace:^, @uidu/lib@workspace:packages/lib":
   version: 0.0.0-use.local
   resolution: "@uidu/lib@workspace:packages/lib"
   dependencies:
@@ -7939,15 +8208,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/media-card-ui@npm:0.0.2, @uidu/media-card-ui@workspace:packages/components/media/media-card":
+"@uidu/media-card-ui@workspace:^, @uidu/media-card-ui@workspace:packages/components/media/media-card":
   version: 0.0.0-use.local
   resolution: "@uidu/media-card-ui@workspace:packages/components/media/media-card"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/card-ui": "npm:0.1.0"
-    "@uidu/carousel-ui": "npm:0.1.0"
-    "@uidu/dialog-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/card-ui": "workspace:^"
+    "@uidu/carousel-ui": "workspace:^"
+    "@uidu/dialog-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
@@ -7958,21 +8227,21 @@ __metadata:
   dependencies:
     "@radix-ui/react-menubar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/multiselect-ui@npm:0.1.0, @uidu/multiselect-ui@workspace:packages/components/forms/multiselect":
+"@uidu/multiselect-ui@workspace:^, @uidu/multiselect-ui@workspace:packages/components/forms/multiselect":
   version: 0.0.0-use.local
   resolution: "@uidu/multiselect-ui@workspace:packages/components/forms/multiselect"
   dependencies:
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@radix-ui/react-select": "npm:^2.0.0"
     "@types/react": "npm:^18.2.55"
-    "@uidu/field-error-text-ui": "npm:0.1.0"
-    "@uidu/field-helper-text-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/field-error-text-ui": "workspace:^"
+    "@uidu/field-helper-text-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
@@ -7980,134 +8249,134 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/navigation-menu-ui@npm:0.1.0, @uidu/navigation-menu-ui@workspace:packages/components/core/navigation-menu":
+"@uidu/navigation-menu-ui@workspace:^, @uidu/navigation-menu-ui@workspace:packages/components/core/navigation-menu":
   version: 0.0.0-use.local
   resolution: "@uidu/navigation-menu-ui@workspace:packages/components/core/navigation-menu"
   dependencies:
     "@radix-ui/react-navigation-menu": "npm:^1.1.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/pagination-ui@npm:0.1.0, @uidu/pagination-ui@workspace:packages/components/core/pagination":
+"@uidu/pagination-ui@workspace:^, @uidu/pagination-ui@workspace:packages/components/core/pagination":
   version: 0.0.0-use.local
   resolution: "@uidu/pagination-ui@workspace:packages/components/core/pagination"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/pin-code-ui@npm:0.1.0, @uidu/pin-code-ui@workspace:packages/components/forms/pin-code":
+"@uidu/pin-code-ui@workspace:^, @uidu/pin-code-ui@workspace:packages/components/forms/pin-code":
   version: 0.0.0-use.local
   resolution: "@uidu/pin-code-ui@workspace:packages/components/forms/pin-code"
   dependencies:
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/field-error-text-ui": "npm:0.1.0"
-    "@uidu/field-helper-text-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/field-error-text-ui": "workspace:^"
+    "@uidu/field-helper-text-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/popover-ui@npm:0.1.0, @uidu/popover-ui@workspace:packages/components/core/popover":
+"@uidu/popover-ui@workspace:^, @uidu/popover-ui@workspace:packages/components/core/popover":
   version: 0.0.0-use.local
   resolution: "@uidu/popover-ui@workspace:packages/components/core/popover"
   dependencies:
     "@radix-ui/react-popover": "npm:^1.0.7"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/progress-ui@npm:0.1.0, @uidu/progress-ui@workspace:packages/components/core/progress":
+"@uidu/progress-ui@workspace:^, @uidu/progress-ui@workspace:packages/components/core/progress":
   version: 0.0.0-use.local
   resolution: "@uidu/progress-ui@workspace:packages/components/core/progress"
   dependencies:
     "@radix-ui/react-progress": "npm:1.0.3"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/radio-group-ui@npm:0.1.0, @uidu/radio-group-ui@workspace:packages/components/forms/radio-group":
+"@uidu/radio-group-ui@workspace:^, @uidu/radio-group-ui@workspace:packages/components/forms/radio-group":
   version: 0.0.0-use.local
   resolution: "@uidu/radio-group-ui@workspace:packages/components/forms/radio-group"
   dependencies:
     "@radix-ui/react-radio-group": "npm:^1.1.3"
     "@types/react": "npm:^18.2.55"
-    "@uidu/form-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/form-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/resizable-ui@npm:0.1.0, @uidu/resizable-ui@workspace:packages/components/core/resizable":
+"@uidu/resizable-ui@workspace:^, @uidu/resizable-ui@workspace:packages/components/core/resizable":
   version: 0.0.0-use.local
   resolution: "@uidu/resizable-ui@workspace:packages/components/core/resizable"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
     react-resizable-panels: "npm:^2.0.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/scroll-area-ui@npm:0.1.0, @uidu/scroll-area-ui@workspace:packages/components/core/scroll-area":
+"@uidu/scroll-area-ui@workspace:^, @uidu/scroll-area-ui@workspace:packages/components/core/scroll-area":
   version: 0.0.0-use.local
   resolution: "@uidu/scroll-area-ui@workspace:packages/components/core/scroll-area"
   dependencies:
     "@radix-ui/react-scroll-area": "npm:1.0.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/select-ui@npm:0.1.0, @uidu/select-ui@workspace:packages/components/forms/select":
+"@uidu/select-ui@workspace:^, @uidu/select-ui@workspace:packages/components/forms/select":
   version: 0.0.0-use.local
   resolution: "@uidu/select-ui@workspace:packages/components/forms/select"
   dependencies:
     "@radix-ui/react-select": "npm:^2.0.0"
     "@types/react": "npm:^18.2.55"
-    "@uidu/form-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/form-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/separator-ui@npm:0.1.0, @uidu/separator-ui@workspace:packages/components/core/separator":
+"@uidu/separator-ui@workspace:^, @uidu/separator-ui@workspace:packages/components/core/separator":
   version: 0.0.0-use.local
   resolution: "@uidu/separator-ui@workspace:packages/components/core/separator"
   dependencies:
     "@radix-ui/react-separator": "npm:1.0.3"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/sheet-ui@npm:0.1.0, @uidu/sheet-ui@workspace:packages/components/core/sheet":
+"@uidu/sheet-ui@workspace:^, @uidu/sheet-ui@workspace:packages/components/core/sheet":
   version: 0.0.0-use.local
   resolution: "@uidu/sheet-ui@workspace:packages/components/core/sheet"
   dependencies:
     "@radix-ui/react-dialog": "npm:1.0.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
@@ -8118,29 +8387,29 @@ __metadata:
   resolution: "@uidu/skeleton-ui@workspace:packages/components/core/skeleton"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/slider-ui@npm:0.1.0, @uidu/slider-ui@workspace:packages/components/forms/slider":
+"@uidu/slider-ui@workspace:^, @uidu/slider-ui@workspace:packages/components/forms/slider":
   version: 0.0.0-use.local
   resolution: "@uidu/slider-ui@workspace:packages/components/forms/slider"
   dependencies:
     "@radix-ui/react-slider": "npm:^1.1.2"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/stepper-ui@npm:0.1.0, @uidu/stepper-ui@workspace:packages/components/forms/stepper":
+"@uidu/stepper-ui@workspace:^, @uidu/stepper-ui@workspace:packages/components/forms/stepper":
   version: 0.0.0-use.local
   resolution: "@uidu/stepper-ui@workspace:packages/components/forms/stepper"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
@@ -8168,47 +8437,47 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/switch-ui@npm:0.1.0, @uidu/switch-ui@workspace:packages/components/forms/switch":
+"@uidu/switch-ui@workspace:^, @uidu/switch-ui@workspace:packages/components/forms/switch":
   version: 0.0.0-use.local
   resolution: "@uidu/switch-ui@workspace:packages/components/forms/switch"
   dependencies:
     "@radix-ui/react-switch": "npm:^1.0.3"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
   languageName: unknown
   linkType: soft
 
-"@uidu/table-ui@npm:0.1.0, @uidu/table-ui@workspace:packages/components/core/table":
+"@uidu/table-ui@workspace:^, @uidu/table-ui@workspace:packages/components/core/table":
   version: 0.0.0-use.local
   resolution: "@uidu/table-ui@workspace:packages/components/core/table"
   dependencies:
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/tabs-ui@npm:0.1.0, @uidu/tabs-ui@workspace:packages/components/core/tabs":
+"@uidu/tabs-ui@workspace:^, @uidu/tabs-ui@workspace:packages/components/core/tabs":
   version: 0.0.0-use.local
   resolution: "@uidu/tabs-ui@workspace:packages/components/core/tabs"
   dependencies:
     "@radix-ui/react-tabs": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/textarea-ui@npm:0.1.0, @uidu/textarea-ui@workspace:packages/components/forms/textarea":
+"@uidu/textarea-ui@workspace:^, @uidu/textarea-ui@workspace:packages/components/forms/textarea":
   version: 0.0.0-use.local
   resolution: "@uidu/textarea-ui@workspace:packages/components/forms/textarea"
   dependencies:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
@@ -8221,46 +8490,47 @@ __metadata:
   dependencies:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/toast-ui@npm:0.1.0, @uidu/toast-ui@workspace:packages/components/core/toast":
+"@uidu/toast-ui@workspace:^, @uidu/toast-ui@workspace:packages/components/core/toast":
   version: 0.0.0-use.local
   resolution: "@uidu/toast-ui@workspace:packages/components/core/toast"
   dependencies:
     "@radix-ui/react-toast": "npm:1.1.5"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 
-"@uidu/toggle-ui@npm:0.1.0, @uidu/toggle-ui@workspace:packages/components/forms/toggle":
+"@uidu/toggle-ui@workspace:^, @uidu/toggle-ui@workspace:packages/components/forms/toggle":
   version: 0.0.0-use.local
   resolution: "@uidu/toggle-ui@workspace:packages/components/forms/toggle"
   dependencies:
     "@radix-ui/react-toggle": "npm:^1.0.3"
     "@radix-ui/react-toggle-group": "npm:^1.0.4"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-hook-form: "npm:^7.49.3"
+    tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
 
-"@uidu/tooltip-ui@npm:0.1.0, @uidu/tooltip-ui@workspace:packages/components/core/tooltip":
+"@uidu/tooltip-ui@workspace:^, @uidu/tooltip-ui@workspace:packages/components/core/tooltip":
   version: 0.0.0-use.local
   resolution: "@uidu/tooltip-ui@workspace:packages/components/core/tooltip"
   dependencies:
     "@radix-ui/react-tooltip": "npm:^1.0.7"
     "@types/react": "npm:^18.2.55"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/lib": "npm:0.0.1"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/lib": "workspace:^"
     react: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
@@ -8281,8 +8551,6 @@ __metadata:
     "@radix-ui/react-select": "npm:^2.0.0"
     "@radix-ui/react-slot": "npm:^1.0.2"
     "@radix-ui/react-tabs": "npm:^1.0.4"
-    "@uidu/button-ui": "npm:0.1.0"
-    "@uidu/popover-ui": "npm:0.1.0"
     clsx: "npm:^2.1.0"
     cmdk: "npm:^0.2.1"
     date-fns: "npm:^3.4.0"
@@ -8547,7 +8815,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-colors@npm:^4.1.1":
+"ansi-colors@npm:^4.1.1, ansi-colors@npm:^4.1.3":
   version: 4.1.3
   resolution: "ansi-colors@npm:4.1.3"
   checksum: 10/43d6e2fc7b1c6e4dc373de708ee76311ec2e0433e7e8bd3194e7ff123ea6a747428fc61afdcf5969da5be3a5f0fd054602bec56fc0ebe249ce2fcde6e649e3c2
@@ -8747,7 +9015,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array.prototype.flat@npm:^1.3.1, array.prototype.flat@npm:^1.3.2":
+"array.prototype.flat@npm:^1.2.3, array.prototype.flat@npm:^1.3.1, array.prototype.flat@npm:^1.3.2":
   version: 1.3.2
   resolution: "array.prototype.flat@npm:1.3.2"
   dependencies:
@@ -9019,6 +9287,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"better-path-resolve@npm:1.0.0":
+  version: 1.0.0
+  resolution: "better-path-resolve@npm:1.0.0"
+  dependencies:
+    is-windows: "npm:^1.0.0"
+  checksum: 10/5392dbe04e7fe68b944eb37961d9dfa147aaac3ee9ee3f6e13d42e2c9fbe949e68d16e896c14ee9016fa5f8e6e53ec7fd8b5f01b50a32067a7d94ac9cfb9a050
+  languageName: node
+  linkType: hard
+
 "big-integer@npm:^1.6.44":
   version: 1.6.52
   resolution: "big-integer@npm:1.6.52"
@@ -9098,6 +9375,15 @@ __metadata:
   dependencies:
     fill-range: "npm:^7.0.1"
   checksum: 10/966b1fb48d193b9d155f810e5efd1790962f2c4e0829f8440b8ad236ba009222c501f70185ef732fef17a4c490bb33a03b90dab0631feafbdf447da91e8165b1
+  languageName: node
+  linkType: hard
+
+"breakword@npm:^1.0.5":
+  version: 1.0.6
+  resolution: "breakword@npm:1.0.6"
+  dependencies:
+    wcwidth: "npm:^1.0.1"
+  checksum: 10/e8a3f308c0214986e1b768ca4460a798ffe4bbe08c375576de526431a01a9738318710cc05e309486ac5809d77d9f33d957f80939a890e07be5e89baad9816f8
   languageName: node
   linkType: hard
 
@@ -9329,7 +9615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^2.4.2":
+"chalk@npm:^2.1.0, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -9416,6 +9702,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chardet@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "chardet@npm:0.7.0"
+  checksum: 10/b0ec668fba5eeec575ed2559a0917ba41a6481f49063c8445400e476754e0957ee09e44dc032310f526182b8f1bf25e9d4ed371f74050af7be1383e06bc44952
+  languageName: node
+  linkType: hard
+
 "check-dependency-version-consistency@npm:^4.1.0":
   version: 4.1.0
   resolution: "check-dependency-version-consistency@npm:4.1.0"
@@ -9477,7 +9770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^3.8.0":
+"ci-info@npm:^3.7.0, ci-info@npm:^3.8.0":
   version: 3.9.0
   resolution: "ci-info@npm:3.9.0"
   checksum: 10/75bc67902b4d1c7b435497adeb91598f6d52a3389398e44294f6601b20cfef32cf2176f7be0eb961d9e085bb333a8a5cae121cb22f81cf238ae7f58eb80e9397
@@ -9567,6 +9860,17 @@ __metadata:
   peerDependencies:
     typanion: "*"
   checksum: 10/fdc4d066e6b4683a5264d22851039d41ffcd159eed6888e5aea9744a637effd7a19601fe630c1ab849f22e35620850c5681fe48f12e43c58db1f7ca93ef7bb72
+  languageName: node
+  linkType: hard
+
+"cliui@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "cliui@npm:6.0.0"
+  dependencies:
+    string-width: "npm:^4.2.0"
+    strip-ansi: "npm:^6.0.0"
+    wrap-ansi: "npm:^6.2.0"
+  checksum: 10/44afbcc29df0899e87595590792a871cd8c4bc7d6ce92832d9ae268d141a77022adafca1aeaeccff618b62a613b8354e57fe22a275c199ec04baf00d381ef6ab
   languageName: node
   linkType: hard
 
@@ -9980,6 +10284,39 @@ __metadata:
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10/f593cce41ff5ade23f44e77521e3a1bcc2c64107041e1bf6c3c32adc5187d0d60983292fda326154d20b01079e24931aa5b08e4467cc488b60bb1e7f6d478ade
+  languageName: node
+  linkType: hard
+
+"csv-generate@npm:^3.4.3":
+  version: 3.4.3
+  resolution: "csv-generate@npm:3.4.3"
+  checksum: 10/93f18eb1897a886ca5e45d22e82b6c026ac3e9dc3f04918e797d14b1f8e22234a14c018bbbf55a3cc2cfe4284bfa6b8a45097f902451af738911f0e2b0c6d0ed
+  languageName: node
+  linkType: hard
+
+"csv-parse@npm:^4.16.3":
+  version: 4.16.3
+  resolution: "csv-parse@npm:4.16.3"
+  checksum: 10/b873dd2d312ac0329200f13788176bae3073862241483b0339a4777c9eddcebd9f2f48f13d02dc0baf4bc02e957f886ea03a9cb22160d70836b0017432f8fa41
+  languageName: node
+  linkType: hard
+
+"csv-stringify@npm:^5.6.5":
+  version: 5.6.5
+  resolution: "csv-stringify@npm:5.6.5"
+  checksum: 10/efed94869b8426e6a983f2237bd74eff15953e2e27affee9c1324f66a67dabe948573c4c21a8661a79aa20b58efbcafcf11c34e80bdd532a43f35e9cde5985b9
+  languageName: node
+  linkType: hard
+
+"csv@npm:^5.5.3":
+  version: 5.5.3
+  resolution: "csv@npm:5.5.3"
+  dependencies:
+    csv-generate: "npm:^3.4.3"
+    csv-parse: "npm:^4.16.3"
+    csv-stringify: "npm:^5.6.5"
+    stream-transform: "npm:^2.1.3"
+  checksum: 10/3928e1d88b98f0c3aa26e078cfca36086e0953afa5e83f45fa769b0f6fb4f79e82b4dfd400e8c61637edf144b2650f6ba8c585ec1aad11a6cda84aa04da5bc38
   languageName: node
   linkType: hard
 
@@ -10667,7 +11004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enquirer@npm:^2.3.6":
+"enquirer@npm:^2.3.0, enquirer@npm:^2.3.6":
   version: 2.4.1
   resolution: "enquirer@npm:2.4.1"
   dependencies:
@@ -11934,6 +12271,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"extendable-error@npm:^0.1.5":
+  version: 0.1.7
+  resolution: "extendable-error@npm:0.1.7"
+  checksum: 10/80478be7429a1675d2085f701239796bab3230ed6f2fb1b138fbabec24bea6516b7c5ceb6e9c209efcc9c089948d93715703845653535f8e8a49655066a9255e
+  languageName: node
+  linkType: hard
+
+"external-editor@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "external-editor@npm:3.1.0"
+  dependencies:
+    chardet: "npm:^0.7.0"
+    iconv-lite: "npm:^0.4.24"
+    tmp: "npm:^0.0.33"
+  checksum: 10/776dff1d64a1d28f77ff93e9e75421a81c062983fd1544279d0a32f563c0b18c52abbb211f31262e2827e48edef5c9dc8f960d06dd2d42d1654443b88568056b
+  languageName: node
+  linkType: hard
+
 "fast-deep-equal@npm:^2.0.1":
   version: 2.0.1
   resolution: "fast-deep-equal@npm:2.0.1"
@@ -12155,6 +12510,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"find-yarn-workspace-root2@npm:1.2.16":
+  version: 1.2.16
+  resolution: "find-yarn-workspace-root2@npm:1.2.16"
+  dependencies:
+    micromatch: "npm:^4.0.2"
+    pkg-dir: "npm:^4.2.0"
+  checksum: 10/398aa473ac245d9c9e9af5a75806b5a6828bd9a759f138faf4666f00c5fcb78af679d43f5cfbe73fe667cf6ec3ef6c9e157b09400181e5b9edc3adc47080e9bb
+  languageName: node
+  linkType: hard
+
 "flat-cache@npm:^3.0.4":
   version: 3.2.0
   resolution: "flat-cache@npm:3.2.0"
@@ -12307,6 +12672,17 @@ __metadata:
     jsonfile: "npm:^6.0.1"
     universalify: "npm:^2.0.0"
   checksum: 10/0579bf6726a4cd054d4aa308f10b483f52478bb16284f32cf60b4ce0542063d551fca1a08a2af365e35db21a3fa5a06cf2a6ed614004b4368982bc754cb816b3
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "fs-extra@npm:7.0.1"
+  dependencies:
+    graceful-fs: "npm:^4.1.2"
+    jsonfile: "npm:^4.0.0"
+    universalify: "npm:^0.1.0"
+  checksum: 10/3fc6e56ba2f07c00d452163f27f21a7076b72ef7da8a50fef004336d59ef4c34deda11d10ecd73fd8fbcf20e4f575f52857293090b3c9f8741d4e0598be30fea
   languageName: node
   linkType: hard
 
@@ -12518,7 +12894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-caller-file@npm:^2.0.5":
+"get-caller-file@npm:^2.0.1, get-caller-file@npm:^2.0.5":
   version: 2.0.5
   resolution: "get-caller-file@npm:2.0.5"
   checksum: 10/b9769a836d2a98c3ee734a88ba712e62703f1df31b94b784762c433c27a386dd6029ff55c2a920c392e33657d80191edbf18c61487e198844844516f843496b9
@@ -12809,6 +13185,13 @@ __metadata:
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10/bf152d0ed1dc159239db1ba1f74fdbc40cb02f626770dcd5815c427ce0688c2635a06ed69af364396da4636d0408fcf7d4afdf7881724c3307e46aff30ca49e2
+  languageName: node
+  linkType: hard
+
+"grapheme-splitter@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "grapheme-splitter@npm:1.0.4"
+  checksum: 10/fdb2f51fd430ce881e18e44c4934ad30e59736e46213f7ad35ea5970a9ebdf7d0fe56150d15cc98230d55d2fd48c73dc6781494c38d8cf2405718366c36adb88
   languageName: node
   linkType: hard
 
@@ -13273,6 +13656,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"human-id@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "human-id@npm:1.0.2"
+  checksum: 10/16b116ef68c3fc3f65c90b32a338abd0f9ee656a6257baa92c4d7e1154c66469bb6bd4ee840018c35e972aa817f5ae3f0cbabffb78f2ac90aaf02d88a299a371
+  languageName: node
+  linkType: hard
+
 "human-signals@npm:^2.1.0":
   version: 2.1.0
   resolution: "human-signals@npm:2.1.0"
@@ -13294,7 +13684,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.4.24":
+"iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.24":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
   dependencies:
@@ -13977,6 +14367,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-subdir@npm:^1.1.1":
+  version: 1.2.0
+  resolution: "is-subdir@npm:1.2.0"
+  dependencies:
+    better-path-resolve: "npm:1.0.0"
+  checksum: 10/31029a383972bff4cc4f1bd1463fd04dde017e0a04ae3a6f6e08124a90c6c4656312d593101b0f38805fa3f3c8f6bc4583524bbf72c50784fa5ca0d3e5a76279
+  languageName: node
+  linkType: hard
+
 "is-symbol@npm:^1.0.2, is-symbol@npm:^1.0.3":
   version: 1.0.4
   resolution: "is-symbol@npm:1.0.4"
@@ -14025,6 +14424,13 @@ __metadata:
     call-bind: "npm:^1.0.7"
     get-intrinsic: "npm:^1.2.4"
   checksum: 10/40159582ff1b44fc40085f631baf19f56479b05af2faede65b4e6a0b6acab745c13fd070e35b475aafd8a1ee50879ba5a3f1265125b46bebdb446b6be1f62165
+  languageName: node
+  linkType: hard
+
+"is-windows@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "is-windows@npm:1.0.2"
+  checksum: 10/438b7e52656fe3b9b293b180defb4e448088e7023a523ec21a91a80b9ff8cdb3377ddb5b6e60f7c7de4fa8b63ab56e121b6705fe081b3cf1b828b0a380009ad7
   languageName: node
   linkType: hard
 
@@ -14184,7 +14590,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.13.1, js-yaml@npm:^3.6.1":
+"js-yaml@npm:^3.13.0, js-yaml@npm:^3.13.1, js-yaml@npm:^3.6.1":
   version: 3.14.1
   resolution: "js-yaml@npm:3.14.1"
   dependencies:
@@ -14422,7 +14828,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kleur@npm:^4.0.3":
+"kleur@npm:^4.0.3, kleur@npm:^4.1.5":
   version: 4.1.5
   resolution: "kleur@npm:4.1.5"
   checksum: 10/44d84cc4eedd4311099402ef6d4acd9b2d16e08e499d6ef3bb92389bd4692d7ef09e35248c26e27f98acac532122acb12a1bfee645994ae3af4f0a37996da7df
@@ -14518,6 +14924,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"load-yaml-file@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "load-yaml-file@npm:0.2.0"
+  dependencies:
+    graceful-fs: "npm:^4.1.5"
+    js-yaml: "npm:^3.13.0"
+    pify: "npm:^4.0.1"
+    strip-bom: "npm:^3.0.0"
+  checksum: 10/b1bfa7e80114933e43ccc1cf3772582b7e13c8a71dc8d560de2aeecdabf545014daf8a5afabe634c1e9f71c75f6f8528bbd944c9cbbbdf2ab8c927118bd48fd2
+  languageName: node
+  linkType: hard
+
 "locate-path@npm:^3.0.0":
   version: 3.0.0
   resolution: "locate-path@npm:3.0.0"
@@ -14599,6 +15017,13 @@ __metadata:
   version: 4.7.0
   resolution: "lodash.sortby@npm:4.7.0"
   checksum: 10/38df19ae28608af2c50ac342fc1f414508309d53e1d58ed9adfb2c3cd17c3af290058c0a0478028d932c5404df3d53349d19fa364ef6bed6145a6bc21320399e
+  languageName: node
+  linkType: hard
+
+"lodash.startcase@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.startcase@npm:4.4.0"
+  checksum: 10/3091048a54a2f92bcf2c6441d2bd9a706fb133d5f461ae7c310d6dca1530338a06c91e9e42a5b14b12e875ddae1814d448050dc02afe2cec09b3995d8e836837
   languageName: node
   linkType: hard
 
@@ -15347,6 +15772,25 @@ __metadata:
   dependencies:
     map-or-similar: "npm:^1.5.0"
   checksum: 10/72b6b80699777d000f03db6e15fdabcd4afe77feb45be51fe195cb230c64a368fcfcfbb976375eac3283bd8193d6b1a67ac3081cae07f64fca73f1aa568d59e3
+  languageName: node
+  linkType: hard
+
+"meow@npm:^6.0.0":
+  version: 6.1.1
+  resolution: "meow@npm:6.1.1"
+  dependencies:
+    "@types/minimist": "npm:^1.2.0"
+    camelcase-keys: "npm:^6.2.2"
+    decamelize-keys: "npm:^1.1.0"
+    hard-rejection: "npm:^2.1.0"
+    minimist-options: "npm:^4.0.2"
+    normalize-package-data: "npm:^2.5.0"
+    read-pkg-up: "npm:^7.0.1"
+    redent: "npm:^3.0.0"
+    trim-newlines: "npm:^3.0.0"
+    type-fest: "npm:^0.13.1"
+    yargs-parser: "npm:^18.1.3"
+  checksum: 10/507ea2e7d61f6afe17e8f57323e190ddc8bd4ad0921db75920cf9d6f0f686828d3fe3b18a0a09ee6a5c27e070a3ca69133a7a095e57703b2e8d46eb56ee7d66f
   languageName: node
   linkType: hard
 
@@ -16200,7 +16644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.4, micromatch@npm:^4.0.5":
+"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4, micromatch@npm:^4.0.5":
   version: 4.0.5
   resolution: "micromatch@npm:4.0.5"
   dependencies:
@@ -16306,7 +16750,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist-options@npm:4.1.0":
+"minimist-options@npm:4.1.0, minimist-options@npm:^4.0.2":
   version: 4.1.0
   resolution: "minimist-options@npm:4.1.0"
   dependencies:
@@ -16405,6 +16849,13 @@ __metadata:
     minipass: "npm:^3.0.0"
     yallist: "npm:^4.0.0"
   checksum: 10/ae0f45436fb51344dcb87938446a32fbebb540d0e191d63b35e1c773d47512e17307bf54aa88326cc6d176594d00e4423563a091f7266c2f9a6872cdc1e234d1
+  languageName: node
+  linkType: hard
+
+"mixme@npm:^0.5.1":
+  version: 0.5.10
+  resolution: "mixme@npm:0.5.10"
+  checksum: 10/b0834a462f0960eaa6ec161bb2be56d75a13ad3b2ffefa092960c91dd456e335f181316de5206965f160ce33815b2b559c9dccc1042041738c3bcc1075dbfad2
   languageName: node
   linkType: hard
 
@@ -17099,10 +17550,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"os-tmpdir@npm:~1.0.2":
+  version: 1.0.2
+  resolution: "os-tmpdir@npm:1.0.2"
+  checksum: 10/5666560f7b9f10182548bf7013883265be33620b1c1b4a4d405c25be2636f970c5488ff3e6c48de75b55d02bde037249fe5dbfbb4c0fb7714953d56aed062e6d
+  languageName: node
+  linkType: hard
+
+"outdent@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "outdent@npm:0.5.0"
+  checksum: 10/7d94a7d93883afa32c99d84f33248b221f4eeeedbb571921fe0e5cf0bee32e64746c587e9606d98ec22762870c782d21dd4bc3a0edf442d347cb54aa107b198d
+  languageName: node
+  linkType: hard
+
 "p-cancelable@npm:^3.0.0":
   version: 3.0.0
   resolution: "p-cancelable@npm:3.0.0"
   checksum: 10/a5eab7cf5ac5de83222a014eccdbfde65ecfb22005ee9bc242041f0b4441e07fac7629432c82f48868aa0f8413fe0df6c6067c16f76bf9217cd8dc651923c93d
+  languageName: node
+  linkType: hard
+
+"p-filter@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "p-filter@npm:2.1.0"
+  dependencies:
+    p-map: "npm:^2.0.0"
+  checksum: 10/76e552ca624ce2233448d68b19eec9de42b695208121998f7e011edce71d1079a83096ee6a2078fb2a59cfa8a5c999f046edf00ebf16a8e780022010b4693234
   languageName: node
   linkType: hard
 
@@ -17148,6 +17622,13 @@ __metadata:
   dependencies:
     p-limit: "npm:^3.0.2"
   checksum: 10/1623088f36cf1cbca58e9b61c4e62bf0c60a07af5ae1ca99a720837356b5b6c5ba3eb1b2127e47a06865fee59dd0453cad7cc844cda9d5a62ac1a5a51b7c86d3
+  languageName: node
+  linkType: hard
+
+"p-map@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "p-map@npm:2.1.0"
+  checksum: 10/9e3ad3c9f6d75a5b5661bcad78c91f3a63849189737cd75e4f1225bf9ac205194e5c44aac2ef6f09562b1facdb9bd1425584d7ac375bfaa17b3f1a142dab936d
   languageName: node
   linkType: hard
 
@@ -17457,7 +17938,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-dir@npm:^4.1.0":
+"pkg-dir@npm:^4.1.0, pkg-dir@npm:^4.2.0":
   version: 4.2.0
   resolution: "pkg-dir@npm:4.2.0"
   dependencies:
@@ -17593,6 +18074,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"preferred-pm@npm:^3.0.0":
+  version: 3.1.3
+  resolution: "preferred-pm@npm:3.1.3"
+  dependencies:
+    find-up: "npm:^5.0.0"
+    find-yarn-workspace-root2: "npm:1.2.16"
+    path-exists: "npm:^4.0.0"
+    which-pm: "npm:2.0.0"
+  checksum: 10/3aa768985487c17d08936670b34939c21b5740e35186312d394c09f2c65fb1938fd4e074d0de5d80091c6a154f4adfa566b614fd4971caf43082c2a119e59d6b
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -17661,6 +18154,15 @@ __metadata:
     prettier-plugin-svelte:
       optional: true
   checksum: 10/8cb1e9d914012bfe42b23ba8d31fb3fe17abbbb18ad8ba33e6b81c05a92f7e1dd46836179cde7cf036a628081c9e4bbdf971b17f45844a139781e807b81229a9
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.7.1":
+  version: 2.8.8
+  resolution: "prettier@npm:2.8.8"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 10/00cdb6ab0281f98306cd1847425c24cbaaa48a5ff03633945ab4c701901b8e96ad558eb0777364ffc312f437af9b5a07d0f45346266e8245beaf6247b9c62b24
   languageName: node
   linkType: hard
 
@@ -18807,6 +19309,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"require-main-filename@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "require-main-filename@npm:2.0.0"
+  checksum: 10/8604a570c06a69c9d939275becc33a65676529e1c3e5a9f42d58471674df79357872b96d70bb93a0380a62d60dc9031c98b1a9dad98c946ffdd61b7ac0c8cedd
+  languageName: node
+  linkType: hard
+
 "resize-observer-polyfill@npm:^1.5.1":
   version: 1.5.1
   resolution: "resize-observer-polyfill@npm:1.5.1"
@@ -19194,6 +19703,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semver@npm:^7.5.3":
+  version: 7.6.2
+  resolution: "semver@npm:7.6.2"
+  bin:
+    semver: bin/semver.js
+  checksum: 10/296b17d027f57a87ef645e9c725bff4865a38dfc9caf29b26aa084b85820972fbe7372caea1ba6857162fa990702c6d9c1d82297cecb72d56c78ab29070d2ca2
+  languageName: node
+  linkType: hard
+
 "send@npm:0.18.0":
   version: 0.18.0
   resolution: "send@npm:0.18.0"
@@ -19224,6 +19742,13 @@ __metadata:
     parseurl: "npm:~1.3.3"
     send: "npm:0.18.0"
   checksum: 10/699b2d4c29807a51d9b5e0f24955346911437aebb0178b3c4833ad30d3eca93385ff9927254f5c16da345903cad39d9cd4a532198c95a5129cc4ed43911b15a4
+  languageName: node
+  linkType: hard
+
+"set-blocking@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "set-blocking@npm:2.0.0"
+  checksum: 10/8980ebf7ae9eb945bb036b6e283c547ee783a1ad557a82babf758a065e2fb6ea337fd82cac30dd565c1e606e423f30024a19fff7afbf4977d784720c4026a8ef
   languageName: node
   linkType: hard
 
@@ -19418,6 +19943,22 @@ __metadata:
   version: 4.2.0
   resolution: "smart-buffer@npm:4.2.0"
   checksum: 10/927484aa0b1640fd9473cee3e0a0bcad6fce93fd7bbc18bac9ad0c33686f5d2e2c422fba24b5899c184524af01e11dd2bd051c2bf2b07e47aff8ca72cbfc60d2
+  languageName: node
+  linkType: hard
+
+"smartwrap@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "smartwrap@npm:2.0.2"
+  dependencies:
+    array.prototype.flat: "npm:^1.2.3"
+    breakword: "npm:^1.0.5"
+    grapheme-splitter: "npm:^1.0.4"
+    strip-ansi: "npm:^6.0.0"
+    wcwidth: "npm:^1.0.1"
+    yargs: "npm:^15.1.0"
+  bin:
+    smartwrap: src/terminal-adapter.js
+  checksum: 10/dcc7b9082b74a0ce0f391fce8a4be72f56d1b6e78fbfed9b4191da89d66d82f62a7b44c727d7e68714f0faf1ed1fce0be498563b0d4ef8aad80e2433983b0603
   languageName: node
   linkType: hard
 
@@ -19656,6 +20197,15 @@ __metadata:
   version: 1.0.3
   resolution: "stream-shift@npm:1.0.3"
   checksum: 10/a24c0a3f66a8f9024bd1d579a533a53be283b4475d4e6b4b3211b964031447bdf6532dd1f3c2b0ad66752554391b7c62bd7ca4559193381f766534e723d50242
+  languageName: node
+  linkType: hard
+
+"stream-transform@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "stream-transform@npm:2.1.3"
+  dependencies:
+    mixme: "npm:^0.5.1"
+  checksum: 10/3167bf23a96b3fc7f991d4a8224cd0701c9234be8acd8450f8692c431bed4548d1ef90d1b410fdeff567fa740c3db97b52d5f3c4ad4485fc0e0b8be655800ab7
   languageName: node
   linkType: hard
 
@@ -20144,6 +20694,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"term-size@npm:^2.1.0":
+  version: 2.2.1
+  resolution: "term-size@npm:2.2.1"
+  checksum: 10/f96aca2d4139c91e3359f5949ffb86f0a58f8c254ab7fe4a64b65126974939c782db6aaa91bf51a56d0344e505e22f9a0186f2f689e23ac9382b54606603c537
+  languageName: node
+  linkType: hard
+
 "terser@npm:^5.16.8":
   version: 5.31.0
   resolution: "terser@npm:5.31.0"
@@ -20211,6 +20768,15 @@ __metadata:
   version: 2.2.1
   resolution: "tinyspy@npm:2.2.1"
   checksum: 10/170d6232e87f9044f537b50b406a38fbfd6f79a261cd12b92879947bd340939a833a678632ce4f5c4a6feab4477e9c21cd43faac3b90b68b77dd0536c4149736
+  languageName: node
+  linkType: hard
+
+"tmp@npm:^0.0.33":
+  version: 0.0.33
+  resolution: "tmp@npm:0.0.33"
+  dependencies:
+    os-tmpdir: "npm:~1.0.2"
+  checksum: 10/09c0abfd165cff29b32be42bc35e80b8c64727d97dedde6550022e88fa9fd39a084660415ed8e3ebaa2aca1ee142f86df8b31d4196d4f81c774a3a20fd4b6abf
   languageName: node
   linkType: hard
 
@@ -20403,6 +20969,23 @@ __metadata:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
   checksum: 10/dd8c375181a748cdeb86aa3d779d6d755596881f47fe38b7c4b810ff1ef6424d485b23065fda0f6e32d9988bae19cd64e49f6e2f11295d5184485ab7528a37d1
+  languageName: node
+  linkType: hard
+
+"tty-table@npm:^4.1.5":
+  version: 4.2.3
+  resolution: "tty-table@npm:4.2.3"
+  dependencies:
+    chalk: "npm:^4.1.2"
+    csv: "npm:^5.5.3"
+    kleur: "npm:^4.1.5"
+    smartwrap: "npm:^2.0.2"
+    strip-ansi: "npm:^6.0.1"
+    wcwidth: "npm:^1.0.1"
+    yargs: "npm:^17.7.1"
+  bin:
+    tty-table: adapters/terminal-adapter.js
+  checksum: 10/8532c784027a833bd805de5962be469faaee0ec314cc1c01e77d06ec89d44f18992455969b29ec460abbc7798ea584d805966cbd6480f5a5ffd29865e8de2501
   languageName: node
   linkType: hard
 
@@ -20669,6 +21252,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.23.9"
     "@babel/preset-react": "npm:^7.23.3"
     "@babel/preset-typescript": "npm:^7.23.3"
+    "@changesets/cli": "npm:^2.27.1"
     "@manypkg/cli": "npm:^0.21.2"
     "@preconstruct/cli": "npm:^2.8.3"
     "@types/babel__core": "npm:^7.20.5"
@@ -21546,6 +22130,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"which-module@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "which-module@npm:2.0.1"
+  checksum: 10/1967b7ce17a2485544a4fdd9063599f0f773959cca24176dbe8f405e55472d748b7c549cd7920ff6abb8f1ab7db0b0f1b36de1a21c57a8ff741f4f1e792c52be
+  languageName: node
+  linkType: hard
+
+"which-pm@npm:2.0.0":
+  version: 2.0.0
+  resolution: "which-pm@npm:2.0.0"
+  dependencies:
+    load-yaml-file: "npm:^0.2.0"
+    path-exists: "npm:^4.0.0"
+  checksum: 10/8f9dc47ab1302d536458a3d28b891907540d67e18b95d8cf0a41ba768b679c2bc7b64c17d9b80c85443c4b300a3e2d5c29ae1e9c7c6ad2833760070fbdbd3b6f
+  languageName: node
+  linkType: hard
+
 "which-typed-array@npm:^1.1.13, which-typed-array@npm:^1.1.14, which-typed-array@npm:^1.1.15, which-typed-array@npm:^1.1.2, which-typed-array@npm:^1.1.9":
   version: 1.1.15
   resolution: "which-typed-array@npm:1.1.15"
@@ -21617,6 +22218,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"wrap-ansi@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "wrap-ansi@npm:6.2.0"
+  dependencies:
+    ansi-styles: "npm:^4.0.0"
+    string-width: "npm:^4.1.0"
+    strip-ansi: "npm:^6.0.0"
+  checksum: 10/0d64f2d438e0b555e693b95aee7b2689a12c3be5ac458192a1ce28f542a6e9e59ddfecc37520910c2c88eb1f82a5411260566dba5064e8f9895e76e169e76187
+  languageName: node
+  linkType: hard
+
 "wrap-ansi@npm:^8.1.0":
   version: 8.1.0
   resolution: "wrap-ansi@npm:8.1.0"
@@ -21668,6 +22280,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"y18n@npm:^4.0.0":
+  version: 4.0.3
+  resolution: "y18n@npm:4.0.3"
+  checksum: 10/392870b2a100bbc643bc035fe3a89cef5591b719c7bdc8721bcdb3d27ab39fa4870acdca67b0ee096e146d769f311d68eda6b8195a6d970f227795061923013f
+  languageName: node
+  linkType: hard
+
 "y18n@npm:^5.0.5":
   version: 5.0.8
   resolution: "y18n@npm:5.0.8"
@@ -21705,7 +22324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:^18.1.3":
+"yargs-parser@npm:^18.1.2, yargs-parser@npm:^18.1.3":
   version: 18.1.3
   resolution: "yargs-parser@npm:18.1.3"
   dependencies:
@@ -21722,7 +22341,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.7.2":
+"yargs@npm:^15.1.0":
+  version: 15.4.1
+  resolution: "yargs@npm:15.4.1"
+  dependencies:
+    cliui: "npm:^6.0.0"
+    decamelize: "npm:^1.2.0"
+    find-up: "npm:^4.1.0"
+    get-caller-file: "npm:^2.0.1"
+    require-directory: "npm:^2.1.1"
+    require-main-filename: "npm:^2.0.0"
+    set-blocking: "npm:^2.0.0"
+    string-width: "npm:^4.2.0"
+    which-module: "npm:^2.0.0"
+    y18n: "npm:^4.0.0"
+    yargs-parser: "npm:^18.1.2"
+  checksum: 10/bbcc82222996c0982905b668644ca363eebe6ffd6a572fbb52f0c0e8146661d8ce5af2a7df546968779bb03d1e4186f3ad3d55dfaadd1c4f0d5187c0e3a5ba16
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^17.7.1, yargs@npm:^17.7.2":
   version: 17.7.2
   resolution: "yargs@npm:17.7.2"
   dependencies:

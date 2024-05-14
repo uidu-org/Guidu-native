@@ -4,14 +4,14 @@
   "license": "ISC",
   "type": "module",
   "exports": "./src/index.ts",
+  "sideEffects": false,
   "files": [
-    "src",
-    "./src/index.d.ts"
+    "dist"
   ],
   "types": "./src/index.d.ts",
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
-    "@uidu/lib": "0.0.1",
+    "@uidu/lib": "workspace:^",
     "class-variance-authority": "^0.7.0",
     "react": "^18.2.0"
   },

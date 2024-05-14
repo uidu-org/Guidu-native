@@ -8,11 +8,11 @@
     "dist"
   ],
   "dependencies": {
-    "@uidu/field-error-text-ui": "0.1.0",
-    "@uidu/field-helper-text-ui": "0.1.0",
-    "@uidu/form-ui": "0.1.0",
-    "@uidu/label-ui": "0.1.0",
-    "@uidu/lib": "0.0.1",
+    "@uidu/field-error-text-ui": "workspace:^",
+    "@uidu/field-helper-text-ui": "workspace:^",
+    "@uidu/form-ui": "workspace:^",
+    "@uidu/label-ui": "workspace:^",
+    "@uidu/lib": "workspace:^",
     "class-variance-authority": "^0.7.0",
     "react": "^18.2.0",
     "react-hook-form": "^7.49.3"
@@ -25,7 +25,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "npx tsup src --dts",
+    "build": "tsup",
+    "build-dev": "tsup --watch",
     "versionPatchFormsWeb": "yarn version patch",
     "versionMinorFormsWeb": "yarn version minor",
     "versionMajorFormsWeb": "yarn version major",

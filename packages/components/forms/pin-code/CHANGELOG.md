@@ -1,0 +1,10 @@
+# @uidu/pin-code-ui
+
+## 0.1.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @uidu/lib@0.0.2
+  - @uidu/field-error-text-ui@0.1.1
+  - @uidu/field-helper-text-ui@0.1.1

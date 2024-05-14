@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "storybook": "cd packages/storybook && npx storybook dev -p 6006",
-    "postinstall": "preconstruct dev",
+    "postinstall": "manypkg check",
     "watch": "yarn workspaces foreach -pi run watch",
     "vercel:install": "yarn set version 3.5 && yarn install",
     "docs": "cd docs && yarn next",

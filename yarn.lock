@@ -7817,7 +7817,7 @@ __metadata:
   dependencies:
     "@radix-ui/react-slot": "npm:^1.0.2"
     "@types/react": "npm:^18.2.55"
-    "@uidu/lib": "workspace:*"
+    "@uidu/lib": "npm:*"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.2.0"
   languageName: unknown
@@ -8195,7 +8195,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/lib@workspace:*, @uidu/lib@workspace:^, @uidu/lib@workspace:packages/lib":
+"@uidu/lib@npm:*, @uidu/lib@workspace:^, @uidu/lib@workspace:packages/lib":
   version: 0.0.0-use.local
   resolution: "@uidu/lib@workspace:packages/lib"
   dependencies:

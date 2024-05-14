@@ -8,6 +8,7 @@ import {
   Badge,
   Button,
   Presence,
+  PresenceWrapper,
 } from "@uidu/core-ui";
 import Link from "next/link";
 
@@ -33,13 +34,60 @@ export default function Page() {
           primaryText={" Prova Avatar"}
           secondaryText={"Prova avatar items"}
         >
+          <Avatar shape={"square"}>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+            <PresenceWrapper>
+              <Presence presence={"focus"} />
+            </PresenceWrapper>
+          </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar"}
+          secondaryText={"Prova avatar items"}
+        >
           <Avatar>
             <AvatarImage
               src="https://avatars.githubusercontent.com/u/124514869?v=4"
               alt="random photo"
             />
             <AvatarFallback>CN</AvatarFallback>
-            <Presence presence={"focus"} />
+            <PresenceWrapper corner={"topRight"}>
+              <Presence presence={"busy"} />
+            </PresenceWrapper>
+          </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar"}
+          secondaryText={"Prova avatar items"}
+        >
+          <Avatar shape={"square"}>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+            <PresenceWrapper corner={"bottomRight"}>
+              <Presence presence={"offline"} />
+            </PresenceWrapper>
+          </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar"}
+          secondaryText={"Prova avatar items"}
+        >
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+            <PresenceWrapper corner={"bottomLeft"}>
+              <Presence presence={"online"} />
+            </PresenceWrapper>
           </Avatar>
         </AvatarItem>
       </div>

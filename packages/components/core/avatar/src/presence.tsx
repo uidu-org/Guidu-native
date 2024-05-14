@@ -1,45 +1,63 @@
+import { cn } from '@uidu/lib';
+import { cva, VariantProps } from 'class-variance-authority';
 import { FC, ReactNode } from 'react';
 
 type PresenceType = ('online' | 'busy' | 'focus' | 'offline') | ReactNode;
 
 interface PresenceProps {
-  // extends VariantProps<typeof presenceVariants>
   presence?: PresenceType;
   children?: ReactNode;
 }
 
-// const presenceLayout =
-
-// const presenceVariants = cva(
-//   'inline-flex items-center rounded-full border border-stone-200 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-stone-950 focus:ring-offset-2 dark:border-stone-800 dark:focus:ring-stone-300',
-//   {
-//     variants: {
-//       variant: {
-//         online:"border" ,
-//         busy:"border" ,
-//         focus: "border",
-//         offline: "border",
-//       },
-//     },
-//     defaultVariants: {
-//       variant: 'online',
-//     },
-//     size: {
-//       sm: 'p-1',
-//       md: 'p-2',
-//       lg: 'p-3',
-
-//     }
-//   }
-// );
+interface PresenceWrapperProps
+  extends FC,
+    VariantProps<typeof presenceWrapperVariants> {
+  children: ReactNode;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                   PresenceWrapper                          */
 /* -------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
-/*                                   getPresenceLayout                        */
-/* -------------------------------------------------------------------------- */
+const presenceWrapperVariants = cva('absolute pointer-events-none border', {
+  variants: {
+    corner: {
+      topLeft: 'top-0 left-0',
+      topRight: 'top-0 right-0',
+      bottomLeft: 'bottom-0 left-0',
+      bottomRight: 'bottom-0 right-0',
+    },
+    size: {
+      xs: 'size-0',
+      sm: 'size-[12px]',
+      md: 'size-[14px]',
+      lg: 'size-[15px]',
+      xl: 'size-[18px]',
+      xxl: 'size-[0px]',
+    },
+  },
+  defaultVariants: {
+    corner: 'topLeft',
+    size: 'md',
+  },
+});
+
+export const PresenceWrapper: FC<PresenceWrapperProps> = ({
+  corner,
+  size,
+  children,
+}) => (
+  <span
+    className={cn(
+      presenceWrapperVariants({
+        corner,
+        size,
+      })
+    )}
+  >
+    {children}
+  </span>
+);
 
 /* -------------------------------------------------------------------------- */
 /*                                   getPresenceSVG                           */

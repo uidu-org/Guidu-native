@@ -23,6 +23,7 @@
     "docs:prod:serve": "yarn workspace next-app serve",
     "fix": "manypkg fix && cd apps/expo && npx expo install --fix",
     "build": "yarn workspaces foreach --all --exclude next-app run build",
+    "turbo:dev:web-core": "turbo dev --filter='./packages/src/core'",
     "turbo:build:web-core": "turbo build --filter='./packages/src/core' ",
     "turbo:build:web-forms": "turbo build --filter='./packages/src/forms' ",
     "yarn:versionPatch:web-core": "cd packages/components/core && yarn workspaces foreach -A run versionPatch",

@@ -23,6 +23,7 @@
   },
   "scripts": {
     "build": "npx tsup src --dts",
+    "dev": "npx tsup src --dts --watch",
     "versionPatch": "yarn version patch",
     "versionMinor": "yarn version minor",
     "versionMajor": "yarn version major",

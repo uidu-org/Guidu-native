@@ -1,5 +1,23 @@
 # @uidu/guidu-website
 
+## 0.1.7
+
+### Patch Changes
+
+- @uidu/core-ui@0.0.15
+
+## 0.1.6
+
+### Patch Changes
+
+- @uidu/core-ui@0.0.14
+
+## 0.1.5
+
+### Patch Changes
+
+- @uidu/core-ui@0.0.13
+
 ## 0.1.4
 
 ### Patch Changes

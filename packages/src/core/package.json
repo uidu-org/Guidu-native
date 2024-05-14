@@ -1,6 +1,6 @@
 {
   "name": "@uidu/core-ui",
-  "version": "0.0.12",
+  "version": "0.0.15",
   "main": "src/index.ts",
   "module": "dist/index.mjs",
   "license": "ISC",

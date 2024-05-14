@@ -1,10 +1,10 @@
 {
   "name": "@uidu/breadcrumb-ui",
-  "version": "0.1.5",
+  "version": "0.3.0",
   "license": "ISC",
-  "type": "module",
-  "sideEffects": false,
-  "exports": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],

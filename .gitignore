@@ -19,7 +19,9 @@ dist
 **/.tamagui/*
 
 # production
-/build
+build/**
+dist/**
+.next/**
 
 # debug
 npm-debug.log*

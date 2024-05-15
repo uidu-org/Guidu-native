@@ -2,12 +2,15 @@ import { cn } from '@uidu/lib';
 import { cva, VariantProps } from 'class-variance-authority';
 import { FC, ReactNode } from 'react';
 
+/* -------------------------------------------------------------------------- */
+/*                                 Presence Type                              */
+/* -------------------------------------------------------------------------- */
+
 type PresenceType = ('online' | 'busy' | 'focus' | 'offline') | ReactNode;
 
-interface PresenceProps {
-  presence?: PresenceType;
-  children?: ReactNode;
-}
+/* -------------------------------------------------------------------------- */
+/*                          PresenceWrapper Props                             */
+/* -------------------------------------------------------------------------- */
 
 interface PresenceWrapperProps
   extends FC,
@@ -16,10 +19,19 @@ interface PresenceWrapperProps
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                   PresenceWrapper                          */
+/*                                 Presence Props                             */
 /* -------------------------------------------------------------------------- */
 
-const presenceWrapperVariants = cva('absolute pointer-events-none border', {
+interface PresenceProps {
+  presence?: PresenceType;
+  children?: ReactNode;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               PresenceWrapper                              */
+/* -------------------------------------------------------------------------- */
+
+const presenceWrapperVariants = cva('absolute pointer-events-none', {
   variants: {
     corner: {
       topLeft: 'top-0 left-0',
@@ -59,6 +71,8 @@ export const PresenceWrapper: FC<PresenceWrapperProps> = ({
   </span>
 );
 
+PresenceWrapper.displayName = 'PresenceWrapper';
+
 /* -------------------------------------------------------------------------- */
 /*                                   getPresenceSVG                           */
 /* -------------------------------------------------------------------------- */
@@ -73,6 +87,7 @@ const Svg: FC<React.SVGProps<SVGSVGElement>> = (props) => (
     {...props}
   />
 );
+Svg.displayName = 'Svg';
 
 const BusyCircle: FC<React.SVGProps<SVGSVGElement>> = ({ cx, cy, r }) => (
   <circle
@@ -82,30 +97,40 @@ const BusyCircle: FC<React.SVGProps<SVGSVGElement>> = ({ cx, cy, r }) => (
     r={r}
   />
 );
+BusyCircle.displayName = 'BusyCircle';
+
 const BusyPath: FC<React.SVGProps<SVGSVGElement>> = ({ d }) => (
   <path
     className="fill-uiduThemes-neutral-0 dark:fill-uiduThemes-darkNeutral-30"
     d={d}
   />
 );
+BusyPath.displayName = 'BusyPath';
+
 const FocusPath: FC<React.SVGProps<SVGSVGElement>> = ({ d }) => (
   <path
     className="fill-uiduThemes-purple-300 dark:fill-uiduThemes-purple-100"
     d={d}
   />
 );
+FocusPath.displayName = 'FocusPath';
+
 const OfflineOuter: FC<React.SVGProps<SVGSVGElement>> = ({ d }) => (
   <path
     className="fill-uiduThemes-neutral-200 dark:fill-uiduThemes-darkNeutral-100"
     d={d}
   />
 );
+OfflineOuter.displayName = 'OfflineOuter';
+
 const OfflineInner: FC<React.SVGProps<SVGSVGElement>> = ({ d }) => (
   <path
     className="fill-uiduThemes-neutral-40 dark:fill-uiduThemes-darkNeutral-500"
     d={d}
   />
 );
+OfflineInner.displayName = 'OfflineInner';
+
 const OnlineCircle: FC<React.SVGProps<SVGSVGElement>> = ({ cx, cy, r }) => (
   <circle
     className="fill-uiduThemes-green-300 dark:fill-uiduThemes-green-200"
@@ -114,6 +139,7 @@ const OnlineCircle: FC<React.SVGProps<SVGSVGElement>> = ({ cx, cy, r }) => (
     r={r}
   />
 );
+OnlineCircle.displayName = 'OnlineCircle';
 
 const getPresenceSVG = (presence: PresenceType) => {
   switch (presence) {
@@ -165,3 +191,5 @@ export const Presence: FC<PresenceProps> = ({ presence, children }) => (
     </span>
   </span>
 );
+
+Presence.displayName = 'Presence';

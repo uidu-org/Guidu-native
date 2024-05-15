@@ -9,6 +9,8 @@ import {
   Button,
   Presence,
   PresenceWrapper,
+  Status,
+  StatusWrapper,
 } from "@uidu/core-ui";
 import Link from "next/link";
 
@@ -29,15 +31,16 @@ export default function Page() {
         <Button className="text-black">icona</Button>
       </div>
 
-      <div className="w-1/2">
+      <div className="w-1/2 bg-slate-500">
         <AvatarItem
           primaryText={" Prova Avatar"}
           secondaryText={"Prova avatar items"}
         >
-          <Avatar shape={"square"}>
+          <Avatar>
             <AvatarImage
               src="https://avatars.githubusercontent.com/u/124514869?v=4"
               alt="random photo"
+              shape={"square"}
             />
             <AvatarFallback>CN</AvatarFallback>
             <PresenceWrapper>
@@ -85,8 +88,41 @@ export default function Page() {
               alt="random photo"
             />
             <AvatarFallback>CN</AvatarFallback>
+            <StatusWrapper corner={"topRight"}>
+              <Status status={"locked"} />
+            </StatusWrapper>
+          </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar"}
+          secondaryText={"Prova avatar items"}
+        >
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
             <PresenceWrapper corner={"bottomLeft"}>
-              <Presence presence={"online"} />
+              <Presence presence={"online"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-bell-plus"
+                >
+                  <path d="M19.3 14.8C20.1 16.4 21 17 21 17H3s3-2 3-9c0-3.3 2.7-6 6-6 1 0 1.9.2 2.8.7" />
+                  <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                  <path d="M15 8h6" />
+                  <path d="M18 5v6" />
+                </svg>
+              </Presence>
             </PresenceWrapper>
           </Avatar>
         </AvatarItem>

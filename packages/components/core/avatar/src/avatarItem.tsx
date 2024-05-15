@@ -22,6 +22,8 @@ const Content: FC<ItemsProps> = ({ truncate, children }) => (
     {children}
   </div>
 );
+Content.displayName = 'Content';
+
 const PrimaryText: FC<ItemsProps> = ({ truncate, children }) => (
   <div
     className={`text-uiduThemes-neutral-900 dark:text-uiduThemes-darkNeutral-600 ${truncate && 'truncate'}`}
@@ -29,6 +31,8 @@ const PrimaryText: FC<ItemsProps> = ({ truncate, children }) => (
     {children}
   </div>
 );
+PrimaryText.displayName = 'PrimaryText';
+
 const SecondaryText: FC<ItemsProps> = ({ truncate, children }) => (
   <div
     className={`text-uiduThemes-neutral-200 dark:text-uiduThemes-darkNeutral-300 text-[0.85rem] ${truncate && 'truncate'}`}
@@ -36,6 +40,8 @@ const SecondaryText: FC<ItemsProps> = ({ truncate, children }) => (
     {children}
   </div>
 );
+SecondaryText.displayName = 'SecondaryText';
+
 export const AvatarItem: FC<AvatarItemProps> = ({
   href,
   isDisabled = false,
@@ -56,3 +62,5 @@ export const AvatarItem: FC<AvatarItemProps> = ({
     </Content>
   </div>
 );
+
+AvatarItem.displayName = 'AvatarItem';

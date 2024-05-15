@@ -18,7 +18,8 @@ interface AvatarProps
 
 /* ------------------------- extend AvatarImageProps here ------------------------ */
 interface AvatarImageProps
-  extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
+  extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>,
+    VariantProps<typeof avatarImageVariants> {
   appearance?: React.ReactNode | boolean;
   onClickAction?: () => void;
   typeIconAction?: 'remove' | 'edit' | React.ReactNode;
@@ -32,12 +33,9 @@ interface AvatarFallbackProps
 }
 
 /* ------------------------------ CSS Variants ------------------------------ */
-const avatarVariants = cva('relative flex h-10 w-10 shrink-0 ', {
+const avatarVariants = cva('relative flex h-10 w-10 shrink-0 bg-transparent', {
   variants: {
     size: {
-      //   small: ' h-8  w-8',
-      //   medium: 'h-16 w-16',
-      //   large: 'h-28 w-28',
       xsmall: 'size-[16px]',
       small: 'size-[24px]',
       medium: 'size-[32px]',
@@ -45,13 +43,20 @@ const avatarVariants = cva('relative flex h-10 w-10 shrink-0 ', {
       xlarge: 'size-[96px]',
       xxlarge: 'size-[128px]',
     },
-    shape: {
-      circle: 'rounded-full',
-      square: 'rounded-none',
-    },
   },
   defaultVariants: {
     size: 'medium',
+  },
+});
+
+const avatarImageVariants = cva('relative overflow-hidden', {
+  variants: {
+    shape: {
+      circle: 'rounded-full',
+      square: 'rounded-lg',
+    },
+  },
+  defaultVariants: {
     shape: 'circle',
   },
 });
@@ -62,10 +67,10 @@ const avatarVariants = cva('relative flex h-10 w-10 shrink-0 ', {
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   AvatarProps
->(({ className, shape, size, ...props }, ref) => (
+>(({ className, size, ...props }, ref) => (
   <AvatarPrimitive.Root
     ref={ref}
-    className={cn(avatarVariants({ shape, size }), className)}
+    className={cn(avatarVariants({ size }), className)}
     {...props}
   />
 ));
@@ -82,6 +87,7 @@ const AvatarImage = React.forwardRef<
     {
       className,
       appearance,
+      shape,
       onClickAction,
       typeIconAction = 'remove',
       ...props
@@ -108,16 +114,16 @@ const AvatarImage = React.forwardRef<
         (typeIconAction as React.ReactNode));
 
     return (
-      <div className="relative">
+      <div className={cn(avatarImageVariants({ shape }))}>
         <AvatarPrimitive.Image
           ref={ref}
-          className={cn('aspect-square h-full w-full rounded-full', className)}
+          className="aspect-square h-full w-full "
           {...props}
         />
 
         {isJsx && !isBool && React.cloneElement(appearance)}
         {isBool && !isJsx && (
-          <span className="absolute top-0 right-0 bg-green-600 w-4 h-4 rounded-full" />
+          <span className="absolute top-0 right-0 bg-green-600 w-4 h-4 " />
         )}
 
         {isFunction && <Button onClick={onClickAction} iconAfter={Icon} />}

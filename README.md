@@ -19,7 +19,7 @@ TODO: Fill out this long description.
 
 ## Install
 
-```
+```bash
 git clone https://github.com/uidu-org/Guidu-native.git
 cd Guidu-native
 yarn install
@@ -39,6 +39,9 @@ Documentation is package specific, browse https://uidu.design to see all the pac
 
 Start all packages and next
 
+```bash
+yarn turbo dev --concurrency=100 --continue
+```
 
 Pull requests are more than welcome, we're currently making this repo more contributors-friendly.
 

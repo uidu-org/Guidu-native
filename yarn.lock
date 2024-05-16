@@ -7331,6 +7331,7 @@ __metadata:
     "@types/unist": "npm:^3.0.2"
     "@typescript-eslint/eslint-plugin": "npm:^7.9.0"
     "@typescript-eslint/parser": "npm:^7.9.0"
+    "@uidu/avatar-ui": "workspace:^"
     "@uidu/badge-ui": "workspace:^"
     "@uidu/button-ui": "workspace:^"
     "@uidu/core-ui": "workspace:^"

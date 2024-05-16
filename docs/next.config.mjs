@@ -17,6 +17,7 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
+    externalDir: true,
     webpackBuildWorker: true,
   },
   typescript: {

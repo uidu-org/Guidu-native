@@ -1,6 +1,6 @@
 {
   "name": "@uidu/lib",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css"
   ],
@@ -12,19 +12,19 @@
   ],
   "scripts": {
     "watch": "yarn preconstruct build --watch",
-    "build": "npx tsup src --dts",
+    "build": "tsup",
     "versionPatch": "yarn version patch",
     "versionMinor": "yarn version minor",
     "versionMajor": "yarn version major",
     "npmPublish": "npm publish"
   },
   "dependencies": {
-    "clsx": "^2.1.0",
-    "tailwind-merge": "^2.2.1"
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
-    "@preconstruct/cli": "^2.8.3",
-    "react": "^18.2.0"
+    "@preconstruct/cli": "^2.8.4",
+    "react": "^18.3.1"
   },
   "publishConfig": {
     "access": "public",

@@ -1,5 +1,13 @@
 # @uidu/radio-group-ui
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @uidu/lib@0.1.0
+  - @uidu/form-ui@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes

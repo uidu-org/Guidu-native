@@ -1,5 +1,36 @@
 # @uidu/core-ui
 
+## 0.0.16
+
+### Patch Changes
+
+- @uidu/accordion-ui@0.1.2
+- @uidu/alert-ui@0.1.2
+- @uidu/avatar-ui@0.1.2
+- @uidu/badge-ui@0.1.2
+- @uidu/button-ui@0.1.2
+- @uidu/card-ui@0.1.2
+- @uidu/carousel-ui@0.1.2
+- @uidu/command-ui@0.1.2
+- @uidu/context-menu-ui@0.1.2
+- @uidu/dialog-ui@0.1.2
+- @uidu/drawer-ui@0.1.2
+- @uidu/dropdown-menu-ui@0.1.2
+- @uidu/label-ui@0.1.2
+- @uidu/navigation-menu-ui@0.1.2
+- @uidu/pagination-ui@0.1.2
+- @uidu/popover-ui@0.1.2
+- @uidu/progress-ui@0.1.2
+- @uidu/resizable-ui@0.1.2
+- @uidu/scroll-area-ui@0.1.2
+- @uidu/separator-ui@0.1.2
+- @uidu/sheet-ui@0.1.2
+- @uidu/table-ui@0.1.2
+- @uidu/tabs-ui@0.1.2
+- @uidu/toast-ui@0.1.2
+- @uidu/tooltip-ui@0.1.2
+- @uidu/media-card-ui@0.0.4
+
 ## 0.0.15
 
 ### Patch Changes

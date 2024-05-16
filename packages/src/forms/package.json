@@ -1,6 +1,6 @@
 {
   "name": "@uidu/forms-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "src/index.ts",
   "module": "dist/index.mjs",
   "license": "ISC",
@@ -27,11 +27,11 @@
     "@uidu/textarea-ui": "workspace:^",
     "@uidu/toggle-ui": "workspace:^",
     "class-variance-authority": "^0.7.0",
-    "react": "^18.2.0",
-    "react-hook-form": "^7.49.3"
+    "react": "^18.3.1",
+    "react-hook-form": "^7.51.4"
   },
   "devDependencies": {
-    "@types/react": "^18.2.55"
+    "@types/react": "^18.3.2"
   },
   "publishConfig": {
     "access": "public",

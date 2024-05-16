@@ -1,5 +1,15 @@
 # @uidu/guidu-website
 
+## 0.1.8
+
+### Patch Changes
+
+- @uidu/badge-ui@0.1.2
+- @uidu/button-ui@0.1.2
+- @uidu/switch-ui@0.1.2
+- @uidu/forms-ui@0.1.2
+- @uidu/core-ui@0.0.16
+
 ## 0.1.7
 
 ### Patch Changes

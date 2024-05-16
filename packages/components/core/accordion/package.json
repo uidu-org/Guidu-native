@@ -1,15 +1,16 @@
 {
   "name": "@uidu/accordion-ui",
   "version": "0.1.1",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "license": "ISC",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsup",
-    "build-dev": "tsup --watch",
+    "dev": "tsup --watch",
     "versionPatch": "yarn version patch",
     "versionMinor": "yarn version minor",
     "versionMajor": "yarn version major",
@@ -17,12 +18,12 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "1.1.2",
-    "@uidu/lib": "workspace:^",
+    "@uidu/lib": "workspace:*",
     "class-variance-authority": "^0.7.0",
-    "react": "^18.2.0"
+    "react": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.55"
+    "@types/react": "^18.3.2"
   },
   "publishConfig": {
     "access": "public",

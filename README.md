@@ -40,7 +40,7 @@ Documentation is package specific, browse https://uidu.design to see all the pac
 Start all packages and next
 
 ```bash
-yarn turbo dev --concurrency=100 --continue
+yarn dev
 ```
 
 Pull requests are more than welcome, we're currently making this repo more contributors-friendly.

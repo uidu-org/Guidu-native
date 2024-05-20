@@ -6,32 +6,29 @@ import { FC, ReactNode } from 'react';
 /*                                 Status Type                                */
 /* -------------------------------------------------------------------------- */
 
-type PresenceType = ('declined' | 'approved' | 'locked') | ReactNode;
+export type StatusType = ('declined' | 'approved' | 'locked') | ReactNode;
 
 /* -------------------------------------------------------------------------- */
 /*                            StatusWrapper Props                             */
 /* -------------------------------------------------------------------------- */
 
-interface StatusWrapperProps
-  extends FC,
-    VariantProps<typeof statusWrapperVariants> {
-  children: ReactNode;
+interface StatusProps extends FC, VariantProps<typeof statusVariants> {
+  status: StatusType;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                 Status Props                               */
 /* -------------------------------------------------------------------------- */
 
-interface StatusProps {
-  status?: PresenceType;
-  children?: ReactNode;
+interface StatusItemProps {
+  status?: StatusType;
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                 StatusWrapper                              */
+/*                                    Status                                  */
 /* -------------------------------------------------------------------------- */
 
-const statusWrapperVariants = cva('absolute pointer-events-none', {
+const statusVariants = cva('absolute pointer-events-none', {
   variants: {
     corner: {
       topLeft: 'top-0 left-0',
@@ -54,23 +51,19 @@ const statusWrapperVariants = cva('absolute pointer-events-none', {
   },
 });
 
-export const StatusWrapper: FC<StatusWrapperProps> = ({
-  corner,
-  size,
-  children,
-}) => (
+export const Status: FC<StatusProps> = ({ corner, size, status }) => (
   <span
     className={cn(
-      statusWrapperVariants({
+      statusVariants({
         corner,
         size,
       })
     )}
   >
-    {children}
+    <StatusItem status={status} />
   </span>
 );
-StatusWrapper.displayName = 'StatusWrapper';
+Status.displayName = 'Status';
 
 /* -------------------------------------------------------------------------- */
 /*                                   getStatusSVG                             */
@@ -142,8 +135,8 @@ const LockedPath: FC<React.SVGProps<SVGSVGElement>> = ({ d }) => (
 );
 LockedPath.displayName = 'LockedPath';
 
-const getPresenceSVG = (presence: PresenceType) => {
-  switch (presence) {
+const getStatusSVG = (status: StatusType) => {
+  switch (status) {
     case 'approved':
       return (
         <Svg>
@@ -171,20 +164,23 @@ const getPresenceSVG = (presence: PresenceType) => {
 };
 
 /* -------------------------------------------------------------------------- */
-/*                                   Status                                   */
+/*                               Status Item                                  */
 /* -------------------------------------------------------------------------- */
 
-export const Status: FC<StatusProps> = ({ status, children }) => (
-  <span
-    id="outer"
-    className="size-[100%] flex items-center justify-center rounded-[50%] box-border overflow-hidden "
-  >
+export const StatusItem: FC<StatusItemProps> = ({ status }) => {
+  const customStatus = typeof status === 'object' ? status : null;
+  return (
     <span
-      id="inner"
-      className="size-[100%] flex justify-center items-center overflow-hidden rounded-[50%]"
+      id="outer"
+      className="size-[100%] flex items-center justify-center rounded-[50%] box-border overflow-hidden "
     >
-      {children || (status && getPresenceSVG(status))}
+      <span
+        id="inner"
+        className="size-[100%] flex justify-center items-center overflow-hidden rounded-[50%]"
+      >
+        {customStatus || (status && getStatusSVG(status))}
+      </span>
     </span>
-  </span>
-);
-Status.displayName = 'Status';
+  );
+};
+StatusItem.displayName = 'StatusItem';

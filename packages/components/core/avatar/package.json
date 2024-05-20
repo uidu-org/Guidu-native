@@ -22,7 +22,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "npx tsup src --dts",
+    "build": "tsup",
     "versionPatch": "yarn version patch",
     "versionMinor": "yarn version minor",
     "versionMajor": "yarn version major",

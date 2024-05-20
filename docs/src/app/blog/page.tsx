@@ -3,18 +3,50 @@ import ToastDemo from "@/docs/demos/core/toast-demo";
 import {
   Avatar,
   AvatarFallback,
+  AvatarGroup,
   AvatarImage,
   AvatarItem,
   Badge,
   Button,
   Presence,
-  PresenceWrapper,
   Status,
-  StatusWrapper,
 } from "@uidu/core-ui";
 import Link from "next/link";
 
 export default function Page() {
+  const item = [
+    {
+      id: "1a",
+      img: "https://avatars.githubusercontent.com/u/124514869?v=4",
+      alt: "random photo",
+      name: "prova Avatar group ",
+    },
+    {
+      id: "2a",
+      img: "https://avatars.githubusercontent.com/u/124514869?v=4",
+      alt: "random photo",
+      name: "prova Avatar group ",
+    },
+    {
+      id: "3a",
+      img: "https://avatars.githubusercontent.com/u/124514869?v=4",
+      alt: "random photo",
+      name: "prova Avatar group ",
+    },
+    {
+      id: "4a",
+      img: "https://avatars.githubusercontent.com/u/124514869?v=4",
+      alt: "random photo",
+      name: "prova Avatar group ",
+    },
+    {
+      id: "5a",
+      img: "https://avatars.githubusercontent.com/u/124514869?v=4",
+      alt: "random photo",
+      name: "prova Avatar group ",
+    },
+  ];
+
   return (
     <div className="grid h-screen place-content-center">
       <p>Page Blog</p>
@@ -32,6 +64,83 @@ export default function Page() {
       </div>
 
       <div className="w-1/2 bg-slate-500">
+        {/* <AvatarGroup variant={"stack"} maxCount={4}>
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+              shape={"square"}
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar shape={"square"}>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </AvatarGroup>
+        <AvatarGroup variant={"grid"}>
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+              shape={"square"}
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar shape={"square"}>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </AvatarGroup> */}
+        <AvatarGroup items={item} maxCount={3} />
         <AvatarItem
           primaryText={" Prova Avatar"}
           secondaryText={"Prova avatar items"}
@@ -43,68 +152,8 @@ export default function Page() {
               shape={"square"}
             />
             <AvatarFallback>CN</AvatarFallback>
-            <PresenceWrapper>
-              <Presence presence={"focus"} />
-            </PresenceWrapper>
-          </Avatar>
-        </AvatarItem>
-        <AvatarItem
-          primaryText={" Prova Avatar"}
-          secondaryText={"Prova avatar items"}
-        >
-          <Avatar>
-            <AvatarImage
-              src="https://avatars.githubusercontent.com/u/124514869?v=4"
-              alt="random photo"
-            />
-            <AvatarFallback>CN</AvatarFallback>
-            <PresenceWrapper corner={"topRight"}>
-              <Presence presence={"busy"} />
-            </PresenceWrapper>
-          </Avatar>
-        </AvatarItem>
-        <AvatarItem
-          primaryText={" Prova Avatar"}
-          secondaryText={"Prova avatar items"}
-        >
-          <Avatar shape={"square"}>
-            <AvatarImage
-              src="https://avatars.githubusercontent.com/u/124514869?v=4"
-              alt="random photo"
-            />
-            <AvatarFallback>CN</AvatarFallback>
-            <PresenceWrapper corner={"bottomRight"}>
-              <Presence presence={"offline"} />
-            </PresenceWrapper>
-          </Avatar>
-        </AvatarItem>
-        <AvatarItem
-          primaryText={" Prova Avatar"}
-          secondaryText={"Prova avatar items"}
-        >
-          <Avatar>
-            <AvatarImage
-              src="https://avatars.githubusercontent.com/u/124514869?v=4"
-              alt="random photo"
-            />
-            <AvatarFallback>CN</AvatarFallback>
-            <StatusWrapper corner={"topRight"}>
-              <Status status={"locked"} />
-            </StatusWrapper>
-          </Avatar>
-        </AvatarItem>
-        <AvatarItem
-          primaryText={" Prova Avatar"}
-          secondaryText={"Prova avatar items"}
-        >
-          <Avatar>
-            <AvatarImage
-              src="https://avatars.githubusercontent.com/u/124514869?v=4"
-              alt="random photo"
-            />
-            <AvatarFallback>CN</AvatarFallback>
-            <PresenceWrapper corner={"bottomLeft"}>
-              <Presence presence={"online"}>
+            <Presence
+              presence={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -122,9 +171,75 @@ export default function Page() {
                   <path d="M15 8h6" />
                   <path d="M18 5v6" />
                 </svg>
-              </Presence>
-            </PresenceWrapper>
+              }
+            />
           </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar"}
+          secondaryText={"Prova avatar items"}
+        >
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+            <Presence presence={"busy"} corner={"topRight"} />
+          </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar"}
+          secondaryText={"Prova avatar items"}
+        >
+          <Avatar shape={"square"}>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+            <Presence presence={"offline"} corner={"bottomRight"} />
+          </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar"}
+          secondaryText={"Prova avatar items"}
+        >
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+            <Status status={"locked"} corner={"topRight"} />
+          </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar"}
+          secondaryText={"Prova avatar items"}
+        >
+          <Avatar>
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/124514869?v=4"
+              alt="random photo"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+            <Presence presence={"online"} />
+          </Avatar>
+        </AvatarItem>
+        <AvatarItem
+          primaryText={" Prova Avatar con Props"}
+          secondaryText={"Prova avatar items"}
+        >
+          <Avatar
+            shape="square"
+            src="https://avatars.githubusercontent.com/u/124514869?v=4"
+            alt="random photo"
+            status={"declined"}
+            showStatus={true}
+            statusCorner="topRight"
+            statusSize="sm"
+          />
         </AvatarItem>
       </div>
 

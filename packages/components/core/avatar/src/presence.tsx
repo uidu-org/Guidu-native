@@ -6,32 +6,31 @@ import { FC, ReactNode } from 'react';
 /*                                 Presence Type                              */
 /* -------------------------------------------------------------------------- */
 
-type PresenceType = ('online' | 'busy' | 'focus' | 'offline') | ReactNode;
+export type PresenceType =
+  | ('online' | 'busy' | 'focus' | 'offline')
+  | ReactNode;
 
 /* -------------------------------------------------------------------------- */
 /*                          PresenceWrapper Props                             */
 /* -------------------------------------------------------------------------- */
 
-interface PresenceWrapperProps
-  extends FC,
-    VariantProps<typeof presenceWrapperVariants> {
-  children: ReactNode;
+interface PresenceProps extends FC, VariantProps<typeof presenceVariants> {
+  presence: PresenceType;
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                 Presence Props                             */
+/*                            Presence Item Props                             */
 /* -------------------------------------------------------------------------- */
 
-interface PresenceProps {
+interface PresenceItemProps {
   presence?: PresenceType;
-  children?: ReactNode;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                               PresenceWrapper                              */
 /* -------------------------------------------------------------------------- */
 
-const presenceWrapperVariants = cva('absolute pointer-events-none', {
+const presenceVariants = cva('absolute pointer-events-none', {
   variants: {
     corner: {
       topLeft: 'top-0 left-0',
@@ -54,24 +53,20 @@ const presenceWrapperVariants = cva('absolute pointer-events-none', {
   },
 });
 
-export const PresenceWrapper: FC<PresenceWrapperProps> = ({
-  corner,
-  size,
-  children,
-}) => (
+export const Presence: FC<PresenceProps> = ({ corner, size, presence }) => (
   <span
     className={cn(
-      presenceWrapperVariants({
+      presenceVariants({
         corner,
         size,
       })
     )}
   >
-    {children}
+    <PresenceItem presence={presence} />
   </span>
 );
 
-PresenceWrapper.displayName = 'PresenceWrapper';
+Presence.displayName = 'Presence';
 
 /* -------------------------------------------------------------------------- */
 /*                                   getPresenceSVG                           */
@@ -175,21 +170,24 @@ const getPresenceSVG = (presence: PresenceType) => {
 };
 
 /* -------------------------------------------------------------------------- */
-/*                                   Presence                                 */
+/*                                Presence Item                               */
 /* -------------------------------------------------------------------------- */
 
-export const Presence: FC<PresenceProps> = ({ presence, children }) => (
-  <span
-    id="outer"
-    className="size-[100%] flex items-center justify-center border rounded-full box-border overflow-hidden "
-  >
+const PresenceItem: FC<PresenceItemProps> = ({ presence }) => {
+  const customPresence = typeof presence === 'object' ? presence : null;
+  return (
     <span
-      id="inner"
-      className="size-[100%] flex justify-center items-center overflow-hidden border rounded-full"
+      id="outer"
+      className="size-[100%] flex items-center justify-center border rounded-full box-border overflow-hidden "
     >
-      {children || (presence && getPresenceSVG(presence))}
+      <span
+        id="inner"
+        className="size-[100%] flex justify-center items-center overflow-hidden rounded-full"
+      >
+        {customPresence || (presence && getPresenceSVG(presence))}
+      </span>
     </span>
-  </span>
-);
+  );
+};
 
-Presence.displayName = 'Presence';
+PresenceItem.displayName = 'PresenceItem';

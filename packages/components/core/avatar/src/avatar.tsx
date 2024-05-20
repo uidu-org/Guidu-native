@@ -10,11 +10,28 @@ import Loading from './icons/Loading';
 import PencilIcon from './icons/Pencil';
 import RemoveIcon from './icons/Remove';
 import User from './icons/User';
+import { Presence, PresenceType } from './presence';
+import { Status, StatusType } from './status';
 
 /* ------------------------- extend AvatarProps here ------------------------ */
 interface AvatarProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>,
-    VariantProps<typeof avatarVariants> {}
+    VariantProps<typeof avatarVariants> {
+  shape?: 'square' | 'circle';
+  src: string;
+  alt?: string;
+  onClickAction?: () => void;
+  typeIconAction?: 'remove' | 'edit' | React.ReactNode;
+  typeFallback?: 'user' | 'loading';
+  status?: StatusType;
+  presence?: PresenceType;
+  presenceCorner?: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
+  presenceSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  statusSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  statusCorner?: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
+  showStatus?: boolean;
+  showPresence?: boolean;
+}
 
 /* ------------------------- extend AvatarImageProps here ------------------------ */
 interface AvatarImageProps
@@ -67,13 +84,55 @@ const avatarImageVariants = cva('relative overflow-hidden', {
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   AvatarProps
->(({ className, size, ...props }, ref) => (
-  <AvatarPrimitive.Root
-    ref={ref}
-    className={cn(avatarVariants({ size }), className)}
-    {...props}
-  />
-));
+>(
+  (
+    {
+      className,
+      size,
+      shape = 'circle',
+      src,
+      alt,
+      onClickAction,
+      typeIconAction = 'remove',
+      typeFallback,
+      status,
+      presence,
+      presenceCorner = 'topLeft',
+      presenceSize = 'md',
+      statusCorner = 'topLeft',
+      statusSize = 'md',
+      showStatus = false,
+      showPresence = false,
+      ...props
+    },
+    ref
+  ) => (
+    <AvatarPrimitive.Root
+      ref={ref}
+      className={cn(avatarVariants({ size }), className)}
+      {...props}
+    >
+      <AvatarImage
+        shape={shape}
+        src={src}
+        alt={alt}
+        onClickAction={onClickAction}
+        typeIconAction={typeIconAction}
+      />
+      <AvatarFallback typeFallback={typeFallback} />
+      {showPresence && (
+        <Presence
+          presence={presence}
+          corner={presenceCorner}
+          size={presenceSize}
+        />
+      )}
+      {showStatus && (
+        <Status status={status} corner={statusCorner} size={statusSize} />
+      )}
+    </AvatarPrimitive.Root>
+  )
+);
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 /* -------------------------------------------------------------------------- */

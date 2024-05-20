@@ -1,8 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from './avatar';
 import { AvatarGroup } from './avatarGroup';
 import { AvatarItem } from './avatarItem';
-import { Presence, PresenceWrapper } from './presence';
-import { Status, StatusWrapper } from './status';
+import { Presence } from './presence';
+import { Status } from './status';
 
 export {
   Avatar,
@@ -11,7 +11,5 @@ export {
   AvatarImage,
   AvatarItem,
   Presence,
-  PresenceWrapper,
   Status,
-  StatusWrapper,
 };

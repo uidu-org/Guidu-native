@@ -28,7 +28,7 @@
     "removeComments": false,
     "skipLibCheck": true,
     "sourceMap": false,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "lib": ["dom", "esnext"],
     "strictNullChecks": true,
     "isolatedModules": true,
@@ -43,6 +43,7 @@
     "**/node_modules",
     "**/dist",
     "**/types",
+    "expect-matchers.d.ts",
     "docs/next/out",
     "docs/next/.next",
     "docs/next/.tamagui"

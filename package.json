@@ -26,6 +26,7 @@
     "fix": "manypkg fix && cd apps/expo && npx expo install --fix",
     "dev": "yarn turbo dev --concurrency=100 --continue",
     "build": "yarn workspaces foreach --all --exclude next-app run build",
+    "release": "yarn turbo:build:web-core && yarn changeset publish ",
     "turbo:dev:web-core": "turbo dev --output-logs=errors-only --concurrency=31 --filter='./packages/components/core/*'",
     "turbo:dev:web-forms": "turbo dev --output-logs=errors-only --concurrency=31 --filter='./packages/components/forms/*'",
     "turbo:build:web-core": "turbo build --filter='./packages/src/core' ",

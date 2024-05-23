@@ -1,3 +1,5 @@
+'use client';
+
 import { Input, InputProps } from '@uidu/input-ui';
 import { cn } from '@uidu/lib';
 import { useState } from 'react';

@@ -2,6 +2,7 @@
   "name": "@uidu/storybook",
   "packageManager": "yarn@4.1.0",
   "main": "src/index.ts",
+  "private": "false",
   "sideEffects": true,
   "files": [
     "dist"

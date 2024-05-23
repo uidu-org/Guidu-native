@@ -63,3 +63,9 @@ styled-system-studio
 
 # jest
 coverage
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

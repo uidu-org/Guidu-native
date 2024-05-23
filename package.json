@@ -13,6 +13,8 @@
     "./packages/storybook"
   ],
   "scripts": {
+    "postinstall": "yarn turbo:build:web-core ",
+    "check:dep": "yarn depcheck",
     "storybook": "cd packages/storybook && npx storybook dev -p 6006",
     "build-storybook": "cd packages/storybook && yarn build-storybook",
     "watch": "yarn workspaces foreach -pi run watch",
@@ -67,6 +69,7 @@
     "check-dependency-version-consistency": "^4.1.0",
     "chromatic": "^11.4.0",
     "cross-env": "^7.0.3",
+    "depcheck": "^1.4.7",
     "eslint": "^8.57.0",
     "eslint-config-uidu": "^0.9.6",
     "eslint-plugin-mdx": "^3.1.5",

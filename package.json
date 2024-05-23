@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "storybook": "cd packages/storybook && npx storybook dev -p 6006",
+    "build-storybook": "cd packages/storybook && yarn build-storybook",
     "watch": "yarn workspaces foreach -pi run watch",
     "vercel:install": "yarn set version 3.5 && yarn install",
     "docs": "cd docs && yarn next",
@@ -37,7 +38,8 @@
     "yarn:npmPublish:web-forms": "cd packages/components/core && yarn workspaces foreach -A run npmPublishFormsWeb",
     "test:jest": "jest --no-cache",
     "test:pw": "playwright test",
-    "test": "run test:jest && echo \"[ finish JEST ==> start PLAYWRIGHT ]\" && run test:pw"
+    "test": "run test:jest && echo \"[ finish JEST ==> start PLAYWRIGHT ]\" && run test:pw",
+    "chromatic": "npx chromatic"
   },
   "resolutions": {
     "cmdk": "0.2.1",
@@ -63,6 +65,7 @@
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "check-dependency-version-consistency": "^4.1.0",
+    "chromatic": "^11.4.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-config-uidu": "^0.9.6",

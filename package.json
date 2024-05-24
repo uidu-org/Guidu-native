@@ -57,11 +57,13 @@
     "@babel/preset-typescript": "^7.24.1",
     "@changesets/cli": "^2.27.1",
     "@manypkg/cli": "^0.21.4",
+    "@playwright/test": "^1.44.1",
     "@preconstruct/cli": "^2.8.4",
     "@testing-library/react": "^15.0.7",
     "@types/babel__core": "^7.20.5",
     "@types/babel__preset-env": "^7.9.6",
     "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.12",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
@@ -87,9 +89,5 @@
   "packageManager": "yarn@4.1.1",
   "preconstruct": {
     "packages": []
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.44.1",
-    "@types/node": "^20.12.12"
   }
 }

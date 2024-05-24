@@ -7163,7 +7163,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/core-ui@workspace:packages/src/core":
+"@uidu/core-ui@workspace:^, @uidu/core-ui@workspace:packages/src/core":
   version: 0.0.0-use.local
   resolution: "@uidu/core-ui@workspace:packages/src/core"
   dependencies:
@@ -7277,7 +7277,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/forms-ui@workspace:packages/src/forms":
+"@uidu/forms-ui@workspace:^, @uidu/forms-ui@workspace:packages/src/forms":
   version: 0.0.0-use.local
   resolution: "@uidu/forms-ui@workspace:packages/src/forms"
   dependencies:
@@ -7331,6 +7331,12 @@ __metadata:
     "@types/unist": "npm:^3.0.2"
     "@typescript-eslint/eslint-plugin": "npm:^7.9.0"
     "@typescript-eslint/parser": "npm:^7.9.0"
+    "@uidu/avatar-ui": "workspace:^"
+    "@uidu/badge-ui": "workspace:^"
+    "@uidu/button-ui": "workspace:^"
+    "@uidu/core-ui": "workspace:^"
+    "@uidu/forms-ui": "workspace:^"
+    "@uidu/switch-ui": "workspace:^"
     autoprefixer: "npm:^10.4.19"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.1"

@@ -7906,7 +7906,6 @@ __metadata:
     tailwind-merge: "npm:^2.3.0"
     tailwindcss: "npm:^3.4.3"
     tailwindcss-animate: "npm:^1.0.7"
-    tsup: "npm:^8.0.2"
     typescript: "npm:^5.4.5"
     unist-builder: "npm:^4.0.0"
     unist-util-visit: "npm:^5.0.0"
@@ -8213,7 +8212,6 @@ __metadata:
     react-dom: "npm:^18.3.1"
     storybook: "npm:^8.1.1"
     tailwindcss: "npm:^3.4.3"
-    tsup: "npm:^8.0.2"
     vite: "npm:^4.5.3"
   languageName: unknown
   linkType: soft

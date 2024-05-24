@@ -14,6 +14,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off',
     'react/function-component-definition': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',

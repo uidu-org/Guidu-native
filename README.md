@@ -43,6 +43,14 @@ Start all packages and next
 yarn dev
 ```
 
+# Chromatic
+
+to start chromatic you need to setup project token
+
+```bash
+npx chromatic --project-token <your-project-token>
+```
+
 Pull requests are more than welcome, we're currently making this repo more contributors-friendly.
 
 ## Common pitfalls

@@ -1,0 +1,26 @@
+name: QA
+
+on:
+  pull_request:
+
+jobs:
+  checks:
+    name: QA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Unit tests
+        run: yarn test:jest
+
+      # - name: E2E tests
+      #   run: yarn test:pw

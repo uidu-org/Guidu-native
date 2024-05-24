@@ -30,6 +30,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -59,3 +60,17 @@ node_modules/
 ## Panda
 styled-system
 styled-system-studio
+
+
+# jest
+coverage
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# storybook
+storybook-static
+/storybook-static

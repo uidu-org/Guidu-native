@@ -1,4 +1,5 @@
-import { Skeleton } from "@uidu/core-ui";
+"use client";
+import { Skeleton } from "@uidu/skeleton-ui";
 
 export default function SkeletonCard() {
   return (

@@ -1,0 +1,110 @@
+---
+title: "Mode Toggle"
+description: a beautiful mode toggle.
+---
+
+import {Button} from "@uidu/button-ui"
+import ModeToggle from "../../../src/docs/demos/core/mode-toggle.tsx"
+
+    <div className="flex items-center">
+        <Button variant="link"><a className="mr-4 !no-underline" href="https://www.npmjs.com/package/@uidu/button-ui" target="_blank">@uidu/button</a></Button>
+        <Button variant="link"><a className="mr-4 !no-underline" href="https://www.npmjs.com/package/@uidu/dropdown-menu-ui" target="_blank">@uidu/dropdown-menu</a></Button>
+        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/button" target="_blank">Button Source</a></Button>
+        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/dropdown-menu" target="_blank">Dropdown menu Source</a></Button>
+    </div>
+
+## Usage 
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <ModeToggle />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx 
+                "use client";
+
+                import { Moon, Sun } from "lucide-react";
+                import { useTheme } from "next-themes";
+
+                import {
+                  Button,
+                  DropdownMenu,
+                  DropdownMenuContent,
+                  DropdownMenuItem,
+                  DropdownMenuTrigger,
+                } from "@uidu/core-ui";
+
+                export default function ModeToggle() {
+                  const { setTheme } = useTheme();
+
+                  return (
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="outline" size="icon">
+                          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                          <span className="sr-only">Toggle theme</span>
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        <DropdownMenuItem onClick={() => setTheme("light")}>
+                          Light
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setTheme("dark")}>
+                          Dark
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setTheme("system")}>
+                          System
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation 
+
+      <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/button-ui @uidu/dropdown-menu-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/button-ui @uidu/dropdown-menu-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import 
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import {
+                  Button,
+                  DropdownMenu,
+                  DropdownMenuContent,
+                  DropdownMenuItem,
+                  DropdownMenuTrigger,
+                } from "@uidu/core-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import {
+                  Button,
+                  DropdownMenu,
+                  DropdownMenuContent,
+                  DropdownMenuItem,
+                  DropdownMenuTrigger,
+                } from "@uidu/core-ui";
+            ```
+        </Tab>
+    </Tabs>
+
+

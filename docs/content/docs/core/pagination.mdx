@@ -3,13 +3,114 @@ title: "Pagination"
 description: a great way to use pagination
 ---
 
+import { Button } from "@uidu/button-ui";
 import PaginationDemo from "../../../src/docs/demos/core/pagination-demo";
 
     <div className="flex items-center">
-        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/pagination-ui" target="_blank">@uidu/pagination-ui/</a>
-        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/pagination" target="_blank">Source</a>
+        <Button variant="link"><a className="mr-4 !no-underline" href="https://www.npmjs.com/package/@uidu/pagination-ui" target="_blank">@uidu/pagination-ui</a></Button>
+        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/pagination" target="_blank">Source</a></Button>
     </div>
 
-<div className="not-prose">
-  <PaginationDemo />
-</div>
+## Pagination
+
+<PaginationDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <PaginationDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client"
+
+                import {
+                  Pagination,
+                  PaginationContent,
+                  PaginationEllipsis,
+                  PaginationItem,
+                  PaginationLink,
+                  PaginationNext,
+                  PaginationPrevious,
+                } from "@uidu/core-ui"
+
+                export default function PaginationDemo() {
+                  return (
+                    <Pagination>
+                      <PaginationContent>
+                        <PaginationItem>
+                          <PaginationPrevious href="#" />
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationLink href="#">1</PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationLink href="#" isActive>
+                            2
+                          </PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationLink href="#">3</PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationNext href="#" />
+                        </PaginationItem>
+                      </PaginationContent>
+                    </Pagination>
+                  )
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/pagination-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/pagination-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+              import {
+                Pagination,
+                PaginationContent,
+                PaginationEllipsis,
+                PaginationItem,
+                PaginationLink,
+                PaginationNext,
+                PaginationPrevious,
+              } from "@uidu/core-ui"
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+              import {
+                Pagination,
+                PaginationContent,
+                PaginationEllipsis,
+                PaginationItem,
+                PaginationLink,
+                PaginationNext,
+                PaginationPrevious,
+              } from "@uidu/pagination-ui"
+            ```
+        </Tab>
+    </Tabs>

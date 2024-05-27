@@ -12,7 +12,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@uidu/core-ui";
-import { Switch } from "@uidu/forms-ui";
 
 const notifications = [
   {
@@ -49,7 +48,7 @@ export default function CardDemo({ className, ...props }: CardProps) {
               Send notifications to device.
             </p>
           </div>
-          <Switch />
+          {/* <Switch /> */}
         </div>
         <div>
           {notifications.map((notification, index) => (

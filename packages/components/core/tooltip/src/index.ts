@@ -1,4 +1,16 @@
-import { Tooltip } from './tooltip'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipRoot,
+  TooltipTrigger,
+} from './tooltip';
 
 // export component
-export { Tooltip }
+export {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipRoot,
+  TooltipTrigger,
+};

@@ -1,0 +1,96 @@
+---
+title: "Tooltip"
+description: a beautiful Tooltip
+---
+
+import { Button } from "@uidu/button-ui";
+import TooltipDemo from "../../../src/docs/demos/core/tooltip-demo.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link"><a className="mr-4 !no-underline" href="https://www.npmjs.com/package/@uidu/tooltip-ui" target="_blank">@uidu/tooltip-ui</a></Button>
+        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/tooltip" target="_blank">Source</a></Button>
+    </div>
+
+## Tooltip
+
+    <TooltipDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <TooltipDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client";
+
+                import {
+                Button,
+                TooltipContent,
+                TooltipProvider,
+                TooltipRoot,
+                TooltipTrigger,
+                } from "@uidu/core-ui";
+
+                export default function TooltipDemo() {
+                return (
+                    <TooltipProvider>
+                    <TooltipRoot>
+                        <TooltipTrigger asChild>
+                        <Button variant="outline">Hover</Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                        <p>Add to library</p>
+                        </TooltipContent>
+                    </TooltipRoot>
+                    </TooltipProvider>
+                );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/tooltip-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/tooltip-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import {
+                    Button,
+                    TooltipContent,
+                    TooltipProvider,
+                    TooltipRoot,
+                    TooltipTrigger,
+                } from "@uidu/core-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import {
+                    TooltipContent,
+                    TooltipProvider,
+                    TooltipRoot,
+                    TooltipTrigger,
+                } from "@uidu/tooltip-ui";
+                import { Button } from "@uidu/button-ui";
+            ```
+        </Tab>
+    </Tabs>

@@ -1,15 +1,15 @@
 import {
   Button,
   Label,
-  Popover,
   PopoverContent,
+  PopoverRoot,
   PopoverTrigger,
 } from "@uidu/core-ui";
 import { Input } from "@uidu/forms-ui";
 
 export default function PopoverDemo() {
   return (
-    <Popover>
+    <PopoverRoot>
       <PopoverTrigger asChild>
         <Button variant="outline">Open popover</Button>
       </PopoverTrigger>
@@ -57,6 +57,6 @@ export default function PopoverDemo() {
           </div>
         </div>
       </PopoverContent>
-    </Popover>
+    </PopoverRoot>
   );
 }

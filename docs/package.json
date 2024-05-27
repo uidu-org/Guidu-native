@@ -22,6 +22,7 @@
     "@react-stately/tree": "^3.8.0",
     "@react-types/shared": "^3.23.0",
     "@tailwindcss/typography": "^0.5.13",
+    "@tanstack/react-table": "^8.17.3",
     "@types/mdx": "^2.0.13",
     "@types/unist": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^7.9.0",

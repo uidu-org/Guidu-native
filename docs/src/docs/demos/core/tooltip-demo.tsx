@@ -1,22 +1,24 @@
+"use client";
+
 import {
   Button,
-  Tooltip,
   TooltipContent,
   TooltipProvider,
+  TooltipRoot,
   TooltipTrigger,
 } from "@uidu/core-ui";
 
 export default function TooltipDemo() {
   return (
     <TooltipProvider>
-      <Tooltip>
+      <TooltipRoot>
         <TooltipTrigger asChild>
           <Button variant="outline">Hover</Button>
         </TooltipTrigger>
         <TooltipContent>
           <p>Add to library</p>
         </TooltipContent>
-      </Tooltip>
+      </TooltipRoot>
     </TooltipProvider>
   );
 }

@@ -1,3 +1,4 @@
+"use client";
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -12,7 +13,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@uidu/core-ui";
+} from "@uidu/menubar-ui";
 
 export default function MenubarDemo() {
   return (

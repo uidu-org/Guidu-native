@@ -1,0 +1,197 @@
+---
+title: "Menubar"
+description: a beautiful menubar.
+---
+
+import { Button } from "@uidu/button-ui";
+import MenubarDemo from "../../../src/docs/demos/core/menubar-demo.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link"><a className="mr-4 !no-underline" href="" target="_blank">@uidu/TBD</a></Button>
+        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/menubar" target="_blank">Source</a></Button>
+    </div>
+
+## Menubar
+
+<MenubarDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <MenubarDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client";
+                import {
+                  Menubar,
+                  MenubarCheckboxItem,
+                  MenubarContent,
+                  MenubarItem,
+                  MenubarMenu,
+                  MenubarRadioGroup,
+                  MenubarRadioItem,
+                  MenubarSeparator,
+                  MenubarShortcut,
+                  MenubarSub,
+                  MenubarSubContent,
+                  MenubarSubTrigger,
+                  MenubarTrigger,
+                } from "@uidu/menubar-ui";
+
+                export default function MenubarDemo() {
+                  return (
+                    <Menubar>
+                      <MenubarMenu>
+                        <MenubarTrigger>File</MenubarTrigger>
+                        <MenubarContent>
+                          <MenubarItem>
+                            New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+                          </MenubarItem>
+                          <MenubarItem>
+                            New Window <MenubarShortcut>⌘N</MenubarShortcut>
+                          </MenubarItem>
+                          <MenubarItem disabled>New Incognito Window</MenubarItem>
+                          <MenubarSeparator />
+                          <MenubarSub>
+                            <MenubarSubTrigger>Share</MenubarSubTrigger>
+                            <MenubarSubContent>
+                              <MenubarItem>Email link</MenubarItem>
+                              <MenubarItem>Messages</MenubarItem>
+                              <MenubarItem>Notes</MenubarItem>
+                            </MenubarSubContent>
+                          </MenubarSub>
+                          <MenubarSeparator />
+                          <MenubarItem>
+                            Print... <MenubarShortcut>⌘P</MenubarShortcut>
+                          </MenubarItem>
+                        </MenubarContent>
+                      </MenubarMenu>
+                      <MenubarMenu>
+                        <MenubarTrigger>Edit</MenubarTrigger>
+                        <MenubarContent>
+                          <MenubarItem>
+                            Undo <MenubarShortcut>⌘Z</MenubarShortcut>
+                          </MenubarItem>
+                          <MenubarItem>
+                            Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+                          </MenubarItem>
+                          <MenubarSeparator />
+                          <MenubarSub>
+                            <MenubarSubTrigger>Find</MenubarSubTrigger>
+                            <MenubarSubContent>
+                              <MenubarItem>Search the web</MenubarItem>
+                              <MenubarSeparator />
+                              <MenubarItem>Find...</MenubarItem>
+                              <MenubarItem>Find Next</MenubarItem>
+                              <MenubarItem>Find Previous</MenubarItem>
+                            </MenubarSubContent>
+                          </MenubarSub>
+                          <MenubarSeparator />
+                          <MenubarItem>Cut</MenubarItem>
+                          <MenubarItem>Copy</MenubarItem>
+                          <MenubarItem>Paste</MenubarItem>
+                        </MenubarContent>
+                      </MenubarMenu>
+                      <MenubarMenu>
+                        <MenubarTrigger>View</MenubarTrigger>
+                        <MenubarContent>
+                          <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
+                          <MenubarCheckboxItem checked>
+                            Always Show Full URLs
+                          </MenubarCheckboxItem>
+                          <MenubarSeparator />
+                          <MenubarItem inset>
+                            Reload <MenubarShortcut>⌘R</MenubarShortcut>
+                          </MenubarItem>
+                          <MenubarItem disabled inset>
+                            Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
+                          </MenubarItem>
+                          <MenubarSeparator />
+                          <MenubarItem inset>Toggle Fullscreen</MenubarItem>
+                          <MenubarSeparator />
+                          <MenubarItem inset>Hide Sidebar</MenubarItem>
+                        </MenubarContent>
+                      </MenubarMenu>
+                      <MenubarMenu>
+                        <MenubarTrigger>Profiles</MenubarTrigger>
+                        <MenubarContent>
+                          <MenubarRadioGroup value="benoit">
+                            <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
+                            <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
+                            <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+                          </MenubarRadioGroup>
+                          <MenubarSeparator />
+                          <MenubarItem inset>Edit...</MenubarItem>
+                          <MenubarSeparator />
+                          <MenubarItem inset>Add Profile...</MenubarItem>
+                        </MenubarContent>
+                      </MenubarMenu>
+                    </Menubar>
+                  );
+                }
+
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/menubar-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/menubar-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                    import {
+                      Menubar,
+                      MenubarCheckboxItem,
+                      MenubarContent,
+                      MenubarItem,
+                      MenubarMenu,
+                      MenubarRadioGroup,
+                      MenubarRadioItem,
+                      MenubarSeparator,
+                      MenubarShortcut,
+                      MenubarSub,
+                      MenubarSubContent,
+                      MenubarSubTrigger,
+                      MenubarTrigger,
+                    } from "@uidu/core-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                    import {
+                      Menubar,
+                      MenubarCheckboxItem,
+                      MenubarContent,
+                      MenubarItem,
+                      MenubarMenu,
+                      MenubarRadioGroup,
+                      MenubarRadioItem,
+                      MenubarSeparator,
+                      MenubarShortcut,
+                      MenubarSub,
+                      MenubarSubContent,
+                      MenubarSubTrigger,
+                      MenubarTrigger,
+                    } from "@uidu/menubar-ui";
+            ```
+        </Tab>
+    </Tabs>

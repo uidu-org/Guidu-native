@@ -27,6 +27,7 @@ interface AvatarGroupProps extends VariantProps<typeof avatarGroupVariants> {
   maxCount?: number;
   items: ItemProps[];
   onClickActions?: (id: string) => void;
+  customAvatar?: FC<ItemProps>;
 }
 
 const avatarGroupVariants = cva('border', {
@@ -42,7 +43,7 @@ const avatarGroupVariants = cva('border', {
 });
 
 /* -------------------------------------------------------------------------- */
-/*                            Show hided Avatars                              */
+/* Show hided Avatars */
 /* -------------------------------------------------------------------------- */
 
 const ShowMore: FC<AvatarGroupProps> = ({ items, maxCount }) => {
@@ -51,8 +52,8 @@ const ShowMore: FC<AvatarGroupProps> = ({ items, maxCount }) => {
       <AvatarItem primaryText={item.name}>
         <Avatar
           key={item.id}
-          //  typeIconAction="remove"
-          //  onClickAction={() => onClickActions(item?.id)}
+          // typeIconAction="remove"
+          // onClickAction={() => onClickActions(item?.id)}
           src={item?.img}
           shape={item.shape}
         />
@@ -72,7 +73,7 @@ const ShowMore: FC<AvatarGroupProps> = ({ items, maxCount }) => {
 };
 
 /* -------------------------------------------------------------------------- */
-/*                                 Avatar Group                               */
+/* Avatar Group */
 /* -------------------------------------------------------------------------- */
 
 export const AvatarGroup: FC<AvatarGroupProps> = ({
@@ -80,25 +81,39 @@ export const AvatarGroup: FC<AvatarGroupProps> = ({
   variant,
   onClickActions,
   items,
-}) => (
-  <div
-    className={cn(
-      avatarGroupVariants({
-        variant,
-      })
-    )}
-  >
-    {items.slice(0, maxCount ?? items.length + 1).map((item) => (
-      <Avatar
-        key={item.id}
-        //  typeIconAction="remove"
-        //  onClickAction={() => onClickActions(item?.id)}
-        src={item?.img}
-        shape={item.shape}
-      />
-    ))}
-    {items.length > maxCount && <ShowMore items={items} maxCount={maxCount} />}
-  </div>
-);
+  customAvatar,
+}) => {
+  const CustomAvatar = customAvatar;
+  return (
+    <div
+      className={cn(
+        avatarGroupVariants({
+          variant,
+        })
+      )}
+    >
+      {items.slice(0, maxCount ?? items.length + 1).map(
+        (item) =>
+          // const Component: FC<AvatarProps> = () => component;
+          !CustomAvatar ? (
+            <Avatar
+              key={item.id}
+              // typeIconAction="remove"
+              // onClickAction={() => onClickActions(item?.id)}
+              src={item.img}
+              shape={item.shape}
+            />
+          ) : (
+            <CustomAvatar {...item} />
+            // createElement(customAvatar, { src: item.img, shape: item.shape })
+          )
+        // <component key={item.id} src={item.img} shape={item.shape} />
+      )}
+      {items.length > maxCount && (
+        <ShowMore items={items} maxCount={maxCount} />
+      )}
+    </div>
+  );
+};
 
 AvatarGroup.displayName = 'AvatarGroup';

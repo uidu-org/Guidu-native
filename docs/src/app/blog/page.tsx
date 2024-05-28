@@ -1,3 +1,5 @@
+"use client";
+
 import BreadcrumbDemo from "@/docs/demos/core/breadcrumb-demo";
 import ToastDemo from "@/docs/demos/core/toast-demo";
 import {
@@ -12,6 +14,20 @@ import {
   Status,
 } from "@uidu/core-ui";
 import Link from "next/link";
+
+function customAvatar(item) {
+  console.log("item", item);
+  return (
+    <p>Pippo {item.id}</p>
+    // <Avatar
+    //   key={src}
+    //   // typeIconAction="remove"
+    //   // onClickAction={() => onClickActions(item?.id)}
+    //   src={src}
+    //   shape={shape}
+    // />
+  );
+}
 
 export default function Page() {
   const item = [
@@ -141,6 +157,7 @@ export default function Page() {
           </Avatar>
         </AvatarGroup> */}
         <AvatarGroup items={item} maxCount={3} />
+        <AvatarGroup items={item} maxCount={3} customAvatar={customAvatar} />
         <AvatarItem
           primaryText={" Prova Avatar"}
           secondaryText={"Prova avatar items"}

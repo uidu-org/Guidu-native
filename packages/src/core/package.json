@@ -38,7 +38,7 @@
     "@uidu/toast-ui": "workspace:^",
     "@uidu/tooltip-ui": "workspace:^",
     "react": "^18.3.1",
-    "react-hook-form": "^7.51.4"
+    "react-hook-form": "^7.51.5"
   },
   "devDependencies": {
     "@types/react": "^18.3.2",

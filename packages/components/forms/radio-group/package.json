@@ -12,7 +12,7 @@
     "@uidu/form-ui": "workspace:^",
     "@uidu/lib": "workspace:^",
     "react": "^18.3.1",
-    "react-hook-form": "^7.51.4"
+    "react-hook-form": "^7.51.5"
   },
   "devDependencies": {
     "@types/react": "^18.3.2",

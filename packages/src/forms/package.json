@@ -18,7 +18,6 @@
     "@uidu/input-ui": "workspace:^",
     "@uidu/lib": "workspace:^",
     "@uidu/multiselect-ui": "workspace:^",
-    "@uidu/pin-code-ui": "workspace:^",
     "@uidu/radio-group-ui": "workspace:^",
     "@uidu/select-ui": "workspace:^",
     "@uidu/slider-ui": "workspace:^",

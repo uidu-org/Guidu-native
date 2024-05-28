@@ -8,17 +8,17 @@ import Link from "next/link";
 export default function MainPage() {
   return (
     <div className="grid min-h-dvh place-content-center">
-      <div className="w-fit space-y-7 p-2">
+      <div className="p-2 w-fit space-y-7">
         <h1 className="text-3xl font-bold">
           The New UI-kit,
           <TextGenerator
             className="inline-block text-4xl font-bold"
             words={" made with love"}
           />{" "}
-          <HandHeart className="inline-block h-9 w-9 animate-pulse text-purple-700" />{" "}
+          <HandHeart className="inline-block text-purple-700 h-9 w-9 animate-pulse" />{" "}
         </h1>
 
-        <div className="mx-auto flex w-56 justify-around">
+        <div className="flex justify-around w-56 mx-auto">
           <Link href={"/docs/core/accordion"}>
             <Button>Docs example</Button>
           </Link>

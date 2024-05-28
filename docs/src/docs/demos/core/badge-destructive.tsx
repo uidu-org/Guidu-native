@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Badge } from "@uidu/core-ui"
+import { Badge } from "@uidu/core-ui";
 
 export default function BadgeDestructive() {
-  return <Badge variant="destructive">Destructive</Badge>
+  return <Badge variant="removed">Destructive</Badge>;
 }

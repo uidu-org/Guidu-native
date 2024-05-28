@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Badge } from "@uidu/core-ui"
+import { Badge } from "@uidu/core-ui";
 
 export default function BadgeOutline() {
-  return <Badge variant="outline">Outline</Badge>
+  return <Badge variant="added">Outline</Badge>;
 }

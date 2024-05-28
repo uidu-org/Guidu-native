@@ -7589,7 +7589,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-datepicker: "npm:^6.9.0"
     react-day-picker: "npm:^8.10.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -7630,7 +7630,7 @@ __metadata:
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -7719,7 +7719,7 @@ __metadata:
     "@uidu/toast-ui": "workspace:^"
     "@uidu/tooltip-ui": "workspace:^"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -7800,7 +7800,7 @@ __metadata:
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -7829,7 +7829,7 @@ __metadata:
     "@uidu/toggle-ui": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -7892,7 +7892,7 @@ __metadata:
     prettier-plugin-tailwindcss: "npm:^0.5.14"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     react-router-dom: "npm:^6.23.1"
     react-use: "npm:^17.5.0"
     recharts: "npm:^2.12.7"
@@ -7934,7 +7934,7 @@ __metadata:
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -8004,7 +8004,7 @@ __metadata:
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     react-use: "npm:^17.5.0"
     tsup: "npm:^8.0.2"
   languageName: unknown
@@ -8046,7 +8046,7 @@ __metadata:
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -8085,7 +8085,7 @@ __metadata:
     "@uidu/form-ui": "workspace:^"
     "@uidu/lib": "workspace:^"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -8124,7 +8124,7 @@ __metadata:
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -8173,7 +8173,7 @@ __metadata:
     "@types/react": "npm:^18.3.2"
     "@uidu/lib": "workspace:^"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -8223,7 +8223,7 @@ __metadata:
     "@types/react": "npm:^18.3.2"
     "@uidu/lib": "workspace:^"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -8261,7 +8261,7 @@ __metadata:
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -8302,7 +8302,7 @@ __metadata:
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
   languageName: unknown
   linkType: soft
@@ -8342,7 +8342,7 @@ __metadata:
     embla-carousel-react: "npm:8.0.4"
     next-themes: "npm:^0.3.0"
     react: "npm:^18.3.1"
-    react-hook-form: "npm:^7.51.4"
+    react-hook-form: "npm:^7.51.5"
     react-resizable-panels: "npm:^2.0.19"
     tailwind-merge: "npm:^2.3.0"
     tailwindcss: "npm:^3.4.3"
@@ -19557,12 +19557,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.51.4":
-  version: 7.51.4
-  resolution: "react-hook-form@npm:7.51.4"
+"react-hook-form@npm:^7.51.5":
+  version: 7.51.5
+  resolution: "react-hook-form@npm:7.51.5"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18
-  checksum: 10/1edb032284c127756ad4b99be5da55407dac311afa05f534ad882971088efef6c1debd339f2d9783a572fe17f97d206dbeb9b5b0cdd4e7599cd86a3485e45ad0
+  checksum: 10/f4ff77989202b1faf2dede7a7730210635a6225189dcaeaeb191cea12422bcb97d2adfef0712c50d13bf5c5e14b8debc00fbba16491f86a6d24945a52cacfa59
   languageName: node
   linkType: hard
 

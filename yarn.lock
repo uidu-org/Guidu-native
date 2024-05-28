@@ -7528,6 +7528,7 @@ __metadata:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@types/react": "npm:^18.3.2"
     "@uidu/button-ui": "workspace:^"
+    "@uidu/dropdown-menu-ui": "workspace:^"
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
     react: "npm:^18.3.1"
@@ -8045,6 +8046,7 @@ __metadata:
     "@uidu/field-helper-text-ui": "workspace:^"
     "@uidu/lib": "workspace:^"
     class-variance-authority: "npm:^0.7.0"
+    input-otp: "npm:^1.2.4"
     react: "npm:^18.3.1"
     react-hook-form: "npm:^7.51.5"
     tsup: "npm:^8.0.2"
@@ -14153,6 +14155,16 @@ __metadata:
     css-in-js-utils: "npm:^3.1.0"
     fast-loops: "npm:^1.1.3"
   checksum: 10/38486ce52ffa81649d845ffc4dda421ac24ea02709b8608d61f82cf186bc57749a73e562c2b7236c3946705a0c6e9d5e3872c59280972df73b0a1161fbf51eba
+  languageName: node
+  linkType: hard
+
+"input-otp@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "input-otp@npm:1.2.4"
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 10/dde21c35334864f0add026f6a66e87eac572278c24edb72c97ba9541e5133f3d6750a4230b9a9c6093f4bd84633e4e417c8849ef844a565834392b9119b4110f
   languageName: node
   linkType: hard
 

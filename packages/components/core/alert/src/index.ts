@@ -29,5 +29,5 @@ export {
   AlertDialogPortal,
   AlertDialogTitle,
   AlertDialogTrigger,
-  AlertTitle,
+  AlertTitle
 };

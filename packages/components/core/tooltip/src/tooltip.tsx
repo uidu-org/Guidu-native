@@ -43,20 +43,23 @@ const Tooltip = ({
   offset = -5,
   placement = 'top',
   children,
-}: TooltipProps) => {
-  return (
-    <TooltipProvider>
-      <TooltipRoot delayDuration={delay}>
-        <TooltipTrigger asChild>
-          {children ?? <Button variant="outline">Hover</Button>}
-        </TooltipTrigger>
+}: TooltipProps) => (
+  <TooltipProvider>
+    <TooltipRoot delayDuration={delay}>
+      <TooltipTrigger asChild>
+        {children ?? <Button variant="outline">Hover</Button>}
+      </TooltipTrigger>
 
-        <TooltipContent side={placement} sideOffset={offset}>
-          {content}
-        </TooltipContent>
-      </TooltipRoot>
-    </TooltipProvider>
-  );
+      <TooltipContent side={placement} sideOffset={offset}>
+        {content}
+      </TooltipContent>
+    </TooltipRoot>
+  </TooltipProvider>
+);
+export {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipRoot,
+  TooltipTrigger,
 };
-
-export { Tooltip };

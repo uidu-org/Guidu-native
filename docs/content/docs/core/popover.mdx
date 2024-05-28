@@ -1,0 +1,136 @@
+---
+title: "Popover"
+description: "a beautiful popover"
+---
+
+import { Button } from "@uidu/button-ui";
+import PopoverDemo from "../../../src/docs/demos/core/popover-demo.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link"><a className="mr-4 !no-underline" href="https://www.npmjs.com/package/@uidu/popover-ui" target="_blank">@uidu/popover-ui</a></Button>
+        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/popover" target="_blank">Source</a></Button>
+    </div>
+
+## Popover
+
+<PopoverDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+              <PopoverDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                import {
+                  Button,
+                  Label,
+                  PopoverContent,
+                  PopoverRoot,
+                  PopoverTrigger,
+                } from "@uidu/core-ui";
+                import { Input } from "@uidu/forms-ui";
+
+                export default function PopoverDemo() {
+                  return (
+                    <PopoverRoot>
+                      <PopoverTrigger asChild>
+                        <Button variant="outline">Open popover</Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-80">
+                        <div className="grid gap-4">
+                          <div className="space-y-2">
+                            <h4 className="font-medium leading-none">Dimensions</h4>
+                            <p className="text-sm text-muted-foreground">
+                              Set the dimensions for the layer.
+                            </p>
+                          </div>
+                          <div className="grid gap-2">
+                            <div className="grid grid-cols-3 items-center gap-4">
+                              <Label htmlFor="width">Width</Label>
+                              <Input
+                                id="width"
+                                defaultValue="100%"
+                                className="col-span-2 h-8"
+                              />
+                            </div>
+                            <div className="grid grid-cols-3 items-center gap-4">
+                              <Label htmlFor="maxWidth">Max. width</Label>
+                              <Input
+                                id="maxWidth"
+                                defaultValue="300px"
+                                className="col-span-2 h-8"
+                              />
+                            </div>
+                            <div className="grid grid-cols-3 items-center gap-4">
+                              <Label htmlFor="height">Height</Label>
+                              <Input
+                                id="height"
+                                defaultValue="25px"
+                                className="col-span-2 h-8"
+                              />
+                            </div>
+                            <div className="grid grid-cols-3 items-center gap-4">
+                              <Label htmlFor="maxHeight">Max. height</Label>
+                              <Input
+                                id="maxHeight"
+                                defaultValue="none"
+                                className="col-span-2 h-8"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </PopoverContent>
+                    </PopoverRoot>
+                  );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/popover-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/popover-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                    import {
+                      Button,
+                      Label,
+                      PopoverContent,
+                      PopoverRoot,
+                      PopoverTrigger,
+                    } from "@uidu/core-ui";
+                    import { Input } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                    import {
+                      PopoverContent,
+                      PopoverRoot,
+                      PopoverTrigger,
+                    } from "@uidu/core-ui";
+                    import { Button } from "@uidu/button-ui";
+                    import { Label } from "@uidu/label-ui";
+                    import { Input } from "@uidu/input-ui";
+            ```
+        </Tab>
+    </Tabs>

@@ -203,17 +203,15 @@ MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName;
 const MenubarShortcut = ({
   className,
   ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      className={cn(
-        'ml-auto text-xs tracking-widest text-stone-500 dark:text-stone-400',
-        className
-      )}
-      {...props}
-    />
-  );
-};
+}: React.HTMLAttributes<HTMLSpanElement>) => (
+  <span
+    className={cn(
+      'ml-auto text-xs tracking-widest text-stone-500 dark:text-stone-400',
+      className
+    )}
+    {...props}
+  />
+);
 MenubarShortcut.displayname = 'MenubarShortcut';
 
 export {

@@ -1,0 +1,216 @@
+---
+title: "Sheet"
+description: a beautiful sheet.
+---
+
+import { Button } from "@uidu/button-ui";
+import SheetDemo from "../../../src/docs/demos/core/sheet-demo.tsx";
+import SheetSide from "../../../src/docs/demos/core/sheet-side.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link"><a className="mr-4 !no-underline" href="https://www.npmjs.com/package/@uidu/sheet-ui" target="_blank">@uidu/sheet-ui</a></Button>
+        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/sheet" target="_blank">Source</a></Button>
+    </div>
+
+## Sheet
+
+<SheetDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <SheetDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+              "use client";
+
+              import {
+                Button,
+                Label,
+                Sheet,
+                SheetClose,
+                SheetContent,
+                SheetDescription,
+                SheetFooter,
+                SheetHeader,
+                SheetTitle,
+                SheetTrigger,
+              } from "@uidu/core-ui";
+              import { Input } from "@uidu/forms-ui";
+
+              export default function SheetDemo() {
+                return (
+                  <Sheet>
+                    <SheetTrigger asChild>
+                      <Button variant="outline">Open</Button>
+                    </SheetTrigger>
+                    <SheetContent>
+                      <SheetHeader>
+                        <SheetTitle>Edit profile</SheetTitle>
+                        <SheetDescription>
+                          Make changes to your profile here. Click save when you are done.
+                        </SheetDescription>
+                      </SheetHeader>
+                      <div className="grid gap-4 py-4">
+                        <div className="grid grid-cols-4 items-center gap-4">
+                          <Label htmlFor="name" className="text-right">
+                            Name
+                          </Label>
+                          <Input id="name" value="Pedro Duarte" className="col-span-3" />
+                        </div>
+                        <div className="grid grid-cols-4 items-center gap-4">
+                          <Label htmlFor="username" className="text-right">
+                            Username
+                          </Label>
+                          <Input id="username" value="@peduarte" className="col-span-3" />
+                        </div>
+                      </div>
+                      <SheetFooter>
+                        <SheetClose asChild>
+                          <Button type="submit">Save changes</Button>
+                        </SheetClose>
+                      </SheetFooter>
+                    </SheetContent>
+                  </Sheet>
+                );
+              }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/sheet-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/sheet-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                  import {
+                    Button,
+                    Label,
+                    Sheet,
+                    SheetClose,
+                    SheetContent,
+                    SheetDescription,
+                    SheetFooter,
+                    SheetHeader,
+                    SheetTitle,
+                    SheetTrigger,
+                  } from "@uidu/core-ui";
+                  import { Input } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                  import {
+                    Sheet,
+                    SheetClose,
+                    SheetContent,
+                    SheetDescription,
+                    SheetFooter,
+                    SheetHeader,
+                    SheetTitle,
+                    SheetTrigger,
+                  } from "@uidu/sheet-ui";
+                  import { Button } from "@uidu/button-ui";
+                  import { Label } from "@uidu/label-ui";
+                  import { Input } from "@uidu/input-ui";
+            ```
+        </Tab>
+    </Tabs>
+
+## Variant
+
+    <Steps>
+        <Step>
+          ### Sheet Side
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <SheetSide />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client";
+
+                        import {
+                          Button,
+                          Label,
+                          Sheet,
+                          SheetClose,
+                          SheetContent,
+                          SheetDescription,
+                          SheetFooter,
+                          SheetHeader,
+                          SheetTitle,
+                          SheetTrigger,
+                        } from "@uidu/core-ui";
+                        import { Input } from "@uidu/forms-ui";
+
+                        const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
+
+                        type SheetSide = (typeof SHEET_SIDES)[number];
+
+                        export default function SheetSide() {
+                          return (
+                            <div className="grid grid-cols-2 gap-2">
+                              {SHEET_SIDES.map((side) => (
+                                <Sheet key={side}>
+                                  <SheetTrigger asChild>
+                                    <Button variant="outline">{side}</Button>
+                                  </SheetTrigger>
+                                  <SheetContent side={side}>
+                                    <SheetHeader>
+                                      <SheetTitle>Edit profile</SheetTitle>
+                                      <SheetDescription>
+                                        Make changes to your profile here. Click save when you're done.
+                                      </SheetDescription>
+                                    </SheetHeader>
+                                    <div className="grid gap-4 py-4">
+                                      <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="name" className="text-right">
+                                          Name
+                                        </Label>
+                                        <Input id="name" value="Pedro Duarte" className="col-span-3" />
+                                      </div>
+                                      <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="username" className="text-right">
+                                          Username
+                                        </Label>
+                                        <Input id="username" value="@peduarte" className="col-span-3" />
+                                      </div>
+                                    </div>
+                                    <SheetFooter>
+                                      <SheetClose asChild>
+                                        <Button type="submit">Save changes</Button>
+                                      </SheetClose>
+                                    </SheetFooter>
+                                  </SheetContent>
+                                </Sheet>
+                              ))}
+                            </div>
+                          );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+    </Steps>

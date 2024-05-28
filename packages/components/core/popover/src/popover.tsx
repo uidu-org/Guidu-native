@@ -1,19 +1,19 @@
-import * as PopoverPrimitive from '@radix-ui/react-popover'
-import * as React from 'react'
+import * as PopoverPrimitive from '@radix-ui/react-popover';
+import * as React from 'react';
 
-import { Button } from '@uidu/button-ui'
-import { cn } from '@uidu/lib'
+import { Button } from '@uidu/button-ui';
+import { cn } from '@uidu/lib';
 
 export interface PopoverProps {
-  children?: React.ReactNode
-  content?: React.ReactNode
-  offset?: number
-  placement?: 'top' | 'right' | 'bottom' | 'left'
+  children?: React.ReactNode;
+  content?: React.ReactNode;
+  offset?: number;
+  placement?: 'top' | 'right' | 'bottom' | 'left';
 }
 
-const PopoverRoot = PopoverPrimitive.Root
+const PopoverRoot = PopoverPrimitive.Root;
 
-const PopoverTrigger = PopoverPrimitive.Trigger
+const PopoverTrigger = PopoverPrimitive.Trigger;
 
 const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>,
@@ -31,20 +31,23 @@ const PopoverContent = React.forwardRef<
       {...props}
     />
   </PopoverPrimitive.Portal>
-))
-PopoverContent.displayName = PopoverPrimitive.Content.displayName
+));
+PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 
-const Popover = ({ children, content, offset = 5, placement }: PopoverProps) => {
-  return (
-    <PopoverRoot>
-      <PopoverTrigger asChild>
-        {children ?? <Button variant={'default'}>HoverMe</Button>}
-      </PopoverTrigger>
-      <PopoverContent side={placement} sideOffset={offset}>
-        {content}
-      </PopoverContent>
-    </PopoverRoot>
-  )
-}
+const Popover = ({
+  children,
+  content,
+  offset = 5,
+  placement,
+}: PopoverProps) => (
+  <PopoverRoot>
+    <PopoverTrigger asChild>
+      {children ?? <Button variant="default">HoverMe</Button>}
+    </PopoverTrigger>
+    <PopoverContent side={placement} sideOffset={offset}>
+      {content}
+    </PopoverContent>
+  </PopoverRoot>
+);
 
-export { Popover, PopoverContent, PopoverRoot, PopoverTrigger }
+export { Popover, PopoverContent, PopoverRoot, PopoverTrigger };

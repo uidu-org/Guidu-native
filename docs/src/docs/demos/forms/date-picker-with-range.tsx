@@ -3,10 +3,15 @@
 import { addDays, format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
 import * as React from "react";
-import { DateRange } from "react-day-picker";
+import { type DateRange } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
-import { Button, Popover, PopoverContent, PopoverTrigger } from "@uidu/core-ui";
+import {
+  Button,
+  PopoverContent,
+  PopoverRoot,
+  PopoverTrigger,
+} from "@uidu/core-ui";
 import { Calendar } from "@uidu/forms-ui";
 
 export default function DatePickerWithRange({
@@ -19,7 +24,7 @@ export default function DatePickerWithRange({
 
   return (
     <div className={cn("grid gap-2", className)}>
-      <Popover>
+      <PopoverRoot>
         <PopoverTrigger asChild>
           <Button
             id="date"
@@ -54,7 +59,7 @@ export default function DatePickerWithRange({
             numberOfMonths={2}
           />
         </PopoverContent>
-      </Popover>
+      </PopoverRoot>
     </div>
   );
 }

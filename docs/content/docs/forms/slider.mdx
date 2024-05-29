@@ -1,0 +1,78 @@
+---
+title: "Slider"
+description: a great way to use sliders.
+---
+
+import { Button } from "@uidu/button-ui";
+import SliderDemo from "../../../src/docs/demos/forms/slider-demo.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/slider-ui" target="_blank">@uidu/slider-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/slider" target="_blank">Source</a></Button>
+    </div>
+
+## Slider
+
+<SliderDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <SliderDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client"
+
+                import { cn } from "@/lib/utils";
+                import { Slider } from "@uidu/forms-ui";
+
+                type SliderProps = React.ComponentProps<typeof Slider>;
+
+                export default function SliderDemo({ className, ...props }: SliderProps) {
+                  return (
+                    <Slider
+                      defaultValue={[50]}
+                      max={100}
+                      step={1}
+                      className={cn("w-[60%]", className)}
+                      {...props}
+                    />
+                  );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/slider-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/slider-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { Slider } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { Slider } from "@uidu/slider-ui";
+            ```
+        </Tab>
+    </Tabs>

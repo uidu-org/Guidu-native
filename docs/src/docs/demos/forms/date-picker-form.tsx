@@ -9,8 +9,8 @@ import { z } from "zod";
 import { cn } from "@/lib/utils";
 import {
   Button,
-  Popover,
   PopoverContent,
+  PopoverRoot,
   PopoverTrigger,
   toast,
 } from "@uidu/core-ui";
@@ -56,7 +56,7 @@ export default function DatePickerForm() {
           render={({ field }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Date of birth</FormLabel>
-              <Popover>
+              <PopoverRoot>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
@@ -86,7 +86,7 @@ export default function DatePickerForm() {
                     initialFocus
                   />
                 </PopoverContent>
-              </Popover>
+              </PopoverRoot>
               <FormDescription>
                 Your date of birth is used to calculate your age.
               </FormDescription>

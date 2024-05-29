@@ -1,5 +1,5 @@
-import { CheckboxBase as Checkbox } from "@uidu/forms-ui"
-
+"use client";
+import { CheckboxBase as Checkbox } from "@uidu/forms-ui";
 
 export default function CheckboxDisabled() {
   return (
@@ -12,5 +12,5 @@ export default function CheckboxDisabled() {
         Accept terms and conditions
       </label>
     </div>
-  )
+  );
 }

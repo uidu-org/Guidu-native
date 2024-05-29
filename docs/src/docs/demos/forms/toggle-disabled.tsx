@@ -1,3 +1,5 @@
+"use client";
+
 import { Underline } from "lucide-react";
 
 import { Toggle } from "@uidu/forms-ui";

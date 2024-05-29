@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@uidu/core-ui";
 import { Textarea } from "@uidu/forms-ui";
 

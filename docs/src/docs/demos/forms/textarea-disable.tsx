@@ -1,3 +1,4 @@
+"use client";
 import { Textarea } from "@uidu/forms-ui";
 
 export default function TextareaDisabled() {

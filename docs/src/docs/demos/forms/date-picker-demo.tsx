@@ -5,14 +5,14 @@ import { Calendar as CalendarIcon } from "lucide-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Button, Popover, PopoverContent, PopoverTrigger } from "@uidu/core-ui";
+import { Button, PopoverContent, PopoverRoot, PopoverTrigger } from "@uidu/core-ui";
 import { Calendar } from "@uidu/forms-ui";
 
 export default function DatePickerDemo() {
   const [date, setDate] = React.useState<Date>();
 
   return (
-    <Popover>
+    <PopoverRoot>
       <PopoverTrigger asChild>
         <Button
           variant={"outline"}
@@ -33,6 +33,6 @@ export default function DatePickerDemo() {
           initialFocus
         />
       </PopoverContent>
-    </Popover>
+    </PopoverRoot>
   );
 }

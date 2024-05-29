@@ -1,3 +1,5 @@
+"use client";
+
 import { Input } from "@uidu/forms-ui";
 
 export default function InputDemo() {

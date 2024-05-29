@@ -67,11 +67,7 @@ export default function NavigationMenuDemo() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-<<<<<<< HEAD
                     {/* <Icons.logo className="h-6 w-6" /> */}
-=======
-                    <Icons.logo className="h-6 w-6" />
->>>>>>> 7e66ed9 (added missing demos for documentation, cannot build packages because tsup is not found)
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>

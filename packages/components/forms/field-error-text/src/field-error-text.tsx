@@ -1,8 +1,8 @@
-import { cn } from '@uidu/lib'
-import { VariantProps, cva } from 'class-variance-authority'
-import React from 'react'
-import { FieldError } from 'react-hook-form'
-import AlertCircle from './icons/AlertCircle'
+import { cn } from '@uidu/lib';
+import { VariantProps, cva } from 'class-variance-authority';
+import React from 'react';
+import { type FieldError } from 'react-hook-form';
+import AlertCircle from './icons/AlertCircle';
 
 const helperTextVariants = cva('', {
   variants: {
@@ -16,14 +16,14 @@ const helperTextVariants = cva('', {
   defaultVariants: {
     size: 'md',
   },
-})
+});
 
 export interface FieldErrorTextProps
   extends React.HTMLAttributes<HTMLDivElement | HTMLSpanElement>,
     VariantProps<typeof helperTextVariants> {
-  as?: 'div' | 'span'
-  className?: string
-  error?: FieldError | string
+  as?: 'div' | 'span';
+  className?: string;
+  error?: FieldError | string;
 }
 
 export function FieldErrorText({
@@ -33,7 +33,7 @@ export function FieldErrorText({
   error,
   className,
 }: React.PropsWithChildren<FieldErrorTextProps>) {
-  const Component = as
+  const Component = as;
   return (
     <Component
       role="alert"
@@ -45,7 +45,7 @@ export function FieldErrorText({
       <AlertCircle className="w-5 h-5" />
       {error as string}
     </Component>
-  )
+  );
 }
 
-FieldErrorText.displayName = 'FieldErrorText'
+FieldErrorText.displayName = 'FieldErrorText';

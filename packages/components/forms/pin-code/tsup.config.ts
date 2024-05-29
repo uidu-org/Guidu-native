@@ -5,7 +5,7 @@ export default defineConfig((opts) => ({
   format: ['cjs', 'esm'],
   minify: !opts.watch,
   clean: !opts.watch,
-  dts: false,
+  dts: true,
   outDir: 'dist',
   target: 'es2019',
   banner: { js: '"use client";' },

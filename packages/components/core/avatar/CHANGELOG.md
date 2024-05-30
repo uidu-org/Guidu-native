@@ -1,5 +1,15 @@
 # @uidu/avatar-ui
 
+## 0.2.0
+
+### Minor Changes
+
+- 3260644: Added Presence and Status icons for Avatars.
+
+  ### Features
+
+  Added AvatarGroup...
+
 ## 0.1.2
 
 ### Patch Changes

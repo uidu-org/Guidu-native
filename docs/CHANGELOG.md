@@ -1,5 +1,13 @@
 # @uidu/guidu-website
 
+## 0.1.9
+
+### Patch Changes
+
+- Updated dependencies [3260644]
+  - @uidu/avatar-ui@0.2.0
+  - @uidu/core-ui@0.0.17
+
 ## 0.1.8
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@uidu/avatar-ui",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "ISC",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
-    "@uidu/button-ui": "0.1.2",
-    "@uidu/dropdown-menu-ui": "0.1.2",
-    "@uidu/lib": "0.1.0",
+    "@uidu/button-ui": "0.2.0",
+    "@uidu/dropdown-menu-ui": "0.2.0",
+    "@uidu/lib": "0.2.0",
     "class-variance-authority": "^0.7.0",
     "react": "^18.3.1"
   },

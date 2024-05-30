@@ -1,5 +1,44 @@
 # @uidu/core-ui
 
+## 0.1.0
+
+### Minor Changes
+
+- 3d64e49: Handle internal workspace:^ dependencies
+
+### Patch Changes
+
+- Updated dependencies [3d64e49]
+  - @uidu/accordion-ui@0.2.0
+  - @uidu/alert-ui@0.2.0
+  - @uidu/avatar-ui@0.3.0
+  - @uidu/badge-ui@0.2.0
+  - @uidu/breadcrumb-ui@0.4.0
+  - @uidu/button-ui@0.2.0
+  - @uidu/card-ui@0.2.0
+  - @uidu/carousel-ui@0.2.0
+  - @uidu/collapsable-ui@0.2.0
+  - @uidu/command-ui@0.2.0
+  - @uidu/context-menu-ui@0.2.0
+  - @uidu/dialog-ui@0.2.0
+  - @uidu/drawer-ui@0.2.0
+  - @uidu/dropdown-menu-ui@0.2.0
+  - @uidu/image-ui@0.2.0
+  - @uidu/label-ui@0.2.0
+  - @uidu/navigation-menu-ui@0.2.0
+  - @uidu/pagination-ui@0.2.0
+  - @uidu/popover-ui@0.2.0
+  - @uidu/progress-ui@0.2.0
+  - @uidu/resizable-ui@0.2.0
+  - @uidu/scroll-area-ui@0.2.0
+  - @uidu/separator-ui@0.2.0
+  - @uidu/sheet-ui@0.2.0
+  - @uidu/table-ui@0.2.0
+  - @uidu/tabs-ui@0.2.0
+  - @uidu/toast-ui@0.2.0
+  - @uidu/tooltip-ui@0.2.0
+  - @uidu/media-card-ui@0.1.0
+
 ## 0.0.17
 
 ### Patch Changes

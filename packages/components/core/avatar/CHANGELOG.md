@@ -1,5 +1,18 @@
 # @uidu/avatar-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- 3d64e49: Handle internal workspace:^ dependencies
+
+### Patch Changes
+
+- Updated dependencies [3d64e49]
+  - @uidu/button-ui@0.2.0
+  - @uidu/dropdown-menu-ui@0.2.0
+  - @uidu/lib@0.2.0
+
 ## 0.2.0
 
 ### Minor Changes

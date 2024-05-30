@@ -1,5 +1,19 @@
 # @uidu/checkbox-ui
 
+## 0.2.0
+
+### Minor Changes
+
+- 3d64e49: Handle internal workspace:^ dependencies
+
+### Patch Changes
+
+- Updated dependencies [3d64e49]
+  - @uidu/field-error-text-ui@0.2.0
+  - @uidu/field-helper-text-ui@0.2.0
+  - @uidu/form-ui@0.2.0
+  - @uidu/lib@0.2.0
+
 ## 0.1.2
 
 ### Patch Changes

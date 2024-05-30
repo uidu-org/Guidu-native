@@ -1,5 +1,21 @@
 # @uidu/guidu-website
 
+## 0.2.0
+
+### Minor Changes
+
+- 3d64e49: Handle internal workspace:^ dependencies
+
+### Patch Changes
+
+- Updated dependencies [3d64e49]
+  - @uidu/avatar-ui@0.3.0
+  - @uidu/badge-ui@0.2.0
+  - @uidu/button-ui@0.2.0
+  - @uidu/switch-ui@0.2.0
+  - @uidu/core-ui@0.1.0
+  - @uidu/forms-ui@0.2.0
+
 ## 0.1.9
 
 ### Patch Changes

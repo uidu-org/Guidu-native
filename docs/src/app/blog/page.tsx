@@ -71,7 +71,7 @@ export default function Page() {
       </Link>
       <BreadcrumbDemo />
       <ToastDemo />
-      <div className="w-20 h-auto m-5 ">
+      <div className="m-5 h-auto w-20 ">
         <Button className="text-black">icona</Button>
         <Button variant={"danger"} className="text-black">
           danger

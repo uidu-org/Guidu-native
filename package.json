@@ -13,42 +13,31 @@
     "./packages/storybook"
   ],
   "scripts": {
-    "postinstall": "yarn turbo build",
-    "check:dep": "yarn depcheck",
-    "storybook": "cd packages/storybook && npx storybook dev -p 6006",
-    "build-storybook": "cd packages/storybook && yarn build-storybook",
-    "watch": "yarn workspaces foreach -pi run watch",
-    "docs": "cd docs && yarn next",
-    "docs:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
-    "docs:prod": "yarn workspace next-app build",
-    "docs:prod:serve": "yarn workspace next-app serve",
-    "fix": "manypkg fix && cd apps/expo && npx expo install --fix",
-    "dev": "yarn turbo dev --concurrency=100 --continue",
     "build": "turbo build",
-    "release": "yarn turbo:build:web-core && yarn changeset publish",
-    "turbo:dev:web-core": "turbo dev --output-logs=errors-only --concurrency=31 --filter='./packages/components/core/*'",
-    "turbo:dev:web-forms": "turbo dev --output-logs=errors-only --concurrency=31 --filter='./packages/components/forms/*'",
-    "turbo:build:web-core": "turbo build --filter='./packages/components/core/*' ",
-    "turbo:build:web-forms": "turbo build --filter='./packages/components/forms/*' ",
-    "yarn:versionPatch:web-core": "cd packages/components/core && yarn workspaces foreach -A run versionPatch",
-    "yarn:versionMinor:web-core": "cd packages/components/core && yarn workspaces foreach -A run versionMinor",
-    "yarn:versionMajor:web-core": "cd packages/components/core && yarn workspaces foreach -A run versionMajor",
-    "yarn:versionPatch:web-forms": "cd packages/components/forms && yarn workspaces foreach -A run versionPatchFormsWeb",
-    "yarn:versionMinor:web-forms": "cd packages/components/forms && yarn workspaces foreach -A run versionMinorFormsWeb",
-    "yarn:versionMajor:web-forms": "cd packages/components/forms && yarn workspaces foreach -A run versionMajorFormsWeb",
-    "yarn:npmPublish:web-core": "cd packages/components/core && yarn workspaces foreach -A run npmPublish",
-    "yarn:npmPublish:web-forms": "cd packages/components/core && yarn workspaces foreach -A run npmPublishFormsWeb",
-    "test:jest": "jest --no-cache",
-    "test:pw": "playwright test",
+    "build-storybook": "cd packages/storybook && yarn build-storybook",
+    "clean": "yarn run clean:dist && yarn run clean:turbo && yarn run clean:modules",
+    "clean:dist": "yarn manypkg exec rm -rf dist",
+    "clean:turbo": "yarn manypkg exec rm -rf .turbo",
+    "clean:modules": "yarn manypkg exec rm -rf node_modules && rm -rf node_modules",
+    "check:dep": "yarn depcheck",
+    "chromatic": "npx chromatic",
+    "dev": "yarn turbo dev --concurrency=100 --continue",
+    "docs": "cd docs && yarn next",
+    "fix": "manypkg fix && cd apps/expo && npx expo install --fix",
+    "postinstall": "yarn turbo build",
+    "release": "yarn build && yarn changeset publish",
+    "sort:pkg": "yarn manypkg exec npx sort-package-json package.json",
+    "storybook": "cd packages/storybook && npx storybook dev -p 6006",
     "test": "run test:jest && echo \"[ finish JEST ==> start PLAYWRIGHT ]\" && run test:pw",
-    "chromatic": "npx chromatic"
+    "test:jest": "jest --no-cache",
+    "test:pw": "playwright test"
   },
   "resolutions": {
-    "cmdk": "0.2.1",
-    "@radix-ui/react-dismissable-layer": "1.0.5",
     "@radix-ui/react-dialog": "1.0.5",
-    "react-refresh": "^0.14.0",
-    "eslint-plugin-react-hooks": "<5"
+    "@radix-ui/react-dismissable-layer": "1.0.5",
+    "cmdk": "0.2.1",
+    "eslint-plugin-react-hooks": "<5",
+    "react-refresh": "^0.14.0"
   },
   "dependencies": {
     "@babel/core": "^7.24.5",
@@ -58,7 +47,6 @@
     "@changesets/cli": "^2.27.1",
     "@manypkg/cli": "^0.21.4",
     "@playwright/test": "^1.44.1",
-    "@preconstruct/cli": "^2.8.4",
     "@testing-library/react": "^15.0.7",
     "@types/babel__core": "^7.20.5",
     "@types/babel__preset-env": "^7.9.6",
@@ -86,8 +74,5 @@
     "turbo": "^1.13.3",
     "typescript": "^5.4.5"
   },
-  "packageManager": "yarn@4.1.1",
-  "preconstruct": {
-    "packages": []
-  }
+  "packageManager": "yarn@4.1.1"
 }

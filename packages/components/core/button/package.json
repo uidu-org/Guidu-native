@@ -8,6 +8,10 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
     "@uidu/lib": "workspace:*",
@@ -21,13 +25,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "versionPatch": "yarn version patch",
-    "versionMinor": "yarn version minor",
-    "versionMajor": "yarn version major",
-    "npmPublish": "npm publish"
   }
 }

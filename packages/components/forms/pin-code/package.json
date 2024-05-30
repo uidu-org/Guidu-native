@@ -1,12 +1,16 @@
 {
   "name": "@uidu/pin-code-ui",
   "version": "0.1.2",
+  "license": "ISC",
   "main": "dist/uidu-pin-code-ui.cjs.js",
   "module": "dist/uidu-pin-code-ui.esm.js",
-  "license": "ISC",
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.4",
     "@uidu/field-error-text-ui": "workspace:^",
@@ -20,14 +24,6 @@
   "devDependencies": {
     "@types/react": "^18.3.2",
     "tsup": "^8.0.2"
-  },
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "versionPatchFormsWeb": "yarn version patch",
-    "versionMinorFormsWeb": "yarn version minor",
-    "versionMajorFormsWeb": "yarn version major",
-    "npmPublishFormsWeb": "npm publish"
   },
   "publishConfig": {
     "access": "public",

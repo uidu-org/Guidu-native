@@ -1,12 +1,16 @@
 {
   "name": "@uidu/alert-ui",
   "version": "0.1.2",
+  "license": "ISC",
   "main": "src/index.ts",
   "module": "dist/index.mjs",
-  "license": "ISC",
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "1.0.5",
     "@uidu/button-ui": "workspace:^",
@@ -21,13 +25,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "versionPatch": "yarn version patch",
-    "versionMinor": "yarn version minor",
-    "versionMajor": "yarn version major",
-    "npmPublish": "npm publish"
   }
 }

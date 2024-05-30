@@ -1,12 +1,16 @@
 {
   "name": "@uidu/time-ui",
   "version": "0.1.2",
+  "license": "ISC",
   "main": "src/index.ts",
   "module": "dist/index.mjs",
-  "license": "ISC",
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
     "@uidu/lib": "workspace:^",
@@ -20,13 +24,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "versionPatchFormsWeb": "yarn version patch",
-    "versionMinorFormsWeb": "yarn version minor",
-    "versionMajorFormsWeb": "yarn version major",
-    "npmPublishFormsWeb": "npm publish"
   }
 }

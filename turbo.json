@@ -7,15 +7,6 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
-    "versionPatch": {
-      "outputs": [],
-      "cache": false
-    },
-    "npmPublish": {
-      "dependsOn": ["build", "versionPatch"],
-      "outputs": [],
-      "cache": false
-    },
     "dev": {
       "dependsOn": ["^build"],
       "cache": false,

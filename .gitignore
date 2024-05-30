@@ -74,3 +74,5 @@ coverage
 # storybook
 storybook-static
 /storybook-static
+
+build-storybook.log

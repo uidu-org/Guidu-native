@@ -19,6 +19,9 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
+      - name: Sort
+        run: yarn sort:pkg
+
       - name: Unit tests
         run: yarn test:jest
 

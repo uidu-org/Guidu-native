@@ -8,14 +8,12 @@ TODO: Fill out this long description.
 
 ## Table of Contents
 
-- [guidu](#guidu)
-  - [Table of Contents](#table-of-contents)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Maintainers](#maintainers)
-  - [Contributing](#contributing)
-  - [Common pitfalls](#common-pitfalls)
-  - [License](#license)
+- [Install](#install)
+- [Usage](#usage)
+- [Maintainers](#maintainers)
+- [Contributing](#contributing)
+- [Common pitfalls](#common-pitfalls)
+- [License](#license)
 
 ## Install
 

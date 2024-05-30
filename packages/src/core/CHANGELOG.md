@@ -1,5 +1,12 @@
 # @uidu/core-ui
 
+## 0.0.17
+
+### Patch Changes
+
+- Updated dependencies [3260644]
+  - @uidu/avatar-ui@0.2.0
+
 ## 0.0.16
 
 ### Patch Changes

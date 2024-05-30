@@ -29,12 +29,11 @@ Documentation is package specific, browse guidu-native-fumadocs.vercel.app to se
 
 You can see the storybook at https://664f5b90094245c962f7ddfb-iotjcreepq.chromatic.com/
 
-
 ## Maintainers
 
 [@uidu-org](https://github.com/uidu-org)
 [@apuntovanini](https://github.com/apuntovanini)
-[@GiacomoGiovannetti](https://github.com/GiovannettiGiacomo)
+[@GiacomoGiovannetti](https://github.com/GiacomoGiovannetti)
 [@FlavioScimeca](https://github.com/FlavioScimeca)
 [@bacco40](https://github.com/bacco40)
 

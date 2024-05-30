@@ -11,10 +11,10 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@uidu/card-ui": "workspace:^",
-    "@uidu/carousel-ui": "workspace:^",
-    "@uidu/dialog-ui": "workspace:^",
-    "@uidu/lib": "workspace:^",
+    "@uidu/card-ui": "0.1.2",
+    "@uidu/carousel-ui": "0.1.2",
+    "@uidu/dialog-ui": "0.1.2",
+    "@uidu/lib": "0.1.0",
     "react": "^18.3.1"
   },
   "devDependencies": {

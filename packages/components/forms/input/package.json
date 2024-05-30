@@ -12,11 +12,11 @@
     "dev": "tsup --watch"
   },
   "dependencies": {
-    "@uidu/field-error-text-ui": "workspace:^",
-    "@uidu/field-helper-text-ui": "workspace:^",
-    "@uidu/form-ui": "workspace:^",
-    "@uidu/label-ui": "workspace:^",
-    "@uidu/lib": "workspace:^",
+    "@uidu/field-error-text-ui": "0.1.2",
+    "@uidu/field-helper-text-ui": "0.1.2",
+    "@uidu/form-ui": "0.1.2",
+    "@uidu/label-ui": "0.1.2",
+    "@uidu/lib": "0.1.0",
     "class-variance-authority": "^0.7.0",
     "react": "^18.3.1",
     "react-hook-form": "^7.51.5"

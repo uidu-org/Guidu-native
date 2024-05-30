@@ -12,8 +12,8 @@
     "dev": "tsup --watch"
   },
   "dependencies": {
-    "@uidu/button-ui": "workspace:^",
-    "@uidu/lib": "workspace:^",
+    "@uidu/button-ui": "0.1.2",
+    "@uidu/lib": "0.1.0",
     "embla-carousel-react": "8.0.4",
     "react": "^18.3.1"
   },

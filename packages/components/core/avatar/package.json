@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
-    "@uidu/button-ui": "workspace:^",
-    "@uidu/dropdown-menu-ui": "workspace:^",
-    "@uidu/lib": "workspace:^",
+    "@uidu/button-ui": "0.1.2",
+    "@uidu/dropdown-menu-ui": "0.1.2",
+    "@uidu/lib": "0.1.0",
     "class-variance-authority": "^0.7.0",
     "react": "^18.3.1"
   },

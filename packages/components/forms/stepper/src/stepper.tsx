@@ -91,12 +91,12 @@ export function Stepper({
             direction === 'horizontal' && containerClasses.line,
             direction === 'vertical' && containerClasses.verticalLine.base,
             direction === 'vertical' &&
-            (dot
-              ? containerClasses.verticalLine.left.dot[size]
-              : containerClasses.verticalLine.left.noDot[size])
+              (dot
+                ? containerClasses.verticalLine.left.dot[size]
+                : containerClasses.verticalLine.left.noDot[size])
           ),
           circleClassName: cn(
-            dot && direction === 'vertical' && 'mt-1.5',
+            dot && direction === 'vertical' && 'mt-2',
             dotClassName
           ),
           contentClassName: cn(

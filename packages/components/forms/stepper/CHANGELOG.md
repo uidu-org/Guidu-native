@@ -1,5 +1,11 @@
 # @uidu/stepper-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- 80779c8: Release stepper with larger margin top
+
 ## 0.2.0
 
 ### Minor Changes

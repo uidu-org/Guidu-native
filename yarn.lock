@@ -7611,7 +7611,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/forms-ui@npm:0.2.0, @uidu/forms-ui@workspace:packages/src/forms":
+"@uidu/forms-ui@npm:0.2.1, @uidu/forms-ui@workspace:packages/src/forms":
   version: 0.0.0-use.local
   resolution: "@uidu/forms-ui@workspace:packages/src/forms"
   dependencies:
@@ -7629,7 +7629,7 @@ __metadata:
     "@uidu/radio-group-ui": "npm:0.2.0"
     "@uidu/select-ui": "npm:0.2.0"
     "@uidu/slider-ui": "npm:0.2.0"
-    "@uidu/stepper-ui": "npm:0.2.0"
+    "@uidu/stepper-ui": "npm:0.3.0"
     "@uidu/switch-ui": "npm:0.2.0"
     "@uidu/textarea-ui": "npm:0.2.0"
     "@uidu/toggle-ui": "npm:0.2.0"
@@ -7670,7 +7670,7 @@ __metadata:
     "@uidu/badge-ui": "npm:0.2.0"
     "@uidu/button-ui": "npm:0.2.0"
     "@uidu/core-ui": "npm:0.1.0"
-    "@uidu/forms-ui": "npm:0.2.0"
+    "@uidu/forms-ui": "npm:0.2.1"
     "@uidu/switch-ui": "npm:0.2.0"
     autoprefixer: "npm:^10.4.19"
     class-variance-authority: "npm:^0.7.0"
@@ -7985,7 +7985,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@uidu/stepper-ui@npm:0.2.0, @uidu/stepper-ui@workspace:packages/components/forms/stepper":
+"@uidu/stepper-ui@npm:0.3.0, @uidu/stepper-ui@workspace:packages/components/forms/stepper":
   version: 0.0.0-use.local
   resolution: "@uidu/stepper-ui@workspace:packages/components/forms/stepper"
   dependencies:

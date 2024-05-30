@@ -176,13 +176,13 @@ const AvatarImage = React.forwardRef<
       <div className={cn(avatarImageVariants({ shape }))}>
         <AvatarPrimitive.Image
           ref={ref}
-          className="w-full h-full aspect-square "
+          className="w-full h-full aspect-square"
           {...props}
         />
 
         {isJsx && !isBool && React.cloneElement(appearance)}
         {isBool && !isJsx && (
-          <span className="absolute top-0 right-0 w-4 h-4 bg-green-600 " />
+          <span className="absolute top-0 right-0 w-4 h-4 bg-green-600" />
         )}
 
         {isFunction && <Button onClick={onClickAction} iconAfter={Icon} />}

@@ -172,7 +172,7 @@ export const StatusItem: FC<StatusItemProps> = ({ status }) => {
   return (
     <span
       id="outer"
-      className="size-[100%] flex items-center justify-center rounded-[50%] box-border overflow-hidden "
+      className="size-[100%] flex items-center justify-center rounded-[50%] box-border overflow-hidden"
     >
       <span
         id="inner"

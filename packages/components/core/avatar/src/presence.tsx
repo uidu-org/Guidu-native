@@ -178,7 +178,7 @@ const PresenceItem: FC<PresenceItemProps> = ({ presence }) => {
   return (
     <span
       id="outer"
-      className="size-[100%] flex items-center justify-center border rounded-full box-border overflow-hidden "
+      className="size-[100%] flex items-center justify-center border rounded-full box-border overflow-hidden"
     >
       <span
         id="inner"

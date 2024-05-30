@@ -34,6 +34,7 @@
     "test:pw": "playwright test"
   },
   "resolutions": {
+    "@manypkg/cli": "^0.19.1",
     "@radix-ui/react-dialog": "1.0.5",
     "@radix-ui/react-dismissable-layer": "1.0.5",
     "cmdk": "0.2.1",

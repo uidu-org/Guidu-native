@@ -1,5 +1,12 @@
 # @uidu/forms-ui
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies [80779c8]
+  - @uidu/stepper-ui@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes

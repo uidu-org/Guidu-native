@@ -76,3 +76,6 @@ storybook-static
 /storybook-static
 
 build-storybook.log
+
+# Turborepo
+.turbo

@@ -31,7 +31,8 @@
     "storybook": "cd packages/storybook && npx storybook dev -p 6006",
     "test": "run test:jest && echo \"[ finish JEST ==> start PLAYWRIGHT ]\" && run test:pw",
     "test:jest": "jest --no-cache",
-    "test:pw": "playwright test"
+    "test:pw": "playwright test",
+    "version": "yarn changeset version && yarn install --mode update-lockfile"
   },
   "resolutions": {
     "@manypkg/cli": "^0.19.1",

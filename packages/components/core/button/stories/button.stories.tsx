@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import React from 'react';
 
 import { Button, ButtonProps } from '../src';
@@ -60,6 +61,7 @@ const StateTemplate = (args: ButtonProps) => {
   return (
     <Button
       {...args}
+      id="button"
       aria-label="Open"
       aria-pressed={isOpen}
       onClick={handlePress}
@@ -77,7 +79,15 @@ export const Default = {
 
 export const WithState = {
   render: StateTemplate,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
 
+    // 👇 Simulate interactions with the component
+    await userEvent.click(canvas.getByRole('button'));
+
+    // 👇 Assert DOM structure
+    await expect(canvas.getByText('Close')).toBeInTheDocument();
+  },
   args: {
     ...defaultProps,
   },

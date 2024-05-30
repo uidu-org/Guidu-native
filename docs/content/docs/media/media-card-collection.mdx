@@ -1,0 +1,86 @@
+---
+title: "Media Card Collection"
+description: a great way to use card collections.
+---
+
+import { Button } from "@uidu/button-ui";
+import MediaCardCollectionDemo from "../../../src/docs/demos/media/media-card-collection-demo.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/media-card-ui" target="_blank">@uidu/media-card-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/media/media-card" target="_blank">Source</a></Button>
+    </div>
+
+## Media card collection
+
+<MediaCardCollectionDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <MediaCardCollectionDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client";
+
+                import { MediaCardCollection } from "@uidu/core-ui";
+
+                export default function MediaCardCollectionDemo() {
+                const files = [
+                    {
+                    id: "1a",
+                    img: "https://avatars.githubusercontent.com/u/124514869?v=4",
+                    },
+                    {
+                    id: "2a",
+                    img: "https://avatars.githubusercontent.com/u/124514869?v=4",
+                    },
+                    {
+                    id: "3a",
+                    img: "https://avatars.githubusercontent.com/u/124514869?v=4",
+                    },
+                ];
+
+                const actionExample = (id: string) => {
+                    console.log(`example for onClickAction: ${id}`);
+                };
+
+                return <MediaCardCollection files={files} onClickAction={actionExample} />;
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/media-card-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/media-card-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { MediaCardCollection } from "@uidu/core-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { MediaCardCollection } from "@uidu/media-card-ui";
+            ```
+        </Tab>
+    </Tabs>

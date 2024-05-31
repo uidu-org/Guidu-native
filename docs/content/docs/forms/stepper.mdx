@@ -3,6 +3,69 @@ title: "Stepper"
 description: a useful way to use steppers.
 ---
 
+import { Button } from "@uidu/button-ui";
 import StepperDemo from "../../../src/docs/demos/forms/stepper-demo.tsx";
 
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/stepper-ui" target="_blank">@uidu/stepper-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/stepper" target="_blank">Source</a></Button>
+    </div>
+
+## Stepper
+
 <StepperDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+              <StepperDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                import { Step, Stepper } from "@uidu/forms-ui";
+
+                export default function StepperDemo() {
+                  return (
+                    <Stepper>
+                      <Step title="Step 1" description="this is a description" />
+                      <Step title="Step 2" description="this is a description" />
+                      <Step title="Step 3" description="this is a description" />
+                    </Stepper>
+                  );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/stepper-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/stepper-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+              import { Step, Stepper } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+              import { Step, Stepper } from "@uidu/stepper-ui";
+            ```
+        </Tab>
+    </Tabs>

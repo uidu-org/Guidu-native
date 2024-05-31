@@ -1,8 +1,100 @@
 ---
 title: "Multiselect"
-description: a great way to use multisects
+description: a great way to use multisects.
 ---
 
+import { Button } from "@uidu/button-ui";
 import { MultiselectDemo } from "../../../src/docs/demos/forms/multiselect-demo.tsx";
 
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/multiselect-ui" target="_blank">@uidu/multiselect-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/multiselect" target="_blank">Source</a></Button>
+    </div>
+
+## Multiselect
+
 <MultiselectDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <MultiselectDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                import { Multiselect } from "@uidu/forms-ui";
+
+                export const MultiselectDemo = () => {
+                  const options = [
+                    {
+                      id: "1a",
+                      label: "apple",
+                      value: "apple",
+                    },
+                    {
+                      id: "2a",
+                      label: "cherry",
+                      value: "cherry",
+                    },
+                    {
+                      id: "3a",
+                      label: "orange",
+                      value: "orange",
+                    },
+                  ];
+                  const items = [
+                    {
+                      id: "1a",
+                      label: "apple",
+                      value: "apple",
+                    },
+                    {
+                      id: "2a",
+                      label: "cherry",
+                      value: "cherry",
+                    },
+                    {
+                      id: "3a",
+                      label: "orange",
+                      value: "orange",
+                    },
+                  ];
+
+                  return <Multiselect options={options} initialItems={items} />;
+                };
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/multiselect-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/multiselect-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+              import { Multiselect } from "@uidu/forms-ui"
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+              import { Multiselect } from "@uidu/multiselect-ui";
+            ```
+        </Tab>
+    </Tabs>

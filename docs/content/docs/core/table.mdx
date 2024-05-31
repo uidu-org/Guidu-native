@@ -1,20 +1,24 @@
 ---
-title: "Table" 
+title: "Table"
 description: a great way to use tables!
 ---
 
-import TableDemo from "../../../src/docs/demos/core/table-demo" 
+import TableDemo from "../../../src/docs/demos/core/table-demo";
+import { Button } from "@uidu/button-ui";
 
+    <div className = "flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
+    </div>
     <div className="flex items-center">
-        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/table-ui" target="_blank">@uidu/table-ui</a>
-        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/table" target="_blank">Source</a>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/table-ui" target="_blank">@uidu/table-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/table" target="_blank">Source</a></Button>
     </div>
 
 ## Table
 
 <TableDemo />
 
-## Usage 
+## Usage
 
     <Tabs items={["preview" , "code"]}>
         <Tab value="preview">
@@ -23,7 +27,7 @@ import TableDemo from "../../../src/docs/demos/core/table-demo"
             </div>
         </Tab>
         <Tab value="code">
-            ```tsx 
+            ```tsx
                 "use client"
 
                 import {
@@ -117,7 +121,7 @@ import TableDemo from "../../../src/docs/demos/core/table-demo"
         </Tab>
     </Tabs>
 
-## Installation 
+## Installation
 
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
@@ -132,7 +136,7 @@ import TableDemo from "../../../src/docs/demos/core/table-demo"
         </Tab>
     </Tabs>
 
-## Import 
+## Import
 
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">

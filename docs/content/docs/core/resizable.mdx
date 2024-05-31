@@ -1,25 +1,27 @@
 ---
-title: "Resizable" 
+title: "Resizable"
 description: a great way to use resizable
 ---
 
-import ResizableDemo from "../../../src/docs/demos/core/resizable-demo"
-import ResizableDemoWithHandle from "../../../src/docs/demos/core/resizable-demo-with-handle.tsx"
-import ResizableHandle from "../../../src/docs/demos/core/resizable-handle.tsx"
-import ResizableVertical from "../../../src/docs/demos/core/resizable-vertical.tsx"
+import ResizableDemo from "../../../src/docs/demos/core/resizable-demo";
+import ResizableDemoWithHandle from "../../../src/docs/demos/core/resizable-demo-with-handle.tsx";
+import ResizableHandle from "../../../src/docs/demos/core/resizable-handle.tsx";
+import ResizableVertical from "../../../src/docs/demos/core/resizable-vertical.tsx";
+import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
-        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/resizable-ui" target="_blank">@uidu/resizable-ui</a>
-        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/resizable" target="_blank">Source</a>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/resizable-ui" target="_blank">@uidu/resizable-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/resizable" target="_blank">Source</a></Button>
     </div>
 
 ## Resizable
 
-  <div className="h-60" > 
-    <ResizableDemo />
-  </div>
+<div className="h-60">
+  <ResizableDemo />
+</div>
 
-## Usage 
+## Usage
 
     <Tabs items={["preview" , "code"]}>
         <Tab value="preview">
@@ -28,7 +30,7 @@ import ResizableVertical from "../../../src/docs/demos/core/resizable-vertical.t
             </div>
         </Tab>
         <Tab value="code">
-            ```tsx 
+            ```tsx
                 "use client"
 
                 import {
@@ -69,10 +71,10 @@ import ResizableVertical from "../../../src/docs/demos/core/resizable-vertical.t
                 }
 
             ```
-        </Tab>  
+        </Tab>
     </Tabs>
 
-## Installation 
+## Installation
 
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
@@ -87,7 +89,7 @@ import ResizableVertical from "../../../src/docs/demos/core/resizable-vertical.t
         </Tab>
     </Tabs>
 
-## Import 
+## Import
 
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
@@ -110,7 +112,7 @@ import ResizableVertical from "../../../src/docs/demos/core/resizable-vertical.t
         </Tab>
     </Tabs>
 
-## Variants 
+## Variants
 
     <Steps>
       <Step>
@@ -166,7 +168,7 @@ import ResizableVertical from "../../../src/docs/demos/core/resizable-vertical.t
                 </Tab>
               </Tabs>
             </Step>
-            <Step> 
+            <Step>
               <Tabs items={["preview" , "code"]}>
                   <Tab value="preview">
                       <div className="py-16 flex items-center justify-center">

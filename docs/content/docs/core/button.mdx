@@ -14,22 +14,13 @@ import ButtonOutline from "../../../src/docs/demos/core/button-outline";
 import ButtonSecondary from "../../../src/docs/demos/core/button-secondary";
 import ButtonWithIcon from "../../../src/docs/demos/core/button-with-icon";
 
-<div className="flex items-center">
-  <a
-    className="mr-4 "
-    href="https://www.npmjs.com/package/@uidu/button-ui"
-    target="_blank"
-  >
-    @uidu/button-ui
-  </a>
-  <a
-    className="mx-4"
-    href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/button"
-    target="_blank"
-  >
-    Source
-  </a>
-</div>
+import { Button } from "@uidu/button-ui";
+
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/button-ui" target="_blank">@uidu/button-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/button" target="_blank">Source</a></Button>
+    </div>
 
 ## Button
 

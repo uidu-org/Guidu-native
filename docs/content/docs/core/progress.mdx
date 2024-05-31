@@ -1,14 +1,15 @@
 ---
-title: "Progress" 
+title: "Progress"
 description: a great way to use Progress
 ---
 
-import ProgressDemo from "../../../src/docs/demos/core/progress-demo.tsx"
-
+import ProgressDemo from "../../../src/docs/demos/core/progress-demo.tsx";
+import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
-        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/progress-ui" target="_blank">@uidu/progress-ui</a>
-        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/progress" target="_blank">Source</a>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/progress-ui" target="_blank">@uidu/progress-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/progress" target="_blank">Source</a></Button>
     </div>
 
 ## Progress
@@ -24,7 +25,7 @@ import ProgressDemo from "../../../src/docs/demos/core/progress-demo.tsx"
             </div>
         </Tab>
         <Tab value="code">
-            ```tsx 
+            ```tsx
                 "use client"
 
                 import * as React from "react"
@@ -61,7 +62,7 @@ import ProgressDemo from "../../../src/docs/demos/core/progress-demo.tsx"
         </Tab>
     </Tabs>
 
-## Import 
+## Import
 
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">

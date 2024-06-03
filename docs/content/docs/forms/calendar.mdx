@@ -1,0 +1,78 @@
+---
+title: "Calendar"
+description: a great way to use calendars
+---
+
+import { Button } from "@uidu/button-ui";
+import CalendarDemo from "../../../src/docs/demos/forms/calendar-demo.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/calendar-ui" target="_blank">@uidu/calendar-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/calendar" target="_blank">Source</a></Button>
+    </div>
+
+## Calendar
+
+<CalendarDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <CalendarDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client";
+
+                import * as React from "react";
+
+                import { Calendar } from "@uidu/forms-ui";
+
+                export default function CalendarDemo() {
+                const [date, setDate] = React.useState<Date | undefined>(new Date());
+
+                return (
+                    <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    className="rounded-md border shadow"
+                    />
+                );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/calendar-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/calendar-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+        <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { Calendar } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { Calendar } from "@uidu/calendar-ui";
+            ```
+        </Tab>
+    </Tabs>

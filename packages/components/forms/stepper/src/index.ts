@@ -1,3 +1,4 @@
-import { Stepper, type StepperProps } from './stepper'
+import { Step } from './step';
+import { Stepper, type StepperProps } from './stepper';
 
-export { Stepper, StepperProps }
+export { Step, Stepper, StepperProps };

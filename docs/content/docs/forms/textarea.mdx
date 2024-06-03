@@ -1,0 +1,264 @@
+---
+title: "Textarea"
+description: a beautiful way to use textareas.
+---
+
+import { Button } from "@uidu/button-ui";
+import TextareaDemo from "../../../src/docs/demos/forms/textarea-demo.tsx";
+import TextareaDisable from "../../../src/docs/demos/forms/textarea-disable.tsx";
+import TextareaForm from "../../../src/docs/demos/forms/textarea-form.tsx";
+import TextareaWithButton from "../../../src/docs/demos/forms/textarea-with-button.tsx";
+import TextareaWithLabel from "../../../src/docs/demos/forms/textarea-with-label.tsx";
+import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/textarea-ui" target="_blank">@uidu/textarea-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/textarea" target="_blank">Source</a></Button>
+    </div>
+
+## Textarea
+
+<TextareaDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <TextareaDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client";
+                import { Textarea } from "@uidu/forms-ui";
+
+                export default function TextareaDemo() {
+                  return <Textarea placeholder="Type your message here." />;
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/textarea-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/textarea-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+              import { Textarea } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+               import { Textarea } from "@uidu/textarea-ui";
+            ```
+        </Tab>
+    </Tabs>
+
+## Variants
+
+    <Steps>
+        <Step>
+          ### Textarea disabled
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <TextareaDisable />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+                        import { Textarea } from "@uidu/forms-ui";
+
+                        export default function TextareaDisabled() {
+                          return <Textarea placeholder="Type your message here." disabled />;
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Textarea form
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <TextareaForm />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client";
+
+                        import { zodResolver } from "@hookform/resolvers/zod";
+                        import { useForm } from "react-hook-form";
+                        import { z } from "zod";
+
+                        import { Button, toast } from "@uidu/core-ui";
+                        import {
+                          Form,
+                          FormControl,
+                          FormDescription,
+                          FormField,
+                          FormItem,
+                          FormLabel,
+                          FormMessage,
+                          Textarea,
+                        } from "@uidu/forms-ui";
+
+                        const FormSchema = z.object({
+                          bio: z
+                            .string()
+                            .min(10, {
+                              message: "Bio must be at least 10 characters.",
+                            })
+                            .max(160, {
+                              message: "Bio must not be longer than 30 characters.",
+                            }),
+                        });
+
+                        export default function TextareaForm() {
+                          const form = useForm<z.infer<typeof FormSchema>>({
+                            resolver: zodResolver(FormSchema),
+                          });
+
+                          function onSubmit(data: z.infer<typeof FormSchema>) {
+                            toast({
+                              title: "You submitted the following values:",
+                              description: (
+                                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+                                  <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+                                </pre>
+                              ),
+                            });
+                          }
+
+                          return (
+                            <Form {...form}>
+                              <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+                                <FormField
+                                  control={form.control}
+                                  name="bio"
+                                  render={({ field }) => (
+                                    <FormItem>
+                                      <FormLabel>Bio</FormLabel>
+                                      <FormControl>
+                                        <Textarea
+                                          placeholder="Tell us a little bit about yourself"
+                                          className="resize-none"
+                                          {...field}
+                                        />
+                                      </FormControl>
+                                      <FormDescription>
+                                        You can <span>@mention</span> other users and organizations.
+                                      </FormDescription>
+                                      <FormMessage />
+                                    </FormItem>
+                                  )}
+                                />
+                                <Button type="submit">Submit</Button>
+                              </form>
+                            </Form>
+                          );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Textarea with button
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <TextareaWithButton />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+                        import { Button } from "@uidu/core-ui";
+                        import { Textarea } from "@uidu/forms-ui";
+
+                        export default function TextareaWithButton() {
+                          return (
+                            <div className="grid w-full gap-2">
+                              <Textarea placeholder="Type your message here." />
+                              <Button>Send message</Button>
+                            </div>
+                          );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Textarea with label
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <TextareaWithLabel />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+                        import { Label } from "@uidu/core-ui";
+                        import { Textarea } from "@uidu/forms-ui";
+
+                        export default function TextareaWithLabel() {
+                          return (
+                            <div className="grid w-full gap-1.5">
+                              <Label htmlFor="message">Your message</Label>
+                              <Textarea placeholder="Type your message here." id="message" />
+                            </div>
+                          );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Textarea with text
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <TextareaWithText />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client";
+                        import { Label } from "@uidu/core-ui";
+                        import { Textarea } from "@uidu/forms-ui";
+
+                        export default function TextareaWithText() {
+                          return (
+                            <div className="grid w-full gap-1.5">
+                              <Label htmlFor="message-2">Your Message</Label>
+                              <Textarea placeholder="Type your message here." id="message-2" />
+                              <p className="text-sm text-muted-foreground">
+                                Your message will be copied to the support team.
+                              </p>
+                            </div>
+                          );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+    </Steps>

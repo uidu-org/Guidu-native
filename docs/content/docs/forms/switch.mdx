@@ -1,0 +1,192 @@
+---
+title: "Switch"
+description: a great way to use switch.
+---
+
+import { Button } from "@uidu/button-ui";
+import SwitchDemo from "../../../src/docs/demos/forms/switch-demo.tsx";
+import SwitchForm from "../../../src/docs/demos/forms/switch-form.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/switch-ui" target="_blank">@uidu/switch-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/switch" target="_blank">Source</a></Button>
+    </div>
+
+## Switch
+
+<SwitchDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <SwitchDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client"
+
+                import { Label } from "@uidu/core-ui";
+                import { Switch } from "@uidu/forms-ui";
+
+                export default function SwitchDemo() {
+                return (
+                    <div className="flex items-center space-x-2">
+                    <Switch id="airplane-mode" />
+                    <Label htmlFor="airplane-mode">Airplane Mode</Label>
+                    </div>
+                );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/switch-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/switch-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { Label } from "@uidu/core-ui";
+                import { Switch } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { Label } from "@uidu/label-ui";
+                import { Switch } from "@uidu/switch-ui";
+            ```
+        </Tab>
+    </Tabs>
+
+## Variant
+
+    <Steps>
+        <Step>
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <SwitchForm />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client";
+
+                        import { zodResolver } from "@hookform/resolvers/zod";
+                        import { useForm } from "react-hook-form";
+                        import { z } from "zod";
+
+                        import { Button, toast } from "@uidu/core-ui";
+                        import {
+                        Form,
+                        FormControl,
+                        FormDescription,
+                        FormField,
+                        FormItem,
+                        FormLabel,
+                        Switch,
+                        } from "@uidu/forms-ui";
+
+                        const FormSchema = z.object({
+                        marketing_emails: z.boolean().default(false).optional(),
+                        security_emails: z.boolean(),
+                        });
+
+                        export default function SwitchForm() {
+                        const form = useForm<z.infer<typeof FormSchema>>({
+                            resolver: zodResolver(FormSchema),
+                            defaultValues: {
+                            security_emails: true,
+                            },
+                        });
+
+                        function onSubmit(data: z.infer<typeof FormSchema>) {
+                            toast({
+                            title: "You submitted the following values:",
+                            description: (
+                                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+                                <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+                                </pre>
+                            ),
+                            });
+                        }
+
+                        return (
+                            <Form {...form}>
+                            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
+                                <div>
+                                <h3 className="mb-4 text-lg font-medium">Email Notifications</h3>
+                                <div className="space-y-4">
+                                    <FormField
+                                    control={form.control}
+                                    name="marketing_emails"
+                                    render={({ field }) => (
+                                        <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                                        <div className="space-y-0.5">
+                                            <FormLabel className="text-base">
+                                            Marketing emails
+                                            </FormLabel>
+                                            <FormDescription>
+                                            Receive emails about new products, features, and more.
+                                            </FormDescription>
+                                        </div>
+                                        <FormControl>
+                                            <Switch
+                                            checked={field.value}
+                                            onCheckedChange={field.onChange}
+                                            />
+                                        </FormControl>
+                                        </FormItem>
+                                    )}
+                                    />
+                                    <FormField
+                                    control={form.control}
+                                    name="security_emails"
+                                    render={({ field }) => (
+                                        <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                                        <div className="space-y-0.5">
+                                            <FormLabel className="text-base">Security emails</FormLabel>
+                                            <FormDescription>
+                                            Receive emails about your account security.
+                                            </FormDescription>
+                                        </div>
+                                        <FormControl>
+                                            <Switch
+                                            checked={field.value}
+                                            onCheckedChange={field.onChange}
+                                            disabled
+                                            aria-readonly
+                                            />
+                                        </FormControl>
+                                        </FormItem>
+                                    )}
+                                    />
+                                </div>
+                                </div>
+                                <Button type="submit">Submit</Button>
+                            </form>
+                            </Form>
+                        );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+    </Steps>

@@ -52,6 +52,7 @@
     "next-docs-mdx": "^7.1.2",
     "next-docs-ui": "^7.1.2",
     "react": "^18.3.1",
+    "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.51.5",
     "react-router-dom": "^6.23.1",

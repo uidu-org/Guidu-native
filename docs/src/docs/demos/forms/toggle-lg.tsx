@@ -1,3 +1,5 @@
+"use client";
+
 import { Italic } from "lucide-react";
 
 import { Toggle } from "@uidu/forms-ui";

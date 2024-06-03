@@ -3,10 +3,284 @@ title: "Input"
 description: a great way to use input!
 ---
 
-## Installations
+import { Button } from "@uidu/button-ui";
+import InputDemo from "../../../src/docs/demos/forms/input-demo.tsx";
+import InputDisabled from "../../../src/docs/demos/forms/input-disabled.tsx";
+import InputFile from "../../../src/docs/demos/forms/input-file.tsx";
+import InputForm from "../../../src/docs/demos/forms/input-form.tsx";
+import InputWithButton from "../../../src/docs/demos/forms/input-with-button.tsx";
+import InputWithLabel from "../../../src/docs/demos/forms/input-with-label.tsx";
+import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
 
-```bash
-  import {
-    Input
-  } from "@/components/ui/input"
-```
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/input-ui" target="_blank">@uidu/input-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/input" target="_blank">Source</a></Button>
+    </div>
+
+## Input
+
+<InputDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <InputDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                import { Input } from "@uidu/forms-ui";
+
+                export default function InputDemo() {
+                  return <Input type="email" placeholder="Email" />;
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/input-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/input-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { Input } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { Input } from "@uidu/input-ui";
+            ```
+        </Tab>
+    </Tabs>
+
+## Variants
+
+    <Steps>
+        <Step>
+          ### Input disabled
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <InputDisabled/>
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+                        import { Input } from "@uidu/forms-ui";
+
+                        export default function InputDisabled() {
+                          return <Input disabled type="email" placeholder="Email" />;
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Input file
+          <Tabs items={["preview" , "code"]}>
+              <Tab value="preview">
+                  <div className="py-16 flex items-center justify-center">
+                      <InputFile />
+                  </div>
+              </Tab>
+              <Tab value="code">
+                  ```tsx
+                      "use client"
+
+                      import { Label } from "@uidu/core-ui";
+                      import { Input } from "@uidu/forms-ui";
+
+                      export default function InputFile() {
+                        return (
+                          <div className="grid w-full max-w-sm items-center gap-1.5">
+                            <Label htmlFor="picture">Picture</Label>
+                            <Input id="picture" type="file" />
+                          </div>
+                        );
+                      }
+                  ```
+              </Tab>
+          </Tabs>
+        </Step>
+        <Step>
+          ### Input form
+          <Tabs items={["preview" , "code"]}>
+              <Tab value="preview">
+                  <div className="py-16 flex items-center justify-center">
+                      <InputForm />
+                  </div>
+              </Tab>
+              <Tab value="code">
+                  ```tsx
+                      "use client";
+
+                      import { zodResolver } from "@hookform/resolvers/zod";
+                      import { useForm } from "react-hook-form";
+                      import { z } from "zod";
+
+                      import { Button, toast } from "@uidu/core-ui";
+                      import {
+                        Form,
+                        FormControl,
+                        FormDescription,
+                        FormField,
+                        FormItem,
+                        FormLabel,
+                        FormMessage,
+                        Input,
+                      } from "@uidu/forms-ui";
+
+                      const FormSchema = z.object({
+                        username: z.string().min(2, {
+                          message: "Username must be at least 2 characters.",
+                        }),
+                      });
+
+                      export default function InputForm() {
+                        const form = useForm<z.infer<typeof FormSchema>>({
+                          resolver: zodResolver(FormSchema),
+                          defaultValues: {
+                            username: "",
+                          },
+                        });
+
+                        function onSubmit(data: z.infer<typeof FormSchema>) {
+                          toast({
+                            title: "You submitted the following values:",
+                            description: (
+                              <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+                                <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+                              </pre>
+                            ),
+                          });
+                        }
+
+                        return (
+                          <Form {...form}>
+                            <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+                              <FormField
+                                control={form.control}
+                                name="username"
+                                render={({ field }) => (
+                                  <FormItem>
+                                    <FormLabel>Username</FormLabel>
+                                    <FormControl>
+                                      <Input placeholder="shadcn" {...field} />
+                                    </FormControl>
+                                    <FormDescription>
+                                      This is your public display name.
+                                    </FormDescription>
+                                    <FormMessage />
+                                  </FormItem>
+                                )}
+                              />
+                              <Button type="submit">Submit</Button>
+                            </form>
+                          </Form>
+                        );
+                      }
+                  ```
+              </Tab>
+          </Tabs>
+        </Step>
+        <Step>
+          ### Input with button
+          <Tabs items={["preview" , "code"]}>
+              <Tab value="preview">
+                  <div className="py-16 flex items-center justify-center">
+                      <InputWithButton />
+                  </div>
+              </Tab>
+              <Tab value="code">
+                  ```tsx
+                      "use client";
+
+                      import { Button } from "@uidu/core-ui";
+                      import { Input } from "@uidu/forms-ui";
+
+                      export default function InputWithButton() {
+                        return (
+                          <div className="flex w-full max-w-sm items-center space-x-2">
+                            <Input type="email" placeholder="Email" />
+                            <Button type="submit">Subscribe</Button>
+                          </div>
+                        );
+                      }
+                  ```
+              </Tab>
+          </Tabs>
+        </Step>
+        <Step>
+          ### Input with label
+          <Tabs items={["preview" , "code"]}>
+              <Tab value="preview">
+                  <div className="py-16 flex items-center justify-center">
+                      <InputWithLabel />
+                  </div>
+              </Tab>
+              <Tab value="code">
+                  ```tsx
+                      "use client"
+
+                      import { Label } from "@uidu/core-ui";
+                      import { Input } from "@uidu/forms-ui";
+
+                      export default function InputWithLabel() {
+                        return (
+                          <div className="grid w-full max-w-sm items-center gap-1.5">
+                            <Label htmlFor="email">Email</Label>
+                            <Input type="email" id="email" placeholder="Email" />
+                          </div>
+                        );
+                      }
+                  ```
+              </Tab>
+          </Tabs>
+        </Step>
+        <Step>
+          ### Input with text
+          <Tabs items={["preview" , "code"]}>
+              <Tab value="preview">
+                  <div className="py-16 flex items-center justify-center">
+                      <InputWithText />
+                  </div>
+              </Tab>
+              <Tab value="code">
+                  ```tsx
+                      "use client"
+
+                      import { Label } from "@uidu/core-ui";
+                      import { Input } from "@uidu/forms-ui";
+
+                      export default function InputWithText() {
+                        return (
+                          <div className="grid w-full max-w-sm items-center gap-1.5">
+                            <Label htmlFor="email-2">Email</Label>
+                            <Input type="email" id="email-2" placeholder="Email" />
+                            <p className="text-sm text-muted-foreground">Enter your email address.</p>
+                          </div>
+                        );
+                      }
+                  ```
+              </Tab>
+          </Tabs>
+        </Step>
+    </Steps>

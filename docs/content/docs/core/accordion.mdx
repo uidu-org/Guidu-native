@@ -3,14 +3,16 @@ title: "Accordions"
 description: A set of stacked headings, each revealing content sections when interacted with.
 ---
 
-import AccordionDemo from "../../../src/docs/demos/core/accordion-demo"
+import AccordionDemo from "../../../src/docs/demos/core/accordion-demo";
+import { Button } from "@uidu/button-ui";
 
-<div className="flex items-center">
-<a className="mr-4 " href="https://www.npmjs.com/package/@uidu/accordion-ui" target="_blank">@uidu/accordion-ui</a>
-<a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/accordion" target="_blank">Source</a>
-</div>
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/accordion-ui" target="_blank">@uidu/accordion-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/accordion" target="_blank">Source</a></Button>
+    </div>
 
-## Accordion 
+## Accordion
 
 <AccordionDemo />
 
@@ -23,61 +25,76 @@ import AccordionDemo from "../../../src/docs/demos/core/accordion-demo"
  </div>
 </Tab>
 <Tab value="code">
-```tsx
-"use client"
+  ```tsx
+  "use client"
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@uidu/core-ui'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@uidu/core-ui";
 
 export default function AccordionDemo() {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>Is it styled?</AccordionTrigger>
         <AccordionContent>
-          Yes. It comes with default styles that matches the other components&apos; aesthetic.
+          Yes. It comes with default styles that matches the other
+          components&apos; aesthetic.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
         <AccordionTrigger>Is it animated?</AccordionTrigger>
         <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you prefer.
+          Yes. It&apos;s animated by default, but you can disable it if you
+          prefer.
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  )
+  );
 }
-```
+
+````
 </Tab>
 </Tabs>
 
 ## Installation
+
 <Tabs items={["npm", "yarn"]}>
-<Tab value="npm">
-```bash
-npm install @uidu/accordion-ui
-```
-</Tab>
-<Tab value="yarn">
-```bash
-yarn add @uidu/accordion-ui
-```
-</Tab>
+<Tab value="npm">```bash npm install @uidu/accordion-ui ```</Tab>
+<Tab value="yarn">```bash yarn add @uidu/accordion-ui ```</Tab>
 </Tabs>
 
 ## Import
+
 <Tabs items={["generic", "individual"]}>
 <Tab value="generic">
-```tsx
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@uidu/core-ui'
-```
+  ```tsx
+  import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger
+  } from '@uidu/core-ui'
+  ```
 </Tab>
 <Tab value="individual">
-```tsx
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@uidu/accordion-ui'
-```
+  ```tsx
+  import{
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger
+  } from '@uidu/accordion-ui'
+  ```
 </Tab>
 </Tabs>
+````

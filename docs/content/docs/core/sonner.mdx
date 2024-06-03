@@ -1,15 +1,22 @@
 ---
-title: "Sonner" 
-description: a great way to use sonners! 
+title: "Sonner"
+description: a great way to use sonners!
 ---
 
-import SonnerDemo from "../../../src/docs/demos/core/sonner-demo" 
+import SonnerDemo from "../../../src/docs/demos/core/sonner-demo";
+import { Button } from "@uidu/button-ui";
+
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">@uidu/TBD</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="" target="_blank">Source TBD</a></Button>
+    </div>
 
 ## Sonner
 
 <SonnerDemo />
 
-## Usage 
+## Usage
 
     <Tabs items={["preview" , "code"]}>
         <Tab value="preview">
@@ -18,7 +25,7 @@ import SonnerDemo from "../../../src/docs/demos/core/sonner-demo"
             </div>
         </Tab>
         <Tab value="code">
-            ```tsx 
+            ```tsx
                 "use client"
 
                 import { toast } from "sonner"
@@ -47,7 +54,7 @@ import SonnerDemo from "../../../src/docs/demos/core/sonner-demo"
         </Tab>
     </Tabs>
 
-## Installation 
+## Installation
 
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
@@ -62,10 +69,10 @@ import SonnerDemo from "../../../src/docs/demos/core/sonner-demo"
         </Tab>
     </Tabs>
 
-## Import 
+## Import
 
-  ```tsx
-      import { toast } from "sonner"
+```tsx
+import { toast } from "sonner";
 
-      import { Button } from "@uidu/core-ui"
-  ```
+import { Button } from "@uidu/core-ui";
+```

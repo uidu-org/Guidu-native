@@ -1,3 +1,5 @@
+"use client";
+
 import { Label } from "@uidu/core-ui";
 import { Switch } from "@uidu/forms-ui";
 

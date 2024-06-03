@@ -1,0 +1,221 @@
+---
+title: "Toggle"
+description: a great way to use toggles.
+---
+
+import { Button } from "@uidu/button-ui";
+import ToggleDemo from "../../../src/docs/demos/forms/toggle-demo.tsx";
+import ToggleDisable from "../../../src/docs/demos/forms/toggle-disabled.tsx";
+import ToggleOutline from "../../../src/docs/demos/forms/toggle-outline.tsx";
+import ToggleWithText from "../../../src/docs/demos/forms/toggle-with-text.tsx";
+import ToggleLg from "../../../src/docs/demos/forms/toggle-lg.tsx";
+import ToggleSm from "../../../src/docs/demos/forms/toggle-sm.tsx";
+
+    <div className="flex items-center">
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/toggle-ui" target="_blank">@uidu/toggle-ui</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/toggle" target="_blank">Source</a></Button>
+    </div>
+
+## Toggle
+
+<ToggleDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <ToggleDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client"
+
+                import { Bold } from "lucide-react";
+
+                import { Toggle } from "@uidu/forms-ui";
+
+                export default function ToggleDemo() {
+                  return (
+                    <Toggle aria-label="Toggle bold">
+                      <Bold className="h-4 w-4" />
+                    </Toggle>
+                  );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/toggle-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/toggle-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+      <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { Toggle } from "@uidu/forms-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { Toggle } from "@uidu/toggle-ui";
+            ```
+        </Tab>
+    </Tabs>
+
+## Variant
+
+    <Steps>
+        <Step>
+          ### Toggle disabled
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <ToggleDisable />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client";
+
+                        import { Underline } from "lucide-react";
+
+                        import { Toggle } from "@uidu/forms-ui";
+
+                        export default function ToggleDisabled() {
+                          return (
+                            <Toggle aria-label="Toggle underline" disabled>
+                              <Underline className="h-4 w-4" />
+                            </Toggle>
+                          );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Toggle outline
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <ToggleOutline />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client";
+
+                        import { Italic } from "lucide-react";
+
+                        import { Toggle } from "@uidu/forms-ui";
+
+                        export default function ToggleOutline() {
+                          return (
+                            <Toggle variant="outline" aria-label="Toggle italic">
+                              <Italic className="h-4 w-4" />
+                            </Toggle>
+                          );
+                        }
+
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Toggle with text
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <ToggleWithText />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client";
+
+                        import { Italic } from "lucide-react";
+
+                        import { Toggle } from "@uidu/forms-ui";
+
+                        export default function ToggleWithText() {
+                          return (
+                            <Toggle aria-label="Toggle italic">
+                              <Italic className="mr-2 h-4 w-4" />
+                              Italic
+                            </Toggle>
+                          );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Toggle large
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <ToggleLg />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+
+                        import { Italic } from "lucide-react";
+
+                        import { Toggle } from "@uidu/forms-ui";
+
+                        export default function ToggleLg() {
+                          return (
+                            <Toggle size="lg" aria-label="Toggle italic">
+                              <Italic className="h-4 w-4" />
+                            </Toggle>
+                          );
+                        }
+
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+        <Step>
+          ### Toggle small
+            <Tabs items={["preview" , "code"]}>
+                <Tab value="preview">
+                    <div className="py-16 flex items-center justify-center">
+                        <ToggleSm />
+                    </div>
+                </Tab>
+                <Tab value="code">
+                    ```tsx
+                        "use client"
+
+                        import { Italic } from "lucide-react";
+
+                        import { Toggle } from "@uidu/forms-ui";
+
+                        export default function ToggleSm() {
+                          return (
+                            <Toggle size="sm" aria-label="Toggle italic">
+                              <Italic className="h-4 w-4" />
+                            </Toggle>
+                          );
+                        }
+                    ```
+                </Tab>
+            </Tabs>
+        </Step>
+    </Steps>

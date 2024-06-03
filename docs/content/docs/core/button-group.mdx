@@ -4,9 +4,71 @@ description: "a beautiful button group"
 ---
 
 import { Button } from "@uidu/button-ui";
+import ButtonGroupDemo from "../../../src/docs/demos/core/button-group-demo.tsx";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
         <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/button-ui" target="_blank">@uidu/button-ui</a></Button>
         <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/button" target="_blank">Source</a></Button>
     </div>
+
+## Button Group
+
+<ButtonGroupDemo />
+
+## Usage
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <ButtonGroupDemo />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client ";
+
+                import { Button, ButtonGroup } from "@uidu/core-ui";
+
+                export default function ButtonGroupDemo() {
+                return (
+                    <ButtonGroup>
+                    <Button>Button</Button>
+                    <Button>Button</Button>
+                    <Button>Button</Button>
+                    </ButtonGroup>
+                );
+                }
+            ```
+        </Tab>
+    </Tabs>
+
+## Installation
+
+    <Tabs items={["npm" , "yarn"]}>
+        <Tab value="npm">
+            ```bash
+                npm install @uidu/button-ui
+            ```
+        </Tab>
+        <Tab value="yarn">
+            ```bash
+                yarn add @uidu/button-ui
+            ```
+        </Tab>
+    </Tabs>
+
+## Import
+
+    <Tabs items={["generic" , "individual"]}>
+        <Tab value="generic">
+            ```tsx
+                import { Button, ButtonGroup } from "@uidu/core-ui";
+            ```
+        </Tab>
+        <Tab value="individual">
+            ```tsx
+                import { Button, ButtonGroup } from "@uidu/button-ui";
+            ```
+        </Tab>
+    </Tabs>

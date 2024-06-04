@@ -8,9 +8,6 @@
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "npx tsup src --dts"
-  },
   "dependencies": {
     "@uidu/accordion-ui": "0.2.0",
     "@uidu/alert-ui": "0.2.0",
@@ -51,5 +48,9 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
   }
 }

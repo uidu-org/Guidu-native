@@ -4,9 +4,12 @@ description: A useful way to show small descriptions in your UI
 ---
 
 import BadgeDemo from "../../../src/docs/demos/core/badge-demo";
-import BadgeDestructive from "../../../src/docs/demos/core/badge-destructive";
-import BadgeOutline from "../../../src/docs/demos/core/badge-outline";
-import BadgeSecondary from "../../../src/docs/demos/core/badge-secondary";
+import BadgeRemoved from "../../../src/docs/demos/core/badge-removed";
+import BadgePrimary from "../../../src/docs/demos/core/badge-primary";
+import BadgeAdded from "../../../src/docs/demos/core/badge-added";
+import BadgeImportant from "../../../src/docs/demos/core/badge-important";
+import BadgePrimaryInverted from "../../../src/docs/demos/core/badge-primary-inverted";
+import BadgeMaxValue from "../../../src/docs/demos/core/badge-max-value";
 import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
@@ -60,23 +63,23 @@ export default function BadgeDemo() {
 <Steps>
 
 <Step>
-### Destructive
+### Removed
 <Tabs items={["preview", "code"]}>
 
 <Tab value="preview">
     <div className=" h-40 p-4 flex items-center justify-center">
-    <BadgeDestructive />
+    <BadgeRemoved />
     </div>
 
 </Tab>
 <Tab value="code">
 ```tsx
-"use client"
+"use client";
 
 import { Badge } from "@uidu/core-ui";
 
-export default function BadgeDestructive() {
-  return <Badge variant="destructive">Destructive</Badge>
+export default function BadgeRemoved() {
+  return <Badge variant="removed">Removed</Badge>;
 }
 ```
 </Tab>
@@ -84,23 +87,23 @@ export default function BadgeDestructive() {
 </Tabs></Step>
 
 <Step>
-### Outline
+### Added
 <Tabs items={["preview", "code"]}>
 
 <Tab value="preview">
     <div className=" h-40 p-4 flex items-center justify-center">
-    <BadgeOutline />
+    <BadgeAdded />
     </div>
 
 </Tab>
 <Tab value="code">
 ```tsx
-"use client"
+"use client";
 
 import { Badge } from "@uidu/core-ui";
 
-export default function BadgeOutline() {
-  return <Badge variant="outline">Outline</Badge>
+export default function BadgeAdded() {
+  return <Badge variant="added">Added</Badge>;
 }
 ```
 </Tab>
@@ -108,27 +111,97 @@ export default function BadgeOutline() {
 </Tabs></Step>
 
 <Step>
-### Secondary
+### Important
 <Tabs items={["preview", "code"]}>
 
 <Tab value="preview">
     <div className=" h-40 p-4 flex items-center justify-center">
-    <BadgeSecondary />
+    <BadgeImportant />
     </div>
 
 </Tab>
 <Tab value="code">
 ```tsx
-"use client"
+"use client";
 
 import { Badge } from "@uidu/core-ui";
 
-export default function BadgeSecondary() {
-  return <Badge variant="secondary">Secondary</Badge>
+export default function BadgeImportant() {
+  return <Badge variant="important">Important</Badge>;
+}
+
+````
+</Tab>
+
+</Tabs></Step>
+<Step>
+### Primary
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-40 p-4 flex items-center justify-center">
+    <BadgePrimary />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+"use client";
+
+import { Badge } from "@uidu/core-ui";
+
+export default function BadgePrimary() {
+  return <Badge variant="primary">Primary</Badge>;
+}
+````
+
+</Tab>
+
+</Tabs></Step>
+<Step>
+### Primary inverted
+<Tabs items={["preview", "code"]}>
+
+<Tab value="preview">
+    <div className=" h-40 p-4 flex items-center justify-center">
+    <BadgePrimaryInverted />
+    </div>
+
+</Tab>
+<Tab value="code">
+```tsx
+"use client";
+
+import { Badge } from "@uidu/core-ui";
+
+export default function BadgePrimaryInverted() {
+  return <Badge variant="primaryInverted">Primary Inverted</Badge>;
 }
 ```
 </Tab>
 
 </Tabs></Step>
-
 </Steps>
+
+## Props
+
+### Max
+
+    <Tabs items={["preview" , "code"]}>
+        <Tab value="preview">
+            <div className="py-16 flex items-center justify-center">
+                <BadgeMaxValue />
+            </div>
+        </Tab>
+        <Tab value="code">
+            ```tsx
+                "use client";
+
+                import { Badge } from "@uidu/core-ui";
+
+                export default function BadgeMaxValue() {
+                  return <Badge max={10}>{30}</Badge>;
+                }
+            ```
+        </Tab>
+    </Tabs>

@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build-storybook": "storybook build",
-    "dev": "storybook",
+    "dev": "yarn storybook",
     "storybook": "npx storybook dev -p 6006"
   },
   "dependencies": {

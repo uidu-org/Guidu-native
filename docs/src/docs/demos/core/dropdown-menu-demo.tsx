@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Cloud,
@@ -15,10 +15,11 @@ import {
   User,
   UserPlus,
   Users,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
-  Button, DropdownMenu,
+  Button,
+  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
@@ -29,8 +30,8 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuTrigger
-} from "@uidu/core-ui"
+  DropdownMenuTrigger,
+} from "@holo/core";
 
 export default function DropdownMenuDemo() {
   return (
@@ -119,5 +120,5 @@ export default function DropdownMenuDemo() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

@@ -8,8 +8,8 @@ import {
   DialogTitle,
   DialogTrigger,
   Label,
-} from "@uidu/core-ui";
-import { Input } from "@uidu/forms-ui";
+} from "@holo/core";
+import { Input } from "@holo/forms";
 export default function DialogDemo() {
   return (
     <Dialog>
@@ -24,7 +24,7 @@ export default function DialogDemo() {
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid items-center grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
@@ -34,7 +34,7 @@ export default function DialogDemo() {
               className="col-span-3"
             />
           </div>
-          <div className="grid items-center grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Username
             </Label>

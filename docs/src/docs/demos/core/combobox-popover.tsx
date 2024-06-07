@@ -24,7 +24,7 @@ import {
   PopoverRoot as Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 type Status = {
   value: string;
@@ -78,7 +78,7 @@ export default function ComboboxPopover() {
           >
             {selectedStatus ? (
               <>
-                <selectedStatus.icon className="w-4 h-4 mr-2 shrink-0" />
+                <selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
                 {selectedStatus.label}
               </>
             ) : (

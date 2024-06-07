@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Pagination,
@@ -8,7 +8,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 export default function PaginationDemo() {
   return (
@@ -36,5 +36,5 @@ export default function PaginationDemo() {
         </PaginationItem>
       </PaginationContent>
     </Pagination>
-  )
+  );
 }

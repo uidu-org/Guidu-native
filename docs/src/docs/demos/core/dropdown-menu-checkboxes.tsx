@@ -11,7 +11,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"];
 

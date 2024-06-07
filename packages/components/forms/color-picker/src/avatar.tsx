@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import * as AvatarPrimitive from '@radix-ui/react-avatar'
-import * as React from 'react'
+import * as AvatarPrimitive from '@radix-ui/react-avatar';
+import * as React from 'react';
 
-import { cn } from '@uidu/lib'
-import { VariantProps, cva } from 'class-variance-authority'
-import Loading from './icons/Loading'
-import User from './icons/User'
+import { cn } from '@holo/lib';
+import { VariantProps, cva } from 'class-variance-authority';
+import Loading from './icons/Loading';
+import User from './icons/User';
 
 interface AvatarProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>,
@@ -14,15 +14,16 @@ interface AvatarProps
   /* ------------------------- extend AvatarProps here ------------------------ */
 }
 
-interface AvatarImageProps extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
+interface AvatarImageProps
+  extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
   /* ------------------------- extend AvatarImageProps here ------------------------ */
 }
 
 interface AvatarFallbackProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> {
   /* ------------------------- extend AvatarFallbackProps here ------------------------ */
-  children?: React.ReactNode
-  typeFallback?: 'user' | 'loading'
+  children?: React.ReactNode;
+  typeFallback?: 'user' | 'loading';
 }
 
 /* ------------------------------ CSS Variants ------------------------------ */
@@ -42,21 +43,22 @@ const avatarVariants = cva('relative flex h-10 w-10 shrink-0 overflow-hidden', {
     size: 'medium',
     shape: 'circle',
   },
-})
+});
 
 /* -------------------------------------------------------------------------- */
 /*                                   Avatar                                   */
 /* -------------------------------------------------------------------------- */
-const Avatar = React.forwardRef<React.ElementRef<typeof AvatarPrimitive.Root>, AvatarProps>(
-  ({ className, shape, size, ...props }, ref) => (
-    <AvatarPrimitive.Root
-      ref={ref}
-      className={cn(avatarVariants({ shape, size }), className)}
-      {...props}
-    />
-  )
-)
-Avatar.displayName = AvatarPrimitive.Root.displayName
+const Avatar = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Root>,
+  AvatarProps
+>(({ className, shape, size, ...props }, ref) => (
+  <AvatarPrimitive.Root
+    ref={ref}
+    className={cn(avatarVariants({ shape, size }), className)}
+    {...props}
+  />
+));
+Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 /* -------------------------------------------------------------------------- */
 /*                                 AvatarImage                                */
@@ -70,8 +72,8 @@ const AvatarImage = React.forwardRef<
     className={cn('aspect-square h-full w-full', className)}
     {...props}
   />
-))
-AvatarImage.displayName = AvatarPrimitive.Image.displayName
+));
+AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
 /* -------------------------------------------------------------------------- */
 /*                               AvatarFallback                               */
@@ -80,10 +82,10 @@ const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>,
   AvatarFallbackProps
 >(({ className, children, typeFallback, ...props }, ref) => {
-  const isChild = !!children || !!typeFallback
+  const isChild = !!children || !!typeFallback;
 
   const RenderTypeFallback = () =>
-    typeFallback === 'user' ? <User /> : <Loading className="animate-spin" />
+    typeFallback === 'user' ? <User /> : <Loading className="animate-spin" />;
 
   return (
     <AvatarPrimitive.Fallback
@@ -97,8 +99,8 @@ const AvatarFallback = React.forwardRef<
     >
       {(isChild && children) || <RenderTypeFallback />}
     </AvatarPrimitive.Fallback>
-  )
-})
-AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName
+  );
+});
+AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
-export { Avatar, AvatarFallback, AvatarImage }
+export { Avatar, AvatarFallback, AvatarImage };

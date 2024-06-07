@@ -1,4 +1,4 @@
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import * as React from 'react';
 
 import { Slot } from '@radix-ui/react-slot';

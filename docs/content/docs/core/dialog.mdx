@@ -3,13 +3,13 @@ title: "Dialog"
 description: a great way to use dialogs!
 ---
 
+import { Button } from "@holo/button";
 import DialogDemo from "../../../src/docs/demos/core/dialog-demo.tsx";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/dialog-ui" target="_blank">@uidu/dialog-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/dialog" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/dialog" target="_blank">@holo/dialog</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/dialog" target="_blank">Source</a></Button>
     </div>
 
 ## Dialog
@@ -34,7 +34,7 @@ import { Button } from "@uidu/button-ui";
                   DialogHeader,
                   DialogTitle,
                   DialogTrigger, Input, Label
-                } from "@uidu/core-ui"
+                } from "@holo/core"
 
                 export default function DialogDemo() {
                   return (
@@ -87,12 +87,12 @@ import { Button } from "@uidu/button-ui";
       <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/dialog-ui
+                npm install @holo/dialog
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                 yarn add @uidu/dialog-ui
+                 yarn add @holo/dialog
             ```
         </Tab>
     </Tabs>
@@ -111,5 +111,5 @@ import {
   DialogTrigger,
   Input,
   Label,
-} from "@uidu/core-ui";
+} from "@holo/core";
 ```

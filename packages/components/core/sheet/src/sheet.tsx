@@ -2,7 +2,7 @@ import * as SheetPrimitive from '@radix-ui/react-dialog';
 import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from 'react';
 
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import XIcon from './icons/X';
 
 const Sheet = SheetPrimitive.Root;
@@ -64,7 +64,7 @@ const SheetContent = React.forwardRef<
     >
       {children}
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-stone-950 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-stone-100 dark:ring-offset-stone-950 dark:focus:ring-stone-300 dark:data-[state=open]:bg-stone-800">
-        <XIcon className="h-4 w-4" />
+        <XIcon className="w-4 h-4" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>

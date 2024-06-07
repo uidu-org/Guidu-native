@@ -1,7 +1,7 @@
-import { cn } from '@uidu/lib'
-import { VariantProps, cva } from 'class-variance-authority'
-import React from 'react'
-import MessageCircleWarning from './icons/MessageCircleWarning'
+import { cn } from '@holo/lib';
+import { VariantProps, cva } from 'class-variance-authority';
+import React from 'react';
+import MessageCircleWarning from './icons/MessageCircleWarning';
 
 const helperTextVariants = cva('', {
   variants: {
@@ -15,13 +15,13 @@ const helperTextVariants = cva('', {
   defaultVariants: {
     size: 'md',
   },
-})
+});
 
 export interface FieldHelperTextProps
   extends React.HTMLAttributes<HTMLDivElement | HTMLSpanElement>,
     VariantProps<typeof helperTextVariants> {
-  as?: 'div' | 'span'
-  className?: string
+  as?: 'div' | 'span';
+  className?: string;
 }
 
 export function FieldHelperText({
@@ -30,7 +30,7 @@ export function FieldHelperText({
   children,
   className,
 }: React.PropsWithChildren<FieldHelperTextProps>) {
-  const Component = as
+  const Component = as;
   return (
     <Component
       role="alert"
@@ -42,7 +42,7 @@ export function FieldHelperText({
       <MessageCircleWarning className="w-5 h-5" />
       {children}
     </Component>
-  )
+  );
 }
 
-FieldHelperText.displayName = 'FieldHelperText'
+FieldHelperText.displayName = 'FieldHelperText';

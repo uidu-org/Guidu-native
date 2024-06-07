@@ -14,12 +14,12 @@ import ButtonOutline from "../../../src/docs/demos/core/button-outline";
 import ButtonSecondary from "../../../src/docs/demos/core/button-secondary";
 import ButtonWithIcon from "../../../src/docs/demos/core/button-with-icon";
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="https://664f5b90094245c962f7ddfb-bjgjrlmnhg.chromatic.com/?path=/story/core-button--default" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/button-ui" target="_blank">@uidu/button-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/button" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/button" target="_blank">@holo/button</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/button" target="_blank">Source</a></Button>
     </div>
 
 ## Button
@@ -38,7 +38,7 @@ import { Button } from "@uidu/button-ui";
     ```tsx
       "use client"
 
-      import { Button } from "@uidu/core-ui"
+      import { Button } from "@holo/core"
 
       export default function ButtonDemo() {
         return <Button>Button</Button>
@@ -53,8 +53,8 @@ import { Button } from "@uidu/button-ui";
 {" "}
 
 <Tabs items={["npm", "yarn"]}>
-  <Tab value="npm">```bash npm install @uidu/button-ui ```</Tab>
-  <Tab value="yarn">```bash yarn add @uidu/button-ui ```</Tab>
+  <Tab value="npm">```bash npm install @holo/button ```</Tab>
+  <Tab value="yarn">```bash yarn add @holo/button ```</Tab>
 </Tabs>
 
 ## Import
@@ -62,10 +62,8 @@ import { Button } from "@uidu/button-ui";
 {" "}
 
 <Tabs items={["generic", "individual"]}>
-  <Tab value="generic">```tsx import {Button} from "@uidu/core-ui" ```</Tab>
-  <Tab value="individual">
-    ```tsx import {Button} from "@uidu/button-ui" ```
-  </Tab>
+  <Tab value="generic">```tsx import {Button} from "@holo/core" ```</Tab>
+  <Tab value="individual">```tsx import {Button} from "@holo/button" ```</Tab>
 </Tabs>
 
 ## Variants
@@ -75,7 +73,7 @@ import { Button } from "@uidu/button-ui";
     Use the `buttonVariants` helper to generate a button-styled link
 
     ```tsx
-      import { buttonVariants } from "@uidu/core-ui"
+      import { buttonVariants } from "@holo/core"
 
       <Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
     ```
@@ -93,7 +91,7 @@ import { Button } from "@uidu/button-ui";
     Use the `buttonVariants` helper to generate a button-styled link
 
     ```tsx
-      import { buttonVariants } from "@uidu/core-ui"
+      import { buttonVariants } from "@holo/core"
 
       <Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
     ```
@@ -118,7 +116,7 @@ import { Button } from "@uidu/button-ui";
       <Tab value="code">
       ```tsx
         "use client"
-          import { Button } from "@uidu/core-ui"
+          import { Button } from "@holo/core"
 
           export default function ButtonSecondary() {
           return <Button variant="secondary">Secondary</Button>
@@ -140,7 +138,7 @@ import { Button } from "@uidu/button-ui";
         ```tsx
           "use client"
 
-          import { Button } from "@uidu/core-ui"
+          import { Button } from "@holo/core"
 
           export default function ButtonOutline() {
           return <Button variant="outline">Outline</Button>
@@ -162,7 +160,7 @@ import { Button } from "@uidu/button-ui";
           ```tsx
             "use client"
 
-            import { Button } from "@uidu/core-ui"
+            import { Button } from "@holo/core"
 
             export default function ButtonGhost() {
             return <Button variant="ghost">Ghost</Button>
@@ -183,7 +181,7 @@ import { Button } from "@uidu/button-ui";
         <Tab value="code">
         ```tsx
           "use client"
-          import { Button } from "@uidu/core-ui"
+          import { Button } from "@holo/core"
 
           export default function ButtonDestructive() {
           return <Button variant="destructive">Destructive</Button>
@@ -205,7 +203,7 @@ import { Button } from "@uidu/button-ui";
           ```tsx
             "use client"
 
-            import { Button } from "@uidu/core-ui"
+            import { Button } from "@holo/core"
 
             export default function ButtonLink() {
             return <Button variant="link">Link</Button>
@@ -229,7 +227,7 @@ import { Button } from "@uidu/button-ui";
 
           import { ChevronRight } from "lucide-react"
 
-          import { Button } from "@uidu/core-ui"
+          import { Button } from "@holo/core"
 
           export default function ButtonIcon() {
             return (
@@ -256,7 +254,7 @@ import { Button } from "@uidu/button-ui";
         "use client"
         import { Mail } from "lucide-react"
 
-        import { Button } from "@uidu/core-ui"
+        import { Button } from "@holo/core"
 
         export default function ButtonWithIcon() {
           return (
@@ -284,7 +282,7 @@ import { Button } from "@uidu/button-ui";
 
           import { Loader2 } from "lucide-react"
 
-          import { Button } from "@uidu/core-ui"
+          import { Button } from "@holo/core"
 
           export default function ButtonLoading() {
             return (
@@ -312,7 +310,7 @@ import { Button } from "@uidu/button-ui";
 
             import Link from "next/link"
 
-            import { Button } from "@uidu/core-ui"
+            import { Button } from "@holo/core"
 
             export default function ButtonAsChild() {
               return (

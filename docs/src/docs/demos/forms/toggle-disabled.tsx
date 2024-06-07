@@ -2,7 +2,7 @@
 
 import { Underline } from "lucide-react";
 
-import { Toggle } from "@uidu/forms-ui";
+import { Toggle } from "@holo/forms";
 
 export default function ToggleDisabled() {
   return (

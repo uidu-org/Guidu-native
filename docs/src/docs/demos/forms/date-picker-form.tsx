@@ -13,7 +13,7 @@ import {
   PopoverRoot,
   PopoverTrigger,
   toast,
-} from "@uidu/core-ui";
+} from "@holo/core";
 import {
   Calendar,
   Form,
@@ -23,7 +23,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@uidu/forms-ui";
+} from "@holo/forms";
 
 const FormSchema = z.object({
   dob: z.date({

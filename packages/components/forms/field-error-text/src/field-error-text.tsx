@@ -1,4 +1,4 @@
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import { VariantProps, cva } from 'class-variance-authority';
 import React from 'react';
 import { type FieldError } from 'react-hook-form';

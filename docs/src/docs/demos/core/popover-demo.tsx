@@ -4,8 +4,8 @@ import {
   PopoverContent,
   PopoverRoot,
   PopoverTrigger,
-} from "@uidu/core-ui";
-import { Input } from "@uidu/forms-ui";
+} from "@holo/core";
+import { Input } from "@holo/forms";
 
 export default function PopoverDemo() {
   return (

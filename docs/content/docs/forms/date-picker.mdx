@@ -3,15 +3,15 @@ title: "Date picker"
 description: a beautiful date picker.
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import DatePickerDemo from "../../../src/docs/demos/forms/date-picker-demo.tsx";
 import DatePickerForm from "../../../src/docs/demos/forms/date-picker-form.tsx";
 import DatePickerWithPresets from "../../../src/docs/demos/forms/date-picker-with-presets.tsx";
 import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-range.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/calendar-ui" target="_blank">@uidu/calendar-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/blob/main/packages/components/forms/calendar/src/datePicker.tsx" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/calendar" target="_blank">@holo/calendar</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/blob/main/packages/components/forms/calendar/src/datePicker.tsx" target="_blank">Source</a></Button>
     </div>
 
 ## Date picker
@@ -35,8 +35,8 @@ import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-
               import * as React from "react";
 
               import { cn } from "@/lib/utils";
-              import { Button, Popover, PopoverContent, PopoverTrigger } from "@uidu/core-ui";
-              import { Calendar } from "@uidu/forms-ui";
+              import { Button, Popover, PopoverContent, PopoverTrigger } from "@holo/core";
+              import { Calendar } from "@holo/forms";
 
               export default function DatePickerDemo() {
                 const [date, setDate] = React.useState<Date>();
@@ -75,12 +75,12 @@ import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/calendar-ui
+                npm install @holo/calendar
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/calendar-ui
+                yarn add @holo/calendar
             ```
         </Tab>
     </Tabs>
@@ -90,15 +90,15 @@ import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { Button, PopoverContent, PopoverRoot, PopoverTrigger } from "@uidu/core-ui";
-                import { Calendar } from "@uidu/forms-ui";
+                import { Button, PopoverContent, PopoverRoot, PopoverTrigger } from "@holo/core";
+                import { Calendar } from "@holo/forms";
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { PopoverContent, PopoverRoot, PopoverTrigger } from "@uidu/popover-ui";
-                import { Button } from "@uidu/button-ui";
-                import { Calendar } from "@uidu/calendar-ui";
+                import { PopoverContent, PopoverRoot, PopoverTrigger } from "@holo/popover";
+                import { Button } from "@holo/button";
+                import { Calendar } from "@holo/calendar";
             ```
         </Tab>
     </Tabs>
@@ -131,7 +131,7 @@ import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-
                         PopoverRoot,
                         PopoverTrigger,
                         toast,
-                        } from "@uidu/core-ui";
+                        } from "@holo/core";
                         import {
                         Calendar,
                         Form,
@@ -141,7 +141,7 @@ import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-
                         FormItem,
                         FormLabel,
                         FormMessage,
-                        } from "@uidu/forms-ui";
+                        } from "@holo/forms";
 
                         const FormSchema = z.object({
                         dob: z.date({
@@ -243,7 +243,7 @@ import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-
                             PopoverContent,
                             PopoverRoot,
                             PopoverTrigger,
-                            } from "@uidu/core-ui";
+                            } from "@holo/core";
                             import {
                             Calendar,
                             Select,
@@ -251,7 +251,7 @@ import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-
                             SelectItem,
                             SelectTrigger,
                             SelectValue,
-                            } from "@uidu/forms-ui";
+                            } from "@holo/forms";
 
                             export default function DatePickerWithPresets() {
                             const [date, setDate] = React.useState<Date>();
@@ -320,8 +320,8 @@ import DatePickerWithRange from "../../../src/docs/demos/forms/date-picker-with-
                             PopoverContent,
                             PopoverRoot,
                             PopoverTrigger,
-                            } from "@uidu/core-ui";
-                            import { Calendar } from "@uidu/forms-ui";
+                            } from "@holo/core";
+                            import { Calendar } from "@holo/forms";
 
                             export default function DatePickerWithRange({
                             className,

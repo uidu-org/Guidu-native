@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@uidu/core-ui";
+import { Button } from "@holo/core";
 import Link from "next/link";
 
 export default function ButtonAsChild() {

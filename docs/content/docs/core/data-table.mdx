@@ -3,15 +3,15 @@ title: "Data table"
 description: a beautiful data table.
 ---
 
+import { Button } from "@holo/button";
 import DataTableDemo from "../../../src/docs/demos/core/data-table-demo.tsx";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/dropdown-menu-ui" target="_blank">@uidu/dropdown-menu-ui</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/table-ui" target="_blank">@uidu/table-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/dropdown-menu" target="_blank">Source Dropdown menu</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/table" target="_blank">Source Table</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/dropdown-menu" target="_blank">@holo/dropdown-menu</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/table" target="_blank">@holo/table</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/dropdown-menu" target="_blank">Source Dropdown menu</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/table" target="_blank">Source Table</a></Button>
     </div>
 
 ## Data Table
@@ -60,8 +60,8 @@ import { Button } from "@uidu/button-ui";
                   TableHead,
                   TableHeader,
                   TableRow,
-                } from "@uidu/core-ui";
-                import { CheckboxBase as Checkbox, Input } from "@uidu/forms-ui";
+                } from "@holo/core";
+                import { CheckboxBase as Checkbox, Input } from "@holo/forms";
 
                 const data: Payment[] = [
                   {
@@ -359,6 +359,6 @@ import { Button } from "@uidu/button-ui";
       TableHead,
       TableHeader,
       TableRow,
-    } from "@uidu/core-ui";
-    import { CheckboxBase as Checkbox, Input } from "@uidu/forms-ui";
+    } from "@holo/core";
+    import { CheckboxBase as Checkbox, Input } from "@holo/forms";
     ```

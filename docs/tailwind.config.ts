@@ -9,7 +9,7 @@ const config: Config = {
     "../node_modules/fumadocs-ui/dist/**/*.js",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./content/**/**/*.{js,ts,jsx,tsx,mdx}",
-    "../node_modules/@uidu/web/dist/**/*.{js,ts,jsx,tsx,mdx}",
+    "../node_modules/@holo/web/dist/**/*.{js,ts,jsx,tsx,mdx}",
     "../packages/src/**/*.{js,ts,jsx,tsx,mdx}",
     "../packages/components/core/**/**/*.{js,ts,jsx,tsx,mdx}",
     "../packages/components/forms/**/**/*.{js,ts,jsx,tsx,mdx}",

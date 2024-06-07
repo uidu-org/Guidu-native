@@ -4,8 +4,8 @@ import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from 'react';
 
-import { buttonVariants } from '@uidu/button-ui';
-import { cn } from '@uidu/lib';
+import { buttonVariants } from '@holo/button';
+import { cn } from '@holo/lib';
 
 /* -------------------------------------------------------------------------- */
 /*                                Alert-Dialogo                               */

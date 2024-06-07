@@ -6,7 +6,7 @@ import {
   TooltipProvider,
   TooltipRoot,
   TooltipTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 export default function TooltipDemo() {
   return (

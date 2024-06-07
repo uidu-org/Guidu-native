@@ -1,4 +1,4 @@
-import { Multiselect } from "@uidu/forms-ui";
+import { Multiselect } from "@holo/forms";
 
 export const MultiselectDemo = () => {
   const options = [

@@ -3,19 +3,19 @@ title: "Badge"
 description: A useful way to show small descriptions in your UI
 ---
 
-import BadgeDemo from "../../../src/docs/demos/core/badge-demo";
-import BadgeRemoved from "../../../src/docs/demos/core/badge-removed";
-import BadgePrimary from "../../../src/docs/demos/core/badge-primary";
+import { Button } from "@holo/button";
 import BadgeAdded from "../../../src/docs/demos/core/badge-added";
+import BadgeDemo from "../../../src/docs/demos/core/badge-demo";
 import BadgeImportant from "../../../src/docs/demos/core/badge-important";
-import BadgePrimaryInverted from "../../../src/docs/demos/core/badge-primary-inverted";
 import BadgeMaxValue from "../../../src/docs/demos/core/badge-max-value";
-import { Button } from "@uidu/button-ui";
+import BadgePrimary from "../../../src/docs/demos/core/badge-primary";
+import BadgePrimaryInverted from "../../../src/docs/demos/core/badge-primary-inverted";
+import BadgeRemoved from "../../../src/docs/demos/core/badge-removed";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/badge-ui" target="_blank">@uidu/badge-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/badge" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/badge" target="_blank">@holo/badge</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/badge" target="_blank">Source</a></Button>
     </div>
 
 ## Badge
@@ -35,7 +35,7 @@ import { Button } from "@uidu/button-ui";
   ```tsx
   "use client"
 
-import { Badge } from "@uidu/core-ui";
+import { Badge } from "@holo/core";
 
 export default function BadgeDemo() {
   return <Badge>Badge</Badge>
@@ -47,15 +47,15 @@ export default function BadgeDemo() {
 ## Installation
 
 <Tabs items={["npm", "yarn"]}>
-  <Tab value="npm">```bash npm install @uidu/badge-ui ```</Tab>
-  <Tab value="yarn">```bash yarn add @uidu/badge-ui ```</Tab>
+  <Tab value="npm">```bash npm install @holo/badge ```</Tab>
+  <Tab value="yarn">```bash yarn add @holo/badge ```</Tab>
 </Tabs>
 
 ## Import
 
 <Tabs items={["generic", "individual"]}>
-  <Tab value="generic">```tsx import {Badge} from "@uidu/core-ui" ```</Tab>
-  <Tab value="individual">```tsx import {Badge} from "@uidu/badge-ui" ```</Tab>
+  <Tab value="generic">```tsx import {Badge} from "@holo/core" ```</Tab>
+  <Tab value="individual">```tsx import {Badge} from "@holo/badge" ```</Tab>
 </Tabs>
 
 ## Variants
@@ -76,7 +76,7 @@ export default function BadgeDemo() {
 ```tsx
 "use client";
 
-import { Badge } from "@uidu/core-ui";
+import { Badge } from "@holo/core";
 
 export default function BadgeRemoved() {
   return <Badge variant="removed">Removed</Badge>;
@@ -100,7 +100,7 @@ export default function BadgeRemoved() {
 ```tsx
 "use client";
 
-import { Badge } from "@uidu/core-ui";
+import { Badge } from "@holo/core";
 
 export default function BadgeAdded() {
   return <Badge variant="added">Added</Badge>;
@@ -124,7 +124,7 @@ export default function BadgeAdded() {
 ```tsx
 "use client";
 
-import { Badge } from "@uidu/core-ui";
+import { Badge } from "@holo/core";
 
 export default function BadgeImportant() {
   return <Badge variant="important">Important</Badge>;
@@ -148,7 +148,7 @@ export default function BadgeImportant() {
 ```tsx
 "use client";
 
-import { Badge } from "@uidu/core-ui";
+import { Badge } from "@holo/core";
 
 export default function BadgePrimary() {
   return <Badge variant="primary">Primary</Badge>;
@@ -172,7 +172,7 @@ export default function BadgePrimary() {
 ```tsx
 "use client";
 
-import { Badge } from "@uidu/core-ui";
+import { Badge } from "@holo/core";
 
 export default function BadgePrimaryInverted() {
   return <Badge variant="primaryInverted">Primary Inverted</Badge>;
@@ -197,7 +197,7 @@ export default function BadgePrimaryInverted() {
             ```tsx
                 "use client";
 
-                import { Badge } from "@uidu/core-ui";
+                import { Badge } from "@holo/core";
 
                 export default function BadgeMaxValue() {
                   return <Badge max={10}>{30}</Badge>;

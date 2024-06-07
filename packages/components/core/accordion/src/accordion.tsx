@@ -1,5 +1,5 @@
+import { cn } from '@holo/lib';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import { cn } from '@uidu/lib';
 import * as React from 'react';
 import ChevronDownIcon from './icons/ChevronDown';
 

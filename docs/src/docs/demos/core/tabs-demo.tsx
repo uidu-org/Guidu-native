@@ -13,8 +13,8 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@uidu/core-ui";
-import { Input } from "@uidu/forms-ui";
+} from "@holo/core";
+import { Input } from "@holo/forms";
 
 export default function TabsDemo() {
   return (

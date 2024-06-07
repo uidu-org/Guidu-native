@@ -2,7 +2,7 @@
 
 import BreadcrumbDemo from "@/docs/demos/core/breadcrumb-demo";
 import ToastDemo from "@/docs/demos/core/toast-demo";
-import { Avatar, AvatarGroup, AvatarItem, Badge, Button } from "@uidu/core-ui";
+import { Avatar, AvatarGroup, AvatarItem, Badge, Button } from "@holo/core";
 import Link from "next/link";
 
 function customAvatar(item) {

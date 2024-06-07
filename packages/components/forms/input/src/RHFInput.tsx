@@ -1,6 +1,12 @@
-import { FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@uidu/form-ui'
-import { Control, FieldValues, RegisterOptions } from 'react-hook-form'
-import { Input, InputProps } from './index'
+import {
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@holo/form';
+import { Control, FieldValues, RegisterOptions } from 'react-hook-form';
+import { Input, InputProps } from './index';
 
 export function RHFInput({
   name,
@@ -11,12 +17,12 @@ export function RHFInput({
   error,
   ...rest
 }: InputProps & {
-  name: string
-  control: Control
+  name: string;
+  control: Control;
   rules: Omit<
     RegisterOptions<FieldValues, string>,
     'valueAsNumber' | 'valueAsDate' | 'setValueAs' | 'disabled'
-  >
+  >;
 }) {
   return (
     <FormField
@@ -44,5 +50,5 @@ export function RHFInput({
         </FormItem>
       )}
     />
-  )
+  );
 }

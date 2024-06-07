@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Button } from "@uidu/core-ui"
+import { Button } from "@holo/core";
 
 export default function ButtonOutline() {
-  return <Button variant="outline">Outline</Button>
+  return <Button variant="outline">Outline</Button>;
 }

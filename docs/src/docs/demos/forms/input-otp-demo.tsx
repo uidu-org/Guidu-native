@@ -5,7 +5,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@uidu/forms-ui";
+} from "@holo/forms";
 
 export default function InputOTPDemo() {
   return (

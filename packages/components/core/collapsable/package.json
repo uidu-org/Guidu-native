@@ -1,5 +1,5 @@
 {
-  "name": "@uidu/collapsable-ui",
+  "name": "@holo/collapsable",
   "version": "0.2.0",
   "license": "ISC",
   "main": "./dist/index.js",
@@ -17,8 +17,8 @@
     "react": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.2",
-    "tsup": "^8.0.2"
+    "@types/react": "^18.3.3",
+    "tsup": "^8.1.0"
   },
   "publishConfig": {
     "access": "public",

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Separator } from "@uidu/core-ui"
+import { Separator } from "@holo/core";
 
 export default function SeparatorDemo() {
   return (
@@ -20,5 +20,5 @@ export default function SeparatorDemo() {
         <div>Source</div>
       </div>
     </div>
-  )
+  );
 }

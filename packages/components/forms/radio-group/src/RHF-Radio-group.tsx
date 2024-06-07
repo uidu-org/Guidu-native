@@ -1,6 +1,12 @@
-import { FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@uidu/form-ui'
-import { Control, FieldValues, RegisterOptions } from 'react-hook-form'
-import { RadioGroup, RadioGroupItem } from './radio-group'
+import {
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@holo/form';
+import { Control, FieldValues, RegisterOptions } from 'react-hook-form';
+import { RadioGroup, RadioGroupItem } from './radio-group';
 
 export function RHFRadioGroup({
   name,
@@ -12,16 +18,16 @@ export function RHFRadioGroup({
   helperText,
   ...rest
 }: {
-  name: string
-  control: Control
+  name: string;
+  control: Control;
   rules: Omit<
     RegisterOptions<FieldValues, string>,
     'valueAsNumber' | 'valueAsDate' | 'setValueAs' | 'disabled'
-  >
-  defaultValue?: string
-  values: string[]
-  label?: string
-  helperText?: string
+  >;
+  defaultValue?: string;
+  values: string[];
+  label?: string;
+  helperText?: string;
 }) {
   return (
     <FormField
@@ -53,5 +59,5 @@ export function RHFRadioGroup({
         </FormItem>
       )}
     />
-  )
+  );
 }

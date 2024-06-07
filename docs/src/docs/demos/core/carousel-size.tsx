@@ -1,12 +1,13 @@
-"use client"
+"use client";
 import {
-  Card, CardContent,
+  Card,
+  CardContent,
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 export default function CarouselSize() {
   return (
@@ -32,5 +33,5 @@ export default function CarouselSize() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

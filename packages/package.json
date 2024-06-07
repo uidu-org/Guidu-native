@@ -1,5 +1,5 @@
 {
-  "name": "@uidu/web",
+  "name": "@holo/web",
   "version": "0.1.0",
   "sideEffects": [
     "*.css"
@@ -11,7 +11,7 @@
     "dist"
   ],
   "dependencies": {
-    "@hookform/resolvers": "^3.4.0",
+    "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-context-menu": "^2.1.5",
     "@radix-ui/react-dialog": "1.0.5",
     "@radix-ui/react-label": "^2.0.2",
@@ -25,14 +25,14 @@
     "clsx": "^2.1.1",
     "cmdk": "^0.2.1",
     "date-fns": "^3.6.0",
-    "embla-carousel-react": "8.0.4",
+    "embla-carousel-react": "8.1.3",
     "next-themes": "^0.3.0",
     "react-hook-form": "^7.51.5",
     "react-resizable-panels": "^2.0.19",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^3.4.4",
     "tailwindcss-animate": "^1.0.7",
-    "tsup": "^8.0.2",
+    "tsup": "^8.1.0",
     "vaul": "^0.9.1",
     "zod": "^3.23.8"
   },

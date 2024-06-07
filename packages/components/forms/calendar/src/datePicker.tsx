@@ -1,7 +1,7 @@
 'use client';
 
-import { Input, InputProps } from '@uidu/input-ui';
-import { cn } from '@uidu/lib';
+import { Input, InputProps } from '@holo/input';
+import { cn } from '@holo/lib';
 import { useState } from 'react';
 import type { ReactDatePickerProps } from 'react-datepicker';
 import ReactDatePicker from 'react-datepicker';

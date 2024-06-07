@@ -11,8 +11,8 @@ import {
   PopoverContent,
   PopoverRoot,
   PopoverTrigger,
-} from "@uidu/core-ui";
-import { Calendar } from "@uidu/forms-ui";
+} from "@holo/core";
+import { Calendar } from "@holo/forms";
 
 export default function DatePickerWithRange({
   className,

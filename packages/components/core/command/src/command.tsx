@@ -1,5 +1,5 @@
-import { Dialog, DialogContent, type DialogProps } from '@uidu/dialog-ui';
-import { cn } from '@uidu/lib';
+import { Dialog, DialogContent, type DialogProps } from '@holo/dialog';
+import { cn } from '@holo/lib';
 import { Command as CommandPrimitive } from 'cmdk';
 import * as React from 'react';
 import SearchIcon from './icons/Search';

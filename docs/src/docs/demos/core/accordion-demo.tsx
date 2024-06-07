@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 export default function AccordionDemo() {
   return (

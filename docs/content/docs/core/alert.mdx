@@ -3,14 +3,14 @@ title: "Alert"
 description: Displays a message to interact with the user
 ---
 
+import { Button } from "@holo/button";
 import AlertDemo from "../../../src/docs/demos/core/alert-demo";
 import AlertDestructive from "../../../src/docs/demos/core/alert-destructive";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/alert-ui" target="_blank">@uidu/alert-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/alert" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/alert" target="_blank">@holo/alert</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/alert" target="_blank">Source</a></Button>
     </div>
 
 ## Alert
@@ -32,7 +32,7 @@ import { Button } from "@uidu/button-ui";
 
 import { Terminal } from "lucide-react";
 
-import { Alert, AlertDescription, AlertTitle } from "@uidu/core-ui";
+import { Alert, AlertDescription, AlertTitle } from "@holo/core";
 
 export default function AlertDemo() {
   return (
@@ -59,12 +59,12 @@ export default function AlertDemo() {
 <Tab value="npm" >
 
 ```bash
-npm install @uidu/alert-ui
+npm install @holo/alert
 ````
 
 </Tab>
 
-<Tab value={"yarn"}>```bash yarn add @uidu/alert-ui ```</Tab>
+<Tab value={"yarn"}>```bash yarn add @holo/alert ```</Tab>
 
 </Tabs>
 
@@ -74,7 +74,7 @@ npm install @uidu/alert-ui
 <Tab value={"generic"}>
 ```tsx
 
-import { Alert, AlertDescription, AlertTitle } from "@uidu/core-ui";
+import { Alert, AlertDescription, AlertTitle } from "@holo/core";
 
 ````
 </Tab>
@@ -86,7 +86,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@uidu/alert-ui"
+} from "@holo/alert"
 
 ````
 
@@ -113,7 +113,7 @@ import {
 
 import { AlertCircle } from "lucide-react";
 
-import { Alert, AlertDescription, AlertTitle } from "@uidu/core-ui";
+import { Alert, AlertDescription, AlertTitle } from "@holo/core";
 
 export default function AlertDestructive() {
   return (

@@ -1,4 +1,4 @@
-import { FieldHelperText } from "@uidu/field-helper-text-ui";
+import { FieldHelperText } from "@holo/field-helper-text";
 
 export const FieldHelperTextDemo = () => (
   <FieldHelperText>

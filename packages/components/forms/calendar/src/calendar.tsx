@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { DayPicker } from 'react-day-picker';
 
-import { buttonVariants } from '@uidu/button-ui';
-import { cn } from '@uidu/lib';
+import { buttonVariants } from '@holo/button';
+import { cn } from '@holo/lib';
 import ChevronLeft from './icons/Calendar';
 import ChevronRight from './icons/ChevronDown';
 

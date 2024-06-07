@@ -1,5 +1,5 @@
+import { cn } from '@holo/lib';
 import * as ToastPrimitives from '@radix-ui/react-toast';
-import { cn } from '@uidu/lib';
 import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from 'react';
 import XIcons from './icons/X';

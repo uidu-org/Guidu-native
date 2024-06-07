@@ -1,7 +1,7 @@
 "use client";
 
 import { TextGenerator } from "@/components/ui/animated/text-generator";
-import { Button } from "@uidu/core-ui";
+import { Button } from "@holo/core";
 import { Github, HandHeart } from "lucide-react";
 import Link from "next/link";
 
@@ -22,10 +22,7 @@ export default function MainPage() {
           <Link href={"/docs/installation"}>
             <Button>Docs example</Button>
           </Link>
-          <Link
-            target="_blank"
-            href={"https://github.com/uidu-org/Guidu-native"}
-          >
+          <Link target="_blank" href={"https://github.com/uidu-org/holo"}>
             <Button iconBefore={<Github />}>Git hub</Button>
           </Link>
         </div>

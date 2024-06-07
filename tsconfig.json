@@ -35,7 +35,6 @@
     "noUncheckedIndexedAccess": true,
     "paths": {
       "app/*": ["./packages/app/*"]
-      // "@uidu/native/*": ["./packages/ui/*"]
     }
   },
   "exclude": [

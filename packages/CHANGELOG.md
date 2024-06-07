@@ -1,4 +1,4 @@
-# @uidu/web
+# @holo/web
 
 ## 0.1.0
 

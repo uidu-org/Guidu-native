@@ -17,7 +17,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   toast,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 import {
   Form,
@@ -27,7 +27,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@uidu/forms-ui";
+} from "@holo/forms";
 
 const languages = [
   { label: "English", value: "en" },
@@ -88,7 +88,7 @@ export default function ComboboxForm() {
                             (language) => language.value === field.value,
                           )?.label
                         : "Select language"}
-                      <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
+                      <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>

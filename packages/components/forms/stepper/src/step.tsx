@@ -1,4 +1,4 @@
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import React from 'react';
 import CheckIcon from './icons/Check';
 import XIcon from './icons/X';
@@ -110,8 +110,7 @@ const renderIconText = (
   dot: StepProps['dot']
 ) => {
   if (!dot && status === 'error') return <XIcon className="h-5 w-5" />;
-  if (!dot && status === 'completed')
-    return <CheckIcon className="h-5 w-5" />;
+  if (!dot && status === 'completed') return <CheckIcon className="h-5 w-5" />;
   return index + 1;
 };
 
@@ -132,12 +131,7 @@ export function Step({
   descriptionClassName,
 }: StepProps) {
   return (
-    <div
-      className={cn(
-        'group relative flex flex-1 last:flex-none',
-        className
-      )}
-    >
+    <div className={cn('group relative flex flex-1 last:flex-none', className)}>
       <div
         className={cn(
           lineClasses.base,
@@ -154,9 +148,9 @@ export function Step({
           status === 'waiting'
             ? circleClasses.waiting
             : cn(
-              circleClasses.variant[variant].base,
-              circleClasses.variant[variant].color[color]
-            ),
+                circleClasses.variant[variant].base,
+                circleClasses.variant[variant].color[color]
+              ),
           dot && status === 'waiting' && dotClasses.waiting,
           circleClassName
         )}
@@ -164,12 +158,7 @@ export function Step({
         {(!dot && icon) || renderIconText(index, status, dot)}
       </div>
 
-      <div
-        className={cn(
-          'ml-3 mt-0.5 flex flex-1 flex-col',
-          contentClassName
-        )}
-      >
+      <div className={cn('ml-3 mt-0.5 flex flex-1 flex-col', contentClassName)}>
         <span className="rizzui-step-title flex items-center justify-center group-last:inline-block">
           <h2
             className={cn(

@@ -9,7 +9,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 export default function ModeToggle() {
   const { setTheme } = useTheme();

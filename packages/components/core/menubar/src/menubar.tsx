@@ -1,7 +1,7 @@
 import * as MenubarPrimitive from '@radix-ui/react-menubar';
 import * as React from 'react';
 
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import CheckIcon from './icons/Check';
 import ChevronRightIcon from './icons/ChevronRight';
 import CircleIcon from './icons/Circle';
@@ -230,6 +230,5 @@ export {
   MenubarSub,
   MenubarSubContent,
   MenubarSubTrigger,
-  MenubarTrigger
+  MenubarTrigger,
 };
-

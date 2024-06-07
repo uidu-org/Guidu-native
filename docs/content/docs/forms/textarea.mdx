@@ -3,7 +3,7 @@ title: "Textarea"
 description: a beautiful way to use textareas.
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import TextareaDemo from "../../../src/docs/demos/forms/textarea-demo.tsx";
 import TextareaDisable from "../../../src/docs/demos/forms/textarea-disable.tsx";
 import TextareaForm from "../../../src/docs/demos/forms/textarea-form.tsx";
@@ -12,8 +12,8 @@ import TextareaWithLabel from "../../../src/docs/demos/forms/textarea-with-label
 import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/textarea-ui" target="_blank">@uidu/textarea-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/textarea" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/textarea" target="_blank">@holo/textarea</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/forms/textarea" target="_blank">Source</a></Button>
     </div>
 
 ## Textarea
@@ -31,7 +31,7 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
         <Tab value="code">
             ```tsx
                 "use client";
-                import { Textarea } from "@uidu/forms-ui";
+                import { Textarea } from "@holo/forms";
 
                 export default function TextareaDemo() {
                   return <Textarea placeholder="Type your message here." />;
@@ -45,12 +45,12 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/textarea-ui
+                npm install @holo/textarea
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/textarea-ui
+                yarn add @holo/textarea
             ```
         </Tab>
     </Tabs>
@@ -60,12 +60,12 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-              import { Textarea } from "@uidu/forms-ui";
+              import { Textarea } from "@holo/forms";
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-               import { Textarea } from "@uidu/textarea-ui";
+               import { Textarea } from "@holo/textarea";
             ```
         </Tab>
     </Tabs>
@@ -84,7 +84,7 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
                 <Tab value="code">
                     ```tsx
                         "use client"
-                        import { Textarea } from "@uidu/forms-ui";
+                        import { Textarea } from "@holo/forms";
 
                         export default function TextareaDisabled() {
                           return <Textarea placeholder="Type your message here." disabled />;
@@ -109,7 +109,7 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
                         import { useForm } from "react-hook-form";
                         import { z } from "zod";
 
-                        import { Button, toast } from "@uidu/core-ui";
+                        import { Button, toast } from "@holo/core";
                         import {
                           Form,
                           FormControl,
@@ -119,7 +119,7 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
                           FormLabel,
                           FormMessage,
                           Textarea,
-                        } from "@uidu/forms-ui";
+                        } from "@holo/forms";
 
                         const FormSchema = z.object({
                           bio: z
@@ -191,8 +191,8 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
                 <Tab value="code">
                     ```tsx
                         "use client"
-                        import { Button } from "@uidu/core-ui";
-                        import { Textarea } from "@uidu/forms-ui";
+                        import { Button } from "@holo/core";
+                        import { Textarea } from "@holo/forms";
 
                         export default function TextareaWithButton() {
                           return (
@@ -217,8 +217,8 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
                 <Tab value="code">
                     ```tsx
                         "use client"
-                        import { Label } from "@uidu/core-ui";
-                        import { Textarea } from "@uidu/forms-ui";
+                        import { Label } from "@holo/core";
+                        import { Textarea } from "@holo/forms";
 
                         export default function TextareaWithLabel() {
                           return (
@@ -243,8 +243,8 @@ import TextareaWithText from "../../../src/docs/demos/forms/textarea-with-text.t
                 <Tab value="code">
                     ```tsx
                         "use client";
-                        import { Label } from "@uidu/core-ui";
-                        import { Textarea } from "@uidu/forms-ui";
+                        import { Label } from "@holo/core";
+                        import { Textarea } from "@holo/forms";
 
                         export default function TextareaWithText() {
                           return (

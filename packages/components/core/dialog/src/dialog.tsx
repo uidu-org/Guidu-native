@@ -1,6 +1,6 @@
+import { cn } from '@holo/lib';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { type DialogProps } from '@radix-ui/react-dialog';
-import { cn } from '@uidu/lib';
 import * as React from 'react';
 import XIcon from './icons/X';
 

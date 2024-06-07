@@ -3,13 +3,13 @@ title: "Radio Group"
 description: a great way to use radio groups.
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import RadioGroupDemo from "../../../src/docs/demos/forms/radio-group-demo.tsx";
 import RadioGroupForm from "../../../src/docs/demos/forms/radio-group-form.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/radio-group-ui" target="_blank">@uidu/radio-group-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/radio-group" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/radio-group" target="_blank">@holo/radio-group</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/forms/radio-group" target="_blank">Source</a></Button>
     </div>
 
 ## Radio group
@@ -28,8 +28,8 @@ import RadioGroupForm from "../../../src/docs/demos/forms/radio-group-form.tsx";
             ```tsx
                 "use client"
 
-                import { Label } from "@uidu/core-ui";
-                import { RadioGroup, RadioGroupItem } from "@uidu/forms-ui";
+                import { Label } from "@holo/core";
+                import { RadioGroup, RadioGroupItem } from "@holo/forms";
 
                 export default function RadioGroupDemo() {
                   return (
@@ -58,12 +58,12 @@ import RadioGroupForm from "../../../src/docs/demos/forms/radio-group-form.tsx";
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/radio-group-ui
+                npm install @holo/radio-group
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/radio-group-ui
+                yarn add @holo/radio-group
             ```
         </Tab>
     </Tabs>
@@ -73,14 +73,14 @@ import RadioGroupForm from "../../../src/docs/demos/forms/radio-group-form.tsx";
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { Label } from "@uidu/core-ui";
-                import { RadioGroup, RadioGroupItem } from "@uidu/forms-ui";
+                import { Label } from "@holo/core";
+                import { RadioGroup, RadioGroupItem } from "@holo/forms";
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { Label } from "@uidu/label-ui";
-                import { RadioGroup, RadioGroupItem } from "@uidu/radio-group-ui";
+                import { Label } from "@holo/label";
+                import { RadioGroup, RadioGroupItem } from "@holo/radio-group";
             ```
         </Tab>
     </Tabs>
@@ -103,7 +103,7 @@ import RadioGroupForm from "../../../src/docs/demos/forms/radio-group-form.tsx";
                         import { useForm } from "react-hook-form";
                         import { z } from "zod";
 
-                        import { Button, toast } from "@uidu/core-ui";
+                        import { Button, toast } from "@holo/core";
                         import {
                           Form,
                           FormControl,
@@ -113,7 +113,7 @@ import RadioGroupForm from "../../../src/docs/demos/forms/radio-group-form.tsx";
                           FormMessage,
                           RadioGroup,
                           RadioGroupItem,
-                        } from "@uidu/forms-ui";
+                        } from "@holo/forms";
 
                         const FormSchema = z.object({
                           type: z.enum(["all", "mentions", "none"], {

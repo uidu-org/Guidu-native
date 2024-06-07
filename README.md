@@ -1,4 +1,4 @@
-# guidu
+# holo
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat)](https://github.com/RichardLitt/standard-readme)
 
@@ -18,14 +18,14 @@ TODO: Fill out this long description.
 ## Install
 
 ```bash
-git clone https://github.com/uidu-org/Guidu-native.git
-cd Guidu-native
+git clone https://github.com/uidu-org/holo.git
+cd holo
 yarn install
 ```
 
 ## Usage
 
-Documentation is package specific, browse guidu-native-fumadocs.vercel.app to see all the packages in action.
+Documentation is package specific, browse holo-fumadocs.vercel.app to see all the packages in action.
 
 You can see the storybook at https://664f5b90094245c962f7ddfb-iotjcreepq.chromatic.com/
 

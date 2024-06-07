@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
   Label,
-} from "@uidu/core-ui";
+} from "@holo/core";
 import {
   Input,
   Select,
@@ -15,7 +15,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@uidu/forms-ui";
+} from "@holo/forms";
 
 export default function CardWithForm() {
   return (
@@ -26,7 +26,7 @@ export default function CardWithForm() {
       </CardHeader>
       <CardContent>
         <form>
-          <div className="grid items-center w-full gap-4">
+          <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Name</Label>
               <Input id="name" placeholder="Name of your project" />

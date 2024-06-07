@@ -3,13 +3,13 @@ title: "Accordions"
 description: A set of stacked headings, each revealing content sections when interacted with.
 ---
 
+import { Button } from "@holo/button";
 import AccordionDemo from "../../../src/docs/demos/core/accordion-demo";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/accordion-ui" target="_blank">@uidu/accordion-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/accordion" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/accordion" target="_blank">@holo/accordion</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/accordion" target="_blank">Source</a></Button>
     </div>
 
 ## Accordion
@@ -33,7 +33,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 export default function AccordionDemo() {
   return (
@@ -69,8 +69,8 @@ export default function AccordionDemo() {
 ## Installation
 
 <Tabs items={["npm", "yarn"]}>
-<Tab value="npm">```bash npm install @uidu/accordion-ui ```</Tab>
-<Tab value="yarn">```bash yarn add @uidu/accordion-ui ```</Tab>
+<Tab value="npm">```bash npm install @holo/accordion ```</Tab>
+<Tab value="yarn">```bash yarn add @holo/accordion ```</Tab>
 </Tabs>
 
 ## Import
@@ -83,7 +83,7 @@ export default function AccordionDemo() {
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-  } from '@uidu/core-ui'
+  } from '@holo/core'
   ```
 </Tab>
 <Tab value="individual">
@@ -93,7 +93,7 @@ export default function AccordionDemo() {
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-  } from '@uidu/accordion-ui'
+  } from '@holo/accordion'
   ```
 </Tab>
 </Tabs>

@@ -1,4 +1,4 @@
-# @uidu/collapsable-ui
+# @holo/collapsable
 
 ## 0.2.0
 

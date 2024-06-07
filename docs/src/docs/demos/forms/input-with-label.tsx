@@ -1,6 +1,6 @@
 "use client";
-import { Label } from "@uidu/core-ui";
-import { Input } from "@uidu/forms-ui";
+import { Label } from "@holo/core";
+import { Input } from "@holo/forms";
 
 export default function InputWithLabel() {
   return (

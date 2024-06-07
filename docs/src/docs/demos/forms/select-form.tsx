@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Button, toast } from "@uidu/core-ui";
+import { Button, toast } from "@holo/core";
 import {
   Form,
   FormControl,
@@ -19,7 +19,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@uidu/forms-ui";
+} from "@holo/forms";
 
 const FormSchema = z.object({
   email: z

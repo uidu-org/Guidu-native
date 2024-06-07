@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
-import { FieldErrorText } from '@uidu/field-error-text-ui'
-import { FieldHelperText } from '@uidu/field-helper-text-ui'
-import { cn } from '@uidu/lib'
-import { VariantProps, cva } from 'class-variance-authority'
-import * as React from 'react'
-import Check from './icons/Check'
+import { FieldErrorText } from '@holo/field-error-text';
+import { FieldHelperText } from '@holo/field-helper-text';
+import { cn } from '@holo/lib';
+import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
+import { VariantProps, cva } from 'class-variance-authority';
+import * as React from 'react';
+import Check from './icons/Check';
 
 //todo: checked | value
 
@@ -14,24 +14,24 @@ import Check from './icons/Check'
 export interface CheckboxBaseProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
   //checkbox
-  disabled?: boolean
-  checkboxVariant?: VariantProps<typeof checkboxVariants>
-  value?: any
-  checked?: boolean
+  disabled?: boolean;
+  checkboxVariant?: VariantProps<typeof checkboxVariants>;
+  value?: any;
+  checked?: boolean;
   //icon
-  icon?: React.ReactNode
-  iconClassName?: string
+  icon?: React.ReactNode;
+  iconClassName?: string;
   //label
-  labelVariant?: VariantProps<typeof labelVariants>
-  labelPlacement?: 'top' | 'right' | 'left'
-  label?: string
-  labelClassName?: string
+  labelVariant?: VariantProps<typeof labelVariants>;
+  labelPlacement?: 'top' | 'right' | 'left';
+  label?: string;
+  labelClassName?: string;
   //helper
-  helperText?: string
-  helperClassName?: string
+  helperText?: string;
+  helperClassName?: string;
   //error
-  error?: string
-  errorClassName?: string
+  error?: string;
+  errorClassName?: string;
 }
 
 const checkboxVariants = cva(
@@ -68,7 +68,7 @@ const checkboxVariants = cva(
       variant: 'outline',
     },
   }
-)
+);
 
 const labelVariants = cva(
   'peer checked:bg-none focus:ring-offset-background transition duration-200 ease-in-out',
@@ -104,7 +104,7 @@ const labelVariants = cva(
       variant: 'outline',
     },
   }
-)
+);
 
 const CheckboxBase = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
@@ -150,7 +150,9 @@ const CheckboxBase = React.forwardRef<
             {...props}
           >
             <CheckboxPrimitive.Indicator
-              className={cn('checked:bg-black focus:shadow-md transition duration-400 ease-in-out')}
+              className={cn(
+                'checked:bg-black focus:shadow-md transition duration-400 ease-in-out'
+              )}
             >
               {icon}
             </CheckboxPrimitive.Indicator>
@@ -164,16 +166,22 @@ const CheckboxBase = React.forwardRef<
         </div>
 
         {!error && helperText && (
-          <FieldHelperText className={cn(disabled && 'text-muted-foreground', helperClassName)}>
+          <FieldHelperText
+            className={cn(disabled && 'text-muted-foreground', helperClassName)}
+          >
             {helperText}
           </FieldHelperText>
         )}
 
-        {error && <FieldErrorText className={cn(errorClassName)}>{error}</FieldErrorText>}
+        {error && (
+          <FieldErrorText className={cn(errorClassName)}>
+            {error}
+          </FieldErrorText>
+        )}
       </div>
-    )
+    );
   }
-)
-CheckboxBase.displayName = CheckboxPrimitive.Root.displayName
+);
+CheckboxBase.displayName = CheckboxPrimitive.Root.displayName;
 
-export { CheckboxBase }
+export { CheckboxBase };

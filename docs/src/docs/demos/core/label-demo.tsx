@@ -1,6 +1,5 @@
-import { Label } from "@uidu/core-ui"
-import { CheckboxBase } from "@uidu/forms-ui"
-
+import { Label } from "@holo/core";
+import { CheckboxBase } from "@holo/forms";
 
 export default function LabelDemo() {
   return (
@@ -10,5 +9,5 @@ export default function LabelDemo() {
         <Label htmlFor="terms">Accept terms and conditions</Label>
       </div>
     </div>
-  )
+  );
 }

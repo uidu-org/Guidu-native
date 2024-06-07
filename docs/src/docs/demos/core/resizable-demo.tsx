@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 export default function ResizableDemo() {
   return (
@@ -34,5 +34,5 @@ export default function ResizableDemo() {
         </ResizablePanelGroup>
       </ResizablePanel>
     </ResizablePanelGroup>
-  )
+  );
 }

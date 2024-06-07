@@ -1,4 +1,4 @@
-# @uidu/calendar-ui
+# @holo/calendar
 
 ## 0.2.0
 
@@ -9,30 +9,30 @@
 ### Patch Changes
 
 - Updated dependencies [3d64e49]
-  - @uidu/button-ui@0.2.0
-  - @uidu/field-error-text-ui@0.2.0
-  - @uidu/field-helper-text-ui@0.2.0
-  - @uidu/input-ui@0.2.0
-  - @uidu/lib@0.2.0
+  - @holo/button@0.2.0
+  - @holo/field-error-text@0.2.0
+  - @holo/field-helper-text@0.2.0
+  - @holo/input@0.2.0
+  - @holo/lib@0.2.0
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.1.0
-  - @uidu/button-ui@0.1.2
-  - @uidu/field-error-text-ui@0.1.2
-  - @uidu/field-helper-text-ui@0.1.2
-  - @uidu/input-ui@0.1.2
+  - @holo/lib@0.1.0
+  - @holo/button@0.1.2
+  - @holo/field-error-text@0.1.2
+  - @holo/field-helper-text@0.1.2
+  - @holo/input@0.1.2
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.0.2
-  - @uidu/button-ui@0.1.1
-  - @uidu/field-error-text-ui@0.1.1
-  - @uidu/field-helper-text-ui@0.1.1
-  - @uidu/input-ui@0.1.1
+  - @holo/lib@0.0.2
+  - @holo/button@0.1.1
+  - @holo/field-error-text@0.1.1
+  - @holo/field-helper-text@0.1.1
+  - @holo/input@0.1.1

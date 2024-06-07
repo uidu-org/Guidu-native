@@ -3,13 +3,13 @@ title: "Command"
 description: a great way to use commands
 ---
 
+import { Button } from "@holo/button";
 import CommandDemo from "../../../src/docs/demos/core/command-demo";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/command-ui" target="_blank">@uidu/command-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/command" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/command" target="_blank">@holo/command</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/command" target="_blank">Source</a></Button>
     </div>
 
 ## Command
@@ -48,7 +48,7 @@ import { Button } from "@uidu/button-ui";
                 CommandList,
                 CommandSeparator,
                 CommandShortcut,
-              } from "@uidu/core-ui"
+              } from "@holo/core"
 
               export default function CommandDemo() {
                 return (
@@ -99,19 +99,19 @@ import { Button } from "@uidu/button-ui";
   </Tabs>
 
     <div className="flex items-center">
-        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/command-ui" target="_blank">@uidu/command-ui</a>
-        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/command" target="_blank">Source</a>
+        <a className="mr-4 " href="https://www.npmjs.com/package/@holo/command" target="_blank">@holo/command</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/holo/tree/main/packages/web/components/core/command" target="_blank">Source</a>
     </div>
 
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/command-ui
+                npm install @holo/command
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/command-ui
+                yarn add @holo/command
             ```
         </Tab>
     </Tabs>
@@ -130,7 +130,7 @@ import { Button } from "@uidu/button-ui";
                   CommandList,
                   CommandSeparator,
                   CommandShortcut,
-                } from "@uidu/core-ui"
+                } from "@holo/core"
             ```
         </Tab>
         <Tab value="individual">
@@ -144,7 +144,7 @@ import { Button } from "@uidu/button-ui";
                   CommandList,
                   CommandSeparator,
                   CommandShortcut,
-                } from "@uidu/command-ui"
+                } from "@holo/command"
             ```
         </Tab>
     </Tabs>

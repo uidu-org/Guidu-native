@@ -3,17 +3,17 @@ title: "Combobox"
 description: a great way to use Comboboxes!
 ---
 
+import { Button } from "@holo/button";
 import ComboboxDemo from "../../../src/docs/demos/core/combobox-demo";
 import ComboboxDropdownmenu from "../../../src/docs/demos/core/combobox-dropdown-menu.tsx";
 import ComboboxPopover from "../../../src/docs/demos/core/combobox-popover.tsx";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/command-ui" target="_blank">@uidu/command-ui</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/popover-ui" target="_blank">@uidu/popover-ui</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/command" target="_blank">Source Command</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/popover" target="_blank">Source Popover</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/command" target="_blank">@holo/command</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/popover" target="_blank">@holo/popover</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://github.com/uidu-org/holo/tree/main/packages/components/core/command" target="_blank">Source Command</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/popover" target="_blank">Source Popover</a></Button>
     </div>
 
 ## Combobox
@@ -45,7 +45,7 @@ import { Button } from "@uidu/button-ui";
                   PopoverRoot as Popover,
                   PopoverContent,
                   PopoverTrigger,
-                } from "@uidu/core-ui"
+                } from "@holo/core"
 
                 const frameworks = [
                   {
@@ -123,21 +123,21 @@ import { Button } from "@uidu/button-ui";
     </Tabs>
 
     <div className="flex items-center">
-        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/command-ui" target="_blank">@uidu/command-ui</a>
-        <a className="mr-4 " href="https://www.npmjs.com/package/@uidu/popover-ui" target="_blank">@uidu/popover-ui</a>
-        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/command" target="_blank">Source Command</a>
-        <a className="mx-4"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/web/components/core/popover" target="_blank">Source Popover</a>
+        <a className="mr-4 " href="https://www.npmjs.com/package/@holo/command" target="_blank">@holo/command</a>
+        <a className="mr-4 " href="https://www.npmjs.com/package/@holo/popover" target="_blank">@holo/popover</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/holo/tree/main/packages/web/components/core/command" target="_blank">Source Command</a>
+        <a className="mx-4"  href="https://github.com/uidu-org/holo/tree/main/packages/web/components/core/popover" target="_blank">Source Popover</a>
     </div>
 
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/command-ui @uidu/popover-ui
+                npm install @holo/command @holo/popover
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/command-ui @uidu/popover-ui
+                yarn add @holo/command @holo/popover
             ```
         </Tab>
     </Tabs>
@@ -155,7 +155,7 @@ import {
   PopoverRoot as Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 ```
 
 ## Variants
@@ -196,7 +196,7 @@ import {
                             PopoverRoot as Popover,
                             PopoverContent,
                             PopoverTrigger,
-                        } from "@uidu/core-ui"
+                        } from "@holo/core"
 
                         type Status = {
                           value: string
@@ -334,7 +334,7 @@ import {
                           DropdownMenuSubContent,
                           DropdownMenuSubTrigger,
                           DropdownMenuTrigger,
-                        } from "@uidu/core-ui"
+                        } from "@holo/core"
 
 
                         const labels = [
@@ -452,7 +452,7 @@ import {
                             PopoverContent,
                             PopoverTrigger,
                             toast
-                        } from "@uidu/core-ui"
+                        } from "@holo/core"
 
                         import {
                             UiForm as Form,
@@ -462,7 +462,7 @@ import {
                             FormItem,
                             FormLabel,
                             FormMessage,
-                        } from "@uidu/forms-ui"
+                        } from "@holo/forms"
 
                         const languages = [
                           { label: "English", value: "en" },
@@ -606,7 +606,7 @@ import {
                           DropdownMenuSubContent,
                           DropdownMenuSubTrigger,
                           DropdownMenuTrigger,
-                        } from "@uidu/core-ui"
+                        } from "@holo/core"
 
 
                         const labels = [

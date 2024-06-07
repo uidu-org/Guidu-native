@@ -1,4 +1,4 @@
-# @uidu/lib
+# @holo/lib
 
 ## 0.2.0
 

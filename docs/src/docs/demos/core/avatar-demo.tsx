@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@uidu/avatar-ui";
+import { Avatar, AvatarFallback, AvatarImage } from "@holo/avatar";
 
 export default function AvatarDemo() {
   return (

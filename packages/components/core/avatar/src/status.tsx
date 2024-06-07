@@ -1,4 +1,4 @@
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import { cva, VariantProps } from 'class-variance-authority';
 import { FC, ReactNode } from 'react';
 

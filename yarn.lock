@@ -2733,7 +2733,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@holo/avatar@npm:0.3.0, @holo/avatar@workspace:packages/components/core/avatar":
+"@holo/avatar@npm:*, @holo/avatar@npm:0.3.0, @holo/avatar@workspace:packages/components/core/avatar":
   version: 0.0.0-use.local
   resolution: "@holo/avatar@workspace:packages/components/core/avatar"
   dependencies:
@@ -2748,7 +2748,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@holo/badge@npm:0.2.0, @holo/badge@workspace:packages/components/core/badge":
+"@holo/badge@npm:*, @holo/badge@npm:0.2.0, @holo/badge@workspace:packages/components/core/badge":
   version: 0.0.0-use.local
   resolution: "@holo/badge@workspace:packages/components/core/badge"
   dependencies:
@@ -2773,7 +2773,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@holo/button@npm:0.2.0, @holo/button@workspace:packages/components/core/button":
+"@holo/button@npm:*, @holo/button@npm:0.2.0, @holo/button@workspace:packages/components/core/button":
   version: 0.0.0-use.local
   resolution: "@holo/button@workspace:packages/components/core/button"
   dependencies:
@@ -2897,7 +2897,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@holo/core@npm:0.1.0, @holo/core@workspace:packages/src/core":
+"@holo/core@npm:*, @holo/core@workspace:packages/src/core":
   version: 0.0.0-use.local
   resolution: "@holo/core@workspace:packages/src/core"
   dependencies:
@@ -3018,7 +3018,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@holo/forms@npm:0.2.1, @holo/forms@workspace:packages/src/forms":
+"@holo/forms@npm:*, @holo/forms@workspace:packages/src/forms":
   version: 0.0.0-use.local
   resolution: "@holo/forms@workspace:packages/src/forms"
   dependencies:
@@ -3353,7 +3353,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@holo/switch@npm:0.2.0, @holo/switch@workspace:packages/components/forms/switch":
+"@holo/switch@npm:*, @holo/switch@npm:0.2.0, @holo/switch@workspace:packages/components/forms/switch":
   version: 0.0.0-use.local
   resolution: "@holo/switch@workspace:packages/components/forms/switch"
   dependencies:
@@ -3496,12 +3496,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@holo/website@workspace:docs"
   dependencies:
-    "@holo/avatar": "npm:0.3.0"
-    "@holo/badge": "npm:0.2.0"
-    "@holo/button": "npm:0.2.0"
-    "@holo/core": "npm:0.1.0"
-    "@holo/forms": "npm:0.2.1"
-    "@holo/switch": "npm:0.2.0"
+    "@holo/avatar": "npm:*"
+    "@holo/badge": "npm:*"
+    "@holo/button": "npm:*"
+    "@holo/core": "npm:*"
+    "@holo/forms": "npm:*"
+    "@holo/switch": "npm:*"
     "@hookform/resolvers": "npm:^3.6.0"
     "@mdx-js/loader": "npm:^3.0.1"
     "@mdx-js/react": "npm:^3.0.1"

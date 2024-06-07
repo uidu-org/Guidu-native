@@ -10,12 +10,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "@holo/avatar": "0.3.0",
-    "@holo/badge": "0.2.0",
-    "@holo/button": "0.2.0",
-    "@holo/core": "0.1.0",
-    "@holo/forms": "0.2.1",
-    "@holo/switch": "0.2.0",
+    "@holo/avatar": "*",
+    "@holo/badge": "*",
+    "@holo/button": "*",
+    "@holo/core": "*",
+    "@holo/forms": "*",
+    "@holo/switch": "*",
     "@hookform/resolvers": "^3.6.0",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",

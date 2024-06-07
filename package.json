@@ -24,6 +24,7 @@
     "dev": "yarn turbo dev --concurrency=100 --continue",
     "docs": "cd docs && yarn dev",
     "fix": "manypkg fix",
+    "postinstall": "yarn build",
     "pre-release": "yarn build && yarn changeset add",
     "release": "yarn build && yarn changeset publish",
     "sort:pkg": "yarn manypkg exec npx sort-package-json package.json",
@@ -73,7 +74,7 @@
     "react": "^18.3.1",
     "ts-node": "^10.9.2",
     "tsup": "^8.1.0",
-    "turbo": "^2.0.3",
+    "turbo": "^1.13.4",
     "typescript": "^5.4.5"
   },
   "packageManager": "yarn@4.1.1"

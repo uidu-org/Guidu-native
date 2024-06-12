@@ -3,12 +3,12 @@ title: "Media Card Collection"
 description: a great way to use card collections.
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import MediaCardCollectionDemo from "../../../src/docs/demos/media/media-card-collection-demo.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/media-card-ui" target="_blank">@uidu/media-card-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/media/media-card" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/media-card" target="_blank">@holo/media-card</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/media/media-card" target="_blank">Source</a></Button>
     </div>
 
 ## Media card collection
@@ -27,7 +27,7 @@ import MediaCardCollectionDemo from "../../../src/docs/demos/media/media-card-co
             ```tsx
                 "use client";
 
-                import { MediaCardCollection } from "@uidu/core-ui";
+                import { MediaCardCollection } from "@holo/core";
 
                 export default function MediaCardCollectionDemo() {
                 const files = [
@@ -60,12 +60,12 @@ import MediaCardCollectionDemo from "../../../src/docs/demos/media/media-card-co
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/media-card-ui
+                npm install @holo/media-card
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/media-card-ui
+                yarn add @holo/media-card
             ```
         </Tab>
     </Tabs>
@@ -75,12 +75,12 @@ import MediaCardCollectionDemo from "../../../src/docs/demos/media/media-card-co
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { MediaCardCollection } from "@uidu/core-ui";
+                import { MediaCardCollection } from "@holo/core";
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { MediaCardCollection } from "@uidu/media-card-ui";
+                import { MediaCardCollection } from "@holo/media-card";
             ```
         </Tab>
     </Tabs>

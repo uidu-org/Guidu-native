@@ -1,35 +1,35 @@
-"use client"
-import * as React from "react"
-
+"use client";
+import * as React from "react";
 
 import {
-  Card, CardContent,
+  Card,
+  CardContent,
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 export default function CarouselDApiDemo() {
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     if (!api) {
-      return
+      return;
     }
 
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => {
-      console.log("current")
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
+      console.log("current");
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   return (
     <div>
@@ -52,5 +52,5 @@ export default function CarouselDApiDemo() {
         Slide {current} of {count}
       </div>
     </div>
-  )
+  );
 }

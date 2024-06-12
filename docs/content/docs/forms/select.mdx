@@ -3,14 +3,14 @@ title: "Select"
 description: a great way to use selects.
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import SelectDemo from "../../../src/docs/demos/forms/select-demo.tsx";
 import SelectForm from "../../../src/docs/demos/forms/select-form.tsx";
 import SelectScrollable from "../../../src/docs/demos/forms/select-scrollable.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/select-ui" target="_blank">@uidu/select-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/select" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/select" target="_blank">@holo/select</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/forms/select" target="_blank">Source</a></Button>
     </div>
 
 ## Select
@@ -37,7 +37,7 @@ import SelectScrollable from "../../../src/docs/demos/forms/select-scrollable.ts
                 SelectLabel,
                 SelectTrigger,
                 SelectValue,
-              } from "@uidu/forms-ui";
+              } from "@holo/forms";
 
               export default function SelectDemo() {
                 return (
@@ -67,12 +67,12 @@ import SelectScrollable from "../../../src/docs/demos/forms/select-scrollable.ts
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/select-ui
+                npm install @holo/select
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/select-ui
+                yarn add @holo/select
             ```
         </Tab>
     </Tabs>
@@ -90,7 +90,7 @@ import SelectScrollable from "../../../src/docs/demos/forms/select-scrollable.ts
                   SelectLabel,
                   SelectTrigger,
                   SelectValue,
-                } from "@uidu/forms-ui";
+                } from "@holo/forms";
             ```
         </Tab>
         <Tab value="individual">
@@ -103,7 +103,7 @@ import SelectScrollable from "../../../src/docs/demos/forms/select-scrollable.ts
                   SelectLabel,
                   SelectTrigger,
                   SelectValue,
-                } from "@uidu/select-ui";
+                } from "@holo/select";
             ```
         </Tab>
     </Tabs>
@@ -128,7 +128,7 @@ import SelectScrollable from "../../../src/docs/demos/forms/select-scrollable.ts
                         import { useForm } from "react-hook-form";
                         import { z } from "zod";
 
-                        import { Button, toast } from "@uidu/core-ui";
+                        import { Button, toast } from "@holo/core";
                         import {
                           Form,
                           FormControl,
@@ -142,7 +142,7 @@ import SelectScrollable from "../../../src/docs/demos/forms/select-scrollable.ts
                           SelectItem,
                           SelectTrigger,
                           SelectValue,
-                        } from "@uidu/forms-ui";
+                        } from "@holo/forms";
 
                         const FormSchema = z.object({
                           email: z
@@ -226,7 +226,7 @@ import SelectScrollable from "../../../src/docs/demos/forms/select-scrollable.ts
                         SelectLabel,
                         SelectTrigger,
                         SelectValue,
-                      } from "@uidu/forms-ui";
+                      } from "@holo/forms";
 
                       export default function SelectScrollable() {
                         return (

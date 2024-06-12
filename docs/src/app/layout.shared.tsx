@@ -1,20 +1,20 @@
-import type { DocsLayoutProps } from 'fumadocs-ui/layout';
+import type { DocsLayoutProps } from "fumadocs-ui/layout";
 
 import { BookIcon, ExternalLinkIcon, LayoutListIcon } from "lucide-react";
-import { docs } from './source';
+import { docs } from "./source";
 
 export const layoutProps: Omit<DocsLayoutProps, "children"> = {
-  tree : docs.pageTree,
+  tree: docs.pageTree,
   nav: {
-    transparentMode: 'top',
+    transparentMode: "top",
     title: (
       <>
-        <span className="text-lg font-bold">Guidu</span>
+        <span className="text-lg font-bold">holo</span>
       </>
     ),
   },
   sidebar: {
-    defaultOpenLevel: 0
+    defaultOpenLevel: 0,
   },
   links: [
     {
@@ -35,7 +35,7 @@ export const layoutProps: Omit<DocsLayoutProps, "children"> = {
     },
     {
       type: "secondary",
-      url: "https://github.com/uidu-org/Guidu-native",
+      url: "https://github.com/uidu-org/holo",
       text: "GitHub",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">

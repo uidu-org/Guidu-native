@@ -1,4 +1,4 @@
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import React from 'react';
 import { Step, type StepProps } from './step';
 

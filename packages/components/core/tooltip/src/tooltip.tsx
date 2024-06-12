@@ -1,8 +1,8 @@
+import { Button } from '@holo/button';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
-import { Button } from '@uidu/button-ui';
 import * as React from 'react';
 
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 
 /* --------------------- extend TooltipContentProps here -------------------- */
 export interface TooltipProps {

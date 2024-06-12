@@ -1,4 +1,4 @@
-# @uidu/breadcrumb-ui
+# @holo/breadcrumb
 
 ## 0.4.0
 
@@ -9,7 +9,7 @@
 ### Patch Changes
 
 - Updated dependencies [3d64e49]
-  - @uidu/lib@0.2.0
+  - @holo/lib@0.2.0
 
 ## 0.3.0
 
@@ -34,7 +34,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.0.2
+  - @holo/lib@0.0.2
 
 ## 0.1.4
 

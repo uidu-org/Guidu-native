@@ -20,8 +20,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
   Label,
-} from "@uidu/core-ui";
-import { Input } from "@uidu/forms-ui";
+} from "@holo/core";
+import { Input } from "@holo/forms";
 
 export default function DrawerDialogDemo() {
   const [open, setOpen] = React.useState(false);

@@ -19,7 +19,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 export default function CommandDialogDemo() {
   const [open, setOpen] = React.useState(false);

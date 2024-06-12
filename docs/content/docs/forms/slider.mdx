@@ -3,12 +3,12 @@ title: "Slider"
 description: a great way to use sliders.
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import SliderDemo from "../../../src/docs/demos/forms/slider-demo.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/slider-ui" target="_blank">@uidu/slider-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/slider" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/slider" target="_blank">@holo/slider</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/forms/slider" target="_blank">Source</a></Button>
     </div>
 
 ## Slider
@@ -28,7 +28,7 @@ import SliderDemo from "../../../src/docs/demos/forms/slider-demo.tsx";
                 "use client"
 
                 import { cn } from "@/lib/utils";
-                import { Slider } from "@uidu/forms-ui";
+                import { Slider } from "@holo/forms";
 
                 type SliderProps = React.ComponentProps<typeof Slider>;
 
@@ -52,12 +52,12 @@ import SliderDemo from "../../../src/docs/demos/forms/slider-demo.tsx";
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/slider-ui
+                npm install @holo/slider
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/slider-ui
+                yarn add @holo/slider
             ```
         </Tab>
     </Tabs>
@@ -67,12 +67,12 @@ import SliderDemo from "../../../src/docs/demos/forms/slider-demo.tsx";
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { Slider } from "@uidu/forms-ui";
+                import { Slider } from "@holo/forms";
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { Slider } from "@uidu/slider-ui";
+                import { Slider } from "@holo/slider";
             ```
         </Tab>
     </Tabs>

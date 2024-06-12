@@ -1,12 +1,12 @@
-import { Button } from '@uidu/button-ui';
+import { Button } from '@holo/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@uidu/dropdown-menu-ui';
-import { cn } from '@uidu/lib';
+} from '@holo/dropdown-menu';
+import { cn } from '@holo/lib';
 import { VariantProps, cva } from 'class-variance-authority';
 import { FC } from 'react';
 import { Avatar } from './avatar';

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Calculator,
@@ -7,7 +7,7 @@ import {
   Settings,
   Smile,
   User,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Command,
@@ -18,7 +18,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 export default function CommandDemo() {
   return (
@@ -60,5 +60,5 @@ export default function CommandDemo() {
         </CommandGroup>
       </CommandList>
     </Command>
-  )
+  );
 }

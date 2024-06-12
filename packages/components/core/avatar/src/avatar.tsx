@@ -3,8 +3,8 @@
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 import * as React from 'react';
 
-import { Button } from '@uidu/button-ui';
-import { cn } from '@uidu/lib';
+import { Button } from '@holo/button';
+import { cn } from '@holo/lib';
 import { VariantProps, cva } from 'class-variance-authority';
 import Loading from './icons/Loading';
 import PencilIcon from './icons/Pencil';

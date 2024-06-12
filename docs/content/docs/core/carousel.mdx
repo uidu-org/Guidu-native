@@ -3,18 +3,18 @@ title: "Carousel"
 description: A dynamic component that presents a rotating display of content items within a confined space.
 ---
 
+import { Button } from "@holo/button";
 import CarouselApi from "../../../src/docs/demos/core/carousel-api";
 import CarouselDemo from "../../../src/docs/demos/core/carousel-demo";
 import CarouselOrientation from "../../../src/docs/demos/core/carousel-orientation";
 import CarouselPlugin from "../../../src/docs/demos/core/carousel-plugin";
 import CarouselSize from "../../../src/docs/demos/core/carousel-size";
 import CarouselSpacing from "../../../src/docs/demos/core/carousel-spacing";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/carousel-ui" target="_blank">@uidu/carousel-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/carousel" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/carousel" target="_blank">@holo/carousel</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/carousel" target="_blank">Source</a></Button>
     </div>
 
 ## Carousel
@@ -44,7 +44,7 @@ import { Button } from "@uidu/button-ui";
         CarouselItem,
         CarouselNext,
         CarouselPrevious,
-      } from "@uidu/core-ui"
+      } from "@holo/core"
 
       export default function CarouselDemo() {
         return (
@@ -77,8 +77,8 @@ import { Button } from "@uidu/button-ui";
 {" "}
 
 <Tabs items={["npm", "yarn"]}>
-  <Tab value="npm">```bash npm install @uidu/carousel-ui ```</Tab>
-  <Tab value="yarn">```bash yarn add @uidu/carousel-ui ```</Tab>
+  <Tab value="npm">```bash npm install @holo/carousel ```</Tab>
+  <Tab value="yarn">```bash yarn add @holo/carousel ```</Tab>
 </Tabs>
 
 ## Import
@@ -92,7 +92,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@uidu/core-ui";
+} from "@holo/core";
 ```
 
 ## Options
@@ -119,7 +119,7 @@ import {
             CarouselItem,
             CarouselNext,
             CarouselPrevious,
-          } from "@uidu/core-ui"
+          } from "@holo/core"
 
           export default function CarouselOrientation() {
             return (
@@ -171,7 +171,7 @@ import {
               CarouselItem,
               CarouselNext,
               CarouselPrevious,
-            } from "@uidu/core-ui"
+            } from "@holo/core"
 
             export default function CarouselSize() {
               return (
@@ -226,7 +226,7 @@ import {
               CarouselItem,
               CarouselNext,
               CarouselPrevious,
-            } from "@uidu/core-ui"
+            } from "@holo/core"
 
             export default function CarouselSpacing() {
               return (
@@ -277,7 +277,7 @@ import {
               CarouselNext,
               CarouselPrevious,
               type CarouselApi,
-            } from "@uidu/core-ui"
+            } from "@holo/core"
 
             export default function CarouselDApiDemo() {
               const [api, setApi] = React.useState<CarouselApi>()
@@ -349,7 +349,7 @@ import {
               CarouselItem,
               CarouselNext,
               CarouselPrevious,
-            } from "@uidu/core-ui"
+            } from "@holo/core"
 
             export default function CarouselPlugin() {
               const plugin = React.useRef(

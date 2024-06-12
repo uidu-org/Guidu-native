@@ -1,12 +1,8 @@
-"use client"
+"use client";
 
-import { AlertCircle } from "lucide-react"
+import { AlertCircle } from "lucide-react";
 
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@uidu/core-ui"
+import { Alert, AlertDescription, AlertTitle } from "@holo/core";
 
 export default function AlertDestructive() {
   return (
@@ -17,5 +13,5 @@ export default function AlertDestructive() {
         Your session has expired. Please log in again.
       </AlertDescription>
     </Alert>
-  )
+  );
 }

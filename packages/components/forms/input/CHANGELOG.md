@@ -1,4 +1,4 @@
-# @uidu/input-ui
+# @holo/input
 
 ## 0.2.0
 
@@ -9,30 +9,30 @@
 ### Patch Changes
 
 - Updated dependencies [3d64e49]
-  - @uidu/label-ui@0.2.0
-  - @uidu/field-error-text-ui@0.2.0
-  - @uidu/field-helper-text-ui@0.2.0
-  - @uidu/form-ui@0.2.0
-  - @uidu/lib@0.2.0
+  - @holo/label@0.2.0
+  - @holo/field-error-text@0.2.0
+  - @holo/field-helper-text@0.2.0
+  - @holo/form@0.2.0
+  - @holo/lib@0.2.0
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.1.0
-  - @uidu/label-ui@0.1.2
-  - @uidu/field-error-text-ui@0.1.2
-  - @uidu/field-helper-text-ui@0.1.2
-  - @uidu/form-ui@0.1.2
+  - @holo/lib@0.1.0
+  - @holo/label@0.1.2
+  - @holo/field-error-text@0.1.2
+  - @holo/field-helper-text@0.1.2
+  - @holo/form@0.1.2
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.0.2
-  - @uidu/label-ui@0.1.1
-  - @uidu/field-error-text-ui@0.1.1
-  - @uidu/field-helper-text-ui@0.1.1
-  - @uidu/form-ui@0.1.1
+  - @holo/lib@0.0.2
+  - @holo/label@0.1.1
+  - @holo/field-error-text@0.1.1
+  - @holo/field-helper-text@0.1.1
+  - @holo/form@0.1.1

@@ -3,13 +3,13 @@ title: "Switch"
 description: a great way to use switch.
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import SwitchDemo from "../../../src/docs/demos/forms/switch-demo.tsx";
 import SwitchForm from "../../../src/docs/demos/forms/switch-form.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/switch-ui" target="_blank">@uidu/switch-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/switch" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/switch" target="_blank">@holo/switch</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/forms/switch" target="_blank">Source</a></Button>
     </div>
 
 ## Switch
@@ -28,8 +28,8 @@ import SwitchForm from "../../../src/docs/demos/forms/switch-form.tsx";
             ```tsx
                 "use client"
 
-                import { Label } from "@uidu/core-ui";
-                import { Switch } from "@uidu/forms-ui";
+                import { Label } from "@holo/core";
+                import { Switch } from "@holo/forms";
 
                 export default function SwitchDemo() {
                 return (
@@ -48,12 +48,12 @@ import SwitchForm from "../../../src/docs/demos/forms/switch-form.tsx";
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/switch-ui
+                npm install @holo/switch
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/switch-ui
+                yarn add @holo/switch
             ```
         </Tab>
     </Tabs>
@@ -63,14 +63,14 @@ import SwitchForm from "../../../src/docs/demos/forms/switch-form.tsx";
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { Label } from "@uidu/core-ui";
-                import { Switch } from "@uidu/forms-ui";
+                import { Label } from "@holo/core";
+                import { Switch } from "@holo/forms";
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { Label } from "@uidu/label-ui";
-                import { Switch } from "@uidu/switch-ui";
+                import { Label } from "@holo/label";
+                import { Switch } from "@holo/switch";
             ```
         </Tab>
     </Tabs>
@@ -93,7 +93,7 @@ import SwitchForm from "../../../src/docs/demos/forms/switch-form.tsx";
                         import { useForm } from "react-hook-form";
                         import { z } from "zod";
 
-                        import { Button, toast } from "@uidu/core-ui";
+                        import { Button, toast } from "@holo/core";
                         import {
                         Form,
                         FormControl,
@@ -102,7 +102,7 @@ import SwitchForm from "../../../src/docs/demos/forms/switch-form.tsx";
                         FormItem,
                         FormLabel,
                         Switch,
-                        } from "@uidu/forms-ui";
+                        } from "@holo/forms";
 
                         const FormSchema = z.object({
                         marketing_emails: z.boolean().default(false).optional(),

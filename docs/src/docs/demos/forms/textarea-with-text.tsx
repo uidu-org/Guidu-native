@@ -1,6 +1,6 @@
 "use client";
-import { Label } from "@uidu/core-ui";
-import { Textarea } from "@uidu/forms-ui";
+import { Label } from "@holo/core";
+import { Textarea } from "@holo/forms";
 
 export default function TextareaWithText() {
   return (

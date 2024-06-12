@@ -3,8 +3,8 @@ import useEmblaCarousel, {
 } from 'embla-carousel-react';
 import * as React from 'react';
 
-import { Button } from '@uidu/button-ui';
-import { cn } from '@uidu/lib';
+import { Button } from '@holo/button';
+import { cn } from '@holo/lib';
 import ArrowLeftIcon from './icons/ArrowLeft';
 import ArrowRightIcon from './icons/ArrowRight';
 

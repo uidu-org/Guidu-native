@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { CheckboxBase as Checkbox } from "@uidu/forms-ui"
+import { CheckboxBase as Checkbox } from "@holo/forms";
 
 export default function CheckboxDemo() {
   return (
@@ -13,5 +13,5 @@ export default function CheckboxDemo() {
         Accept terms and conditions
       </label>
     </div>
-  )
+  );
 }

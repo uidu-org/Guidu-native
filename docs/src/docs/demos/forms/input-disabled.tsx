@@ -1,6 +1,6 @@
 "use client";
 
-import { Input } from "@uidu/forms-ui";
+import { Input } from "@holo/forms";
 
 export default function InputDisabled() {
   return <Input disabled type="email" placeholder="Email" />;

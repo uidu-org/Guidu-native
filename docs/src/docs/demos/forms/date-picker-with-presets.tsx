@@ -10,7 +10,7 @@ import {
   PopoverContent,
   PopoverRoot,
   PopoverTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 import {
   Calendar,
   Select,
@@ -18,7 +18,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@uidu/forms-ui";
+} from "@holo/forms";
 
 export default function DatePickerWithPresets() {
   const [date, setDate] = React.useState<Date>();

@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Button, toast } from "@uidu/core-ui";
+import { Button, toast } from "@holo/core";
 import {
   Form,
   FormControl,
@@ -14,7 +14,7 @@ import {
   FormLabel,
   FormMessage,
   Input,
-} from "@uidu/forms-ui";
+} from "@holo/forms";
 
 const FormSchema = z.object({
   username: z.string().min(2, {

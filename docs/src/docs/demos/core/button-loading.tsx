@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Loader2 } from "lucide-react"
+import { Loader2 } from "lucide-react";
 
-import { Button } from "@uidu/core-ui"
+import { Button } from "@holo/core";
 
 export default function ButtonLoading() {
   return (
@@ -10,5 +10,5 @@ export default function ButtonLoading() {
       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
       Please wait
     </Button>
-  )
+  );
 }

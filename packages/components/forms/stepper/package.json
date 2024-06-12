@@ -1,5 +1,5 @@
 {
-  "name": "@uidu/stepper-ui",
+  "name": "@holo/stepper",
   "version": "0.3.0",
   "license": "ISC",
   "main": "./dist/index.js",
@@ -13,13 +13,13 @@
     "dev": "tsup --watch"
   },
   "dependencies": {
-    "@uidu/lib": "0.2.0",
+    "@holo/lib": "0.2.0",
     "class-variance-authority": "^0.7.0",
     "react": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.2",
-    "tsup": "^8.0.2"
+    "@types/react": "^18.3.3",
+    "tsup": "^8.1.0"
   },
   "publishConfig": {
     "access": "public",

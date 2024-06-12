@@ -1,6 +1,12 @@
-import { FormDescription, FormField, FormItem, FormMessage } from '@uidu/form-ui'
-import { Control, FieldValues, RegisterOptions } from 'react-hook-form'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './select'
+import { FormDescription, FormField, FormItem, FormMessage } from '@holo/form';
+import { Control, FieldValues, RegisterOptions } from 'react-hook-form';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from './select';
 
 export function RHFSelect({
   name,
@@ -11,15 +17,15 @@ export function RHFSelect({
   helperText,
   ...rest
 }: {
-  name: string
-  children?: React.ReactNode
-  control: Control
+  name: string;
+  children?: React.ReactNode;
+  control: Control;
   rules: Omit<
     RegisterOptions<FieldValues, string>,
     'valueAsNumber' | 'valueAsDate' | 'setValueAs' | 'disabled'
-  >
-  items: { value: string; label: string }[]
-  helperText?: string
+  >;
+  items: { value: string; label: string }[];
+  helperText?: string;
 }) {
   return (
     <FormField
@@ -60,5 +66,5 @@ export function RHFSelect({
         </FormItem>
       )}
     />
-  )
+  );
 }

@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
-import { CheckboxBase as Checkbox } from "@uidu/forms-ui"
-
+import { CheckboxBase as Checkbox } from "@holo/forms";
 
 export default function CheckboxWithText() {
   return (
@@ -19,5 +18,5 @@ export default function CheckboxWithText() {
         </p>
       </div>
     </div>
-  )
+  );
 }

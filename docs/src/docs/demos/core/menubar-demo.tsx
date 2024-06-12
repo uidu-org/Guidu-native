@@ -13,7 +13,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@uidu/menubar-ui";
+} from "@holo/menubar";
 
 export default function MenubarDemo() {
   return (

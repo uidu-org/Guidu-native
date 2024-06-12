@@ -1,4 +1,4 @@
-# @uidu/carousel-ui
+# @holo/carousel
 
 ## 0.2.0
 
@@ -9,21 +9,21 @@
 ### Patch Changes
 
 - Updated dependencies [3d64e49]
-  - @uidu/button-ui@0.2.0
-  - @uidu/lib@0.2.0
+  - @holo/button@0.2.0
+  - @holo/lib@0.2.0
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.1.0
-  - @uidu/button-ui@0.1.2
+  - @holo/lib@0.1.0
+  - @holo/button@0.1.2
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.0.2
-  - @uidu/button-ui@0.1.1
+  - @holo/lib@0.0.2
+  - @holo/button@0.1.1

@@ -3,13 +3,13 @@ title: "Button Group"
 description: "a beautiful button group"
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import ButtonGroupDemo from "../../../src/docs/demos/core/button-group-demo.tsx";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/button-ui" target="_blank">@uidu/button-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/button" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/button" target="_blank">@holo/button</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/button" target="_blank">Source</a></Button>
     </div>
 
 ## Button Group
@@ -28,7 +28,7 @@ import ButtonGroupDemo from "../../../src/docs/demos/core/button-group-demo.tsx"
             ```tsx
                 "use client ";
 
-                import { Button, ButtonGroup } from "@uidu/core-ui";
+                import { Button, ButtonGroup } from "@holo/core";
 
                 export default function ButtonGroupDemo() {
                 return (
@@ -48,12 +48,12 @@ import ButtonGroupDemo from "../../../src/docs/demos/core/button-group-demo.tsx"
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/button-ui
+                npm install @holo/button
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/button-ui
+                yarn add @holo/button
             ```
         </Tab>
     </Tabs>
@@ -63,12 +63,12 @@ import ButtonGroupDemo from "../../../src/docs/demos/core/button-group-demo.tsx"
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { Button, ButtonGroup } from "@uidu/core-ui";
+                import { Button, ButtonGroup } from "@holo/core";
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { Button, ButtonGroup } from "@uidu/button-ui";
+                import { Button, ButtonGroup } from "@holo/button";
             ```
         </Tab>
     </Tabs>

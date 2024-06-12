@@ -3,19 +3,19 @@ title: "Toast"
 description: a great way to use toasts!
 ---
 
+import { Button } from "@holo/button";
 import ToastDemo from "../../../src/docs/demos/core/toast-demo";
 import ToastDestructive from "../../../src/docs/demos/core/toast-destructive.tsx";
 import ToastSimple from "../../../src/docs/demos/core/toast-simple.tsx";
 import ToastWithAction from "../../../src/docs/demos/core/toast-with-action.tsx";
 import ToastWithTitle from "../../../src/docs/demos/core/toast-with-title.tsx";
-import { Button } from "@uidu/button-ui";
 
     <div className = "flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
     </div>
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/toast-ui" target="_blank">@uidu/toast-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/toast" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/toast" target="_blank">@holo/toast</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/toast" target="_blank">Source</a></Button>
     </div>
 
 ## Toast
@@ -34,7 +34,7 @@ import { Button } from "@uidu/button-ui";
             ```tsx
                 "use client"
 
-                import { Button, ToastAction, useToast } from "@uidu/core-ui"
+                import { Button, ToastAction, useToast } from "@holo/core"
 
                 export default function ToastDemo() {
                   const { toast } = useToast()
@@ -65,12 +65,12 @@ import { Button } from "@uidu/button-ui";
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/toast-ui @uidu/button-ui
+                npm install @holo/toast @holo/button
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/toast-ui @uidu/button-ui
+                yarn add @holo/toast @holo/button
             ```
         </Tab>
     </Tabs>
@@ -80,13 +80,13 @@ import { Button } from "@uidu/button-ui";
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { Button, ToastAction, useToast } from "@uidu/core-ui"
+                import { Button, ToastAction, useToast } from "@holo/core"
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { Button } from "@uidu/button-ui"
-                import { ToastAction, useToast } from "@uidu/toast-ui"
+                import { Button } from "@holo/button"
+                import { ToastAction, useToast } from "@holo/toast"
             ```
         </Tab>
     </Tabs>
@@ -106,7 +106,7 @@ import { Button } from "@uidu/button-ui";
                     ```tsx
                         "use client"
 
-                        import { Button, ToastAction, useToast } from "@uidu/core-ui"
+                        import { Button, ToastAction, useToast } from "@holo/core"
 
                         export default function ToastDestructive() {
                           const { toast } = useToast()
@@ -143,7 +143,7 @@ import { Button } from "@uidu/button-ui";
                         ```tsx
                            "use client"
 
-                            import { Button, useToast } from "@uidu/core-ui"
+                            import { Button, useToast } from "@holo/core"
 
                             export default function ToastSimple() {
                               const { toast } = useToast()
@@ -177,7 +177,7 @@ import { Button } from "@uidu/button-ui";
                         ```tsx
                             "use client"
 
-                            import { Button, ToastAction, useToast } from "@uidu/core-ui"
+                            import { Button, ToastAction, useToast } from "@holo/core"
 
                             export default function ToastWithAction() {
                               const { toast } = useToast()
@@ -213,7 +213,7 @@ import { Button } from "@uidu/button-ui";
                         ```tsx
                         "use client"
 
-                        import { Button, useToast } from "@uidu/core-ui"
+                        import { Button, useToast } from "@holo/core"
 
                         export default function ToastWithTitle() {
                           const { toast } = useToast()

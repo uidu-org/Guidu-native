@@ -3,13 +3,13 @@ title: "Sheet"
 description: a beautiful sheet.
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import SheetDemo from "../../../src/docs/demos/core/sheet-demo.tsx";
 import SheetSide from "../../../src/docs/demos/core/sheet-side.tsx";
 
     <div className="flex items-center">
-        <Button variant="link"><a className="mr-4 !no-underline" href="https://www.npmjs.com/package/@uidu/sheet-ui" target="_blank">@uidu/sheet-ui</a></Button>
-        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/sheet" target="_blank">Source</a></Button>
+        <Button variant="link"><a className="mr-4 !no-underline" href="https://www.npmjs.com/package/@holo/sheet" target="_blank">@holo/sheet</a></Button>
+        <Button variant="link"><a className="mx-4 !no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/sheet" target="_blank">Source</a></Button>
     </div>
 
 ## Sheet
@@ -39,8 +39,8 @@ import SheetSide from "../../../src/docs/demos/core/sheet-side.tsx";
                 SheetHeader,
                 SheetTitle,
                 SheetTrigger,
-              } from "@uidu/core-ui";
-              import { Input } from "@uidu/forms-ui";
+              } from "@holo/core";
+              import { Input } from "@holo/forms";
 
               export default function SheetDemo() {
                 return (
@@ -87,12 +87,12 @@ import SheetSide from "../../../src/docs/demos/core/sheet-side.tsx";
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/sheet-ui
+                npm install @holo/sheet
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/sheet-ui
+                yarn add @holo/sheet
             ```
         </Tab>
     </Tabs>
@@ -113,8 +113,8 @@ import SheetSide from "../../../src/docs/demos/core/sheet-side.tsx";
                     SheetHeader,
                     SheetTitle,
                     SheetTrigger,
-                  } from "@uidu/core-ui";
-                  import { Input } from "@uidu/forms-ui";
+                  } from "@holo/core";
+                  import { Input } from "@holo/forms";
             ```
         </Tab>
         <Tab value="individual">
@@ -128,10 +128,10 @@ import SheetSide from "../../../src/docs/demos/core/sheet-side.tsx";
                     SheetHeader,
                     SheetTitle,
                     SheetTrigger,
-                  } from "@uidu/sheet-ui";
-                  import { Button } from "@uidu/button-ui";
-                  import { Label } from "@uidu/label-ui";
-                  import { Input } from "@uidu/input-ui";
+                  } from "@holo/sheet";
+                  import { Button } from "@holo/button";
+                  import { Label } from "@holo/label";
+                  import { Input } from "@holo/input";
             ```
         </Tab>
     </Tabs>
@@ -162,8 +162,8 @@ import SheetSide from "../../../src/docs/demos/core/sheet-side.tsx";
                           SheetHeader,
                           SheetTitle,
                           SheetTrigger,
-                        } from "@uidu/core-ui";
-                        import { Input } from "@uidu/forms-ui";
+                        } from "@holo/core";
+                        import { Input } from "@holo/forms";
 
                         const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
 

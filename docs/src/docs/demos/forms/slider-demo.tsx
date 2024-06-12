@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Slider } from "@uidu/forms-ui";
+import { Slider } from "@holo/forms";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 

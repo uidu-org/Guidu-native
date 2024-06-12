@@ -1,7 +1,7 @@
 "use client";
 
-import { Label } from "@uidu/core-ui";
-import { Switch } from "@uidu/forms-ui";
+import { Label } from "@holo/core";
+import { Switch } from "@holo/forms";
 
 export default function SwitchDemo() {
   return (

@@ -3,7 +3,7 @@ title: "Input"
 description: a great way to use input!
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import InputDemo from "../../../src/docs/demos/forms/input-demo.tsx";
 import InputDisabled from "../../../src/docs/demos/forms/input-disabled.tsx";
 import InputFile from "../../../src/docs/demos/forms/input-file.tsx";
@@ -13,8 +13,8 @@ import InputWithLabel from "../../../src/docs/demos/forms/input-with-label.tsx";
 import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/input-ui" target="_blank">@uidu/input-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/input" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/input" target="_blank">@holo/input</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/forms/input" target="_blank">Source</a></Button>
     </div>
 
 ## Input
@@ -31,7 +31,7 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
         </Tab>
         <Tab value="code">
             ```tsx
-                import { Input } from "@uidu/forms-ui";
+                import { Input } from "@holo/forms";
 
                 export default function InputDemo() {
                   return <Input type="email" placeholder="Email" />;
@@ -45,12 +45,12 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/input-ui
+                npm install @holo/input
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/input-ui
+                yarn add @holo/input
             ```
         </Tab>
     </Tabs>
@@ -60,12 +60,12 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { Input } from "@uidu/forms-ui";
+                import { Input } from "@holo/forms";
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { Input } from "@uidu/input-ui";
+                import { Input } from "@holo/input";
             ```
         </Tab>
     </Tabs>
@@ -84,7 +84,7 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
                 <Tab value="code">
                     ```tsx
                         "use client"
-                        import { Input } from "@uidu/forms-ui";
+                        import { Input } from "@holo/forms";
 
                         export default function InputDisabled() {
                           return <Input disabled type="email" placeholder="Email" />;
@@ -105,8 +105,8 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
                   ```tsx
                       "use client"
 
-                      import { Label } from "@uidu/core-ui";
-                      import { Input } from "@uidu/forms-ui";
+                      import { Label } from "@holo/core";
+                      import { Input } from "@holo/forms";
 
                       export default function InputFile() {
                         return (
@@ -136,7 +136,7 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
                       import { useForm } from "react-hook-form";
                       import { z } from "zod";
 
-                      import { Button, toast } from "@uidu/core-ui";
+                      import { Button, toast } from "@holo/core";
                       import {
                         Form,
                         FormControl,
@@ -146,7 +146,7 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
                         FormLabel,
                         FormMessage,
                         Input,
-                      } from "@uidu/forms-ui";
+                      } from "@holo/forms";
 
                       const FormSchema = z.object({
                         username: z.string().min(2, {
@@ -213,8 +213,8 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
                   ```tsx
                       "use client";
 
-                      import { Button } from "@uidu/core-ui";
-                      import { Input } from "@uidu/forms-ui";
+                      import { Button } from "@holo/core";
+                      import { Input } from "@holo/forms";
 
                       export default function InputWithButton() {
                         return (
@@ -240,8 +240,8 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
                   ```tsx
                       "use client"
 
-                      import { Label } from "@uidu/core-ui";
-                      import { Input } from "@uidu/forms-ui";
+                      import { Label } from "@holo/core";
+                      import { Input } from "@holo/forms";
 
                       export default function InputWithLabel() {
                         return (
@@ -267,8 +267,8 @@ import InputWithText from "../../../src/docs/demos/forms/input-with-text.tsx";
                   ```tsx
                       "use client"
 
-                      import { Label } from "@uidu/core-ui";
-                      import { Input } from "@uidu/forms-ui";
+                      import { Label } from "@holo/core";
+                      import { Input } from "@holo/forms";
 
                       export default function InputWithText() {
                         return (

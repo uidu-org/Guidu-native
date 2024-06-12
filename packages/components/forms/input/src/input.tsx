@@ -1,25 +1,25 @@
-import { FieldErrorText } from '@uidu/field-error-text-ui'
-import { FieldHelperText } from '@uidu/field-helper-text-ui'
-import { Label } from '@uidu/label-ui'
-import { cn } from '@uidu/lib'
-import { VariantProps, cva } from 'class-variance-authority'
-import * as React from 'react'
-import { FieldError } from 'react-hook-form'
+import { FieldErrorText } from '@holo/field-error-text';
+import { FieldHelperText } from '@holo/field-helper-text';
+import { Label } from '@holo/label';
+import { cn } from '@holo/lib';
+import { VariantProps, cva } from 'class-variance-authority';
+import * as React from 'react';
+import { FieldError } from 'react-hook-form';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  inputVariants?: VariantProps<typeof inputVariants>
-  disabled?: boolean
+  inputVariants?: VariantProps<typeof inputVariants>;
+  disabled?: boolean;
   //label
-  labelVariant?: VariantProps<typeof labelVariants>
-  inLine?: boolean
-  label?: string
-  labelClassName?: string
+  labelVariant?: VariantProps<typeof labelVariants>;
+  inLine?: boolean;
+  label?: string;
+  labelClassName?: string;
   //helper
-  helperText?: string
-  helperClassName?: string
+  helperText?: string;
+  helperClassName?: string;
   //error
-  error?: FieldError | string
-  errorClassName?: string
+  error?: FieldError | string;
+  errorClassName?: string;
 }
 
 const labelVariants = cva(
@@ -56,7 +56,7 @@ const labelVariants = cva(
       variant: 'outline',
     },
   }
-)
+);
 
 const inputVariants = cva(
   'peer checked:bg-none focus:ring-offset-background transition duration-200 ease-in-out',
@@ -92,7 +92,7 @@ const inputVariants = cva(
       variant: 'outline',
     },
   }
-)
+);
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
@@ -136,17 +136,21 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         </div>
 
         {!error && helperText && (
-          <FieldHelperText className={cn(disabled && 'text-muted-foreground', helperClassName)}>
+          <FieldHelperText
+            className={cn(disabled && 'text-muted-foreground', helperClassName)}
+          >
             {helperText}
           </FieldHelperText>
         )}
 
-        {error && <FieldErrorText className={cn(errorClassName)} error={error} />}
+        {error && (
+          <FieldErrorText className={cn(errorClassName)} error={error} />
+        )}
       </div>
-    )
+    );
   }
-)
-Input.displayName = 'Input'
+);
+Input.displayName = 'Input';
 
-export { Input }
-export type { InputProps }
+export { Input };
+export type { InputProps };

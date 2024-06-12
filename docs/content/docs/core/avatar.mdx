@@ -3,13 +3,13 @@ title: "Avatars"
 description: Provides a visual representation of a user, typically through an image or icon.
 ---
 
+import { Button } from "@holo/button";
 import AvatarDemo from "../../../src/docs/demos/core/avatar-demo";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/avatar-ui" target="_blank">@uidu/avatar-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/avatar" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/avatar" target="_blank">@holo/avatar</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/avatar" target="_blank">Source</a></Button>
     </div>
 
 ## Avatar
@@ -33,7 +33,7 @@ import { Button } from "@uidu/button-ui";
 ```tsx
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@uidu/core-ui";
+import { Avatar, AvatarFallback, AvatarImage } from "@holo/core";
 
 export default function AvatarDemo() {
   return (
@@ -57,12 +57,12 @@ export default function AvatarDemo() {
 <Tabs items={["npm", "yarn"]}>
 <Tab value="npm">
 ```bash
-npm install @uidu/avatar-ui
+npm install @holo/avatar
 ```
 </Tab>
 <Tab value="yarn">
 ```bash
-yarn add @uidu/avatar-ui
+yarn add @holo/avatar
 ```
 </Tab>
 
@@ -72,11 +72,10 @@ yarn add @uidu/avatar-ui
 
 <Tabs items={["generic", "individual"]}>
   <Tab value="generic">
-    ```tsx import {(Avatar, AvatarFallback, AvatarImage)} from "@uidu/core-ui"
-    ```
+    ```tsx import {(Avatar, AvatarFallback, AvatarImage)} from "@holo/core" ```
   </Tab>
   <Tab value="individual">
-    ```tsx import {(Avatar, AvatarFallback, AvatarImage)} from "@uidu/avatar-ui"
+    ```tsx import {(Avatar, AvatarFallback, AvatarImage)} from "@holo/avatar"
     ```
   </Tab>
 </Tabs>

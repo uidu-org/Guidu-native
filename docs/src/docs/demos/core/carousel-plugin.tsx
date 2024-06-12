@@ -1,20 +1,21 @@
-"use client"
-import Autoplay from "embla-carousel-autoplay"
-import * as React from "react"
+"use client";
+import Autoplay from "embla-carousel-autoplay";
+import * as React from "react";
 
 import {
-  Card, CardContent,
+  Card,
+  CardContent,
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 export default function CarouselPlugin() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+    Autoplay({ delay: 2000, stopOnInteraction: true }),
+  );
 
   return (
     <Carousel
@@ -39,5 +40,5 @@ export default function CarouselPlugin() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

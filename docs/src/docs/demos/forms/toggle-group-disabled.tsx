@@ -1,6 +1,6 @@
 import { Bold, Italic, Underline } from "lucide-react";
 
-import { ToggleGroup, ToggleGroupItem } from "@uidu/forms-ui";
+import { ToggleGroup, ToggleGroupItem } from "@holo/forms";
 
 export default function ToggleGroupDemo() {
   return (

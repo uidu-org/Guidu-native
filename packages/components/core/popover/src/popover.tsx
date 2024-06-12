@@ -1,8 +1,8 @@
 import * as PopoverPrimitive from '@radix-ui/react-popover';
 import * as React from 'react';
 
-import { Button } from '@uidu/button-ui';
-import { cn } from '@uidu/lib';
+import { Button } from '@holo/button';
+import { cn } from '@holo/lib';
 
 export interface PopoverProps {
   children?: React.ReactNode;

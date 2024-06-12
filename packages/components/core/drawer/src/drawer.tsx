@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Drawer as DrawerPrimitive } from 'vaul';
 
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 
 const Drawer = ({
   shouldScaleBackground = true,

@@ -12,7 +12,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 export default function BreadcrumbDemo() {
   return (
@@ -26,7 +26,7 @@ export default function BreadcrumbDemo() {
           <BreadcrumbItem>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1">
-                <BreadcrumbEllipsis className="w-4 h-4" />
+                <BreadcrumbEllipsis className="h-4 w-4" />
                 <span className="sr-only">Toggle menu</span>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">

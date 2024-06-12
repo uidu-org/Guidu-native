@@ -1,7 +1,7 @@
 "use client";
 
-import { Label } from "@uidu/core-ui";
-import { RadioGroup, RadioGroupItem } from "@uidu/forms-ui";
+import { Label } from "@holo/core";
+import { RadioGroup, RadioGroupItem } from "@holo/forms";
 
 export default function RadioGroupDemo() {
   return (

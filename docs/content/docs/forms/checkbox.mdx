@@ -3,14 +3,14 @@ title: "Checkbox"
 description: a beautiful checkbox
 ---
 
-import { Button } from "@uidu/button-ui";
+import { Button } from "@holo/button";
 import CheckboxDemo from "../../../src/docs/demos/forms/checkbox-demo.tsx";
 import CheckboxDisabled from "../../../src/docs/demos/forms/checkbox-disabled.tsx";
 import CheckboxWithText from "../../../src/docs/demos/forms/checkbox-with-text.tsx";
 
     <div className="flex items-center">
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/checkbox-ui" target="_blank">@uidu/checkbox-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className=" !no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/forms/checkbox" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/checkbox" target="_blank">@holo/checkbox</a></Button>
+        <Button variant="link" className="mx-4"><a className=" !no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/forms/checkbox" target="_blank">Source</a></Button>
     </div>
 
 ## Checkbox
@@ -29,7 +29,7 @@ import CheckboxWithText from "../../../src/docs/demos/forms/checkbox-with-text.t
             ```tsx
                 "use client"
 
-                import { CheckboxBase as Checkbox } from "@uidu/forms-ui"
+                import { CheckboxBase as Checkbox } from "@holo/forms"
 
                 export default function CheckboxDemo() {
                   return (
@@ -53,12 +53,12 @@ import CheckboxWithText from "../../../src/docs/demos/forms/checkbox-with-text.t
     <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/checkbox-ui
+                npm install @holo/checkbox
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/checkbox-ui
+                yarn add @holo/checkbox
             ```
         </Tab>
     </Tabs>
@@ -68,12 +68,12 @@ import CheckboxWithText from "../../../src/docs/demos/forms/checkbox-with-text.t
     <Tabs items={["generic" , "individual"]}>
         <Tab value="generic">
             ```tsx
-                import { CheckboxBase as Checkbox } from "@uidu/forms-ui"
+                import { CheckboxBase as Checkbox } from "@holo/forms"
             ```
         </Tab>
         <Tab value="individual">
             ```tsx
-                import { CheckboxBase as Checkbox } from "@uidu/checkbox-ui"
+                import { CheckboxBase as Checkbox } from "@holo/checkbox"
             ```
         </Tab>
     </Tabs>
@@ -93,7 +93,7 @@ import CheckboxWithText from "../../../src/docs/demos/forms/checkbox-with-text.t
                     ```tsx
                         "use client"
 
-                        import { CheckboxBase as Checkbox } from "@uidu/forms-ui"
+                        import { CheckboxBase as Checkbox } from "@holo/forms"
 
                         export default function CheckboxDisabled() {
                           return (
@@ -124,7 +124,7 @@ import CheckboxWithText from "../../../src/docs/demos/forms/checkbox-with-text.t
                         ```tsx
                             "use client"
 
-                            import { CheckboxBase as Checkbox } from "@uidu/forms-ui"
+                            import { CheckboxBase as Checkbox } from "@holo/forms"
 
 
                             export default function CheckboxWithText() {

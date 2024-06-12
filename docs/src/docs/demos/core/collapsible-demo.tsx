@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { ChevronsUpDown } from "lucide-react"
-import * as React from "react"
+import { ChevronsUpDown } from "lucide-react";
+import * as React from "react";
 
 import {
   Button,
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 export default function CollapsibleDemo() {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <Collapsible
@@ -42,5 +42,5 @@ export default function CollapsibleDemo() {
         </div>
       </CollapsibleContent>
     </Collapsible>
-  )
+  );
 }

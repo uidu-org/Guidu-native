@@ -1,4 +1,4 @@
-# @uidu/image-ui
+# @holo/image
 
 ## 0.2.0
 

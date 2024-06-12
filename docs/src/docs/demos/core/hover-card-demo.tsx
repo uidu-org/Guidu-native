@@ -8,7 +8,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 export default function HoverCardDemo() {
   return (

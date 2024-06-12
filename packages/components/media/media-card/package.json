@@ -1,5 +1,5 @@
 {
-  "name": "@uidu/media-card-ui",
+  "name": "@holo/media-card",
   "version": "0.1.0",
   "license": "ISC",
   "main": "./dist/index.js",
@@ -12,15 +12,15 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@uidu/card-ui": "0.2.0",
-    "@uidu/carousel-ui": "0.2.0",
-    "@uidu/dialog-ui": "0.2.0",
-    "@uidu/lib": "0.2.0",
+    "@holo/card": "0.2.0",
+    "@holo/carousel": "0.2.0",
+    "@holo/dialog": "0.2.0",
+    "@holo/lib": "0.2.0",
     "react": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.2",
-    "tsup": "^8.0.2"
+    "@types/react": "^18.3.3",
+    "tsup": "^8.1.0"
   },
   "publishConfig": {
     "access": "public",

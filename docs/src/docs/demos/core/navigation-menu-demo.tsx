@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 const components: { title: string; href: string; description: string }[] = [
   {

@@ -11,7 +11,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 export default function DropdownMenuRadioGroupDemo() {
   const [position, setPosition] = React.useState("bottom");

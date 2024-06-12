@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@uidu/forms-ui";
+} from "@holo/forms";
 
 export default function SelectDemo() {
   return (

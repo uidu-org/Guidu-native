@@ -1,4 +1,4 @@
-import { Step, Stepper } from "@uidu/forms-ui";
+import { Step, Stepper } from "@holo/forms";
 
 export default function StepperDemo() {
   return (

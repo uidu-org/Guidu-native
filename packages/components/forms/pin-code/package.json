@@ -1,5 +1,5 @@
 {
-  "name": "@uidu/pin-code-ui",
+  "name": "@holo/pin-code",
   "version": "0.2.0",
   "license": "ISC",
   "main": "./dist/index.js",
@@ -13,18 +13,18 @@
     "dev": "tsup --watch"
   },
   "dependencies": {
+    "@holo/field-error-text": "0.2.0",
+    "@holo/field-helper-text": "0.2.0",
+    "@holo/lib": "0.2.0",
     "@radix-ui/react-checkbox": "^1.0.4",
-    "@uidu/field-error-text-ui": "0.2.0",
-    "@uidu/field-helper-text-ui": "0.2.0",
-    "@uidu/lib": "0.2.0",
     "class-variance-authority": "^0.7.0",
     "input-otp": "^1.2.4",
     "react": "^18.3.1",
     "react-hook-form": "^7.51.5"
   },
   "devDependencies": {
-    "@types/react": "^18.3.2",
-    "tsup": "^8.0.2"
+    "@types/react": "^18.3.3",
+    "tsup": "^8.1.0"
   },
   "publishConfig": {
     "access": "public",

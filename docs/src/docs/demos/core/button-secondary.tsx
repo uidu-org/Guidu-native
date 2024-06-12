@@ -1,6 +1,6 @@
-"use client"
-import { Button } from "@uidu/core-ui"
+"use client";
+import { Button } from "@holo/core";
 
 export default function ButtonSecondary() {
-  return <Button variant="secondary">Secondary</Button>
+  return <Button variant="secondary">Secondary</Button>;
 }

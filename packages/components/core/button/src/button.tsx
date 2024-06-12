@@ -1,5 +1,5 @@
+import { cn } from '@holo/lib';
 import { Slot } from '@radix-ui/react-slot';
-import { cn } from '@uidu/lib';
 import { cva, VariantProps } from 'class-variance-authority';
 import * as React from 'react';
 import Spinner from './icons/Spinner';

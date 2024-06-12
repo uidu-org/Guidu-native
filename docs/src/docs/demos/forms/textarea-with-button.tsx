@@ -1,6 +1,6 @@
 "use client";
-import { Button } from "@uidu/core-ui";
-import { Textarea } from "@uidu/forms-ui";
+import { Button } from "@holo/core";
+import { Textarea } from "@holo/forms";
 
 export default function TextareaWithButton() {
   return (

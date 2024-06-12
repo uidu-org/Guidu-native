@@ -1,4 +1,4 @@
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import { OTPInput, OTPInputContext } from 'input-otp';
 import * as React from 'react';
 import DotIcon from './icons/Dot';

@@ -1,6 +1,6 @@
 "use client";
 
-import { Input } from "@uidu/forms-ui";
+import { Input } from "@holo/forms";
 
 export default function InputDemo() {
   return <Input type="email" placeholder="Email" />;

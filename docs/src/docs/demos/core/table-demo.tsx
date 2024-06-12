@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Table,
@@ -9,7 +9,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 const invoices = [
   {
@@ -54,7 +54,7 @@ const invoices = [
     totalAmount: "$300.00",
     paymentMethod: "Credit Card",
   },
-]
+];
 
 export default function TableDemo() {
   return (
@@ -85,5 +85,5 @@ export default function TableDemo() {
         </TableRow>
       </TableFooter>
     </Table>
-  )
+  );
 }

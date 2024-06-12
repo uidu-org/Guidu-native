@@ -1,10 +1,10 @@
-# @uidu/guidu-website
+# @holo/website
 
 ## 0.2.1
 
 ### Patch Changes
 
-- @uidu/forms-ui@0.2.1
+- @holo/forms@0.2.1
 
 ## 0.2.0
 
@@ -15,67 +15,67 @@
 ### Patch Changes
 
 - Updated dependencies [3d64e49]
-  - @uidu/avatar-ui@0.3.0
-  - @uidu/badge-ui@0.2.0
-  - @uidu/button-ui@0.2.0
-  - @uidu/switch-ui@0.2.0
-  - @uidu/core-ui@0.1.0
-  - @uidu/forms-ui@0.2.0
+  - @holo/avatar@0.3.0
+  - @holo/badge@0.2.0
+  - @holo/button@0.2.0
+  - @holo/switch@0.2.0
+  - @holo/core@0.1.0
+  - @holo/forms@0.2.0
 
 ## 0.1.9
 
 ### Patch Changes
 
 - Updated dependencies [3260644]
-  - @uidu/avatar-ui@0.2.0
-  - @uidu/core-ui@0.0.17
+  - @holo/avatar@0.2.0
+  - @holo/core@0.0.17
 
 ## 0.1.8
 
 ### Patch Changes
 
-- @uidu/badge-ui@0.1.2
-- @uidu/button-ui@0.1.2
-- @uidu/switch-ui@0.1.2
-- @uidu/forms-ui@0.1.2
-- @uidu/core-ui@0.0.16
+- @holo/badge@0.1.2
+- @holo/button@0.1.2
+- @holo/switch@0.1.2
+- @holo/forms@0.1.2
+- @holo/core@0.0.16
 
 ## 0.1.7
 
 ### Patch Changes
 
-- @uidu/core-ui@0.0.15
+- @holo/core@0.0.15
 
 ## 0.1.6
 
 ### Patch Changes
 
-- @uidu/core-ui@0.0.14
+- @holo/core@0.0.14
 
 ## 0.1.5
 
 ### Patch Changes
 
-- @uidu/core-ui@0.0.13
+- @holo/core@0.0.13
 
 ## 0.1.4
 
 ### Patch Changes
 
-- @uidu/badge-ui@0.1.1
-- @uidu/button-ui@0.1.1
-- @uidu/switch-ui@0.1.1
-- @uidu/forms-ui@0.1.1
-- @uidu/core-ui@0.0.12
+- @holo/badge@0.1.1
+- @holo/button@0.1.1
+- @holo/switch@0.1.1
+- @holo/forms@0.1.1
+- @holo/core@0.0.12
 
 ## 0.1.3
 
 ### Patch Changes
 
-- @uidu/core-ui@0.0.11
+- @holo/core@0.0.11
 
 ## 0.1.2
 
 ### Patch Changes
 
-- @uidu/core-ui@0.0.10
+- @holo/core@0.0.10

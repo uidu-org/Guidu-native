@@ -1,11 +1,10 @@
-"use client"
+"use client";
 
-
-import { ScrollArea, Separator } from "@uidu/core-ui"
+import { ScrollArea, Separator } from "@holo/core";
 
 const tags = Array.from({ length: 50 }).map(
-  (_, i, a) => `v1.2.0-beta.${a.length - i}`
-)
+  (_, i, a) => `v1.2.0-beta.${a.length - i}`,
+);
 
 export default function ScrollAreaDemo() {
   return (
@@ -22,5 +21,5 @@ export default function ScrollAreaDemo() {
         ))}
       </div>
     </ScrollArea>
-  )
+  );
 }

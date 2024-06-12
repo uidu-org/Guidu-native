@@ -14,7 +14,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 
 const data = [
   {

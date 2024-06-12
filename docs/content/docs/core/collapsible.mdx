@@ -3,13 +3,13 @@ title: "Collapsible"
 description: a great way to use collapsible!
 ---
 
+import { Button } from "@holo/button";
 import CollapsibleDemo from "../../../src/docs/demos/core/collapsible-demo";
-import { Button } from "@uidu/button-ui";
 
     <div className="flex items-center">
         <Button variant="link" className="mr-4"><a className="!no-underline" href="" target="_blank">Storybook</a></Button>
-        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@uidu/collapsable-ui" target="_blank">@uidu/collapsable-ui</a></Button>
-        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/Guidu-native/tree/main/packages/components/core/collapsable" target="_blank">Source</a></Button>
+        <Button variant="link" className="mr-4"><a className="!no-underline" href="https://www.npmjs.com/package/@holo/collapsable" target="_blank">@holo/collapsable</a></Button>
+        <Button variant="link" className="mx-4"><a className="!no-underline"  href="https://github.com/uidu-org/holo/tree/main/packages/components/core/collapsable" target="_blank">Source</a></Button>
     </div>
 
 ## Collapsible
@@ -36,7 +36,7 @@ import { Button } from "@uidu/button-ui";
                   Collapsible,
                   CollapsibleContent,
                   CollapsibleTrigger,
-                } from "@uidu/core-ui"
+                } from "@holo/core"
 
                 export default function CollapsibleDemo() {
                   const [isOpen, setIsOpen] = React.useState(false)
@@ -80,12 +80,12 @@ import { Button } from "@uidu/button-ui";
       <Tabs items={["npm" , "yarn"]}>
         <Tab value="npm">
             ```bash
-                npm install @uidu/collapsable-ui
+                npm install @holo/collapsable
             ```
         </Tab>
         <Tab value="yarn">
             ```bash
-                yarn add @uidu/collapsable-ui
+                yarn add @holo/collapsable
             ```
         </Tab>
     </Tabs>
@@ -98,5 +98,5 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@uidu/core-ui";
+} from "@holo/core";
 ```

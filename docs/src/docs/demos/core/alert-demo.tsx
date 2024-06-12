@@ -1,13 +1,8 @@
-"use client"
+"use client";
 
-import { Terminal } from "lucide-react"
+import { Terminal } from "lucide-react";
 
-
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@uidu/core-ui"
+import { Alert, AlertDescription, AlertTitle } from "@holo/core";
 
 export default function AlertDemo() {
   return (
@@ -18,5 +13,5 @@ export default function AlertDemo() {
         You can add components to your app using the cli.
       </AlertDescription>
     </Alert>
-  )
+  );
 }

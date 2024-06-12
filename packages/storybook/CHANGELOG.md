@@ -1,4 +1,4 @@
-# @uidu/storybook
+# @holo/storybook
 
 ## 0.2.0
 

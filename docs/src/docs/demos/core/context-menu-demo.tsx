@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   ContextMenu,
@@ -14,7 +14,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@uidu/core-ui"
+} from "@holo/core";
 
 export default function ContextMenuDemo() {
   return (
@@ -65,5 +65,5 @@ export default function ContextMenuDemo() {
         </ContextMenuRadioGroup>
       </ContextMenuContent>
     </ContextMenu>
-  )
+  );
 }

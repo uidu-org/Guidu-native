@@ -1,6 +1,6 @@
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 
-import { cn } from '@uidu/lib';
+import { cn } from '@holo/lib';
 import * as React from 'react';
 import CheckIcon from './icons/Check';
 import ChevronRightIcon from './icons/ChevronRight';

@@ -1,4 +1,4 @@
-# @uidu/sheet-ui
+# @holo/sheet
 
 ## 0.2.0
 
@@ -9,18 +9,18 @@
 ### Patch Changes
 
 - Updated dependencies [3d64e49]
-  - @uidu/lib@0.2.0
+  - @holo/lib@0.2.0
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.1.0
+  - @holo/lib@0.1.0
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies
-  - @uidu/lib@0.0.2
+  - @holo/lib@0.0.2

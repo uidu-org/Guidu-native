@@ -1,6 +1,6 @@
-"use client"
-import { Button } from "@uidu/core-ui"
+"use client";
+import { Button } from "@holo/core";
 
 export default function ButtonDestructive() {
-  return <Button variant="destructive">Destructive</Button>
+  return <Button variant="destructive">Destructive</Button>;
 }

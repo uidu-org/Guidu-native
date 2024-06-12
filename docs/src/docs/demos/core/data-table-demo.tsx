@@ -30,8 +30,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@uidu/core-ui";
-import { CheckboxBase as Checkbox, Input } from "@uidu/forms-ui";
+} from "@holo/core";
+import { CheckboxBase as Checkbox, Input } from "@holo/forms";
 
 const data: Payment[] = [
   {

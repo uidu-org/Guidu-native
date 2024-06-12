@@ -1,6 +1,6 @@
 "use client";
 
-import { MediaCardCollection } from "@uidu/core-ui";
+import { MediaCardCollection } from "@holo/core";
 
 export default function MediaCardCollectionDemo() {
   const files = [

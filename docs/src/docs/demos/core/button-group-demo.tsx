@@ -1,6 +1,6 @@
 "use client ";
 
-import { Button, ButtonGroup } from "@uidu/core-ui";
+import { Button, ButtonGroup } from "@holo/core";
 
 export default function ButtonGroupDemo() {
   return (
